@@ -3,7 +3,7 @@ This git repo contains the manual for Audacity
 
 ## Flow of Content
 
-* We write the Audacity Manual at https://manual.audacityteam.org
+* We write the Audacity Manual at https://alphamanual.audacityteam.org
 * We wget it and mangle it a little using our script, https://github.com/audacity/audacity/blob/master/scripts/mw2html_audacity/mw2html.py
 * That content is then pushed as a commit to the GitHub repo.
 * A script on our server detects the change at GitHub and pulls the changes to serve them.
