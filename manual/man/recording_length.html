@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Recording length - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Recording_length rootpage-Recording_length skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Recording length</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Recording_length#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">Audacity lets you record for as long and as often as you need, subject to the disk space you have available. <p>The disk space needed for recording depends on the quality (<a href="sample_rates.html" title="Sample Rates">sample rate</a>  and <a href="sample_format_bit_depth.html" title="Sample Format - Bit Depth">bit depth/sample format</a>) at which you record.</p></div>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Recording_time.2Fdisk_space_remaining"><span class="tocnumber">1</span> <span class="toctext">Recording time/disk space remaining</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Increasing_disk_space_for_longer_recordings"><span class="tocnumber">2</span> <span class="toctext">Increasing disk space for longer recordings</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Long_recordings"><span class="tocnumber">3</span> <span class="toctext">Long recordings</span></a></li>
+</ul>
+</div>
+
+<div id="remain"></div>
+<h2><span class="mw-headline" id="Recording_time.2Fdisk_space_remaining">Recording time/disk space remaining</span></h2>
+<p>When recording, the audio data is written to your hard disk. For example, if you just press the red Record button without having yet saved a Project, it's written to Audacity's temporary folder. Therefore, the amount of time you can record for is limited by the available disk space on the drive you are writing to. Audacity lets you know the amount of time you can record for based on that remaining space, giving a clear indication in the <a href="status_bar.html" title="Status Bar">Status Bar</a> at the bottom of the screen as to how much time you can record for:
+</p>
+<dl><dd><span title="Status Bar showing disk space remaining for recording"><img alt="Status Bar Disc space remaining.png" src="../m/images/5/57/status_bar_disc_space_remaining.png" width="778" height="81" /></span></dd></dl>
+<p>The time remaining depends on the current space on the drive, and on the <a href="quality_preferences.html" title="Quality Preferences">quality</a> (sample rate and sample format/bit depth) at which you are recording.  
+</p>
+
+<p>Although there are rarely problems if you record to Audacity's temporary folder and then save the recording as an Audacity Project, it may be preferable if you're intending to save a Project to save an empty Project before you start recording, with the 
+</p>
+<ul><li><span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> or </li>
+<li><span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As...</a></span> </li></ul>
+<p>That way, the recorded data will be saved to a permanent location in the Project's _data folder. When the recording is over, and now and again during editing, use <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> (<i><b>not</b></i> <span class="menu">File &gt; Save Project As...</span>) to update the Project.   
+</p>
+<div id="space"></div>
+<h2><span class="mw-headline" id="Increasing_disk_space_for_longer_recordings">Increasing disk space for longer recordings</span></h2>
+<p>To get more recording time:
+</p>
+<ol><li> Obviously, free up some more disk space. One good way to do that is to ensure you delete your old Audacity Projects (the .aup and any .aup.bak files and the _data folders) as soon as you've finished the Project and are sure you will not need to export any more files from it. </li>
+<li> Save the Project you're starting (or change the location of Audacity's temporary folder) to a disk with more space on it. The location of Audacity's temporary folder can be changed on the <a href="directories_preferences.html" title="Directories Preferences">Directories</a> tab of Preferences.</li>
+<li> Audacity only uses uncompressed (so lossless) <a href="glossary.html#pcm" title="Glossary">PCM</a> audio data for recording and editing, but the amount of disk space consumed can be reduced by changing the following settings in Preferences:
+<ol><li> on the <a href="devices_preferences.html#devices" title="Devices Preferences">Devices</a> tab, record in <b>mono</b> instead of stereo. This halves the disk space used. </li>
+<li> on the <a href="quality_preferences.html#quality" title="Quality Preferences">Quality</a> tab, reduce the <b>Default Sample Format</b> (bit depth) from 32-bit float to 16-bit, which again halves the disk space used. In speech recordings you may also be able to reduce the <b>Default Sample Rate</b> without significantly affecting the quality. Generally for music, leave the Sample Rate at 44100 Hz, but if 22050 Hz gives acceptable quality, it takes only half the disk space of 44100 Hz. </li></ol></li>
+<li> Note that because unlimited undo is available in an Audacity session, editing a project itself uses disk space. To reduce the space a project is taking, <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span>, exit Audacity and relaunch it. This will clear out the space being used by the Undo mechanism. Alternatively, leave the project open, click <span class="menu">View  &gt; <a href="view_menu.html#history" title="View Menu">History</a></span> and discard the Undo levels you do not need.</li></ol>
+<div class="note"><b>Examples of disk space usage when recording and editing at different quality settings:</b>
+<ul><li> 44100 Hz, 32-bit, stereo = 20 MB of space per minute. <span style="color:#333300;font-style:italic">44100 Hz and 32-bit are Audacity's default quality settings</span></li>
+<li> 44100 Hz, 16-bit, stereo = 10 MB per minute.<span style="color:#333300;font-style:italic"> CD quality</span></li>
+<li> 22050 Hz, 8-bit, mono = 1.25 MB per minute. <span style="color:#333300;font-style:italic"> This would be generally acceptable for speech recordings from lower quality sources</span></div></li></ul>
+<p>Note that reducing the <i>sample rate</i> will reduce the audio frequency limit. 44100 Hz gives a theoretical maximum of less than 22050 Hz that can be captured. A sample rate of 22050 Hz gives you less than 11025 Hz. For speech, you can take out the high frequencies without much loss of intelligibility. Likewise, reducing the <i>bit depth</i> reduces the dynamic range of the audio.  For example, 16-bit gives a whopping 96dB of dynamic range. 8-bit recording reduces dynamic range to 48dB. A 22050 Hz, 8-bit recording would rival the sound of a good quality cassette tape.
+</p><p>Note that disk space usage above relates solely to the size of audio data held by Audacity, not to the size of audio files exported from it. You need this space to record and edit, but if you do not save an Audacity Project, the temporary data is deleted and the space released as soon as you exit Audacity.
+</p>
+<div class="note">When making a longer recording of a few hours or more, other computer resource issues may be involved apart from disk space. These include the need to have sufficient <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/RAM">RAM</a> and swap file space available, and ensuring automated events such as system or application updates or screen savers are not able to disrupt a recording. For details, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers">Managing Computer Resources and Drivers</a> in the Audacity Wiki. Having stable, up-to-date sound device drivers properly matched to your hardware also becomes more important.  See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">this page</a> in the Audacity Wiki for details. </div>      
+<div id="long"></div>
+<h2><span class="mw-headline" id="Long_recordings">Long recordings</span></h2>
+<p>Audacity stores samples as 64-bit values (even on 32-bit machines); therefore there is no inherent 32-bit limitation that recordings may not exceed 2^31 samples in length (which is for example just over 13.5 hours at 44100 Hz sample rate). 
+</p><p>44100 Hz now offers a theoretical maximum recording length of a mere 58 billion hours or more than 6.6 years (if you have the disk space).
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112455
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.089 seconds
+Real time usage: 0.095 seconds
+Preprocessor visited node count: 232/1000000
+Preprocessor generated node count: 1190/1000000
+Post‐expand include size: 7212/2097152 bytes
+Template argument size: 5105/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   37.018      1 - -total
+ 65.16%   24.121      1 - Template:I18n
+ 59.21%   21.919      1 - Template:I18n_box
+ 48.16%   17.827      1 - Template:I18n_list
+ 18.89%    6.991      2 - Template:I18n_link
+ 10.99%    4.069      2 - Template:Autoglossonym
+  9.30%    3.444      2 - Template:Hint
+  8.32%    3.081      1 - Template:Ednote
+  6.16%    2.279      6 - Template:Menu
+  4.96%    1.836      1 - Template:Intro
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4855-0!*!0!!en!5!* and timestamp 20180917112455 and revision id 60610
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Recording_length">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

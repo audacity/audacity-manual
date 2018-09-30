@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Playing and Recording - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Playing_and_Recording rootpage-Playing_and_Recording skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Playing and Recording</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Playing_and_Recording#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"></li></ul>
+
+<div class="intro">Audacity offers many tools which allow the user to play all or part of a sound. There are also many recording options. </div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li> <a href="#control">Controlling Playback and Recording</a>
+<ul><li> <a href="#transport">Transport Toolbar</a></li>
+<li> <a href="#shortcuts">Using keyboard shortcuts</a></li>
+<li> <a href="#adjust">Adjusting the Playback volume</a></li>
+<li> <a href="#warp">Playing at slower or faster speeds than normal</a></li>
+<li> <a href="#pinned">Pinned head Playing and Recording</a></li></ul></li>
+<li> <a href="#play">Playback</a>
+<ul><li> <a href="#tqp">Quick-Play using the Timeline</a></li>
+<li> <a href="#scrub">Scrubbing and Seeking</a></li>
+<li> <a href="#midi">MIDI (and Allegro) Playback</a></li></ul></li>
+<li> <a href="#record">Recording</a>
+<ul><li> <a href="#overdub">Overdubbing</a></li>
+<li> <a href="#timer">Timer Recording</a></li>
+<li> <a href="#sar">Sound Activated Recording</a></li></ul></li></ol>
+<p><br />
+</p>
+<div id="control"></div>
+<h2><span class="mw-headline" id="Controlling_Playback_and_Recording">Controlling Playback and Recording</span></h2>
+<div id="transport"></div>
+<h3><span class="mw-headline" id="Transport_Toolbar">Transport Toolbar</span></h3>
+<p>The easiest way to control Audacity playback and recording is with <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a>: 
+</p>
+<dl><dd><a href="toolbars_overview.html#upper_tooldock" title="Transport Toolbar buttons, annotated - click on the image to see this toolbar displayed in context of the default upper tooldock layout"><img alt="Transport Toolbar buttons, annotated - click on the image to see this toolbar displayed in context of the default upper tooldock layout" src="../m/images/2/2c/annotated_transport_toolbar.png" width="329" height="85" /></a></dd></dl>
+<dl><dd><img alt="The Play button" src="../m/images/9/90/play.png" title="The Play button" width="16" height="16" /> Clicking <b>Play</b> plays from the cursor point to the end of the project, or from the start of the <a href="audacity_selection.html" title="Audacity Selection">selection region</a> to the end of that region. </dd></dl>
+<dl><dd><dl><dd><img alt="The Loop Play button" src="../m/images/7/7e/loop_play.png" title="The Loop Play button" width="16" height="16" /> The alternative <b> Loop Play</b> action for the Play button is activated by holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking Play. The button changes to display two circular green arrows to indicate <b>Loop Play</b>. </dd></dl></dd></dl>
+<dl><dd><dl><dd><img alt="The Play Cut Preview button" src="../m/images/5/55/play_cut_preview.png" title="The Play Cut Preview button" width="15" height="15" /> <b>Play Cut Preview</b> will play audio either side of a selection to preview what deleting the selection will sound like. Hold down <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> <i>(<span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> while clicking <b>Play</b>. 
+<dl><dd>Alternatively you can use the <span class="kbrd" style="background-color: #e0e0f0">C</span> shortcut to preview the cut. This also causes the Play button image to change to Play Cut Preview.</dd></dl></dd></dl></dd></dl>
+<div class="note">Clicking <b>Play</b> when the track is already playing or paused is a quick way to restart playback without first pressing <b>Stop</b>.</div> 
+<dl><dd><img alt="Record button" src="../m/images/e/e8/record.png" title="Record button" width="15" height="15" /> Clicking <b>Record</b> or using the <span class="kbrd" style="background-color: #d0d0f8">R</span> shortcut always begins recording at the end of the currently selected track(s). </dd></dl>
+<dl><dd><dl><dd><img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" /> The alternative <b>Record New Track</b> action for the Record button is activated by holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking Record. The button changes to display the Record New Track icon. This will start recording in a new track at either the current cursor position or at the beginning of the current selection. </dd></dl></dd></dl>
+<dl><dd><img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> Click <b>Pause</b>, or its shortcut <span class="kbrd" style="background-color: #d0d0f8">P</span>, to temporarily pause playing or recording without losing your place. Click <b>Pause</b> a second time to resume.</dd></dl>
+<dl><dd><img alt="The Stop button" src="../m/images/f/f9/stop.png" title="The Stop button" width="16" height="16" />  Clicking <b>Stop</b> stops playing or recording immediately, and releases <b>Pause</b> if depressed. </dd></dl>
+<p><br />
+</p>
+<div id="shortcuts"></div>
+<h3><span class="mw-headline" id="Using_keyboard_shortcuts">Using keyboard shortcuts</span></h3>
+<p>When you get more used to Audacity, it's often easier to use keyboard shortcuts for repetitive actions like playing, pausing and recording. Below is a list of the equivalent keyboard shortcut for each of the Transport Toolbar buttons, with a description of what each button and its shortcut does.
+</p>
+<dl><dd><table class="prettytablerows" id="Transport_shortcuts">
+
+<tr>
+<th> Button</th>
+<th> Shortcut</th>
+<th> What it does
+</th></tr>
+<tr>
+<td width="15%">Pause</td>
+<td> <span class="kbrd" style="background-color: #d0d0f8">P</span> </td>
+<td> Press once to pause playback or recording then once to resume.
+</td></tr>
+<tr>
+<td> Play or Stop </td>
+<td>  <span class="kbrd" style="background-color: #d0d0f8">Space</span> </td>
+<td> Press once to start playback then once to stop. Starting playback again starts from its original starting position at the cursor.
+</td></tr>
+<tr>
+<td> Loop-Play </td>
+<td>  <span class="kbrd" style="background-color: #d0d0f8">Shift + Space</span> </td>
+<td> Play the entire selection repeatedly (or the entire track if no selection) until stopped.
+</td></tr>
+<tr>
+<td> Move to Next Label </td>
+<td>  <span class="kbrd" style="background-color: #d0d0f8">Alt + Right</span> </td>
+<td>Places the editing cursor or selection to correspond with the next label and restarts playback from there, without opening the label for editing. After the final label is reached, using the shortcut again jumps playback to the first label. Not available while recording.
+</td></tr>
+<tr>
+<td> Move to Previous Label </td>
+<td>  <span class="kbrd" style="background-color: #d0d0f8">Alt + Left</span> </td>
+<td> Places the editing cursor or selection to correspond with the previous label and restarts playback from there, without opening the label for editing. After the first label is reached, using the shortcut again jumps playback to the final label. Not available while recording.
+</td></tr>
+<tr>
+<td> Skip to Start </td>
+<td> <span class="kbrd" style="background-color: #d0d0f8">Home</span> </td>
+<td> Move the cursor to start of project.
+</td></tr>
+<tr>
+<td> Skip to End </td>
+<td>  <span class="kbrd" style="background-color: #d0d0f8">End</span> </td>
+<td> Move the cursor to end of project.
+</td></tr>
+<tr>
+<td> Record </td>
+<td> <span class="kbrd" style="background-color: #d0d0f8">R</span> </td>
+<td> Record starting from the end of the selected track(s).
+</td></tr>
+<tr>
+<td> Record New Track </td>
+<td> <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span> </td>
+<td> Record in a new track starting from the cursor position or start of the selection.
+</td></tr></table></dd></dl>
+<p>There is an additional command <span class="menu">Transport &gt; Playing &gt; <a href="transport_menu_playing.html#playstop_and_set_cursor" title="Transport Menu: Playing">Play/Stop and Set Cursor</a></span> which has the shortcut <span class="kbrd" style="background-color: #e0e0f0">X</span>. This acts exactly like <span class="kbrd" style="background-color: #d0d0f8">Space</span> when starting playback, but when used to stop, the cursor or start of the selection is set to the position where playback was stopped. Using either <span class="kbrd" style="background-color: #e0e0f0">Space</span> or <span class="kbrd" style="background-color: #e0e0f0">X</span> will then start playback from that stop position. 
+</p><p>All the above shortcuts can be changed if desired in <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a>.
+</p>
+<div id="adjust"></div>
+<h3><span class="mw-headline" id="Adjusting_the_Playback_volume">Adjusting the Playback volume</span></h3>
+<p>You can adjust the playback volume using the output level slider in the <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a>.
+</p><p>The <a href="meter_toolbar.html#playback" title="Meter Toolbar">Playback Meter</a> will show you the overall volume of all of your tracks when mixed together.
+</p>
+<div id="warp"></div>
+<h3><span class="mw-headline" id="Playing_at_slower_or_faster_speeds_than_normal">Playing at slower or faster speeds than normal</span></h3>
+<p>Using the Play button in <a href="play_at_speed_toolbar.html" title="Play-at-Speed Toolbar">Play-at-Speed Toolbar</a> plays at a constant speed but slower or faster than normal. 
+</p>
+<dl><dd><span title="Play-at-Speed Toolbar"><img alt="Play--at-Speed Toolbar.png" src="../m/images/d/d1/play_at_speed_toolbar.png" width="140" height="27" /></span></dd></dl>
+<p><a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> on the <a href="tools_toolbar.html" title="Tools Toolbar">Tools Toolbar</a>, when used in conjunction with a <a href="time_tracks.html" title="Time Tracks">Time Track</a>, allows a speed envelope to be drawn which can increase or decrease playback speed over the length of the audio.
+</p>
+<div id="pinned"></div>
+<h3><span class="mw-headline" id="Pinned_head_playing_and_recording">Pinned head playing and recording</span></h3>
+<p>You can change Audacity to play or record with a fixed head pinned to the the <a href="timeline.html" title="Timeline">Timeline</a>. In this mode the head remains static and the waveform scrolls continuously as the audio is played or recorded.  The default pinned position is the center of the Timeline, but you can change this by clicking on the pinned head and dragging it along the Timeline while you are playing or recording.  A double-click on the head will restore it to its default position in the center of the Timeline.  You may find that centered is the most useful when using playback but for recording, repositioning the head to the right may be useful.
+</p><p>This behavior is controlled by using the button at the left of the Timeline.  By default this shows as a green downward-pointing triangle (like the playhead).  In this mode, the playhead or recordhead will move horizontally and the waveform will scroll when necessary, except that if <i><b>Update display when Recording/Playback head is unpinned</b></i> is unchecked in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> then scrolling will not occur. 
+</p>
+<dl><dd><span title="Unpinned Record/Playhead"><img alt="Unpinned head button.png" src="../m/images/5/56/unpinned_head_button.png" width="257" height="31" /></span></dd></dl>
+<p>Clicking the green triangle causes the button icon to change to a drawing-pin.  This indicates that the play or recordhead is now pinned to the Timeline and when playing or recording, the waveform will scroll continuously.
+</p>
+<dl><dd><span title="Pinned Record/Playhead"><img alt="Pinned head button.png" src="../m/images/f/f4/pinned_head_button.png" width="259" height="32" /></span></dd></dl>
+<p>When pinned playback or recording is chosen, the playhead displays as a green drawing-pin (as shown in the image below) and the recordhead displays as a red drawing-pin. 
+</p>
+<dl><dd><span title="Pinned head playback"><img alt="Pinned head playback annotated trackname.png" src="../m/images/5/50/pinned_head_playback_annotated_trackname.png" width="768" height="199" /></span></dd></dl>
+<p>Clicking the drawing-pin at the left of the Timeline reverts to default unpinned playback and recording, and the button will change back to the green triangle.
+</p><p>Unpinned or pinned head can also be selected in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>.
+</p>
+<div id="play"></div>
+<h2><span class="mw-headline" id="Playback"><a href="playback.html" title="Playback">Playback</a></span></h2>
+<div class="note">For fuller details of how to use playback, including keyboard shortcut commands and how to preview short sections, please see the <b><a href="playback.html" title="Playback">Playback</a></b> page.
+</div>  
+<div id="tqp"></div>
+<h3><span class="mw-headline" id="Quick-Play_using_the_Timeline"><a href="timeline.html#tqp" title="Timeline">Quick-Play using the Timeline</a></span></h3>
+<p><a href="timeline.html" title="Timeline">Timeline</a> Quick-Play provides a quick and convenient means to either start playback from any point within the current project or to playback a region of audio. 
+</p><p>For details see the <a href="timeline.html#tqp" title="Timeline">Quick-Play</a> section on the Timeline page.
+</p>
+<div id="scrub"></div>
+<h3><span class="mw-headline" id="Scrubbing_and_Seeking"><a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing and Seeking</a></span></h3>
+<p>Scrubbing or Seeking is the action of moving the mouse pointer right or left so as to adjust the position, speed or direction of playback - a convenient way to quickly navigate the waveform to find a particular event of interest.
+</p><p>Scrubbing or Seeking in Audacity is initiated by using the Scrub button <img alt="Scrub button 60%.png" src="../m/images/9/96/scrub_button_60.png" width="18" height="18" /> or Seek button <img alt="Seek Button 60%.png" src="../m/images/a/a1/seek_button_60.png" width="18" height="18" /> in <a href="scrub_toolbar.html" title="Scrub Toolbar">Scrub Toolbar</a> <img alt="Scrub Toolbar 60%.png" src="../m/images/c/c3/scrub_toolbar_60.png" width="58" height="20" />. Alternatively you can use the <span class="menu">Transport &gt; <a href="transport_menu_scrubbing.html" title="Transport Menu: Scrubbing">Scrubbing</a></span> menu item and select <span class="menu">Scrub</span> or <span class="menu">Seek</span> from the cascading menu.
+</p><p>Audacity will remain in scrubbing/seeking mode until you return it to normal play mode.  Clicking the Stop button <img alt="The Stop button" src="../m/images/f/f9/stop.png" title="The Stop button" width="16" height="16" /> (or its shortcut <span class="kbrd" style="background-color: #d0d0f8">Space</span>) at any time will stop scrub/seek play and return you to normal play mode moving the cursor to the current scrub/seek play position.  If you wish to stop scrubbing or seeking without losing the position of the editing cursor or selection, use the Escape <span class="kbrd" style="background-color: #e0e0f0">Esc</span> key.  
+</p><p>Please see <a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing and Seeking</a> for details
+</p>
+<div id="midi"></div>
+<h3><span class="mw-headline" id="MIDI_.28and_Allegro.29_Playback"><a href="note_tracks.html" title="Note Tracks">MIDI (and Allegro) Playback</a></span></h3>
+<p>MIDI (and Allegro .gro) files can be imported into Audacity with <span class="menu"> File &gt; <a href="file_menu_import.html#midi" title="File Menu: Import">Import MIDI...</a></span> to a <a href="note_tracks.html" title="Note Tracks">Note Track</a>. 
+</p><p>Audacity can now play these MIDI (and Allegro) files, but note that there will no use of the <a href="meter_toolbar.html#playback" title="Meter Toolbar">Playback meter</a> while Note tracks are played. Although Note track playback should just work on Windows, on Mac and Linux additional software may be required. 
+</p><p>Editing these Note tracks is possible, but very limited.
+</p><p>For more details please see: <a href="note_tracks.html" title="Note Tracks">Note Tracks</a>.
+</p>
+<div class="note">In order to achieve Note track playback on Mac and Linux you will need to install, and run, additional software, a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Software_synthesizer">software synthesizer</a>
+<p>Please see these pages in the Audacity Wiki:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Enabling_Note_Track_playback_on_Mac">Enabling Note Track playback on Mac</a></li>
+<li><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Enabling_Note_Track_playback_on_Linux">Enabling Note Track playback on Linux</a> </div></li></ul>
+<div id="record"></div>
+<h2><span class="mw-headline" id="Recording"><a href="recording.html" title="Recording">Recording</a></span></h2>
+<div class="note">For fuller details of how to use recording, including how to control where and which track you record in and keyboard shortcut commands, please see the <b><a href="recording.html" title="Recording">Recording</a></b> page.
+</div> 
+<p>When you click the Record button <img alt="The Record button" src="../m/images/e/e8/record.png" title="The Record button" width="16" height="16" /> on <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a>, or use the <span class="kbrd" style="background-color: #d0d0f8">R</span>, Audacity will record at the end of the currently selected (or only) track, or create a new track if you have an empty project.
+</p><p>When recording like this, at the end of an existing recording, Audacity will place a <b><a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Clip</a></b> line at the junction between the two recordings to aid you in separating them later if required.  See the <a href="recording.html#append" title="Recording">Recording</a> page for details.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">When making recordings, particular critical recordings, you should consider shutting down all other applications giving Audacity sole use of the computer.  This can help to avoid skips, small dropouts, and ticks in your recordings.
+<div class="note">And on Mac that means fully Quitting them not just closing them, as otherwise Mac will leave them open consuming computer resources.</div> 
+</td></tr></table>
+</div> 
+<div id="overdub"></div>
+<h3><span class="mw-headline" id="Overdubbing"><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Overdubbing</a></span></h3>
+<p>You can record a new track while listening to previously recorded tracks. This is called <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdubbing</a>. To set up for overdubbing, make sure that <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a></span> is enabled (on) which is its default setting.  See the tutorial set <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Recording Multi-track Overdubs</a> for more help with overdubbing.
+</p><p>If you hold the <span class="button">Shift</span> button down the Record button in <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> will temporarily change to <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" />. Then clicking on this modified Record button, or using the shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span> will cause Audacity to create a new track and begin recording on that track from the current cursor position (or from the left edge of a region on the <a href="timeline.html" title="Timeline">Timeline</a>). 
+</p><p>If there is a region in the Timeline, that region will be recorded in a new track. After stopping recording, Audacity will push the recorded track backwards by 130 milliseconds by default to attempt to align it with the previous tracks(s). Left-pointing arrows will appear at time zero when any of the recorded track is pushed behind zero (standard <a href="file_menu.html#export" title="File Menu">Export</a> ignores audio before zero but <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> based on multiple audio tracks includes it). It is recommended to perform a <a href="latency_test.html" title="Latency Test">latency test</a> to determine the optimum backwards correction then set that value at <a href="recording_preferences.html#latency" title="Recording Preferences">Latency correction</a> in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>.
+</p>
+<div id="timer"></div>
+<h3><span class="mw-headline" id="Timer_Recording"><a href="timer_record.html" title="Timer Record">Timer Recording</a></span></h3>
+<p>Yet another way to record is using the <a href="timer_record.html" title="Timer Record">Timer Record</a> utility, found in the <a href="transport_menu.html" title="Transport Menu">Transport Menu</a>.
+</p>
+<dl><dd><a href="timer_record.html" title="The Timer Record dialog, click for details of usage."><img alt="The Timer Record dialog, click for details of usage." src="../m/images/1/10/timer_record_w10.png" width="530" height="370" /></a></dd></dl>
+<p>Use it to start recording later, or to record for a certain duration before stopping.
+</p>
+<div id="sar"></div>
+<h3><span class="mw-headline" id="Sound_Activated_Recording"><a href="transport_menu.html#sar" title="Transport Menu">Sound Activated Recording</a></span></h3>
+<p>If you turn on <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#sound_activated_recording_onoff" title="Transport Menu: Transport Options">Sound Activated Recording (on/off)</a></span> you can make recording pause until the input level exceeds the specified threshold level at <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#sound_activation_level" title="Transport Menu: Transport Options">Sound Activation Level</a></span>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917085416
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.230 seconds
+Real time usage: 0.247 seconds
+Preprocessor visited node count: 691/1000000
+Preprocessor generated node count: 1990/1000000
+Post‐expand include size: 9693/2097152 bytes
+Template argument size: 4373/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   70.931      1 - -total
+ 42.19%   29.927      1 - Template:I18n
+ 39.44%   27.976      1 - Template:I18n_box
+ 34.04%   24.146      1 - Template:I18n_list
+ 17.05%   12.094     15 - Template:Shortcut
+ 15.12%   10.728      4 - Template:I18n_link
+  8.58%    6.085      9 - Template:Key
+  8.54%    6.058      4 - Template:Autoglossonym
+  4.65%    3.299      1 - Template:Hint
+  4.36%    3.091      8 - Template:Menu
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2052-0!*!0!!*!5!* and timestamp 20180917085416 and revision id 61806
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Playing_and_Recording">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

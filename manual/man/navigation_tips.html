@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Navigating and identifying audio for editing - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Navigation_Tips rootpage-Navigation_Tips skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Navigating and identifying audio for editing</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Navigation_Tips#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+
+<div class="intro">This page explains how to navigate the waveform or tracks (including moving the playback position), and how to find and mark edit points, so as to identify the audio you want to edit.
+<ul><li>For tips on how to view and adjust playback volume, and to achieve smooth playback quality, see <a href="playback_tips.html" title="Playback Tips">Playback Tips</a>.</li>
+<li>For tips on how to navigate effects without using a mouse see <a href="navigating_effects_without_using_a_mouse.html" title="Navigating Effects without using a mouse">Navigating Effects without using a mouse</a></div> </li></ul>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#navigation">Navigation</a>
+<ul><li><a href="#play_pos">Changing playback position</a></li>
+<li><a href="#zoom">Zooming</a></li>
+<li><a href="#start">Go to Selection Start/End</a></li>
+<li><a href="#multitrack">Navigating multiple tracks</a></li></ul></li>
+<li><a href="#find">Finding the audio you want to edit</a></li>
+<li><a href="#edit">Marking edit regions or points</a>
+<ul><li><a href="#createmod">Creating and modifying selections</a></li>
+<li><a href="#labels">Labels</a></li>
+<li><a href="#labnav">Navigating using Label Tracks</a></li>
+<li><a href="#clips">Clips</a></li></ul></li></ol>
+<div id="navigation"></div>
+<h2><span class="mw-headline" id="Navigation">Navigation</span></h2>
+<div id="play_pos"></div>
+<h3><span class="mw-headline" id="Changing_playback_position">Changing playback position</span></h3>
+<p>Audacity always plays from where the <b>cursor position</b> is, or where a <b>selected area</b> is, when you press <span class="kbrd" style="background-color: #d0d0f8">Space</span> or use the  Play button. Click the Stop button or <span class="kbrd" style="background-color: #d0d0f8">Space</span> again to stop playback. Clicking Play or <span class="kbrd" style="background-color: #d0d0f8">Space</span> a further time resumes playback from the original cursor position or the start of the original selection.  
+</p><p>You can move the cursor position backwards or forwards anywhere on the visible screen by:
+</p>
+<ul><li> moving the cursor with the <span class="kbrd" style="background-color: #d0d0f8">Left</span> arrow or <span class="kbrd" style="background-color: #d0d0f8">Right</span> arrow keys on your keyboard</li>
+<li> (quicker) by clicking in the track at the desired point with your mouse</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">Home</span> key or <span class="button">&lt;&lt;</span> button to left of the Play button skips to the start of the project</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">End</span> key or <span class="button">&gt;&gt;</span> button to right of the Stop button skips to the end of the project. </li></ul>
+<p>To start playback from the new point, press <span class="kbrd" style="background-color: #d0d0f8">Space</span> once. If you are already playing the track at another position, press <span class="kbrd" style="background-color: #d0d0f8">S</span> twice and playback will resume from your newly chosen cursor position.    
+</p>
+<h4><span class="mw-headline" id="Shortcuts_to_change_the_ongoing_playback_position">Shortcuts to change the ongoing playback position</span></h4>
+<p>There are also two  shortcut commands that have no menu item or button associated with them, they exist just as shortcuts.  These enable you to change the current playback position to the next or previous label (if labels exist), while audio is playing:
+</p>
+<ul><li><span class="kbrd" style="background-color: #d0d0f8">Alt + Right</span> moves the cursor to the next labeled selection (or point label) and continues playback from there</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">Alt + Left</span> moves the cursor to the previous labeled selection (or point label) and continues playback from there.</li></ul>
+<p><br />
+</p>
+<div id="zoom"></div>
+<h3><span class="mw-headline" id="Zooming">Zooming</span></h3>
+<p>To move to different positions in the track with the mouse, it is easier if you are fully zoomed out with the <span class="menu">View &gt; Tracksize &gt; <a href="view_menu_track_size.html#fittowidth" title="View Menu: Track Size">Fit to Width</a></span> command (<span class="kbrd" style="background-color: #d0d0f8">Ctrl + F</span>), or the <img alt="The Fit to Width tool" src="../m/images/4/4a/zoomfit.png" title="The Fit to Width tool" width="27" height="27" /> <b>Fit to Width</b> button on the extreme right of <a href="edit_toolbar.html" title="Edit Toolbar">Edit Toolbar</a>.
+</p><p>If the track is zoomed in, you can drag the horizontal scroll bar near the bottom of the screen to find a new position to play from, but you cannot do this while the track is playing, unless you go to the <a href="tracks_preferences.html" title="Tracks Preferences">Tracks</a> section of Preferences and uncheck <i>Update display when Recording/Playback head is unpinned</i>. If that feature is unchecked, once the green playback cursor moves past the right edge of the window, you will always need to drag the horizontal scrollbar in order to see the current playback position, or fit the whole Project in the window so you can see the whole track again without scrolling.
+</p>
+<div id="start"></div>
+<h3><span class="mw-headline" id="Go_to_Selection_Start.2FEnd">Go to Selection Start/End</span></h3>
+<p><span class="menu">View &gt; Skip to &gt; <a href="view_menu_skip_to.html#selectionstart" title="View Menu: Skip to">Selection Start</a></span> (shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + [&#160;</span>) and <span class="menu">View &gt; Skip to &gt; <a href="view_menu_skip_to.html#selectionend" title="View Menu: Skip to">Selection End</a></span> (shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + ]&#160;</span>) let you move quickly to the start or end of your currently selected audio, centered on the screen, without changing the zoom level. These commands are useful if you are zoomed far in at one edge of the selection and then wish to view the other edge which may be currently off screen, or if you have lost sight of the selection entirely by scrolling too far. 
+</p><p>Using either command after zooming in or out provides a keyboard method to zoom in or out on a selection edge. This is otherwise possible only by <b>Control and mouse wheel scroll</b> while the mouse pointer is positioned at either selection edge.  
+</p>
+<div id="multitrack"></div>
+<h3><span class="mw-headline" id="Navigating_multiple_tracks">Navigating multiple tracks</span></h3>
+<p>If you have multiple tracks on screen you can fit them on screen without the need to scroll up and down by dragging the bottom edge of each track upwards at any point along the waveform. Or you can use the <span class="menu">View &gt; Tracksize &gt; <a href="view_menu_track_size.html#fittoheight" title="View Menu: Track Size">Fit to Height</a></span> command to fit all the tracks in the screen. 
+</p><p>You can move tracks up and down by clicking on the Track Control Panel with the mouse and dragging up or down. Alternatively, click the downward pointing arrow at the top of the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Track Dropdown Menu</a> and choose "Move Track Up" or "Move Track Down".
+</p><p>Audacity can manipulate tracks and selected areas entirely with the keyboard. Use the <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> key on the keyboard to give focus to a track, as shown by the colored border around the track. Then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to select or deselect the track.
+</p><p>There is an additional "roll-up" button (the upward pointing arrow) at the base of each Track Control Panel:<br />
+</p>
+<dl><dd><span title="Audio track rolled down - Windows 7 Basic theme"><img alt="Rolldown.png" src="../m/images/d/db/rolldown.png" width="552" height="301" /></span>     </dd></dl>
+<p>If you click this, the track will be rolled up so that only the name of the track is visible in the Track Control Panel, so allowing many tracks to be fitted on screen without scrolling:<br />
+</p>
+<dl><dd><span title="Audio track rolled up - Windows 7 Basic theme"><img alt="Rollup.png" src="../m/images/7/70/rollup.png" width="546" height="39" /></span></dd></dl>
+<p>To roll-down the track again, click the downward pointing arrow. 
+</p><p>Also there is an option on the <a href="tracks_preferences.html" title="Tracks Preferences">Tracks</a> tab of Preferences:  "<b>Automatically fit tracks vertically zoomed</b>". Checking this will automatically fit all tracks to the vertical screen height as they are added or removed.
+</p><p><br /> 
+</p>
+<div id="find"></div>
+<h2><span class="mw-headline" id="Finding_the_audio_you_want_to_edit">Finding the audio you want to edit</span></h2>
+<ul><li> <b>Seek function during playback:</b> Seek by pre-determined amounts of time during playback by using the arrow keys of your keyboard. The default commands are: 
+<ul><li>Seek left (short period) during playback - <span class="kbrd" style="background-color: #d0d0f8">Left</span></li>
+<li>Seek right (short period) during playback - <span class="kbrd" style="background-color: #d0d0f8">Right</span></li>
+<li>Seek left (long period) during playback  - <span class="kbrd" style="background-color: #d0d0f8">Shift + Left</span></li>
+<li>Seek right (long period) during playback - <span class="kbrd" style="background-color: #d0d0f8">Shift + Right</span> . </li></ul></li></ul>
+<ul style="list-style-image: none; list-style-type: none">The length of the seek period can be set on the <a href="playback_preferences.html" title="Playback Preferences">Playback</a> tab of Preferences. The shortcuts used for the seek commands can be changed on the <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard</a> tab of Preferences.</ul>  
+<ul><li> <b>"Play/Stop and Set Cursor" shortcut <span class="kbrd" style="background-color: #d0d0f8">X</span>:</b> This acts like Space except that when stopping playback, the cursor is set to the place where it stopped, so resumes from there.</li></ul>
+<ul><li> <b><a href="timeline.html#tqp" title="Timeline">Quick-Play</a>:</b> Another way to change the playback position is to click on the <a href="timeline.html" title="Timeline">Timeline</a> above the waveform. Playback will start from that point at once. Or click on the Timeline and drag a region (shown by arrowheads with a line connecting them). Release the mouse to play the region once.  Neither an already selected region or the cursor is affected by Quick-Play.</li></ul>
+<ul><li> <b><a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing</a>:</b> Scrubbing or Seeking is the action of moving the mouse pointer right or left so as to adjust the position, speed or direction of playback while listening - a convenient way to quickly navigate the waveform to find a particular event of interest. </li></ul>
+<ul><li> <b>Selection Toolbar:</b> </li></ul>
+<dl><dd><span title="Seelction Toolbar"><img alt="Selection Toolbar Start-Length digit highlighted.png" src="../m/images/c/c8/selection_toolbar_start_length_digit_highlighted.png" width="680" height="60" /></span></dd></dl>
+<ul style="list-style-image: none; list-style-type: none"> You can move the cursor, or define a selection region, by entering time position values in a "Selection Toolbar" at the bottom of the screen. Values may be typed in, or incremented with the up and down arrow keys of the keyboard. </ul>
+<ul><li> <b>"Cut Preview" shortcut:</b> Press <span class="kbrd" style="background-color: #d0d0f8">C</span> to hear the audio just before and after a selection region so as to preview how it would sound if you cut that region out. You can change the length of the audio preview before and after the cut on the <a href="playback_preferences.html" title="Playback Preferences">Playback</a> tab of Audacity Preferences.    </li></ul>
+<ul><li> <b>"Play To Selection" shortcut:</b> Press <span class="kbrd" style="background-color: #d0d0f8">B</span> to listen to part of the selection region, or to the audio before or after the selection. This helps you ensure the selection is exactly where you want it.
+<ul><li> Move the mouse pointer somewhere inside the left half of the selection, and this shortcut will play from the start of the selection to the pointer. Move the pointer somewhere inside the right half of the selection, and this shortcut will play from the pointer to the end of the selection.</li>
+<li> Move the pointer to left of the selection and this shortcut will play from the pointer to the start of the selection. Move the pointer after the end of the selection and this shortcut will play from the end of the selection to the pointer. </li></ul></li></ul>
+<ul style="list-style-image: none; list-style-type: none">If you like the selection region you heard, you can then use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift</span> with the appropriate <span class="kbrd" style="background-color: #d0d0f8">Left</span> or <span class="kbrd" style="background-color: #d0d0f8">Right</span> key to contract the selection to the area you played with the <span class="kbrd" style="background-color: #d0d0f8">B</span> shortcut. 
+If you need to expand the selection before using <span class="kbrd" style="background-color: #d0d0f8">B</span>, you can use <span class="kbrd" style="background-color: #d0d0f8">Shift + Left</span> or <span class="kbrd" style="background-color: #d0d0f8">Shift + Right</span>.</ul>
+<ul><li> <b>Play-at-Speed Toolbar:</b> </li></ul>
+<ul style="list-style-image: none; list-style-type: none"> This is a special playback button with attached speed slider 
+
+<dl><dd><span title="Play-at-Speed Toolbar"><img alt="Transtool.jpg" src="../m/images/1/14/transtool.jpg" width="141" height="30" /></span></dd></dl>
+
+which allows you to play back at faster or slower speeds (affecting both tempo and pitch). If this is not visible, enable it at <span class="menu">View &gt; <a href="view_menu_toolbars.html" title="View Menu: Toolbars">Toolbars</a></span>.</ul>
+<p><br />
+</p>
+<div id="edit"></div>
+<h2><span class="mw-headline" id="Marking_edit_regions_or_points">Marking edit regions or points</span></h2>
+<div id="createmod"></div>
+<h3><span class="mw-headline" id="Creating_and_modifying_selections">Creating and modifying selections</span></h3>
+<p>To create a selected area in the track, click in the track and drag to left or right with your mouse, or with the left or right arrow keys. When you press Space once, the whole of the selected area will start to play. You can similarly create a selected area in the track whilst already playing the track, in which case you press Space twice to move from the current playback position to playing the selected area. 
+</p><p>Another way to create a selected area in the track is to click in the track where you want to start your selection and hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking in the track at the point where you want to end your selection. Again, this also works while playing a track, so the selection region is drawn from the point where playback started to the point where you shift-clicked.  
+</p><p>You can adjust the edges of the selection region with your mouse (hover over an edge then drag when the mouse pointer changes to a hand). Alternatively, adjust the selection edges with the left and right arrow keys. Holding down <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while using <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> will expand the left or right selection edge respectively. Holding down <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Shift</span> while using <span class="kbrd" style="background-color: #d0d0f8">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> will contract the right or left selection edge respectively. 
+</p><p>You can also mark regions during playback with the <span class="kbrd" style="background-color: #d0d0f8">&#160;[</span>&#160; <i>(Select Left at Playback Position)</i> and <span class="kbrd" style="background-color: #d0d0f8">&#160;]</span>&#160; <i>(Select Right at Playback Position)</i> shortcuts. To use these, start playing then use <span class="kbrd" style="background-color: #d0d0f8">&#160;[</span>&#160; to move the cursor to the current playback position. When you hear the end of the audio you want to mark as a region, use <span class="kbrd" style="background-color: #d0d0f8">&#160;]</span>&#160; to draw a region from the cursor to the current playback position. You could then stop and place a label at the region with <span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span> (see below).  
+</p><p>A selected region or the position of the editing cursor can be stored and retrieved. One region or cursor position at a time can be stored with the <span class="menu">Edit &gt; <a href="edit_menu.html#region_save" title="Edit Menu">Store Region</a></span> command and retrieved at any time with <span class="menu">Edit &gt; <a href="edit_menu.html#region_restore" title="Edit Menu">Retrieve Region</a></span>.
+</p><p>Additionally, <span class="menu">Edit &gt; <a href="edit_menu.html#store_cursor" title="Edit Menu">Store Cursor Position</a></span> stores a cursor position 
+which when audio is not playing, recording or paused, is the position of the editing cursor or of the left edge of the selection region. If audio is active, the stored cursor position is the position of the Playback cursor <img alt="PlaybackCursor.png" src="../m/images/d/d0/playbackcursor.png" width="13" height="10" /> or Recording cursor <img alt="RecordingCursor.png" src="../m/images/b/bf/recordingcursor.png" width="13" height="10" /> at the time you store. The stored cursor position can then be used with the <span class="menu">Edit &gt; Select &gt; <a href="edit_menu_select.html#cursor_to_stored" title="Edit Menu: Select">Cursor to Stored Cursor Position</a></span> command to create or modify a selection region. 
+</p>
+<div id="labels"></div>
+<h3><span class="mw-headline" id="Labels">Labels</span></h3>
+<p>Multiple selected regions and cursor points can also be marked with <a rel="nofollow" class="external text" href="https://manual.audacityteam.org/o/man/label_tracks.html">labels</a> using the <span class="menu">Tracks &gt; <a href="tracks_menu.html#add_label" title="Tracks Menu">Add Label at Selection</a></span> command (<span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span>). Labels can be helpful as reference points for editing. The region or point can be recalled at any time by clicking in the label. The labels appear in a new Label Track underneath the audio track.
+</p><p>You can also add a label at the current playback position while the track is playing, or at the current recording position while recording. To do this, click <span class="menu">Tracks &gt; <a href="tracks_menu.html#add_label" title="Tracks Menu">Add Label at Playback Position</a></span> (<span class="kbrd" style="background-color: #d0d0f8">Ctrl + M</span>). It can also be useful to drag out and a label a region while the track is playing or recording. To label that region, use <span class="menu">Tracks &gt; <a href="tracks_menu.html#add_label" title="Tracks Menu">Add Label at Selection</a></span> as you would if the track was stopped.
+</p><p>If you want to label while still playing, use <span class="kbrd" style="background-color: #e0e0f0">Enter</span> then <span class="kbrd" style="background-color: #d0d0f8">Up</span> after typing the label to close the label and return focus to the track. You can now use <span class="kbrd" style="background-color: #d0d0f8">&#160;[</span>&#160; and <span class="kbrd" style="background-color: #d0d0f8">&#160;]</span>&#160; as above to mark another region between desired points. 
+</p><p>If you miss something you wanted to mark, you cannot currently use seek to jump the playback position behind the cursor, but as always you can click in the <a href="timeline.html#tqp" title="Timeline">Timeline</a> to restart playback at the click point.  If you click in the Timeline to left of the editing cursor, the <span class="kbrd" style="background-color: #d0d0f8">&#160;[</span>&#160;shortcut will draw a region from the playback cursor forwards to the editing cursor, which may not always be what you want. During playback you can click to place the editing cursor behind the playback cursor then draw a region from there to the current playback position using <span class="kbrd" style="background-color: #d0d0f8">&#160;]</span>&#160;.
+</p>
+<div id="labnav"></div>
+<h3><span class="mw-headline" id="Navigating_using_Label_Tracks">Navigating using Label Tracks</span></h3>
+<p><b>Tabbing to open the label for editing</b> 
+</p><p>When focus is on a label track as indicated by the yellow focus border: 
+</p>
+<ul><li><span class="kbrd" style="background-color: #d0d0f8">Tab</span> opens the next label for editing and places the editing cursor or selection to correspond with that label</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">Shift + Tab</span> opens the previous label for editing and places the editing cursor or selection to correspond with that label.</li></ul>
+<p>The label background becomes white, indicating you can type to edit the label's text. For a point label, the editing cursor is placed at the label moved to. For a region label, a selection is placed corresponding to the label moved to. The view position moves if necessary to show you the label moved to. 
+</p><p>Audacity cycles through the labels automatically, so when at the last label, moving to next label jumps to the first label. When at the first label, moving to previous label jumps to the last label.
+</p><p>These commands exist only as shortcuts - they have no menu items or buttons. 
+</p><p><b>Shortcuts to move between labels without editing them</b>
+</p><p>There are also two shortcut commands to move between labels without opening them for editing. These shortcuts do not require the yellow focus border to be in a label track:
+</p>
+<ul><li><span class="kbrd" style="background-color: #d0d0f8">Alt + Right</span> places the editing cursor or selection to correspond with the next label</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">Alt + Left</span> places the editing cursor or selection to correspond with the previous label.</li></ul>
+<p>The view position moves if necessary to show you the label moved to, centered in the view. 
+</p><p>If there is a single label track, you do not need to be aware of which track has the yellow focus border. 
+</p><p>If you have multiple label tracks, use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> arrow to move the yellow focus border into the label track you wish to use. If there is more than one label track and none have focus, then the first label track downwards from the focused audio track is used. 
+</p>
+<div class="note">During <a href="playback.html" title="Playback">playback</a> these "Move to the label" commands restart playback at the position of the label moved to (whether the track is selected or not). This is useful if you have a long recording which you want to <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">split into separate tracks using labels</a>. </div> 
+<p>As with the <span class="kbrd" style="background-color: #d0d0f8">Tab</span> and <span class="kbrd" style="background-color: #d0d0f8">Shift + Tab</span> commands, Audacity cycles through the labels automatically, and there are no corresponding menu items or buttons. 
+</p>
+<div class="note">
+For both tabbing so as to open labels and moving between labels, the audio corresponding to a region label will be selected if the track is selected.</div>
+<div id="clips"></div>
+<h3><span class="mw-headline" id="Clips">Clips</span></h3>
+<p>The  <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#split" title="Edit Menu: Clip Boundaries">Split</a></span> command (shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + I</span>) splits the audio into different clips at the cursor or selection region, marking the split points with a black vertical line in the waveform. You can use these lines to quickly find or cut regions. A quick workflow to find and cut regions using split lines works like this: 
+</p>
+<ol><li> Zoom in as far as you like and play </li>
+<li> When you hear the starting point of the audio you want to delete, <span class="kbrd" style="background-color: #d0d0f8">X</span> to stop playback at that point, then <span class="kbrd" style="background-color: #d0d0f8">Ctrl + I</span> </li>
+<li> Press Play to resume from where you stopped, and when you reach the end of the intended cut, <span class="kbrd" style="background-color: #d0d0f8">X</span> then <span class="kbrd" style="background-color: #d0d0f8">Ctrl + I</span> again</li>
+<li> Double-click to left of the split line you just placed to select the region between the two split lines</li>
+<li> Adjust the edges of the region as needed using the mouse (or use <span class="kbrd" style="background-color: #d0d0f8">Shift + Left</span> or <span class="kbrd" style="background-color: #d0d0f8">Shift + Right</span> to expand the region or <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift + Left</span> or <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift + Right</span> to contract it).</li>
+<li> <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span></li></ol>
+<p>Split lines disappear when you click on them to merge clips together, but you can use current Audacity's <b>Cut Lines</b> feature to place a vertical line at which audio was cut out. Click on the line at any time to restore the cut audio. Cut Lines can be enabled on the <a href="tracks_preferences.html" title="Tracks Preferences">Tracks</a> tab of Preferences.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917111815
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.231 seconds
+Real time usage: 0.237 seconds
+Preprocessor visited node count: 1244/1000000
+Preprocessor generated node count: 2907/1000000
+Post‐expand include size: 13132/2097152 bytes
+Template argument size: 3202/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   97.641      1 - -total
+ 40.17%   39.226     56 - Template:Shortcut
+ 22.19%   21.669      1 - Template:I18n
+ 20.20%   19.719      1 - Template:I18n_box
+ 16.48%   16.091      1 - Template:I18n_list
+  7.33%    7.154     12 - Template:Key
+  6.37%    6.215      2 - Template:I18n_link
+  3.88%    3.788     14 - Template:Menu
+  3.73%    3.638      2 - Template:Autoglossonym
+  2.04%    1.991      2 - Template:Button
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4877-0!*!0!!*!5!* and timestamp 20180917111815 and revision id 61455
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Navigation_Tips">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

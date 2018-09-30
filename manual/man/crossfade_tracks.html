@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Crossfade Tracks - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Crossfade_Tracks rootpage-Crossfade_Tracks skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Crossfade Tracks</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Crossfade_Tracks#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<p><br />
+</p>
+<div class="intro">Use the <i><b>Crossfade Tracks</b></i> effect to make a <a href="creating_a_crossfade.html" title="Creating a Crossfade">crossfade</a> or smooth transition across two tracks. The tracks should be positioned with the track to be faded out above the track to be faded in, and with the start of the lower track positioned before the end of the upper track so as to create an overlap between them. Select the overlapping region in both tracks (see <a href="#example">example</a> below) and apply the effect. <p>To apply a simpler (non-configurable) crossfade between <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">audio clips</a> on the same track, see  <a href="crossfade_clips.html" title="Crossfade Clips">Crossfade Clips</a>.</p></div> 
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Crossfade Tracks...</span>  </dd>
+<dd><span title="Crossfade Tracks dialog"><img alt="Crossfade Tracks.png" src="../m/images/6/65/crossfade_tracks.png" width="474" height="192" /></span></dd></dl>
+<h2><span class="mw-headline" id="Fade_Type">Fade Type</span></h2>
+<h3><span class="mw-headline" id="Constant_Gain">Constant Gain</span></h3>
+<p>This is the default. It fades out the upper track, and fade in the lower track with <i>linear fades</i> (the same type of fade as is achieved by using the <a href="fades.html#linearfade" title="Fades">Fade In / Fade Out</a> effects).
+</p><p>"Constant Gain" ensures that, as long as the original audio is not clipped, the crossfade will not clip - this is the default. However, "Constant Gain" crossfades may cause the overall volume to dip slightly during the fade.
+</p>
+<h3><span class="mw-headline" id="Constant_Power_1">Constant Power 1</span></h3>
+<p>"Constant Power" fades combat the tendency of the volume dipping, so will often be the preferred choice, though care needs to be taken when using this type of crossfade as the peak level may rise during the course of the fade.
+</p><p>"Constant Power 1" is generally a good choice as a general purpose crossfade effect.
+</p>
+<h3><span class="mw-headline" id="Constant_Power_2">Constant Power 2</span></h3>
+<p>As with "Constant Power 1", this option is also designed to maintain a fairly constant volume through the course of the fade. This variation of the constant power fade starts to fade in a little more rapidly than "Constant Power 1" and the crossfading may sound a bit abrupt in the first or last moments of the fade, though it may be preferred when crossfading songs that are beat-matched. This version is based on the legacy "Cross Fade In" and "Cross Fade Out" effects of previous versions of Audacity.
+</p>
+<h3><span class="mw-headline" id="Custom_Curve">Custom Curve</span></h3>
+<p>The preset options will cater for most crossfading tasks, but if fine control over the effect is required, the custom curve option may be useful. This option enables the "Custom Curve" slider control, which allows the rate at which the tracks crossfade to be manually adjusted.
+</p>
+<h2><span class="mw-headline" id="Custom_curve_2">Custom curve</span></h2>
+<p>This text box / slider control has no effect unless "Custom Curve" is selected as the "Fade Type". When enabled, it controls the <i>curvature</i> of the fade in a similar way to the "curve" control on a DJ mixer. 
+</p><p>When set to zero, the crossfade is effectively the same as the "Constant Gain" preset.
+</p><p>High settings are useful if you want both tracks to be strongly present during the crossfade time, though it is not likely that the maximum setting will be often required. At maximum (1.0), the upper track will maintain close to full volume until close to the end of the crossfade, and will then fade out rapidly, while the lower track will fade in very rapidly to almost full volume. The overall volume is likely to be noticeably higher during the crossfade period. 
+</p><p>When set to the half way position (0.5), the fade is approximately a "constant power" type curve, and will usually maintain a fairly steady volume throughout the crossfade.
+</p>
+<h2><span class="mw-headline" id="Fade_Direction">Fade Direction</span></h2>
+<h3><span class="mw-headline" id="Automatic">Automatic</span></h3>
+<p>The effect will attempt to automatically work out whether a fade-in or fade-out is required. This is the default and will usually give the correct result. If you get a fade-out where you want a fade-in, or vice versa, then undo the operation <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Z</span> and use one of the other two choices listed below.
+</p><p><b>How automatic fade direction works:</b>
+</p><p>The automatic setting is based on the proximity of the ends of the selection to the ends of the selected audio clip(s). If the start of the selection is closer to the start of the selected audio clip than the end of the selection is to the end of the audio  clip, the effect creates a fade-in. Conversely, if the end of the selection is at or near the end of the selection, and the start of the selection is not at or near the start of the audio clip. then a fade-out will occur. In the unlikely event that both ends of the selection are exactly the same distance from the ends of the selected audio clip, the effect will fade out.
+</p>
+<h3><span class="mw-headline" id="Alternating_Out_.2F_In">Alternating Out / In</span></h3>
+<p>The selected region in the first selected track will fade out. If more than one track is selected, the selected region in the next selected track  will fade in. If more than two tracks are selected, the fade direction will continue to alternate fade-out / fade-in / fade-out... .
+</p>
+<h3><span class="mw-headline" id="Alternating_In_.2F_Out">Alternating In / Out</span></h3>
+<p>The selected region in the first selected track will fade in. If more than one track is selected, the selected region in the next selected track will fade out. If more than two tracks are selected, the fade direction will continue to alternate fade-in / fade-out / fade-in ... . 
+</p>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
+<p>Clicking on the command buttons give the following results:
+</p>
+<ul><li><span class="button">Manage</span> gives a dropdown menu enabling you to manage presets for the tool and to see some detail about the tool. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a></li>
+<li><span class="button">Preview</span> plays a short preview of what the audio would sound like if the effect is applied with the current settings, without making actual changes to the audio.  The length of preview is determined by your setting in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span>, the default setting is 6 seconds.</li>
+<li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
+<li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> brings you to the appropriate page in the Manual, this page</li></ul>
+<p><br />
+</p>
+<div id="example"></div>
+<div class="example"><b>Example of using the effect</b>
+<p>The first step is to align the tracks (they may be mono or stereo tracks) so that the start of the lower track overlaps the the end of the upper track. Typically this would be done using the <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a>. Then the overlapping region must be selected. Selecting may be achieved by clicking on the upper track at the start position of the crossfade, then while holding down the left mouse button, drag down and across to the end of the crossfade region in the lower track.
+</p><p><span title="Tracks aligned and selected for crossfade"><img alt="Crossfade-selected-region.png" src="../m/images/1/11/crossfade_selected_region.png" width="612" height="328" /></span>
+</p><p>The Crossfade Tracks effect can then be applied to complete the fade out and fade in.
+</p><p><span title="Completed crossfade"><img alt="Crossfade-tracks-effect-completed.png" src="../m/images/1/10/crossfade_tracks_effect_completed.png" width="612" height="328" /></span>
+</p>
+<h3><span class="mw-headline" id="Optional_extra_steps">Optional extra steps</span></h3>
+The two tracks will automatically be mixed to one file on export, but if preferred, the tracks may be mixed down to one track within the project by applying <a href="tracks_menu.html#mix" title="Tracks Menu">Mix and Render</a> from the <a href="tracks_menu.html" title="Tracks Menu">Tracks menu</a>. Mixing down to a single track can be useful when using "constant power" or custom curves, as it then allows the mix to be <a href="normalize.html" title="Normalize">Normalized</a> before export.</div>
+<h2><span class="mw-headline" id="Additional_Information">Additional Information</span></h2>
+<p>For additional information and advanced techniques, see the detailed article: <a href="creating_a_crossfade.html" title="Creating a Crossfade">Creating a Crossfade</a>.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112234
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.089 seconds
+Real time usage: 0.094 seconds
+Preprocessor visited node count: 249/1000000
+Preprocessor generated node count: 807/1000000
+Post‐expand include size: 13048/2097152 bytes
+Template argument size: 3149/2097152 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   28.723      1 - -total
+ 43.23%   12.418      1 - Template:Effectbuttons
+ 33.56%    9.639      1 - Template:Buttonlist
+ 30.54%    8.772      1 - Template:No-rename
+ 26.10%    7.497     10 - Template:Button
+ 24.04%    6.904      1 - Template:Ednote
+  6.11%    1.756      1 - Template:Key
+  5.99%    1.721      1 - Template:Intro
+  5.89%    1.693      1 - Template:Alert
+  5.21%    1.496      2 - Template:Menu
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5095-0!*!0!!*!5!* and timestamp 20180917112234 and revision id 54861
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Crossfade_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

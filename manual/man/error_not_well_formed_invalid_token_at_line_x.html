@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Error: not well-formed (invalid token) at line x - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Error_not_well-formed_invalid_token_at_line_x rootpage-Error_not_well-formed_invalid_token_at_line_x skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Error: not well-formed (invalid token) at line x</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Error:_not_well-formed_(invalid_token)_at_line_x#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<p><br />
+</p>
+<div class="intro">This error message usually means that when reopening the AUP <a href="audacity_projects.html" title="Audacity Projects">project file</a> normally, Audacity finds an unexpected non-English, accented or control character at the line quoted in the error message. There are two main causes of this.  
+<ul><li> The project contains <b>imported files whose metadata (like artist or genre) contains control characters.</b> This mostly occurs with iTunes files on Mac where the project was created in an older version of Audacity. </li>
+<li> The project was saved containing <b>non-English or accented characters</b> using an old ANSI build of Audacity for Windows. ANSI builds are not properly <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> aware, so do not support non-English or accented characters. 
+<ul><li> The <a rel="nofollow" class="external text" href="http://www.audacityteam.org/download/windows">latest version of Audacity</a> will always fully support Unicode. You can check your Audacity version at <span class="menu">Help &gt; <a href="help_menu.html#about_audacity" title="Help Menu">About Audacity...</a></span> <i>(or <span class="menu">Audacity &gt; About Audacity</span> on Mac)</i>. </li></ul></li></ul>
+If Audacity or the computer crashed, Audacity will try to <a href="recovery.html" title="Recovery">recover</a> the project from its <a href="audacity_projects.html#autosave" title="Audacity Projects">AUTOSAVE</a> file, but the crash may have created a redundant line near the end of the file that triggers the token error. Very occasionally, the AUP file may become corrupted by one or more redundant lines, giving a token error even if there was no apparent crash. To correct this, see <a href="#autosave">remove redundant lines in an AUTOSAVE or AUP file</a>. </div>
+</li></ul></li></ul>
+<div id="meta"></div> 
+<h2><span class="mw-headline" id="Solution_for_error_caused_by_control_characters">Solution for error caused by control characters</span></h2>
+<ol>
+<li>Make a copy of the AUP project file and open it in a text editor. You can use the default Notepad on Windows or TextEdit on Mac, but in a few instances these could change the AUP file in such a way that Audacity could no longer open it.  We recommend instead <a rel="nofollow" class="external text" href="https://notepad-plus-plus.org/">Notepad++</a> for Windows and <a rel="nofollow" class="external text" href="http://brackets.io/">Brackets</a> or <a rel="nofollow" class="external text" href="http://www.barebones.com/products/bbedit/">BBEdit</a> for Mac.
+<li> Turn word wrap off in the menus (or in TextEdit, drag the window horizontally so that lines do not wrap).  
+<li> In the line indicated in the error message, look for one of these:
+<ul>
+<li><b>projname=</b>
+<li><b>name=</b>
+<li><b>value=</b>
+<li><b>title=</b></ul> <p>then <b>remove all characters inside the quotation marks that follow which are not a number or an A to Z letter</b>. You could also change those characters to a number or A to Z letter. For example, a string of control characters you would want to remove or change might start with <b>&amp;#</b> followed by <b>four numbers</b> and a  <b>semi-colon</b>, such as <b>&amp;#<span style="letter-spacing:-0.1em">&#8201;0&#8201;0&#8201;1&#8201;3</span>&#160;;</b>. </p>
+<li>Save the changes to the .aup file.
+<li>If you re-open the project and an error occurs at another line, repeat the steps above in the new line indicated in the error message. </ol>     
+<div class="note">Here is a real-world example of a corrupt line in the GENRE tag in a project where "Drama" and "Comedy" were incorrectly separated using the control character for a horizontal tab, also missing the closing semi-colon:
+<p><b>&lt;tag name="GENRE" value="Drama &amp;#<span style="letter-spacing:-0.1em">&#8201;0&#8201;0&#8201;0&#8201;9</span>&#160;Comedy"/&gt;</b>
+</p><p>And the same line corrected so that the two words can be read into the project:
+</p><p><b>&lt;tag name="GENRE" value="Drama, Comedy"/&gt;</b>
+</p>
+"Drama 0009 Comedy", though meaningless, would also enable the project to be opened correctly.</div> 
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">
+<p>If you had to rename "projname" in the AUP file, rename both the AUP project file and the corresponding _data folder so that they have the same name as "projname" in the AUP file.
+</p>
+</td></tr></table></div> <br />
+<div id="ansi"></div>
+<h2><span class="mw-headline" id="Solution_to_correct_an_AUP_file_created_in_an_ANSI_version_of_Audacity.2C_preserving_non-English_characters">Solution to correct an AUP file created in an ANSI version of Audacity, preserving non-English characters</span></h2>
+<ol><li> Make a copy of the file</li>
+<li> Open the file in <a rel="nofollow" class="external text" href="https://notepad-plus-plus.org/">Notepad++</a> (a free text editor that supports <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/UTF-8">UTF-8 encoding</a> of Unicode characters)  </li>
+<li> Choose <span class="menu">Encoding &gt; Convert to UTF-8 without BOM</span> </li>
+<li> Save the changes to the file.  </li></ol>
+   </li></ul>
+<div id="autosave"></div>
+<h2><span class="mw-headline" id="Solution_to_remove_redundant_lines_in_an_AUTOSAVE_recovery_file_or_AUP_file">Solution to remove redundant lines in an AUTOSAVE recovery file or AUP file</span></h2>
+<div class="note">If you have an AUP file with a token error not solvable by deleting invalid characters, try checking for and deleting any empty lines or duplicate &lt;/project&gt; lines as per steps 5 through 8 below.</div> 
+<ol>
+<li>Find the autosave file. It will be in an "AutoSave" folder in Audacity's folder for application data as follows:
+<ul><li><b>Windows:</b> Users\&lt;username&gt;\AppData\Roaming\Audacity\
+<li><b>OS X/macOS</b> ~/Library/Application Support/audacity/
+<li><b>Linux:</b> ~/.audacity-data/ . </ul>
+<li>Make a copy of the AUTOSAVE file as a backup and move the copy somewhere else such as your Desktop. 
+<li> If the AUTOSAVE file was created by Audacity 2.1.1 or later, it must be converted to XML format before it can be edited in a text editor. Follow the <a href="#convert_xml">steps to convert the AUTOSAVE file to XML</a> then return to step 4 below.
+<li> Open the AUTOSAVE file in a text editor like Notepad (Windows) or TextEdit (Mac).
+<li> Turn word wrap off in the menus (or in TextEdit, drag the window horizontally so that lines do not wrap).  
+<li> Go to the line indicated in the error message. If you had been recording, the last line above it will probably look like <b>&lt;/recordingrecovery&gt;</b>. 
+<li>We need to delete the entire line. It may be a long line containing only empty spaces or it may have <b>&lt;/project&gt;</b> at the end of all the spaces. Hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and press <span class="kbrd" style="background-color: #e0e0f0">Down</span> to select the entire line before pressing <span class="kbrd" style="background-color: #e0e0f0">Delete</span>. Ensure this leaves you with a final line that contains only <b>&lt;/project&gt;</b>. Ensure this is the only line that contains <b>&lt;/project&gt;</b>.
+<li>Save the changes to the file. 
+</ol>
+<div id="convert_xml"></div>
+<p><b>Converting the AUTOSAVE file to XML</b>
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">
+<p>Exit Audacity before attempting these steps.
+</p>
+</td></tr></table></div>
+<p><b>Windows</b>
+</p>
+<ol>
+<li>In the AutoSave folder, right-click the AUTOSAVE file and choose "Cut". 
+<li>Go to the folder Audacity is installed in, such as "C:\Program Files (x86)\Audacity", then right-click in empty space and choose "Paste". Provide the administrator password if asked. 
+<li>Open an administrator command prompt. On Windows Vista or Windows 7, click Windows Start, go to All applications &gt; Accessories, then right-click the Command Prompt shortcut and select "Run as Administrator". Or see <a rel="nofollow" class="external text" href="http://www.eightforums.com/tutorials/2754-elevated-command-prompt-open-windows-8-a.html">instructions for Windows 8 or Windows 10</a>.    
+<li>Assuming the prompt in the command window shows some location in C:\ and Audacity is installed in some location in C:\, type "cd" (without quotes) then a space. If Audacity is on some other drive than the prompt indicates, type the name of that drive letter and a colon (such as D:), press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, and then type "cd" (without quotes) then a space. 
+<li>Go up one level in Explorer then drag the icon for the Audacity installation folder into the command window. The path "C:\Program Files (x86)\Audacity" (or whatever it is) will appear. Press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to change the prompt to the path you dragged in. 
+<li>At the end of the path, type "audacity" (without quotes), a space, then "/d" (also without quotes), another space, then drag the AUTOSAVE file into the command window. Here is what an example should look like:
+<table style="margin-left:10px;line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;font-family:monospace;font-size:1.1em;border:1px dashed black" cellpadding="5px">
+<tr>
+<td>C:\Program Files (x86)\Audacity&gt; audacity /d  "C:\Program Files (x86)\Audacity\My Project - 2015-07-01 14-12-35 N-2.autosave"
+</td></tr></table>
+<li>Press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. You can see in Explorer that the AUTOSAVE file has been updated.
+<li>Now you can cut the AUTOSAVE file from the Audacity installation folder, and paste it into the AutoSave folder. Now you can make corrections to the file in a text editor. 
+</ol>
+<p><b>Mac OS X/macOS:</b>
+</p>
+<ol>
+<li>In the AutoSave folder, right-click or Control-click the AUTOSAVE file and choose the option to Copy.
+<li>Go to the folder Audacity.app is installed in, such as /Applications/Audacity, hold <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> and <span class="kbrd" style="background-color: #e0e0f0">Option</span> then press <span class="kbrd" style="background-color: #e0e0f0">V</span> to move the AUTOSAVE file alongside Audacity. 
+<li> Right-click over Audacity.app then choose "Show Package Contents".
+<li> Open the "Contents" folder then the "Mac OS" folder. 
+<li> Open a Terminal then drag the Audacity file in the "Mac OS" folder into the terminal to display the path to that Audacity file. 
+<li> Then at the end of the file path, type a space, "-d" (without quotes) and another space then drag the AUTOSAVE file into the Terminal.
+<li> Press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to convert the file. You will see a message that the file has been decoded successfully. 
+<li> In the "Mac OS" folder, right-click or Control-click the AUTOSAVe file and choose the option to Copy. 
+<li> Go to the "AutoSave" folder, hold <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> and <span class="kbrd" style="background-color: #e0e0f0">Option</span> then press <span class="kbrd" style="background-color: #e0e0f0">V</span> to move the converted AUTOSAVE file back into the AutoSave folder. Now you can make corrections to the file in a text editor. 
+</ol>
+<p><b>GNU/Linux:</b> 
+</p>
+<ol>
+<li>Open a terminal.
+<li>Assuming Audacity is installed, type "audacity -d" (without quotes) then a space, then type the path to the AUTOSAVE file (or drag the AUTOSAVE file into the terminal). Here is an example:
+<table style="margin-left:10px;line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;font-family:monospace;font-size:1.1em;border:1px dashed black" cellpadding="5px">
+<tr>
+<td>audacity -d "home/al/.audacity-data/AutoSave/My Project - 2015-07-01 14-12-35 N-2.autosave"
+</td></tr></table>
+<li>Press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to convert the file. You will see a message that the file has been decoded successfully. Now you can make corrections to the file in a text editor. 
+</ol>
+<div class="note"><b>If none of the above helps to correct the invalid token error</b>, you can:
+<ul><li> Ask for help on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=45">Audacity Forum</a> and <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewtopic.php?f=49&amp;t=64936">attach</a> the AUP or autosave file. </li>
+<li> Try to recover the project <a href="recovery.html#Manual_Recovery" title="Recovery">manually</a>, if it is an unedited recording.</div></li></ul>
+<p><b>Problem still there?</b>
+It probably means there is a specific problem with the syntax of the tags in the AUP file. Copy the AUP file to another location, then open the file in <a rel="nofollow" class="external text" href="https://notepad-plus-plus.org/">Notepad++</a> for Windows and <a rel="nofollow" class="external text" href="http://brackets.io/">Brackets</a> or <a rel="nofollow" class="external text" href="http://www.barebones.com/products/bbedit/">BBEdit</a> for Mac and examine if the tags of the file enclosed in angle brackets <b>&lt;&#160;&#160;&gt;</b> are consistently open and closed and are complete.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112345
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.094 seconds
+Real time usage: 0.096 seconds
+Preprocessor visited node count: 254/1000000
+Preprocessor generated node count: 828/1000000
+Post‐expand include size: 10708/2097152 bytes
+Template argument size: 7304/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   26.733      1 - -total
+ 25.47%    6.809     14 - Template:Key
+ 23.38%    6.250      1 - Template:No-rename
+ 19.67%    5.259      3 - Template:Ednote
+ 10.90%    2.913      1 - Template:Intro
+  8.44%    2.257      1 - Template:Button
+  6.86%    1.835      2 - Template:Hint
+  6.16%    1.646      3 - Template:Note
+  5.42%    1.448      2 - Template:Code
+  5.01%    1.340      3 - Template:Menu
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5796-0!*!0!!*!5!* and timestamp 20180917112345 and revision id 59918
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Error:_not_well-formed_(invalid_token)_at_line_x">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

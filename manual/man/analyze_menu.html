@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Analyze Menu - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Analyze_Menu rootpage-Analyze_Menu skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Analyze Menu</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Analyze_Menu#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">The <i><b>Analyze Menu</b></i> contains tools for finding out about the characteristics of your audio, or <a href="label_tracks.html" title="Label Tracks">labeling</a> key features. Plug-ins that accept audio input but produce no audio output will be placed in the Analyze menu, with the analysis results being provided by labels (or in some optional <a href="effect_menu.html#LADSPA_effects" title="Effect Menu">LADSPA</a> plug-ins by an "Effect Output" section in the plug-in itself). <p>Although by default, no keyboard shortcuts are provided for most of the analysis tools, it is possible to set up your own shortcut for any Analyze command. For instructions on how to do this please see <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a>.</p> </div>
+<dl><dd><div class="noresize"><map name="ImageMap_1_1728735257"><area href="#" shape="rect" coords="25,5,80,27" alt="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature" title="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature"/><area href="tools_menu.html" shape="rect" coords="80,5,121,27" alt="The Tools Menu contains customisable tools" title="The Tools Menu contains customisable tools"/><area href="extra_menu.html" shape="rect" coords="121,5,162,27" alt="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus" title="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus"/><area href="help_menu.html" shape="rect" coords="162,5,199,27" alt="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools." title="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools."/><area href="#add_remove_plugins" shape="rect" coords="25,27,291,49" alt="Enable or disable particular Effects, Generators and Analyzers" title="Enable or disable particular Effects, Generators and Analyzers"/><area href="#contrast" shape="rect" coords="25,56,291,78" alt="Analyzes a single mono or stereo speech track to determine the average RMS difference in volume (contrast) between foreground speech and background music, audience noise or similar" title="Analyzes a single mono or stereo speech track to determine the average RMS difference in volume (contrast) between foreground speech and background music, audience noise or similar"/><area href="#plot_spectrum" shape="rect" coords="25,78,291,100" alt="Takes the selected audio (which is a set of sound pressure values at points in time) and converts it to a graph of frequencies against amplitudes" title="Takes the selected audio (which is a set of sound pressure values at points in time) and converts it to a graph of frequencies against amplitudes"/><area href="#find_clipping" shape="rect" coords="25,100,291,122" alt="Displays runs of clipped samples in a Label Track, as a screen-reader accessible alternative to {{menu|View &gt; Show Clipping}}" title="Displays runs of clipped samples in a Label Track, as a screen-reader accessible alternative to {{menu|View &gt; Show Clipping}}"/><area href="#beat_finder" shape="rect" coords="25,129,291,151" alt="Attempts to place labels at beats which are much louder than the surrounding audio" title="Attempts to place labels at beats which are much louder than the surrounding audio"/><area href="#silence_finder" shape="rect" coords="25,151,291,173" alt="Divides up a track by placing point labels inside areas of silence" title="Divides up a track by placing point labels inside areas of silence"/><area href="#sound_finder" shape="rect" coords="25,173,291,195" alt="Divides up a track by placing region labels for areas of sound that are separated by silence" title="Divides up a track by placing region labels for areas of sound that are separated by silence"/><area href="menu_reference.html" shape="rect" coords="0,0,1000,1000" alt="The Menus" title="The Menus"/></map><img alt="AnalyzeMenu.png" src="../m/images/f/f2/analyzemenu.png" width="296" height="205" usemap="#ImageMap_1_1728735257"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:241px;top:-15px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+</div>
+<p><br />
+&#160;
+</p><p><br />
+</p><p><br />
+</p>
+<div class="note">
+<ul><li> Many of the analysis tools shipped in Audacity are <a href="effect_menu.html#nyquist_effects" title="Effect Menu">Nyquist</a> plug-ins which can be edited in any text editor. See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Nyquist Plug-ins Reference</a> on our Wiki for more details about the Nyquist format. You can download additional <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Analyze_Plug-ins">Nyquist analysis plug-ins</a>. The built-in analyzers are <a href="effect_menu.html#LADSPA_effects" title="Effect Menu">LADSPA</a> effects. Some additional LADSPA analysis plug-ins for Linux can be downloaded from <a rel="nofollow" class="external free" href="https://www.ladspa.org/">http://www.ladspa.org/</a>.  </li>
+<li> The description page for each shipped analysis effect (accessed by the links below) shows an image of the interface and its default settings.</li></ul>
+</div>
+<h2><span class="mw-headline" id="Audacity.27s_Analysis_Tools">Audacity's Analysis Tools</span></h2>
+<ul><li> There are three built-in <a href="#ladspa">LADSPA</a> analysis tools: <a href="#contrast">Contrast</a>, <a href="#spectrum">Plot Spectrum</a> and <a href="#find_clipping">Find Clipping</a></li>
+<li> There are five <a href="#nyquist">Nyquist</a> plug-in analysis tools shipped with Audacity: <a href="#beat_finder">Beat Finder</a>, <a href="#interval_labels">Regular Interval Labels</a>, <a href="#sample_export">Sample Data Export</a>, <a href="#silence_detection">Silence Finder</a> and <a href="#sound_detection">Sound Finder</a></li>
+<li> <a href="#vamp">Vamp Analysis Plug-ins</a> can also be added.</li></ul>
+<div id="add_remove_plugins"></div>
+<div id="manage"></div>
+<h2><span class="mw-headline" id="Add_.2F_Remove_Plug-ins...">Add / Remove Plug-ins...</span></h2>
+<p>Selecting this option from the Analyze Menu (or the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a> or <a href="generate_menu.html" title="Generate Menu">Generate Menu</a>) takes you to a dialog which enables you to load and unload Analyzers (and Effects and Generators) from Audacity.  This enables you to customize your Analyze Menu making it shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plug-in Manager: Effects, Generators and Analyzers</a>.
+</p>
+<div class="note">Additional plug-ins can also be loaded into Audacity.  For details see the following FAQs: <a href="installing_effect_generator_and_analyzer_plug_ins_on_windows.html" title="Installing Effect, Generator and Analyzer plug-ins on Windows">Windows</a>, <a href="installing_effect_generator_and_analyzer_plug_ins_on_mac_os_x.html" title="Installing Effect, Generator and Analyzer plug-ins on MAC OS X">Mac</a> and <a href="installing_effect_generator_and_analyzer_plug_ins_on_linux.html" title="Installing Effect, Generator and Analyzer plug-ins on Linux">Linux</a>
+<p>See also this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Download_Nyquist_Plug-ins#analyze">list of available Nyquist analyzer plug-ins</a> on the Audacity Wiki, that you can easily download and add to Audacity.
+</p>
+</div>
+<div id="ladspa"></div>
+<h2><span class="mw-headline" id="Built-in_LADSPA_analysis_tools">Built-in LADSPA analysis tools</span></h2>
+<div id="contrast"></div>
+<h3><span class="mw-headline" id="Contrast..._.C2.A0Ctrl_.2B_Shift_.2B_T_.C2.A0_Extra"><a href="contrast.html" title="Contrast">Contrast...</a> &#160;<font size="-1"><span class="kbrd" style="background-color: #eaeafa">Ctrl + Shift + T </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i></font></span></h3>
+<p>Analyzes a selected, single non-stereo audio track to determine the average <i><b><a href="glossary.html#rms" title="Glossary">rms</a></b></i> <b>difference in volume</b> (contrast) between <i>foreground</i> (the speech) and <i>background</i> (music, audience noise or similar). The purpose is to determine if the speech will be intelligible to the hard of hearing. 
+</p>
+<div id="plot_spectrum"></div>
+<div id="spectrum"></div>
+<h3><span class="mw-headline" id="Plot_Spectrum..."><a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum...</a></span></h3>
+<p>Takes the selected audio (which is a set of sound pressure values at points in time) and converts it to a graph of frequencies (the horizontal scale in  <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i>) against <i><b><a href="glossary.html#amplitude" title="Glossary">amplitudes</a></b></i> (the vertical scale in <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>). 
+</p>
+<div id="find_clipping"></div>
+<h3><span class="mw-headline" id="Find_Clipping..."><a href="find_clipping.html" title="Find Clipping">Find Clipping...</a></span></h3>
+<p>Displays runs of <i><b><a href="glossary.html#clipping" title="Glossary">clipped</a></b></i> samples in a <a href="label_tracks.html" title="Label Tracks">Label Track</a>, as a screen-reader accessible alternative to <span class="menu">View &gt; <a href="view_menu.html#Show_Clipping" title="View Menu">Show Clipping</a></span>. A run must include at least one clipped sample, but may include unclipped samples too. 
+</p>
+<div id="nyquist"></div>
+<h2><span class="mw-headline" id="Nyquist_Plug-in_analysis_tools_shipped_with_Audacity">Nyquist Plug-in analysis tools shipped with Audacity</span></h2>
+<div id="interval_labels"></div>
+<h3><span class="mw-headline" id="Regular_Interval_Labels"><a href="regular_interval_labels.html" title="Regular Interval Labels">Regular Interval Labels</a></span></h3>
+<p>Places point <a href="label_tracks.html" title="Label Tracks">labels</a> in a label track so as to divide the associated audio into smaller, equally-sized segments. This can be useful for distributing a large file on the internet or ensuring that all exported files are the same size.
+</p>
+<div id="sample_export"></div>
+<h3><span class="mw-headline" id="Sample_Data_Export"><a href="sample_data_export.html" title="Sample Data Export">Sample Data Export</a></span></h3>
+<p>Reads the values of successive samples from the selected audio and prints this data to a plain text, CSV or HTML file. Further information may be added as a "header" at the top of the file.
+</p>
+<div id="beat_finder"></div>
+<h3><span class="mw-headline" id="Beat_Finder..."><a href="beat_finder.html" title="Beat Finder">Beat Finder...</a></span></h3>
+<p>Attempts to place <a href="label_tracks.html" title="Label Tracks">labels</a> at beats which are much louder than the surrounding audio. It's a fairly rough and ready tool, and will not necessarily work well on a typical modern pop music track with compressed <i><b><a href="glossary.html#dynamic_range" title="Glossary">dynamic range</a></b></i>. 
+</p><p><br />
+</p>
+<div class="note">The following two related <b>"Silence Finder"</b> and <b>"Sound Finder"</b> tools are very useful to label the different songs or sections in a long recording, such as the tracks from an LP or cassette. </div>
+<div id="silence_finder"></div>
+<div id="silence_detection"></div>
+<h3><span class="mw-headline" id="Silence_Finder..."><a href="silence_finder.html" title="Silence Finder">Silence Finder...</a></span></h3>
+<p>Divides a track up by placing point <a href="label_tracks.html" title="Label Tracks">labels</a> inside areas of silence. 
+Use this if you just want to split the recording into tracks at a specific point without removing the silences between them. 
+</p>
+<div id="sound_finder"></div>
+<div id="sound_detection"></div>
+<h3><span class="mw-headline" id="Sound_Finder..."><a href="sound_finder.html" title="Sound Finder">Sound Finder...</a></span></h3>
+<p>Divides a track up by placing region <a href="label_tracks.html" title="Label Tracks">labels</a> for areas of sound that are separated by silence. Use this to make the labels show the exact region of each track to be exported. This lets you remove some or all of the silence between the tracks.
+</p><p><br />   
+</p>
+<div id="vamp"></div>
+<h2><span class="mw-headline" id="Vamp_Analysis_Plug-ins">Vamp Analysis Plug-ins</span></h2>
+<p>You can also add some additional analysis tools in the <a rel="nofollow" class="external text" href="http://www.vamp-plugins.org/">Vamp</a> plug-in format for viewing and analysing the descriptive contents of music audio files. Typical things that a Vamp plug-in might calculate include the locations of moments such as note onset times and power or fundamental frequency data. Plug-ins that produce graphs or other visuals will not work in Audacity, only plug-ins that are suitable for writing to <a href="label_tracks.html" title="Label Tracks">labels</a>.
+</p><p>To add a new Vamp analysis tool, add the plug-in's DLL, DYLIB or SO file (and any supplied category (CAT) or RDF (TTL or N3) files) to one of the paths listed in the green box below.  
+</p><p>To run a Vamp plug-in, select the audio and run the plug-in from the menu. An annotated label track appears showing the result. 
+{{note|
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Currently Audacity cannot load Vamp plug-ins from the Audacity "Plug-Ins" folder.
+</td></tr></table></div>
+<p>Vamp plug-ins are loaded from the following standard directories each time you launch Audacity:  
+</p>
+<ul><li> <b>On all platforms:</b> any directories listed in the <span class="path">VAMP_PATH</span> environment variable</li>
+<li> additionally on <b>Windows:</b> 
+<ul><li> <span class="path">C:\Program Files\Vamp Plugins</span> on Windows 32-bit or <span class="path">C:\Program Files (x86)\Vamp Plugins</span> on Windows 64-bit.</li></ul></li>
+<li> additionally on <b>OS X:</b> 
+<ul><li> <span class="path">~/Library/Audio/Plug-Ins/Vamp</span> (user plug-ins)</li>
+<li> <span class="path">/Library/Audio/Plug-Ins/Vamp</span> (system-wide plug-ins)</li></ul></li>
+<li> additionally on <b>Linux/Unix:</b>
+<ul><li> <span class="path">$HOME/vamp</span></li>
+<li> <span class="path">$HOME/.vamp</span></li>
+<li> <span class="path">/usr/local/lib/vamp</span> (user plug-ins)</li>
+<li> <span class="path">/usr/lib/vamp</span> (system-wide plug-ins).</li></ul></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20180917111744
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.130 seconds
+Real time usage: 0.139 seconds
+Preprocessor visited node count: 364/1000000
+Preprocessor generated node count: 3405/1000000
+Post‐expand include size: 6344/2097152 bytes
+Template argument size: 2847/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   90.809      1 - -total
+ 55.70%   50.583      1 - Template:Menus
+ 53.53%   48.614      1 - Template:All-menus
+ 25.43%   23.089      1 - Template:I18n
+ 22.64%   20.561      1 - Template:I18n_box
+ 17.87%   16.227      1 - Template:I18n_list
+  6.35%    5.764      2 - Template:I18n_link
+  3.96%    3.598      9 - Template:Path
+  3.66%    3.328      2 - Template:Autoglossonym
+  2.61%    2.367      1 - Template:Intro
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1963-0!*!0!!*!5!* and timestamp 20180917111744 and revision id 62103
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Analyze_Menu">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

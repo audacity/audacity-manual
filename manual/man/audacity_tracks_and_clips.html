@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Audio Tracks and Clips - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Audacity_Tracks_and_Clips rootpage-Audacity_Tracks_and_Clips skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Audio Tracks and Clips</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Audacity_Tracks_and_Clips#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<div class="intro">An Audacity project can contain multiple <b><a href="audio_tracks.html" title="Audio Tracks">audio tracks</a></b>.  Each track is normally in one unbroken section, something like a single film clip. However, Audacity can <b>split</b> a track so as to create multiple <b>clips</b> within that track.<p> Each clip in a track can then be moved around independently, but they all share several properties of the parent track such as its overall volume, panning, <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> and <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i>.</p></div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#overview">Channels, Tracks and Clips</a></li>
+<li><a href="#split">Splitting a track into Clips</a></li>
+<li><a href="#join">Merging or joining Clips</a></li>
+<li><a href="#shift">Time-shifting Clips</a></li>
+<li><a href="#move">Moving a Clip Between Tracks</a></li>
+<li><a href="#colors">Moving colored Clips</a></li></ol>
+<div id="overview"></div>
+<h2><span class="mw-headline" id="Channels.2C_Tracks_and_Clips">Channels, Tracks and Clips</span></h2>
+<p>The terms <b>channel</b>, <b>track</b> and <b>clip</b> can be a little confusing, especially because some applications may use them to mean slightly different things.  Within Audacity, the meaning is as follows:
+</p>
+<ul><li> A <i><b>channel</b></i> is for audio recording (input) or playback (output).  Audacity can record two channels of input (stereo), and more if you have a special sound card or audio device that supports more than two simultaneous channels.  Audacity supports only two channels of playback (output), no matter what kind of audio hardware you have.</li>
+<li> An <i><b>audio track</b></i> is like one instrument in your symphony, or one voice in your podcast. You can add more  tracks, and all of them will be <a href="mixing.html" title="Mixing">mixed</a> together to create your final output, but during editing you can manipulate each track independently.  If you have an interview recorded with two microphones, each one can go in a separate track.  If you have background music, that could go in a third track. You can <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">move</a> the whole track along the <a href="timeline.html" title="Timeline">Timeline</a> so that it plays at a different point in time in the mix, but until it is split you cannot move individual parts of it around.  </li>
+<li> A <i><b>clip</b></i> inside an audio track is a separate section of that track which has been <a href="#split">split</a> so that it can be manipulated somewhat independently of the other clips in the track. For example, you can split an interview into separate clips for each sentence then move them around individually although they are all from the same track. Or you could move a clip to another track that is <a href="mixing.html#gain" title="Mixing">panned</a> further right, or split it to a new, empty track. The new track only contains that single clip, so again you can only move that whole track unless you split it into multiple clips. </li></ul>
+<div id="split"></div>
+<h2><span class="mw-headline" id="Splitting_a_track_into_Clips">Splitting a track into Clips</span></h2>
+<p>When you record some audio or import audio from a file, you get a single track.  In many cases, there are natural gaps in the audio - silence between sentences or pauses between phrases in music.  Those are good candidates for splitting the track into multiple clips, allowing you to move or otherwise manipulate those clips independently. There are eight ways to create multiple clips in a track.
+</p>
+<ul><li> <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#split_delete" title="Edit Menu: Remove Special">Split Delete</a></span> at a region in an existing track or clip, removing the selected audio without shifting the following audio.</li>
+<li> <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#split_cut" title="Edit Menu: Remove Special">Split Cut</a></span> at a region in an existing track or clip, removing the selected audio to the Audacity clipboard without shifting the following audio.       </li>
+<li> <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#split" title="Edit Menu: Clip Boundaries">Split</a></span> at the cursor or region in an existing track or clip, doing nothing except separating it into multiple clips. </li>
+<li> <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#split_new" title="Edit Menu: Clip Boundaries">Split New</a></span> at a region in an existing track or clip, moving the selected audio to the same position in a new track at the bottom of the project.   </li>
+<li> <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#disjoin" title="Edit Menu: Clip Boundaries">Detach at Silences</a></span> at a region in an existing track or clip, creating clips either side of absolute silences.  </li>
+<li> <span class="menu">Edit &gt; <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">Paste</a></span> from the Audacity clipboard into vacant space in an existing track.</li>
+<li> <a href="generate_menu.html" title="Generate Menu">Generate</a> some audio into vacant space in an existing track.</li>
+<li> <a href="#move">Drag</a> a clip from a different track (or the whole track) into vacant space in an existing track using <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a>.</li></ul>
+<p>As an example, the "before Split " and "after Split" images below show that after selecting <span class="menu">Edit &gt; Clip Boundaries &gt; Split</span>, the two boundaries of the gray selection region are overlaid with a solid black <i>split line</i>, marking the boundaries of the three resulting clips. 
+</p>
+<dl><dd><span title="Gray selection region before Split"><img alt="SplitBefore.png" src="../m/images/5/5e/splitbefore.png" width="410" height="134" /></span></dd></dl>
+<dl><dd><span title="Gray selection region after Split showing dark black split lines"><img alt="SplitAfter.png" src="../m/images/5/57/splitafter.png" width="410" height="134" /></span></dd></dl>
+<div class="note">It's easy to select all the audio of a given clip. Make sure that Selection Tool <span style="position:relative;top:3px"><img alt="SelectionPointer.png" src="../m/images/0/04/selectionpointer.png" width="8" height="11" /></span> is enabled in <a href="tools_toolbar.html" title="Tools Toolbar">Tools Toolbar</a> then double-click in the clip. You can also select all of an entire track that has no individual clips in this way.</div>   
+<div id="join"></div>
+<h2><span class="mw-headline" id="Merging_or_joining_Clips">Merging or joining Clips</span></h2>
+<p>Unlike cursor points or selection regions, split lines representing boundaries between clips  persist in the waveform of the track until the clips are <i>merged</i> or <i>joined</i> back into one clip. 
+</p><p>An adjacent pair of clips may be "merged" into one clip by clicking on the split line to remove it. You can perform a similar "join" action without a mouse by selecting across one or more split lines then using <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#join" title="Edit Menu: Clip Boundaries">Join</a></span> to remove the split lines so as to make one clip.   
+</p>
+<div class="note">If you hover over the Clip line and then press and release the <span class="kbrd" style="background-color: #e0e0f0">Esc</span> key you can then click on the Clip line and select from there by dragging, without deleting the clip line and merging the clips. </div>
+<div id="navigating"></div>
+<h2><span class="mw-headline" id="Navigating_and_selecting_Clips">Navigating and selecting Clips</span></h2>
+<p>A number of menu items and corresponding keyboard shortcuts can be used to <a href="select_menu_clip_boundaries.html" title="Select Menu: Clip Boundaries">select and navigate between clips</a>.
+</p><p><br />
+</p>
+<div id="shift"></div>
+<h2><span class="mw-headline" id="Time-shifting_Clips">Time-shifting Clips</span></h2>
+<p>To move clips around independently, use the <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a> <img alt="Time Shift Tool" src="../m/images/3/3c/timeshifttool.png" title="Time Shift Tool" width="20" height="20" />.  When you click on a clip and drag it to the left or right, this is called <i>time-shifting</i> because you are changing the time at which that audio will be heard.
+</p>
+<dl><dd><span title="Moving a clip after splitting a track into different tracks using Split"><img alt="SplitMove.png" src="../m/images/d/db/splitmove.png" width="410" height="134" /></span></dd></dl>
+<p>If you click outside a selection region when dragging clips with the <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a>, the selection region will remain where it was as shown above. Otherwise, the selection region will move with the clip(s).
+</p><p>To move multiple clips at once, select all of the clips you want to move using the <a href="tools_toolbar.html#selection" title="Tools Toolbar">Selection Tool</a><img alt="Selection Tool" src="../m/images/1/1f/ibeam.png" title="Selection Tool" width="27" height="27" />, then use the <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a> to click and drag <i>within the selection region</i> - all selected clips will move together (see before and after figures below).
+</p>
+<dl><dd><span title="Creating a selection so you can move multiple clips at once"><img alt="ClipsMoveTogetherBefore.png" src="../m/images/2/22/clipsmovetogetherbefore.png" width="410" height="226" /></span></dd></dl>
+<dl><dd><span title="After moving two clips together"><img alt="ClipsMoveTogetherAfter.png" src="../m/images/f/f3/clipsmovetogetherafter.png" width="410" height="227" /></span></dd></dl>
+<div class="note">Note that moving clips can make use of the yellow <a href="boundary_snap_guides.html" title="Boundary Snap Guides">Boundary Snap Guides</a> <i>(also seen in the chapter on <a href="audacity_selection.html" title="Audacity Selection">Audacity Selection</a>)</i>.  When you move a clip, Audacity will snap the left or right boundary of a clip to the nearest edge of a clip in any other track marking it with a yellow vertical line, making it very easy to line up clips during editing.</div>
+<h3><span class="mw-headline" id="Time-shifting_stereo_Clips">Time-shifting stereo Clips</span></h3>
+<p>In most cases time-shifting a clip in a stereo track will work exactly the same way as in a mono track. Most stereo tracks will have continuous audio in both channels and time-shifting a clip will move both channels equally.
+</p><p>Here is an example of a "standard" stereo track.
+</p>
+<dl><dd><span title="A standard stereo track with audio in both channels"><img alt="TimeShiftStereo01.png" src="../m/images/b/be/timeshiftstereo01.png" width="414" height="199" /></span></dd></dl>
+<p>When you time-shift a clip in this track, both channels move simultaneously.
+</p>
+<dl><dd><span title="&#123;display text here}"><img alt="TimeShiftStereo02.png" src="../m/images/8/84/timeshiftstereo02.png" width="414" height="199" /></span></dd></dl>
+<p>However, there may be times when you will have a stereo track containing separate clips in each channel.
+</p><p>Here we see two mono tracks with multiple clips in each track.
+</p>
+<dl><dd><span title="Two mono tracks with multiple clips in each track"><img alt="TimeShiftStereo03.png" src="../m/images/c/c7/timeshiftstereo03.png" width="415" height="197" /></span></dd></dl>
+<p>After selecting "Make Stereo Track" from the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> in the upper track, we get this.
+</p>
+<dl><dd><span title="Stereo track with separate clips in each channel"><img alt="TimeShiftStereo04.png" src="../m/images/f/fc/timeshiftstereo04.png" width="414" height="198" /></span></dd></dl>
+<p>Here we have positioned the Time Shift pointer over the first clip in the left channel of the stereo track.
+</p>
+<dl><dd><span title="Ready to time-shift the first clip in the left channel of the stereo track"><img alt="TimeShiftStereo05.png" src="../m/images/f/f5/timeshiftstereo05.png" width="414" height="198" /></span></dd></dl>
+<p>After dragging with the Time Shift tool, the first clip in the left channel has moved independently of the clips in the right channel.
+</p>
+<dl><dd><span title="After time-shifting the first clip in the left channel of the stereo track"><img alt="TimeShiftStereo06.png" src="../m/images/a/af/timeshiftstereo06.png" width="414" height="198" /></span></dd></dl>
+<p>If you stop dragging the first left-channel clip just after it starts to overlap with the right-channel clip below, then click in the left-channel clip at any point where the right-channel clip now overlaps with it, you can drag the right-channel clip simultaneously with the left-channel clip. 
+</p><p>If you click in the right-channel clip where there is not yet an overlap, you can resume dragging that clip independently. 
+</p>
+<div class="note">If you always want to drag overlapped left-and right-channel clips simultaneously wherever you click in the clip, you can enable <span class="menu">Tracks &gt; <a href="tracks_menu.html#synclock_tracks_onoff" title="Tracks Menu">Sync-Lock Tracks</a>.</span></div>
+<div id="move"></div>
+<h2><span class="mw-headline" id="Moving_a_Clip_Between_Tracks">Moving a Clip Between Tracks</span></h2>
+<p>The <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a> can also be used to move a single clip between tracks, but there must be room for the clip between the clips on the second track.
+</p>
+<dl><dd><table>
+
+<tr>
+<td align="center">Getting ready to drag a clip from the first track into the second track.
+</td></tr>
+<tr>
+<td><span title="Getting ready to drag a clip from the first track into the second track"><img alt="Clips017a.png" src="../m/images/6/65/clips017a.png" width="410" height="223" /></span>
+</td></tr>
+<tr>
+<td align="center">The clip <b>does not fit</b> between the two clips in the second track.
+</td></tr>
+<tr>
+<td><span title="The clip does not fit between the two clips in the second track"><img alt="Clips017b.png" src="../m/images/0/00/clips017b.png" width="410" height="223" /></span>
+</td></tr>
+<tr>
+<td align="center">The clip <b>does fit</b> after the second clip in the second track.
+</td></tr>
+<tr>
+<td><span title="The clip does fit after the second clip in the second track"><img alt="Clips017c.png" src="../m/images/b/b2/clips017c.png" width="410" height="227" /></span>
+</td></tr></table></dd></dl>
+<p><br />
+</p>
+<div id="colors"></div>
+<h2><span class="mw-headline" id="Moving_colored_Clips">Moving colored Clips</span></h2>
+<p>A Clip takes on the selected color of the waveform that it originates in.  
+</p><p>When a clip is moved into a different colored track, the clip retains its original color.
+</p>
+<dl><dd><span title="Moving a blue colored clip - before the move.png"><img alt="Moving a colored clip - before.png" src="../m/images/8/82/moving_a_colored_clip_before.png" width="410" height="259" /></span></dd>
+<dd><b>Blue clip in the top track with sufficient space in the bottom, red track</b></dd></dl>
+<dl><dd><span title="Moving a colored clip - after the move the blue clip remains blue in the red track.png"><img alt="Moving a colored clip - after.png" src="../m/images/d/d0/moving_a_colored_clip_after.png" width="409" height="264" /></span></dd>
+<dd><b>The blue clip has been moved into the red track and retains its blue color</b></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Changing the color in the Track Dropdown Menu will change the colors of all clips in that track,     regardless of their current colors.
+<p>This does make it a bit awkward if for example, you have a track:
+</p>
+<ul><li><font color="blue">blue clip</font> -  <font color="blue">blue clip</font> - <font color="red">red clip</font> - <font color="blue">blue clip</font> </li></ul>
+<dl><dd>and you want:</dd></dl>
+<ul><li> <font color="green">green clip</font> - <font color="green">green clip</font> - <font color="red">red clip</font> - <font color="green">green clip</font> </li></ul>
+<dl><dd>You will need to move the <font color="red">red clip</font> temporarily to a new track while they change the <font color="blue">blue clips</font> to <font color="green">green clips</font>.</dd></dl>
+</td></tr></table>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20180917111819
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.149 seconds
+Real time usage: 0.157 seconds
+Preprocessor visited node count: 301/1000000
+Preprocessor generated node count: 1316/1000000
+Post‐expand include size: 4853/2097152 bytes
+Template argument size: 2734/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   32.214      1 - -total
+ 69.87%   22.509      1 - Template:I18n
+ 63.34%   20.406      1 - Template:I18n_box
+ 51.15%   16.477      1 - Template:I18n_list
+ 19.97%    6.432      2 - Template:I18n_link
+ 11.46%    3.693      2 - Template:Autoglossonym
+ 11.40%    3.673      3 - Template:Note
+  8.35%    2.689      9 - Template:Menu
+  4.35%    1.400      1 - Template:Key
+  3.27%    1.053      1 - Template:Tip
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2049-0!*!0!!*!5!* and timestamp 20180917111819 and revision id 61697
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Tracks_and_Clips">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

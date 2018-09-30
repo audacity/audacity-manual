@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>FAQ:Errors - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-FAQ_Errors rootpage-FAQ_Errors skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">FAQ:Errors</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/FAQ:Errors#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><a href="faq_errors_on_opening_or_recovering_an_audacity_project.html" title="FAQ:Errors on opening or recovering an Audacity project"><b>&gt;</b>&#160; Forward To: FAQ:Errors on opening or recovering an Audacity project</a> <br />
+</p><p><a href="faq_editing.html" title="FAQ:Editing"><b>&lt;</b>&#160; Back to: FAQ:Editing</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Why_do_I_get_.22Error_opening_sound_device.22.3F"><span class="tocnumber">1</span> <span class="toctext">Why do I get "Error opening sound device"?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Why_do_I_get_.22FFmpeg_Error_-_Can.27t_open_audio_codec_0x15002.22_.28or_0x15003.29.3F"><span class="tocnumber">2</span> <span class="toctext">Why do I get "FFmpeg Error - Can't open audio codec 0x15002" (or 0x15003)?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Why_does_the_computer_reboot_or_show_a_blue_screen_message_when_I_launch_Audacity_or_play_or_record.3F"><span class="tocnumber">3</span> <span class="toctext">Why does the computer reboot or show a blue screen message when I launch Audacity or play or record?</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.22I_found_a_bug.21_now_what.3F.22"><span class="tocnumber">4</span> <span class="toctext">"I found a bug! now what?"</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.22Feature_X_is_not_good_enough_or_is_missing.22"><span class="tocnumber">5</span> <span class="toctext">"Feature X is not good enough or is missing"</span></a></li>
+</ul>
+</div>
+
+<div id="sound_device"></div>
+<h2><span class="mw-headline" id="Why_do_I_get_.22Error_opening_sound_device.22.3F">Why do I get "Error opening sound device"?</span></h2>
+<p>This error message asks you to check the recording or playback device settings and the Audacity <a href="selection_toolbar.html" title="Selection Toolbar">project sample rate</a>. If the message mentions "recording device", it means there's a problem with your Audacity, operating system or sound device recording settings. If the message mentions "playback device", it means there is a problem with your playback settings. 
+</p><p>Either message can suggest a problem with the drivers of the sound device, or possibly that you are asking the device to do something it cannot do. For example you will see this error if you attempt to <a href="transport_menu.html#record" title="Transport Menu">Record</a> to more channels than your device supports, or if you try to <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdub</a> on a device that can either record or play back but not both.
+</p><p>The recording device message most commonly occurs on Windows when one of the sound device inputs is not properly enabled or otherwise cannot respond to Audacity's request to start recording.   
+</p><p>For details of how to fix this please see <a href="error_opening_sound_device.html" title="Error opening sound device">Error opening sound device</a>.
+</p><p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="codec_multi"></div>
+<h2><span class="mw-headline" id="Why_do_I_get_.22FFmpeg_Error_-_Can.27t_open_audio_codec_0x15002.22_.28or_0x15003.29.3F">Why do I get "FFmpeg Error - Can't open audio codec 0x15002" (or 0x15003)?</span></h2>
+<p><b>Error 0x15002</b> occurs if you export more than a 2-channel M4A file (such as a 5.1 <a href="faq_playback.html#multi-channel" title="FAQ:Playback">surround sound</a> file), using the "M4A (AAC) Files (FFmpeg)" export choice. To correct the error and export up to 8 channels, choose <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">(external application)</a> and specify a <a href="exporting_to_an_external_program.html#multi-channel" title="Exporting to an External Program">command</a> that tells Audacity to explicitly use the native FFmpeg AAC encoder. 
+</p><p><b>Error 0x15003</b> occurs if you export more than a 6-channel AC3 file.  Six channels is the maximum possible for AC3. 
+</p><p><br />
+<a href="#top">back to top</a>
+</p>
+<div id="reboot"></div>
+<h2><span class="mw-headline" id="Why_does_the_computer_reboot_or_show_a_blue_screen_message_when_I_launch_Audacity_or_play_or_record.3F">Why does the computer reboot or show a blue screen message when I launch Audacity or play or record?</span></h2>
+<p>This mostly affects Windows computers. It happens when your computer sound device has a bad or mismatched driver or there is a problem with a system driver that interacts with that sound device. Even if the problem occurs after updating to the latest Audacity version, it still is not Audacity's direct fault because Audacity does not have kernel privileges to make the computer restart.  Inappropriate drivers can also cause Audacity to crash during playback or recording, without necessarily crashing the computer. 
+</p><p>The best practice is to make sure the computer's built-in sound device has the latest drivers for your operating system, supplied by the motherboard or computer manufacturer. For a PCI or external sound card, obtain the latest drivers and firmware supplied by the manufacturer of the device. See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating Sound Device Drivers</a> on the Wiki for help with correcting driver issues. If playback or recording worked previously, but the sound device drivers are appropriate or cannot be changed to a version that prevents the problem, try Windows System Restore to revert the computer to a state before the problem occurred.   
+</p><p>If necessary the exact driver or module causing a computer crash can be pinpointed on Windows by examining the memory dump made when the crash occurred. You can find the dump by right-clicking over <span class="menu">My Computer</span> or <span class="menu">Computer &gt; Properties</span>, then click the "Advanced" link or tab, and under "Startup and Recovery", choose "Settings...". <a rel="nofollow" class="external text" href="http://www.resplendence.com/downloads">WhoCrashed</a> is a Windows tool that makes it easy to identify the driver or module at fault. Another good idea is to test the computer's memory for errors (see help for <a rel="nofollow" class="external text" href="https://www.raymond.cc/blog/test-your-ram-with-microsoft-windows-memory-diagnostic/">Windows</a> and <a rel="nofollow" class="external text" href="http://www.command-tab.com/2008/01/11/how-to-test-ram-under-mac-os-x/">Mac</a>). Faulty memory can sometimes cause computer freezes or crashes.
+</p><p>If your best available sound card drivers prove to be incompatible with current Audacity, we may not be able to take any direct action, but do <a rel="nofollow" class="external text" href="https://web.audacityteam.org/contact/#feedback">let us know</a>:
+</p>
+<ul><li> the exact make and model number of the sound device</li>
+<li> the exact driver and firmware model numbers</li>
+<li> the exact operating system you are using, including the Service Pack if you are on Windows.</li></ul>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="bugs"></div>
+<h2><span class="mw-headline" id=".22I_found_a_bug.21_now_what.3F.22">"I found a bug! now what?"</span></h2>
+<p>The most important things when reporting a bug are to <b>be as specific as possible</b> and check first in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes">Release Notes</a> if we already know about the problem. 
+</p><p>If the bug is not known about, please give us enough information that we can reproduce the bug ourselves on the correct operating system. Otherwise it's unlikely that we'll be able to fix it.  
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top"><b>Please include the following essential information in your report:</b>
+<ul><li> Your exact three-section version number of Audacity (for example, 2.0.0) - you can check this at <span class="menu">Help &gt; About Audacity</span> or <span class="menu">Audacity &gt; About Audacity</span> on a Mac computer </li>
+<li> The exact operating system you are using (for example, Windows 7 Service Pack 1, Mac OS X 10.6.8, Linux Ubuntu 11.10)</li>
+<li> Any other information about your computer and its audio connections that might be relevant (for example, 2 GB RAM, 2.2 GHz, M-Audio Fast Track USB interface).</li></ul>
+</td></tr></table></div>
+<p>If you can make the problem happen consistently, tell us the exact sequence of events, step-by-step from launch of Audacity that causes the bug to occur. 
+</p><p>If you see an error message, be sure to send us the exact text of the error message, or attach an image. If you are on Mac or Linux a crash report is useful too.
+</p><p>When you have your bug report ready, please post to our <a rel="nofollow" class="external text" href="https://forum.audacityteam.org">forum</a>.
+</p><p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="frs"></div>
+<h2><span class="mw-headline" id=".22Feature_X_is_not_good_enough_or_is_missing.22">"Feature X is not good enough or is missing"</span></h2>
+<p>You can send your ideas for new or improved features to our 
+<a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=20">forum</a>. Again, be as specific as possible, and feel free to suggest your preferred way of achieving the functionality you desire.
+</p>
+<div class="note">If you are a C++ programmer, you can <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/SubmittingPatches">send us a patch or preferably a Git pull request</a> for the bug fix or new feature. <p>Thanks for all your reports, suggestions and patches! All of these help us make Audacity better.</p> </div>
+<p><a href="#top">back to top</a>
+</p><p><a href="faq_errors_on_opening_or_recovering_an_audacity_project.html" title="FAQ:Errors on opening or recovering an Audacity project"><b>&gt;</b>&#160; Forward To: FAQ:Errors on opening or recovering an Audacity project</a> <br />
+</p><p><a href="faq_editing.html" title="FAQ:Editing"><b>&lt;</b>&#160; Back to: FAQ:Editing</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112037
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.096 seconds
+Real time usage: 0.102 seconds
+Preprocessor visited node count: 346/1000000
+Preprocessor generated node count: 1049/1000000
+Post‐expand include size: 5281/2097152 bytes
+Template argument size: 1877/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   43.844      1 - -total
+ 84.62%   37.102      1 - Template:I18n
+ 79.60%   34.900      1 - Template:I18n_box
+ 70.23%   30.792      1 - Template:I18n_list
+ 38.99%   17.093      7 - Template:I18n_link
+ 22.99%   10.081      7 - Template:Autoglossonym
+  5.25%    2.303      1 - Template:Advice
+  5.07%    2.221      4 - Template:Menu
+  3.47%    1.522      1 - Template:Note
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3852-0!*!0!!en!5!* and timestamp 20180917112037 and revision id 60982
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Errors">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

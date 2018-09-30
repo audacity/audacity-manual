@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Effect Menu: Nyquist - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Effect_Menu_Nyquist rootpage-Effect_Menu_Nyquist skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Effect Menu: Nyquist</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Effect_Menu:_Nyquist#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist">Nyquist</a> plug-ins provide most of the optional effects underneath the divider in the Effect menu. They are also used to provide some of Audacity's built-in audio <a href="generate_menu.html" title="Generate Menu">generators</a> and <a href="analyze_menu.html" title="Analyze Menu">analysis tools</a>. 
+<ul><li> A wide range of additional Nyquist effect, generation and analysis plug-ins can be obtained from <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Download_Nyquist_Plug-ins">Download Nyquist Plug-ins</a> on our Wiki.</li>
+<li> Nyquist effects support saving of user presets but do not yet support <a href="real_time_preview_of_effects.html" title="Real-time preview of effects">real-time preview</a> or import/export of presets from/to other machines. </div></li></ul>
+<dl><dd><div class="noresize"><map name="ImageMap_1_312883503"><area href="effect_menu.html" shape="rect" coords="25,5,68,27" alt="Audacity includes many built-in effects and also lets you use a wide range of plug-in effects" title="Audacity includes many built-in effects and also lets you use a wide range of plug-in effects"/><area href="analyze_menu.html" shape="rect" coords="68,5,123,27" alt="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature" title="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature"/><area href="tools_menu.html" shape="rect" coords="123,5,164,27" alt="The Tools Menu contains customisable tools" title="The Tools Menu contains customisable tools"/><area href="extra_menu.html" shape="rect" coords="164,5,205,27" alt="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus" title="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus"/><area href="help_menu.html" shape="rect" coords="205,5,242,27" alt="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools." title="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools."/><area href="effect_menu.html#add_remove_plugins" shape="rect" coords="25,27,262,49" alt="Enable or disable particular Effects, Generators and Analyzers" title="Enable or disable particular Effects, Generators and Analyzers"/><area href="effect_menu.html#repeat_last_effect" shape="rect" coords="25,56,262,78" alt="Repeats the last used effect at its last used settings and without displaying any dialog" title="Repeats the last used effect at its last used settings and without displaying any dialog"/><area href="effect_menu_built_in.html" shape="rect" coords="25,85,262,107" alt="Shows the list of available Audacity built-in effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences" title="Shows the list of available Audacity built-in effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences"/><area href="effect_menu_ladspa.html" shape="rect" coords="25,114,262,136" alt="Shows the list of available LADSPA effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences" title="Shows the list of available LADSPA effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences"/><area href="#" shape="rect" coords="25,136,262,158" alt="Shows the list of available Nyquist effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences" title="Shows the list of available Nyquist effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences"/><area href="#adjustable_fade" shape="rect" coords="262,27,500,49" alt="enables you to control the shape of the fade (non-linear fading) to be applied by adjusting various parameters; allows partial (that is not from or to zero) fades up or down" title="enables you to control the shape of the fade (non-linear fading) to be applied by adjusting various parameters; allows partial (that is not from or to zero) fades up or down"/><area href="#clip_fix" shape="rect" coords="262,49,500,71" alt="Clip Fix attempts to reconstruct clipped regions by interpolating the lost signal" title="Clip Fix attempts to reconstruct clipped regions by interpolating the lost signal"/><area href="#crossfade_clips" shape="rect" coords="262,71,500,93" alt="Use Crossfade Clips to apply a simple crossfade to a selected pair of clips in a single audio track" title="Use Crossfade Clips to apply a simple crossfade to a selected pair of clips in a single audio track"/><area href="#crossfade_tracks" shape="rect" coords="262,93,500,115" alt="Use Crossfade Tracks to make a smooth transition between two overlapping tracks one above the other" title="Use Crossfade Tracks to make a smooth transition between two overlapping tracks one above the other"/><area href="#delay" shape="rect" coords="262,115,500,137" alt="A configurable delay effect with variable delay time and pitch shifting of the delays" title="A configurable delay effect with variable delay time and pitch shifting of the delays"/><area href="#high_pass_filter" shape="rect" coords="262,137,500,159" alt="Passes frequencies above its cutoff frequency and attenuates frequencies below its cutoff frequency" title="Passes frequencies above its cutoff frequency and attenuates frequencies below its cutoff frequency"/><area href="#limiter" shape="rect" coords="262,159,500,181" alt="Limiter passes signals below a specified input level unaffected or gently reduced, while preventing the peaks of stronger signals from exceeding this threshold" title="Limiter passes signals below a specified input level unaffected or gently reduced, while preventing the peaks of stronger signals from exceeding this threshold"/><area href="#low_pass_filter" shape="rect" coords="262,181,500,203" alt="Passes frequencies below its cutoff frequency and attenuates frequencies above its cutoff frequency" title="Passes frequencies below its cutoff frequency and attenuates frequencies above its cutoff frequency"/><area href="#notch_filter" shape="rect" coords="262,203,500,225" alt="Greatly attenuate (&quot;notch out&quot;), a narrow frequency band" title="Greatly attenuate (&quot;notch out&quot;), a narrow frequency band"/><area href="#spectral_edit_multi_tool" shape="rect" coords="262,225,500,247" alt="When the selected track is in spectrogram or spectrogram log(f) view, applies a  notch filter, high pass filter or low pass filter according to the spectral selection made" title="When the selected track is in spectrogram or spectrogram log(f) view, applies a  notch filter, high pass filter or low pass filter according to the spectral selection made"/><area href="#spectral_edit_parametric_eq" shape="rect" coords="262,247,500,269" alt="When the selected track is in spectrogram or spectrogram log(f) view and the spectral selection has a center frequency and an upper and lower boundary, performs the specified band cut or band boost" title="When the selected track is in spectrogram or spectrogram log(f) view and the spectral selection has a center frequency and an upper and lower boundary, performs the specified band cut or band boost"/><area href="#spectral_edit_shelves" shape="rect" coords="262,269,500,291" alt="When the selected track is in spectrogram or spectrogram log(f) view, applies either a low- or high-frequency shelving filter or both filters, according to the spectral selection made" title="When the selected track is in spectrogram or spectrogram log(f) view, applies either a low- or high-frequency shelving filter or both filters, according to the spectral selection made"/><area href="#studio_fade_out" shape="rect" coords="262,291,500,313" alt="Applies a more musical fade out to the selected audio, giving a more pleasing sounding result" title="Applies a more musical fade out to the selected audio, giving a more pleasing sounding result"/><area href="#tremolo" shape="rect" coords="262,313,500,335" alt="Modulates the volume of the selection at the depth and rate selected in the dialog" title="Modulates the volume of the selection at the depth and rate selected in the dialog"/><area href="#vocal_reduction_and_isolation" shape="rect" coords="262,335,500,357" alt="Attempts to remove or isolate center-panned audio from a stereo track" title="Attempts to remove or isolate center-panned audio from a stereo track"/><area href="#vocal_remover" shape="rect" coords="262,357,500,379" alt="(Legacy effect) Attempts to remove center-panned vocals from a stereo track" title="(Legacy effect) Attempts to remove center-panned vocals from a stereo track"/><area href="#vocoder" shape="rect" coords="262,379,500,401" alt="Synthesizes audio (usually a voice) in the left channel of a stereo track with a carrier wave (typically white noise) in the right channel to produce a modified version of the left channel" title="Synthesizes audio (usually a voice) in the left channel of a stereo track with a carrier wave (typically white noise) in the right channel to produce a modified version of the left channel"/><area href="menu_reference.html" shape="rect" coords="0,0,1000,1000" alt="The Menus" title="The Menus"/></map><img alt="Effect-NyquistMenu.png" src="../m/images/4/4d/effect_nyquistmenu.png" width="502" height="411" usemap="#ImageMap_1_312883503"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:450px;top:-15px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+</div>
+<p><br />
+&#160;
+</p><p><br />
+</p><p><br />
+</p>
+<div class="note">Where a built-in or shipped Nyquist effect has an interface, its description page (accessed by the links below) shows an image of the interface and its default settings.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Some Nyquist plug-ins could crash while processing very long audio selections (typically an hour or more). This is due to the plug-in using a large amount of memory and is a known issue in Audacity's current Nyquist implementation. Try using the plug-in on shorter selections instead.
+</td></tr></table></div>
+<div id="nyquist_effects"></div>
+<h2><span class="mw-headline" id="Nyquist_effects">Nyquist effects</span></h2>
+<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist">Nyquist</a> plug-ins provide most of the optional effects underneath the divider in the Effect menu. They are also used to provide some of Audacity's built-in audio <a href="generate_menu.html" title="Generate Menu">generators</a> and <a href="analyze_menu.html" title="Analyze Menu">analysis tools</a>. 
+</p><p>The  <span class="button">Debug</span> button in most Nyquist effect dialogs opens a "Nyquist Output" window containing any informational or error output provided by the effect.   This is primarily of use when writing or editing <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Nyquist plug-ins</a>.  After pressing <span class="button">OK</span> in this window, the effect or other chosen action is attempted just as it would be if pressing OK in the effect instead of using the Debug button. 
+</p><p>For detailed instructions on installing Nyquist plug-ins for Audacity see: <a href="installing_effect_generator_and_analyzer_plug_ins_on_windows.html#nyquist_install" title="Installing Effect, Generator and Analyzer plug-ins on Windows"><span title="A guide to installing Effect, Generator and Analyzer plug-ins for Audacity Windows computer platforms.">Windows</span></a>, <a href="installing_effect_generator_and_analyzer_plug_ins_on_mac_os_x.html#nyquist_install" title="Installing Effect, Generator and Analyzer plug-ins on MAC OS X"><span title="A guide to installing Effect, Generator and Analyzer plug-ins for Audacity on Mac computer platforms.">Mac</span></a> or <a href="installing_effect_generator_and_analyzer_plug_ins_on_linux.html#nyquist_install" title="Installing Effect, Generator and Analyzer plug-ins on Linux"><span title="A guide to installing Effect, Generator and Analyzer plug-ins for Audacity on Linux computer platforms.">Linux</span></a>
+</p><p>To load the new effects into Audacity so they are available in the menu, use the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plug-in Manager: Effects, Generators and Analyzers</a> dialog.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Advanced users can adapt Nyquist effects and write completely new ones.
+<ul><li> See the Audacity wiki for further information about <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist">Nyquist</a>.</li></ul>
+</td></tr></table>
+</div>
+<div id="workbench"></div>
+<h2><span class="mw-headline" id="Nyquist_Workbench">Nyquist Workbench</span></h2>
+<p>For advanced users who can compile Audacity, Nyquist Workbench gives the ability to run arbitrary Nyquist code in Audacity from a graphical IDE <i>(Integrated Development Environment)</i>.  See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Workbench">Nyquist Workbench</a> in the Wiki for details. 
+</p>
+<div id="nyquist_incl"></div>
+<h2><span class="mw-headline" id="Nyquist_plug-ins_included_in_Audacity">Nyquist plug-ins included in Audacity</span></h2>
+<p>The following sample Nyquist plug-ins are included in released builds of Audacity:
+</p>
+<div id="adjustable_fade"></div>
+<div id="adjustable"></div>
+<h3><span class="mw-headline" id="Adjustable_Fade..."><a href="adjustable_fade.html" title="Adjustable Fade">Adjustable Fade...</a></span></h3>
+<p>Launches a dialog box where you can choose the shape of the fade in or fade out to be applied. You can also create fades to and from other than silence or full volume. An example of this might be a fade in from 20% of the original volume to 80% of the original volume.  
+</p>
+<div id="clip_fix"></div>
+<h3><span class="mw-headline" id="Clip_Fix..."><a href="clip_fix.html" title="Clip Fix">Clip Fix...</a></span></h3>
+<p>Attempts to reconstruct clipped regions by interpolating the lost signal.
+</p>
+<div id="crossfade_clips"></div>
+<div id="xfade"></div>
+<h3><span class="mw-headline" id="Crossfade_Clips"><a href="crossfade_clips.html" title="Crossfade Clips">Crossfade Clips</a></span></h3>
+<p>Applies a simple crossfade to a selected pair of clips in a single audio track.
+</p>
+<div id="crossfade_tracks"></div>
+<div id="crossfade"></div>
+<h3><span class="mw-headline" id="Crossfade_Tracks"><a href="crossfade_tracks.html" title="Crossfade Tracks">Crossfade Tracks</a></span></h3>
+<p>Applies a crossfade to a selected region of a pair of tracks.
+</p>
+<div id="delay"></div>
+<h3><span class="mw-headline" id="Delay..."><a href="delay.html" title="Delay">Delay...</a></span></h3>
+<p>A configurable delay effect with variable delay time and pitch shifting of the delays.
+</p>
+<div id="high_pass_filter"></div>
+<div id="high-pass_filter"></div>
+<div id="filters"></div>
+<h3><span class="mw-headline" id="High-Pass_Filter..."><a href="high_pass_filter.html" title="High-Pass Filter">High-Pass Filter...</a></span></h3>
+<p>Passes frequencies above its cutoff frequency and attenuates frequencies below its cutoff frequency; this can be used to reduce low frequency noise.
+</p>
+<div id="limiter"></div>
+<h3><span class="mw-headline" id="Limiter..."><a href="limiter.html" title="Limiter">Limiter...</a></span></h3>
+<p>Limiter passes signals below a specified input level unaffected or gently reduced, while preventing the peaks of stronger signals from exceeding this threshold. Limiting is a type of dynamic range compression. Mastering engineers often use limiting combined with make-up gain to increase the perceived loudness of an audio recording during the audio mastering process.
+</p>
+<div id="low_pass_filter"></div>
+<div id="low-pass_filter"></div>
+<div id="low_pass"></div>
+<h3><span class="mw-headline" id="Low-Pass_Filter..."><a href="low_pass_filter.html" title="Low-Pass Filter">Low-Pass Filter...</a></span></h3>
+<p>Passes frequencies below its cutoff frequency and attenuates frequencies above its cutoff frequency; this can be used to reduce high pitched noise. 
+</p>
+<div id="notch_filter"></div>
+<div id="notch"></div>  
+<h3><span class="mw-headline" id="Notch_Filter..."><a href="notch_filter.html" title="Notch Filter">Notch Filter...</a></span></h3>
+<p>Greatly attenuate ("notch out") a narrow frequency band. This is a good way to reduce mains hum or a whistle confined to a specific frequency with minimal damage to the remainder of the audio.  
+</p>
+<div id="nyquist_prompt"></div>
+<div id="Nyquist"></div>
+<h3><span class="mw-headline" id="Nyquist_Prompt..."><a href="nyquist_prompt.html" title="Nyquist Prompt">Nyquist Prompt...</a></span></h3>
+<p>Launches a dialog where you can enter Nyquist commands. Nyquist is a applicationming language for producing and processing audio. For more information see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Nyquist Plug-ins Reference</a>.
+</p>
+<div id="spectral_edit_multi_tool"></div>
+<div id="spectral_multi"></div>
+<h3><span class="mw-headline" id="Spectral_edit_multi_tool"><a href="spectral_edit_multi_tool.html" title="Spectral edit multi tool">Spectral edit multi tool</a></span></h3>
+<div class="note"><i><b>Spectral edit multi tool</b></i> (and <i><b>Spectral edit parametric EQ</b></i> and <i><b>Spectral edit shelves</b></i> described immediately following) are intended for working on a combined frequency and time selection made when using <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">Spectrogram</a> view.</div>
+<p>If a fully defined <a href="spectral_selection.html" title="Spectral Selection">spectral selection</a> has been made, choosing <i>Spectral edit multi-tool</i> applies the appropriate filter for the selection. See <a href="spectral_selection.html#multi" title="Spectral Selection">Spectral edit multi tool</a> for more information.
+</p>
+<div id="spectral_edit_parametric_eq"></div>
+<div id="spectral_eq"></div>
+<h3><span class="mw-headline" id="Spectral_edit_parametric_EQ..."><a href="spectral_edit_parametric_eq.html" title="Spectral edit parametric EQ">Spectral edit parametric EQ...</a></span></h3>
+<p>If a fully defined <a href="spectral_selection.html" title="Spectral Selection">spectral selection</a> has been made, the effect applies a band cut or band boost according to the value you enter in the "Gain (dB)" control. See <a href="spectral_edit_parametric_eq.html" title="Spectral edit parametric EQ">Spectral edit parametric EQ</a> for more information.
+</p>
+<div id="spectral_edit_shelves"></div>
+<div id="spectral_shelves"></div>
+<h3><span class="mw-headline" id="Spectral_edit_shelves..."><a href="spectral_edit_shelves.html" title="Spectral edit shelves">Spectral edit shelves...</a></span></h3>
+<p>If a fully defined <a href="spectral_selection.html" title="Spectral Selection">spectral selection</a> has been made, the effect applies a low shelf filter, high shelf filter or combined low and high shelf filter according to the value you enter in the "Gain (dB)" control. See <a href="spectral_edit_shelves.html" title="Spectral edit shelves">Spectral edit shelves</a> for more information.
+</p>
+<div id="studio_fade_out"></div>
+<div id="studio_fadeout"></div>
+<h3><span class="mw-headline" id="Studio_Fade_Out"><a href="fades.html#studio_fadeout" title="Fades">Studio Fade Out</a></span></h3>
+<p>Produces a smooth and musical sounding fade out, by applying a sinusoidal fade with a progressive low-pass filter from full spectrum at the start of the selection to 100 Hz at the end.
+</p>
+<div id="tremolo"></div>
+<h3><span class="mw-headline" id="Tremolo..."><a href="tremolo.html" title="Tremolo">Tremolo...</a></span></h3>
+<p>Modulates the volume of the selection at the depth and rate selected in the dialog. The same as the tremolo effect familiar to guitar and keyboard players.
+</p>
+<div id="vocal_reduction_and_isolation"></div>
+<div id="vrandi"></div>
+<h3><span class="mw-headline" id="Vocal_Reduction_and_Isolation..."><a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation">Vocal Reduction and Isolation...</a></span></h3>
+<p>Attempts to remove or isolate center-panned audio from a stereo track. Vocals are often <i>(but not always)</i> recorded in this way. The <i>classic method</i> achieves this by subtracting one channel from the other, but the result will be (dual) mono <i>(this method can be found under the Actions menu in this effect as "Remove Center Classic (Mono)" and is a quick way to remove the center if only mono is needed)</i>. All other "Remove" options in this effect preserve the stereo image
+</p>
+<div id="vocal_remover"></div>
+<div id="vocal"></div>
+<h3><span class="mw-headline" id="Vocal_Remover_.28for_center-panned_vocals.29..."><a href="vocal_remover.html" title="Vocal Remover">Vocal Remover (for center-panned vocals)...</a></span></h3>
+<p>Attempts to remove center-panned audio from a stereo track. Vocals are often <i>(but not always)</i> recorded in this way. Vocals (or other audio) can only be removed with this plug-in when panned to center, in other words sounding equally loud in both left and right channels. Help text is available from within the effect's dialog box.  This is a "Legacy effect": the same result can be achieved by using the <i>Remove Center Classic (Mono)</i> option in  <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation">Vocal Reduction and Isolation</a>.
+</p>
+<div id="vocoder"></div>
+<h3><span class="mw-headline" id="Vocoder..."><a href="vocoder.html" title="Vocoder">Vocoder...</a></span></h3>
+<p>Vocoder synthesizes a modulator (usually a voice) in the left channel of a stereo track with a carrier wave in the right channel to produce a modified version of the left channel. Vocoding a normal voice with white noise as provided in the effect will produce a robot-like voice for special effects. Other carriers can be used for subtly different voices. Vocoder can only be applied to unsplit stereo tracks.
+</p><p><br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>&lt;</b>&#160; Back to: Effect Menu</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112405
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.104 seconds
+Real time usage: 0.107 seconds
+Preprocessor visited node count: 250/1000000
+Preprocessor generated node count: 2421/1000000
+Post‐expand include size: 3548/2097152 bytes
+Template argument size: 1616/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   51.553      1 - -total
+ 81.96%   42.251      1 - Template:Menus
+ 79.65%   41.060      1 - Template:All-menus
+  4.68%    2.412      1 - Template:Intro
+  3.34%    1.721      2 - Template:Button
+  2.97%    1.532      1 - Template:ClickTip
+  2.69%    1.387      2 - Template:Note
+  2.11%    1.088      1 - Template:Advice
+  1.93%    0.993      1 - Template:Tip
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5672-0!*!0!!*!5!* and timestamp 20180917112405 and revision id 61707
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Effect_Menu:_Nyquist">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

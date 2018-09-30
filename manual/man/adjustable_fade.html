@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Adjustable Fade - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Adjustable_Fade rootpage-Adjustable_Fade skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Adjustable Fade</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Adjustable_Fade#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+
+<div class="intro"><i><b>Adjustable Fade</b></i> increases or reduces the audio volume by a varying amount. This effect is more versatile than <a href="effect_menu.html#Fade_In" title="Effect Menu">Fade In</a> and <a href="effect_menu.html#Fade_Out" title="Effect Menu">Fade Out</a> in that it can fade to or from any amplification level rather than only between silence and the original level.</div> 
+<dl><dd><b>Accessed by:</b> <span class="menu"><a href="effect_menu.html" title="Effect Menu">Effect</a> &gt; <a href="effect_menu.html#adjustable" title="Effect Menu">Adjustable Fade...</a></span></dd>
+<dd><span title="Dialog box for Adjustable Fade"><img alt="Adjustable Fade.png" src="../m/images/b/bf/adjustable_fade.png" width="474" height="299" /></span></dd></dl>
+<div id="type"></div>
+<h2><span class="mw-headline" id="Fade_Type">Fade Type</span></h2>
+<p>There are just two basic fade <b>types</b> available from this dropdown, either of which may be "Up" (from a low level to a higher level) or "Down" (from high level to a lower level).
+</p>
+<ol><li> <b>Fade Up:</b> provides a linear or simple curve fade up from a low <a href="glossary.html#gain" title="Glossary">gain</a> setting to a higher gain setting.</li>
+<li> <b>Fade Down:</b> provides a linear or simple curve fade down from a high gain setting to a lower gain setting. <p>A "simple" curve is one that curves in one direction only, for example the level may be changed slowly at first and progressively change more rapidly, or may change rapidly at the start of the fade and then gradually level out.</p></li>
+<li> <b>S-Curve Up:</b> provides a "double" curve that bends one way and then the other. The level will rise gradually at first, then progressively more steeply toward the middle of the fade before gradually leveling out.</li>
+<li> <b>S-Curve Down:</b> The level will fall gradually at first, then progressively more steeply toward the middle of the fade before gradually leveling out.</li></ol>
+
+<p><br />
+</p>
+<div id="midfade"></div>
+<h2><span class="mw-headline" id="Mid-fade_Adjust">Mid-fade Adjust</span></h2>
+<p>This slider control has a range of +/- 100 (default 0). It allows the shape of the fade that has been selected in the "Fade Type:" menu to be modified. Setting this control greater than zero will tend to push up the center of fade, whereas negative values will tend to pull down the level in the middle of the fade.
+</p>
+<ul><li> When used with "Fade Type: = Fade Up", a value of zero (default) will produce a linear fade. 
+<ul><li> Values greater than zero will cause the fade to rise more rapidly at first before leveling out to the higher amplification level.</li>
+<li> Values less than zero will cause the fade to rise slowly at first then gradually rise more rapidly.</li>
+<li> The further away from zero that this is set, the more curved the fade will be.</li>
+<li> The mid fade amplification will never be less than the start of the fade or greater than the end of the fade.</li></ul></li></ul>
+<ul><li> When used with "Fade Type: = Fade Down", a value of zero (default) will produce a linear fade. 
+<ul><li> Values greater than zero will cause the fade to fall gradually at first then progressively more steeply as it approached the final level.</li>
+<li> Values less than zero will cause the fade to fall rapidly at first then progressively level out.</li>
+<li> The further away from zero that this is set, the more curved the fade will be.</li>
+<li> The mid fade amplification will never be greater than the start of the fade or less than the end of the fade.</li></ul></li></ul>
+<dl><dd><span title="Fade Up from 20&#160;% to 100&#160;%, Mid Fade Boost +50. Fade Down from 100&#160;% to 20&#160;%. Mid Fade Cut -50"><img alt="Adjustable-Fades-Simple-Curves.png" src="../m/images/7/7a/adjustable_fades_simple_curves.png" width="502" height="213" /></span></dd></dl>
+<ul><li> When used with "Fade Type: = S-Curve Up or S-Curve Down", half way through the fade the gain will be exactly half way between the starting point and end point.
+<ul><li> With values greater than zero the fade will retain its "double curve" character but will be a bit higher at the mid point.</li>
+<li> With values greater than zero the fade will retain its "double curve" character but will be a bit lower at the mid point.</li></ul></li></ul>
+
+<div id="units"></div>
+<h2><span class="mw-headline" id="Start.2FEnd_as">Start/End as</span></h2>
+<p>This dropdown enables you to choose between percentage or dB as the units to be used in the Start and End gain parameter boxes below.
+</p>
+<div id="start"></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">The final two text boxes must contain one number each. They define the initial and final gain (amplification amount) of the fade. It is unimportant if these are entered with the initial gain in the first text box and the final gain in the last, or the other way around as the <i>direction</i> of the fade is determined by the <a href="#type">Fade Type:</a> selection.
+</td></tr></table></div>
+<h2><span class="mw-headline" id="Start_.28or_end.29">Start (or end)</span></h2>
+<p>Enables you to set the Start (or end) gain.  If you are using percentage units, the default value of 0 (silence) will give you the start of a fade up from silence. 
+</p>
+<div id="end"></div>
+<h2><span class="mw-headline" id="End_.28or_start.29">End (or start)</span></h2>
+<p>Enables you to set the End (or start) gain.  If you are using percentage units, the default value of 100 (the original level or <i>unity gain</i>) will give you the final gain for a fade up to full volume. .
+</p><p><br />
+</p>
+<div class="note">A good way to get a feel for how the controls work is to try them out on <a href="generate_menu.html#noise" title="Generate Menu">generated white noise</a>.</div>
+<h2><span class="mw-headline" id="Handy_Presets">Handy Presets</span></h2>
+<p>A number of fixed preset curve shapes are available from this dropdown selector: Linear, Exponential, Logarithmic, Rounded, Cosine and S-Curve.  
+</p>
+<dl><dd><span title="Adjustable Fade showing dropdown to select preset fade curve shapes"><img alt="Adjustable Fade with Presets dropdown W10.png" src="../m/images/4/4c/adjustable_fade_with_presets_dropdown_w10.png" width="531" height="241" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top"><b>Important:</b> Selecting a preset curves will override all other parameter settings dialog box for this effect.  <br />To make the other parameters operable you will need to set <b>"None Selected"</b> from this dropdown.
+</td></tr></table></div>
+<div class="note">All presets either fade in from silence to the original level, or fade out from the original level to silence. Note that unlike the <a href="effect_menu.html#linearfade" title="Effect Menu">Fade In</a> and <a href="effect_menu.html#linearfade" title="Effect Menu">Fade Out</a> effects in the top section of the Effect menu, this effect will treat empty space in the selected region as silence, It is therefore important to select exactly the region that you want the effect to be applied to.</div>
+<ul>
+<li><b>None Selected:</b> Manual settings. Fade Type, Mid Fade Adjust, Start and End settings are all functional.
+<li><b>Linear In:</b> Same as the <a href="fades.html#Fade_In" title="Fades">Fade In</a> effect.
+<li><b>Linear Out:</b> Same as the <a href="fades.html#Fade_Out" title="Fades">Fade Out</a> effect.
+<li><b>Exponential In:</b> The level rises exponentially, similar to using the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a>.
+<li><b>Exponential Out:</b> The level falls exponentially, similar to using the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a>.
+<li><b>Logarithmic In:</b> A <i>"convex"</i> curve that rises moderately steeply from silence and progressively less steeply.
+<li><b>Logarithmic:</b> A <i>"convex"</i> curve that falls gently initially then progressively more rapidly.
+<li><b>Rounded In:</b> A <i>"convex"</i> curve that rises abruptly from silence then progressively less steeply. 
+<li><b>Rounded Out:</b> A <i>"convex"</i> curve that falls gradually from the initial level, then progressively more steeply to a fairly abrupt end. 
+<li><b>Cosine In:</b> A <i>"convex"</i> curve that rises moderately steeply from silence and gradually levels out to create a smooth transition to the original level
+<li><b>Cosine Out:</b> A <i>"convex"</i> curve with a smooth transition from the original level, progressively falling more steeply to silence.
+<li><b>S-Curve In:</b> A <i>"double"</i> curve that creates a smooth transition from silence, gradually rising more steeply, then leveling out to create a smooth transition to the original level.
+<li><b>S-Curve Out:</b> A <i>"double"</i> curve that creates a smooth transition from the original level, gradually falling more steeply, then leveling out to create a smooth transition to silence. Similar to the <a href="fades.html#studio_fadeout" title="Fades">Studio Fade Out</a> effect.
+</ul>
+<h2><span class="mw-headline" id="Example_Settings">Example Settings</span></h2>
+<p>These settings assume that Start and End are set as "% of Original".
+Note that the order of the 'Start' and 'End' settings is unimportant.
+</p>
+<table class="prettytableindent">
+
+<tr style="background: #add8e6; align=left">
+<td style="width:50%"><b>Desired Effect</b> </td>
+<td style="width:15%"><b>Fade Type</b> </td>
+<td> <b>Mid-Fade Adjust (%)</b> </td>
+<td> <b>Start (or End)</b> </td>
+<td> <b>End (or start)</b>
+</td></tr>
+<tr>
+<td> Linear fade-in from silence to original level </td>
+<td> Fade Up </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 100
+</td></tr>
+<tr>
+<td> Linear fade-out from original level to silence </td>
+<td> Fade Down </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 100
+</td></tr>
+<tr>
+<td> Linear fade from original level to half volume </td>
+<td> Fade Down </td>
+<td> 0 </td>
+<td> 50 </td>
+<td> 100
+</td></tr>
+<tr>
+<td> Exponential fade-out similar to using Envelope Tool </td>
+<td> Fade Down </td>
+<td> Less than 0 </td>
+<td> 0 </td>
+<td> 100
+</td></tr>
+<tr>
+<td> Fade-out for 'Equal Power' crossfade </td>
+<td> Fade Down </td>
+<td> +50 </td>
+<td> 0 </td>
+<td> 100
+</td></tr>
+<tr>
+<td> Fade-in for 'Equal Power' crossfade </td>
+<td> Fade Up </td>
+<td> +50 </td>
+<td> 0 </td>
+<td> 100
+</td></tr>
+<tr>
+<td> Similar to 'Studio Fade Out' effect </td>
+<td> S-Curve Down </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 100
+</td></tr>
+<tr>
+<td> Smooth change from half of original volume to twice original volume </td>
+<td> S-Curve Up </td>
+<td> 0 </td>
+<td> 50 </td>
+<td> 200
+</td></tr></table>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
+<p>Clicking on the command buttons give the following results:
+</p>
+<ul><li><span class="button">Manage</span> gives a dropdown menu enabling you to manage presets for the tool and to see some detail about the tool. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a></li>
+<li><span class="button">Preview</span> plays a short preview of what the audio would sound like if the effect is applied with the current settings, without making actual changes to the audio.  The length of preview is determined by your setting in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span>, the default setting is 6 seconds.</li>
+<li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
+<li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> brings you to the appropriate page in the Manual, this page</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
+</p><p><br />
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112331
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.136 seconds
+Real time usage: 0.144 seconds
+Preprocessor visited node count: 397/1000000
+Preprocessor generated node count: 1716/1000000
+Post‐expand include size: 15990/2097152 bytes
+Template argument size: 3882/2097152 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   48.952      1 - -total
+ 40.61%   19.880      1 - Template:I18n
+ 36.27%   17.755      1 - Template:I18n_box
+ 31.14%   15.242      1 - Template:I18n_list
+ 24.74%   12.111      1 - Template:Effectbuttons
+ 18.98%    9.293      1 - Template:Buttonlist
+ 14.21%    6.955      1 - Template:No-rename
+ 13.21%    6.465     10 - Template:Button
+ 12.73%    6.233      2 - Template:I18n_link
+ 11.90%    5.827      3 - Template:Ednote
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4225-0!*!0!!*!5!* and timestamp 20180917112331 and revision id 60430
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Adjustable_Fade">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

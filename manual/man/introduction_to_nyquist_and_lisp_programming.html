@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Introduction to Nyquist and Lisp Programming - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Introduction_to_Nyquist_and_Lisp_Programming rootpage-Introduction_to_Nyquist_and_Lisp_Programming skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Introduction to Nyquist and Lisp Programming</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Introduction_to_Nyquist_and_Lisp_Programming#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">Nyquist was written by <a rel="nofollow" class="external text" href="https://www-2.cs.cmu.edu/%7Erbd/">Roger B. Dannenberg</a> and was intended to be used as a complete programming language for audio synthesis and analysis, with support for MIDI, audio recording and playback, file I/O, object-oriented programming, profiling, debugging and more. Audacity uses only a subset of Nyquist’s functionality, allowing you to take simple Nyquist functions and use them to process audio data. Audacity doesn’t include any support for debugging Nyquist code, so if you are trying to write a complicated plug-in, you may find it easier to get the full version of Nyquist and develop there, then turn it into an Audacity plug-in. Nyquist is available from the Carnegie Mellon University Computer Music Project.
+You can download the full Nyquist from here <a rel="nofollow" class="external text" href="https://www-2.cs.cmu.edu/%7Emusic/music.software.html">CMU Computer Music Project Software</a>. </div>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Nyquist"><span class="tocnumber">1</span> <span class="toctext">Nyquist</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Lisp"><span class="tocnumber">1.1</span> <span class="toctext">Lisp</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Lisp_function_reference"><span class="tocnumber">1.2</span> <span class="toctext">Lisp function reference</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Math_functions"><span class="tocnumber">1.2.1</span> <span class="toctext">Math functions</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Math_Examples"><span class="tocnumber">1.2.2</span> <span class="toctext">Math Examples</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#List_functions"><span class="tocnumber">1.2.3</span> <span class="toctext">List functions</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Conditional_Expressions"><span class="tocnumber">1.2.4</span> <span class="toctext">Conditional Expressions</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Links"><span class="tocnumber">2</span> <span class="toctext">Links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Nyquist">Nyquist</span></h2>
+<p>Nyquist allows you to use the Nyquist programming language to write your own plug-in effects for Audacity. Unlike VST and LADSPA plug-ins, Nyquist plug-ins can be written using an ordinary text editor and don’t need to be compiled.
+</p><p>Nyquist supports both a Lisp syntax and a more conventional syntax called SAL. Audacity versions prior to 1.3.8 only support Lisp, but the current Audacity 2.0 series supports both Lisp and SAL. To write plug-ins for use with Audacity, choose the appropriate Nyquist Manual for your version of Audacity and preferred syntax:
+</p>
+<ul><li> <a rel="nofollow" class="external text" href="http://www.audacity-forum.de/download/edgar/nyquist/nyquist-doc/manual/home.html">Nyquist version 2.37 Manual</a> – entirely using Lisp syntax </li>
+<li> <a rel="nofollow" class="external text" href="https://www.cs.cmu.edu/%7Erbd/doc/nyquist/">Nyquist 3.1x Reference Manual</a> – the latest Nyquist Manual (mostly using SAL syntax). </li></ul>
+<p>Note that you don’t need to download Nyquist in order to write simple plug-ins to use with Audacity. All the basic instructions you need to work with Lisp and the 2.37 Manual are below. If you want to explore SAL as well, and for the latest Nyquist features in Audacity, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Documentation">Nyquist Documentation</a> on the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/">Wiki</a>.
+</p>
+<h3><span class="mw-headline" id="Lisp">Lisp</span></h3>
+<p>Nyquist is based on Lisp. If you have programmed in Lisp before, you can skim this section or go directly to the next page: <a href="programming_in_nyquist.html" title="Programming in Nyquist">Programming in Nyquist</a> . Otherwise, here’s an extremely brief introduction to Lisp:
+</p><p>In Lisp (and therefore Nyquist), everything is an S-Expression, which is just a list of tokens (words) separated by whitespace and enclosed in parentheses. The name of the function is always the first token in an S-Expression, and all of the other tokens are arguments to this function. Here’s a simple example:
+</p>
+<pre>  (setf area (* 3.14159 (expt radius 2)))
+</pre>
+<p>Let’s break down this example. The outermost S-expression has three members. The first one, <tt>setf</tt>, is the name of the function (it stands for set-field). <tt>setf</tt> is used to assign a value to a variable. (There are other similar functions, like <tt>set</tt> and <tt>setq</tt>, but <tt>setf</tt> is the most powerful, so it’s the one we’ll use in our examples.) After <tt>setf</tt> comes <tt>area</tt>, which is the name of the variable we’re going to set. Next comes the value to assign to this variable, which in this case is another S-expression.
+</p><p>Lisp doesn’t have any special operators for Math functions – they’re all functions like everything else, using <i>prefix </i>notation, where the name of the function (or operator) comes before its arguments. So instead of 3*7 for the product of 3 and 7, in Lisp you would write (* 3 7). In Nyquist, the <tt>expt</tt> (exponent) function raises its first argument to the power of the second argument. Therefore <tt>(* 3.14159 (expt radius 2))</tt> means 3.14159 times the square of <tt>radius</tt>, or the formula for the area of a circle.
+</p><p>Rather than typing in this full expression every time, let’s define a function for the area of the circle, that we can call every time we need it:
+</p>
+<pre>(defun circlearea (radius)
+  (* 3.14159 (expt radius 2)))</pre>
+<p>The <tt>defun</tt> function is used to define a new function. The first argument is the name of the function, in this case <tt>circlearea</tt>. The second argument is a list of arguments to the function to be defined – this is one of the few cases where you have an S-expression that is not interpreted as a function call. Finally the last expression is the value of the function. Now if we want to compute the area of a circle of radius <tt>r</tt>, we just need to compute:
+</p>
+<pre>  (setf area (circlearea r))
+</pre>
+<p>An S-expression is just a representation of a list. Lisp uses lists to represent just about everything (the name LISP comes from LISt Processing language), so it’s helpful to know how to manipulate lists. Let’s start by assigning a list of numbers to a variable. You can’t quite do this:
+</p>
+<pre>  (setf mylist (1 2 3 4 5))  &lt;--  error!
+</pre>
+<p>The reason this doesn’t work is that whenever Nyquist sees an S-expression, it tries to evaluate it as a function unless you tell it otherwise. Since there’s no function named “1” that takes arguments <tt>(2 3 4 5)</tt>, this will generate an error. To tell Lisp that you want to treat an S-expression literally, and not to evaluate it as a function, you <i>quote</i> it. In Nyquist, you can quote a list by putting a single quotation mark before it, like this:
+</p>
+<pre>  (setf mylist '(1 2 3 4 5))
+</pre>
+<p>Nyquist also provides a <tt>list</tt> function that you can use to construct lists – this is useful if some of the elements of the list are functions:
+</p>
+<pre>  (setf mylist (list 1 2 3 4 (sqrt 25)))
+</pre>
+<p>To get things off of a list, you can use the <tt>first</tt> and <tt>rest</tt> functions. (Traditionally, these were called <tt>car</tt> and <tt>cdr</tt>, respectively, but<tt>first</tt> and <tt>rest</tt> are much easier to remember. Both sets of names are supported in Nyquist.) The output of <tt>(first mylist)</tt> is 1, and the output of <tt>(rest mylist)</tt> is the list <tt>(2 3 4 5)</tt>. So the second element of the list is <tt>(first (rest mylist))</tt>.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Lisp_function_reference">Lisp function reference</span></h3>
+<p>Here’s a list of some of the basic lisp functions you might need. For a complete list of Lisp / Nyquist functions, see the <a rel="nofollow" class="external text" href="http://www.audacity-forum.de/download/edgar/nyquist/nyquist-doc/manual/home.html">Nyquist version 2.37 Reference Manual</a>.
+</p><p><b>Note: Symbols in Nyquist (like variable names and function names) are not case-sensitive. They are converted to uppercase internally.</b>
+</p>
+<h4><span class="mw-headline" id="Math_functions">Math functions</span></h4>
+<table border="1" style="border-collapse: collapse; width: 95%;">
+
+<tr>
+<td align="center"> <b>Lisp</b>
+</td>
+<td align="center"> <b>SAL</b>
+</td>
+<td align="center"> <b>Description</b>
+</td></tr>
+<tr>
+<td> (<b>+</b> a b)
+</td>
+<td> a <b>+</b> b
+</td>
+<td> addition
+</td></tr>
+<tr>
+<td> (<b>-</b> a b)
+</td>
+<td> a <b>-</b> b
+</td>
+<td> subtraction
+</td></tr>
+<tr>
+<td> (<b>*</b> a b)
+</td>
+<td> a <b>*</b> b
+</td>
+<td> multiplication
+</td></tr>
+<tr>
+<td> (<b>/</b> a b)
+</td>
+<td> a <b>/</b> b
+</td>
+<td> division
+</td></tr>
+<tr>
+<td> (<b>truncate</b> <i>expr</i>)
+</td>
+<td> <b>truncate</b> (<i>expr</i>)
+</td>
+<td> round down expr to integer (floor)
+</td></tr>
+<tr>
+<td> (<b>float</b> <i>expr</i>)
+</td>
+<td> <b>float</b> (<i>expr</i>)
+</td>
+<td> integer expr to floating-point
+</td></tr>
+<tr>
+<td> (<b>rem</b> a b ...)
+</td>
+<td> <b>rem</b> (a b...)
+</td>
+<td> remainder of a list of numbers
+</td></tr>
+<tr>
+<td> (<b>min</b> a b ...)
+</td>
+<td> <b>min</b> (a b ...)
+</td>
+<td> minimum
+</td></tr>
+<tr>
+<td> (<b>max</b> a b ...)
+</td>
+<td> <b>max</b> (a b ...)
+</td>
+<td> maximum
+</td></tr>
+<tr>
+<td> (<b>abs</b> <i>expr</i>)
+</td>
+<td> <b>abs</b> (<i>expr</i>)
+</td>
+<td> absolute value of a number
+</td></tr>
+<tr>
+<td> (<b>random</b> n)
+</td>
+<td> <b>random</b> (n)
+</td>
+<td> random integer between 1 and n-1
+</td></tr>
+<tr>
+<td> (<b>rrandom</b>)
+</td>
+<td> <b>rrandom</b> ()
+</td>
+<td> Floating-point random between 0 and 1
+</td></tr>
+<tr>
+<td> (<b>sin</b> <i>expr</i>)
+</td>
+<td> <b>sin</b> (<i>expr</i>)
+</td>
+<td> sine
+</td></tr>
+<tr>
+<td> (<b>cos</b> <i>expr</i>)
+</td>
+<td> <b>cos</b> (<i>expr</i>)
+</td>
+<td> cosine
+</td></tr>
+<tr>
+<td> (<b>tan</b> <i>expr</i>)
+</td>
+<td> <b>tan</b> (<i>expr</i>)
+</td>
+<td> tangent
+</td></tr>
+<tr>
+<td> (<b>expt</b> <i>expr</i>)
+</td>
+<td> <b>expt</b> (<i>expr</i>)
+</td>
+<td> exponent (a to the power of b)
+</td></tr>
+<tr>
+<td> (<b>sqrt</b> <i>expr</i>)
+</td>
+<td> <b>sqrt</b> (<i>expr</i>)
+</td>
+<td> square root
+</td></tr>
+<tr>
+<td> (<b>&lt;</b> a b)
+</td>
+<td> a <b>&lt;</b> b
+</td>
+<td> test for a less than b
+</td></tr>
+<tr>
+<td> (<b>&lt;=</b> a b)
+</td>
+<td> a <b>&lt;=</b> b
+</td>
+<td> test for a less than or equal to b
+</td></tr>
+<tr>
+<td> (<b>&gt;</b> a b)
+</td>
+<td> a <b>&gt;</b> b
+</td>
+<td> test for a greater than b
+</td></tr>
+<tr>
+<td> (<b>&gt;=</b> a b)
+</td>
+<td> a <b>&gt;=</b> b
+</td>
+<td> test for a greater than or equal to b
+</td></tr>
+<tr>
+<td> (<b>=</b> a b)
+</td>
+<td> a <b>=</b> b
+</td>
+<td> test for equality
+</td></tr>
+<tr>
+<td> (<b>/=</b> a b)
+</td>
+<td> a <b>/=</b> b
+</td>
+<td> test for inequality
+</td></tr>
+</table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Math_Examples">Math Examples</span></h4>
+<p>n-th power of x:
+</p>
+<pre> power(x, n)&#160;;; in SAL
+ (power x n)&#160;;; in LISP
+ 
+</pre>
+<p>n-th root of a number:
+</p>
+<pre> power(x, 1.0 / n)&#160;;; in SAL
+ (power x (/ 1.0 n))&#160;;; in LISP 
+</pre>
+<p>n-th root of a sound s:
+</p>
+<pre> return s-exp(s-log(s) * (1.0 / n))&#160;;; in SAL
+ (s-exp (mult (s-log s) (/ 1.0 n)))&#160;;; in LISP
+</pre>
+<p>n-th root with two sounds x and n:
+</p>
+<pre> return s-exp(s-log(x) * s-recip(n)) &#160;;; in SAL
+ (s-exp (mult (s-log x) (s-recip n)))&#160;;; in LISP
+</pre>
+<h4><span class="mw-headline" id="List_functions">List functions</span></h4>
+<table border="1" style="border-collapse: collapse; width: 95%;">
+<tr>
+<th> Lisp
+</th>
+<th> SAL
+</th>
+<th> Description
+</th></tr>
+<tr>
+<td> (<b>first</b> <i>expr</i>)
+</td>
+<td> <b>first</b> (<i>expr</i>)
+</td>
+<td> first element of a list (car)
+</td></tr>
+<tr>
+<td> (<b>rest</b> <i>expr</i>)
+</td>
+<td> <b>rest</b> (<i>expr</i>)
+</td>
+<td> rest of the list (cdr)
+</td></tr>
+<tr>
+<td> (<b>reverse</b> <i>expr</i>)
+</td>
+<td> <b>reverse</b> (<i>expr</i>)
+</td>
+<td> reverse a list
+</td></tr>
+<tr>
+<td> (<b>list</b> <i>expr</i> ...)
+</td>
+<td> <b>list</b> (<i>expr</i>...)
+</td>
+<td> construct a list of expressions
+</td></tr>
+<tr>
+<td> (<b>append</b> <i>expr</i> ...)
+</td>
+<td> <b>append</b> (<i>expr</i>...)
+</td>
+<td> append two or more lists
+</td></tr>
+<tr>
+<td> (<b>length</b> <i>expr</i>)
+</td>
+<td> <b>length</b> (<i>expr</i>)
+</td>
+<td> length of a list
+</td></tr>
+<tr>
+<td> (<b>maplist</b> <i>fcn list1 list</i>...)
+</td>
+<td> <b>maplist</b> (<i>fcn list1 list</i>...)
+</td>
+<td> apply a function to every element in a list
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Conditional_Expressions">Conditional Expressions</span></h4>
+<table border="1" style="border-collapse: collapse; width: 95%;">
+<tr>
+<th> Lisp
+</th>
+<th> SAL
+</th>
+<th> Description
+</th></tr>
+<tr>
+<td> (<b>if</b> <i>test-expr true-stmt</i> [<i>false-stmt</i>])
+</td>
+<td> <b>if</b> <i>test-expr</i> <b>then</b> <i>true-stmt</i> [<b>else</b> <i>false-stmt</i>]
+</td>
+<td> If test-expr is true, evaluates true-stmt, otherwise evaluates false-stmt
+</td></tr>
+<tr>
+<td> (<b>when</b> <i>test-expr statement</i>)
+</td>
+<td> <b>when</b> <i>test-expr statement</i>
+</td>
+<td> When test-expr is true, evaluate statement
+</td></tr>
+<tr>
+<td> (<b>unless</b> <i>test-expr statement</i>)
+</td>
+<td> <b>unless</b> <i>test-expr statement</i>
+</td>
+<td> When test-expr is false, evaluate statement
+</td></tr>
+<tr>
+<td> (<b>cond</b> [(<i>pred1 expr1</i>) [(<i>pred2 expr2</i>) ... ]])
+</td>
+<td>
+</td>
+<td> When pred1is true, evaluate expr1, else if pred2 is true...
+</td></tr>
+<tr>
+<td> (<b>case</b> <i>test-expr</i> [(<i>value statement</i>) ... ])
+</td>
+<td>
+</td>
+<td> Evaluate statement for the first value that matches test-expr
+</td></tr></table>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="programming_in_nyquist.html" title="Programming in Nyquist"><b>&gt;</b>&#160; Programming in Nyquist</a> <br />
+</p><p><a href="nyquist.html" title="Nyquist"><b>|&lt;</b> Nyquist</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112110
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.035 seconds
+Real time usage: 0.037 seconds
+Preprocessor visited node count: 92/1000000
+Preprocessor generated node count: 232/1000000
+Post‐expand include size: 1644/2097152 bytes
+Template argument size: 1590/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.820      1 - -total
+ 61.99%    2.368      1 - Template:Intro
+ 33.25%    1.270      1 - Template:Ednote
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6398-0!*!0!!en!*!* and timestamp 20180917112110 and revision id 60015
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Introduction_to_Nyquist_and_Lisp_Programming">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

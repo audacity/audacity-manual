@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Other uncompressed files Export Options - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Other_uncompressed_files_Export_Options rootpage-Other_uncompressed_files_Export_Options skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Other uncompressed files Export Options</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Other_uncompressed_files_Export_Options#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html" title="File Menu: Export">Export Audio...</a></span> then choosing <b>Other uncompressed files</b> from the <b>Save as type</b> dropdown menu.</dd></dl>
+<dl><dd><span title="Specify Uncompressed Options at the bottom of the Export Audio dialog"><img alt="OptionsUncompressed.PNG" src="../m/images/2/27/optionsuncompressed.png" width="571" height="576" /></span></dd></dl>
+<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>Other uncompressed files</b>  from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
+<div id="setup"></div>
+<h2><span class="mw-headline" id="Uncompressed_Export_Setup">Uncompressed Export Setup</span></h2>
+<h3><span class="mw-headline" id="Header">Header</span></h3>
+<p>Specifies the "type" or <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> of the exported file.
+</p>
+<div class="note">"Raw (header-less)" or "RF64 (RIFF 64)" headers (with PCM encoding in either case) may be used if extremely large files similar to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> are required. The RF64 size limit is about 16 <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Exabytes">exabytes</a>, making it suitable for very long multi-channel files.</div>
+<h3><span class="mw-headline" id="Encoding">Encoding</span></h3>
+<p>Determines the <i><b><a href="glossary.html#codec" title="Glossary">codec</a></b></i> and where appropriate, the <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i> (for example, 16-<i><b><a href="glossary.html#bit" title="Glossary">bit</a></b></i>) of the audio. The fewer the number of bits, the less accurately the audio waveform will be represented, but the smaller file size that will be required. 
+</p>
+<div class="note">Only the most commonly used encoding types are shown below. Those that use less than 16-bit format (or are lossy codecs like GSM) are usually optimized for specific purposes such as speech telecommunication. With the possible exception of (A)DPCM, higher quality audio for the same reduced file size can generally be obtained by using other <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> codecs like <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>, <i><b><a href="glossary.html#ogg" title="Glossary">OGG</a></b></i> or <i><b><a href="glossary.html#aac" title="Glossary">AAC</a></b></i>. These use psychoacoustic modelling to try and make the retained audio sound similar to the original.</div> 
+<ul><li><b>Signed/unsigned PCM:</b> These formats represent the audio data by integer numbers. There are 8-bit, 16-bit, 24-bit, or 32-bit choices.</li>
+<li><b>Float:</b> These formats represent the audio data by floating-point numbers. This allows a much wider range of sample values to be represented, further increasing its accuracy. There are "32-bit" and "64-bit" choices. </li>
+<li><b>U-Law, A-Law:</b> 8-bit formats using different types of <i><b><a href="glossary.html#companding" title="Glossary">companding</a></b></i> algorithms. These reduce the dynamic range of the audio when written to the file, but restore it when played back.  </li>
+<li><b>ADPCM, DPCM:</b> ADPCM are 4-bit formats that sound near-identical to PCM except where there is a lot of low frequency content. There are various ADPCM choices according to the header chosen, such as IMA, Microsoft, G721, G723 and VOX. ADPCM and DPCM both save storage space by predicting the next sample, and encoding the PCM values only as differences between the predicted and actual value. ADPCM saves further space by varying the size of the quantization step. </li>
+<li><b>GSM 6.10:</b> A lossy voice codec producing small file sizes, used on GSM mobile digital telephone networks.</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20180917112257
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.071 seconds
+Real time usage: 0.076 seconds
+Preprocessor visited node count: 127/1000000
+Preprocessor generated node count: 949/1000000
+Post‐expand include size: 2201/2097152 bytes
+Template argument size: 1114/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   22.649      1 - -total
+ 84.61%   19.164      1 - Template:I18n
+ 76.21%   17.261      1 - Template:I18n_box
+ 59.79%   13.542      1 - Template:I18n_list
+ 18.13%    4.106      1 - Template:I18n_link
+ 10.04%    2.274      1 - Template:Autoglossonym
+  6.46%    1.462      2 - Template:Menu
+  5.63%    1.275      1 - Template:Note
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2541-0!*!0!!*!5!* and timestamp 20180917112257 and revision id 58153
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Other_uncompressed_files_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

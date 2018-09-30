@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>FAQ:Playback - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-FAQ_Playback rootpage-FAQ_Playback skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">FAQ:Playback</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/FAQ:Playback#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><br />
+<a href="faq_mp3_export_problems.html" title="FAQ:MP3 export problems"><b>&gt;</b>&#160; Forward To: FAQ:MP3 export problems</a> <br />
+</p><p><a href="faq_recording_how_to_s.html" title="FAQ:Recording - How To's"><b>&lt;</b>&#160; Back To: FAQ:Recording - How To's</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p><p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Troubleshooting"><span class="tocnumber">1</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Why_have_I_lost_sound_after_connecting_a_USB_device_on_Windows.3F"><span class="tocnumber">1.1</span> <span class="toctext">Why have I lost sound after connecting a USB device on Windows?</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Why_does_playback_go_quiet_when_I_record_or_adjust_the_recording_volume.3F"><span class="tocnumber">1.2</span> <span class="toctext">Why does playback go quiet when I record or adjust the recording volume?</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Why_do_I_hear_clicky_playback_on_Mac.3F"><span class="tocnumber">1.3</span> <span class="toctext">Why do I hear clicky playback on Mac?</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Why_is_there_a_very_low_level_hiss_on_exported_files.3F"><span class="tocnumber">1.4</span> <span class="toctext">Why is there a very low level hiss on exported files?</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#How_can_I_pause_playback_so_I_can_edit_there.3F"><span class="tocnumber">1.5</span> <span class="toctext">How can I pause playback so I can edit there?</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#How_can_I_play_or_export_multi-channel_.28surround_sound.29_files.3F"><span class="tocnumber">1.6</span> <span class="toctext">How can I play or export multi-channel (surround sound) files?</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<div id="usb"></div>
+<h3><span class="mw-headline" id="Why_have_I_lost_sound_after_connecting_a_USB_device_on_Windows.3F">Why have I lost sound after connecting a USB device on Windows?</span></h3>
+<p>When you connect a USB audio device to a Windows computer, it may automatically become the "default" device that is normally used for both playback and recording. If the USB audio device is not meant as a playback device for the computer (such as a microphone, turntable or tape deck) you may lose sound in Audacity or in most applications on your computer. You can fix the problem as follows. 
+</p><p>Right-click over the <span class="menu">Speaker icon</span> by the system clock, choose <span class="menu">Playback Devices</span>, then right-click over the speakers or headphones device you are using, choose "Set as Default Device" and click "OK". 
+</p><p>Alternatively, you can disconnect the USB device from the computer after you have finished recording.  
+</p><p><b>Note:</b> To hear audio while you are recording, ensure "Software Playthrough" is "on".  This can be toggled on/off by clicking <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span>.
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="muted"></div>
+<h3><span class="mw-headline" id="Why_does_playback_go_quiet_when_I_record_or_adjust_the_recording_volume.3F">Why does playback go quiet when I record or adjust the recording volume?</span></h3>
+<p>You may notice this on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Windows_7_OS">Windows 7</a> or later, for example  when recording <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdubs</a> while playing an existing track. This system setting turns down or mutes other sounds when audio goes through the recording or playback devices set as "Default Communication Device" in Windows. This feature can be useful when making or receiving internet phone calls but is undesirable for other audio. To turn off this adjustment:
+</p>
+<ol><li> Right-click over the <span class="menu">Speaker icon</span> by the system clock then choose <span class="menu">Sounds</span></li>
+<li> In the dialog that opens, click the <span class="menu">Communications tab</span></li>
+<li> Underneath "When Windows detects communications activity", choose "Do nothing" and click "OK"  </li>
+<li> On the <i>Playback</i> and <i>Recording</i> tabs, you can optionally right-click over a device and set or unset it as "Default Communication Device."  </li></ol>
+<p>If there are other problems with audio inputs or outputs not interacting properly, make sure your sound device has the latest drivers specific to your particular computer model and operating system. The drivers should be obtained from the motherboard or computer manufacturer's
+website, or if not available there, from the sound device manufacturer's website. For more help, see our Wiki page <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating Sound Device Drivers</a>. Also note that Skype can sometimes manipulate playback and recording levels when it is running, even if not being used.  
+</p><p>See also:
+</p>
+<ul><li> <a href="faq_recording_troubleshooting.html#enhancements" title="FAQ:Recording - Troubleshooting">Why do my recordings fade out or sound as if they were made in a tunnel?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="mac_buffer"></div>
+<h3><span class="mw-headline" id="Why_do_I_hear_clicky_playback_on_Mac.3F">Why do I hear clicky playback on Mac?</span></h3>
+ </li></ul>
+<p>This is most likely to occur if you use <i>Soundflower</i> or an external USB or Firewire playback device rather than the built-in audio output. The problem can usually be fixed by opening <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a> and adjusting the "Audio to Buffer" setting which also affects playback. Reduce the setting to 0 milliseconds. If playback breaks up or does not start, increase "Audio to Buffer" in increments of 10 milliseconds until playback is smooth. 
+</p><p>Sometimes running other audio applications while Audacity is running can cause clicky playback in Audacity. This might be the case if you are running another audio editor, iTunes or QuickTime Player. 
+</p><p>If you are playing a recording that you made in Audacity and the clicks are at the same place on every playback, you may need to redo the recording at the lower buffer settings.    
+</p><p>See also:
+</p>
+<ul><li> <a href="faq_recording_troubleshooting.html#mac_crackle" title="FAQ:Recording - Troubleshooting">How can I prevent clicky recordings on Mac?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="dither"></div>
+<h3><span class="mw-headline" id="Why_is_there_a_very_low_level_hiss_on_exported_files.3F">Why is there a very low level hiss on exported files?</span></h3>
+<p>Deliberate low-level noise is normally added when you <i>downsample</i> to a lower <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i>, for example when you export from a project at default 32-bit depth to a 16-bit <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> file, or when you run effects on a project containing 16-bit audio. The additional noise is known as <a href="dither.html" title="Dither">dither</a> and is generally beneficial. Dither prevents clicky noises which might otherwise occur due to not being able to accurately represent 32-bit values in a 16-bit format. 
+</p><p>If you still want to turn dither off for all data processing (including export) you can do so at "High-quality Conversion" in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>. Alternatively you can turn dither off just for the export step. This may help avoid cumulative dither noise if you are exporting regularly over the same file. 
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="set_cursor"></div>
+<h3><span class="mw-headline" id="How_can_I_pause_playback_so_I_can_edit_there.3F">How can I pause playback so I can edit there?</span></h3>
+<p>Audacity cannot apply <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers">effects</a> or change the audio while playback is paused. To stop playback and set the editing cursor where you stopped, it's easiest to press <span class="kbrd" style="background-color: #e0e0f0">X</span> on your keyboard to "Stop and Set Cursor" (if there is a <a href="audacity_selection.html" title="Audacity Selection">selection region</a>, <span class="kbrd" style="background-color: #e0e0f0">X</span> trims the left edge of the selection to start at the stop position). Use either <span class="kbrd" style="background-color: #e0e0f0">Space</span> or <span class="kbrd" style="background-color: #e0e0f0">X</span> to restart playback from the stop position. 
+</p><p>Note that except for <a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrub or Seek playback</a>, using <span class="kbrd" style="background-color: #e0e0f0">Space</span> or the Stop button <img alt="The Stop button" src="../m/images/f/f9/stop.png" title="The Stop button" width="16" height="16" /> to stop will leave the editing cursor where playback started - probably not what you want.    
+</p><p>You do not always have to stop paused playback yourself. If you have a selection region, you can still access many menu items when paused and Audacity will stop playback so as to apply your change to that region. If there is no selection region, Audacity will stop playback but will warn you that no audio is selected to act on.   
+</p>
+<div class="note"><a href="real_time_preview_of_effects.html" title="Real-time preview of effects">Real-time preview effects</a> are always available in the Effect menu. Playback remains paused after you open the effect, but you can stop then restart playback to adjust the effect while listening, and Audacity will stop playback when you apply the effect. You must still make a selection for the effect to act on.</div> 
+<p>There are many other alternative workflows, depending on your purpose. Here are two examples:
+</p>
+<ul><li> Instead of stopping at each edit point, keep playing and use <span class="kbrd" style="background-color: #e0e0f0">Ctrl + M</span> ( <i><span class="kbrd" style="background-color: #d0d0f8">&#8984; + .</span> on Mac</i> ) to add a <a href="label_tracks.html" title="Label Tracks">label</a> when you hear each point of interest. After stopping, click in any label to set the cursor there for editing.    </li>
+<li> While playing and listening for an edit region, use  <span class="kbrd" style="background-color: #e0e0f0">[</span> on your keyboard when you hear the start of the audio you are interested in, then press <span class="kbrd" style="background-color: #e0e0f0">]</span> when you hear the end of the audio of interest. The <span class="kbrd" style="background-color: #e0e0f0">]</span> shortcut draws a selection region from the point where you pressed <span class="kbrd" style="background-color: #e0e0f0">[</span> to the point where you pressed <span class="kbrd" style="background-color: #e0e0f0">]</span>.  Now you can press <span class="kbrd" style="background-color: #e0e0f0">Space</span> twice to easily stop playback then play that selection. </li></ul>
+<div class="note">
+<p>You can change any of the above shortcuts in <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a>.
+</p>
+</div> 
+<p>See <a href="navigation_tips.html" title="Navigation Tips">Navigation Tips</a> for useful ways to find the audio you want to edit then mark points or regions for cutting.    
+</p><p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="multi-channel"></div>
+<h3><span class="mw-headline" id="How_can_I_play_or_export_multi-channel_.28surround_sound.29_files.3F">How can I play or export multi-channel (surround sound) files?</span></h3>
+<p>Audacity can export multi-channel files by enabling "<b>Use custom mix</b>" in <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>. You will need to adjust the mapping of tracks to channels in <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a> according to the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Surround_sound#Channel_identification">channel order</a> of the format you are exporting to, though some files or playback software/hardware might not necessarily respect that order.  
+</p><p>However Audacity playback is currently limited to mixing down tracks to mono or stereo (two channels). Therefore playback will only reach two channels of the device unless you configure the device to duplicate audio to other channels. Many playback systems also have optional "bass management" where you can route the bass signals in a stereo signal to the low frequency channel for the subwoofer speaker.  
+</p><p><a href="#top">back to top</a>
+</p><p><br />
+</p><p><a href="faq_mp3_export_problems.html" title="FAQ:MP3 export problems"><b>&gt;</b>&#160; Forward To: FAQ:MP3 export problems</a> <br />
+</p><p><a href="faq_recording_how_to_s.html" title="FAQ:Recording - How To's"><b>&lt;</b>&#160; Back To: FAQ:Recording - How To's</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112152
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.117 seconds
+Real time usage: 0.122 seconds
+Preprocessor visited node count: 496/1000000
+Preprocessor generated node count: 1469/1000000
+Post‐expand include size: 5616/2097152 bytes
+Template argument size: 1834/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   54.096      1 - -total
+ 62.45%   33.785      1 - Template:I18n
+ 58.37%   31.577      1 - Template:I18n_box
+ 50.67%   27.411      1 - Template:I18n_list
+ 28.18%   15.242      6 - Template:I18n_link
+ 16.68%    9.025      6 - Template:Autoglossonym
+ 13.89%    7.516     12 - Template:Key
+  5.28%    2.856      6 - Template:Menu
+  3.52%    1.905      1 - Template:Shortcut
+  2.93%    1.585      2 - Template:Note
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3684-0!*!0!!en!5!* and timestamp 20180917112151 and revision id 60705
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Playback">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

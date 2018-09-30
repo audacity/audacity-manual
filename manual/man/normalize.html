@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Normalize - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Normalize rootpage-Normalize skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Normalize</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Normalize#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+
+<div class="intro">Use the Normalize effect to set the peak <b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b> of a single track, make multiple tracks have the same peak amplitude and equalize the balance of left and right channels of stereo tracks.<p> Optionally you can remove any <b><a href="dc_offset.html" title="DC offset">DC offset</a></b> from the tracks.</p></div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Normalize...</span></dd>
+<dd><span title="Normalize effect dialog"><img alt="Normalize.png" src="../m/images/9/9d/normalize.png" width="474" height="178" /></span></dd></dl>
+<h2><span class="mw-headline" id="Remove_DC_offset">Remove DC offset</span></h2>
+<p>When this box is checked Normalize attempts to remove any DC offset in the selection by centering the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> on the 0.0 amplitude level. Technically, it does this by finding the average of all the sample values in the selection, then subtracting that average value from all the samples. 
+</p><p>Removing any DC offset (and preventing it occurring in your hardware in the first place) is important. DC offset can cause clicks or distortion and limits the <i><b><a href="glossary.html#headroom" title="Glossary">headroom</a></b></i> available for normalization, thus restricting the loudness that can be achieved. See our the <a href="dc_offset.html" title="DC offset">DC offset</a> page for more help.
+</p><p>If you are sure your tracks have no offset, unchecking this option will speed up Normalize to some extent.  
+</p>
+<div class="note">Newer Windows PCs may have a DC offset cancellation feature when recording from the built-in sound inputs. To check or enable:
+<ol><li>Right-click over the speaker icon in the <span class="menu">System Tray &gt; Recording Devices</span>, or click <span class="menu">Start &gt; Control Panel &gt; Hardware and Sound &gt; Sound</span>, then the "Recording" tab </li>
+<li>Right-click over empty space, show disabled and disconnected devices, then right-click over each device and enable it</li>
+<li>Right-click or select each device, choose "Properties" then look in the "Enhancements" tab </li>
+<li>If there is no "Enhancements" tab, look in the sound device's own control panel in "Hardware and Sound".</div></li></ol>
+<div id="max"></div>
+<h2><span class="mw-headline" id="Normalize_Maximum_Amplitude_to">Normalize Maximum Amplitude to</span></h2>
+<p>Enter the value for the maximum amplitude you would like the processed selection to have. The initial default setting is -1 dB, but you can change this.  Your choice of settings will be remembered for next use of Normalize any time you change it. A level of -1 dB is just below the maximum amplitude (0 dB) possible without <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>, but gives a little headroom for effects and distortion-free playback on all equipment. Enter a more negative value (for example, -3 dB) to normalize to lower amplitudes.
+</p><p>Entering a positive value is disallowed and causes the "OK" and "Preview" buttons to be disabled. Use <span class="menu">Effect &gt; <a href="amplify.html" title="Amplify">Amplify...</a></span> if you need to increase amplitude above the 0 dB clipping level.  
+</p>
+<div id="lufs"></div>
+
+<div id="indep"></div>
+<h2><span class="mw-headline" id="Normalize_stereo_channels_independently">Normalize stereo channels independently</span></h2>
+<p>When this box is unchecked (the default), Normalize will work on the channels of a stereo track as a pair and change the level of both channels by the same amount.  Use this if your audio is already correctly balanced as this mode will preserve its original stereo balance.
+</p><p>When this box is checked, Normalize will adjust the amplitude separately for the left and right channels of a stereo track. This is useful for correcting stereo recordings of LPs and cassettes which may be unbalanced, as long as significant <a href="click_removal.html" title="Click Removal">clicks are removed</a> first.
+</p>
+<div id="manage"></div>
+<h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
+<p>Clicking on the command buttons give the following results:
+</p>
+<ul><li><span class="button">Manage</span> gives a dropdown menu enabling you to manage presets for the tool and to see some detail about the tool. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a></li>
+<li><span class="button">Preview</span> plays a short preview of what the audio would sound like if the effect is applied with the current settings, without making actual changes to the audio.  The length of preview is determined by your setting in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span>, the default setting is 6 seconds.</li>
+<li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
+<li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> brings you to the appropriate page in the Manual, this page</li></ul>
+<p><br />
+</p>
+<div id="tips"></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">
+<h3><span class="mw-headline" id="Tips">Tips</span></h3>
+<h4><span class="mw-headline" id="Workflow_order">Workflow order</span></h4>
+<ul><li>Immediately after recording capture (or import) of your audio this effect should be used solely to remove any DC offset that may be present with no amplitude adjustment applied at this stage.</li>
+<li>Adjusting the audio's maximum amplitude with this effect is normally best performed as a final editing step prior to export of the production audio. </li></ul>
+<h4><span class="mw-headline" id="Normalizing_multiple_audio_tracks">Normalizing multiple audio tracks</span></h4>
+<p>If you select multiple tracks and apply the Normalize effect, then <b>all audio tracks will be independently normalized to the same peak level</b>.
+</p><p>For example, if you set "Normalize Maximum Amplitude to:" 0.0 dB, every selected audio track will be normalized to 0.0 dB, irrespective of its original level. Whatever peak volume differences there were between the tracks will be removed.
+</p>
+<h4><span class="mw-headline" id="Difference_from_the_Amplify..._effect">Difference from the <a href="amplify.html" title="Amplify">Amplify...</a> effect</span></h4>
+<p>With Amplify, if you select multiple tracks and apply the effect, then all audio tracks will be <b>amplified by the same amount</b> thus preserving the balance between the tracks. 
+</p><p>Normalize offers the option to remove DC offset, Amplify does not offer that option. Normalize does not allow clipping above 0 dB, but Amplify does.   
+</p><p>For a more thorough discussion of differences, see <a href="amplify_and_normalize.html" title="Amplify and Normalize">Amplify and Normalize</a>. 
+</p>
+</td></tr></table>
+</div>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112026
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.125 seconds
+Real time usage: 0.135 seconds
+Preprocessor visited node count: 441/1000000
+Preprocessor generated node count: 1749/1000000
+Post‐expand include size: 17780/2097152 bytes
+Template argument size: 5391/2097152 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   60.193      1 - -total
+ 45.61%   27.452      1 - Template:I18n
+ 42.38%   25.511      1 - Template:I18n_box
+ 37.73%   22.708      1 - Template:I18n_list
+ 21.50%   12.943      1 - Template:Effectbuttons
+ 17.80%   10.714      4 - Template:I18n_link
+ 16.52%    9.942      1 - Template:Buttonlist
+ 13.55%    8.159      1 - Template:No-rename
+ 11.85%    7.131     10 - Template:Button
+ 10.69%    6.435      2 - Template:Ednote
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2721-0!*!0!!*!5!* and timestamp 20180917112026 and revision id 61938
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Normalize">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

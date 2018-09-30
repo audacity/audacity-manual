@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Importing Audio - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Importing_Audio rootpage-Importing_Audio skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Importing Audio</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Importing_Audio#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+</li></ul></li></ul></li></ul>
+<div class="intro">This page is about importing audio files into Audacity (like WAV or MP3) that other applications on the computer can play. 
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Audacity <a href="audacity_projects.html" title="Audacity Projects">projects</a> <i><b>cannot</b></i> be opened using the <span class="menu">File &gt; Import &gt; Audio...</span> command, you will get an error message.<p>If you have already saved your audio as an Audacity Project, use <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a></span> or <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> to open the <i><b>&lt;my_project_name&gt;.aup</b></i>.</p>
+</td></tr></table>
+</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Do <i><b>not</b></i> attempt to open, import or manipulate any individual AU files. See <a href="audacity_projects.html" title="Audacity Projects">Audacity Projects</a> for more information.&lt;/p&gt;
+</td></tr></table></div> </div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#formats">Audio File Formats Supported by Audacity</a></li>
+<li><a href="#ways">Three Ways to Import Audio</a></li>
+<li><a href="#metadata">Metadata</a></li>
+<li><a href="#filetypes">Using the file type dropdown menu in the Open and Import Audio Dialogs</a></li>
+<li><a href="#uncompressed">Importing Uncompressed Audio Files</a></li>
+<li><a href="#compressed">Importing Compressed Audio Files</a></li>
+<li><a href="#cd">Importing audio from CDs</a></li>
+<li><a href="#rate_and_depth">Sample Rate and Sample Format of imported files</a></li></ol>
+<p><br />
+</p>
+<div id="formats"></div>
+<h2><span class="mw-headline" id="Audio_File_Formats_Supported_by_Audacity">Audio File Formats Supported by Audacity</span></h2>
+<p>The audio formats importable by Audacity with the <span class="menu">File &gt; Import &gt; Audio...</span> command, as shipped are:
+</p>
+<h3><span class="mw-headline" id="Uncompressed_audio_formats">Uncompressed audio formats</span></h3>
+<p>For <a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a> audio: most <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> files including all <i><b><a href="glossary.html#pcm" title="Glossary">PCM</a></b></i> variants can be imported into Audacity
+</p>
+<h3><span class="mw-headline" id="Compressed_audio_formats">Compressed audio formats</span></h3>
+<p><a href="glossary.html#compressed_format" title="Glossary">Compressed</a> audio: <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i>, <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> and <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> can be imported into Audacity.
+</p>
+<h3><span class="mw-headline" id="Other_importable_audio_formats">Other importable audio formats</span></h3>
+<p>You can install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> to import a much larger <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/FFmpeg_integration#Functionality">range of audio formats</a> including <b>AC3, AMR(NB), M4A, MP4 and WMA</b> (if the files are not <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM-protected</a> to work only in particular software). FFmpeg will also import audio from most video files or DVDs that are not DRM-protected.  On Mac only, Audacity can import M4A, MP4 and MOV files without FFmpeg.
+</p>
+<div class="note">* Older uncompressed file types such as WAV with U-Law or IMA ADPCM encoding are generally supported provided they contain correctly formatted header information. 
+<ul><li> If files do not have header information (such as RAW or <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Dialogic_ADPCM">VOX ADPCM</a>) or have non-standard header information, you can normally import them using <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#raw" title="File Menu: Import">Raw Data...</a></span>.</li>
+<li> WAV files from portable recorders may contain proprietary compressed audio. These should not be imported as Raw Data, but by installing the <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.   </li>
+<li> <a href="lof_files.html" title="LOF Files">LOF files</a> (lists of files) are also supported if the list is correctly formatted and contains supported files.</div> </li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Audacity does not natively support <b>Opus</b> format. If <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> is installed, Audacity will attempt to use FFmpeg for importing <b>Opus</b> files.
+</td></tr></table>
+</div>
+<h3><span class="mw-headline" id="You_cannot_Import_Audacity_Projects">You cannot Import Audacity Projects</span></h3>
+<p>Note carefully that you cannot use the <b>Import</b> command to open Audacity projects - use <span class="menu">File &gt; Open...</span> to open projects.
+</p><p>If you try to do this you will get an error message.
+</p><p><br />
+</p>
+<div id="ways"></div>
+<h2><span class="mw-headline" id="Three_Ways_to_Import_Audio">Three Ways to Import Audio</span></h2>
+<p>No matter which method you use to bring an audio file into Audacity, the file is always <i>imported</i> into a saved or unsaved <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a>. The imported file always appears in a new track in that project.
+</p>
+<h3><span class="mw-headline" id="1._File_.3E_Import_.3E_Audio...">1. <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#audio" title="File Menu: Import">Audio...</a></span></span></h3>
+<p>If you select the <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#audio" title="File Menu: Import">Audio...</a></span> command, then choose one or more audio files, Audacity will import the selected file(s) into the <i>existing project</i>. This is useful to bring the content of one or more audio files into a project that already contains audio (for example, to mix several audio files together).</p>
+<h3><span class="mw-headline" id="2._File_.3E_Recent_Files_.28Open_Recent_on_Mac.29">2. <span class="menu">File &gt;  <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> (<i>Open Recent</i> on Mac)</span></h3>
+<p>This command imports a single file from a list of the 12 most recently imported files or recently saved projects. The file opens in a new window exactly as <span class="menu">File &gt; Open...</span>.</p>
+<h3><span class="mw-headline" id="3._Drag_and_drop">3. Drag and drop</span></h3>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Note that you cannot use drag and drop <i>(into an open Audacity Project window)</i> to open Audacity projects - use <span class="menu">File &gt; Open...</span> to open projects.
+</td></tr></table></div>
+<ul><li><b>On Windows and Mac</b>
+<ul><li> Drag and drop one or more audio files into an open Audacity project window: this is equivalent to <span class="menu">File &gt; Import &gt; Audio...</span>.</li>
+<li> Drag and drop one or more audio files onto the Audacity icon: this is equivalent to <span class="menu">File &gt; Open...</span>.</li></ul></li></ul>
+<ul><li><b>On Linux:</b>
+<ul><li> Drag and drop files into an open Audacity Project window: this is equivalent to <span class="menu">File &gt; Import &gt; Audio...</span>.</li>
+<li> Drag and drop one or more audio files onto the Audacity icon: only the first file will open. More than one file dragged and dropped onto the icon will do the same as the <span class="menu">File &gt; Open...</span> command for the first file, but the other files will generate an error message saying that Audacity is already running.</li></ul></li></ul>
+<div class="note">You can also use <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a></span>
+<p>This command behaves differently according to whether the project window in which you use the Open command has ever contained <a href="tracks.html" title="Tracks">tracks</a> of any type.</p>     
+<ul><li> If the project contains or has ever contained tracks at some point in its <a href="undo_redo_and_history.html" title="Undo, Redo and History">history</a> (so that <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> and <span class="menu">Edit &gt; <a href="edit_menu.html#redo" title="Edit Menu">Redo</a></span> are not empty), Open imports each file you select into its own new project window. For example, selecting three files would create three new project windows, each containing one of the files and each a separate project with its own history.  This is handy if you want to apply different actions to different (or even the same) files and easily compare the results of each.</li>
+<li> If the project is empty and has never contained any tracks (for example, you used <span class="menu">File &gt; <a href="file_menu.html#new" title="File Menu">New</a></span> to create a new, empty project or used <span class="menu">File &gt; <a href="file_menu.html#close" title="File Menu">Close</a></span> to close an existing project), Open imports the first file into the empty project window, then imports each subsequent file into its own new project window.</li></ul>
+As with the other three import methods, Open does not directly open your selected file(s). The imported audio data is converted into a large number of small files in <i><b><a href="glossary.html#au" title="Glossary">AU</a></b></i> audio format, preserving the current quality of the data. Conversion occurs even if you never explicitly save your work as an <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a>.<p>So to save your edits to an audio file for the computer you always have to choose an <a href="exporting_audio.html" title="Exporting Audio">Export</a> command from the <a href="file_menu.html" title="File Menu">File Menu</a>, even if you want to overwrite the exact same file that you imported.</p> 
+</div>
+<p><br />
+</p>
+<div id="metadata"></div>
+<h2><span class="mw-headline" id="Metadata">Metadata</span></h2>
+<p>Audio files can carry descriptive information in a <a href="glossary.html#metadata" title="Glossary">metadata</a> container, this allows information such as the title, artist, album, track number, and other information about the file to be stored in the audio file itself. 
+</p><p>Each time an audio file is imported into the same project window, the <a href="metadata_editor.html" title="Metadata Editor">metadata tags</a> for that file replace the previously stored metadata for the project. So if the last imported file has no metadata, the project will no longer have any stored metadata. Using one of the above methods that imports each file into its own project window will ensure each file's metadata is stored.
+</p><p><br />
+</p>
+<div id="format"></div>
+<div id="filetypes"></div>
+<h2><span class="mw-headline" id="Using_the_file_type_dropdown_menu_in_the_Open_and_Import_Audio_Dialogs">Using the file type dropdown menu in the Open and Import Audio Dialogs</span></h2>
+<p>This menu (called "Format" on Mac) contains a list of different file types.
+</p>
+<dl><dd><span title="File type dropdown menu"><img alt="File type drop-down menu W10.png" src="../m/images/8/87/file_type_drop_down_menu_w10.png" width="353" height="167" /></span></dd></dl>
+<p>Choosing a particular file type in the menu performs two functions. 
+</p>
+<ul><li> The file type choice <b>filters the list of files in the window</b> by restricting it to files of that type. </li></ul>
+<ul><li> The file type choice <b>determines which importer attempts the file first</b> when using the Open or Import Audio dialogs. For example, a WAV file could be imported by Audacity's native WAV importer or by the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> if this was installed.</li></ul>
+<p>Additionally, rules for the order in which different importers attempt files of particular types can be created at <a href="extended_import_preferences.html" title="Extended Import Preferences">Extended Import Preferences</a> with an option to over-ride the Open and Import Audio file type choice. See <a href="import_filtering_and_importer_order.html" title="Import Filtering and Importer Order">Import Filtering and Importer Order</a> for more details.
+</p><p><br />
+</p>
+<div id="uncompressed"></div>
+<h2><span class="mw-headline" id="Importing_Uncompressed_Audio_Files">Importing Uncompressed Audio Files</span></h2>
+<p>The two most common uncompressed file types you will encounter are WAV and AIFF.
+</p>
+<div id="warning"></div>
+<h3><span class="mw-headline" id="Warning_Dialog_when_Importing_Uncompressed_Audio_Files">Warning Dialog when Importing Uncompressed Audio Files</span></h3>
+<p>The first time you import an uncompressed audio file into Audacity, you will see this dialog.
+</p>
+<dl><dd><span title="Warning Importing Uncompressed Audio dialog"><img alt="Warning Import Uncompressed Audio.png" src="../m/images/f/f7/warning_import_uncompressed_audio.png" width="513" height="364" /></span></dd></dl>
+<p>For each imported file, you can choose:
+</p>
+<ul><li> Whether to copy the imported file's data into the project or to read its data directly from the file, as described below. </li>
+<li> Whether to make your copy or read directly choice permanent and never show this warning again.</li></ul>
+<div id="method"></div>
+<h3><span class="mw-headline" id="Import_Methods">Import Methods</span></h3>
+<ul><li><b>Make a copy before editing (safer)</b>
+<ul><li> This is the default setting. When this option is chosen, Audacity copies the imported file(s) into the project's audio data. It is <b>essential</b> that files are copied into the project if the Audacity project is to be moved, opened on another computer or sent to someone else, or if you need to to move, rename or delete the original files.</li>
+<li> This option does <b>not</b> make a backup copy of the original file in its original location. If you do not want to lose the original content of the file when <a href="exporting_audio.html" title="Exporting Audio">exporting</a> to the same file name and location, please change the file name when exporting. </li></ul></li>
+<li><b>Read directly from the original (faster)</b>
+<ul><li> When this option is chosen Audacity always reads imported files from the folder you first imported them from, <i>without copying them into the project</i>. Therefore with this option set, <i>you must not move, rename or delete imported uncompressed files, or the folder they are in</i>. The advantage of this option is that you can begin editing a long file almost immediately, since <a href="on_demand_loading.html" title="On-Demand Loading">On-Demand Loading</a> will be used to import the file.</li>
+<li> If you export to the same file name and location as the original file, Audacity will make a copy of the original file's content (renamed to include "-old" and a number) and will then read the project from this "-old" file. Therefore <i>you must not move, rename or delete any "-old" files until you have completely finished working on the project</i>.  </li></ul></li></ul>
+<div class="note">You can change your import preference at any time in <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>, and you can turn the warning dialog on and off in <a href="warnings_preferences.html" title="Warnings Preferences">Warnings Preferences</a>.</div>
+<div id="dependencies"></div>
+<h3><span class="mw-headline" id="Dependencies">Dependencies</span></h3>
+<p>If you import any uncompressed audio files into your project using the "read directly" option, then your project <b>depends</b> on those files remaining available. At any time you can check which files your project depends on by clicking on <span class="menu">Help &gt; Diagnostics &gt; <a href="dependencies_dialog.html" title="Dependencies Dialog">Check Dependencies...</a></span>. See the <a href="dependencies_dialog.html" title="Dependencies Dialog">Dependencies Dialog</a> page for details.
+</p><p>When you save a project you can choose whether or not to copy dependent files into the project. See the <a href="projects_preferences.html" title="Projects Preferences">Projects Preferences</a> page for details.
+</p><p><br />
+</p>
+<div id="compressed"></div>
+<h2><span class="mw-headline" id="Importing_Compressed_Audio_Files">Importing Compressed Audio Files</span></h2>
+<p>When you import a compressed audio file into your project on Windows or Mac, either a <a href="glossary.html#lossy" title="Glossary">lossy</a> format like <b>MP3</b>, <b>MP2</b>, <b>M4A</b> or <b>Ogg Vorbis</b> or the <a href="glossary.html#lossless" title="Glossary">lossless</a> compressed <b>FLAC</b> format, there is no choice between "safer" and "faster" - the file's data is <i>always copied into the project</i>. 
+</p><p>However by default on Linux, FLAC is imported by the Audacity importer for uncompressed files, so the warning for "Importing uncompressed audio files" will appear with the choice to copy in the audio or read it directly. Reading directly permits faster <a href="on_demand_loading.html" title="On-Demand Loading">On-Demand Loading</a>.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top"><b>Re-encoding lossy compressed audio files</b><p>If you import a <a href="glossary.html#lossy" title="Glossary">lossy</a> compressed audio file into Audacity, edit it then export it as a lossy compressed audio file, you will lose quality <i><b>twice</b></i>, once in the original encoding of the imported audio, then again when you export it from Audacity as a compressed file. So never do production work in lossy compressed audio formats, instead work with a lossless format such as WAV, AIFF or FLAC and for final use then export to compressed formats.</p><p>
+See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/MP3#mp3apps">this page</a> in the Audacity Wiki for other applications that can be used to directly edit MP3 audio files, thereby avoiding lossy re-encoding.</p>
+</td></tr></table></div>
+<p><br />
+</p>
+<div id="cd"></div>
+<h2><span class="mw-headline" id="Importing_audio_from_CDs">Importing audio from CDs</span></h2>
+<p>Audacity <i><b>does not</b></i> contain any function for importing (<i>ripping</i>) audio from CDs. This can, however, be achieved by using other applications to extract the data into a file format Audacity does support.
+</p><p>See the tutorial <a href="tutorial_how_to_import_cds.html" title="Tutorial - How to import CDs">How to import CDs</a>.
+</p><p><br />
+</p>
+<div id="rate_and_depth"></div>
+<h2><span class="mw-headline" id="Sample_Rate_and_Sample_Format_of_imported_files">Sample Rate and Sample Format of imported files</span></h2>
+<p>Audacity always imports files at their original <i><b><a href="sample_rates.html" title="Sample Rates">sample rate</a></b></i>, as displayed in the <a href="audio_tracks.html#info" title="Audio Tracks">Track Information Area</a> of the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>. 
+</p><p>When importing a file into an empty project window (as always happens when using <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a></span> as described below), the <i>Project Rate</i> control in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> changes if necessary to reflect the rate of the file. The Project Rate determines the sample rate a file will be <a href="exporting_audio.html" title="Exporting Audio">exported</a> at, so no further adjustment is needed to export that file at its original rate. However, once there is already an audio track of any origin in the project (either an imported file, a <a href="record.html" title="Record">recording</a> or <a href="generate_menu.html" title="Generate Menu">generated audio</a>), importing an audio file will never change the project rate.
+</p><p>Generally, Audacity imports files at the <i><b><a href="sample_format_bit_depth.html" title="Sample Format - Bit Depth">sample format</a></b></i> (bit depth) specified at <i>Default Sample Format</i> in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>. This setting defaults to 32-bit float. Therefore by default an imported file will show in the Track Control Panel as 32-bit float, even if its original bit depth is lower. This is best for high-quality editing. Even if you choose a lower Default Sample Format than 32-bit float, Audacity will never downconvert a file that has a higher bit depth, as shown in the following table for WAV and AIFF imports using the standard uncompressed files importer.   
+</p>
+<dl><dd><table class="prettytablerows" width="40%" rules="rows">
+<caption> Resolution of imported WAV and AIFF files using standard importer
+</caption>
+<tr style="background: #add8e6">
+<td valign="top"><b><a href="quality_preferences.html" title="Quality Preferences">Default Sample Format</a></b>
+</td>
+<td valign="top"><b>File bit depth</b>
+</td>
+<td valign="top"><b>Resolution imported at</b>
+</td></tr>
+<tr>
+<td>16
+</td>
+<td>16
+</td>
+<td>16
+</td></tr>
+<tr>
+<td>16
+</td>
+<td>24
+</td>
+<td>32
+</td></tr>
+<tr>
+<td>16
+</td>
+<td>32
+</td>
+<td>32
+</td></tr>
+<tr>
+<td>24
+</td>
+<td>16
+</td>
+<td>24
+</td></tr>
+<tr>
+<td>24
+</td>
+<td>24
+</td>
+<td>32
+</td></tr>
+<tr>
+<td>24
+</td>
+<td>32
+</td>
+<td>32
+</td></tr>
+<tr>
+<td>32 (default)
+</td>
+<td>16
+</td>
+<td>32
+</td></tr>
+<tr>
+<td>32 (default)
+</td>
+<td>24
+</td>
+<td>32
+</td></tr>
+<tr>
+<td>32 (default)
+</td>
+<td>32
+</td>
+<td>32
+</td></tr></table></dd></dl>
+<p><a href="glossary.html#ogg" title="Glossary">OGG</a> is unusual in that it will always import at 16-bit resolution using the standard OGG Vorbis importer, irrespective of Default Sample Format. This is due to the design of the OGG codec. However OGG can be imported at 32-bit resolution using <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a>, as described at <a href="#filetypes">Using the file type dropdown menu</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917111812
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.148 seconds
+Real time usage: 0.156 seconds
+Preprocessor visited node count: 414/1000000
+Preprocessor generated node count: 1689/1000000
+Post‐expand include size: 11242/2097152 bytes
+Template argument size: 7384/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   46.480      1 - -total
+ 47.54%   22.097      1 - Template:I18n
+ 43.29%   20.121      1 - Template:I18n_box
+ 36.45%   16.944      1 - Template:I18n_list
+ 17.12%    7.959      1 - Template:Intro
+ 12.90%    5.997      2 - Template:I18n_link
+ 12.89%    5.993     22 - Template:Menu
+ 10.01%    4.651      3 - Template:Note
+  8.51%    3.954      1 - Template:Alert
+  7.80%    3.624      2 - Template:Autoglossonym
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3466-0!*!0!!*!5!* and timestamp 20180917111811 and revision id 61944
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

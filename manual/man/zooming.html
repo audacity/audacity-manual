@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Zooming Overview - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Zooming rootpage-Zooming skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Zooming Overview</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Zooming#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"> </li></ul>
+
+
+<div class="intro">If you want to carefully inspect a small portion of your audio, or have an overview of your project, you will want to use one of these <b>Zoom</b> methods. </div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#levels">Zoom levels</a></li>
+<li><a href="#horizontal">Time Scale Zooming (Horizontally) </a>
+<ul><li><a href="#menu">Menu Commands</a></li>
+<li><a href="#edit">Edit Toolbar</a></li>
+<li><a href="#keyboard">Keyboard shortcuts</a></li>
+<li><a href="#zoom">Zoom Tool</a></li>
+<li><a href="#wheel">Using the mouse wheel</a></li></ul></li>
+<li><a href="#vertical">Vertical Zooming</a>
+<ul><li><a href="#vscale">Vertical Scale</a></li></ul></li></ol>
+<p><br />
+</p>
+<div id="levels"></div>
+<h2><span class="mw-headline" id="Zoom_levels">Zoom levels</span></h2>
+<dl><dd><span title="A five-minute song, zoomed all the way out"><img alt="Zoom0.png" src="../m/images/5/5c/zoom0.png" width="564" height="162" /></span></dd></dl>
+<p>The figure above shows Audacity's view of an entire song, zoomed all the way out.  It's really useful to get an idea of the whole piece from start to finish, but it's hard to see much detail - like a forest with no individual trees.
+</p><p>Zooming the time scale, or zooming "horizontally", is something you'll do all the time.  It lets you focus on the first 15 seconds, for example:
+</p>
+<dl><dd><span title="The first 15 seconds of the same song"><img alt="Zoom1.png" src="../m/images/c/c3/zoom1.png" width="565" height="162" /></span></dd></dl>
+<p><br />
+or the last 15 seconds:
+</p>
+<dl><dd><span title="The last 15 seconds of the same song"><img alt="Zoom2.png" src="../m/images/a/ab/zoom2.png" width="565" height="162" /></span></dd></dl>
+<p><br />
+</p>
+<div id="samples"></div>
+<p>or even a tiny fraction of a second, where you can see the individual audio samples as small dots:
+</p>
+<dl><dd><span title="A fraction of a second, zoomed all the way in"><img alt="Zoom3.png" src="../m/images/8/8f/zoom3.png" width="565" height="162" /></span></dd></dl>
+<div class="note">If you get lost, refer to the <a href="timeline.html" title="Timeline">Timeline</a> at the top of the window.  It always shows you exactly where you are in time, in hours:minutes:seconds. </div>
+<p><br />
+</p>
+<div id="horizontal"></div>
+<h2><span class="mw-headline" id="Time_Scale_Zooming_.28Horizontally.29">Time Scale Zooming (Horizontally)</span></h2>
+ </li></ul></li></ul></li></ul>
+<div class="note">See the <a href="view_menu_zoom.html" title="View Menu: Zoom">View &gt; Zoom</a> page for limitations of the zoom commands when zooming in or out near the beginning or end of a track. </div>
+<p>There are five ways to zoom horizontally:
+</p>
+<div id="menu"></div>
+<h3><span class="mw-headline" id="Menu_Commands"><a href="view_menu_zoom.html" title="View Menu: Zoom">Menu Commands</a></span></h3>
+<p><b><span class="menu"><a href="view_menu_zoom.html" title="View Menu: Zoom">View &gt; Zoom</a></span></b> submenu: use the four commands in this submenu to:
+</p>
+<ul><li> <span class="menu">View &gt; Zoom &gt; Zoom In</span>: double the current zoom level.</li>
+<li> <span class="menu">View &gt; Zoom &gt; Zoom Normal</span>: reverts back to Audacity's default zoom, where you can see 5 - 10 seconds at a time</li>
+<li> <span class="menu">View &gt; Zoom &gt; Zoom Out</span>: cuts the current zoom level in half</li>
+<li> <span class="menu">View &gt; Zoom &gt; Zoom to Selection</span>: zooms and scroll so that the selection just fits in the window</li>
+<li> <span class="menu">View &gt; Zoom &gt; Zoom Toggle</span>: toggles between two pre-defined zoom levels, these are user selectable in <a href="tracks_preferences.html#toggle" title="Tracks Preferences">Tracks Preferences</a>.  Defaults are normal <b>Default Zoom</b> level and <b>4 Pixels per Sample</b> <i>(which shows a fraction of a second of audio as samples)</i></li>
+<li><b><span class="menu"><a href="view_menu_track_size.html" title="View Menu: Track Size">View &gt; Track Size</a></span></b> submenu: use the first two commands in this submenu to;</li>
+<li> <span class="menu">View &gt; Track Size &gt; Fit to Width</span>: zoom out just enough so that you can see the entire project</li>
+<li> <span class="menu">View &gt; Track Size &gt; Fit to Height</span>: resize all the tracks so they fit in the window vertically without scrolling. If you have more than about ten tracks, some scrolling up and down will still be needed, because there is a minimum track height beyond which reduction is impossible.</li></ul>
+<div id="edit"></div>
+<h3><span class="mw-headline" id="Edit_Toolbar"><a href="edit_toolbar.html" title="Edit Toolbar">Edit Toolbar</a></span></h3>
+<p>Five of the view commands have equivalent buttons on the right of the <a href="edit_toolbar.html" title="Edit Toolbar">Edit Toolbar</a>: 
+</p>
+<dl><dd><div class="noresize"><map name="ImageMap_1_395068761"><area href="customizing_toolbar_layout.html#grabber" shape="rect" coords="125,73,134,99" alt="Grabber for positioning toolbar" title="Grabber for positioning toolbar"/><area href="customizing_toolbar_layout.html#grabber" shape="rect" coords="3,3,95,33" alt="For positioning toolbar" title="For positioning toolbar"/><area href="edit_toolbar.html#cut" shape="rect" coords="136,73,162,99" alt="Cut for removing audio, that can then be pasted elsewhere" title="Cut for removing audio, that can then be pasted elsewhere"/><area href="edit_toolbar.html#cut" shape="rect" coords="3,139,60,169" alt="For removing audio" title="For removing audio"/><area href="edit_toolbar.html#copy" shape="rect" coords="163,73,189,99" alt="Copy for copying selected audio" title="Copy for copying selected audio"/><area href="edit_toolbar.html#copy" shape="rect" coords="95,3,163,33" alt="For copying selected audio" title="For copying selected audio"/><area href="edit_toolbar.html#paste" shape="rect" coords="190,73,216,99" alt="Paste for pasting cut or copied audio" title="Paste for pasting cut or copied audio"/><area href="edit_toolbar.html#paste" shape="rect" coords="60,139,134,169" alt="For pasting" title="For pasting"/><area href="edit_toolbar.html#trim" shape="rect" coords="217,73,243,99" alt="Trim for silencing audio before and after a selection" title="Trim for silencing audio before and after a selection"/><area href="edit_toolbar.html#trim" shape="rect" coords="163,3,228,33" alt="For silencing audio before and after a selection" title="For silencing audio before and after a selection"/><area href="edit_toolbar.html#silence" shape="rect" coords="244,73,270,99" alt="Silence for silencing selected audio" title="Silence for silencing selected audio"/><area href="edit_toolbar.html#silence" shape="rect" coords="134,139,221,169" alt="For silencing audio" title="For silencing audio"/><area href="edit_toolbar.html#undo" shape="rect" coords="285,73,311,99" alt="Undo for undoing the last edit you made" title="Undo for undoing the last edit you made"/><area href="edit_toolbar.html#undo" shape="rect" coords="228,3,298,33" alt="For undoing the last edit you made" title="For undoing the last edit you made"/><area href="edit_toolbar.html#redo" shape="rect" coords="312,73,338,99" alt="Redo to undo an undo" title="Redo to undo an undo"/><area href="edit_toolbar.html#redo" shape="rect" coords="221,139,290,169" alt="To undo an undo" title="To undo an undo"/><area href="edit_toolbar.html#zoom_in" shape="rect" coords="353,73,379,99" alt="Zoom In for more detail" title="Zoom In for more detail"/><area href="edit_toolbar.html#zoom_in" shape="rect" coords="298,3,391,33" alt="For more detail" title="For more detail"/><area href="edit_toolbar.html#zoom_out" shape="rect" coords="380,73,406,99" alt="Zoom Out for an overview of the audio" title="Zoom Out for an overview of the audio"/><area href="edit_toolbar.html#zoom_out" shape="rect" coords="290,139,395,169" alt="For an overview of the audio" title="For an overview of the audio"/><area href="edit_toolbar.html#fit_selection" shape="rect" coords="407,73,433,99" alt="Zoom so that selection fits width of display" title="Zoom so that selection fits width of display"/><area href="edit_toolbar.html#fit_selection" shape="rect" coords="391,3,517,33" alt="Zoom so that selection fits width of display" title="Zoom so that selection fits width of display"/><area href="edit_toolbar.html#fit_project" shape="rect" coords="434,73,460,99" alt="Zoom so that project fits width of display" title="Zoom so that project fits width of display"/><area href="edit_toolbar.html#fit_project" shape="rect" coords="395,139,505,169" alt="Zoom so that project fits width of display" title="Zoom so that project fits width of display"/><area href="edit_toolbar.html#zoom_toggle" shape="rect" coords="461,73,487,99" alt="Zoom Toggle to switch back and forth between two zoom levels" title="Zoom Toggle to switch back and forth between two zoom levels"/><area href="edit_toolbar.html#zoom_toggle" shape="rect" coords="517,3,646,33" alt="To switch back and forth between two zoom levels" title="To switch back and forth between two zoom levels"/></map><img alt="EditToolbarAnnotated.png" src="../m/images/a/aa/edittoolbarannotated.png" width="651" height="174" usemap="#ImageMap_1_395068761"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:495px;top:-75px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+</div>
+<p>&#160;
+</p>
+<ul><li> <img alt="ZoomIn.png" src="../m/images/f/fa/zoomin.png" width="27" height="27" /> Zoom In</li>
+<li> <img alt="ZoomOut.png" src="../m/images/c/c9/zoomout.png" width="27" height="27" /> Zoom Out</li>
+<li> <img alt="ZoomSel.png" src="../m/images/c/ca/zoomsel.png" width="27" height="27" /> Fit Selection (to Width of the Window). aka 'Zoom to Selection'</li>
+<li> <img alt="ZoomFit.png" src="../m/images/4/4a/zoomfit.png" width="27" height="27" /> Fit Project (to Width of the Window).</li>
+<li> <img alt="ZoomToggle.png" src="../m/images/7/79/zoomtoggle.png" width="27" height="27" /> Zooms between two preset levels.  These can be set using <a href="tracks_preferences.html#toggle" title="Tracks Preferences">Tracks preferences</a>.</li></ul>
+<p>'Fit Project to Height' and 'Zoom Normal' are not provided as buttons on the Edit Toolbar.
+</p>
+<div id="keyboard"></div>
+<h3><span class="mw-headline" id="Keyboard_shortcuts"><a href="keyboard_shortcut_reference.html#view_menu" title="Keyboard Shortcut Reference">Keyboard shortcuts</a></span></h3>
+<p>All zoom commands have keyboard shortcut equivalents:
+</p>
+<table class="prettytable" style="margin-left:25px" width="30%" id="keyboard_commands">
+
+<tr>
+<th> Zoom action </th>
+<th> Keyboard shortcut
+</th></tr>
+<tr>
+<td> <b>Zoom In</b> </td>
+<td> <span class="kbrd" style="background-color: #e0e0f0">Ctrl + 1</span>
+</td></tr>
+<tr>
+<td> <b>Zoom Normal</b> </td>
+<td> <span class="kbrd" style="background-color: #e0e0f0">Ctrl + 2</span>
+</td></tr>
+<tr>
+<td> <b>Zoom Out</b> </td>
+<td> <span class="kbrd" style="background-color: #e0e0f0">Ctrl + 3</span>
+</td></tr>
+<tr>
+<td> <b>Zoom Toggle</b> </td>
+<td> <span class="kbrd" style="background-color: #e0e0f0">Shift + Z</span>
+</td></tr>
+<tr>
+<td> <b>Fit Project to Width</b> </td>
+<td> <span class="kbrd" style="background-color: #e0e0f0">Ctrl + F</span>
+</td></tr>
+<tr>
+<td> <b>Fit Project to Height</b> </td>
+<td> <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Shift + F</span>
+</td></tr>
+<tr>
+<td> <b>Zoom to Selection</b> </td>
+<td> <span class="kbrd" style="background-color: #e0e0f0">Ctrl + E</span>
+</td></tr></table>
+<div class="note">
+<p>Mac users: Use <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> instead of  <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span>.
+</p>
+</div>
+<div id="zoom"></div>
+<h3><span class="mw-headline" id="Zoom_Tool"><a href="zoom_tool.html" title="Zoom Tool">Zoom Tool</a></span></h3>
+<p>You can also zoom in and out using the <a href="zoom_tool.html" title="zoom tool"><img alt="zoom tool" src="../m/images/9/96/zoom.png" width="27" height="27" /></a> <a href="zoom_tool.html" title="Zoom Tool">Zoom Tool</a>.  
+</p>
+<div id="wheel"></div>
+<h3><span class="mw-headline" id="Zoom_In_or_Out_using_the_mouse_wheel">Zoom In or Out using the mouse wheel</span></h3>
+</li></ul>
+<p>If your mouse has a scroll wheel or ball, you can zoom in or out focused on the selection's left or right edge by placing the mouse pointer left of the selection or right of the selection, respectively. If the mouse pointer is inside the selection, or if there is no selection, zoom is focused on the mouse pointer position.
+</p><p>Hold down the <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> key on your keyboard then scroll up to zoom in, or scroll down to zoom out. For example. you can zoom in at or near the start or end of a selection by placing your cursor position there.
+</p><p>When <a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing or Seeking</a>, the zoom buttons in Edit Toolbar and the zoom items in View Menu (or their shortcuts) zoom at the mouse pointer and not at the selection or editing cursor.
+</p>
+<div class="note">Mac users: Hold down both <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> and <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> while using the scroll wheel. <br />To zoom the waveform in Audacity without using the <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> key, look in these places, depending on which version of macOS/Mac OS X you are using:
+<ul><li> in the System "Mouse" Preferences (in older versions of Mac OS X before the Magic Mouse), disable "Zoom using scroll ball while holding Command" (or similar). </li>
+<li> in the System "Universal Access" Preferences, the "Seeing" tab, then in the "Zoom" section click the "Options" button - uncheck "Use scroll wheel with modifier keys to zoom"</li>
+<li> in the System "Accessibility" Preferences, click on "Zoom" in the left panel, then uncheck "Use scroll gesture with modifier keys to zoom". </div></li></ul>
+<p><br />
+</p>
+<div id="vertical"></div>
+<h2><span class="mw-headline" id="Vertical_Zooming"><a href="vertical_zooming.html" title="Vertical Zooming">Vertical Zooming</a></span></h2>
+<p>Occasionally you may want to zoom vertically, so that you see only a portion of the <i><a href="audacity_waveform.html" title="Audacity Waveform">waveform</a></i> from top to bottom, but in greater detail.
+</p>
+<div id="vscale"></div>
+<h3><span class="mw-headline" id="Vertical_Scale"><a href="audio_tracks.html#scale" title="Audio Tracks">Vertical Scale</a></span></h3>
+<p>Right-click in the <a href="audio_tracks.html#scale" title="Audio Tracks">Vertical Scale</a> will bring up the dropdown context menu.
+</p>
+<dl><dd><table>
+
+<tr>
+<td valign="top"><span title="Vertical Scale (default linear) with context menu"><img alt="VS context menu waveform view - simple mode.png" src="../m/images/a/a3/vs_context_menu_waveform_view_simple_mode.png" width="186" height="269" /></span>
+</td>
+<td valign="top" style="padding-left:10px">All the zooms here are in the <i>vertical</i> direction, as opposed to a <i>horizontal</i> zoom on the <a href="timeline.html" title="Timeline">Timeline</a>
+<ul><li>For details of using the context menu <i>(Simple mode)</i> to control vertical zooming see <a href="vertical_zooming.html#simple" title="Vertical Zooming">this section of the Vertical Zooming page</a>.</li>
+<li>For advanced details of vertical zooming using the <a href="audio_tracks.html#scale" title="Audio Tracks">Vertical Scale</a> magnifiers please see <a href="vertical_zooming.html#advanced" title="Vertical Zooming">this section of the Vertical Zooming page</a>. </li></ul>
+</td></tr>
+</table></dd></dl>
+<dl><dd>After 3 repetitions of zooming in with  <b><a href="vertical_zooming.html" title="Vertical Zooming">Vertical Zooming</a></b> this waveform shows good vertical detail</dd>
+<dd><span title="After zooming vertically three times"><img alt="Vertical zoom x3.png" src="../m/images/1/1f/vertical_zoom_x3.png" width="597" height="185" /></span></dd></dl>
+
+
+<!-- 
+NewPP limit report
+Cached time: 20180917111820
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.175 seconds
+Real time usage: 0.183 seconds
+Preprocessor visited node count: 668/1000000
+Preprocessor generated node count: 2582/1000000
+Post‐expand include size: 11085/2097152 bytes
+Template argument size: 5964/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   93.517      1 - -total
+ 38.96%   36.430      1 - Template:Annotated
+ 35.19%   32.907      1 - Template:I18n
+ 33.15%   31.003      1 - Template:I18n_box
+ 29.00%   27.118      1 - Template:I18n_list
+ 16.86%   15.770      7 - Template:I18n_link
+  9.85%    9.207      7 - Template:Autoglossonym
+  8.09%    7.566     14 - Template:Key
+  4.33%    4.053      3 - Template:Note
+  3.14%    2.936      5 - Template:Ednote
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2117-0!*!0!!*!5!* and timestamp 20180917111820 and revision id 59234
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Zooming">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

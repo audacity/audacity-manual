@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Recovering crashes manually - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Recovering_crashes_manually rootpage-Recovering_crashes_manually skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Recovering crashes manually</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Recovering_crashes_manually#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">If Audacity crashes or the computer loses power, Audacity should normally <a href="recovery.html" title="Recovery">recover the projects automatically</a> when you restart. The steps on this page describe how to recover audio from the project's _data folder or Audacity's temporary folder if:
+<ul><li> Automatic Crash Recovery does not work correctly</li>
+<li> You saved a project without apparent crash, but Audacity was shut down before the AUP project file was written or you do not have a usable AUP file. </li></ul>
+<b>The steps on this page will only recover unedited recordings</b> (and may recover stereo recordings with some sections of left and right channel in the wrong channel).</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top"><b>If the Automatic Crash Recovery dialog has appeared but recovery is incorrect, do not close the project or save any changes until manual recovery using these instructions is complete.</b>
+<ul><li> If you need to shut down the computer before manually fixing an incorrect Automatic Crash Recovery, force quit Audacity in the system task manager. This will preserve the temporary data for next launch of Audacity.</li>
+<li> If you had successfully saved the project just before the crash, it may be simpler to discard the unsaved project in the Automatic Crash Recovery dialog then open the saved AUP file.</li></ul>
+</td></tr></table>
+</div>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Location_of_the_project_data_folder"><span class="tocnumber">1</span> <span class="toctext">Location of the project _data folder</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Location_of_Temporary_Folder"><span class="tocnumber">2</span> <span class="toctext">Location of Temporary Folder</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Manual_recovery"><span class="tocnumber">3</span> <span class="toctext">Manual recovery</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Automatic_recovery_tools"><span class="tocnumber">4</span> <span class="toctext">Automatic recovery tools</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Limitations_of_automatic_recovery_utilities"><span class="tocnumber">4.1</span> <span class="toctext">Limitations of automatic recovery utilities</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Other_Tools_.2F_scripts"><span class="tocnumber">5</span> <span class="toctext">Other Tools / scripts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#File_merge_tools"><span class="tocnumber">5.1</span> <span class="toctext">File merge tools</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Scripts_for_GNU.2FLinux_and_Mac"><span class="tocnumber">5.2</span> <span class="toctext">Scripts for GNU/Linux and Mac</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#audacity_rescue.sh"><span class="tocnumber">5.2.1</span> <span class="toctext">audacity_rescue.sh</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#SoX"><span class="tocnumber">5.2.2</span> <span class="toctext">SoX</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Location_of_the_project_data_folder">Location of the project _data folder</span></h2>
+<p>If you saved an AUP project file, the _data folder you need to recover from will be in the directory to which you originally saved the AUP file. 
+</p>
+<h2><span class="mw-headline" id="Location_of_Temporary_Folder">Location of Temporary Folder</span></h2>
+<p>If you never saved an AUP project file, you need to recover from Audacity's temporary folder. You can see the exact location in <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a>, otherwise you can see the location in the "TempDir" line in the <a href="preferences.html#stored" title="Preferences">audacity.cfg settings file</a>. By default the Audacity temporary folder should be as follows.
+</p>
+<ul><li> <b>Windows:</b> <span class="path">C:\Users\&lt;your username&gt;\AppData\Local\Audacity\SessionData</span></li>
+<li> <b>Mac:</b> <span class="path">/Users/&lt;your username&gt;/Library/Application Support/audacity/SessionData</span></li>
+<li> <b>GNU/Linux:</b> <span class="path">/var/tmp/audacity-&lt;your username&gt;</span></li></ul>
+<p>If you are upgrading from previous Audacity, that version's temporary directory may be changed to the relevant safe location above if the previous location was known to be prone to deletion by cleanup applications or system restart.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">In order to see the default location of the Audacity temp folder on Windows or Mac you need to show hidden files and folders or type the folder location into your file manager's address bar.
+<ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, open the AppData or Application Data folder, then the "Local" or "Locale Settings" folder and finally the "Temp" folder. <p>If you cannot see those folders, you can type <b>%localappdata%</b> into the Explorer address bar then look for the "Temp" folder. Otherwise, see how to <a rel="nofollow" class="external text" href="https://www.bleepingcomputer.com/tutorials/how-to-see-hidden-files-in-windows/">show hidden files and folders</a>.</p></li>
+<li> <b>Mac:</b> Open Finder, use the "Go" menu, choose "Go to Folder" and type the required path. </li></ul>
+<ul>If that does not work, try to make the Finder show its hidden files and folders by entering the following commands in the terminal:<span style="color:#FA58AC;font-size:118%">
+<dl><dd>defaults write com.apple.finder AppleShowAllFiles TRUE </dd>
+<dd>killall Finder</dd></dl>
+</span> then relaunch Finder to show the hidden files. Alternatively, try <a rel="nofollow" class="external text" href="http://www.bresink.com/osx/TinkerTool.html">TinkerTool</a> to do the same thing, or you can type Shift-Command-Period(.) to show or hide hidden files and folders in an Open or Save dialog.</ul>
+</td></tr></table>
+</div>
+<h2><span class="mw-headline" id="Manual_recovery">Manual recovery</span></h2>
+<p>If you only have a few AU files to recover, use the "Import Audio" command to open all the .au files from the Audacity temporary folder or project _data folder.  Use shift-click or control-click to select multiple files.  The files will be in approximately 6-second chunks and will be on separate tracks in the Audacity screen.  Files from stereo tracks will alternate between left and right channels.  
+</p>
+<ol><li>Click in the Track Control Panel (by the Mute/Solo buttons) of the topmost track.</li>
+<li>Shortcut <span class="kbrd" style="background-color: #d0d0f8">Z</span> or <span class="menu">Select &gt; Region &gt; <a href="select_menu_region.html#ends_to_zero_crossings" title="Select Menu: Region">Ends to Zero Crossings</a></span>.</li>
+<li> <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#trim" title="Edit Menu: Remove Special">Trim</a></span>. </li>
+<li>Click in the Track Control Panel of the first track you want to join to the topmost track.</li>
+<li>Shortcut <span class="kbrd" style="background-color: #d0d0f8">Z</span> or <span class="menu">Edit &gt; Find Zero Crossings</span>.</li>
+<li>Shortcut <span class="kbrd" style="background-color: #d0d0f8">Z</span> or <span class="menu">Select &gt; Region &gt; <a href="select_menu_region.html#ends_to_zero_crossings" title="Select Menu: Region">Ends to Zero Crossings</a></span>. </li>
+<li>Click after the end of the topmost track.</li>
+<li>Press <span class="kbrd" style="background-color: #d0d0f8">End</span> on the keyboard. </li>
+<li>Click <span class="menu">Edit &gt; <a href="edit_menu.html#paste" title="Edit Menu">Paste</a></span> and the cut track will attach to the end of the topmost track.</li>
+<li>Repeat as necessary to join all the tracks onto the topmost track.</li></ol>
+<p>Play the result. 
+</p><p>Cut and paste as needed if any files are found to be in the wrong order or the wrong channel.
+</p>
+<h2><span class="mw-headline" id="Automatic_recovery_tools">Automatic recovery tools</span></h2>
+<p>Tools written for legacy Audacity 1.2 can automate data recovery. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">All these utilities require the .au files to be input in consecutive alphanumerical order. Audacity names files randomly so files will need to renamed.
+</td></tr></table></div>
+<p>Open Audacity's temporary or project _data folder in your system file manager. Sort the files by timestamp order (earliest first), then rename them using a consecutive alphanumerical sequence, lowest number first. An arrangement looking something like this should work:
+</p>
+<dl><dd><dl><dd>b001.au 15:56:02</dd>
+<dd>b002.au 15:56:02</dd>
+<dd>b003.au 15:56:10</dd>
+<dd>b004.au 15:56:10</dd></dl></dd></dl>
+<div class="note"><b>Utilities for renaming files to consecutive alphanumerical order</b> 
+<ul><li>On <b>Windows,</b> Explorer cannot rename to a sequence acceptable to the recovery tools. You can use instead the Mass Rename tool in the 21-day trial Professional or Ultimate versions of <a rel="nofollow" class="external text" href="http://zabkat.com/x2down.htm">xplorer<sup>2</sup></a>. These versions will let you recover an unedited stereo recording with exact allocation of left and right channels, if Windows is running the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/NTFS">NTFS</a> file system. The <a rel="nofollow" class="external text" href="http://zabkat.com/x2lite.htm">free version of xplorer<sup>2</sup></a> cannot guarantee correct channel allocation. 
+<ol>
+<li><i>(only in the Professional and Ultimate versions)</i> Click <span class="menu">View &gt; Raw Contents</span> to enable maximum date resolution.  
+<li> Open the required folder in xplorer<sup>2</sup> and sort the .au files by time modified as above.
+<li><span class="kbrd" style="background-color: #d0d0f8">Ctrl + A</span> to select all the files. 
+<li> File &gt; Mass Rename.
+<li> In the "Mass Rename Wizard", click in "Target name template" and type the letter <b>e</b> with a <b>$</b> after the letter. For example, <b>e$0001.au</b> will rename the files to e0001.au, e0002.au and so on. Use enough zeros in the file name so that all the .au files will have the same number of digits.
+<li> Press "Preview", and if the preview looks correct, hit "Rename"</ol>
+<li>On <b>Mac</b>, try Applications &gt; <a rel="nofollow" class="external text" href="http://www.macosxautomation.com/automator/">Automator</a>.
+<li>On <b>Linux</b>, try the file manager <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Thunar">Thunar</a> included in the <a rel="nofollow" class="external text" href="https://xfce.org/">xfce desktop</a> See <a rel="nofollow" class="external text" href="http://www.ubuntugeek.com/switch-to-a-lightweight-filemanager.html">here</a> for help running Thunar on the Ubuntu desktop. 
+</ul></div>
+<p><br />
+</p>
+<div class="note"><b>Linux command-line alternatives for timestamp sorting</b>
+<ol><li>Open a terminal then "cd" into the directory that contains the .AU files.
+<li> Type the following command in a terminal to sort and rename the files into numerical timestamp order:<br /> 
+<b>mkdir "renamed" | find -type f -name "*.au" -printf "cp %h/%f renamed/%h/%TY%Tm%Td-%TH%TM%TS_%f\n"|sh</b>
+<li>The file names produced in the "renamed" folder are <b>not</b> in a consecutive sequence suitable for the Audacity recovery utilities. Instead, use the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plugins">Nyquist</a> plug-in <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewtopic.php?f=42&amp;t=59528">Append Import</a> to import the files end-to-end into Audacity automatically in file name order.   
+</ol></div>
+<div id="limitations"></div>  
+<h3><span class="mw-headline" id="Limitations_of_automatic_recovery_utilities">Limitations of automatic recovery utilities</span></h3>
+<ul><li>There is a <b>2 GB maximum size for any WAV file created from the reconstructed temporary files</b>. This implies no more than 2000 .au files can be recovered. Sometimes (probably due to bugs in the utilities) there can be errors when recovering only 1000 or so files. In that case you would need to split the .au files in the temporary or_data folder into two or more folders, each containing consecutively numbered files, and recover a separate WAV file from each folder.  </li>
+<li> Recovery of unedited mono recordings should be correct in most cases.  </li>
+<li> Recovery of unedited stereo recordings may recover with transposed left/right channels in places. Channel allocation will only be correct if you are using the NTFS (Windows) or <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Ext4">ext 4</a> (Linux) file system and if your file manager supports sufficiently fine date resolution (see the Windows example above). This is because the files for each channel may have timestamps that are too close together to be correctly distinguished by other file systems.  </li>
+<li> If any of the project data has been edited, it is unlikely to recover correctly. </li></ul>
+<h2><span class="mw-headline" id="Other_Tools_.2F_scripts">Other Tools / scripts</span></h2>
+<div class="note">There is no implication that these tools will necessarily do what you want, nor have they necessarily been tested by Audacity Team.</div>  
+<h3><span class="mw-headline" id="File_merge_tools">File merge tools</span></h3>
+<ul><li> It has been reported that AU files may be converted to WAV (for example in Audacity) then joined using the disk output utility in <a rel="nofollow" class="external text" href="http://forums.winamp.com/showthread.php?t=374929#download">Winamp</a>.</li></ul>
+<h3><span class="mw-headline" id="Scripts_for_GNU.2FLinux_and_Mac">Scripts for GNU/Linux and Mac</span></h3>
+<h4><span class="mw-headline" id="audacity_rescue.sh">audacity_rescue.sh</span></h4>
+<p>This <a rel="nofollow" class="external text" href="https://gist.github.com/mef/2c90295920dc66f669a6">shell script</a> can reassemble a few thousand .au files. It may be simpler to apply (at a bash terminal) than some of the solutions mentioned on this page, particularly for mono recordings.
+</p>
+<h4><span class="mw-headline" id="SoX">SoX</span></h4>
+<ol>
+<li>Using <a rel="nofollow" class="external text" href="http://sox.sourceforge.net/">SoX</a>, make a copy of the temp directory and its files from a mono recording:
+<table style="margin-left:10px;line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;font-family:monospace;font-size:1.1em;border:1px dashed black" cellpadding="5px">
+<tr>
+<td>$ cp -r /tmp/audacity1.2-jbn ~/rescue
+</td></tr></table>
+<li>Convert the AU files into raw (headerless) files. The files must already be time-sorted and numbered with leading zeroes:
+<table style="margin-left:10px;line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;font-family:monospace;font-size:1.1em;border:1px dashed black" cellpadding="5px">
+<tr>
+<td>$ for f in *.au&#160;; do sox ${f} -t raw ${f}.raw&#160;; done
+</td></tr></table>
+<li>Concatenate the raw files together to make one long raw file. Concatenating the AU files together (each with its own header) would produce noise at the joins between each AU file.  
+<table style="margin-left:10px;line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;font-family:monospace;font-size:1.1em;border:1px dashed black" cellpadding="5px">
+<tr>
+<td>$ cat *.raw &gt; bigfile.raw
+</td></tr></table>
+<li>Finally, import the raw file into Audacity specifying the appropriate encoding, endianness, channels and sample rate.
+</ol>
+
+<!-- 
+NewPP limit report
+Cached time: 20180917112346
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.088 seconds
+Real time usage: 0.090 seconds
+Preprocessor visited node count: 246/1000000
+Preprocessor generated node count: 722/1000000
+Post‐expand include size: 10144/2097152 bytes
+Template argument size: 7627/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   21.910      1 - -total
+ 18.38%    4.027      5 - Template:Shortcut
+ 16.24%    3.559      1 - Template:Hint
+ 13.31%    2.916      3 - Template:Note
+ 12.01%    2.631      1 - Template:Intro
+  8.91%    1.951      6 - Template:Menu
+  7.25%    1.589      3 - Template:Code
+  5.86%    1.284      3 - Template:Path
+  5.11%    1.119      1 - Template:Advice
+  4.79%    1.050      1 - Template:Tip
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4857-0!*!0!!en!5!* and timestamp 20180917112346 and revision id 61110
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Recovering_crashes_manually">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

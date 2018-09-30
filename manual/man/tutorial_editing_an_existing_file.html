@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial - Editing an Existing Audio File - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tutorial_-_Editing_an_Existing_File rootpage-Tutorial_-_Editing_an_Existing_File skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial - Editing an Existing Audio File</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Editing_an_Existing_File#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><br />
+</p>
+<div class="intro">The easiest way to use Audacity is to import an existing audio file and make small changes.  If you've never used Audacity before, this is a great place to start.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended that you immediately export your audio using <span class="menu">File &gt; Export &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
+</td></tr></table>
+</div> 
+<div id="objective"></div> 
+<h2><span class="mw-headline" id="Objective">Objective</span></h2>
+<p>The objective of this tutorial is to learn how to edit an audio file. To achieve this objective, we are going to import an existing sound file, remove all but 10 seconds of this file, apply a 1-second fade-out at the end, export the results, and play it in your favorite audio player. These steps will introduce the basic steps commonly used when editing the contents of an audio file.
+</p><p><br />
+</p>
+<div id="file2edit"></div>
+<h2><span class="mw-headline" id="Step_1:_Find_a_file_to_edit">Step 1: Find a file to edit</span></h2>
+<p>Audacity can import many common audio file formats, including <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>, and <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>.  If the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> is installed, a larger range of formats, including <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and the audio content of most video files, can be imported. Audacity cannot import copy-protected music files.
+</p><p>If you want to edit music that you have on an <i><b><a href="glossary.html#audio_cd" title="Glossary">audio CD</a></b></i>, you need to "rip" the music into an audio file.  See the <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">Audio CDs</a> page for information on getting the audio off of CDs and into Audacity.
+</p><p>Don't have any audio files handy?  There is lots of free music online!  Here is one site where you can download free music: <a rel="nofollow" class="external text" href="http://www.opsound.org/">Opsound</a>
+</p><p>The recordings on this site are free, distributed under the <a rel="nofollow" class="external text" href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-Sharealike license</a>, which gives you the right to create a derivative work without paying royalties, as long as you give credit and make your derivative work free, too.  This is similar to the <a href="license.html" title="License">license for Audacity</a>, which allows any devloper to modify it and redistribute it for free.
+</p><p><br />
+</p>
+<div id="open_file"></div>
+<h2><span class="mw-headline" id="Step_2:_Import_the_file_into_Audacity">Step 2: Import the file into Audacity</span></h2>
+<p>First launch Audacity, then import an audio file by selecting <span class="menu">File&#160;&gt;&#160;Import&#160;&gt;&#160;<a href="file_menu_import.html#audio" title="File Menu: Import">Audio...</a></span>.  
+</p><p>A quicker method is to just drag and drop the file as in the following examples:
+</p>
+<table>
+<tr>
+<td>&#160;&#160;&#160;&#160;&#160;&#160;
+</td>
+<td title="Importing an audio file on Windows"><img alt="OpeningDocsWin.png" src="../m/images/1/1f/openingdocswin.png" width="275" height="247" />
+</td>
+<td>&#160;&#160;&#160;&#160;
+</td>
+<td title="Importing an audio file on a Mac"><img alt="OpeningDocsMac.png" src="../m/images/8/80/openingdocsmac.png" width="240" height="240" />
+</td>
+<td>&#160;&#160;&#160;&#160;
+</td>
+<td title="Importing an audio file on Linux"><img alt="OpeningDocsLin.png" src="../m/images/c/c3/openingdocslin.png" width="240" height="240" />
+</td></tr>
+<tr>
+<td>&#160;&#160;&#160;&#160;&#160;&#160;
+</td>
+<td align="center" valign="top"><b>Windows</b>: Drag the audio file icon<br />into the open Audacity window.
+</td>
+<td>&#160;&#160;&#160;&#160;
+</td>
+<td align="center" valign="top"><b>Mac</b>: Drag the audio file icon<br />to the Audacity icon in the Dock<br />(does not work for all formats yet).
+</td>
+<td>&#160;&#160;&#160;&#160;
+</td>
+<td align="center" valign="top"><b>Linux</b>: Drag the audio file icon<br />into the open Audacity window.
+</td></tr></table>
+<p>All three platforms support:
+</p>
+<ul><li> <b>dragging the audio file into the Audacity window</b></li>
+<li> <b>dragging the audio file to the Audacity icon on the Desktop</b>.</li></ul>
+<p>Specific dragging behavior according to platform:
+</p>
+<ul><li>On Windows and Mac you can also drag to Audacity's icon in a file manager application.</li>
+<li>On Mac and Linux you can drag the file to the Audacity icon in the Dock or Taskbar respectively to import the file into Audacity.
+<ul><li> On Windows, dragging the file to the Audacity icon in the Taskbar will either switch the window to Audacity if it is running (from where you can drag the file in), or if Audacity is closed, give the option to launch Audacity with the file imported.</li></ul></li></ul>
+<div class="note"><b>Command-line file importing:</b> On all three platforms you can also import files by launching Audacity at the command-line and passing the files you wish to import as arguments. For example, on Linux Ubuntu:<p><span style="font-family:monospace; font-size:1.2em">&#160;<a href="https://alphamanual.audacityteam.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="741911340116011a0001">[email&#160;protected]</a>:~$ audacity Desktop/song.mp3 Desktop/speech.wav</span></p>imports the "song.mp3" and "speech.wav" files located on the Desktop in separate Audacity windows.<br /></div>
+<p><br />
+</p>
+<div id="waveform"></div>
+<h2><span class="mw-headline" id="Step_3:_Look_at_the_waveform">Step 3: Look at the waveform</span></h2>
+<dl><dd><div title="Stereo waveform in a track"><img alt="Stereo waveform in a track" src="../m/images/e/e2/wavefortutorial1.png" title="Stereo waveform in a track" width="780" height="231" /></div></dd></dl>
+<p>This image above shows a <a href="audacity_waveform.html" title="Audacity Waveform">stereo waveform</a>. The left channel is displayed in the top half of the track and the right channel in the bottom half. The track name takes the name of the imported audio file ("No Town" in this example).  Where the <i><b><a href="glossary.html#waveform" title="Glossary">waveform</a></b></i> reaches closer to the top and bottom of the track, the audio is louder (and vice versa).  
+</p><p>The ruler above the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> shows you the length of the audio in minutes and seconds.
+</p>
+<div id="DC"></div> 
+<h3><span class="mw-headline" id="Removing_any_DC_offset_.28if_present.29">Removing any DC offset (if present)</span></h3>
+<p>DC offset can occur in audio files so that the recorded <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> is not centered on the horizontal line at 0.0 <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i>.  It can be caused by recording with a faulty audio interface. The example above is centered on 0 correctly and carries no DC offset.  If your waveform is not centered, see the <a href="normalize.html" title="Normalize">Normalize</a> page for how to use Normalize to remove <a href="glossary.html#dc_offset" title="Glossary">DC offset</a> and how to check if your Windows sound device can perform this correction automatically.
+</p><p><br />
+</p>
+<div id="review"></div>
+<h2><span class="mw-headline" id="Step_4:_Listen_to_the_imported_audio">Step 4: Listen to the imported audio</span></h2>
+<dl><dd></dd></dl>
+<p><span title="Transport Toolbar (annotated image)"><img alt="Annotated Transport Toolbar.png" src="../m/images/2/2c/annotated_transport_toolbar.png" width="329" height="85" /></span>
+</p><p>The image above shows <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a>. 
+</p><p>Click the <i>Play</i> button 
+<span title="Play button"><img alt="Play.png" src="../m/images/9/90/play.png" width="16" height="16" /></span> to listen to the audio. Click the <i>Stop</i> button 
+<span title="Stop button"><img alt="Stop.png" src="../m/images/f/f9/stop.png" width="16" height="16" /></span> to stop playback.  If you do not hear anything, see <a href="audacity_setup_and_configuration.html" title="Audacity Setup and Configuration">Audacity Setup and Configuration</a>.
+</p><p>You can use the <span class="kbrd" style="background-color: #d0d0f8">Space</span> key on the keyboard as a <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference">shortcut</a> for Play or Stop.
+</p><p>Click on Selection Tool 
+<span title="Selection Tool"><img alt="IBeam.png" src="../m/images/1/1f/ibeam.png" width="27" height="27" /></span> then click on the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> to choose a place to start, then click the <i>Play</i> button 
+<span title="Play button"><img alt="Play.png" src="../m/images/9/90/play.png" width="16" height="16" /></span>. Click and drag to create a selection, and then when you click <i>Play</i> button 
+<span title="Play button"><img alt="Play.png" src="../m/images/9/90/play.png" width="16" height="16" /></span> only the selection will play.
+</p>
+<div class="note"><b>Keyboard use:</b> You can select audio entirely using the left arrow, right arrow and other keys. 
+<ul><li> Press <span class="kbrd" style="background-color: #d0d0f8">Left</span> or <span class="kbrd" style="background-color: #d0d0f8">Right</span> to move the cursor left or right respectively in the waveform.</li>
+<li> Hold down <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while pressing <span class="kbrd" style="background-color: #d0d0f8">Left</span> or <span class="kbrd" style="background-color: #d0d0f8">Right</span> to create then extend a selection leftwards or rightwards respectively.  </li>
+<li> Hold down <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> while pressing <span class="kbrd" style="background-color: #d0d0f8">Left</span> or <span class="kbrd" style="background-color: #d0d0f8">Right</span> to contract an existing selection leftwards or rightwards respectively.</div></li></ul>
+<p>Clicking the <i>Skip to Start</i> button 
+<span title="Skip to Start button"><img alt="Rewind.png" src="../m/images/0/01/rewind.png" width="16" height="16" /></span> or pressing the <span class="kbrd" style="background-color: #e0e0f0">Home</span> key will move the cursor to the beginning of the track.  It's kind of like rewind, but it's not for playback - it will only work when playback is stopped.
+</p><p>Similarly, clicking the <i>Skip to End</i> button 
+<span title="Skip to End button"><img alt="FFwd.png" src="../m/images/0/07/ffwd.png" width="16" height="16" /></span> or pressing the <span class="kbrd" style="background-color: #e0e0f0">End</span> key will move the cursor to the end of the track. 
+</p><p>To jump the playback position forwards or backwards from where it is now, click on the <a href="timeline.html" title="Timeline">Timeline</a> above the waveform at the point you wish to hear.
+</p>
+<div class="note"><b>Keyboard use:</b> You can use the following keys to skip around the audio file while listening.
+<ul><li> Press <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">,</span> to move the playback cursor back one second.</li>
+<li> Press <span class="kbrd" style="background-color: #e0e0f0">Right</span> or <span class="kbrd" style="background-color: #e0e0f0">.</span> to move the playback cursor forward one second.</li>
+<li> Press <span class="kbrd" style="background-color: #e0e0f0">Shift + Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Shift + ,</span> to move the playback cursor back 15 seconds.</li>
+<li> Press <span class="kbrd" style="background-color: #e0e0f0">Shift + Right</span> or <span class="kbrd" style="background-color: #e0e0f0">Shift + .</span> to move the playback cursor forward 15 seconds.</li></ul>
+The amount the cursor moves in this situation is called the "seek time". The <i>long</i> and <i>short</i> seek times (one second and 15 seconds in the examples above) can be set in the <i>Seek Time When Playing</i> section of <a href="playback_preferences.html" title="Playback Preferences">Playback Preferences</a>.</div>
+<p><br />
+</p>
+<div id="clip10"></div>
+<h2><span class="mw-headline" id="Step_5:_Create_a_10-second_clip_from_your_audio">Step 5: Create a 10-second clip from your audio</span></h2>
+<p>You edit audio <a href="audacity_waveform.html" title="Audacity Waveform">waveforms</a> in Audacity in much the same way as you would edit text in a word-processing document. When you are editing text you first select the text you want to change and then choose what you want to do with it. You might want to cut or copy the text, delete it, paste new text in its place, or change it to bold. You do the same thing in Audacity: first zoom and select the range of audio you want to change, and then choose what you want to do with it.
+</p>
+<dl><dd></dd></dl>
+<p><span title="Edit Toolbar with zoom controls highlighted"><img alt="EditToolbar zooms highlighted.png" src="../m/images/d/d0/edittoolbar_zooms_highlighted.png" width="336" height="27" /></span>
+</p><p>The image above shows Edit Toolbar with the <i>Zoom buttons</i> highlighted. This 
+<span title="Zoom In button"><img alt="ZoomIn.png" src="../m/images/f/fa/zoomin.png" width="27" height="27" /></span> is the <i>Zoom In</i> tool, and this 
+<span title="Zoom Out button"><img alt="ZoomOut.png" src="../m/images/c/c9/zoomout.png" width="27" height="27" /></span> is the <i>Zoom Out</i> tool.
+</p><p>To zoom in to get a closer look at the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>, first choose the <i>Selection Tool</i> 
+<span title="Selection Tool"><img alt="IBeam.png" src="../m/images/1/1f/ibeam.png" width="27" height="27" /></span>, then click near the point you're interested in, then click the <i>Zoom In</i> button. Keep clicking the <i>Zoom In</i> button until you see the detail you need. Note that when you click the <i>Zoom In</i> button the cursor is centered on the screen.
+</p><p>There are also menu commands and keyboard shortcuts for zooming. <span class="menu">View &gt; Zoom &gt; <a href="view_menu_zoom.html#zoomin" title="View Menu: Zoom">Zoom In</a></span> (or <span class="kbrd" style="background-color: #e0e0f0">Ctrl + 1</span>) is the same as clicking the <i>Zoom In</i> button. <span class="menu">View &gt; Zoom &gt;  <a href="view_menu_zoom.html#zoomout" title="View Menu: Zoom">Zoom Out</a></span> (or <span class="kbrd" style="background-color: #e0e0f0">Ctrl + 3</span>) is the same as clicking the <i>Zoom Out</i> button. <span class="menu">View &gt; Track Size &gt; <a href="view_menu_track_size.html" title="View Menu: Track Size">Fit to Width</a></span> (or <span class="kbrd" style="background-color: #e0e0f0">Ctrl + F</span>) will zoom the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> so it fits in the window. 
+</p><p>Use the Zoom commands so that you can make maximal use of your Audacity window to see as much detail as you need, or to make sure you see the entire file when necessary.
+</p>
+<h3><span class="mw-headline" id="Walk_through_deleting_all_but_approximately_10_seconds_of_selected_audio">Walk through deleting all but approximately 10 seconds of selected audio</span></h3>
+<p>To cut this audio file down to exactly 10 seconds, use these following steps. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">These steps require a mouse, except for using <span class="kbrd" style="background-color: #d0d0f8">Space</span> on the keyboard to play the selection and <span class="kbrd" style="background-color: #d0d0f8">C</span> to play either side of the selection. See <a href="#accessible">below</a> for how to create and adjust selections using the keyboard.
+</td></tr></table></div>
+<ol>
+<li> With playback stopped, click near the point where you want the 10-second piece to begin.
+<li> Zoom in until the <a href="timeline.html" title="Timeline">Timeline</a> shows 10 seconds or more before and after the cursor.
+<li> While holding down the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key, click 10 seconds to the right of the cursor.
+<ul><li>Note that this is just like selecting a range of text in a word processor</ul>
+<p><span title="Audio with 10 seconds selected"><img alt="Audio with 10 seconds selected" src="../m/images/f/f1/tensecondselection.png" title="Audio with 10 seconds selected" width="780" height="229" /></span>
+</p>
+<li> Press <span class="kbrd" style="background-color: #d0d0f8">Space</span> to listen to the entire selection. Playback will stop when the end of the selection is reached.
+<li> Adjust the start and end of the selection with the mouse as follows.
+<ul style="list-style-image: none; list-style-type: none"><li>5.1. Move the pointer over the start of the selection - the cursor will change to a left-pointing hand. 
+<li>5.2. Click and drag to adjust the beginning of the selection.
+<li>5.3. You can adjust the end of the selection in a similar manner.</ul>
+<li> Press <span class="kbrd" style="background-color: #d0d0f8">Space</span> to listen to the adjusted selection. You do not have to listen to all of it; press <span class="kbrd" style="background-color: #d0d0f8">Space</span> again at any time to stop playback.
+<ul><li> A convenient way to listen to only the adjusted start of the selection is to move the mouse pointer a little after the start of the selection then press <span class="kbrd" style="background-color: #e0e0f0">B</span>. The selection plays from the start of the selection to the pointer. To hear the adjusted end of the selection, move the pointer close to the selection end, then press <span class="kbrd" style="background-color: #e0e0f0">B</span> to play from the pointer to the selection end. 
+<li> You can also play a length of audio <i>either side</i> of the selection by pressing <span class="kbrd" style="background-color: #e0e0f0">C</span>. This lets you make sure there is no audio you want to keep that will be removed. Playing either side of the selection would also be useful if you later wanted to <a href="edit_menu.html#cut" title="Edit Menu">cut</a> a small piece out of that selection - you would select the small piece to be cut, then could preview how the audio would sound after the cut. To adjust the length of audio played before and after the selection, go to <i>Cut Preview</i> in the <a href="playback_preferences.html" title="Playback Preferences">Playback Preferences</a>.</ul></ol>
+<div id="accessible"></div>
+<div class="note"><b>Keyboard use:</b> Use the arrow keys to adjust the selection start and end. 
+<ol><li>Pressing <span class="kbrd" style="background-color: #e0e0f0">Shift + Left</span> will expand the selection to the left.</li>
+<li>Pressing <span class="kbrd" style="background-color: #e0e0f0">Shift + Right</span> will expand the selection to the right.</li>
+<li>Pressing <span class="kbrd" style="background-color: #e0e0f0">Shift + Ctrl + Left</span> will contract the selection from the right.</li>
+<li>Pressing <span class="kbrd" style="background-color: #e0e0f0">Shift + Ctrl + Right</span> will contract the selection from the left.</div></li></ol>
+<div class="note"><b>Keyboard use:</b> Use <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> to create or adjust a selection.
+<ol><li> Without a mouse, use <span class="kbrd" style="background-color: #e0e0f0">Ctrl + F6</span> to navigate into Selection Toolbar, then <span class="kbrd" style="background-color: #e0e0f0">Tab</span> between the controls.  </li>
+<li> In "Selection Start", type the starting point of your selection if there is not yet a selection.</li>
+<li> Select the <span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;Length</span> radio button above the second group of numbers in Selection Toolbar if it is not yet selected.</li>
+<li> <b>If there is no selection yet</b>, select the digit after the "m" in the "Length" box and type <span class="kbrd" style="background-color: #e0e0f0">1</span> (one) on your keyboard. This selects exactly 10.000 seconds from the starting point you chose. </li>
+<li> <b>Once there is a selection</b>, you can adjust its length in the same way. Let's suppose you dragged a little less than 10 seconds in the waveform, but you need the selection to be exactly 10 seconds.  
+<ol><li>Select the first digit to the right of the decimal point in the "Length" box.</li>
+<li> Type <span class="kbrd" style="background-color: #e0e0f0">0</span> (zero) - the digit changes to zero, the digit to the right is selected and the selection in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> changes to match.</li>
+<li> Type <span class="kbrd" style="background-color: #e0e0f0">0</span> (zero)  twice more - the selection length is now 10.000 seconds, accurate to one thousandth of a second.</div></li></ol></li></ol>
+<p>You've now selected the portion of the audio that you want to keep. Make sure you have pressed <span class="kbrd" style="background-color: #d0d0f8">Space</span> to stop if the track is still playing, then to delete everything <i>except</i> the selected audio, click on <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#trim" title="Edit Menu: Remove Special">Trim Audio</a></span>.
+</p>
+<dl><dd><span title="Audio trimmed to 10 seconds"><img alt="Audio trimmed to 10 seconds" src="../m/images/0/0f/tensecondtrimmedaudio.png" title="Audio trimmed to 10 seconds" width="703" height="208" /></span></dd></dl>
+<p>If you make a mistake, you can always click on <span class="menu">Edit  &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span>. Audacity has unlimited Undo and Redo. You can undo your editing actions all the way back to when you imported the file. You can also Redo actions that you have undone.
+</p><p>You now have a region of audio that starts several seconds (or perhaps minutes) from the beginning of the track. You could move the audio to the beginning of the track, using <span class="menu">Tracks &gt; Align Tracks &gt; <a href="tracks_menu_align_tracks.html" title="Tracks Menu: Align Tracks">Start to Zero</a></span>, but this is not a necessary step because when exporting, Audacity will ignore the <i>white space</i> between time zero and the start of the audio. 
+</p><p><br />
+</p>
+<div id="fade"></div>
+<h2><span class="mw-headline" id="Step_6:_Fade_out_the_last_second">Step 6: Fade out the last second</span></h2>
+<ul>
+<li>Click the <i>Skip to End</i> button 
+<span title="Skip to End button"><img alt="FFwd.png" src="../m/images/0/07/ffwd.png" width="16" height="16" /></span> .
+<li>Zoom In until you can see the last two or three seconds of the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>.
+<li>Click in the waveform about 1 second before the end.
+<li>Click on <span class="menu">Select &gt; Region &gt; <a href="select_menu_region.html#cursor_to_track_end" title="Select Menu: Region">Cursor to Track End</a></span>.
+<li>Click on <span class="menu">Effect &gt; <a href="fades.html#linear_out" title="Fades">Fade Out</a></span>. The last second of the audio is smoothly faded out. 
+</ul>
+<p>Note that we always select some audio first, then choose what action we want to perform on it.
+</p><p><br />
+</p>
+<div id="export"></div>
+<h2><span class="mw-headline" id="Step_7:_Export_the_resulting_file">Step 7: Export the resulting file</span></h2>
+<p>When you save an Audacity project with <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> you are doing just that - saving an <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a>. Audacity projects can be opened only by Audacity. If you want other applications (such as iTunes or Windows Media Player) to be able to open this file you need to <b>export</b> it.
+</p><p>Before we export this 10 second clip to a separate file we're going to simplify things a bit. Go to the <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>, and under <i>When exporting tracks to an audio file</i> uncheck "<b>Show Metadata Editor prior to export step</b>". <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> adds extra information about the speech or music into the file - see <a href="#more">For More Information</a> below to learn more. You can go back to the Import / Export Preferences at any time to re-enable Metadata Editor. 
+</p>
+<div id="exportWAV"></div> 
+<h3><span class="mw-headline" id="Exporting_a_WAV_file">Exporting a WAV file</span></h3>
+<ul><li>Click on <span class="menu">File &gt; Export &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> - the standard "Save" dialog for your operating system appears. </li>
+<li>Give the file a different name. Audacity always suggests a name for the file that is the same as the name of your Audacity project. It is always best to alter this so you do not confuse your exported file with your Audacity project.</li>
+<li>Choose a location to save the file in the usual manner.</li>
+<li>At the bottom of the Save dialog is a dropdown menu labeled "<b>Format</b>". From this menu choose "WAV (Microsoft) signed 16-bit PCM".</li>
+<li>There are no options for the WAV file format, so there is no need to click the <span class="button">Options</span> button.</li>
+<li>Click the <span class="button">Save</span> button to complete the export of your project to a WAV file.</li></ul>
+<div id="exportMP3"></div>
+<h3><span class="mw-headline" id="Exporting_an_MP3_file">Exporting an MP3 file</span></h3>
+<p>In order to export files from Audacity in MP3 format you will need to download and install the optional <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> MP3 encoder.  Instructions are <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">here</a> . Once you have downloaded and installed the LAME encoder you will be able to create MP3 files using Audacity.
+</p><p>The steps for exporting a file in MP3 format are the same as for a WAV file, <i>except</i>:
+</p>
+<ul><li>In the Save dialog, from the "<b>Format</b>" menu, choose "MP3 files"</li>
+<li>Then click the <span class="button">Options</span> button to set the  <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> and other options for the MP3 file.</li></ul>
+<p><br />
+</p>
+<div id="test"></div>
+<h2><span class="mw-headline" id="Step_8_-_Testing_your_new_Audio_Production">Step 8 - Testing your new Audio Production</span></h2>
+<p>To demonstrate the difference between an <b>Audacity project</b> (the AUP) file, and a sound file you <b>export from</b> an Audacity project:
+</p>
+<ul><li>Click on  <span class="menu">File &gt; <a href="file_menu.html#close" title="File Menu">Close</a></span>, saving changes if asked.</li>
+<li>Find the AUP file on your computer and attempt to open it with the audio player of your choice (for example iTunes, Windows Media Player). You cannot.</li>
+<li>Find the exported WAV file on your computer and attempt to open it with the audio player of your choice. Success!</li></ul>
+<p>You cannot open an Audacity project in a media player. Only by exporting your project can you listen to it in a media player.
+</p><p>Once you've exported your project you may want to keep the original project file (AUP) and its associated _data folder around in case you want to make some changes to it in the future.
+</p><p><br />
+</p>
+<div id="more"></div>
+<h2><span class="mw-headline" id="Where_to_go_from_here">Where to go from here</span></h2>
+<p><b>More tutorials</b>
+</p>
+<ul><li><a href="tutorial_your_first_recording.html" title="Tutorial - Your First Recording">Tutorial - Your First Recording</a></li>
+<li><a href="tutorial_mixing_a_narration_with_background_music.html" title="Tutorial - Mixing a Narration With Background Music">Tutorial - Mixing a Narration With Background Music</a></li></ul>
+<p><b>For more information</b>
+</p>
+<ul><li>Opening or Importing Audio Files:  <a href="file_menu.html#open" title="File Menu">File Menu &gt; Open</a>, <a href="file_menu.html#import" title="File Menu">File Menu &gt; Import</a></li>
+<li>Tracks and Waveforms: <a href="audio_tracks.html" title="Audio Tracks">Audio Tracks</a>, <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audacity Tracks and Clips</a>, <a href="audacity_waveform.html" title="Audacity Waveform">Audacity Waveform</a></li>
+<li>Playing a file: <a href="playing_and_recording.html" title="Playing and Recording">Playing and Recording</a></li>
+<li>Editing a track: <a href="edit_menu.html" title="Edit Menu">Edit Menu</a>, <a href="zooming.html" title="Zooming">Zooming</a></li>
+<li>Effects: <a href="effect_menu.html" title="Effect Menu">Effect Menu</a></li>
+<li>Saving: <a href="audacity_projects.html" title="Audacity Projects">Audacity Projects</a></li>
+<li>Exporting: <a href="file_menu.html#export" title="File Menu">File Menu &gt; Export...</a></li>
+<li>Metadata Editor: <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a></li>
+<li>MP3 Export Options: <a href="mp3_export_options.html" title="MP3 Export Options">MP3 Export Options</a></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20180917111836
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.246 seconds
+Real time usage: 0.258 seconds
+Preprocessor visited node count: 1096/1000000
+Preprocessor generated node count: 2944/1000000
+Post‐expand include size: 18444/2097152 bytes
+Template argument size: 10224/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   92.446      1 - -total
+ 32.76%   30.286      1 - Template:I18n
+ 30.72%   28.398      1 - Template:I18n_box
+ 27.00%   24.960      1 - Template:I18n_list
+ 23.47%   21.698      4 - Template:Note
+ 17.06%   15.768      2 - Template:Hint
+ 14.61%   13.510     29 - Template:Key
+ 14.20%   13.123      6 - Template:I18n_link
+ 10.23%    9.455     13 - Template:Shortcut
+  8.32%    7.695      6 - Template:Autoglossonym
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2090-0!*!0!!*!5!* and timestamp 20180917111835 and revision id 61001
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Editing_an_Existing_File">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

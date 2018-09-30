@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Digital Audio Fundamentals - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Digital_Audio rootpage-Digital_Audio skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Digital Audio Fundamentals</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Digital_Audio#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">
+Digital audio brings analog sounds into a form where they can be stored and manipulated on a computer. Audacity is a software application for editing, mixing, and applying effects to digital audio recordings. </div>
+<div id="sampling"></div>
+<h2><span class="mw-headline" id="Digital_Sampling">Digital Sampling</span></h2>
+<p>All sounds we hear with our ears are pressure waves in air.  Starting with Thomas Edison's demonstration of the first phonograph in 1877, it has been possible to capture these pressure waves onto a physical medium and then reproduce them later by regenerating the same pressure waves.  Audio pressure waves, or <i><b><a href="glossary.html#waveform" title="Glossary">waveforms</a></b></i>, look something like this:
+</p>
+<dl><dd><span title="An analog waveform"><img alt="WaveformAbstract.png" src="../m/images/e/ef/waveformabstract.png" width="576" height="158" /></span></dd></dl>
+<p><i>Analog</i> recording media such as a phonograph records and cassette tapes represent the shape of the waveform directly, using the depth of the groove for a record or the amount of magnetization for a tape.  Analog recording can reproduce an impressive array of sounds, but it also suffers from problems of noise.  Notably, each time an analog recording is copied, more noise is introduced, decreasing the fidelity.  This noise can be minimized but not completely eliminated.
+</p><p><i>Digital</i> recording works differently: it <i>samples</i> the waveform at evenly-spaced timepoints, representing each sample as a precise number.  Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise.  The following image illustrates a sampled audio waveform:
+</p>
+<dl><dd><span title="A digital waveform"><img alt="Waveform digital.png" src="../m/images/e/e2/waveform_digital.png" width="576" height="158" /></span></dd></dl>
+<p>Digital audio can be edited and mixed without introducing any additional noise.  In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or change the <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i>.
+</p><p>Audacity's ability to play or record audio directly from your computer depends on your specific computer hardware.  Most desktop computers come with a <i>sound card</i> with 1/8 inch (3.5mm) jacks for you to plug in a microphone or other source for recording, and speakers or headphones for listening.  Many laptop computers have speakers and a microphone built-in.  The sound card that comes with most computers is not particularly high quality, in this case you may want to consider using an external USB audio interface.  For information on how to set up Audacity for playback and recording, see <a href="audacity_setup_and_configuration.html" title="Audacity Setup and Configuration">Audacity Setup and Configuration</a>.
+</p>
+<div id="quality"></div>
+<h2><span class="mw-headline" id="Digital_Audio_Quality">Digital Audio Quality</span></h2>
+<p>The quality of a digital audio recording depends heavily on two factors: the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> and the <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i> or bit depth.  Increasing the sample rate or the number of <i><b><a href="glossary.html#bit" title="Glossary">bits</a></b></i> in each sample increases the quality of the recording, but also increases the amount of space used by audio files on a computer or disk.
+</p>
+<div id="rates"></div>
+<h2><span class="mw-headline" id="Sample_rates">Sample rates</span></h2>
+<p><i>Sample rates</i> are measured in hertz (<i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i>), or <i><b><a href="glossary.html#cycle" title="Glossary">cycles</a></b></i> per second.  This value is the number of samples captured per second in order to represent the waveform. Higher sample rates allow higher audio frequencies to be represented. Provided that the sample rate is more than double the highest audio frequency present, the waveform can be reconstructed exactly from the digital samples. Frequencies that are more than half the sample rate cannot be correctly represented in digital samples, and, if present in the original audio, must be removed before converting  to digital. "Half the sample rate" therefore represents an upper limit called the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Nyquist_frequency">Nyquist frequency</a>, and the analog waveform must be entirely below this limit to be correctly represented digitally. Analog frequencies at this limit or above cannot be correctly represented by the digital samples and would cause a kind of distortion called <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Aliasing">aliasing</a>.
+</p><p>The human ear is sensitive to sound patterns with frequencies between approximately 20 Hz and 20000 Hz.  Sounds outside that range are inaudible. Therefore a sample rate of 40000 Hz is the absolute minimum necessary to reproduce sounds within the range of human hearing. Higher rates (called <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Oversampling">oversampling</a>) are usually used so as to allow adequate filtering to avoid aliasing artifacts around the Nyquist frequency. 
+</p><p>The sample rate used by <i><b><a href="glossary.html#audio_cd" title="Glossary">audio CDs</a></b></i> is 44100 Hz.  Human speech is intelligible even if frequencies above 4000 Hz are eliminated; in fact telephones only transmit frequencies between 200 Hz and 4000 Hz.  Therefore a common sample rate for audio recordings is 8000 Hz, which is sometimes called <i>speech quality</i>. Note that very steep <i><b><a href="glossary.html#filter" title="Glossary">filtering</a></b></i> (called an anti-aliasing filter) is required at the Nyquist frequency in order to prohibit signal above this cutoff point from being folded back into the audible range by the digital converter, and creating the distorting artifacts of aliasing noise.
+</p><p>The most common sample rates measured in Hz are 8000, 16000, 22050, 44100, 48000, 96000 and 192000. Sample rates can also be referred to in <i><b><a href="glossary.html#khz" title="Glossary">kHz</a></b></i> or units of 1000 Hz. So in units of kHz the most common rates are expressed as 8 kHz, 16 kHz, 22.05 kHz,  44.1 kHz, 48 kHz, 96 kHz and 192 kHz. 
+</p><p>Audacity supports any of these sample rates, however most computer sound cards are limited to no more than 48000 Hz, 96000 Hz or sometimes 192000Hz. Again, the most common sample rate <i>by far</i> is 44100 Hz and many cards will thus default to this rate, whatever other rates they support. 
+</p><p>In the image below, the left half has a low sample rate, and the right half has a high sample rate (ie. high resolution):
+</p>
+<dl><dd><span title="Waveform with low sample rate and high sample rate"><img alt="Waveform sample rates.png" src="../m/images/0/0e/waveform_sample_rates.png" width="576" height="158" /></span></dd></dl>
+<div id="formats"></div>
+<h2><span class="mw-headline" id="Sample_formats">Sample formats</span></h2>
+<p>The other measure of audio quality is the sample format (or <i>bit depth</i>), which is usually measured by the number of computer <i>bits</i> used to represent each sample.  The more bits that are used, the more precise the representation of each sample.  Increasing the number of bits also increases the maximum <i><b><a href="glossary.html#dynamic_range" title="Glossary">dynamic range</a></b></i> of the audio recording, in other words the difference in volume between the loudest and softest possible sounds that can be represented.
+</p><p>Dynamic range is measured in decibels (<i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>).  The human ear can perceive sounds with a dynamic range of at least 90 dB. However, whenever possible it is a good idea to record digital audio with a dynamic range of far more than 90 dB, in part so that sounds that are too soft can be amplified for maximum fidelity. Note that although signals recorded at generally low levels can be raised (that is, normalized) to take advantage of the available dynamic range, the recording of low level signals will not use all of the available <i>bit depth</i>. This loss of resolution cannot be re-captured simply by normalizing the overall level of the digital waveform.
+</p><p>Common sample formats, and their respective dynamic range include:
+</p>
+<ul><li> 8-bit integer: 48 dB</li>
+<li> 16-bit integer: 96 dB</li>
+<li> 24-bit integer: 145 dB </li>
+<li> 32-bit floating point: near-infinite dB </li></ul>
+<p>Note that there are practical limitations on dynamic range due to the capabilities of the hardware and input and output converters. These make the practical limit more like 90 dB for 16-bit.      
+</p><p>Other sample formats such as ADPCM approximate 16-bit audio with compressed 4-bit samples.  Audacity can import many of these formats, but they are rarely used because of much better newer <i><b><a href="glossary.html#compressed_format" title="Glossary">compression</a></b></i> methods.
+</p><p>Audio CDs and most computer audio file formats use 16-bit integers. Audacity uses 32-bit floating-point samples internally and, if required, converts the sample bit depth when the final mix is exported. Audacity's default sample format during recording can be configured in the <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a> or set individually for each track in the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>. During playback, the audio in any tracks that have a different sample format from the project will be <i><b><a href="glossary.html#resampling" title="Glossary">resampled</a></b></i> on the fly using the Real-time Conversion settings in the <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>. The High-quality Conversion settings are used when processing, mixing or exporting.
+</p><p>In the image below, the left half has a sample format with few bits, and the right half has a sample format with more bits.  If you think of the sample rate as the spacing between vertical gridlines, the sample format is the spacing between horizontal gridlines.
+</p>
+<dl><dd><span title="left half has a sample format with few bits, and the right half has a sample format with more bits"><img alt="Waveform sample formats.png" src="../m/images/8/85/waveform_sample_formats.png" width="576" height="158" /></span></dd></dl>
+<div id="size"></div>
+<h2><span class="mw-headline" id="Size_of_audio_files">Size of audio files</span></h2>
+<p>Audio files are very large, probably much larger than most files you work with (unless you work with video files).  To determine the size of an uncompressed audio file, multiply the sample rate (for example 44100 Hz) by the sample format <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> (for example 16-bit) by the number of channels (2 for stereo) by the number of seconds.  A completely full 74-minute stereo audio CD takes up over 6 billion bits.  Divide this by 8 to get the number of bytes; an audio CD is a little less than 800 megabytes (MB).  See <a href="#compression">compressed audio</a> below.
+</p>
+<div id="clipping"></div>
+<h2><span class="mw-headline" id="Clipping">Clipping</span></h2>
+<p>One limitation of digital audio is that for most purposes it cannot deal with sound pressure waves that exceed the maximum levels it is designed to deal with.  When a signal is recorded that exceeds the maximum level of +/-1.0 <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> or 0 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>, samples outside the range are clipped to the maximum value, like this:
+</p>
+<dl><dd><span title="Waveform showing clipping"><img alt="WaveformClippingAbstract.png" src="../m/images/4/4b/waveformclippingabstract.png" width="576" height="158" /></span></dd></dl>
+<p>A sound recorded with <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> will sound distorted and harsh.  While there are some techniques that can eliminate a small amount of noise due to clipping, it is always preferable to avoid clipping while recording.  Change the volume on your input source (microphone, cassette player, record player) and set Audacity's input volume control (in <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a>) such that the waveform is as large as possible (for maximum fidelity) without clipping.
+</p><p>Note that at Audacity's default 32-bit float sample format, legitimately captured sample values in excess of the maximum can be <i>stored</i> but even if preserved in an <a href="exporting_audio.html" title="Exporting Audio">exported</a> 32-bit float file they will probably still distort on any conventional reproducing equipment. If Audacity encounters legitimate samples above the limit, the <a href="amplify.html" title="Amplify">Amplify</a> effect will show a negative default "Amplification (dB)" value and you may click OK at this setting to reduce the peak amplification to the maximum 0 dB without loss of the original peaks of the waveform.
+</p>
+<div id="compression"></div>
+<h2><span class="mw-headline" id="Compressed_Audio">Compressed Audio</span></h2>
+<p>Because digital audio files are so large, reduced sample rates were typically used whenever possible.  In 1991, the MP3 (MPEG I, layer 3) standard changed everything.  MP3 is a <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> compression technique that can dramatically reduce the file size of a digital audio file with surprisingly little effect on the quality.  One second of CD-quality audio takes up 1.4 megabits, while a common <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> for MP3 files is 128 kbps, which is a compression factor of more than 10x!  MP3 works by cleverly "throwing away" details about the audio waveform that humans are not very sensitive to, based on a <i>psychoacoustic model</i> of how our ears and brains process sounds.  All MP3 files are not created alike; different psychoacoustic models will lead to different amounts of perceived distortion in the audio file.
+</p><p>Audacity as shipped can import MP3 files but please add the optional <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME MP3</a> encoding library to your computer in order to export MP3 files from Audacity.
+</p><p>With good speakers, most people can hear the difference between a 128 kbps MP3 and an uncompressed audio file from a CD. 256 kbps and 320 kbps MP3 files are more popular among audiophiles who prefer higher quality.
+</p><p>There are many other lossy compressed audio file formats.  Audacity fully supports the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Ogg_vorbis"><i>Ogg Vorbis</i></a> format, which is similar to MP3 but is a completely open, patent-free standard.  Over time the quality of Ogg Vorbis files has come to surpass the quality of MP3, and its format is more extensible so more improvements are possible.  Ogg Vorbis is a great choice for your own audio, however the reality is that many more devices such as iPods and other portable audio players support MP3 but not Ogg Vorbis yet.
+</p><p>Other well-known compression methods include ATRAC, used by Sony MiniDisc recorders, Windows Media Audio (WMA), and AAC. Audacity supports more formats by adding the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Lossless_Compression">Lossless Compression</span></h2>
+<p>Lossless compression reduces a file's size with no loss of quality. This seemingly magical method of reducing file sizes can be applied to audio files. While MP3s use lossy compression, newer compression algorithms, such as <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#alac" title="Glossary">Apple Lossless</a></b></i> compression, can be used to create lossless compressed audio files.
+</p><p>Such compression basically rewrites the data of the original file in a more efficient way. However, because no quality is lost, the resulting files are typically much larger than image and audio files compressed with lossy compression. For example, a file compressed using lossy compression may be one-tenth the size of the original, while lossless compression is unlikely to produce a file smaller than half of the original size.
+</p><p>Lossless audio formats are most often used for archiving or production purposes, while smaller lossy audio files are typically used on portable players and in other cases where storage space is limited or exact replication of the audio is unnecessary.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917111858
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.109 seconds
+Real time usage: 0.115 seconds
+Preprocessor visited node count: 336/1000000
+Preprocessor generated node count: 977/1000000
+Post‐expand include size: 4227/2097152 bytes
+Template argument size: 1270/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   39.096      1 - -total
+ 94.78%   37.055      1 - Template:I18n
+ 88.80%   34.717      1 - Template:I18n_box
+ 77.85%   30.437      1 - Template:I18n_list
+ 44.61%   17.440      7 - Template:I18n_link
+ 25.61%   10.012      7 - Template:Autoglossonym
+  4.68%    1.829      1 - Template:Intro
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2042-0!*!0!!*!5!* and timestamp 20180917111857 and revision id 61019
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="#" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Digital_Audio">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

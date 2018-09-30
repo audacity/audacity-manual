@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Sample workflow for LP digitization - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Sample_workflow_for_LP_digitization rootpage-Sample_workflow_for_LP_digitization skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Sample workflow for LP digitization</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_LP_digitization#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">This tutorial outlines a set of example steps using Audacity to digitize LPs to create files that are ready for CD creation, loading into a digital jukebox or portable music player. There is no fixed "<i><b>right</b></i>" way of working - there are many alternatives; like any recipe, it can be adapted to suit your personal needs.</div>
+<p>This workflow does not at any stage necessitate the saving of an <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a> (though you may wish to do that if you need to interrupt your work). Your final goal will be to <a href="export.html" title="Export">export</a> WAV files for CD creation or other file formats which might be more suitable for your needs.
+</p><p>While all of the processing in this tutorial is carried out using Audacity, some users may prefer to use <a href="#alternative">alternative software</a> for specific sub-tasks like noise removal and the removal of clicks and pops (Audacity's Click Removal may not give as good a result as other software).
+</p><p>For more details of the steps involved in this workflow please see the tutorial set <a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD">Copying tapes, LPs or MiniDiscs to CD</a>.
+</p>
+<h2><span class="mw-headline" id="Workflow">Workflow</span></h2>
+<ol><li> <a href="#set">Audacity Settings</a></li>
+<li> <a href="#clean">Clean the LP</a></li>
+<li> <a href="#flatten">Flattening a warped LP</a></li>
+<li> <a href="#levels">Recording levels</a></li>
+<li> <a href="#capture">Capture</a></li>
+<li> <a href="#raw">Raw master backup</a></li>
+<li> <a href="#dc">Remove DC offset</a></li>
+<li> <a href="#lf">Reduce subsonic rumble and low frequency noise</a></li>
+<li> <a href="#clicks">Remove clicks and pops</a></li>
+<li> <a href="#hf">Reduce hiss and high frequency noise</a></li>
+<li> <a href="#labels">Place the song labels</a></li>
+<li> <a href="#gaps">Silence the inter-track gaps</a></li>
+<li> <a href="#fades"> Fade Ins/Outs</a></li>
+<li> <a href="#adjust">Adjust Label positions</a></li>
+<li> <a href="#names">Track names</a></li>
+<li> <a href="#advanced">Advanced labeling techniques</a></li>
+<li> <a href="#amplify">Amplitude adjustment</a></li>
+<li> <a href="#compress">Compression</a></li>
+<li> <a href="#wavs">Export a set of WAVs</a></li>
+<li> <a href="#labex">Export labels</a></li>
+<li> <a href="#backup">Backup</a></li>
+<li> <a href="#alternative">Alternative software</a></li></ol>
+<p><br />
+</p>
+<div class="note">Making vinyl to digital transfers is a skill and the more you do the more expert you will become. 
+<ul><li>Consider starting out with some LPs or singles that you care less about, this way you will not need to go back and repeat important earlier transcriptions that you made.  </li>
+<li>Start with a recording that you are very familiar with; your first goal will be to ensure that you have as perfect a digital copy of the material as possible. </li>
+<li>Clean-up steps are optional and need only be applied if your recording requires them.</div></li></ul>
+<p><br />
+</p>
+<div id="set"></div>
+<h3><span class="mw-headline" id="Audacity_settings">Audacity settings</span></h3>
+<p>Work with Audacity set to a project rate of 44100 Hz and 32-bit sample format (these are the default <a href="quality_preferences.html" title="Quality Preferences">quality settings</a>). You may use 16-bit if you prefer; it will give smaller working file sizes but you may lose a little quality in some of the processes.  Export WAV files at 44100 Hz 16-bit PCM stereo, the standard required for <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD"> burning CDs</a>; this will also produce WAVs which are accepted for import by iTunes (and most other music player software).
+</p>
+<div id="clean"></div>
+<h3><span class="mw-headline" id="Clean_the_LP">Clean the LP</span></h3>
+<p>Cleaning the LP carefully and thoroughly before recording it will reduce the number of clicks and pops and will improve the quality of your recording.
+</p><p>Prepare a solution of lukewarm water mixed with a little dish washing detergent. Use a soft, clean washcloth (or piece of velvet) to carefully wipe the LP's surfaces - try not to get the label wet.  The detergent will float away all the greasy fingerprints - a gentle scrubbing motion will help. Rinse in lukewarm water until all the detergent is gone. Finally, rinse in distilled water (which dries and leaves no residue behind). Air dry your record thoroughly before playing - do not be tempted to play the record "wet" as this may damage the LP and possibly your stylus.
+</p><p>There are a number of commercially available cleaning fluids and cleaning machines that you may wish to consider:
+</p>
+<ul><li>KAB EV-1 Record Cleaner &amp; KAB cleaning solution</li>
+<li>Disco Antistat</li>
+<li>Discwasher</li></ul>
+<div id="flatten"></div>
+<h3><span class="mw-headline" id="Flattening_a_warped_LP">Flattening a warped LP</span></h3>
+<p>If an LP is warped it may not track or play properly; if so, you could try to ease the warps in the vinyl. Place the album in its sleeve and cover between two sheets of flat wood, plywood, glass or similar in a warm room and place some heavy (but not too heavy) weight on top. Leave in the warm room for several days and then try playing it. 
+</p><p>Alternatively, stabilizing rims or clamps on a conventional turntable can be used to safely play all but the most extremely warped LPs <i>(some high-end turntables come supplied with such a clamp)</i>.  A more expensive alternative is to use a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Laser_turntable">laser turntable</a>.
+</p>
+<div id="levels"></div>
+<h3><span class="mw-headline" id="Recording_levels">Recording levels</span></h3>
+<p>Read this page about making a <a href="tutorial_making_a_test_recording.html" title="Tutorial - Making a Test Recording">test recording</a> then make a test recording of portions of the LP (or even a whole side) so as to check the levels. It is important to avoid any <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> during the recording!  Try to aim for a maximum peak of around –6 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> (or 0.5 if you have your meter set to linear rather than dB).
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Enlarging the Recording Meter Toolbar by clicking and dragging helps with this task; you should read this section about <a href="meter_toolbar.html#resizing" title="Meter Toolbar">resizing the Meter Toolbars</a>.
+</td></tr></table>
+</div>
+<div id="capture"></div>
+<h3><span class="mw-headline" id="Capture">Capture</span></h3>
+<p>Record both sides into the project prior to doing the processing.  You can either <b>Stop</b> the recording after the first side using the <img alt="The Stop button" src="../m/images/f/f9/stop.png" title="The Stop button" width="16" height="16" /> button or <span class="menu">Transport &gt; <a href="transport_toolbar.html#stop" title="Transport Toolbar">Stop</a></span> and then use <span class="menu">Transport &gt; <a href="transport_toolbar.html#record" title="Transport Toolbar">Record</a></span> (or use <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span>) to restart recording when you are ready. Alternatively you can pause by pressing the <img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> button (or use <span class="menu">Transport &gt; <a href="transport_toolbar.html#pause" title="Transport Toolbar">Pause</a></span>) at the end of the first side and then press  the <img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> button again once you are ready to record the second side.
+</p><p>After recording you may find it helpful to <a href="zooming.html" title="Zooming"> zoom out</a> to display the entire recording in the Audacity window.
+</p><p>You may prefer to work with a single side of an LP at a time as that gives a smaller working set.
+</p>
+<div id="raw"></div>
+<h3><span class="mw-headline" id="Raw_master_backup">Raw master backup</span></h3>
+<p><a href="exporting_audio.html" title="Exporting Audio">Export</a> a single WAV for this recording at 32-bit float <i>(not 16-bit)</i>. 
+</p><p>Retain this WAV file as a maximum quality "raw capture" file that you can <a href="file_menu.html#Import" title="File Menu">import</a> back into Audacity later to start over (if you damage the project while working on it).
+</p>
+<div id="dc"></div>
+<h3><span class="mw-headline" id="Remove_DC_offset">Remove DC offset</span></h3>
+<p>DC offset can occur at the recording stage so that the recorded <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> is not centered on the horizontal line at 0.0 <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i>.  If this is the case with your recordings, see the <a href="normalize.html" title="Normalize">Normalize</a> page for how to use Normalize to remove <a href="glossary.html#dc_offset" title="Glossary">DC offset</a> and how to check if your Windows sound device can perform this correction automatically.
+</p>
+<div id="lf"></div>
+<h3><span class="mw-headline" id="Reduce_subsonic_rumble_and_low_frequency_noise">Reduce subsonic rumble and low frequency noise</span></h3>
+<div class="note">This step can probably be omitted given a flat record and high quality turntable, arm and cartridge.</div>
+<p>Use <span class="menu">Effect &gt; <a href="high_pass_filter.html" title="High-Pass Filter">High Pass Filter...</a></span> with a setting of 24 dB per octave <a href="glossary.html#roll-off" title="Glossary">roll-off</a>, and a cutoff frequency of 20 - 30 Hz to reduce unwanted subsonic frequencies which can cause clicks when editing. If your record is warped, this will definitely generate unwanted subsonics, in which case consider a lower cutoff frequency.
+</p>
+<div id="clicks"></div>
+<h3><span class="mw-headline" id="Remove_clicks_and_pops">Remove clicks and pops</span></h3>
+<p>There are a number of ways you can use Audacity to remove clicks and pops from your recording. First, without zooming in too far, visually inspect your recording for clicks - they will show up as abnormally tall (sticking up or down), very narrow (one or two pixels wide) vertical lines protruding from the waveform. Select a region with one or more of these spikes and listen to it to ensure that they are clicks. After determining that your selection indeed needs to have clicks removed use the <a href="click_removal.html" title="Click Removal">Click Removal</a> effect with various settings - preview the effect with these different settings to get the best results. Then, using the settings from your preview testing, use the Click Removal effect on selected regions of audio or on the whole project. 
+</p><p>Clicks which did not get removed with Click Removal can be treated individually with other methods. These methods are only really useful if you have a relatively small number of clicks and pops to deal with; otherwise, these approaches will be too labor-intensive and time-consuming:
+</p>
+<ul><li> Try Audacity's <a href="repair.html" title="Repair">Repair</a> effect.  This repairs a very short length of up to 128 <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i> by <i><b><a href="glossary.html#interpolate" title="Glossary">interpolating</a></b></i> from the neighboring samples. You will need to zoom in to see the individual samples to use this effect.</li>
+<li> For hard to spot clicks you may want to try <a href="click_removal_using_the_spectrogram_view.html" title="Click removal using the Spectrogram view">Click removal using the Spectrogram view</a>.</li>
+<li> For somewhat longer regions of audio, try: 
+<ul><li> <a href="tools_toolbar.html#draw" title="Tools Toolbar">Draw Tool</a>.  You need to be zoomed in to the individual samples to use this.  Some patience may be needed with this tool, but the principle is to put samples back into line with their neighbors so that a smooth contour is presented. </li>
+<li> <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#silence" title="Edit Menu: Remove Special">Silence Audio</a></span>. You don't need to be zoomed in so far as to see the individual samples, but the silenced sections must be short enough so as to not be audible. </li></ul></li></ul>
+
+<p>See <a href="tutorial_click_and_pop_removal_techniques.html" title="Tutorial - Click and pop removal techniques">Click and pop removal techniques</a> for a detailed tutorial on these  tools.  Also see further down this page for a set of <a href="#alternative">alternative tools</a> known to work well in removing clicks and pops.
+</p>
+<div id="hf"></div>
+<h3><span class="mw-headline" id="Reduce_hiss_and_high_frequency_noise">Reduce hiss and high frequency noise</span></h3>
+<div class="note">Whether you need to use <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a> will depend on the quality of your LPs, your stylus and cartridge.</div>
+<p>Use the <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a> effect's <b>Get Noise Profile</b> to obtain a noise sample from either the lead-in grooves immediately before the music starts, or from a lead-in between tracks. The length is not important but, typically, it will be less than a second; what is important is that you have a true representative sample of the noise without any audio signal at all (such as a very quiet fade lead in). Try amplifying the sample and audition it to ensure that no real audio signal is present.  If it's OK, undo the amplify, then re-apply the Noise Removal effect with these recommended settings:
+</p>
+<ul><li>Noise reduction - no more than 12 dB (9 dB is a good guideline)</li>
+<li>Sensitivity - 6.00</li>
+<li>Frequency smoothing (bands) - no more than 6 (3 or lower is a good setting for Music)</li></ul>
+<p>Noise reduction is always a compromise because, on the one hand, you can have all the music and a lot of noise and, on the other hand, no noise and only some of the music. Try different settings on the "Noise Reduction (dB)" slider until you get the best compromise.
+</p>
+<div id="labels"></div>
+<h3><span class="mw-headline" id="Place_the_song_labels">Place the song labels</span></h3>
+<p>Mark the approximate <a href="label_tracks.html" title="Label Tracks">label</a> points - click in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> at the approximate point between the tracks on the album, press <span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span> then <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. Don't forget to insert a label at the beginning for the first track. Alternatively you can mark a label point while recording (or on playback) using <span class="kbrd" style="background-color: #d0d0f8">Ctrl + M</span> ( <i><span class="kbrd" style="background-color: #d0d0f8">&#8984; + .&#160;</span> on Mac</i> ).
+</p>
+</li></ul>
+<div id="gaps"></div>
+<h3><span class="mw-headline" id="Silence_the_inter-track_gaps">Silence the inter-track gaps</span></h3>
+<p>These are rarely truly silent so you may want to replace them with silence by selecting the gap and using <span class="kbrd" style="background-color: #d0d0f8">Ctrl + L</span> or the <a href="generate_menu.html#silence" title="Generate Menu">Silence Generator effect</a>. Edit the inter-track gap as desired to around a maximum of 2 seconds; you may wish to use a shorter gap or even no gap at all for some recordings.  
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">By default CD burning software almost always adds a 2-second gap between tracks. Check for any options to turn this off, for "gapless burning" or "Disc-at-once (DAO)" that you can enable.
+</td></tr></table></div>
+<div id="fades"></div>
+<h3><span class="mw-headline" id="Fade_Ins.2FOuts">Fade Ins/Outs</span></h3>
+<p>You may wish to more cleanly fade-in and fade-out the song beginnings and endings by using <span class="menu">Effect &gt; <a href="fades.html#linearfade" title="Fades">Fade In</a></span> and <span class="menu">Effect &gt; <a href="fades.html#linearfade" title="Fades">Fade Out</a></span>. Normally fade outs should be longer <i>(typically a few seconds)</i>, and fade ins, if required, quite short <i>(typically a fraction of a second)</i>. 
+</p><p>Consider using <span class="menu">Effect &gt; <a href="fades.html#studio_fadeout" title="Fades">Studio Fade Out</a></span> instead of the linear <b>Fade Out</b>.  It applies a more musical fade out to the selected audio, giving a more pleasing (more "professional studio") sounding result.
+</p><p>You may also get a more musical fade-in by applying <span class="menu">Effect &gt; <a href="fades.html#linearfade" title="Fades">Fade In</a></span> multiple times to the selected audio, three times is a good guideline.  This will produce a shaped, curved, fade rather than a linear one.
+</p>
+<div class="note">Although no keyboard shortcuts for effects are provided by default in Audacity it is possible to set up your own shortcuts for any effects you choose.  You may find it particularly beneficial to assign shortcuts for <b>Fade In</b> and <b>Fade Out</b> (or <b>Studio Fade Out</b>) as these will used repeatedly for LP digitization.<p>For instructions on how to do this please see the <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> page in the manual.</p></div>
+<div id="adjust"></div>
+<h3><span class="mw-headline" id="Adjust_label_positions">Adjust label positions</span></h3>
+<p>If you are using a 2-second gap, adjust the label position as desired to be  0.5 seconds before the start of the next track. To move the label, drag it by its center circle.
+</p>
+<div id="names"></div>
+<h3><span class="mw-headline" id="Track_names">Track names</span></h3>
+<p>Edit the labels for the song names - we suggest using "01 First Song Name", "02 Second Song Name", and so on as this helps keep them in the right order for CD production or loading into iTunes.  You may find that changing the zoom level will help you with this task; you can advance to the next label by ensuring that the focus is in the current label then using <span class="kbrd" style="background-color: #e0e0f0">Tab</span>.
+</p><p>If you wish you may instead automatically prefix named tracks with a sequential two-digit number. <br />To do this, in the "Name files" section of the Export Multiple dialog select the <span class="button">Numbering before Label/Track Name</span> radio button.
+</p>
+<div id="advanced"></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">
+<h3><span class="mw-headline" id="Advanced_labeling_techniques">Advanced labeling techniques</span></h3>
+<ul><li>You may wish to label each track with its full text while you are recording. To do so, use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + M</span> ( <i><span class="kbrd" style="background-color: #d0d0f8">&#8984; + .&#160;</span> on Mac</i> ) to mark each track end as the recording progresses.  This saves time in the processing <i>(which can be important when you have a lot of LPs)</i>. You do have to be <b>very careful</b> to make sure that focus remains on the label as otherwise you will get the unexpected halt to the recording when you type "space-bar" in what you think is a label.  Also ensure that you do not click in the <a href="timeline.html" title="Timeline">Timeline</a> as that will also stop the recording and instead play from the clicked position.</li>
+<li>If the LP has track timings listed you can enhance this step of the process by setting up an empty project with the labels placed at the listed track boundary timings and a further label slightly beyond the end at the end - then zoom the project to fit (use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + F</span>) and then start recording. The text of each label can be typed, once again with <b>great care</b>, while you are making the recording.</li></ul>
+</td></tr></table>
+</div>
+<div id="amplify"></div>
+<h3><span class="mw-headline" id="Amplitude_adjustment">Amplitude adjustment</span></h3>
+<p>Normalize the amplitude of the recording; either do each track of the recording individually (especially if the tracks will be randomly played from a library containing many different styles of music) or, do the whole recording at once (which will work fine if all the tracks have the same average volume).  Use <span class="menu">Effect &gt; <a href="normalize.html" title="Normalize">Normalize</a></span> as the last editing step, setting "Normalize maximum amplitude to" to around -3 dB or similar, to give some headroom below the distortion level.  The Normalize effect can be set to either:
+</p>
+<ul><li>Adjust the amplitude of both stereo channels by the same amount (thus preserving the original stereo balance), or</li>
+<li>Adjust each stereo channel independently (this can be useful if your equipment is not balanced).</li></ul>
+<div id="compress"></div>
+<h3><span class="mw-headline" id="Compression">Compression</span></h3>
+<p>The <a href="compressor.html" title="Compressor">Compressor</a> effect reduces the dynamic range of audio. One of the main purposes of reducing dynamic range is to permit the audio to be amplified further (without clipping) than would be otherwise possible.
+</p><p>Compressor makes the loud parts quieter and (optionally) the quiet parts louder. It can be very useful for listening to classical music in a car. Such music normally has a wide dynamic range and can thus be difficult to listen to in a car without constant volume re-adjustment.
+</p>
+<div id="wavs"></div>
+<h3><span class="mw-headline" id="Export_a_set_of_WAVs">Export a set of WAVs</span></h3>
+<p>Use <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> to produce a set of WAVs for each track on the LP at 44100 Hz 16-bit PCM stereo. Audacity will down-sample on export from 32-bit to 16-bit. Shaped <a href="dither.html" title="Dither">dither</a> noise will be applied by default to cover any defects (clicky noise) that may result from the conversion from 32-bit to 16-bit. Advanced users can change the type of [[Dither|dither], or turn it off, in <a href="quality_preferences.html#conversion" title="Quality Preferences">Quality Preferences</a>.
+</p><p>In order to facilitate later retrieval and use, place all the files for a particular album in a specifically named folder for that album.
+</p>
+<div id="labex"></div>
+<h3><span class="mw-headline" id="Export_Labels">Export Labels</span></h3>
+<p>Some users advise a final step of exporting a file containing the labels.  Use <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportlabels" title="File Menu: Export">Export Labels...</a></span> This produces a text file that you can later re-import using <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#labels" title="File Menu: Import">Labels...</a></span> should you wish to re-edit from the raw capture file that you backed up earlier in the workflow.
+</p>
+<div id="backup"></div>
+<h3><span class="mw-headline" id="Backup">Backup</span></h3>
+<p>Backup your exported WAV or MP3 files - you don't want to lose all that valuable work and have to do it all over again, do you? Computer hard drives can fail, destroying all data. 
+</p><p>Ideally use a dedicated drive <i>(1+ TB external magnetic drives are convenient and economical)</i>, or upload to an online (cloud) storage service to store the WAVs or MP3s. Better still is to make two copies on different external devices and even better is to hold an online backup as well as the local copies. 
+</p><p>You may want to create a taxonomic file structure - for example each album can be stored in its own folder (named for the album) within a folder named for the artist (or, perhaps, composer for classical music) to make searching and retrieval easier.
+</p>
+<div id="alternative"></div>
+<h2><span class="mw-headline" id="Alternative_software">Alternative software</span></h2>
+<ul><li><b><a rel="nofollow" class="external text" href="http://www.goldwave.com">GoldWave</a></b>: Though nominally not free it is a top class, free trial click remover as well as an excellent alternative audio editor. Its click removal is an effect, just like in Audacity, and there is a "Smoother" effect for broad unwanted noises and an excellent "Noise Reduction" effect for steady noise. The trial version limits you to a hundred or so commands per session, and a total number of several thousand commands before it expires, but if you export from Audacity as 32-bit WAV and just do Click Removal in it, you should be able to declick several hundred records for free. </li>
+<li><b><a rel="nofollow" class="external text" href="http://gwc.sourceforge.net/">Gnome Wave Cleaner</a></b>: Only for Linux users.  Digital restoration of CD-quality audio files. Dehiss, declick and decrackle in a GUI environment. It can also automatically mark song boundaries if required.</li></ul>
+<h3><span class="mw-headline" id="Clicks_and_pops">Clicks and pops</span></h3>
+<ul><li><b><a rel="nofollow" class="external text" href="http://www.clickrepair.net">ClickRepair</a></b>:  An excellent tool for removing <i>clicks</i> and <i>pops</i> is Brian Davies' ClickRepair. Some new users may find it a bit intimidating as an entry level tool but, once you have understood the settings you want to use, it is effectively an automated tool.  It requires Java and is not free, but many users report that it saves a lot of time and produces good results.  Since ClickRepair will work with 32-bit files it is worth exporting a 32-bit float WAV file for processing though ClickRepair and importing back into Audacity, that way no dithering will be applied in the process. </li></ul>
+<div class="note">You may find the default settings for this application remove a little too much signal.  An alternative recommendation:
+<ul><li>DeClick = 30 (default is 50)</li>
+<li>Pitch Protection = "on" (default is "off") though leave this "off" for brass recordings</li>
+<li>Reverse = "on" (there is no processing penalty for this and it helps on percussive music)</li>
+<li>Method = Wavelet</div></li></ul>
+<h3><span class="mw-headline" id="Hiss_and_noise_removal">Hiss and noise removal</span></h3>
+<ul><li><b><a rel="nofollow" class="external text" href="http://www.clickrepair.net">DeNoise</a></b>:  Brian Davies also supplies a tool called DeNoise; this is effective at removing noise and hiss.  As with ClickRepair, some new users may find it similarly intimidating as an entry level tool. Users report that settings normally have to be reset for each recording to optimize the noise removal thus making it difficult to use in a semi-automated way.
+<ul><li><b><a rel="nofollow" class="external text" href="http://www.clickrepair.net">DeNoiseLF</a></b> is supplied as a separate package bundled with DeNoise. It is used for reducing low-frequency noise (such as turntable rumble) and hum.</li></ul></li></ul>
+<div id="chris"></div>
+<h3><span class="mw-headline" id="Compression_2">Compression</span></h3>
+<p>Please see <a href="chris_s_dynamic_compressor.html" title="Chris's Dynamic Compressor">Chris's Dynamic Compressor</a> for a popular alternative compressor which may be downloaded for free.  It works by trying to even out abrupt changes of volume by employing "lookahead" <i>(this attempts to anticipate volume changes by starting to apply compression before the volume rises to the threshold level)</i>. It has options to soften the softer audio and invert loudness.
+</p>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD"><b>|&lt;</b> Tutorial - Copying tapes, LPs or MiniDiscs to CD</a><br />
+</p><p><a href="recording_78_rpm_records.html" title="Recording 78 rpm records"><b>&gt;</b>&#160; See also tutorial on: Recording 78 rpm records</a> <br />
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917111843
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.185 seconds
+Real time usage: 0.202 seconds
+Preprocessor visited node count: 604/1000000
+Preprocessor generated node count: 1940/1000000
+Post‐expand include size: 11818/2097152 bytes
+Template argument size: 7267/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   58.004      1 - -total
+ 41.63%   24.149      1 - Template:I18n
+ 38.37%   22.258      1 - Template:I18n_box
+ 32.16%   18.653      1 - Template:I18n_list
+ 14.16%    8.214      3 - Template:I18n_link
+ 12.86%    7.460      8 - Template:Shortcut
+  8.25%    4.787      3 - Template:Autoglossonym
+  7.15%    4.146      2 - Template:Tip
+  6.53%    3.790     13 - Template:Menu
+  6.38%    3.699      2 - Template:Hint
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3133-0!*!0!!*!5!* and timestamp 20180917111843 and revision id 60957
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_LP_digitization">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

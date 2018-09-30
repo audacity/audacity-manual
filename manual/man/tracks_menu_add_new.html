@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Tracks Menu: Add New - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tracks_Menu_Add_New rootpage-Tracks_Menu_Add_New skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tracks Menu: Add New</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tracks_Menu:_Add_New#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"> This submenu adds new tracks in your project.</div>
+<dl><dd><div class="noresize"><map name="ImageMap_1_115541455"><area href="tracks_menu.html" shape="rect" coords="25,5,73,27" alt="Tracks Menu provides commands for creating and removing tracks, applying operations to selected tracks such as mixing, resampling or converting from stereo to mono, and lets you add or edit labels" title="Tracks Menu provides commands for creating and removing tracks, applying operations to selected tracks such as mixing, resampling or converting from stereo to mono, and lets you add or edit labels"/><area href="generate_menu.html" shape="rect" coords="73,5,136,27" alt="Generate Menu lets you create audio containing tones, noise or silence" title="Generate Menu lets you create audio containing tones, noise or silence"/><area href="effect_menu.html" shape="rect" coords="136,5,179,27" alt="Audacity includes many built-in effects and also lets you use a wide range of plug-in effects" title="Audacity includes many built-in effects and also lets you use a wide range of plug-in effects"/><area href="analyze_menu.html" shape="rect" coords="179,5,234,27" alt="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature" title="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature"/><area href="tools_menu.html" shape="rect" coords="234,5,275,27" alt="The Tools Menu contains customisable tools" title="The Tools Menu contains customisable tools"/><area href="extra_menu.html" shape="rect" coords="275,5,316,27" alt="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus" title="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus"/><area href="help_menu.html" shape="rect" coords="316,5,353,27" alt="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools." title="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools."/><area href="#" shape="rect" coords="25,27,231,49" alt="Adds a new track" title="Adds a new track"/><area href="tracks_menu_mix.html" shape="rect" coords="25,56,231,78" alt="Mixes down selected tracks to mono or stereo tracks" title="Mixes down selected tracks to mono or stereo tracks"/><area href="tracks_menu.html#resample" shape="rect" coords="25,78,231,100" alt="Allows you to resample the selected track(s) to a new sample rate for use in the project" title="Allows you to resample the selected track(s) to a new sample rate for use in the project"/><area href="tracks_menu.html#remove_tracks" shape="rect" coords="25,107,231,129" alt="Removes the selected track(s) from the project" title="Removes the selected track(s) from the project"/><area href="tracks_menu_mute_unmute.html" shape="rect" coords="25,136,231,158" alt="Mutes or unmutes audio tracks in the project" title="Mutes or unmutes audio tracks in the project"/><area href="tracks_menu_pan.html" shape="rect" coords="25,158,231,180" alt="Pans left right or center audio tracks in the project" title="Pans left right or center audio tracks in the project"/><area href="tracks_menu_align_tracks.html" shape="rect" coords="25,187,231,209" alt="Commands that provide an automatic way of aligning selected tracks with the cursor, the selection, or with the start of the project" title="Commands that provide an automatic way of aligning selected tracks with the cursor, the selection, or with the start of the project"/><area href="tracks_menu_sort_tracks.html" shape="rect" coords="25,209,231,231" alt="Sorts all tracks in the project from top to bottom in the project window, by Start Time or by Name" title="Sorts all tracks in the project from top to bottom in the project window, by Start Time or by Name"/><area href="tracks_menu.html#synclock_tracks_onoff" shape="rect" coords="25,238,231,260" alt="Ensures that length changes occurring anywhere in a defined group of tracks also take place in all audio or label tracks in that group" title="Ensures that length changes occurring anywhere in a defined group of tracks also take place in all audio or label tracks in that group"/><area href="#mono_track" shape="rect" coords="231,27,434,49" alt="Creates a new empty mono audio track" title="Creates a new empty mono audio track"/><area href="#stereo_track" shape="rect" coords="231,49,434,71" alt="Adds an empty stero track to the project" title="Adds an empty stero track to the project"/><area href="#label_track" shape="rect" coords="231,71,434,93" alt="Adds an empty label track to the project" title="Adds an empty label track to the project"/><area href="#time_track" shape="rect" coords="231,93,434,115" alt="Adds an empty time track to the project" title="Adds an empty time track to the project"/><area href="menu_reference.html" shape="rect" coords="0,0,1000,1000" alt="The Menus" title="The Menus"/></map><img alt="Tracks-Add NewMenu.png" src="../m/images/b/bd/tracks_add_newmenu.png" width="436" height="270" usemap="#ImageMap_1_115541455"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:384px;top:-15px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+</div>
+<p><br />
+&#160;
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p>
+<div class="note">There are five kinds of track:
+<ul><li> <i><b><a href="audio_tracks.html#single" title="Audio Tracks">Mono Tracks</a></b></i></li>
+<li> <i><b><a href="audio_tracks.html#stereo" title="Audio Tracks">Stereo Tracks</a></b></i></li></ul>
+<p>These two can be in <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> or <a href="spectrogram_view.html" title="Spectrogram View">spectrogram</a> view.
+</p>
+<ul><li> <i><b><a href="label_tracks.html" title="Label Tracks">Label Tracks</a></b></i> - for annotating audio</li>
+<li> <i><b><a href="time_tracks.html" title="Time Tracks">Time Tracks</a></b></i> - for time warping the audio</li>
+<li> <i><b><a href="note_tracks.html" title="Note Tracks">Note Tracks</a></b></i> - created by <a href="file_menu_import.html" title="File Menu: Import">importing MIDI</a>, and not from this menu.</div></li></ul>
+<p><br />
+</p>
+<div id="mono_track"></div>
+<h2><span class="mw-headline" id="Mono_Track_.C2.A0Ctrl_.2B_Shift_.2B_N_.C2.A0_Extra"><a href="audio_tracks.html#single" title="Audio Tracks">Mono Track</a> &#160;<font size="-1"><span class="kbrd" style="background-color: #eaeafa">Ctrl + Shift + N </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i></font></span></h2>
+<p>Creates a new, empty mono <a href="audio_tracks.html" title="Audio Tracks">audio track</a>.  This command is rarely needed, since <a href="importing_audio.html" title="Importing Audio">importing</a>, <a href="record.html" title="Record">recording</a> and <a href="mixing.html" title="Mixing">mixing</a> automatically create new tracks as needed. But you can use this to <a href="edit_menu.html#cut" title="Edit Menu">cut</a> or <a href="edit_menu_copy_paste_and_duplicate.html#copy" title="Edit Menu: Copy, Paste and Duplicate">copy</a> data from an existing track and <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">paste</a> it into an empty track.
+</p><p><img alt="Mono track example.png" src="../m/images/f/f9/mono_track_example.png" width="698" height="189" />
+</p>
+<div id="stereo_track"></div>
+<h2><span class="mw-headline" id="Stereo_Track_.C2.A0"><a href="audio_tracks.html#stereo" title="Audio Tracks">Stereo Track</a> &#160;<font size="-1"></font></span></h2>
+<p>Creates a new, empty stereo <a href="audio_tracks.html" title="Audio Tracks">Audio Track</a>. You may need this if you start with a set of mono tracks and want to <a href="export.html" title="Export">export</a> a stereo mix.
+</p><p><a href="https://alphamanual.audacityteam.org/man/File:Stereo_Track_annotated_with_TDDM.png" class="image"><img alt="Stereo Track annotated with TDDM.png" src="../m/images/c/cf/stereo_track_annotated_with_tddm.png" width="568" height="259" /></a>
+</p>
+<div id="label_track"></div>
+<h2><span class="mw-headline" id="Label_Track_.C2.A0"><a href="label_tracks.html" title="Label Tracks">Label Track</a> &#160;<font size="-1"></font></span></h2>
+<p>Creates a new, empty <a href="label_tracks.html" title="Label Tracks">Label Track</a>. When a label track has the yellow <a href="audacity_selection.html#keyboard" title="Audacity Selection">focus border</a> you can create a label just by typing. Labels can be used for textual annotation and are commonly used when <a href="export_multiple.html" title="Export Multiple">exporting multiple files</a> from a single track.
+</p><p><img alt="Region and point labels.png" src="../m/images/6/60/region_and_point_labels.png" width="700" height="262" />
+</p>
+<div id="time_track"></div>
+<h2><span class="mw-headline" id="Time_Track_.C2.A0"><a href="time_tracks.html" title="Time Tracks">Time Track</a> &#160;<font size="-1"></font></span></h2>
+<p>Creates a <a href="time_tracks.html" title="Time Tracks">Time Track</a> that can progressively increase or decrease playback speed (and pitch) of all audio tracks in the project. The range of possible speed warp is set in the <i>Set Range</i> (upper and lower) option in the Time Track dropdown menu to left of the track. The amount of and direction of warping within that range is controlled using <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a>.
+</p><p><img alt="Time track example.png" src="../m/images/5/53/time_track_example.png" width="697" height="290" />
+</p>
+<h2><span class="mw-headline" id="Note_Tracks"><a href="note_tracks.html" title="Note Tracks">Note Tracks</a></span></h2>
+<p><a href="note_tracks.html" title="Note Tracks">Note Tracks</a> are created by <a href="file_menu_import.html" title="File Menu: Import">importing MIDI</a>, for example, and not from this menu.
+</p><p><span title="Note Track image"><img alt="Note Track with Velocity slider.png" src="../m/images/5/53/note_track_with_velocity_slider.png" width="704" height="163" /></span>
+</p><p><a href="tracks_menu.html" title="Tracks Menu"><b>&lt;</b>&#160; Back to: Tracks Menu</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917111856
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.089 seconds
+Real time usage: 0.094 seconds
+Preprocessor visited node count: 138/1000000
+Preprocessor generated node count: 2352/1000000
+Post‐expand include size: 2358/2097152 bytes
+Template argument size: 977/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   55.020      1 - -total
+ 82.17%   45.210      1 - Template:Menus
+ 79.87%   43.942      1 - Template:All-menus
+  4.61%    2.539      1 - Template:Hint
+  4.53%    2.490      1 - Template:Intro
+  3.34%    1.837      3 - Template:Shortcut
+  3.28%    1.806      1 - Template:ClickTip
+  3.03%    1.669      1 - Template:Fullshortcut
+  2.38%    1.307      1 - Template:Note
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5640-0!*!0!!*!5!* and timestamp 20180917111856 and revision id 61680
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="#" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Tracks_Menu:_Add_New">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

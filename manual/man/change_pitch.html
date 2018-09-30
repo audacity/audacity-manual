@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Change Pitch - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Change_Pitch rootpage-Change_Pitch skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Change Pitch</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Change_Pitch#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+
+<div class="intro">Use <i><b>Change Pitch</b></i> to change the <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i> of a <a href="audacity_selection.html" title="Audacity Selection">selection</a> without changing its tempo (speed).
+<p>To change pitch and tempo simultaneously, use <span class="menu">Effect &gt; <a href="effect_menu.html#speed" title="Effect Menu">Change Speed...</a></span>.</p></div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Change Pitch...</span></dd>
+<dd><span title="Change Pitch effect dialog"><img alt="Change Pitch.png" src="../m/images/9/94/change_pitch.png" width="474" height="392" /></span></dd></dl>
+<div class="note">
+<p><b>Change Pitch works by applying an up or down percentage change to the existing pitch of a selection</b>. As well as choosing the percent change directly you can define it as: 
+</p>
+<ul><li> a change from one <i>pitch</i> to another </li>
+<li> a change in <i>semitones</i></li>
+<li> a change from one <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> to another.</div></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Change Pitch senses the first detectable pitch in a selection and sets "Pitch from" and "Frequency (Hz) from" accordingly. These two controls are <b>not</b> a detection of the "key" or "tonality" of music.
+</td></tr></table></div>
+<div id="pitch"></div>
+<h2><span class="mw-headline" id="Pitch">Pitch</span></h2>
+<p>If you know both the key the original recording is in and the key you want to change it to, change both the Pitch "from" and "to" values.
+</p>
+<ul><li> <b>Estimated Start Pitch:</b> Attempts to detect the pitch of the most meaningful note at the start of the selection. The letter (with sharp&#160;"<b>#</b>" / flat&#160;"<b>b</b>"&#160;suffix as required) indicates the musical note and the number indicates the  <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Octave">octave</a> position of the note. The frequency of the detected pitch is given in parentheses. For example, if you have a very short, quiet note on <b>A3</b> followed by a longer, louder note on <b>C4</b> Audacity will probably detect <b>C4</b> but if the second note is the same volume then Audacity will probably detect <b>A3</b>.</li>
+<li> <b>"from" and "to" controls:</b> The "from" and "to" controls each have a dropdown menu for selecting the musical note, then to right of that menu, a text box for selecting the octave of that note.</li>
+<li> <b>Semitones (half-steps):</b> If you do not know the key the original recording is in but you know how many semitones it needs to be changed, enter that value here. For example you could duplicate a vocal track and then apply Change Pitch with a value of +7 semitones (a major fifth) to create a harmony vocal.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">If you change the Pitch "to" note when the "from" and  to" octaves are the same, this could mean either an increase or decrease in pitch depending on the "from" Pitch.<p>So it is recommended to check in the "Semitones (half-steps)" box if the value is going down (minus sign) or up (no sign) as you intend. If you need to change pitch in the other direction you can change the semitones value instead (see the <a href="#example">example</a> below) or change the "to" octave number.</p>
+</td></tr></table></div>
+<div id="frequency"></div>
+<h2><span class="mw-headline" id="Frequency_.28Hz.29">Frequency (Hz)</span></h2>
+<p>The "from" input box initializes to the first meaningful detected pitch in the selection and does not update if the other controls are changed. However if you know the original frequency and the frequency you want to change to, you can enter these in the "from" and "to" boxes. Detection of a steady <a href="generate_menu.html#tone" title="Generate Menu">sine tone</a> will often be very accurate (with the upper frequency limitation noted <a href="#limitations">below</a>) in which case you may only need to change the "to" input box to the desired frequency for the tone. 
+</p>
+<ul><li> <b>Percent Change:</b> If you would like to change the pitch by a given percent, enter a value in this input box or use the slider.</li></ul>
+<div id="sbsms"></div>
+<h2><span class="mw-headline" id="Use_high_quality_stretching_.28slow.29">Use high quality stretching (slow)</span></h2>
+<p>If this checkbox is enabled, the same <a rel="nofollow" class="external text" href="http://sbsms.sourceforge.net/">SBSMS</a> high quality <i><b><a href="glossary.html#algorithm" title="Glossary">algorithm</a></b></i> is used that is used in the <a href="sliding_stretch.html" title="Sliding Stretch">Sliding Stretch</a> effect. Change Pitch will process much more slowly if this checkbox is enabled, but the exact length of the selection will be preserved. For small to moderate tempo changes, the resulting quality will usually be higher, especially with percussive music (such as piano music). 
+</p>
+<div id="example"></div>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<div class="example"><b>Change the known key from A to the C#/Db above that A</b>
+<p>If we have music that we know is in the key of <b>A</b>, Audacity <i>may</i> estimate the pitch as <b>A</b> if the first note is an <b>A</b>. However, music does not always start on the same note as the musical key it's in, so the detected note will not necessarily be an <b>A</b>. That does not matter because we know the current key and the key we want to change to. Whatever the detected pitch, we'll set the "from" pitch to be an <b>A</b> and the "to" pitch to be the <b>C#/Db</b> above that <b>A</b>. </p><p> In the image above, the first note detected was actually <b>B4</b>. This makes it the second note in the scale of <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/A_major">A major</a> or <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/A_minor">A minor</a> in fourth <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Octave">octave</a> position (that is, nearly an octave above C4 which is commonly known as "Middle C").    
+<ol><li> Change "from" pitch to <b>A</b> by clicking in the dropdown menu.</li>
+<li> Change "to" pitch to <b>C#/Db</b>  by clicking in the dropdown menu.</li>
+<li> Observe the octave text box to right of "to" pitch is still at <b>4</b>, indicating a pitch change down of 8 semitones.</li>
+<li> Click the upward-pointing arrow to right of the "to" octave text box (or click in or select the box and press <span class="kbrd" style="background-color: #e0e0f0">Up</span> arrow) to change the octave to <b>5</b>. This is necessary because the octave number always increases by 1 when moving up through C.</li>
+<li> We now have the change we want from <b>A4</b> to <b>C#/Db5</b>, so we could click <span class="button">OK</span> to make the change.</p></li></ol>
+<p>Before changing the pitch, observe that the pitch change could have been entered in other ways. Had we realised that <b>A</b> to <b>C#/Db</b> was 4 <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Semitone">semitones</a>, we could have left the pitch controls alone and just entered <b>4</b> in "Semitones (half-steps)". It does not matter that the pitch change indicated would have been from <b>B4</b> to <b>D#/Eb5</b>, because it is the  <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Interval_%28music%29">interval</a> of 4 semitones that Audacity is applying.</p><p>We could also have achieved an identical result by simply setting the "Percent Change" to <b>25.992</b> (if we happened to know that 4 semitones upwards is equivalent to 25.992%).</p></div>
+<div id="limitations"></div>
+<h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
+<p>Change Pitch is a time-stretching effect, because it defies the normal expectation that to lower the pitch of the audio it is necessary to reduce its speed (and thus its length) and vice versa. As with any time-stretching effect, some audible distortions will be expected, particularly at more extreme settings. 
+</p><p>Change Pitch by default does not keep the length of the selection exactly as before. Enable the checkbox <i>Use high quality stretching (slow)</i> if it is important to keep the exact same length, for example if changing the pitch of individual very short notes.
+</p><p>The highest reliable detection frequency is about 1/8th of the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>. So for a sample rate of 2000 <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i>, pitch detection will not be accurate much above 250 Hz and for the default <a href="selection_toolbar.html" title="Selection Toolbar">project rate</a> of 44100 Hz, detection will not be accurate much above 5500 Hz.
+</p>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
+<p>Clicking on the command buttons give the following results:
+</p>
+<ul><li><span class="button">Manage</span> gives a dropdown menu enabling you to manage presets for the tool and to see some detail about the tool. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a></li>
+<li><span class="button">Preview</span> plays a short preview of what the audio would sound like if the effect is applied with the current settings, without making actual changes to the audio.  The length of preview is determined by your setting in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span>, the default setting is 6 seconds.</li>
+<li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
+<li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> brings you to the appropriate page in the Manual, this page</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112119
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.122 seconds
+Real time usage: 0.127 seconds
+Preprocessor visited node count: 423/1000000
+Preprocessor generated node count: 1810/1000000
+Post‐expand include size: 18017/2097152 bytes
+Template argument size: 5498/2097152 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   50.007      1 - -total
+ 39.57%   19.786      1 - Template:I18n
+ 36.61%   18.308      1 - Template:I18n_box
+ 32.13%   16.068      1 - Template:I18n_list
+ 23.22%   11.610      1 - Template:Effectbuttons
+ 17.99%    8.998      1 - Template:Buttonlist
+ 14.07%    7.037      3 - Template:I18n_link
+ 13.07%    6.538     11 - Template:Button
+ 12.58%    6.292      1 - Template:No-rename
+  9.57%    4.788      1 - Template:Ednote
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2717-0!*!0!!*!5!* and timestamp 20180917112119 and revision id 60298
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Change_Pitch">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

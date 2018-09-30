@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Sending your work to others - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Sending_your_work_to_others rootpage-Sending_your_work_to_others skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Sending your work to others</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Sending_your_work_to_others#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">If you are working with other users, can you send your multi-track Project to them so they can contribute to it? Can you send an audio message with some music and email it to a relative? Or what if you want to open your Project on another of your own computers running a different operating system?</div> 
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Sending_Projects_to_others"><span class="tocnumber">1</span> <span class="toctext">Sending Projects to others</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Dependencies_on_other_audio_files"><span class="tocnumber">1.1</span> <span class="toctext">Dependencies on other audio files</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Sending_an_exported_audio_file"><span class="tocnumber">2</span> <span class="toctext">Sending an exported audio file</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Sending_files_by_email"><span class="tocnumber">2.1</span> <span class="toctext">Sending files by email</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Exporting_from_multi-track_projects"><span class="tocnumber">2.2</span> <span class="toctext">Exporting from multi-track projects</span></a></li>
+<li class="toclevel-2"><a href="#Sending_to_someone_using_a_different_version_of_Audacity"><span class="tocnumber">2.3</span> <span class="toctext">Sending to someone using a different version of Audacity</span></a></li>
+<li class="toclevel-2"><a href="#Sending_to_someone_using_a_different_operating_system_or_platform"><span class="tocnumber">2.4</span> <span class="toctext">Sending to someone using a different operating system or platform</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="projects"></div>
+<h2><span class="mw-headline" id="Sending_Projects_to_others">Sending Projects to others</span></h2>
+<p>It's quite possible to send an Audacity Project to another person or open it on another computer of your own, so that the Project can be opened in another copy of Audacity with all the tracks, label and envelope information in situ. However when opening the AUP Project file you need to have its associated _data folder with the same name as the AUP file present in the same folder. For example, to send a Project to someone else you could send the AUP file and _data folder in a compressed .zip archive. Free Windows tools to create .zip archives include <a rel="nofollow" class="external text" href="http://www.7-zip.org/">7-Zip</a> or <a rel="nofollow" class="external text" href="http://www.izarc.org/">IZArc</a>. Free Mac tools include <a rel="nofollow" class="external text" href="http://mac.softpedia.com/get/Utilities/keka.shtml">Keka</a> or Apple's built-in compression utility. Zip compression is lossless, so does not reduce the space on disk very much. Ask your recipient to extract both the AUP file and _data folder to the same directory then open the AUP file from inside that folder. 
+</p><p>In practice, the problem with sending such a folder to someone else is the size of the _data folder. At Audacity's default 32-bit float sample format / 44100 Hz sample rate using lossless uncompressed audio, stereo Projects take 20 MB of space per minute, which rules out sending the project by email. 
+</p><p>To send your project, first close it (saving changes) so that Audacity can discard the surplus data files which allow undo and redo of edits while projects are open. This way, only the audio for the current state of the project is included. If you forget to close the project before zipping, Audacity will complain about these surplus files, calling them "orphan block files". If this happens, the safest course is to tell Audacity to "continue without deleting" the orphans, at least until you are sure the audio of the project is correct.  
+</p><p>Then use a zip application like those above to place the AUP file and _data folder inside a zip file. Then find a suitable free internet file transfer service to send your zip file. Recommendable services include the following. Check the limitations for free accounts on size and number of uploads, maximum permitted number of downloads, and length of time files are stored for.      
+</p>
+<ul><li> <a rel="nofollow" class="external free" href="https://www.dropbox.com/">https://www.dropbox.com/</a></li>
+<li> <a rel="nofollow" class="external free" href="http://www.dropsend.com/">http://www.dropsend.com/</a></li>
+<li> <a rel="nofollow" class="external free" href="https://www.hightail.com">http://www.hightail.com</a>  (free trial) </li>
+<li> <a rel="nofollow" class="external free" href="http://www.mailbigfile.com/">http://www.mailbigfile.com/</a></li>
+<li> <a rel="nofollow" class="external free" href="https://www.sendspace.com">http://www.sendspace.com</a> </li></ul>
+<p>Don't forget old-fashioned solutions too if you are still on slow dial-up internet. You can always combine your AUP Project file and _data folder in a .zip file, burn this to a data CD with Windows Media Player or similar then send it by postal mail.  
+</p>
+<div class="note"><i>You can produce a small, compressed project for distribution to others using <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_compressed_copy_of_project" title="File Menu: Save Project">Save Compressed Copy of Project...</a></span>. </i>
+<ul><li> The audio in the _data folder is in the form of one <a href="glossary.html#ogg" title="Glossary">OGG</a> file per track of the project. </li>
+<li> The OGG files are very slightly lossy, whereas when saving a project by <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> or <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As...</a></span> the .au files in the _data folder are lossless.</div></li></ul>
+<h3><span class="mw-headline" id="Dependencies_on_other_audio_files">Dependencies on other audio files</span></h3>
+<p><b>If you save a standard uncompressed project which contains audio imported into Audacity from a WAV or AIFF file</b>, you must have previously set Audacity to make a copy of that original audio when you imported it, so that it's included in the _data folder.  Note that when importing compressed audio like MP3 or OGG, Audacity always copies the audio into the _data folder.
+</p>
+<ul><li>When you import a WAV or AIFF there will by default be a warning where you can choose to copy in the file or not.</li>
+<li>You can always check if you need to copy in files to the current project, and copy them in if necessary at <span class="menu">Help &gt; Diagnostics &gt; <a href="dependencies_dialog.html" title="Dependencies Dialog">Check Dependencies...</a></span>.</li>
+<li>You can change your preference for future copying in or not in <a href="import_export_preferences.html" title="Import - Export Preferences">Import/Export Preferences</a>, and you can turn the warning on or off in <a href="warnings_preferences.html" title="Warnings Preferences">Warnings Preferences</a>.</li></ul>
+<div id="files"></div>
+<h2><span class="mw-headline" id="Sending_an_exported_audio_file">Sending an exported audio file</span></h2>
+<p>You can also send an exported audio file from your Project to the other user. Only Project–specific information such as label and envelope data will be lost by exporting instead of saving a project. 
+</p><p>To export your Project as an audio file, choose the <span class="menu">File &gt; <a href="file_menu_export.html" title="File Menu: Export">Export</a></span> command. Choices:
+</p>
+<ul><li> Exporting as a <a href="glossary.html#wav" title="Glossary">WAV</a> or <a href="glossary.html#aiff" title="Glossary">AIFF</a> file creates a file with no loss of audio quality, but this takes 10 MB of disk space per minute for CD quality (44100 Hz, 16-bit stereo). </li>
+<li> Exporting from Audacity as <a href="glossary.html#flac" title="Glossary">FLAC</a> provides lossless compression and reliably reduces file size by about 40% compared to WAV or AIFF.</li></ul>
+<div id="oggmp3"></div>  
+<ul><li> Exporting as an <a href="glossary.html#ogg" title="Glossary">OGG</a> or <a href="glossary.html#mp3" title="Glossary">MP3</a> greatly reduces the size of the exported file, at the expense of some quality loss.
+<ul><li> <b>OGG</b> tends to have slightly higher quality than MP3 for the same file size, but not all software players can accept OGG, and most websites hosting audio files expect MP3. </li>
+<li> Audacity's default <b>MP3</b> export bit rate of 128 kbps gives very reasonable sound quality for about 1 MB of space per minute. To compress the MP3 to a still smaller file (at the cost of further quality loss), choose "MP3 Files" in the Export File window, press the <span class="button">Options</span> button then reduce the bit rate in the "Quality" dropdown.<p> For example, a 64 kbps MP3 would take up 0.5 MB (500 kb) per minute, because 64 kbps is half the default bit rate of 128 kbps.</p></li></ul></li></ul>
+<div class="note">To export MP3 files you must add the LAME encoder to your computer. Instructions for doing this are at <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">Lame Installation</a> in the FAQ.</div>
+<p>For all formats except MP3, you can reduce the exported file size further by reducing its <a href="glossary.html#sample_rate" title="Glossary">sample rate</a>. Do this by changing the project rate dropdown bottom left of the screen. Reducing the project rate below 44100 Hz is only recommended for speech. 
+</p>
+<div id="email"></div>
+<h3><span class="mw-headline" id="Sending_files_by_email">Sending files by email</span></h3>
+<p>You should always attach your audio file to the email message. Some email clients can embed the audio inside HTML email messages so that the recipient hears the audio on opening the email without having to open an attachment. However whether the recipient will hear the audio depends on the recipient having an HTML email client (or having HTML enabled without any security restrictions in place). Many email users disable HTML email due to its perceived security risk. 
+</p><p>Sending files greater than 5 MB by email is usually out of the question due to server bandwidth and storage restrictions. Some webmail services do allow larger messages to be sent. For example, Gmail allows sending messages up to 25 MB, but this still depends on the recipient's email service accepting large attachments (Gmail now accepts <i>incoming</i> attachments up to 50 MB). The best solution is often to use a web-based transfer service like <a rel="nofollow" class="external free" href="http://www.yousendit.com">http://www.yousendit.com</a>, <a rel="nofollow" class="external free" href="https://www.sendspace.com">http://www.sendspace.com</a> or <a rel="nofollow" class="external free" href="http://minus.com/">http://minus.com/</a>, or burn the exported audio file to an audio CD and send it by postal mail. 
+</p><p>If you want to burn to an audio CD you need to export 44100 Hz, 16-bit stereo WAV or AIFF files, and tell your burning software to burn an "audio" or "music" CD. For instructions on how to do this, see <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">How to burn CDs</a>. Audio CDs will retain the full quality of the original track in Audacity, can contain 74 – 80 minutes of music and can be played in computers and on any standalone CD player (and some standalone DVD players).
+</p>
+<h3><span class="mw-headline" id="Exporting_from_multi-track_projects">Exporting from multi-track projects</span></h3>
+<p>If you have multiple tracks in your Project, Audacity by default will mix these down to a single mono or stereo track when exporting to an audio file. To export separate tracks you can:
+</p>
+<ul><li> Use <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> and "split files based on tracks" </li>
+<li> Select the first track, choose <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportselectedaudio" title="File Menu: Export">Export Selected Audio...</a></span> then repeat in turn for the other tracks. </li></ul>
+<p>The recipient can then shift-select and multiple import each file into separate tracks of an empty Audacity Project. 
+</p><p>Alternatively, current Audacity can export the individual tracks in a Project as one <i>multi-channel</i> audio file. So if you had a Project with six mono or left/right tracks, it could be exported as a one six-channel audio file, and any user of Audacity 1.2 or later can open that file and see the channels displayed as individual tracks. 
+</p><p>To use multi-channel export, go to <a href="import_export_preferences.html" title="Import - Export Preferences">Import/Export Preferences</a> and enable "<b>Use custom mix</b>".
+</p>
+<div class="note"><div id="version"></div>
+<h3><span class="mw-headline" id="Sending_to_someone_using_a_different_version_of_Audacity">Sending to someone using a different version of Audacity</span></h3>
+<p>If you or the other party created the project with a legacy version of Audacity, please note the following restrictions.    
+</p>
+<ul><li>If the person you are sending the Project to has a legacy 1.2.x version of Audacity you will need to save the Project in a 1.2.x version of Audacity, because 1.2.x versions of Audacity cannot open Projects created in 1.3 or later versions. </li>
+<li>If the person you are sending the Project to has Audacity 1.3.2 or later, they should be able to open a project created in 1.2.x, but ask them to back up the AUP file and _data folder on receipt to be sure. To make a backup, copy the AUP file and _data folder and paste them into a different folder. Once they do save that project in 1.3.x or later and send it back to you, you will need 1.3.x or later yourself to open it. </li>
+<li>If the person you are sending the Project to uses Audacity 1.0.0 (users on Mac OS 9 are limited to this version of Audacity), you must create the Project in 1.0.0, because 1.0.0 cannot open Projects created in 1.1.0 or later. If that person sends you a Project created in 1.0.0, you should generally be able to open it in 1.1.0 to 1.2.6, but Audacity's conversion of a 1.0.0 Project to the new format used by 1.1.0 or later does not always work. You should not open Projects created in 1.0.0 in current versions of Audacity.</li></ul>
+<div id="platform"></div>
+<h3><span class="mw-headline" id="Sending_to_someone_using_a_different_operating_system_or_platform">Sending to someone using a different operating system or platform</span></h3>
+<ul><li>Zip formats do not support reliable character encoding, so for the name of the project, labels, track names or metadata, only use A to Z or a to z characters, whole numbers (0 to 9), underscore or hyphen-minus (or use the NUMPAD_SUBTRACT key).<p>Anything else could be incorrectly interpreted by the unzip application on the other operating platform. </p></li>
+<li>Also use only A to Z or a to z characters, whole numbers (0 to 9), underscore or hyphen-minus (or use the NUMPAD_SUBTRACT key) if either party created the project on Windows 98 or ME which are non-<a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> systems. This is the case even if both parties are on Windows.</div></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20180917112208
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.061 seconds
+Real time usage: 0.065 seconds
+Preprocessor visited node count: 242/1000000
+Preprocessor generated node count: 1250/1000000
+Post‐expand include size: 7132/2097152 bytes
+Template argument size: 5342/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   29.740      1 - -total
+ 64.97%   19.322      1 - Template:I18n
+ 59.44%   17.676      1 - Template:I18n_box
+ 48.87%   14.534      1 - Template:I18n_list
+ 19.10%    5.680      2 - Template:I18n_link
+ 16.07%    4.779      2 - Template:Hint
+ 11.94%    3.550      3 - Template:Note
+ 11.24%    3.343      2 - Template:Autoglossonym
+  6.87%    2.043      7 - Template:Menu
+  5.26%    1.563      1 - Template:Intro
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4853-0!*!0!!en!*!* and timestamp 20180917112208 and revision id 60615
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Sending_your_work_to_others">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

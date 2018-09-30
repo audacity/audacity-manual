@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial - Recording Computer Playback on Windows - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tutorial_-_Recording_Computer_Playback_on_Windows rootpage-Tutorial_-_Recording_Computer_Playback_on_Windows skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial - Recording Computer Playback on Windows</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_Computer_Playback_on_Windows#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">Recording computer playback can be confusing because there are several different ways the audio can be recorded.
+<ul><li> <b>Software playthrough</b> (e.g. a stereo-mix option on Windows 'Sound control panel') - If available, this is usually best.  The computer generated audio is mixed digitally with the other recorded audio with no loss of quality.</li>
+<li> <b>Hardware playthrough</b> (e.g. using a loopback cable) - The computer generated audio is converted to analog, mixed with any incoming audio, and converted back to digital again.</li>
+<li> <b>Overdub</b> - This option in Audacity is for a different purpose.  It allows you to listen to other audio that you have already in Audacity as you record new audio.  For example you could listen to vocals on your headphones as you record a backing track.  There is no need to record these other tracks, because they are already in Audacity and available for mixing.</div></li></ul>
+<div class="note">On Windows, sound devices often lack a "Stereo Mix" or similar input, or it must be specially enabled in the Windows "Sound" Control Panel. On these operating systems. You can also choose Windows <a href="#wasapi">WASAPI</a> host and the <a href="#wasapi">(loopback)</a> input choice in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. This will record computer playback even if the computer sound device lacks its own input to do this.  </div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">
+<ul><li> <b>Copyright or website restrictions may prevent you recording or distributing material.</b> Check first.</li>
+<li> <b>When recording computer playback, ensure the menu item <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> is off.</b> If the item has a checkmark, click it  to turn off playthrough. Otherwise you will hear and record echoes or distorted sound. </li></ul>
+</td></tr></table></div>
+<h2><span class="mw-headline" id="Choosing_the_recording_device_in_Audacity">Choosing the recording device in Audacity</span></h2>
+<p>In <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> (pictured below) or in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>, choose "MME" or "Windows DirectSound" in the Audio Host box. In the Recording Device box, look if there is an input meant for recording computer playback. This input could be called "Stereo Mix", "Wave Out", "Sum", "What U Hear", "Loopback" or other names, depending on your sound device. 
+</p>
+<dl><dd><dl><dd><span title="Device Toolbar"><img alt="DeviceToolbarWin7Basic.png" src="../m/images/a/aa/devicetoolbarwin7basic.png" width="599" height="96" /></span></dd></dl></dd></dl>
+<p>If you do not see Stereo Mix or similar:
+</p>
+<ul><li> Make sure you have the latest correct <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">audio drivers</a> meant for your version of Windows  </li>
+<li> Go to the <a href="#control_panel">Windows Control Panel</a> to see if stereo mix can be enabled</li>
+<li> On Windows, choose the <a href="#wasapi">Windows WASAPI loopback</a> recording method instead.</li></ul>
+<div class="note"><b>You must play the audio you want to record using the same sound device that has the "Stereo Mix" or similar input.</b> You cannot play audio through an HDMI output or through a headset, headphones or speakers that connect via USB or wirelessly then record that playback using the stereo mix input of the built-in sound device. <p>Choose the Windows WASAPI host (next section) if you want to record playback of a USB, wireless or external sound device.</p></div>
+<div id="wasapi"></div> 
+<h3><span class="mw-headline" id="Windows_WASAPI_loopback_recording">Windows WASAPI loopback recording</span></h3>
+<p><b>On Windows</b>, you can choose the <i><b><a href="glossary.html#wasapi" title="Glossary">Windows WASAPI</a></b></i> &#160;Audio Host and then the "<a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd316551(v=vs.85).aspx">(loopback)</a>"  input in the Recording Device box. Choose the loopback input for the computer playback device you will be listening to (for example, "Speakers (loopback)" ).  The loopback input records computer playback even if your sound device lacks its own stereo mix or similar input: 
+</p>
+<dl><dd><span title="WASAPI loopback input in Device Toolbar"><img alt="DeviceToolbarStreamingAudio - WASAPI loopback.png" src="../m/images/2/26/devicetoolbarstreamingaudio_wasapi_loopback.png" width="806" height="28" /></span></dd></dl>
+<p>WASAPI loopback has an advantage over stereo mix or similar inputs provided by the audio interface that the capture is entirely digital (rather than converting to analog for playback, then back to digital when Audacity receives it). System sounds playing through the device selected for WASAPI loopback are still captured.
+</p>
+<h4><span class="mw-headline" id="Playback_and_Recording_sliders">Playback and Recording sliders</span></h4>
+<p>The behavior of the Audacity playback and recording sliders may vary according to the sound device you are recording from. 
+</p>
+<ul><li> <b>On some devices the <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a> recording volume slider will be grayed out when selecting the Windows WASAPI host</b>, and even if not grayed out, the device may not support Audacity or the system input slider adjusting its volume. To control the recording level on those systems, you can try adjusting the <i>playback</i> level of the audio. This is best done in the application that is playing the audio, for example the video or audio player on the website you are recording from. If this does not work then Audacity will record at a fixed, safe level irrespective of the playback level of the audio. </li>
+<li> <b>On many other devices, the Audacity recording volume and playback volume sliders will be "linked"</b> so that both sliders move when you move either slider, and either slider will affect the level of the audio that you hear. This will often happen if in Audacity you set the (loopback) recording device to the same built-in device as the one selected for playback. </li>
+<li> <b>When the Audacity recording and playback sliders are linked, adjusting either slider will often not affect the level already being recorded.</b> This means that if you do not want to hear what you are recording, you can simply turn down either Audacity volume slider. However on some devices, turning down either slider may turn down or silence the achieved recording level. If this happens then to make a recording without hearing it, you can try the following:
+<ul><li> Click the speaker by the system clock, click the "Mixer" link, then mute the "Device" slider at far left of the "Volume Mixer" window    </li>
+<li> Plug in external speakers or headphones and turn those down</li>
+<li> Plug in any 1/8 inch (3.5 mm) minijack plug with no lead attached.  </li></ul></li></ul>
+<div class="note"><b>Tips for WASAPI loopback recording:</b> 
+<ul><li> You will normally need to start playing the stream (or to have previously played some other audio in the application you are using for playback) <b>before</b> pressing Record in Audacity.   </li>
+<li> WASAPI loopback may not be able to record in mono on all devices. If mono recording produces an error, change Device Toolbar to "2 (Stereo) Recording Channels". You can convert a stereo recording to mono using <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html" title="Tracks Menu: Mix">Stereo Down to Mono</a></span>.</div>    </li></ul>
+<p><b>If you do not see any input for recording computer playback</b>, exit Audacity and continue reading below. 
+</p>
+<div id="control_panel"></div>
+<h2><span class="mw-headline" id="Windows_Control_Panel_for_sounds">Windows Control Panel for sounds</span></h2>
+<p><b>Windows, computers almost always only have microphone inputs enabled by default.</b> Earlier Windows systems may also need the input for recording computer playback to be made visible before Audacity can use it. To show or enable inputs, launch the sound device control panel from the Windows Control Panel or from the system tray (by the clock). 
+</p>
+<ol><li> Right-click over the <span class="menu">Speaker icon</span> by the system clock then choose <span class="menu">Recording Devices</span> to open the Recording tab of "Sound".   </li>
+<li> Right-click anywhere inside the Recording tab and choose <b>"Show disabled devices"</b> then right-click again and choose <b>"Show Disconnected Devices"</b>. </li>
+<li> Right-click specifically over the input device you want to record with (in this case "Stereo Mix" or whatever alternative you have), and if visible, choose <b>"Enable"</b>.</li>
+<li> Sometimes it helps to right-click over the "stereo mix" or similar device again and choose "Set as Default Device".  </li>
+<li> If you need more help, see these <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/index.php?title=Mixer_Toolbar_Issues#vistacp">Wiki instructions for Windows</a>.</li></ol>
+<h2><span class="mw-headline" id="RealTek_and_other_audio_interface_control_panels">RealTek and other audio interface control panels</span></h2>
+<p>If you still have no stereo mix input in Windows, sometimes this input can be enabled in the audio interface's own control panel, especially with older RealTek devices. The audio interface's own control panel can be found in the Windows Control Panel. Hints for RealTek control panels:
+</p>
+<ul><li> Some panels "select" an input by muting all but one, so in this case, mute everything except Stereo Mix </li>
+<li> If you do not see Stereo Mix, click the wrench or spanner icon and enable Stereo Mix in the dialog that appears </li>
+<li> In some panels the option to choose is "Enabled recording multi-streaming" </li>
+<li> You should now see a volume control for Stereo Mix; make sure it is selected or unmuted.</li></ul>
+<h2><span class="mw-headline" id="Updating_sound_device_drivers">Updating sound device drivers</span></h2>
+<p>If there is still no suitable input, try <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">updating the sound device drivers</a> for your audio interface. This can sometimes produce an additional input for recording computer playback, and may fix other problems such as poor quality or <a href="faq_recording_troubleshooting.html#skips" title="FAQ:Recording - Troubleshooting">skipping</a>.
+</p>
+<div id="cable"></div>
+<h2><span class="mw-headline" id="Loopback_cable">Loopback cable</span></h2>
+<p>An alternative method of recording audio playing on the computer is to buy a cable with 1/8 inch (3.5 mm) stereo connectors at each end. Suitable cables are available from almost any audio retailer. Connect one end of the cable to the computer's audio output (green) and the other end to the line-in input (blue). Then choose the line-in as input device in Audacity. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Connecting to the microphone input (red) may produce mono sound or poor quality.
+</td></tr></table></div>
+<div class="note">To hear what is playing while you record it, buy a single stereo to double stereo adaptor to plug into the audio output. This gives you a spare jack to plug the speakers or headphones into.</div> 
+<div id="alt"></div>
+<h2><span class="mw-headline" id="Alternative_applications_for_recording_computer_playback">Alternative applications for recording computer playback</span></h2>
+<p>You can use other applications to record computer playback that do not rely on the computer sound device having this ability. These applications will make an audio file which can then be imported into Audacity for editing. 
+</p><p>All the options below grab the audio digitally from the application producing the sound. This has  advantages over stereo mix recording. Lossy digital-analog-digital conversions are avoided
+and also unwanted system beeps and alerts are not captured. 
+</p>
+<ul><li> <a rel="nofollow" class="external text" href="http://www.milosoftware.com/en/index.php?body=soundleech.php">SoundLeech</a> is a free application for Windows which runs from the system tray. It records to lossless WAV format only.  </li>
+<li> <a rel="nofollow" class="external text" href="http://vb-audio.pagesperso-orange.fr/Cable/index.htm">VB-Audio Virtual Cable</a> is a donation-ware application for Windows. You can set the Cable Input as default playback device then set Audacity to record from the Cable Output.</li>
+<li> <a rel="nofollow" class="external text" href="http://www.highcriteria.com/">TotalRecorder</a> is a low cost recording package. Internet streams can optionally be captured at faster than real-time rates <i>(monitoring is not available in that mode)</i>.</li></ul>
+<h2><span class="mw-headline" id="External_audio_interfaces">External audio interfaces</span></h2>
+<p>A further alternative is an external USB audio interface with a "Stereo Mix" type of option. An example known to work on all versions of Windows is "Trust Sound Expert External".  Not all USB audio interfaces offer a Stereo Mix option, so read the specifications carefully before purchasing.
+</p>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="tutorial_recording_audio_playing_on_the_computer.html#setup" title="Tutorial - Recording audio playing on the computer"><b>|&lt;</b> Tutorial - Recording audio playing on the computer</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112123
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.093 seconds
+Real time usage: 0.098 seconds
+Preprocessor visited node count: 285/1000000
+Preprocessor generated node count: 1208/1000000
+Post‐expand include size: 7675/2097152 bytes
+Template argument size: 5078/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   30.736      1 - -total
+ 68.15%   20.947      1 - Template:I18n
+ 62.59%   19.237      1 - Template:I18n_box
+ 52.04%   15.994      1 - Template:I18n_list
+ 22.96%    7.056      3 - Template:I18n_link
+ 13.35%    4.104      3 - Template:Autoglossonym
+  9.43%    2.899      2 - Template:Hint
+  7.95%    2.442      2 - Template:Advice
+  6.93%    2.129      4 - Template:Note
+  5.12%    1.573      1 - Template:Intro
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3504-0!*!0!!*!5!* and timestamp 20180917112123 and revision id 62150
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_Computer_Playback_on_Windows">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Tracks Preferences - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tracks_Preferences rootpage-Tracks_Preferences skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tracks Preferences</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tracks_Preferences#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+
+<p><br />
+</p>
+<dl><dd><b>Accessed by:</b> <span class="menu">Edit &gt; Preferences &gt; Tracks </span> &#160;&#160;&#160;<i>(on a Mac <span class="menu">Audacity &gt; Preferences &gt; Tracks </span>)</i></dd>
+<dd><div class="noresize"><map name="ImageMap_1_374638273"><area href="devices_preferences.html" shape="rect" coords="24,34,136,50" alt="Devices Preferences" title="Devices Preferences"/><area href="playback_preferences.html" shape="rect" coords="24,52,136,68" alt="Playback Preferences" title="Playback Preferences"/><area href="recording_preferences.html" shape="rect" coords="24,70,136,86" alt="Recording Preferences" title="Recording Preferences"/><area href="midi_devices_preferences.html" shape="rect" coords="24,88,136,104" alt="MIDI Devices Preferences" title="MIDI Devices Preferences"/><area href="quality_preferences.html" shape="rect" coords="24,106,136,122" alt="Quality Preferences" title="Quality Preferences"/><area href="interface_preferences.html" shape="rect" coords="24,124,136,140" alt="Interface Preferences" title="Interface Preferences"/><area href="#" shape="rect" coords="24,142,136,158" alt="Tracks Preferences" title="Tracks Preferences"/><area href="tracks_behaviors_preferences.html" shape="rect" coords="44,160,136,176" alt="Tracks Behaviors Preferences" title="Tracks Behaviors Preferences"/><area href="spectrograms_preferences.html" shape="rect" coords="44,178,136,194" alt="Spectrograms Preferences" title="Spectrograms Preferences"/><area href="import_export_preferences.html" shape="rect" coords="24,196,136,212" alt="Import/Export Preferences" title="Import/Export Preferences"/><area href="extended_import_preferences.html" shape="rect" coords="44,214,136,230" alt="Extended Import Preferences" title="Extended Import Preferences"/><area href="projects_preferences.html" shape="rect" coords="24,232,136,248" alt="Projects Preferences" title="Projects Preferences"/><area href="libraries_preferences.html" shape="rect" coords="24,250,136,266" alt="Libraries Preferences" title="Libraries Preferences"/><area href="directories_preferences.html" shape="rect" coords="24,268,136,284" alt="Directories Preferences" title="Directories Preferences"/><area href="warnings_preferences.html" shape="rect" coords="24,286,136,302" alt="Warnings Preferences" title="Warnings Preferences"/><area href="effects_preferences.html" shape="rect" coords="24,304,136,320" alt="Effects Preferences" title="Effects Preferences"/><area href="keyboard_preferences.html" shape="rect" coords="24,322,136,338" alt="Keyboard Preferences" title="Keyboard Preferences"/><area href="mouse_preferences.html" shape="rect" coords="24,340,136,356" alt="Mouse Preferences" title="Mouse Preferences"/><area href="modules_preferences.html" shape="rect" coords="24,358,136,374" alt="Modules Preferences" title="Modules Preferences"/><area href="help_button.html" shape="rect" coords="575,457,611,493" alt="Click on this in Audacity to get help" title="Click on this in Audacity to get help"/></map><img alt="Preferences Tracks.png" src="../m/images/b/b7/preferences_tracks.png" width="627" height="473" usemap="#ImageMap_1_374638273"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:550px;top:-25px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click in the left column for other preferences</b></div>
+</div>
+<dl><dd><b>Tracks Preferences.</b><br /></dd></dl>
+<p><br />
+</p>
+<div id="display"></div>
+<h2><span class="mw-headline" id="Display">Display</span></h2>
+<ul><li> <span style="font-weight: bold; font-size:118%">Auto-fit track height:</span> Tracks will be automatically resized to fit in the vertical space of the project window if possible. All tracks that have not been collapsed using the <a href="audio_tracks.html#collapse" title="Audio Tracks">Track Collapse Button</a> or Collapse All Tracks menu item are resized so that each separate waveform has the same height. Accordingly mono tracks will have the same height as each other and stereo tracks will have the same height as each other (twice the height of the mono tracks). </li></ul>
+<ul><li> <span style="font-weight: bold; font-size:118%">Show audio track name as overlay:</span> When this is enabled the audio track name is displayed superimposed in yellow at top left of all audio tracks. Note that the track name is always shown in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> but will be truncated if the name is too long to fit. </li></ul>
+<dl><dd><dl><dd><span title="Waveform with superimposed track name"><img alt="Audio Track with track name superimposed.png" src="../m/images/d/dc/audio_track_with_track_name_superimposed.png" width="687" height="169" /></span></dd></dl></dd></dl>
+<ul><li> <span style="font-weight: bold; font-size:118%">Use half-wave display when collapsed:</span> With this preference on, collapsing the tracks switches to half-wave view and uncollapsing the tracks switches to full wave view.}</li></ul>
+<dl><dd><dl><dd><span title="Half-wave display in a collapsed track}"><img alt="Half-wave display when collapsed.png" src="../m/images/5/50/half_wave_display_when_collapsed.png" width="687" height="52" /></span></dd></dl></dd></dl>
+<ul><li><span style="font-weight: bold; font-size:118%">Auto-scroll if head unpinned:</span> If <i>Pinned Recording/Playback head</i> (see above) is unchecked as per default, this option scrolls the <a href="timeline.html" title="Timeline">Timeline</a> leftwards during standard <a href="playing_and_recording.html" title="Playing and Recording">play or recording</a> when the playback or recording cursor reaches the right-hand edge of the project. <p>Most users would keep this setting enabled. Turning it off:
+<ul><li> may prevent interrupted playback or recording on slower computers
+<li> lets you drag the horizontal scrollbar at the bottom of the window to a new position then restart playback from there
+<li> halts <a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing and Seeking playback</a> when the playhead reaches either edge of the visible project   
+<li> prevents losing sight of a selection edge when making <a href="tutorial_looping.html" title="Tutorial - Looping">loops</a>
+<li> makes it easier to listen repeatedly from a particular start point without its visible surroundings changing.</ul></p><p>This preference may also be turned on and off during playback using the <a href="timeline.html#menu" title="Timeline">Timeline right-click menu</a>.</p></ul>
+<ul><li> <span style="font-weight: bold; font-size:118%">Default view mode:</span> Choose the default view for all newly-created audio tracks. The choices are the same as those available in the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>.</li></ul>
+<ul><li> <span style="font-weight: bold; font-size:118%">Display samples:</span> This setting changes how <a href="audacity_waveform.html" title="Audacity Waveform">Waveform</a> and <a href="audacity_waveform.html#db" title="Audacity Waveform">Waveform dB</a> views are displayed.  It only affects the appearance of the waveform when you are so far zoomed in that you can see the individual sample dots.  At lower zoom levels it makes no difference.  
+<ul><li><b>Stem plot:</b> This is the default setting which draws a vertical line from the track center line to the sample dot, giving a clearer impression of the relative amplitude of the samples. As seen in the images below, when zoomed out close to the minimum for a stem plot, the horizontal distance between sample dots may be more uneven than seen with the connect dots default. Uneven spacing is due to "aliasing", but zooming in further will equalize the spacing whether choosing Connect dots or Stem plot.   </li>
+<li><b>Connect dots:</b> This is alternative setting yields a waveform where each sample dot is connected to the next sample by a line drawn between them.  </li></ul></li></ul>
+<dl><dd><dl><dd><span title="Examples of zoomed in Waveform view showing &#39;Connect dots&#39; and &#39;Stem Plot"><img alt="Connect dots &amp; Stem plot examples.png" src="../m/images/e/ef/connect_dots_stem_plot_examples.png" width="683" height="334" /></span></dd></dl></dd></dl>
+<ul><li> <span style="font-weight: bold; font-size:118%">Default audio track name:</span> The default name that Audacity will use for new audio tracks other than imported files. The Audacity default name is "Audio Track".</li></ul>
+<p><br />
+</p>
+<div id="toggle"></div>
+<h2><span class="mw-headline" id="Zoom_Toggle">Zoom Toggle</span></h2>
+<p>This setting changes either or both of the two pre-defined zoom levels for the <span class="menu">View &gt; Zoom &gt; <a href="view_menu_zoom.html" title="View Menu: Zoom">Zoom Toggle</a></span> command (shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + Z</span>). 
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Preset 1:</span> User settable - default is <b>Zoom Default</b></li>
+<li><span style="font-weight: bold; font-size:118%">Preset 2:</span> User settable - default is <b>4 Pixels per Sample</b> </li></ul>
+<p>You may choose your own presets from those available in the dropdown menus for this option:
+</p>
+<table class="prettytable" style="margin-left25px" width="40%" id="keyboard_commands">
+
+<tr>
+<th style="text-align:left;">Selectable options
+</th>
+<th style="text-align:left;">Typical length of audio shown
+</th></tr>
+<tr>
+<td> <b>Fit to Width</b> </td>
+<td> Same as the command <span class="menu">View &gt; Track Size &gt; Fit to Width</span>
+</td></tr>
+<tr>
+<td> <b>Zoom to Selection</b> </td>
+<td> Same as the command <span class="menu">View &gt; Zoom &gt; Zoom to Selection</span>
+</td></tr>
+<tr>
+<td> <b>Zoom Default</b> <i>(default)</i> </td>
+<td> 9 - 20 seconds, same as the command <span class="menu">View &gt; Zoom &gt; Zoom Normal</span>
+</td></tr>
+<tr>
+<td> <b>Minutes</b> </td>
+<td> 2 hours 30 minutes - 5 hours 40 minutes depending on window size
+</td></tr>
+<tr>
+<td> <b>Seconds</b> </td>
+<td> 2 minutes 30 seconds - 5 minutes 40 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>5ths of Seconds</b> </td>
+<td> 30 seconds - 1 minute 10 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>10ths of Seconds</b> </td>
+<td> 15 - 35 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>20ths of Seconds</b> </td>
+<td> 7.5 - 17.5 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>50ths of Seconds</b> </td>
+<td> 3 - 7 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>100ths of Seconds</b> </td>
+<td> 1.5 -  3.5 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>500ths of Seconds</b> </td>
+<td> 0.3 - 0.7 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>Milliseconds</b> </td>
+<td> 0.15 - 0.35 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>Samples</b> </td>
+<td> 0.016 - 0.040 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>4 Pixels per Sample</b> <i>(default)</i> </td>
+<td> 0.004 - 0.010 seconds depending on window size
+</td></tr>
+<tr>
+<td> <b>Max Zoom</b> </td>
+<td> 5 - 12 individual samples depending on window size
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Cached time: 20180917111912
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.133 seconds
+Real time usage: 0.141 seconds
+Preprocessor visited node count: 382/1000000
+Preprocessor generated node count: 1560/1000000
+Post‐expand include size: 7447/2097152 bytes
+Template argument size: 2474/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   90.397      1 - -total
+ 53.02%   47.925      1 - Template:Prefs-imagemap
+ 30.55%   27.618      1 - Template:I18n
+ 28.73%   25.969      1 - Template:I18n_box
+ 25.88%   23.396      1 - Template:I18n_list
+ 13.67%   12.359      5 - Template:I18n_link
+  7.95%    7.190      5 - Template:Autoglossonym
+  7.79%    7.038      1 - Template:No-rename
+  6.05%    5.473      1 - Template:Ednote
+  2.76%    2.499      1 - Template:Button
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2672-0!*!0!!*!5!* and timestamp 20180917111912 and revision id 61988
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Tracks_Preferences">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

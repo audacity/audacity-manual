@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Tools Toolbar - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tools_Toolbar rootpage-Tools_Toolbar skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tools Toolbar</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tools_Toolbar#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro"><b>Tools Toolbar</b> enables your current tool for tasks such as selection, volume adjustment, horizontal zooming or audio time-shifting. Click another button to change tool or to go back to your previous tool.   
+</div>
+<dl><dd></dd>
+<dd><div class="noresize"><map name="ImageMap_1_118385893"><area href="customizing_toolbar_layout.html#grabber" shape="rect" coords="125,53,134,107" alt="Grabber for positioning the toolbar" title="Grabber for positioning the toolbar"/><area href="customizing_toolbar_layout.html#grabber" shape="rect" coords="3,3,95,33" alt="For positioning the toolbar" title="For positioning the toolbar"/><area href="zoom_tool.html" shape="rect" coords="136,81,162,107" alt="Zoom for seeing more or less detail of the waves" title="Zoom for seeing more or less detail of the waves"/><area href="zoom_tool.html" shape="rect" coords="3,127,76,157" alt="For seeing more or less detail of the waves" title="For seeing more or less detail of the waves"/><area href="selection_tool.html" shape="rect" coords="136,53,162,79" alt="Selection for selecting audio before applying an effect" title="Selection for selecting audio before applying an effect"/><area href="selection_tool.html" shape="rect" coords="95,3,198,33" alt="For selecting audio before applying an effect" title="For selecting audio before applying an effect"/><area href="time_shift_tool.html" shape="rect" coords="164,81,190,107" alt="Time Shift for shifting clips earlier or later in time" title="Time Shift for shifting clips earlier or later in time"/><area href="time_shift_tool.html" shape="rect" coords="76,127,185,157" alt="For shifting clips earlier or later in time" title="For shifting clips earlier or later in time"/><area href="envelope_tool.html" shape="rect" coords="164,53,190,79" alt="Envelope for modifying the volume amplitude" title="Envelope for modifying the volume amplitude"/><area href="envelope_tool.html" shape="rect" coords="198,3,298,33" alt="For modifying the volume amplitude" title="For modifying the volume amplitude"/><area href="multi_tool.html" shape="rect" coords="192,81,218,107" alt="Multi Tool combines all other tools in one" title="Multi Tool combines all other tools in one"/><area href="multi_tool.html" shape="rect" coords="185,127,291,157" alt="Combines all other tools in one" title="Combines all other tools in one"/><area href="draw_tool.html" shape="rect" coords="192,53,218,79" alt="Draw for adjusting individual samples" title="Draw for adjusting individual samples"/><area href="draw_tool.html" shape="rect" coords="298,3,368,33" alt="For adjusting individual samples" title="For adjusting individual samples"/></map><img alt="ToolsToolbarAnnotated.png" src="../m/images/0/02/toolstoolbarannotated.png" width="373" height="160" usemap="#ImageMap_1_118385893"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:250px;top:-105px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+</div>
+<p><br />
+&#160;
+</p>
+<div id="next_tool"></div>
+<div id="previous_tool"></div>
+<h2><span class="mw-headline" id="Previous_.2F_Next_Shortcuts.C2.A0.C2.A0A.C2.A0_.C2.A0_Extra_.C2.A0D.C2.A0_.C2.A0_Extra">Previous / Next Shortcuts&#160;<font size="-1"><span class="kbrd" style="background-color: #eaeafa">&#160;A&#160; </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i> <span class="kbrd" style="background-color: #eaeafa">&#160;D&#160; </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i></font></span></h2>
+<div class="note">There are two keyboard shortcuts that enable you to navigate through the various available tools:
+<ul><li> <span class="kbrd" style="background-color: #eaeafa">&#160;A&#160; </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i> This shortcut cycles backwards selecting each tool in turn, returning to the <a href="#multitool">Multi</a> tool after the <a href="#selection">Selection</a> tool</li>
+<li> <span class="kbrd" style="background-color: #eaeafa">&#160;D&#160; </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i> This shortcut cycles forwards also selecting each tool in turn.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Note carefully that these two shortcuts will only be available if you select the <b>Full</b> set of shortcuts in <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a>.  They are <i><b>not</b></i> available in the default <b>Standard</b> set of shortcuts.
+</td></tr></table></div>
+</div>
+<div id="selection"></div>
+<div id="selection_tool"></div>
+<h2><span class="mw-headline" id="Selection.C2.A0F1"><img alt="Selection Tool button" src="../m/images/1/1f/ibeam.png" title="Selection Tool button" width="27" height="27" /> <a href="selection_tool.html" title="Selection Tool">Selection</a>&#160;<font size="-1"><span class="kbrd" style="background-color: #e0e0f0">F1</span></font></span></h2>
+<p>Click to select a start point for audio playback, or click and drag to select a range of audio to play or edit. You can also create a selection region between two points by clicking at one point, then holding down <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while left-clicking at the other point.     
+</p>
+<div id="envelope_tool"></div>
+<div id="envelope"></div>
+<h2><span class="mw-headline" id="Envelope.C2.A0F2"><img alt="Envelope Tool button" src="../m/images/0/02/envelope.png" title="Envelope Tool button" width="27" height="27" /> <a href="envelope_tool.html" title="Envelope Tool">Envelope</a>&#160;<font size="-1"><span class="kbrd" style="background-color: #e0e0f0">F2</span></font></span></h2>
+<p>Allows smooth volume changes to be made over the length of a track by means of embedded volume "control points". Click in the track to create a control point, then set the volume of that point by dragging one of its four vertically arranged "handles". When you create other control points at different levels, a smooth curve is interpolated between them. 
+Dragging either the top or bottom handle ensures you can never distort the track by dragging outside its original volume envelope. Dragging an inner handle allows you to amplify a quiet piece of audio beyond the original volume envelope of the track.
+</p>
+<div id="draw"></div>
+<div id="draw_tool"></div>
+<h2><span class="mw-headline" id="Draw_Samples.C2.A0F3"><img alt="Draw Tool button" src="../m/images/7/7f/draw.png" title="Draw Tool button" width="27" height="27" /> <a href="draw_tool.html" title="Draw Tool">Draw Samples</a>&#160;<font size="-1"><span class="kbrd" style="background-color: #e0e0f0">F3</span></font></span></h2>
+<p>Draw Tool enables you to manually redraw the waveform; it can thus be used to make volume changes to individual samples or to effect repairs to clicks/noise.
+</p>
+<div id="zoom"></div>
+<div id="zoom_tool"></div>
+<h2><span class="mw-headline" id="Zoom.C2.A0F4"><img alt="Zoom Tool button" src="../m/images/9/96/zoom.png" title="Zoom Tool button" width="27" height="27" /> <a href="zoom_tool.html" title="Zoom Tool">Zoom</a>&#160;<font size="-1"><span class="kbrd" style="background-color: #e0e0f0">F4</span></font></span></h2>
+<ul><li> Left-click zooms in one step at the position of the mouse pointer.</li>
+<li> Click and drag zooms in to the dragged region. The drag draws a dotted region in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> which is fitted to the entire track width when you release the drag. No Audacity <a href="audacity_selection.html" title="Audacity Selection">selection region</a> is created. </li>
+<li> <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and left-click or right-click zooms out one step at the position of the mouse pointer.</li>
+<li> <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and drag zooms out based on the dragged region. The drag draws a dotted region in the waveform and when you release the drag, the audio at the left edge of the dotted region is repositioned at the start of the visible waveform. The smaller the dragged region, the farther the audio will be zoomed out. No Audacity selection region is created. </li>
+<li> Middle button zooms in or out to Audacity's default zoom level of about one inch per second. </li></ul>
+<div class="note">
+<ul><li> If you commence a drag to zoom by mistake, you can press <span class="kbrd" style="background-color: #e0e0f0">Esc</span> before releasing the mouse to cancel the zoom operation.</li>
+<li> You can also zoom without using Zoom Tool by using <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference">keyboard shortcuts</a>, or the zoom buttons on <a href="edit_toolbar.html" title="Edit Toolbar">Edit Toolbar</a>.</div></li></ul>
+<div id="timeshift"></div>
+<div id="time_shift_tool"></div>
+<h2><span class="mw-headline" id="Time_Shift.C2.A0F5"><img alt="Time Shift Tool button" src="../m/images/a/ad/timeshift.png" title="Time Shift Tool button" width="27" height="27" /> <a href="time_shift_tool.html" title="Time Shift Tool">Time Shift</a>&#160;<font size="-1"><span class="kbrd" style="background-color: #e0e0f0">F5</span></font></span></h2>
+<p>Selecting this tool lets you synchronize audio in a project by dragging individual or multiple <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a>, <a href="note_tracks.html" title="Note Tracks">note tracks</a> or <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">audio clips</a> left or right along the <a href="timeline.html" title="Timeline">Timeline</a>. Also use this tool to drag individual tracks or clips up or down into another track. To use Time Shift Tool, click in the track or clip you want to move, then drag in the required direction. 
+</p>
+<div class="note">Dragged audio cannot paste into other audio, so the area being dragged into must have sufficient space to accommodate the drag.</div>
+<p>See <a href="time_shift_tool.html" title="Time Shift Tool">this page</a> for more details.
+</p>
+<div id="multitool"></div>
+<div id="multi_tool"></div>
+<h2><span class="mw-headline" id="Multi-Tool.C2.A0F6"><img alt="Multi-Tool Mode button" src="../m/images/6/60/multi.png" title="Multi-Tool Mode button" width="27" height="27" /> <a href="multi_tool.html" title="Multi-Tool">Multi-Tool</a>&#160;<font size="-1"><span class="kbrd" style="background-color: #e0e0f0">F6</span></font></span></h2>
+<p>Combines all five tools in one. One tool is available at a time, according to the mouse position and modifier key chosen. The shape of the pointer changes to show which tool is active. If you exit Audacity with Multi-Tool Mode selected, it will be also be enabled next time you launch Audacity. More details on Multi-Tool Mode <a href="multi_tool.html" title="Multi-Tool">here</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917111727
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.158 seconds
+Real time usage: 0.170 seconds
+Preprocessor visited node count: 535/1000000
+Preprocessor generated node count: 2355/1000000
+Post‐expand include size: 8532/2097152 bytes
+Template argument size: 3087/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   99.089      1 - -total
+ 43.61%   43.217      1 - Template:Annotated
+ 32.37%   32.074      1 - Template:I18n
+ 30.30%   30.021      1 - Template:I18n_box
+ 26.19%   25.948      1 - Template:I18n_list
+ 14.82%   14.684      6 - Template:I18n_link
+  8.68%    8.605      6 - Template:Autoglossonym
+  8.50%    8.420      3 - Template:Note
+  8.24%    8.168      4 - Template:Fullshortcut
+  5.20%    5.155     10 - Template:Key
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2411-0!*!0!!*!5!* and timestamp 20180917111727 and revision id 61654
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Tools_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

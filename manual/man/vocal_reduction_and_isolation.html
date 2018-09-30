@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Vocal Reduction and Isolation - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Vocal_Reduction_and_Isolation rootpage-Vocal_Reduction_and_Isolation skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Vocal Reduction and Isolation</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Vocal_Reduction_and_Isolation#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<p><br />
+</p>
+<div class="intro"><i><b>Vocal Reduction and Isolation</b></i> attempts to  remove or isolate center-panned audio from a stereo track. Vocals are sometimes (but not always) recorded in this way. The simplest and quickest removal method  subtracts one channel from the other, but the result will be (dual) mono. This method is available at "Remove Center Classic: (Mono)" under <a href="#action">Action</a>. All other "Remove" options in this effect preserve the stereo image. 
+<p>The <b>Isolate</b> options all return (dual) mono output. The narrowness of the center slice can be adjusted with the "Strength" slider. Center isolation is not possible using the classic subtraction method.
+</p><p>The <b>Analyze</b> option displays the amount of correlation between the stereo channels and the degree of likelihood that center removal or isolation will work effectively. 
+</p>
+<ul><li>See also the tutorial on <a href="tutorial_vocal_removal_and_isolation.html" title="Tutorial - Vocal Removal and Isolation">Vocal Removal and Isolation</a></div> </li></ul>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Vocal Reduction and Isolation...</span></dd>
+<dd><span title="Vocal Reduction and Isolation effect dialog"><img alt="Vocal Reduction and Isolation.png" src="../m/images/6/60/vocal_reduction_and_isolation.png" width="570" height="227" /></span></dd></dl>
+<div id="action"></div>
+<h2><span class="mw-headline" id="Action">Action</span></h2>
+<ul><li><b>Remove Vocals:</b> (default). If the audio is center-panned, removes the vocal range defined by the <a href="#lowcut">Low Cut</a> and <a href="#highcut">High Cut</a> sliders, and returns it as a stereo track. Audio is said to be "<i>center-panned</i>" if it is common to both left and right channels.</li></ul>
+<ul><li><b>Isolate Vocals:</b> If the audio is center-panned, extracts the slider-defined vocal range and returns it as a (dual) mono track.</li></ul>
+<ul><li><b>Isolate Vocals and Invert:</b> If the audio is center-panned, extracts the slider-defined vocal range and returns it as an inverted (dual) mono track.</li></ul>
+<div class="note"> <b>Inverting</b> a waveform is the action of flipping the audio samples upside-down, reversing their polarity. The positive samples (above the horizontal zero line in the Audacity Waveform) are moved below the zero line (so becoming negative), and negative samples are made positive.
+<ul><li> The "and Invert" options may be useful when processing using duplicated tracks. See the <a href="#examples">examples</a> below.</div></li></ul>
+<ul><li><b>Remove Center:</b> Removes all audio (the whole <a href="glossary.html#spectrum" title="Glossary">frequency spectrum</a>) that is common to both left and right channels and returns a true stereo track. </li></ul>
+<div class="note">The Low Cut and High Cut sliders have no effect when "Remove Center" is selected.</div>
+<ul><li><b>Isolate Center:</b> If the audio is center-panned, extracts the whole frequency spectrum and returns it as a (dual) mono track.</li></ul>
+<ul><li><b>Isolate Center and Invert:</b> If the audio is center-panned,  extracts the whole frequency spectrum from and returns it as an inverted (dual) mono track.</li></ul>
+<div class="note">The Low Cut and High Cut sliders have no effect when either "Isolate Center" action is selected</div>
+<ul><li><b>Remove Center Classic: (Mono):</b> Removes all audio (the whole <a href="glossary.html#spectrum" title="Glossary">frequency spectrum</a>) that is common to both left and right channels and returns a (dual) mono track. This is identical to full frequency removal in the legacy <a href="vocal_remover.html" title="Vocal Remover">Vocal Remover</a> effect.</li></ul>
+<div class="note"> This option is usually much quicker than the other actions because the processing is much simpler.
+<ul><li>The "Strength", "Low Cut" and "High Cut" sliders have no effect when "Remove Center Classic: (Mono)" is selected.</div></li></ul>
+<ul><li><b>Analyze:</b> Tells you how great the chances are of a successful vocal reduction or isolation. It returns also the average Pan position for the selected audio. See <a href="#analysis">below</a> for an in-depth explanation.</li></ul>
+<p><br />
+</p>
+<div id="strength"></div>
+<h2><span class="mw-headline" id="Strength">Strength</span></h2>
+<p>The shape of the center is not a thin band but rather like a tent  with a pole in the middle. This means that there will always audio from other pan positions included. The <b>Strength</b> slider modifies the shape of the center. Higher values increase the degree of reduction or isolation. Zero is off (no reduction or isolation). This slider has no effect with the "Remove Center Classic: (Mono)" choice. 
+</p>
+<h3><span class="mw-headline" id="Remove">Remove</span></h3>
+<ul><li><b>Less than 1.0:</b> Produces a notch with a <i><b>V</b></i> shape like a ship's keel, but also with a sharp point. Use this setting to preserve some amount of the center.</li>
+<li><b>1.0 - the default:</b> Produces a notch with a <i><b>V</b></i> shape. The power distribution is preserved. This is the ideal setting for most cases.</li>
+<li><b>Greater than 1.0:</b>  Produces a notch with a <i><b>U</b></i> shape. This removes some audio adjacent to the center, as well as the center.  Note that this will not remove stereo reverberation since it is distributed over the entire pan width.</li></ul>
+<h3><span class="mw-headline" id="Isolate">Isolate</span></h3>
+<ul><li><b>Less than 1.0:</b> Produces a peak like a <i><b>U</b></i> shape upside down, similar to an arch. Only extreme left and right are eliminated.</li>
+<li><b>1.0 - the default:</b> Produces a peak like a <i><b>V</b></i> shape upside down. The power distribution is preserved.  You might want a higher value when a lot of side audio leaks in. This is also the recommended setting when working with two tracks (options with <b>...and Invert</b>).</li>
+<li><b>Greater than 1.0:</b> Produces a peak with an <i><b>A</b></i> shape like the Eiffel Tower (with a sharp point). This will attenuate most of the side energy but might produce artifacts or musical noise. <a href="normalize.html" title="Normalize">Normalize</a> the audio after using Isolate with a high strength setting.</li></ul>
+<div id="lowcut"></div>
+<h2><span class="mw-headline" id="Low_Cut_for_Vocals">Low Cut for Vocals</span></h2>
+<p>All actions with <b>Vocals</b> in the name use this value. The frequencies below will  either not be removed or not be included in the isolated audio. It is useful to exclude bass and kick drum. The default value of 120 Hz is good for most lead vocals, or even low male voices. You can enter a higher value around 170 Hz for female voices and about 230 Hz for those of children.
+</p>
+<div class="note">This control only affects "<a href="#action">Actions</a>" that contain the word <b>Vocals</b> in their name.</div>
+<div id="highcut"></div>
+<h2><span class="mw-headline" id="High_Cut_for_Vocals">High Cut for Vocals</span></h2>
+<p>All actions with <b>Vocals</b> in the name use this value. The frequencies above  will  either not be removed or not be included in the isolated audio. It is useful to exclude high sounds like bells, cymbals or Hi-hat. Note that human sounds like <b>S</b> or <b>Z</b> can also be very high in frequency - 5000 to 8000 Hz, so listen carefully to the preview.
+</p>
+<div class="note">This control only affects "<a href="#action">Actions</a>" that contain the word <b>Vocals</b> in their name.</div>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
+<p>Clicking on the command buttons give the following results:
+</p>
+<ul><li><span class="button">Manage</span> gives a dropdown menu enabling you to manage presets for the tool and to see some detail about the tool. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a></li>
+<li><span class="button">Preview</span> plays a short preview of what the audio would sound like if the effect is applied with the current settings, without making actual changes to the audio.  The length of preview is determined by your setting in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span>, the default setting is 6 seconds.</li>
+<li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
+<li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> brings you to the appropriate page in the Manual, this page</li></ul>
+<p><br />
+</p>
+<div id="analysis"></div>
+<h2><span class="mw-headline" id="Interpreting_the_analysis_results">Interpreting the analysis results</span></h2>
+<p>It is recommended to analyze the audio prior to actual processing of the effect. Analysis is very fast compared to the time needed for processing.
+</p><p>The two important values are:
+</p>
+<ul><li><b>Pan Position:</b> This gives the average pan position for the whole selected audio. The value of the track pan slider is not included in this calculation.</li>
+<li><b>Correlation:</b> This is a measure for the similarity of the two channels. Values of +/-100 mean that the channels are exactly the same, even if one is inverted. A value of 0 means no relationship. It is fruitless to attempt removal or isolation in these cases. The ideal value is normally around +50. Values below 0 are rare and indicate that the stereo width is more than 100%. Inverting one channel makes the correlation positive.</li></ul>
+<div class="note">Sometimes the lead vocals are not exactly in the middle. In this case, select a short portion of audio where only the voice is audible and no other instrument. Choose <b>Analyze</b>. 
+<ol><li> The correlation should be fairly high (around 100) which would indicate that there is indeed only the voice.</li>
+<li> Copy the value for the Pan Position. Double-click in the Pan slider to open the adjustment dialog then paste in the value with reversed sign (that is, put a minus sign in front of a positive value and a positive sign in front of a negative value). </li>
+<li> Mix and render the track. The voice will now be exactly centered and you can remove or isolate it. </li>
+<li> Don't forget to readjust the selection. </div></li></ol>
+<div id="limitations"></div>
+<h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
+<ul><li>The input must be a true stereo track and not mere (dual) mono.</li>
+<li>Stereo Reverberation will not be fully removed because it is independently distributed over the whole stereo image.</li>
+<li>Naturally the plug-in does not know what kind of audio is in the center. All is removed or isolated equally, whether vocals, bass or solo instruments.</li>
+<li>This effect is quite slow, except for the <i>"Remove Center Classic: (Mono)"</i> and <i>"Analyze"</i> actions.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">The whole processing is done in memory. Long selections (over half an hour) might therefore cause Audacity to crash.
+</td></tr></table></div>
+<div id="examples"></div>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<div class="example">This effect can be used in a variety of ways:                      
+<ul><li>Creating a Karaoke version from an original song</li></ul>
+<dl><dd><dl><dd><dl><dd>Choose  <b>Remove Vocals</b> if you want to keep some bass and drum beat.</dd></dl></dd></dl></dd></dl>
+<ul><li>Creating an acapella version from an original song</li></ul>
+<dl><dd><dl><dd><dl><dd>Choose <b>Isolate Vocals</b> with a high Strength value. The result will probably still have some music in it. It is therefore better suited for a remix with a different accompaniment. Pure vocal versions have to be post-processed with other tools.</dd></dl></dd></dl></dd></dl>
+<ul><li>Alternative to "Auto Duck" with podcasts</li></ul>
+<dl><dd><dl><dd><dl><dd>Duplicate the track and choose <b>Isolate Center and Invert</b> on the second track. Record your voice. Silence the second track where you don't speak and the original music should be heard. On the same track, make fades at the boundaries (where the speech starts or stops).</dd></dl></dd></dl></dd></dl>
+<ul><li>Removing excessive stereo reverb from a vocal or instrument track.</li></ul>
+<dl><dd><dl><dd><dl><dd>Use <b>Isolate...</b> to make a single vocal or instrument track "dry" again.</dd></dl></dd></dl></dd></dl>
+<ul><li>Removing random system noise from a two channel recording of a mono source. </li></ul>
+<dl><dd><dl><dd><dl><dd>use <b>Isolate...</b> to remove random noise produced by the audio interface, the cables or the computer itself.</dd></dl></dd></dl></dd></dl>
+<ul><li>Removing single words or phrases</li></ul>
+<dl><dd><dl><dd><dl><dd>You can remove offending content from a song or movie dialog by selecting it and choosing <b>Remove Vocals</b>. Mask it with other sounds, if necessary.</dd></dl></dd></dl></dd></dl>
+<ul><li>Amplifying dialogs in a movie.</li></ul>
+<dl><dd><dl><dd><dl><dd>Duplicate the track, isolate the vocals and adjust the gain.</dd></dl></dd></dl></dd></dl>
+<ul><li>Converting stereo files into 3.1, 5.1 and other multi-channel formats. </li></ul>
+<dl><dd><dl><dd><dl><dd>Duplicate the track and choose "Isolate Center and Invert" on the second track. Render all to a new track. Delete  the first track, invert the second track and split the third track. Rearrange the tracks accordingly. Thus you end up with "Front Left", "Center" and "Front Right" eventually.</dd></dl></dd></dl></dd></dl>
+<ul><li>Extracting instrument solos</li></ul>
+<dl><dd><dl><dd><dl><dd>Isolate the center if the solo is there, otherwise remove the center, split to mono and delete the superfluous track.</dd></dl></dd></dl></dd></dl>
+<ul><li>Blending between original, karaoke version and vocals only</li></ul>
+<dl><dd><dl><dd><dl><dd>Duplicate the track and choose <b>Isolate Vocals and Invert</b> on the second track. Choose the envelope tool or fade effects to gradually change from one mode to the other. Silencing the first track results in the vocals being isolated. Silencing the second track produces the original audio. Playing both tracks together removes the vocals.</dd></dl></dd></dl></dd></dl>
+<ul><li>Correcting the pan position</li></ul>
+<dl><dd><dl><dd><dl><dd>Analyze the whole track and  copy the value for the pan position. Paste the value into the pan dialog and reverse the sign, that is, set a minus sign in front of positive values and vice versa.</dd></dl></dd></dl></dd></dl>
+<ul><li>Measuring similarity between two mono tracks</li></ul>
+<dl><dd><dl><dd><dl><dd>Make the two tracks stereo and  choose <b>Analyze</b>. The correlation value is the measure for the similarity in percent.</dd></dl></dd></dl></dd></dl>
+<ul><li>Applying a brick wall filter to mono tracks</li></ul>
+<dl><dd><dl><dd><dl><dd>Duplicate a mono track, make it stereo and choose <b>Isolate Vocals</b> for band pass and <b>Remove Vocals</b> for band stop filtering. Adjust the frequencies accordingly.</div></dd></dl></dd></dl></dd></dl>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112445
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.110 seconds
+Real time usage: 0.115 seconds
+Preprocessor visited node count: 304/1000000
+Preprocessor generated node count: 1007/1000000
+Post‐expand include size: 17934/2097152 bytes
+Template argument size: 7502/2097152 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   33.463      1 - -total
+ 39.17%   13.107      1 - Template:Effectbuttons
+ 28.41%    9.507      1 - Template:Buttonlist
+ 20.57%    6.883      1 - Template:No-rename
+ 19.72%    6.598     10 - Template:Button
+ 15.88%    5.315      1 - Template:Ednote
+  7.72%    2.583      7 - Template:Note
+  7.66%    2.564      1 - Template:Hint
+  4.60%    1.539      1 - Template:Effects
+  4.34%    1.451      1 - Template:Intro
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5236-0!*!0!!*!5!* and timestamp 20180917112445 and revision id 61161
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Vocal_Reduction_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

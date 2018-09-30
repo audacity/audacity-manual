@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Spectrogram Settings - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Spectrogram_Settings rootpage-Spectrogram_Settings skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Spectrogram Settings</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Spectrogram_Settings#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<p><br />
+</p>
+<div class="intro">It is possible to temporarily change the Spectrogram settings for any particular Spectrogram track, overiding whatever setting you have in <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a>.</div>
+<h2><span class="mw-headline" id="Per_track_Spectrogram_Settings">Per track Spectrogram Settings</span></h2>
+<p>Open the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> on the Spectrogram track you want to change, then choose <b>Spectrogram Settings...</b>.  This opens the dialog below: 
+</p>
+<dl><dd><span title="Audio track Spectrogram Settings dialog"><img alt="Spectrogram Track Settings.png" src="../m/images/b/b3/spectrogram_track_settings.png" width="432" height="387" /></span></dd></dl>
+<div class="note">The available settings are the same as those offered in <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a> with the addition of a <a href="#preferences">Use Preferences</a> checkbox.</div>
+<div id="changes"></div>
+<h2><span class="mw-headline" id="Persistence_of_changes_made_here">Persistence of changes made here</span></h2>
+<p>Changes you make when you press the <span class="button">OK</span> button only persist for that track while the project window is open. This is the case even if you save a project. Use <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a> instead to make permanent changes to the default Spectrogram settings with which a new Spectrogram track will open. 
+</p>
+<div class="note">You can also preview what your changes will look like in the track by clicking the <span class="button">Apply</span> button. If necessary you can tweak the settings and click Apply again to view the result. <p>If you do click Apply you cannot then discard changes made in the dialog, even if you click the  <span class="button">Cancel</span> button. If you don't click the Apply button, Cancel discards your settings changes.</p></div>
+<p><br />
+</p>
+<div id="preferences"></div>
+<h2><span class="mw-headline" id="Use_Preferences">Use Preferences</span></h2>
+<p>The Spectrogram Settings dialog defaults to the "<b>Use Preferences</b>" checkbox being enabled, so on first opening the settings for a track the settings will be as already set in Spectrograms Preferences. Changing a setting in Spectrogram Settings will automatically disable the "Use Preferences" checkbox. Re-enabling the "Use Preferences" checkbox changes the settings in the dialog back to as they are in Spectrograms Preferences. 
+</p>
+
+<div id="scale"></div>
+<h2><span class="mw-headline" id="Scale">Scale</span></h2>
+<ul><li><span style="font-weight: bold; font-size:118%">Scale <i>(in Spectrogram views)</i>:</span>
+<ul><li><b>Linear</b> The linear vertical scale goes linearly from 0 kHz to 8 kHz frequency by default.  </li>
+<li><b>Logarithmic</b>: This view is the same as the linear view except that the vertical scale is logarithmic. See <a href="spectrogram_view.html#log" title="Spectrogram View">Spectrogram View</a> for a contrasting example of linear versus logarithmic spectrogram view.</li>
+<li><b>Mel</b>: The name <b>Mel</b> comes from the word <b> melody</b> to indicate that the scale is based on pitch comparisons. See <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Mel_scale">this Wikipedia page</a>.</li>
+<li><b>Bark</b>: This is a psychoacoustical scale based on subjective measurements of loudness.  It is related to, but somewhat less popular than, the Mel scale.  See <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Bark_scale">this Wikipedia page</a>.</li>
+<li><b>ERB</b>: The Equivalent Rectangular Bandwidth scale or ERB is a measure used in psychoacoustics, which gives an approximation to the bandwidths of the filters in human hearing.  It is implemented as a function ERBS(f) which returns the number of equivalent rectangular bandwidths below the given frequency "f".  See <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Equivalent_rectangular_bandwidth">this Wikipedia page</a>.</li>
+<li><b>Period</b>: is the previously undocumented scale used by Pitch (EAC) view.  It is for making the same displays of Pitch possible as in earlier versions of Audacity.</li></ul></li>
+<li><span style="font-weight: bold; font-size:118%">Minimum Frequency:</span> This value corresponds to the bottom of the vertical scale in the spectrogram. Frequencies below this value will not be visible. The default value of "0" here will be treated as "1" when using "Spectrogram Logarithmic" view mode because a logarithmic scale cannot start at zero.</li>
+<li><span style="font-weight: bold; font-size:118%">Maximum Frequency:</span> This value corresponds to the top of the vertical scale. The value can be set to 100 <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i> or any higher value. Irrespective of the entered value, the top of the scale will never exceed half the current <a href="digital_audio.html#Sample_rates" title="Digital Audio">sample rate</a> of the track (for example, 22050 Hz if the track rate is 44100 Hz) because any given sample rate can only carry frequencies up to half that rate. A good use of this setting is in speech recognition or <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i> extraction, where you can hide the visually unimportant highest frequencies and focus on the lower frequencies. </li></ul>
+<div id="colors"></div>
+<h2><span class="mw-headline" id="Colors">Colors</span></h2>
+<ul><li><span style="font-weight: bold; font-size:118%">Gain (dB):</span> This enables you to increase / decrease the brightness of the display.  For small signals where the display is mostly "blue" (dark) you can increase this value to see brighter colors and give more detail.  If the display has too much "white", decrease this value.  The default is 20dB and corresponds to a -20 dB signal at a particular frequency being displayed as "white". This option has no effect and is grayed out when the Pitch (EAC) algorithm is selected.</li>
+<li><span style="font-weight: bold; font-size:118%">Range (dB):</span> Affects the range of signal sizes that will be displayed as colors.  The default is 80 dB and means that you will not see anything for signals 80 dB below the value set for "Gain". This option has no effect and is grayed out when the Pitch (EAC) algorithm is selected.</li>
+<li><span style="font-weight: bold; font-size:118%">Frequency Gain (dB/dec):</span> A positive value here gives some extra gain to higher frequencies (above 1000 Hz), as they tend to be smaller and so cannot be seen as well.  You get less gain at lower frequencies as well.  The default is 0 dB. This option has no effect and is grayed out when the Pitch (EAC) algorithm is selected.</li>
+<li><span style="font-weight: bold; font-size:118%">Grayscale:</span> Shows gray shades in all spectrogram views instead of full color. </li></ul>
+<div id="algorithm"></div>
+<h2><span class="mw-headline" id="Algorithm">Algorithm</span></h2>
+<ul><li><span style="font-weight: bold; font-size:118%">Algorithm:</span>
+<ul><li><b>Frequencies</b> (default): Audio frequency determines the <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i> of a sound.  Measured in <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i>, higher frequencies have higher pitch.  See <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Audio_frequency">this Wikipedia article</a>.</li>
+<li><b>Reassignment</b>: The method of reassignment sharpens blurry time-frequency data by relocating the data according to local estimates of instantaneous frequency and group delay. This mapping to reassigned time-frequency coordinates is very precise for signals that are separable in time and frequency with respect to the analysis window.</li>
+<li><b>Pitch (EAC)</b>: Highlights the contour of the fundamental frequency (musical pitch) of the audio, using the Enhanced Autocorrelation (EAC) algorithm. The EAC Algorithm was developed to produce a mathematical representation of the changes of pitch in a piece of audio. The aim was to allow automated comparison of sound files so that two versions of the same tune could be recognized as being similar, even if played in different keys, or on different instruments.</li></ul></li>
+<li><span style="font-weight: bold; font-size:118%">Window Size:</span> The dropdown menu lets you choose the size of the <i><b><a href="glossary.html#fft" title="Glossary">Fast Fourier Transform</a></b></i> (<i><b><a href="glossary.html#fft" title="Glossary">FFT</a></b></i>) window which affects how much vertical (<i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i>) detail you see.  Larger FFT window sizes give more low frequency resolution and less temporal resolution, and are slower. </li>
+<li> <span style="font-weight: bold; font-size:118%">Window type:</span> Determines precisely how the spectrogram is computed.  'Rectangular' is slightly faster than other methods, but introduces some artifacts.  All methods give broadly similar results.</li>
+<li> <span style="font-weight: bold; font-size:118%">Zero padding factor:</span> Larger values give finer interpolation of the colors along the vertical axis, at the expense of more computation time.  Does not affect the time vs. frequency resolution tradeoff.  This option has no effect and is grayed out when the Pitch (EAC) algorithm is selected.</li></ul>
+<div id="specsel"></div>
+<h2><span class="mw-headline" id="Enable_Spectral_Selection">Enable Spectral Selection</span></h2>
+<p>Check this box "on" if you want to enable <a href="spectral_selection.html" title="Spectral Selection">spectral selections</a>.  These are used to make selections that include a frequency range as well as a time range on tracks in one of the <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> views. Spectral selection is used with special <a href="https://alphamanual.audacityteam.org/m/index.php?title=Spectral_Editing&amp;action=edit&amp;redlink=1" class="new" title="Spectral Editing (page does not exist)">spectral edit</a> effects to make changes to the frequency content of the selected audio. Among other purposes, spectral selection and editing can be used for cleaning up unwanted sound, enhancing certain resonances, changing the quality of a voice or removing mouth sounds from voice work.
+</p>
+
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="spectrogram_view.html" title="Spectrogram View"><b>|&lt;</b> Spectrogram View</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112532
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.088 seconds
+Real time usage: 0.090 seconds
+Preprocessor visited node count: 209/1000000
+Preprocessor generated node count: 634/1000000
+Post‐expand include size: 5306/2097152 bytes
+Template argument size: 3197/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   19.269      1 - -total
+ 36.60%    7.053      1 - Template:No-rename
+ 32.64%    6.290      3 - Template:Ednote
+ 21.01%    4.048      4 - Template:Button
+ 16.03%    3.088     11 - Template:Bh
+ 15.37%    2.961      3 - Template:Note
+  8.05%    1.550      1 - Template:Intro
+  6.23%    1.200      1 - Template:Alert
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5772-0!*!0!!*!5!* and timestamp 20180917112532 and revision id 61115
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Spectrogram_Settings">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

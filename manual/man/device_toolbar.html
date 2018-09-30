@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Device Toolbar - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Device_Toolbar rootpage-Device_Toolbar skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Device Toolbar</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Device_Toolbar#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro"><i><b>Device Toolbar</b></i>&#160; provides an easy way to select your required combination of audio host, recording device, recording channels and playback device, without having to open <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>.</div>
+<p><br />
+</p>
+<dl><dd><div class="noresize"><map name="ImageMap_1_1477967763"><area href="customizing_toolbar_layout.html#grabber" shape="rect" coords="4,73,13,99" alt="Grabber for positioning the toolbar" title="Grabber for positioning the toolbar"/><area href="customizing_toolbar_layout.html#grabber" shape="rect" coords="3,3,95,33" alt="For positioning the toolbar" title="For positioning the toolbar"/><area href="#host" shape="rect" coords="15,75,162,97" alt="Audio Host for selecting which system will manage audio" title="Audio Host for selecting which system will manage audio"/><area href="#host" shape="rect" coords="3,139,117,169" alt="For selecting which system will manage audio" title="For selecting which system will manage audio"/><area href="#recording" shape="rect" coords="188,75,433,97" alt="Recording Device for selecting the recording device" title="Recording Device for selecting the recording device"/><area href="#recording" shape="rect" coords="95,3,260,33" alt="For selecting the recording device" title="For selecting the recording device"/><area href="#channels" shape="rect" coords="434,75,585,97" alt="Recording Channels for setting mono or stereo" title="Recording Channels for setting mono or stereo"/><area href="#channels" shape="rect" coords="117,139,301,169" alt="For setting mono or stereo" title="For setting mono or stereo"/><area href="#playback" shape="rect" coords="611,75,851,97" alt="Playback Device for selecting the playback device" title="Playback Device for selecting the playback device"/><area href="#playback" shape="rect" coords="260,3,417,33" alt="For selecting the playback device" title="For selecting the playback device"/><area href="customizing_toolbar_layout.html#resizer" shape="rect" coords="851,75,861,97" alt="Resizer for lengthening or shortening the toolbar" title="Resizer for lengthening or shortening the toolbar"/><area href="customizing_toolbar_layout.html#resizer" shape="rect" coords="301,139,388,169" alt="For lengthening or shortening the toolbar" title="For lengthening or shortening the toolbar"/></map><img alt="DeviceToolbarAnnotated.png" src="../m/images/0/04/devicetoolbarannotated.png" width="863" height="174" usemap="#ImageMap_1_1477967763"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:608px;top:-55px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+</div>
+<p>&#160;
+</p><p><br />
+</p>
+<div class="note">Device Toolbar grays out when playing, recording or paused. You cannot change device choices while the device is in use. </div>
+<div id="drag"></div> 
+<h2><span class="mw-headline" id="Resizer">Resizer</span></h2>
+<p>Using the resizer handle at right, you can expand Device Toolbar rightwards to be wider than the default width shown, or drag it leftwards to be less wide. You can hover over any of the four boxes in Audacity at any time to see the full text for the selected item.
+</p>
+<div id="host"></div> 
+<h2><span class="mw-headline" id="Audio_Host">Audio Host</span></h2>
+<dl><dd><span title="Audio Host expanded"><img alt="HostWin7Basic.png" src="../m/images/9/92/hostwin7basic.png" width="109" height="62" /></span></dd></dl>
+<p>Selects the particular interface with which Audacity communicates with your chosen playback and recording devices. 
+</p><p>On <b>Windows</b>, the choice is between the following audio interfaces: 
+</p>
+<ul><li> <i><b><a href="glossary.html#mme" title="Glossary">MME</a>:</b></i> This is the Audacity default and the most compatible with all audio devices.</li>
+<li> <i><b><a href="glossary.html#wds" title="Glossary">Windows DirectSound</a>:</b></i> This is more recent than MME with potentially less <i><b><a href="glossary.html#latency" title="Glossary">latency</a></b></i>.</li>
+<li> <i><b><a href="glossary.html#wasapi" title="Glossary">Windows WASAPI</a>:</b></i> This host is the most recent Windows interface between applications (such as Audacity) and the audio interface driver. WASAPI was first officially released in 2007 in <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Windows_Vista">Windows Vista</a>. WASAPI is particularly useful for "loopback" <a href="tutorial_recording_computer_playback_on_windows.html" title="Tutorial - Recording Computer Playback on Windows">recording of computer playback</a>. 24-bit recording devices are supported using this host. Playback is usually <i>emulated</i>. As a result, the playback slider in <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a> will only scale the system playback slider's current level up or down rather than directly manipulating that system slider. </li></ul>
+<p><br />
+</p>
+<div class="note">On <b>Windows</b>:
+<ul><li>Windows DirectSound may by default have only slightly lower latency than MME.  </li>
+<li>Selecting Windows DirectSound or Windows WASAPI and enabling both "Exclusive Mode" boxes in <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#vistacp">Windows&#160;Sound</a> allows Audacity to request audio direct from the device without <i><b><a href="glossary.html#resampling" title="Glossary">resampling</a></b></i>.</div></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">The proprietary <a href="asio_audio_interface.html" title="ASIO Audio Interface">ASIO</a> interface standard is essential on Windows for low latency recording and playback. It is also usually the best way of making multi-channel recordings on Windows.<p>Licensing restrictions prevent us including ASIO support in released versions of Audacity, but Audacity can be compiled with ASIO support for private, non-distributable use. See <a href="asio_audio_interface.html" title="ASIO Audio Interface">ASIO Audio Interface</a> which  summarizes ASIO licensing issues and steps to compile Audacity with ASIO support.</p>
+</td></tr></table>
+</div>
+<p>On <b>Mac</b> the only choice is Core Audio.  
+</p>
+On <b>Linux</b> there is often only one option: <i><b><a href="glossary.html#ALSA" title="Glossary">ALSA</a></b></i>. Other options could be OSS and/or Jack Audio Connection Kit (also known as "Jack" or "Jackd")<i>.<div id="record"></div></i>
+<div id="recording"></div>
+<h2><span class="mw-headline" id="Recording_Device"><img alt="Mic.png" src="../m/images/5/5f/mic.png" width="25" height="25" /> Recording Device</span></h2>
+<dl><dd><span title="Recording Device expanded"><img alt="DeviceRecordingWin7Alone.png" src="../m/images/c/cf/devicerecordingwin7alone.png" width="169" height="77" /></span></dd></dl>
+<p>Choose the built-in or attached sound device that you want to use for recording.
+</p><p>In the image above, "Microsoft Sound Mapper - Input" appears when the Windows "MME" Audio Host is selected. Similarly to the "Mapper" output, the "Mapper" input is the device that is the current default Windows recording device. When "Windows DirectSound" Audio Host is selected, the device that maps to the current Windows recording device is called "Primary Sound Capture Driver". 
+</p><p>In most cases (for example, the inbuilt computer sound device), each entry for recording device consists of the type of device (such as microphone), followed in parentheses by the name of the  sound card manufacturer. 
+</p><p>On <b>Mac</b>, the internal sound card recording inputs are usually referred to as "Built-in".
+</p><p>On <b>GNU/Linux</b>, recording is often managed by the pulse sound server. It is normally best to select "default". That will choose whatever is the system default sound card or server, then choose the exact input device required in the control application for the card or server (such as Pulse Audio Volume Control). The (hw:) recording devices give direct, lower latency access to the audio interface inputs, bypassing any sound servers. For a built-in (hw:) sound device, choose the exact inputs in <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Alsamixer">ALSAmixer</a>.   
+</p>
+<div class="note">If a device only has one possible input for selection by the computer (for example, a USB microphone), only the name of the device will be listed, with no input type.</div>  
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">If you attach or disconnect an external device while Audacity is open, use <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> to update the device lists before playing or recording.
+</td></tr></table></div>
+<div id="channels"></div>
+<h2><span class="mw-headline" id="Recording_Channels">Recording Channels</span></h2>
+<dl><dd><span title="Recording Channels expanded"><img alt="ChannelsWin7Basic.png" src="../m/images/b/bb/channelswin7basic.png" width="110" height="49" /></span></dd></dl>
+<p>1 (Mono), 2 (Stereo) or the number of channels that are provided by the drivers of your sound device. On most inbuilt sound devices, especially on Windows, only mono or stereo will be available. For some devices on Windows, choosing Windows DirectSound in "Audio Host" above may be more likely to reveal options for recording more than two channels. On some devices capable of recording more than two channels, an explicit "multi" device may appear in the "Device" dropdown for recording all the channels simultaneously.
+</p>
+<ul><li>If your recording device is mono, such as most microphone ports for the inbuilt sound device, selecting "2 (Stereo)" in Recording Channels duplicates the mono source to both channels, merely producing a <i>dual mono</i> recording. </li>
+<li>If your recording device is stereo, then as well as setting Recording Channels to "2 (Stereo)", ensure any settings in the system or sound device control panels are stereo. Many input devices on Windows default to mono recording even if they are stereo devices. To correct this, follow these <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Windows_7_OS#mono_mic">instructions</a>.</li></ul>
+<div id="playback"></div>
+<h2><span class="mw-headline" id="Playback_Device"><img alt="Speaker.png" src="../m/images/a/a8/speaker.png" width="25" height="25" /> Playback Device</span></h2>
+<dl><dd><span title="Playback Device expanded"><img alt="DevicePlaybackWin7Alone.png" src="../m/images/1/19/deviceplaybackwin7alone.png" width="170" height="63" /></span></dd></dl>
+<p>Choose the built-in or attached sound device that you want to use for playback.
+</p><p>In the image above, "Microsoft Sound Mapper - Output" appears when the Windows "MME" Audio Host is selected. This "Mapper" device is not a separate playback device, but is the device that is currently chosen as the default system playback device in the Windows Control Panel. When "Windows DirectSound" Audio Host is selected, the device that maps to the current Windows playback device is called "Primary Sound Driver".
+</p><p>In most other cases (for example, the inbuilt computer sound device), each entry for playback device consists of the type of playback device (such as speakers), followed in parentheses by the name of the sound card manufacturer (such as Realtek, Soundmax or IDT Audio).
+</p><p>On <b>Mac</b>, the internal sound card playback device is usually referred to as "Built-in".
+</p><p>On <b>GNU/Linux</b>, playback is often managed by a sound server or mixer such as pulse or dmix. It is normally best to select "default". This will choose whatever is the system default playback device or server. The (hw:) playback devices give direct, lower latency access to the sound card output, bypassing any sound servers.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917110124
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.133 seconds
+Real time usage: 0.141 seconds
+Preprocessor visited node count: 394/1000000
+Preprocessor generated node count: 2011/1000000
+Post‐expand include size: 6910/2097152 bytes
+Template argument size: 2669/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   87.056      1 - -total
+ 49.17%   42.802      1 - Template:Annotated
+ 39.00%   33.949      1 - Template:I18n
+ 36.14%   31.461      1 - Template:I18n_box
+ 30.88%   26.883      1 - Template:I18n_list
+ 16.87%   14.682      6 - Template:I18n_link
+  9.93%    8.648      6 - Template:Autoglossonym
+  3.09%    2.693      1 - Template:Advice
+  2.58%    2.249      1 - Template:Intro
+  2.27%    1.977      1 - Template:Tip
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2503-0!*!0!!*!5!* and timestamp 20180917110124 and revision id 61653
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Device_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

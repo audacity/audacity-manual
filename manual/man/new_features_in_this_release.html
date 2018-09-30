@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>New features in this release - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-New_features_in_this_release rootpage-New_features_in_this_release skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">New features in this release</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+<center><a href="http://audacityteam.org/" title="size=50%" rel="nofollow"><img alt="size=50%" src="../m/images/8/88/audacity_logo_signika_512_transparent.png" width="512" height="138" /></a></center>
+<div class="intro"><span style="font-size:120%"><b>This page is an overview of the key new functionality that has been introduced in Audacity 2.3.0</b></span>
+<ul><li> <span style="font-size:110%">Details of all the major changes since 2.2.2 can be found in <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_2.3.0">Release Notes 2.3.0</a>.</span></div></li></ul>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+</li></ul></li></ul>
+</li></ul>
+<ol><li><a href="#pandr">Punch and Roll</a></li>
+<li><a href="#movable">Movable Pinned Head</a></li>
+<li><a href="#ignored">Scrubbing always uses un-pinned playhead</a></li>
+<li><a href="#speed">Play-at-Speed</a></li>
+<li><a href="#batch">Batch Processing</a></li>
+<li><a href="#macros">Macros command replaces Chains</a></li>
+<li><a href="#tools">New Tools menu</a></li>
+<li><a href="#save">New Save Project menu</a></li>
+<li><a href="#scriptables">Scriptables added to the Extra menu</a></li>
+<li><a href="#nyq_translates">Nyquist effects translated</a></li>
+<li><a href="#help_buttons">Help Buttons</a></li>
+<li><a href="#trackname">Increased legibility of trackname display</a></li>
+<li><a href="#halfwave">Half-wave option for collapsed tracks</a></li>
+<li><a href="#sliding">Sliding Stretch</a></li>
+<li><a href="#overwrite">Overwriting existing projects</a></li>
+<li><a href="#labels">Use dialog for the name of new labels</a></li>
+<li><a href="#clips">Changed shortcuts for clip navigation</a></li>
+<li><a href="#bugs">Bug Fixes</a></li></ol>
+</li></ol>
+<p><br />
+</p>
+<div id="pandr"></div>
+<h2><span class="mw-headline" id="Punch_and_Roll_Recording"><a href="punch_and_roll_record.html" title="Punch and Roll Record">Punch and Roll Recording</a></span></h2>
+<p>We have introduced <a href="punch_and_roll_record.html" title="Punch and Roll Record"><b>Punch and Roll Recording</b></a> into Audacity as one of our most popular and long-standing feature requests.
+</p><p>It is <b>Accessed by:</b> <span class="menu">Transport &gt; Recording &gt; <a href="transport_menu_recording.html#punch_and_roll_record" title="Transport Menu: Recording">Punch and Roll Record</a></span>  or more simply using its shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + D</span>
+</p><p>You can correct errors easily during the course of a recording session.
+</p>
+<ul><li>You can stop, back up over a mistake, and continue recording, resulting in one track that eliminates the errors and is properly timed, without the use of cutting, pasting, and clip-moving commands, or mixing of multiple tracks.  </li>
+<li>You can do rough editing as you go, with minimal interruption of your performance and less work left until afterwards.</li></ul>
+<p>This is likely to be very useful to voice-over artists and audiobook authors enabling them to make rapid corrections of fluffs as they progress.
+</p><p>See <a href="punch_and_roll_record.html" title="Punch and Roll Record">Punch and Roll Record</a> for more details.
+</p>
+<div class="note">Be aware that this is not punch-in patch repair - the repair recording carries on rolling <i>(as the command name implies)</i> until you specifically stop it. </div>
+<p><br />
+</p>
+<div id="movable"></div>
+<h2><span class="mw-headline" id="Movable_pinned_Playhead.2FRecordhead"><a href="playing_and_recording.html#pinned" title="Playing and Recording">Movable pinned Playhead/Recordhead</a></span></h2>
+<p>We have made the pinned playhead/recordhead movable on the Timeline, enabling you to choose whereabouts on the Timeline you want it to be pinned for playback and recording
+</p><p>The default pinned position is the center of the Timeline as before, but you can change this by clicking on the pinned head and dragging it along the Timeline while you are playing or recording. A double-click on the head will restore it to its default position in the center of the Timeline. 
+</p><p>You may find that a pinned Playhead/Recordhead position right of center will be more useful during recording, including Punch and Roll recording, but a position back in the middle may be more useful if you are playing.
+</p><p><br />
+</p><p><br />
+</p>
+<div id="ignored"></div>
+<h2><span class="mw-headline" id="Scrubbing_and_Seeking_always_use_un-pinned_playhead">Scrubbing and Seeking always use un-pinned playhead</span></h2>
+<p>By default, scrubbing and seeking will ignore the pinned playhead (if it is turned on) and will play with an unpinned playhead.  This will cause the playhead to move with the waveform remaining static.  
+</p><p>You can change this by turning "<b>off</b>" the option for "<b>Always scrub unpinned</b>" in <a href="playback_preferences.html" title="Playback Preferences">Playback</a> preferences. This will cause the playhead to remain static and the waveform will move under it while scrubbing and seeking.
+</p><p>The un-pinned head is probably the easier way to work with scrubbing and seeking.
+</p><p><br />
+</p>
+<div id="speed"></div>
+<h2><span class="mw-headline" id="Play-at-Speed"><a href="play_at_speed_toolbar.html" title="Play-at-Speed Toolbar">Play-at-Speed</a></span></h2>
+<p>You can now use the <a href="play_at_speed_toolbar.html" title="Play-at-Speed Toolbar">Play-at-Speed Toolbar</a>  <i>(formerly called the "Transcription Toolbar")</i> to make dynamic changes to the playback speed as you play audio using the Play-at-Speed toolbar to set the required speed.  Formerly you had to stop playback and restart it to get the changed speed.
+</p>
+<dl><dd><span title="Play-at-Speed Toolbar&#39;s Playback Speed dialog"><img alt="Play-at-Speed Toolbar Playback Speed dialog.png" src="../m/images/a/aa/play_at_speed_toolbar_playback_speed_dialog.png" width="404" height="154" /></span></dd></dl>
+<p>We have made the Play-at-Speed toolbar resizable.  You can stretch it by dragging the right end rightwards.  You have more precision with this longer slider.  We also made the Mixer toolbar resizable, to give you the option of more precision in the main volume and playback settings too.
+</p><p><br />
+</p>
+<div id="loudness"></div>
+
+<p><br />
+</p>
+<div id="batch"></div>
+<h2><span class="mw-headline" id="Batch_Processing"><a href="macros.html" title="Macros">Batch Processing</a></span></h2>
+<p>We have added a collection of features to Audacity for 2.3.0 that are related.  They come from a project to improve batch processing.  They are described in more detail in following sections.  The project led to improved:
+</p>
+<ul><li> <a href="#macros">Macros</a> feature <i>(replaces <b>Chains</b>)</i>, for repetitive tasks that can be done without using a scripting language.</li>
+<li> Scripting using a scripting language such as Python running outside Audacity.</li>
+<li> A new 'tools menu', and new <a href="#scriptables">Scriptables</a> submenus with many new commands.</li></ul>
+<p><br />
+</p>
+<div id="macros"></div>
+<h2><span class="mw-headline" id="Macros_command_replaces_Chains"><a href="macros.html" title="Macros">Macros</a> command replaces Chains</span></h2>
+<p>We have replaced the old Chains command (for batch processing and effect automation) with an extended <span class="menu">Tools &gt; <a href="macros.html" title="Macros">Macros...</a></span> command. Macros can do everything that Chains did before.
+</p>
+<ul><li> Macros can now use many more Audacity commands.  Previously the commands were mostly effects.  Now nearly all menu items are included.</li>
+<li> New commands have been created specially for batch processing, dealing with selections, labels and clips.</li>
+<li> We have combined the old user interfaces, so that you now can view, edit and apply your macros from the same single dialog window.</li></ul>
+<dl><dd><span title="Manage Macros dialog showing Macro list (left) and command list for selected Macro (right)"><img alt="ManageMacros.png" src="../m/images/5/54/managemacros.png" width="786" height="393" /></span></dd></dl>
+<ul><li> We also simplified re-setting the parameters for commands in macros.  Now double clicking on a command in a displayed chain will pop up the parameter settings dialog for that command.</li>
+<li> You can reduce the size and scope of the dialog by using the <span class="button">Shrink</span> button.  This reduced 'Macro Palette' dialog can apply macros to your project, but does not edit them.</li></ul>
+<p><br />
+</p>
+<div id="tools"></div>
+<h2><span class="mw-headline" id="New_Tools_menu">New <a href="tools_menu.html" title="Tools Menu">Tools</a> menu</span></h2>
+<p>We added a new menu item <span class="menu"><a href="tools_menu.html" title="Tools Menu">Tools</a></span>, with customizable tools.
+</p>
+<dl><dd><div class="noresize"><map name="ImageMap_1_39347491"><area href="tools_menu.html" shape="rect" coords="25,5,66,27" alt="The Tools Menu contains customisable tools" title="The Tools Menu contains customisable tools"/><area href="extra_menu.html" shape="rect" coords="66,5,107,27" alt="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus" title="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus"/><area href="help_menu.html" shape="rect" coords="107,5,144,27" alt="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools." title="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools."/><area href="tools_menu.html#add_remove_plugins" shape="rect" coords="25,27,228,49" alt="Enable or disable particular Effects, Generators and Analyzers" title="Enable or disable particular Effects, Generators and Analyzers"/><area href="tools_menu.html#macros" shape="rect" coords="25,49,228,71" alt="Creates a new macro or edits an existing macro" title="Creates a new macro or edits an existing macro"/><area href="tools_menu_apply_macro.html" shape="rect" coords="25,71,228,93" alt="Displays a menu with list of all your Macros" title="Displays a menu with list of all your Macros"/><area href="tools_menu.html#screenshot" shape="rect" coords="25,100,228,122" alt="A tool, mainly used in documentation, to capture screenshots of Audacity" title="A tool, mainly used in documentation, to capture screenshots of Audacity"/><area href="tools_menu.html#run_benchmark" shape="rect" coords="25,122,228,144" alt="A tool for measuring the performance of one part of Audacity" title="A tool for measuring the performance of one part of Audacity"/><area href="tools_menu.html#nyquist_prompt" shape="rect" coords="25,151,228,173" alt="Brings up a dialog where you can enter Nyquist commands" title="Brings up a dialog where you can enter Nyquist commands"/><area href="tools_menu.html#regular_interval_labels" shape="rect" coords="25,180,228,202" alt="Places point labels in a label track so as to divide the associated audio into smaller, equally-sized segments." title="Places point labels in a label track so as to divide the associated audio into smaller, equally-sized segments."/><area href="tools_menu.html#sample_data_export" shape="rect" coords="25,202,228,224" alt="Reads the values of successive samples from the selected audio and prints this data to a plain text, CSV or HTML file" title="Reads the values of successive samples from the selected audio and prints this data to a plain text, CSV or HTML file"/><area href="tools_menu.html#sample_data_import" shape="rect" coords="25,224,228,246" alt="Create audio from imported numeric data" title="Create audio from imported numeric data"/><area href="menu_reference.html" shape="rect" coords="0,0,1000,1000" alt="The Menus" title="The Menus"/></map><img alt="ToolsMenu.png" src="../m/images/3/3f/toolsmenu.png" width="233" height="256" usemap="#ImageMap_1_39347491"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:178px;top:-15px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+</div>
+<p><br />
+&#160;
+</p><p><br />
+</p><p><br />
+</p>
+<ul><li> Some new prebuilt macros are available in Tools, and you can configure and add your own.</li>
+<li> Macros are bindable to key presses.</li>
+<li> New Nyquist Prompt in Tools with enhanced capabilities.</li></ul>
+<p><br />
+</p>
+<div id="save"></div>
+<h2><span class="mw-headline" id="New_Save_Project_menu">New <a href="file_menu_save_project.html" title="File Menu: Save Project">Save Project</a> menu</span></h2>
+<p>We have created a new submenu from the <a href="file_menu.html" title="File Menu">File Menu</a> called <b><a href="file_menu_save_project.html" title="File Menu: Save Project">Save Project</a></b>
+</p>
+<dl><dd><img alt="Save Project submenu.png" src="../m/images/e/eb/save_project_submenu.png" width="504" height="276" /></dd></dl>
+<p>This replaces the former <b>Save Project</b> and <b>Save Project As</b> commands and these move into the new submenu.  The <b>Save Compressed Copy of Project...</b> is also moved to the new submenu (it was in <span class="menu">File &gt; Export</span> formerly).
+</p><p>Most importantly we have added a new command to that menu <span class="menu"> File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_lossless_copy_of_project" title="File Menu: Save Project">Save Lossless Copy of Project</a></span>.  This is the now the safe and recommended way to make a safety backup copy of a project as you work on it. This could serve either as a single backup copy of the project, or as one of several incremental copies of the project in the state it had at a particular date and time. Unlike "Save As..." using this command will leave your current project open enabling you to continue working on it. 
+</p><p><br />
+</p>
+<div id="scriptables"></div>
+<h2><span class="mw-headline" id="New_Scriptables_submenus">New Scriptables submenus</span></h2>
+<p>New <span class="menu">Extra &gt; <a href="extra_menu_scriptables_i.html" title="Extra Menu: Scriptables I">Scriptables I</a></span> and <span class="menu">Extra &gt; <a href="extra_menu_scriptables_ii.html" title="Extra Menu: Scriptables II">Scriptables II</a></span> submenus in the Extra menu
+</p>
+<ul><li>24 New functions in these  menus
+<ul><li> These are likely to be particularly useful to VI users. </li>
+<li> Actions that are currently done by mouse that can now be done by keyboard.</li>
+<li> These function too are available from Macros.</li></ul></li></ul>
+<p>Click <a href="extra_menu_scriptables_i.html" title="Extra Menu: Scriptables I">Scriptables I</a> and <a href="extra_menu_scriptables_ii.html" title="Extra Menu: Scriptables II">Scriptables II</a> to learn more.
+</p><p><br />
+</p>
+<div id="nyq_translates"></div>
+<h2><span class="mw-headline" id="Nyquist_effects_translated">Nyquist effects translated</span></h2>
+<p>Nyquist effects now support translation, and the ones shipped with Audacity are translated.
+</p><p><br />
+</p>
+<div id="help_buttons"></div>
+<h2><span class="mw-headline" id="Help_Buttons">Help Buttons</span></h2>
+<p>We added help buttons <a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> to the Macros full and reduced dialogs, to the Export dialogs, to some error message dialogs and to some other dialogs that did not previously have them.
+</p><p><br />
+</p>
+<div id="trackname"></div>
+<h2><span class="mw-headline" id="Increased_legibility_of_trackname_display">Increased legibility of trackname display</span></h2>
+<p>Increased legibility of trackname display. the Track Name overlay now has a background.
+</p>
+<dl><dd><span title="Waveform with superimposed track name"><img alt="Audio Track with track name superimposed.png" src="../m/images/d/dc/audio_track_with_track_name_superimposed.png" width="687" height="169" /></span></dd></dl>
+<p><br />
+</p>
+<div id="halfwave"></div>
+<h2><span class="mw-headline" id="Half-wave_option_for_collapsed_tracks">Half-wave option for collapsed tracks</span></h2>
+<p>For <a href="audio_tracks.html#collapse" title="Audio Tracks">collapsed tracks</a> there is now an option settable in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> to show the upper half of the wave display only in order to show a little more detail.
+</p>
+<dl><dd><span title="Half-wave display in a collapsed track"><img alt="Half-wave display when collapsed.png" src="../m/images/5/50/half_wave_display_when_collapsed.png" width="687" height="52" /></span></dd></dl>
+<p><br />
+</p>
+<div id="sliding"></div>
+<h2><span class="mw-headline" id="Sliding_Stretch_replace_Sliding_Time_Scale_.2F_Pitch_Shift"><a href="sliding_stretch.html" title="Sliding Stretch">Sliding Stretch</a> replace Sliding Time Scale / Pitch Shift</span></h2>
+<p>The effect that was formerly named "Sliding Time Scale / Pitch Shift" has been renamed to "<a href="sliding_stretch.html" title="Sliding Stretch">Sliding Stretch</a>" for this release.
+</p><p>This is a simple name change, no other changes have been made to the effect.  The change has been made mainly to reduce verbosity in the menu along with an attempt to make the command name more meaningful.
+</p><p><br />
+</p>
+<div id="overwrite"></div>
+<h2><span class="mw-headline" id="Overwriting_existing_projects">Overwriting existing projects</span></h2>
+<p>In response to many user requests for this we have changed Audacity so that is now possible to overwrite pre-existing projects with <span class="menu">File &gt; Save Project</span> or <span class="menu">File &gt; Save Project As...</span>.
+</p><p>In doing so you will get the following warning message and please note that for safety reasons this warning cannot be turned off.
+</p>
+<dl><dd><span title="Overwrite Project Warning message"><img alt="Overwrite Project Warning.png" src="../m/images/a/a3/overwrite_project_warning.png" width="400" height="202" /></span></dd></dl>
+<p><br />
+</p><p><br />
+</p>
+<div id="labels"></div>
+<h2><span class="mw-headline" id="Use_dialog_for_the_name_of_new_labels">Use dialog for the name of new labels</span></h2>
+<p>There is a new option in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a> for: "<b>Use dialog for the name of new label</b>".
+</p><p>This is off by default, but when enabled creating a label will pop up a dialog box for you to enter the label name <i>(rather than the default behavior of opening the new label itself for editing)</i>.   When the dialog is closed, focus is returned to the track which was the focus before the dialog opened.  This functionality is primarily provided to aid Visually Impaired users who use screen readers, but may be useful to normally sighted users too.
+</p><p><br />
+</p>
+<div id="clips"></div>
+<h2><span class="mw-headline" id="Changed_shortcuts_for_clip_navigation">Changed shortcuts for clip navigation</span></h2>
+<p>The shortcuts for clip navigation have been changed
+</p>
+<ul><li><span class="menu">Select &gt; Clip Boundaries &gt; <a href="select_menu_clip_boundaries.html#previous_clip" title="Select Menu: Clip Boundaries">Previous Clip</a></span> is now <span class="kbrd" style="background-color: #d0d0f8">Alt + ,</span>  -  <i>was <span class="kbrd" style="background-color: #d0d0f8">Alt + P</span></i></li>
+<li><span class="menu">Select &gt; Clip Boundaries &gt; <a href="select_menu_clip_boundaries.html#next_clip" title="Select Menu: Clip Boundaries">Next Clip</a></span> is now <span class="kbrd" style="background-color: #d0d0f8">Alt + .</span>  -  <i>was <span class="kbrd" style="background-color: #d0d0f8">Alt + N</span></i></li></ul>
+<p><br />
+</p><p><br />
+</p>
+<div id="bugs"></div>
+<h2><span class="mw-headline" id="Bug_Fixes">Bug Fixes</span></h2>
+<p>We fixed over 90 bugs that were in Audacity 2.2.2, including:
+</p>
+<ul><li>Windows: Queen Mary 1.7.1 Vamp plug-ins crash Audacity on opening Plug-in Manager - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1244">bug #1244</a></li>
+<li>Inconsistent behavior when recording with a selection defined see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1839">bug #1839</a></li>
+<li><span class="kbrd" style="background-color: #d0d0f8">Ctrl + M</span> does not open label for editing - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1852">bug #1852</a></li>
+<li>Vertical Zoom in by clicking in the vertical Scale, or context menu, in waveform views is inconsistent see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1810">bug #1810</a></li>
+<li>Deletion of all tracks cannot be undone - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1845">bug #1845</a></li>
+<li>Timer Record with a selection present can get a truncated recording with data loss - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1851">bug #1851</a></li>
+<li>Duplicate shortcuts can be created - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1786">bug #1786</a></li>
+<li>Labels longer than 260 characters are now supported - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1905">bug #1905</a></li>
+<li>Using Spectrogram Settings in TCP or using Preferences causes Audacity to reset Project Rate to default rate in Quality Preferences - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1977">bug #1977</a></li>
+<li>Cut Preview should play all selected/sync-locked tracks, respecting Mute/Solo during preview - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=231">bug #231</a></li></ul>
+<p><br />
+</p><p><br />
+</p>
+<div id="appendix"></div>
+
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_2.3.0"><b>&gt;</b> Audacity Release Notes 2.3.0</a> <i>- detailed release notes for this release of Audacity</i>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917092852
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.206 seconds
+Real time usage: 0.309 seconds
+Preprocessor visited node count: 420/1000000
+Preprocessor generated node count: 2862/1000000
+Post‐expand include size: 5195/2097152 bytes
+Template argument size: 2688/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  202.393      1 - -total
+ 88.11%  178.336      1 - Template:Menus
+ 87.36%  176.819      1 - Template:All-menus
+  2.69%    5.447      6 - Template:Shortcut
+  1.76%    3.560     11 - Template:Menu
+  1.55%    3.142      1 - Template:Intro
+  1.17%    2.367      1 - Template:ClickTip
+  1.15%    2.332      5 - Template:Ednote
+  1.08%    2.178      2 - Template:Button
+  0.58%    1.169      1 - Template:Note
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5555-0!*!0!!*!5!* and timestamp 20180917092852 and revision id 62210
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="#" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

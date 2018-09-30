@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Real-time preview of effects - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Real-time_preview_of_effects rootpage-Real-time_preview_of_effects skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Real-time preview of effects</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Real-time_preview_of_effects#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>Real-time preview</b> enables you to change effect settings while playing and listening to the result in real-time, rather than having to preview, tweak settings then preview again. A real-time preview effect therefore includes Play/Stop, Skip Backward and Skip Forward buttons instead of a Preview button. <p>Currently not all effects shipped with Audacity support real-time preview, but you can download additional <a href="effect_menu.html#LADSPA_Effects" title="Effect Menu">LADSPA</a>, <a href="effect_menu.html#LV2_effects" title="Effect Menu">LV2</a>, <a href="effect_menu.html#vst" title="Effect Menu">VST</a> and <a href="effect_menu.html#Audio_Unit_Effects" title="Effect Menu">Audio Unit</a> <i>(for Mac)</i> effects, almost all of which will support real-time preview.</p> </div> 
+<h2><span class="mw-headline" id="Real-time_preview_differences">Real-time preview differences</span></h2>
+<p>An effect that supports real-time preview is different from regular effects in the following ways.
+</p>
+<ul><li> It can be opened when audio is playing or paused.</li>
+<li> It can be opened even when no audio is <a href="audacity_selection.html" title="Audacity Selection">selected</a>, as long as the track is selected. </li>
+<li> One regular effect can be opened and applied while a real-time preview effect is open but not playing. </li>
+<li> Real-time preview settings can be changed while audio is playing.</li>
+<li> When in Graphical Mode, live meters or graphs should respond when audio is playing.</li>
+<li> You can start and stop audio playback, change the selection, apply <a href="audio_tracks.html#gain" title="Audio Tracks">gain</a> or <a href="audio_tracks.html#pan" title="Audio Tracks">pan</a> to tracks or <a href="audio_tracks.html#mute" title="Audio Tracks">Mute</a> or <a href="audio_tracks.html#solo" title="Audio Tracks">Solo</a> them while the effect dialog is open. You can use the shortcuts <span class="kbrd" style="background-color: #eaeafa">Alt + F6 </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i> or <span class="kbrd" style="background-color: #eaeafa">Alt + Shift + F6 </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i> (use the <span class="kbrd" style="background-color: #e0e0f0">Option</span> key instead of Alt on Mac) to move forward or backward respectively between the effect and the main project window. </li>
+<li> A selection <b>must</b> be present to apply the effect.  </li>
+<li> You will hear a preview of applying the effect to the selected track(s). Unselected tracks will not have the effect applied to them but unlike in regular effects, unselected tracks will still be heard unless you use the Mute/Solo state to silence them.  </li>
+<li> The effect may be applied without closing the effect.</li>
+<li> User presets may be saved and loaded. As long as you apply the effect, changes you make to an effect's settings will be restored for use next time you launch Audacity.</li></ul>
+<h2><span class="mw-headline" id="Real-Time_preview_with_graphical_interface">Real-Time preview with graphical interface</span></h2>
+ </li></ul>
+<p>When you open an effect that supports real-time preview with graphical interface it will have these control icons at the bottom of the effect dialog.
+</p>
+<dl><dd><span title="Graphical icon-based real-time preview controls"><img alt="Real-time controls annotated.png" src="../m/images/a/af/real_time_controls_annotated.png" width="499" height="132" /></span></dd></dl>
+<ul><li>&#160;<span title="Manage Effect button"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span>&#160;<b>Manage Effect menu:</b> 
+<ul><li><b>User Presets:</b> If any user presets exist for this effect this menu will list them. Select one of the user presets to load it into the effect.
+<li> <b>Factory Presets:</b> If any factory presets exist for this effect this menu will list them. Select one of the factory presets to load it into the effect.
+<li> <b>Delete Preset:</b> Select this option to delete a previously saved user preset.
+<li> <b>Save As...</b> Select this option to save the current settings as a user preset.
+<li> <b>Import...</b> Select this option to import a presets file (or multiple files for Audio Unit effects on Mac).   
+<li> <b>Export...</b> Select this option to export a presets file (or multiple files for Audio Unit effects on Mac). Export lets you share presets for this effect with other users on your computer or to move them to another computer.
+<dl><dd></dd></dl>
+<div class="note">Many VST effects support import and export of named factory presets in a single FXB file, but LADSPA and LV2 effects do not support import and export of presets at all. Please click the links in the <i>Options...</i> section below to see a full explanation of presets features for each type of real-time preview effect.</div> 
+<li><b>Options...</b> Displays the options dialog for this type of effect. See the sections for each type of effect for a description of the options available.
+<ul><li> <a href="effect_menu.html#ladspa_options" title="Effect Menu">LADSPA Options</a>
+<li><a href="effect_menu.html#lv2_options" title="Effect Menu">LV2 Options</a>
+<li> <a href="effect_menu.html#vst_options" title="Effect Menu">VST Options</a>
+<li> <a href="effect_menu.html#au_options" title="Effect Menu">Audio Unit Options</a></ul>
+<li> <b>About:</b> Displays the effect type, effect name, version, vendor, and description.</ul>
+<li><span title="Play button in real-time preview effect">
+<img alt="RealTimePlayButton.png" src="../m/images/3/3a/realtimeplaybutton.png" width="16" height="16" /></span>&#160;<b>Play/Stop:</b> Click this button to begin playback. It changes to the Stop button&#160;<span title="Stop button in real-time preview effect">
+<img alt="RealTimeStopButton.png" src="../m/images/c/c8/realtimestopbutton.png" width="16" height="16" /></span>&#160;. Click it again to stop playback. If there is no selection in the track(s), restarting playback with this button will restart from the original cursor point, just like pressing Play in <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a>. However if there is a selection you can use the real-time preview Play/Stop button as a Pause button, pressing Stop to stop playback then Play to resume from where you stopped playback inside the selection. 
+
+<div class="note">If you stop playback inside a selection with this button then do want to restart playback from the start of the selection, either click the "Skip Backward" button (see below) followed by the real-time preview Play button, or use the Play button in Transport Toolbar in the main project window.</div>
+<li>&#160;<span title="Skip back button in real-time preview effect"><img alt="RealTimeSkipBackButton.png" src="../m/images/2/2d/realtimeskipbackbutton.png" width="16" height="16" /></span>&#160;<b>Skip Backward:</b> When playback is stopped, clicking this button will cause the next playback in the effect to start from the <b>start</b> of the selection. During playback, each click of this button will perform a <a href="playing_and_recording.html#play_special" title="Playing and Recording">short seek back</a>. You cannot seek back behind the editing cursor or behind the start of the selection. 
+<li>&#160;<span title="Skip Forward button in real-time preview effect"><img alt="RealTimeSkipFwdButton.png" src="../m/images/f/f7/realtimeskipfwdbutton.png" width="15" height="16" /></span>&#160;<b>Skip Forward:</b> When playback is stopped, clicking this button will cause the next playback in the effect to start from the <b>end</b> of the selection. You can use this to compare subsequent audio which you may not want to apply the effect to. During playback, each click of this button will perform a <a href="playing_and_recording.html#play_special" title="Playing and Recording">short seek forward</a>.
+<li> <b>Enable:</b> This checkbox contains a checkmark by default <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable</span>, which enables the effect. 
+
+<div class="note">Remove the checkmark <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable</span> to disable the effect (also known as <i><b>bypassing</b></i> the effect). Disabling makes the audio play as if the effect was closed and the effect's controls will no longer change the audio. Disabling and enabling is a convenient way to compare the "dry" (non-affected) sound with the "wet" (affected) sound while it plays in real-time.</div> 
+<li> <span class="button">Close</span> Click this button to close the effect dialog. Closing the effect without pressing "Apply" (below) does not save the current settings of the effect for use next time you launch Audacity.
+<li> <span class="button">Apply</span> Click this button to apply the effect to the selected audio and save the current settings of the effect for next time you launch Audacity. The effect dialog will remain open after the effect is applied. </ul>
+<h2><span class="mw-headline" id="Real-Time_preview_with_text-based_controls">Real-Time preview with text-based controls</span></h2>
+<p>If you use the <i>Manage</i> button <img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /> then <i>Options...</i> to disable graphical interface, the Manage button and the Real-Time Preview playback controls display as text-based buttons instead, as in the below image:
+</p>
+<dl><dd><span title="Text-based real-time preview controls"><img alt="Real-time controls text-based.png" src="../m/images/f/f2/real_time_controls_text_based.png" width="706" height="54" /></span></dd></dl>
+<p>As with the graphical interface, a single button starts and stops playback, reading <span class="button">Start Playback</span> when there is no playback and <span class="button">Stop Playback</span> when there is playback.
+</p><p>Text-based controls and textual interface will display automatically even if graphical interface is chosen if the effect does not provide a graphical interface of its own.
+</p>
+<div class="note">On Windows only, you can use the following single key presses to operate the effect whenever focus is in either the graphical or text-based interface: 
+<ul><li> <b>M</b> to open the Manage menu, <b>P</b> to Start or Stop playback, <b>B</b> to skip backward, <b>F</b> to skip forward, <b>E</b> to enable/disable the effect.</div></li></ul>
+<div id="limitations"></div>
+<h2><span class="mw-headline" id="Notes_and_Limitations">Notes and Limitations</span></h2>
+<ul><li> Currently, real-time preview does not compensate for the latency many plug-ins introduce in order to provide smooth processing of audio. Real-time preview therefore may have small gaps in the audio, or timing artifacts may be audible when previewing multiple tracks. However by default Audacity compensates for latency when <i>applying</i> the effect (unless you disable compensation in the options for the effect). <p>Therefore if you hear latency problems in real-time preview, apply the effect and close it, then listen to the result. If you do not like the result you can simply use the <span class="menu">Edit &gt; Undo</span> command, or its shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Z</span> <i>(on Mac <span class="kbrd" style="background-color: #d0d0f8">&#8984; + Z</span>)</i>, open the effect and try a different setting.</p></li></ul>
+
+<ul><li> So that real-time preview plays how the audio will sound immediately after applying the effect, any existing <a href="envelope_tool.html" title="Envelope Tool">volume envelopes</a> or <a href="time_tracks.html" title="Time Tracks">Time Tracks</a> and the positions of gain or pan sliders are applied before preview is heard.</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20180917112233
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.102 seconds
+Real time usage: 0.109 seconds
+Preprocessor visited node count: 196/1000000
+Preprocessor generated node count: 687/1000000
+Post‐expand include size: 5660/2097152 bytes
+Template argument size: 4223/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   23.802      1 - -total
+ 14.44%    3.436      4 - Template:Note
+ 12.84%    3.056      4 - Template:Button
+ 12.06%    2.871      1 - Template:Intro
+ 11.36%    2.705      2 - Template:Fullshortcut
+ 10.85%    2.582      2 - Template:Shortcut
+  6.50%    1.548      1 - Template:Key
+  5.90%    1.404      2 - Template:Ednote
+  5.20%    1.238      1 - Template:Menu
+  5.10%    1.215      1 - Template:CheckboxNotChecked
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5117-0!*!0!!*!5!* and timestamp 20180917112233 and revision id 61905
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Real-time_preview_of_effects">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

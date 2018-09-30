@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Noise Reduction - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Noise_Reduction rootpage-Noise_Reduction skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Noise Reduction</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Noise_Reduction#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">Noise Reduction can reduce constant background sounds such as hum, whistle, whine, buzz, and "hiss", such as tape hiss, fan noise or FM/webcast carrier noise. It is not suitable for individual clicks and pops, or irregular background noise such as from traffic or an audience.
+<p>To use Noise Reduction, you need a region in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> that contains only the noise you want to reduce. 
+</p><p>Be aware that it may be impossible to get a satisfactory removal when the noise is very loud, when the noise is variable, when the music or speech is not much louder than the noise or when the noise frequencies are very similar to those of the music or speech. 
+</p>
+If your problem is mains hum or a high-pitched whistle, the use of a <a href="notch_filter.html" title="Notch Filter">Notch Filter</a> may help, which should be carried out <b>before</b> applying Noise Reduction.</div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Noise Reduction...</span></dd>
+<dd><span title="Noise Reduction effect dialog"><img alt="Noise Reduction.png" src="../m/images/3/3c/noise_reduction.png" width="474" height="406" /></span></dd></dl>
+<div id="profile"></div>
+<h2><span class="mw-headline" id="Step_1_-_Get_Noise_Profile">Step 1 - Get Noise Profile</span></h2>
+<p>This first step teaches Audacity about the noise you want to remove by identifying the <i><b><a href="glossary.html#noise_floor" title="Glossary">noise floor</a></b></i> of the different <i><b><a href="glossary.html#frequency" title="Glossary">frequencies</a></b></i> that make up the noise.  
+</p>
+<ol><li>Select a region of the <i><a href="audacity_waveform.html" title="Audacity Waveform">waveform</a></i> which <b>contains only noise</b>. A minimum of 2048 samples (0.05 sec. at 44100 Hz <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>) is needed, below which an error will be shown. A longer profile is better. If there are very different types of noise in different places in the track, they are best dealt with by grabbing the profile for the first type, reducing the noise for it, then grabbing the profile of the next type of noise and reducing that. </li>
+<li>Click <span class="menu">Effect &gt; Noise Reduction...</span>.</li>
+<li>Click <b>Get Noise Profile</b>.</li></ol>
+<div class="note">Duplicating a very short sample of noise in order to get a long enough sample for the noise profile will not help. Noise Reduction calculates the statistics of the noise. Examining repeated blocks of the same noise will not change the statistics. </div> 
+<div id="remove"></div>
+<h2><span class="mw-headline" id="Step_2_-_Reduce_the_Noise">Step 2 - Reduce the Noise</span></h2>
+<ol><li> <a href="audacity_selection.html" title="Audacity Selection">Select</a> the entire region of <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> <b>from which you want to reduce the noise</b>, then set the Noise Reduction parameters. This is often best done by trial and error, adjusting the sliders and using the Preview button to listen to a few seconds of audio after noise reduction. Listening to the <i>Residue</i> (the sound that will be filtered out when you apply "Reduce") can also be useful in determining how much damage is being done to the desired (non-noise) sound.</li>
+<li>Click <span class="menu">Effect &gt; Noise Reduction...</span>.
+<ul><li><b>Noise Reduction (dB):</b> Controls the amount of volume reduction to be applied to the identified noise. Use the lowest value that reduces the noise to an acceptable level. Higher values than necessary may make the noise even quieter, but will result in damage to the audio that remains.  </li>
+<li><b>Sensitivity:</b> Controls how much of the audio will be considered as noise, on a scale of 0 (off) to 24 (maximum). Greater sensitivity means that more noise will be removed, possibly at the expense of removing some of the desired signal as well. Lower values may result in the appearance of <a href="#artifacts">artifacts</a> in the noise-reduced audio. Set this control to the lowest value that achieves effective noise removal without the introduction of artifacts. </li>
+<li><b>Frequency Smoothing (bands):</b> At values of 1 or higher, this control spreads the noise reduction into the specified number of neighboring bands. This modifies the signal you were intending to keep, but if <a href="#artifacts">artifacts</a> remain in the noise-reduced audio the smoothing can make those artifacts sound more acceptable. There is a chance that smoothing will make the desired audio less clear, so where your desired signal is strong and of wide frequency range and the noise is light, try leaving this control at 0 (off).<p> If you hear <a href="#artifacts">artifacts</a> in the noise-reduced audio after setting Sensitivity as high as possible without eliminating desired audio, try setting Frequency Smoothing to a value between 1 and 6 bands. The width (in Hertz) of a frequency band is dependent on the sampling frequency of the track. Width&#160;=&#160;sampling&#160;frequency&#160;/&#160;2048&#160;=&#160;21.53&#160;Hz at 44100 Hz sampling rate.</p><p><i>Time smoothing</i> is always applied by Noise Reduction (attack of 20 milliseconds and release of 100 milliseconds) but the settings are not configurable. Any frequency smoothing you request is applied after time smoothing.</p> <p>The default setting is setting is 3, settings lower than this tend to favor music and higher settings tend to favor spoken word.</p></li>
+<li><b>Noise:</b>
+<ul><li><b>Reduce:</b> Select this option to filter out the noise from the selection.</li>
+<li><b>Residue:</b> Select this option to hear the sound that would be filtered out if you chose "Reduce". This is useful for finding the optimum settings that do not damage the audio. If you can hear recognizable bits of the desired sound in the residue, it is likely that you have set Noise Reduction too high or Sensitivity too high.</li></ul></li></ul></li></ol>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="The_buttons">The buttons</span></h2>
+<p>Clicking on the command buttons give the following results:
+</p>
+<ul><li><span class="button">Preview</span> plays a short preview of what the audio would sound like if the effect is applied with the current settings, without making actual changes to the audio.  The length of preview is determined by your setting in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span>, the default setting is 6 seconds.</li>
+<li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
+<li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li></ul>
+<div id="artifacts"></div>
+<div class="note"><b><a href="glossary.html#artifact" title="Glossary">Artifacts</a>:</b> These typically consist of random bursts of very short tones at random frequencies, sometimes called "musical noise", "bird song" or "tinkly-bells". These may be visible in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">Spectrogram</a> view.<p> Artifacts can happen if the noise floor is higher than was estimated, either because <i>Sensitivity</i> was set too low, or because the noise profile was not representative of the noise throughout the track.  Although most of the noise will be suppressed most of the time, random artifacts may occur, which can be even more objectionable than the original noise. For a more technical explanation of artifacts, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_Audacity_Noise_Reduction_Works#artifacts">How Audacity Noise Reduction Works</a> in the Wiki.</p>
+</div>
+<div id="tips"></div>
+<h2><span class="mw-headline" id="Tips">Tips</span></h2>
+<p>After creating a noise profile, <span class="kbrd" style="background-color: #d0d0f8">Ctrl + R</span> or <span class="menu">Effect &gt; Repeat Noise Reduction</span> will <b>apply</b> Noise Reduction at its current settings. 
+</p><p>Reducing noise usually results in some distortion. This is normal and there is nothing you can do about it. When there's only a little bit of noise, and the signal (that is, the voice, music or other desired sound) is much louder than the noise, this effect works well and there's very little audible distortion. Unfortunately, when the noise is very variable or very loud (the signal is not much louder than the noise) the result may be too distorted.
+</p><p>If you are still having problems the following tips may help. 
+</p>
+<ul><li>Select <span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;Residue</span> from the <i>Noise:</i> options, click <span class="button">Preview</span>, listening for unwanted traces of the desired signal. You can usually reduce the amount of desired sound in the residue by decreasing <i>Sensitivity</i> or decreasing <i>Noise Reduction</i>. 
+<ul><li>Decreasing <i>Sensitivity</i> decreases the chance of losing sound you want to keep (as indicated by hearing bits of the desired audio in the residue), but increases the chance of there being artifacts sounding like "tinkly bells" when applying the effect with <span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;Reduce</span> selected. </li>
+<li>Decreasing <i>Noise Reduction</i> also decreases the chance of losing sound you want to keep (as indicated by hearing bits of the desired audio in the residue), but will increase the amount of noise remaining in the result when applying the effect with <span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;Reduce</span> selected.</li></ul></li>
+<li>When you have found settings of <i>Sensitivity</i> and <i>Noise Reduction</i> that appear to do the least damage to the desired sound (based on there being little of that sound in the residue), click the <span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;Reduce</span> radio button then click <span class="button">OK</span> to apply the effect.</li>
+<li><a href="amplify.html" title="Amplify">Amplify</a> or <a href="normalize.html" title="Normalize">Normalize</a> may be done before or after Noise Reduction. </li>
+<li>Do any <a href="notch_filter.html" title="Notch Filter">Notch Filtering</a> or <a href="click_removal.html" title="Click Removal">Click Removal</a> <b>before</b> doing noise reduction.</li>
+<li>Do any <a href="compressor.html" title="Compressor">compression</a> or any other <a href="effect_menu.html" title="Effect Menu">effects</a> not mentioned above <b>after</b> doing noise reduction, not before.  </li></ul>
+<div id="chains"></div>
+<div id="macros"></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>When using Noise Reduction in <a href="macros.html" title="Macros">Macros</a></b> the profile is captured as below.
+<ul><li> If a Noise Profile exists, that Noise Profile will be used. It is often best to capture a suitable Noise Profile before running a Macro.</li>
+<li> If a Noise Profile does not exist:
+<ul><li>If the Macro is applied to the current project, the current selection is used to create the Noise Profile. Therefore, other effect commands in the Macro will also only apply to that selection. If an export command is added, the entire file will be exported. </li>
+<li> If the Macro is applied to files, the first file (all of it) is used to create the Noise Profile. It may be useful to prepare a file containing a suitable Noise Profile and name it so that it is alphabetically the first file of those to be run in the Macro. </li></ul></li></ul>
+</td></tr></table>
+</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>Noise Reduction with cassette tapes:</b> Cassettes are slightly different from other sources in that its not uncommon for the noise profile to change through the course of the tape, due to accumulation of dirt on the tape heads, either during play or during record, or both.
+<p>To optimise the performance of Audacity's Noise Reduction it is best to use a noise sample near the beginning of the tape rather than the end. Using a sample late in the tape will sometimes cause poorer discrimination between noise and signal, as some of the higher frequency noise will be missing or reduced in amplitude. 
+</p>
+</td></tr></table>
+</div>
+<div id="advanced"></div>
+<div class="note">
+<h3><span class="mw-headline" id="Advanced_Tips">Advanced Tips</span></h3>
+<ul><li>For a more technical explanation of the <i><b><a href="glossary.html#algorithm" title="Glossary">algorithm</a></b></i> used in Noise Reduction, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_Audacity_Noise_Reduction_Works#algorithm">Noise Reduction algorithm</a> in the Wiki. </li>
+<li>Also see <a href="sample_workflow_for_lp_digitization.html" title="Sample workflow for LP digitization">Sample workflow for LP digitization</a> which lists some <a href="sample_workflow_for_lp_digitization.html#alternative" title="Sample workflow for LP digitization">alternative noise reduction software</a> that you can use as part of your audio restoration routine.</li></ul>
+</div>
+<h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
+<ul><li> Taking a noise profile in a track at one sample rate then removing noise in another track at a different rate will produce poor results and is therefore prohibited with an error "Sample rate of the noise profile must match that of the sound to be processed".</li>
+<li> Taking a noise profile over two or more tracks at different sample rates is prohibited with an error "All Noise Profile data must have the same sample rate".  </li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Alternative_Noise_Reduction_Techniques"><a href="alternative_noise_reduction_techniques.html" title="Alternative Noise Reduction Techniques">Alternative Noise Reduction Techniques</a></span></h2>
+<p>Please see <a href="alternative_noise_reduction_techniques.html" title="Alternative Noise Reduction Techniques">this page</a> for some additional noise reduction techniques.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112004
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.135 seconds
+Real time usage: 0.140 seconds
+Preprocessor visited node count: 444/1000000
+Preprocessor generated node count: 1898/1000000
+Post‐expand include size: 13814/2097152 bytes
+Template argument size: 4591/2097152 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   52.835      1 - -total
+ 44.52%   23.523      1 - Template:I18n
+ 40.19%   21.235      1 - Template:I18n_box
+ 31.66%   16.727      1 - Template:I18n_list
+ 24.16%   12.765      1 - Template:Effectbuttons
+ 19.20%   10.145      1 - Template:Buttonlist
+ 11.86%    6.268      2 - Template:I18n_link
+ 11.18%    5.908     11 - Template:Button
+  6.94%    3.669      2 - Template:Autoglossonym
+  3.65%    1.928      5 - Template:Menu
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5115-0!*!0!!*!5!* and timestamp 20180917112004 and revision id 60133
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Noise_Reduction">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

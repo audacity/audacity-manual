@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>FAQ:Opening and Saving Files - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-FAQ_Opening_and_Saving_Files rootpage-FAQ_Opening_and_Saving_Files skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">FAQ:Opening and Saving Files</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/FAQ:Opening_and_Saving_Files#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><a href="faq_mp3_export_problems.html" title="FAQ:MP3 export problems"><b>&gt;</b>&#160; Forward To: FAQ:MP3 export problems</a> <br />
+</p><p><a href="faq_playback.html" title="FAQ:Playback"><b>&lt;</b>&#160; Back to: FAQ:Playback</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p><p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#How_do_I_save_my_audio_for_use_in_other_applications.3F_Does_saving_a_project_.28AUP_file.29_do_that.3F"><span class="tocnumber">1</span> <span class="toctext">How do I save my audio for use in other applications? Does saving a project (AUP file) do that?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Why_does_Audacity_create_a_folder_full_of_.au_files_when_I_save_a_project.3F"><span class="tocnumber">2</span> <span class="toctext">Why does Audacity create a folder full of .au files when I save a project?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Audacity_crashed.2C_or_I_no_longer_have_the_AUP_project_file.21_Can_I_recover_the_data.3F"><span class="tocnumber">3</span> <span class="toctext">Audacity crashed, or I no longer have the AUP project file! Can I recover the data?</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Can_Audacity_import_or_export_formats_like_WMA.2C_AC3_or_iTunes_files_.28M4A.2FMP4.29.3F"><span class="tocnumber">4</span> <span class="toctext">Can Audacity import or export formats like WMA, AC3 or iTunes files (M4A/MP4)?</span></a></li>
+<li class="toclevel-1"><a href="#How_can_I_export_to_formats_not_listed_in_the_Export_Audio_Dialog.3F"><span class="tocnumber">5</span> <span class="toctext">How can I export to formats not listed in the Export Audio Dialog?</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Why_do_exported_files_not_include_Album_Artist_or_BPM_metadata.2C_Album_Art_or_Lyrics.3F"><span class="tocnumber">6</span> <span class="toctext">Why do exported files not include Album Artist or BPM metadata, Album Art or Lyrics?</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#How_do_I_import_tracks_from_an_audio_CD.3F"><span class="tocnumber">7</span> <span class="toctext">How do I import tracks from an audio CD?</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#How_do_I_save_my_recording_on_an_audio_CD.3F"><span class="tocnumber">8</span> <span class="toctext">How do I save my recording on an audio CD?</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#How_can_I_split_a_long_recording_into_multiple_files_or_CD_tracks.3F"><span class="tocnumber">9</span> <span class="toctext">How can I split a long recording into multiple files or CD tracks?</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Why_does_Audacity_warn_about_the_name_or_nothing_happens_when_I_export_or_save.3F"><span class="tocnumber">10</span> <span class="toctext">Why does Audacity warn about the name or nothing happens when I export or save?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Adding_extensions_and_periods_.28dots.29_to_names_of_exported_audio_files"><span class="tocnumber">10.1</span> <span class="toctext">Adding extensions and periods (dots) to names of exported audio files</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Characters_forbidden_by_the_operating_system"><span class="tocnumber">10.2</span> <span class="toctext">Characters forbidden by the operating system</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Why_does_my_file_import_with_a_hatched_pattern_then_slowly_change_to_a_waveform.3F"><span class="tocnumber">11</span> <span class="toctext">Why does my file import with a hatched pattern then slowly change to a waveform?</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#I_copied_the_.aup_file_to_another_computer_or_sent_it_by_email_to_a_friend.3B_but_now_when_I_open_it_there.27s_no_sound.2C_why.3F"><span class="tocnumber">12</span> <span class="toctext">I copied the .aup file to another computer or sent it by email to a friend; but now when I open it there's no sound, why?</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#How_can_I_backup_my_Audacity_Projects.3F"><span class="tocnumber">13</span> <span class="toctext">How can I backup my Audacity Projects?</span></a></li>
+</ul>
+</div>
+
+<div id="alternative"></div> 
+<h2><span class="mw-headline" id="How_do_I_save_my_audio_for_use_in_other_applications.3F_Does_saving_a_project_.28AUP_file.29_do_that.3F">How do I save my audio for use in other applications? Does saving a project (AUP file) do that?</span></h2>
+<p><b>An AUP file can only be saved and used in Audacity.</b> It is just a small text file that tells Audacity how to work with the audio you see in the project window. It lets you resume working on that audio in Audacity at a later time if you need to. 
+</p><p><b>Whenever you want to use your audio in other applications</b>, choose the 
+<span class="menu">File &gt; <a href="file_menu_export.html" title="File Menu: Export">Export</a></span> sub-commands to <i>export</i> a standard audio format like 
+<i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> or <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>.  
+</p>
+<ul><li> WAV and AIFF are <i><b><a href="glossary.html#lossless" title="Glossary">lossless</a></b></i> files which you can also burn to an <a href="#tocd">audio CD</a> or use again for further editing. </li>
+<li> MP3 and <i><b><a href="glossary.html#aac" title="Glossary">M4A/MP4</a></b></i> are <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> smaller files that are useful for portable music players or sending over the internet. </li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">To export an MP3, add <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME</a> to your computer. To export M4A/MP4, add <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> to your computer.
+</td></tr></table></div>
+<p>Before saving the exported file, click <span class="button">Options...</span> in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> to see if there are choices for the quality and size of the file.  
+</p>
+<div class="note"><b>Tip:</b> If you have already saved an AUP file but now want to export an audio file, reopen that AUP using <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a></span>. If you saved the project recently, you can also find the project in the <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> menu.</div> 
+<p>To learn more about working with AUP files, please see <a href="audacity_projects.html" title="Audacity Projects">Audacity Projects</a>.
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="aufolder"></div>
+<h2><span class="mw-headline" id="Why_does_Audacity_create_a_folder_full_of_.au_files_when_I_save_a_project.3F">Why does Audacity create a folder full of .au files when I save a project?</span></h2>
+<p>Audacity breaks long tracks into small pieces so it can edit them more efficiently. When you save an AUP project file, Audacity stores all the pieces in a <b>_data</b> folder that has the same name as the AUP file. For example, saving "song.aup" saves the required data pieces as AU files inside the "song_data" folder. 
+</p><p>To open the project, open the AUP file then Audacity will load the AU files in the correct sequence automatically. A project you saved recently can be opened from <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a>.</span>
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Long projects contain a lot of data. <b>Be sure the project is fully saved before exiting Audacity or shutting down the computer.</b> If there is a progress dialog for saving the project, wait for it to complete before shutting down. The <a href="status_bar.html" title="Status Bar">Status Bar</a> at the bottom shows a message when the project has been saved.
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top"><b>You should not move, delete or rename the _data folder or any of the AU files inside it.</b>
+</td></tr></table>
+</div>
+<p>To learn more about working with Audacity projects, please see <a href="audacity_projects.html" title="Audacity Projects">Audacity Projects</a>.
+</p><p>See also: 
+</p>
+<ul><li> <a href="#alternative">How do I open an Audacity project (AUP file) in another application?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="crashed"></div>
+<h2><span class="mw-headline" id="Audacity_crashed.2C_or_I_no_longer_have_the_AUP_project_file.21_Can_I_recover_the_data.3F">Audacity crashed, or I no longer have the AUP project file! Can I recover the data?</span></h2>
+<p>In the event of a crash while Audacity has unsaved data (such as a recording that has not yet been saved as a project, or an existing project with unsaved changes), Audacity will attempt to recover that data on next launch of Audacity. See <a href="recovery.html" title="Recovery">Automatic Crash Recovery</a> for full details. 
+</p><p>If the computer itself crashed, see <a href="faq_errors.html#reboot" title="FAQ:Errors">Why does the computer reboot or show a blue screen message when I play or record in Audacity?</a>.
+</p><p>If you saved a project but do not have a usable AUP file, you may be able to <a href="recovering_crashes_manually.html" title="Recovering crashes manually">recover the data manually</a> if it is a recording that you never edited.  
+</p>
+<div class="note">If Audacity crashed and you saw the <a href="help_menu.html#data" title="Help Menu">Debug report "Audacity"</a> dialog, please <a rel="nofollow" class="external text" href="http://audacityteam.org/contact/#feedback">write to us</a> attaching the zipped support data so we can investigate, telling us what you did in Audacity just before the crash.</div>    
+<p><a href="#top">back to top</a>
+</p>
+<div id="foreign"></div>
+<h2><span class="mw-headline" id="Can_Audacity_import_or_export_formats_like_WMA.2C_AC3_or_iTunes_files_.28M4A.2FMP4.29.3F">Can Audacity import or export formats like WMA, AC3 or iTunes files (M4A/MP4)?</span></h2>
+<p>Audacity as shipped can import or export the following audio formats:
+</p>
+<ul><li><i><b><a href="glossary.html#uncompressed_format" title="Glossary">Uncompressed</a></b></i> audio formats: most <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> files including all <i><b><a href="glossary.html#pcm" title="Glossary">PCM</a></b></i> variants  </li></ul>
+<ul><li><i><b><a href="glossary.html#compressed_format" title="Glossary">Compressed</a></b></i> audio formats: <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i>
+<ul><li> <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> can be imported using Audacity as shipped, but to export as MP3 you must install the optional <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME</a> encoder.    </li></ul></li></ul>
+<p>You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> to import and export a much larger <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/FFmpeg_integration#Functionality">range of audio formats</a> including <b>AC3, AMR(NB), M4A, MP4 and WMA</b> <i>(on Mac only, Audacity can import unprotected M4A, MP4 and MOV files without FFmpeg)</i>.  Audio files that are <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM-protected</a> to work only in particular software cannot be imported. FFmpeg will also import audio from most video files or DVDs that are not DRM-protected.  
+</p><p>You can export to iTunes by exporting to any location on your computer then <a href="sample_workflow_for_exporting_to_itunes.html" title="Sample workflow for exporting to iTunes">add the file to the iTunes library</a>. 
+</p><p>See <a href="importing_audio.html" title="Importing Audio">Importing Audio</a> and the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> for more help with importing and exporting. 
+</p>
+<div class="note">If an audio file you want to import is DRM-protected (for example, an older iTunes M4P file), first burn it to an <i><b><a href="glossary.html#audio_cd" title="Glossary">audio CD</a></b></i> in the application that is licensed to play it. Then <a href="#fromcd" title="FAQ:Opening and Saving Files">rip the CD track</a> to WAV or AIFF. You can also <a href="faq_recording_how_to_s.html#streaming" title="FAQ:Recording - How To's">record the file</a> as it plays on the computer if your sound device supports this, though this may result in slight loss of quality.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Audacity does not natively support <b>Opus</b>. If <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> is installed, Audacity will attempt to use FFmpeg for importing <b>Opus</b> files.
+</td></tr></table>
+</div>
+<p>See also: 
+</p>
+<ul><li> <a href="#export_extra">How can I export to formats not listed in the Export Audio Dialog?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+ 
+<h2 id="export_extra"><span class="mw-headline" id="How_can_I_export_to_formats_not_listed_in_the_Export_Audio_Dialog.3F">How can I export to formats not listed in the Export Audio Dialog?</span></h2>
+<p>If you install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library you can use the (FFmpeg) choices in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> to export <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i>. If you do not see a choice for one of those specific FFmpeg formats, then the build of FFmpeg you are linking to was not compiled to support encoding in that format.
+</p><p>The most flexible method to export to more formats is to choose (external application) in the Export Audio Dialog which opens the dialog for Audacity's <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">command-line encoder</a>. Point your command to an encoder that supports the format you want to write to, which could be FFmpeg or some other encoder (for example, an alternative AAC or MP3 encoder). On Windows, the recommended EXE installer of <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> includes an ffmpeg.exe which you can use for this purpose. On Mac, you can download a standalone "ffmpeg" binary if you search online. Please see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/FFmpeg_integration#Functionality">formats supported by FFmpeg</a> on the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/">Audacity Wiki</a>. 
+</p><p>Alternatively you can export to some additional formats supported by your build of FFmpeg by choosing <a href="custom_ffmpeg_export_options.html" title="Custom FFmpeg Export Options">Custom FFmpeg Export</a> in the Export Audio Dialog.
+</p><p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="meta"></div>
+<h2><span class="mw-headline" id="Why_do_exported_files_not_include_Album_Artist_or_BPM_metadata.2C_Album_Art_or_Lyrics.3F">Why do exported files not include Album Artist or BPM metadata, Album Art or Lyrics?</span></h2>
+<p>When you export a file, by default <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> pops up where you can add, delete or change embedded information about the file. <a href="glossary.html#metadata" title="Glossary">Metadata</a> is well supported by many audio formats, especially the <i><b><a href="glossary.html#id3" title="Glossary">ID3</a></b></i> tags used by <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>, but less well supported in <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>. 
+</p>
+<ul><li>Metadata in imported <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> and MP3 files (except for the default Metadata Editor tags "Artist Name", "Track Title", "Album Title", "Track Number", "Year", "Genre" and "Comments") will be exported as a "custom" ID3 frame. This means that exported custom tags such as "Album Artist", "BPM" or "Composer" will not be seen in Windows Media Player, Windows Explorer,  iTunes or other software that ignores custom tags.  </li>
+<li>Relatively few audio applications or players are able to read WAV metadata produced by other applications, for example iTunes cannot do so. For iTunes, you can export to <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> as an alternative <i><b><a href="glossary.html#lossless" title="Glossary">lossless</a></b></i> format with metadata support.  </li>
+<li> For WAV files, Audacity exports metadata in a <a rel="nofollow" class="external text" href="http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/RIFF.html#Info">RIFF INFO chunk</a> for all seven default tags plus "Copyright" and "Software". It also exports all the entered tags as <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/ID3">ID3 tags</a>. Applications that can read ID3 tags in WAV files can read these tags.</li>
+<li>Some audio formats supported by the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> may not export complete metadata. See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/FFmpeg_integration#table">this table</a> for more information.</li></ul>
+<ul><li> For all formats, Audacity currently discards any existing lyrics or album art when exporting. You can copy the lyrics (or search for them online) then add them back to the exported file in your favorite media player. Extract the album art using a tag editor such as <a rel="nofollow" class="external text" href="https://sourceforge.net/projects/idteid3tagedito/">IDTE</a> (or use <a rel="nofollow" class="external text" href="http://windows.microsoft.com/en-us/windows/add-change-media-player-album-art#1TC=windows-7">Windows Media Player</a> or iTunes to search online for the art) then add the art back to the exported file using your media player.    </li></ul>
+<p>See also: 
+</p>
+<ul><li> <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">How do I download and install the LAME MP3 encoder?</a></li>
+<li> <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">How do I download and install the FFmpeg Import/Export Library?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="fromcd"></div>
+<h2><span class="mw-headline" id="How_do_I_import_tracks_from_an_audio_CD.3F">How do I import tracks from an audio CD?</span></h2>
+<p>Audacity cannot import tracks directly from an audio CD. You must use a separate application like Windows Media Player or <a rel="nofollow" class="external text" href="https://www.apple.com/itunes/">iTunes®</a> to extract (or "rip") CD tracks into a format that Audacity can read, like <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>. Then  you can import those WAV or AIFF files into Audacity.  
+</p>
+
+<p>The only exception is that on Mac computers with optical drives, CD tracks are mounted in Finder as AIFF files so can be imported directly into Audacity. 
+</p><p>For more detail see the tutorial <a href="tutorial_how_to_import_cds.html" title="Tutorial - How to import CDs">Tutorial - How to import CDs</a>.
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="tocd"></div>
+<h2><span class="mw-headline" id="How_do_I_save_my_recording_on_an_audio_CD.3F">How do I save my recording on an audio CD?</span></h2>
+<p>After making a recording or editing a file in Audacity, follow these steps to save your work on an audio CD.
+</p>
+<ol><li>Choose "WAV (Microsoft) signed 16-bit PCM" or "AIFF (Apple) signed 16-bit PCM" in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> "Save as type" dropdown menu to export to an audio file. </li>
+<li>Use any CD-burning software (iTunes&#174; or Nero, for example) to burn this file to a CD. If you burn in a application that is also a media player, like iTunes&#174; or Windows Media Player, you may need to drag the files for burning into a playlist or library. If in doubt, see the application's help files.     </li></ol>
+<p>To make a disc you can play in all CD players, make sure to create a "music" or "audio" CD (not a "data" CD). Use CD-R discs, because some players cannot read CD-RW. You can burn only 74 minutes to an audio CD in most cases, but possibly up to 80 minutes depending on the CD-R. This is a limitation of the audio CD format.
+</p><p>Some CD software will burn only 16-bit, 44100 Hz stereo audio files. If your CD recording software will not open your file, export the file again after choosing the following settings in Audacity:
+</p>
+<ol><li>At the bottom of the Audacity window, set the <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> to 44100 <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i>.</li>
+<li>If your project does not already contain a stereo track, choose <span class="menu">Tracks &gt; Add New &gt; <a href="tracks_menu_add_new.html#stereo_track" title="Tracks Menu: Add New">Stereo Track</a></span>. This will make Audacity export a stereo file. </li></ol>
+<p>See the <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">Burning music files to a CD</a> Tutorial for tips on CD burning with Windows Media Player or iTunes® and on burning "gapless" CDs or <a href="burning_music_files_to_a_cd.html#longer" title="Burning music files to a CD">longer</a> "data" CDs. 
+</p><p>See also: 
+</p>
+<ul><li> <a href="#split">How can I split a long recording into multiple tracks?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="split"></div>
+<h2><span class="mw-headline" id="How_can_I_split_a_long_recording_into_multiple_files_or_CD_tracks.3F">How can I split a long recording into multiple files or CD tracks?</span></h2>
+<p>Follow these steps to create a separate audio file for each song or segment of a long recording. This is particularly useful if you are creating an audio CD, since after burning each file to CD there will be a separate CD track for each song which you can skip to in the CD player.
+</p>
+<ol><li>Click to place the cursor at the start of the first song. </li>
+<li>Choose <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#addlabelatselection" title="Edit Menu: Labels">Add Label at Selection</a></span>. If you wish, you can type the name of the song in the label.</li>
+<li>Repeat steps 1 and 2 for each song.</li>
+<li>When you are finished, choose <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span>. When you click the "<b>Export</b>" button, Audacity will save each song as a separate file, using the format and location you choose.</li></ol>
+<p>Alternatively, Audacity can attempt to detect the silences between tracks and label them automatically. See the full instructions at <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">Splitting a recording into separate tracks</a>.
+</p><p><b>See also:</b> 
+</p>
+<ul><li> <a href="#tocd">How do I save my recording on an audio CD?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="extensions"></div>
+<h2><span class="mw-headline" id="Why_does_Audacity_warn_about_the_name_or_nothing_happens_when_I_export_or_save.3F">Why does Audacity warn about the name or nothing happens when I export or save?</span></h2>
+<h3><span class="mw-headline" id="Adding_extensions_and_periods_.28dots.29_to_names_of_exported_audio_files">Adding extensions and periods (dots) to names of exported audio files</span></h3>
+On <b>Windows</b> when you <a href="file_export_dialog.html" title="File Export Dialog">export</a> an audio file, Audacity will in most cases add a period (dot) and the appropriate (or most common) <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> for your chosen <i><b><a href="glossary.html#formats" title="Glossary">format</a></b></i>. So if you want to export a  <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> file called "rhythms.wav", all you need to do is type "rhythms" (without quotes). If you type a desired period within the name itself, Audacity will usually add the final period and extension for you.<p> However Audacity will show a warning if you type a name ending with a period and characters that are the extension for any common media, document or image type and this extension is unexpected for your audio format. Press "Yes" in the warning if you really want to export with this file name, or "No" to return to the export dialog. This gives you the flexibility for example to export an  <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i> (FFmpeg) file with M4B audiobook extension, if that is your explicit requirement. </p> 
+<div class="example"><b>More Windows examples</b> <i>(do not type the quotes in the examples given)</i> 
+<ul><li> If you export as a WAV file and type "1.2 hours", the file will export as "1.2 hours.wav" with no warning.</li>
+<li> If you export as an <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> file and type "rhythms.jpg", Audacity will show a warning because JPG is an image format. You must type "rhythms.jpg.mp3" to produce a file with that name and extension. </li>
+<li> If you export as an M4A (AAC) (FFmpeg) file and type "rhythms.mp4" or "rhythms.m4r" (denoting a <a href="tutorial_making_ringtones_and_ivr_messages.html" title="Tutorial - Making Ringtones and IVR messages">ringtone</a> in MP4 format), no warning will be shown because these are recognised extensions for the format.</li>
+<li> If you export as an M4A (AAC) (FFmpeg) file and type "rhythms.mp3", a warning will be shown because you would export a file that Windows would see as an MP3 but contained MP4 audio.</div>  </li></ul>
+<p>On <b>Mac and GNU/Linux</b> if you export an audio file that has <b>any</b> period in the file name, Audacity will warn you (unless the implied extension is a recognised alternative extension for your chosen format).  If you answer "Yes" to the warning, Audacity will <b>not</b> add the standard extension for the format. So if you need a period within the file name you must answer "No" to any warning, then add another period followed by the correct extension at the end of the name. Otherwise the file may not be playable. </p>
+
+<div id="illegal"></div>
+<h3><span class="mw-headline" id="Characters_forbidden_by_the_operating_system">Characters forbidden by the operating system</span></h3>
+<p>When exporting and when saving an <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a>, Audacity may also warn you (or not respond correctly) if you type a file name that includes characters that are forbidden by the operating system. 
+</p>
+<div class="alert">
+<table style="background-color:#FFCCCC">
+
+<tr>
+<td colspan="2"><b>Forbidden Characters:</b>
+</td></tr>
+<tr>
+<td width="46%"><b>On Windows</b>, all of the following</td>
+<td style="color:red; font-family:monospace; font-size:1.4em; font-weight:bold">\&#160; /&#160;&#160;:&#160; *&#160;&#160;?&#160; "&#160; &lt;&#160; &gt;&#160; |
+</td></tr>
+<tr>
+<td><b>On Mac OS X/macOS</b>, colon only<sup>(1)</sup></td>
+<td style="color:red; font-family:monospace; font-size:1.4em; font-weight:bold">:
+</td></tr>
+<tr>
+<td><b>On Linux</b>, forward slash only</td>
+<td style="color:red; font-family:monospace; font-size:1.4em; font-weight:bold">/
+</td></tr></table>
+</div>
+<table style="margin-left:24px">
+
+<tr>
+<td valign="top"><sup>(1)</sup>
+</td>
+<td>"/" in saved file names appears as a colon in Audacity.
+</td></tr></table>
+<p>Apart from operating system restrictions, Audacity has full support for printable <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/List_of_Unicode_characters">Unicode</a> characters in file names. However, if you want to send your file to someone else, use it on another operating system or make it available on the internet, <b>only use A to Z or a&#160;to&#160;z characters, whole numbers (0 to 9), underscore or hyphen-minus (or use the NUMPAD_SUBTRACT key).</b> This will ensure the file name will always be compatible. 
+</p><p>There may be additional restrictions such as maximum permitted characters in the path to the file, or some file names may be reserved for the operating system. Full details for Windows can be found <a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247%28v=vs.85%29.aspx">here</a>.      
+</p>
+<div class="note"><b>Showing file extensions on the computer:</b> When you look at the file you saved or exported in Windows Explorer or Finder on Mac, you may only be able to see the file name itself (for example, "92.3 FM capture" ) and not the extension following it. This is not an Audacity bug, rather you need to set your operating system to show file extensions.  
+<ul><li> <b>Windows 10 or 8:</b> Open File Explorer, click the View tab then near the right end of the ribbon at the top, put a checkmark in "File name extensions".   </li>
+<li> <b>Windows 7 or Vista:</b> Open Explorer, hold the <span class="kbrd" style="background-color: #e0e0f0">Alt</span> key, then <span class="menu">Tools &gt; Folder options...</span>, click the View tab and uncheck "Hide extensions for known file types".    </li>
+<li> <b>macOS/Mac OS X:</b> In Finder, choose <span class="menu">Finder &gt; Preferences...</span> then on the "Advanced" tab, enable "<a rel="nofollow" class="external text" href="https://www.bleepingcomputer.com/tutorials/show-file-extensions-on-a-mac/">Show all file name extensions</a>". </div></li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="on_demand"></div>
+<h2><span class="mw-headline" id="Why_does_my_file_import_with_a_hatched_pattern_then_slowly_change_to_a_waveform.3F">Why does my file import with a hatched pattern then slowly change to a waveform?</span></h2>
+<p>See this page: <a href="on_demand_loading.html" title="On-Demand Loading">On-Demand Loading</a>.
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="send"></div>
+<h2><span class="mw-headline" id="I_copied_the_.aup_file_to_another_computer_or_sent_it_by_email_to_a_friend.3B_but_now_when_I_open_it_there.27s_no_sound.2C_why.3F">I copied the .aup file to another computer or sent it by email to a friend; but now when I open it there's no sound, why?</span></h2>
+<p>To use a standard Audacity project on another computer, you have to include the _data folder that has the same name as the project. This makes the size very large. The _data folder has the small .au files that contain the <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> audio data. 
+</p><p>Also if your project contains imported <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> files, you must choose <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#check_dependencies" title="Help Menu: Diagnostics">Check Dependencies...</a></span> and if necessary copy in those files to the project before using it on another computer.     
+</p><p>See <a href="audacity_projects.html" title="Audacity Projects">Audacity Projects</a> for more about the structure of Audacity projects and <a href="sending_your_work_to_others.html" title="Sending your work to others">Sending your work to others</a> for why you would probably need to export an <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> audio file to make your audio small enough to email. 
+</p><p>Alternatively, if you have a broadband internet connection and you package your .aup file and _data folder into a zip file, there are many free file transfer services that allow upload and storage of large files. Try for example <a rel="nofollow" class="external text" href="http://www.dropsend.com/">DropSend</a> or <a rel="nofollow" class="external text" href="http://free.mailbigfile.com/">mailbigfile</a>. Audacity also has a feature at <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_compressed_copy_of_project" title="File Menu: Save Project">Save Compressed Copy of Project...</a></span> to save a much smaller project using <i><b><a href="glossary.html#ogg" title="Glossary">OGG</a></b></i> files (this will however give you a slightly <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> project).
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="backup"></div>
+<h2><span class="mw-headline" id="How_can_I_backup_my_Audacity_Projects.3F">How can I backup my Audacity Projects?</span></h2>
+<p>Audacity has very robust <a href="recovery.html" title="Recovery">crash recovery</a> and in many cases can recover most or all of your work in the event of a power failure, <a href="faq_errors.html#reboot" title="FAQ:Errors">computer crash</a> or crash of Audacity itself. However it is a wise precaution to backup the <a href="audacity_projects.html" title="Audacity Projects">project</a> periodically to separately named AUP files in case Audacity is unable to recover correctly. This also gives you the flexibility to reopen the project as it was at different points in time, because Audacity cannot restore a project's <a href="undo_redo_and_history.html" title="Undo, Redo and History">history</a> once that project's session is closed. 
+</p><p>The best way to make a copy of an already saved project is to use <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_lossless_copy_of_project" title="File Menu: Save Project">Save Lossless Copy of Project...</a></span> and save to a new name. This makes a copy of the current project in its current state, leaving your current project open for continued working.  See <a href="audacity_projects.html" title="Audacity Projects">Managing Audacity Projects</a> for more on how to work with Audacity project files.   
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Do not use the operating system's copy and paste to make a copy of the project AUP file and _data folder in the same folder as the original project.
+<ul><li> If the project is closed, you can copy the AUP file and _data folder then paste these into a <i>different</i> folder. This ensures the original file and folder names are retained.</li></ul>
+</td></tr></table>
+</div> 
+<p>Remember that computer hard drives can fail, destroying all data. Therefore regular backups should if possible be made to one or two devices other than the device the current project is stored on. For example, backups could be made to another internal drive on the computer, or ideally to an external USB drive or uploaded to an online (cloud) storage service.      
+</p>
+<div class="note">If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended to <span class="menu">File &gt; <a href="file_menu_export.html" title="File Menu: Export">Export</a></span> it immediately to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project. If you are recording <a href="tutorial_multi_track_overdubbing.html" title="Tutorial - Multi-track Overdubbing">multi-track overdubs</a> (recording tracks one after the other, such as drums followed by guitar followed by vocals), export each recorded track immediately you stop the recording.</div> 
+<p><br />
+<a href="#top">back to top</a>
+</p><p><br />
+</p><p><a href="faq_mp3_export_problems.html" title="FAQ:MP3 export problems"><b>&gt;</b>&#160; Forward To: FAQ:MP3 export problems</a> <br />
+</p><p><a href="faq_playback.html" title="FAQ:Playback"><b>&lt;</b>&#160; Back to: FAQ:Playback</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112036
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.182 seconds
+Real time usage: 0.189 seconds
+Preprocessor visited node count: 547/1000000
+Preprocessor generated node count: 1672/1000000
+Post‐expand include size: 12681/2097152 bytes
+Template argument size: 7237/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   62.482      1 - -total
+ 57.94%   36.199      1 - Template:I18n
+ 54.81%   34.247      1 - Template:I18n_box
+ 48.54%   30.329      1 - Template:I18n_list
+ 27.15%   16.964      7 - Template:I18n_link
+ 16.06%   10.036      7 - Template:Autoglossonym
+  7.02%    4.388     13 - Template:Menu
+  5.51%    3.445      4 - Template:Note
+  3.35%    2.094      1 - Template:Footnotediv
+  2.68%    1.674      1 - Template:Button
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2706-0!*!0!!en!5!* and timestamp 20180917112036 and revision id 61945
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Opening_and_Saving_Files">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

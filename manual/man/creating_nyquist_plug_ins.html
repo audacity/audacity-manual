@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Creating Nyquist Plug-ins - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Creating_Nyquist_Plug-ins rootpage-Creating_Nyquist_Plug-ins skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Creating Nyquist Plug-ins</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Creating_Nyquist_Plug-ins#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_Nyquist_Plug-ins"><span class="tocnumber">1</span> <span class="toctext">Creating Nyquist Plug-ins</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Parameter_dialogs"><span class="tocnumber">1.1</span> <span class="toctext">Parameter dialogs</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Returning_labels"><span class="tocnumber">1.2</span> <span class="toctext">Returning labels</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Processing_stereo_tracks"><span class="tocnumber">1.3</span> <span class="toctext">Processing stereo tracks</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Where_to_go_from_here"><span class="tocnumber">1.4</span> <span class="toctext">Where to go from here</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Links"><span class="tocnumber">2</span> <span class="toctext">Links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Creating_Nyquist_Plug-ins">Creating Nyquist Plug-ins</span></h2>
+<p>Creating a plug-in for Audacity using Nyquist is as simple as creating a text file with the extension “.ny” with some Nyquist code, adding a few comments to indicate the type of plug-in, and placing the file in Audacity’s <tt>plug-ins</tt> directory. Here’s a very simple plug-in as an example:
+</p>
+<pre>  ;nyquist plug-in
+  ;version 1
+  ;type process
+  ;name "Fade In"
+  ;action "Fading In..."
+  (mult (ramp) s)
+</pre>
+<p>The first line of a Nyquist plug-in must be exactly as in the example above, and the second line must indicate a version number. Version 2 and 3 plug-ins support more widgets, but version 3 plug-ins are not supported in Audacity 1.3.3 or earlier. The next line is the type of plug-in, which is discussed below. Then comes the name of the plug-in, which is what is displayed in the menu bar, and then the “action”, which is what Audacity displays while it is busy processing the plug-in. There are other optional lines that may follow. Any line that does not begin with a semicolon (;) is assumed to contain Nyquist code and will be executed.
+</p><p>Audacity has support for three types of plug-ins that can be written in Nyquist:
+</p>
+<pre>  ;type generate
+  ;type process
+  ;type analyze
+</pre>
+<p>These correspond to the three menus that can contain plug-ins: Generate, Effect, and Analyze. Generate plug-ins are expected to generate new audio from scratch, Effect plug-ins (“process”) modify existing audio in-place, and Analyze plug-ins process audio but do not modify it (though they are allowed to add labels).
+</p><p>For Effect and Analyze plug-ins, Audacity sets up the Nyquist environment so that the audio the user has selected is in the variable <tt>s</tt>. All of the expressions in the plug-in file are executed in order, and the return value of the last expression is substituted for the selection in Audacity. If the last expression does not return audio, Audacity returns an error.
+</p>
+<h3><span class="mw-headline" id="Parameter_dialogs">Parameter dialogs</span></h3>
+<p>Audacity has limited support for plug-ins showing a dialog to get parameters from the user. Here is an example of a plug-in that opens a dialog:
+</p>
+<pre>  ;nyquist plug-in
+  ;version 1
+  ;type process
+  ;name "Delay..."
+  ;action "Performing Delay Effect..."
+  ;info "Demo effect for Nyquist by Roger Dannenberg.\nThis effect 
+     creates a fixed number of echos."  ; (should be all on one line)
+  ;control decay "Decay amount" int "dB" 6 0 24
+  ;control delay "Delay time" real "seconds" 0.5 0.0 5.0
+  ;control count "Number of echos" int "times" 5 1 30
+</pre>
+<pre>  (defun delays (s decay delay count)
+    (if (= count 0) (cue s)
+           (sim (cue s)
+        (loud decay (at delay (delays s decay delay (- count 1)))))))
+  (stretch-abs 1 (delays s (- 0 decay) delay count))
+</pre>
+<p>If Audacity finds at least one “control” line, it will open a dialog to prompt the user for certain parameters to the plug-in. Each parameter consists of a text box and a slider, and after the user has entered each one, the final value will be stored in a Nyquist variable with a name that you specify on the “control” line. Here’s what the dialog for the Delay effect shown above looks like in Audacity for Linux:
+</p>
+<dl><dd><a href="https://alphamanual.audacityteam.org/man/File:Nyquist-plugin-screenshot.png" class="image"><img alt="Nyquist-plugin-screenshot.png" src="../m/images/a/a6/nyquist_plugin_screenshot.png" width="414" height="221" /></a></dd></dl>
+<p>Note that the “info” line is displayed at the top of the dialog, and that the “\n” becomes a newline. The parameters to the “control” line affect the appearance and limitations of the parameter. Each “control” line must consist of exactly the following 8 elements, in order:
+</p>
+<ol><li> The word “control” </li>
+<li> The name of the control – this is the name of the Nyquist variable that will get set when the user manipulates the dialog. </li>
+<li> The label to the left of the control </li>
+<li> The type of value: either <tt>int</tt> (integer) or <tt>real</tt>. </li>
+<li> The label to the right of the value (usually the units like “Hz” or “dB”). </li>
+<li> The default/initial value of the parameter </li>
+<li> The minimum value of the parameter </li>
+<li> The maximum value of the parameter</li></ol>
+<h3><span class="mw-headline" id="Returning_labels">Returning labels</span></h3>
+<p>Instead of returning audio, a Nyquist plug-in can instead return a list of labels. A list of labels is simply a list of time/label pairs, for example:
+</p>
+<pre>  ((0.0 "start") (30.0 "middle") (60.0 "end"))
+</pre>
+<p>When a plug-in returns a list of exactly this form, Audacity will create a new label track and add the labels at those positions. This style of plug-in is usually of type “analyze”.
+</p><p>New! Beginning with Audacity version 1.3.1, you can now optionally return both a start and an end time, like this:
+</p>
+<pre>  ((0.0 25.0 "start") (30.0 45.0 "middle") (60.0 75.0 "end"))
+</pre>
+<p>Note that labels are allowed to overlap in Audacity 1.3; the end time of one can be after the start time of the next.
+</p>
+<h3><span class="mw-headline" id="Processing_stereo_tracks">Processing stereo tracks</span></h3>
+<p>Nyquist represents stereo tracks as an array of sounds (not a list). Many Nyquist functions automatically work with these arrays, but not all, so sometimes you may find it necessary to split up a stereo array, or reassemble one. Here are some useful functions:
+</p><p><br />
+</p>
+<table style="border-spacing:0; width: 50em;">
+<tr>
+<td style="border-top:0.05pt solid #000000;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.049cm;"> <tt><b>(arrayp s)</b></tt>
+</td>
+<td style="border-top:0.05pt solid #000000;border-bottom:0.05pt solid #000000;border-left:none;border-right:0.05pt solid #000000;padding:0.049cm;"> returns true if <tt>s</tt> is an array
+</td></tr>
+<tr>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.049cm;"> <tt><b>(aref s 0)</b></tt>
+</td>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:none;border-right:0.05pt solid #000000;padding:0.049cm;"> the first element in array <tt>s</tt> – the left channel
+</td></tr>
+<tr>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.049cm;"> <tt><b>(aref s 1)</b></tt>
+</td>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:none;border-right:0.05pt solid #000000;padding:0.049cm;"> the second element in array <tt>s</tt> – the right channel
+</td></tr>
+<tr>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.049cm;"> <tt><b>(setf s (make-array 2))</b></tt>
+</td>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:none;border-right:0.05pt solid #000000;padding:0.049cm;"> makes <tt>s</tt> into a new array of length 2
+</td></tr>
+<tr>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.049cm;"> <tt><b>(setf (aref s 0) left)</b></tt>
+</td>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:none;border-right:0.05pt solid #000000;padding:0.049cm;"> makes <tt>left</tt> the first element of array <tt>s</tt>
+</td></tr>
+<tr>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.049cm;"> <tt><b>(setf (aref s 1) right)</b></tt>
+</td>
+<td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:none;border-right:0.05pt solid #000000;padding:0.049cm;"> makes <tt>right</tt> the second element of array <tt>s</tt>
+</td></tr></table>
+<p>As a convenience, if the input to your Nyquist plug-in is stereo, but you only output a single (mono) sound, Audacity will automatically copy it to both the left and right channels.
+</p>
+<h3><span class="mw-headline" id="Where_to_go_from_here">Where to go from here</span></h3>
+<p>Audacity comes with some sample plug-ins that you can examine or modify as a starting point. The best way to learn Nyquist is to try it. If you’re having trouble debugging, consider downloading the standalone version of Nyquist (see the link in <a href="introduction_to_nyquist_and_lisp_programming.html" title="Introduction to Nyquist and Lisp Programming">Part 1</a>).
+</p><p>If you’re having trouble getting Nyquist to work at all, please <a rel="nofollow" class="external text" href="http://www.audacityteam.org/contact/#feedback">contact us</a>.
+</p><p>If you are working on Nyquist plug-in effects and would like to share them with others, or if you would like to discuss how to achieve certain effects in Nyquist, please post on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=39">Nyquist board of the Audacity Forum</a> or join the <a rel="nofollow" class="external text" href="http://www.audacityteam.org/contact/lists#nyquist">audacity-nyquist mailing list</a>.
+</p><p>Don’t forget to consult the full <a rel="nofollow" class="external text" href="http://www.audacity-forum.de/download/edgar/nyquist/nyquist-doc/manual/home.html">Nyquist 2.37 Reference Manual</a> for more details of Lisp and Nyquist.
+</p>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="programming_in_nyquist.html" title="Programming in Nyquist"><b>&lt;</b>&#160; Programming in Nyquist</a> <br />
+</p><p><a href="nyquist.html" title="Nyquist"><b>|&lt;</b> Nyquist</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112111
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.053 seconds
+Real time usage: 0.055 seconds
+Preprocessor visited node count: 184/1000000
+Preprocessor generated node count: 388/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 - -total
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6400-0!*!0!!en!5!* and timestamp 20180917112111 and revision id 59830
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Creating_Nyquist_Plug-ins">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

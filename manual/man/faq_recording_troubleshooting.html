@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>FAQ:Recording - Troubleshooting - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-FAQ_Recording_-_Troubleshooting rootpage-FAQ_Recording_-_Troubleshooting skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">FAQ:Recording - Troubleshooting</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_Troubleshooting#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><a href="faq_recording_how_to_s.html" title="FAQ:Recording - How To's"><b>&gt;</b>&#160; Forward To: FAQ:Recording - How To's</a> <br />
+</p><p><a href="faq_installation_and_plug_ins.html" title="FAQ:Installation and Plug-Ins"><b>&gt;</b>&#160; Back To: FAQ:Installation, Startup and Plug-Ins</a> <br /> 
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p><p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#How_can_I_record_without_small_skips_.28dropouts.29_or_duplications.3F"><span class="tocnumber">1</span> <span class="toctext">How can I record without small skips (dropouts) or duplications?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Why_can_I_not_record_in_Windows.3F"><span class="tocnumber">2</span> <span class="toctext">Why can I not record in Windows?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#How_can_I_prevent_clicky_recordings_on_Mac.3F"><span class="tocnumber">3</span> <span class="toctext">How can I prevent clicky recordings on Mac?</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Why_can.27t_Audacity_see_the_audio_device_I_just_connected.3F"><span class="tocnumber">4</span> <span class="toctext">Why can't Audacity see the audio device I just connected?</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Why_can.E2.80.99t_I_hear_what_I.E2.80.99m_recording.3F"><span class="tocnumber">5</span> <span class="toctext">Why can’t I hear what I’m recording?</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Why_is_there_a_delay_or_echo_when_listening_to_what_I_am_recording.3F"><span class="tocnumber">6</span> <span class="toctext">Why is there a delay or echo when listening to what I am recording?</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Why_do_my_recordings_fade_out_or_sound_as_if_they_were_made_in_a_tunnel.3F"><span class="tocnumber">7</span> <span class="toctext">Why do my recordings fade out or sound as if they were made in a tunnel?</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Why_is_my_new_track_out_of_sync_with_the_previous_ones.2C_or_sounds_crackly_or_at_wrong_pitch.3F"><span class="tocnumber">8</span> <span class="toctext">Why is my new track out of sync with the previous ones, or sounds crackly or at wrong pitch?</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Why_can.27t_I_record_my_electronic_keyboard_or_electronic_instrument_using_the_USB_cable.3F"><span class="tocnumber">9</span> <span class="toctext">Why can't I record my electronic keyboard or electronic instrument using the USB cable?</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Why_doesn.27t_recording_from_YouTube_.28or_other_streaming_audio.29_work.3F"><span class="tocnumber">10</span> <span class="toctext">Why doesn't recording from YouTube (or other streaming audio) work?</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Why_do_I_get_crackles.2C_pops.2C_or_distortion_when_the_recording_is_loud.3F"><span class="tocnumber">11</span> <span class="toctext">Why do I get crackles, pops, or distortion when the recording is loud?</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Why_do_I_see_a_lot_of_vertical_red_lines_in_the_track_I_just_recorded.3F"><span class="tocnumber">12</span> <span class="toctext">Why do I see a lot of vertical red lines in the track I just recorded?</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Why_is_the_Audacity_recording_slider_grayed_out_on_maximum.3F"><span class="tocnumber">13</span> <span class="toctext">Why is the Audacity recording slider grayed out on maximum?</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Why_does_my_recording_keep_pausing_automatically_or_why_is_my_recording_cursor_stuck.3F"><span class="tocnumber">14</span> <span class="toctext">Why does my recording keep pausing automatically or why is my recording cursor stuck?</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Why_do_I_get_only_a_flat_line_and_no_sound_when_I_try_to_record.3F"><span class="tocnumber">15</span> <span class="toctext">Why do I get only a flat line and no sound when I try to record?</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Why_do_I_get_a_periodic_noise_every_6_-_12_seconds_when_recording.3F"><span class="tocnumber">16</span> <span class="toctext">Why do I get a periodic noise every 6 - 12 seconds when recording?</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#How_can_I_prevent_a_half-volume_mono_recording.3F"><span class="tocnumber">17</span> <span class="toctext">How can I prevent a half-volume mono recording?</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#How_can_I_prevent_unbalanced_or_poorly_separated_stereo_recording.3F"><span class="tocnumber">18</span> <span class="toctext">How can I prevent unbalanced or poorly separated stereo recording?</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#How_can_I_correct_an_unbalanced_stereo_recording.3F"><span class="tocnumber">19</span> <span class="toctext">How can I correct an unbalanced stereo recording?</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Why_is_the_recorded_waveform_not_centered_on_the_horizontal_line_at_0.0.3F"><span class="tocnumber">20</span> <span class="toctext">Why is the recorded waveform not centered on the horizontal line at 0.0?</span></a></li>
+</ul>
+</div>
+
+<div id="skips"></div>
+<h2><span class="mw-headline" id="How_can_I_record_without_small_skips_.28dropouts.29_or_duplications.3F">How can I record without small skips (dropouts) or duplications?</span></h2>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">For Audacity 2.2.2 we added dropout detection, which is "<b>on</b>" by default.  Please see the <a href="recording.html#dropouts" title="Recording"><b>Recording</b></a> page for details.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">You may have been experiencing dropouts and not noticing, they are not discernible while recording only on playback. So Audacity could now appear much worse than previous releases, when in actual fact Audacity is just alerting you to a problem that you previously would not have been aware of - or might have put down to a bad microphone or poor recording technique.
+</td></tr></table></div>
+</td></tr></table>
+</div>
+<p>If it sounds like recording is skipping, or small fragments are sometimes missing, this means that Audacity cannot write the audio to disk fast enough to keep up with what it's recording. You may not hear skips while listening during the recording, but you will hear them on playback.
+</p><p><b>Audacity settings</b>
+</p>
+<ul><li> <b>Reduce screen redrawing:</b> <a href="zooming.html" title="Zooming">Zoom</a> out to at least the entire length you'll be recording, or in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>, uncheck <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Update display when Recording/Playback head is unpinned:</span>. Turn off <span class="menu">View &gt; <a href="view_menu.html#showclippingonoff" title="View Menu">Show Clipping</a></span> while recording. Minimize the Audacity window whenever you have no need to see it.</li>
+<li> <b>Turn off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span></b> unless it is essential you hear what is being recorded.</li>
+<li> <b>Increase the default "Audio to buffer" setting</b> of 100 milliseconds in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>.</li></ul>
+<div class="note">
+<p>On Mac using Mavericks or later, it may be necessary to <i>reduce</i> audio to buffer, possibly to zero.
+</p>
+</div>
+<ul><li> <b>Reduce the amount of audio data being written:</b> Choose 16-bit Sample Format in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a> and set recording channels to mono in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> (unless you need stereo). Either of these actions halves the amount of data Audacity otherwise has to write. A single instrument or solo vocal should usually be recorded in mono and can be panned in the stereo field later using <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>.</li>
+<li> <b>Use a local drive with sufficient space:</b> Set the path to the Audacity <a href="directories_preferences.html" title="Directories Preferences">temporary directory</a> to a local hard drive because these are usually faster than external USB drives. Choose the local drive with the most space. Audacity tells you how much longer you can record for (based on available disk space) in the Status Bar at the bottom of the window.       </li></ul>
+<p><b>Computer and hardware</b> 
+</p><p>There are many possible actions you can take. Some may have no effect on a skipping problem, others may have a cumulative beneficial effect, so try them all. 
+</p>
+<ul><li> Quit as many other other applications or processes as possible. In particular, stop anti-virus applications scanning the Audacity <a href="directories_preferences.html" title="Directories Preferences">Temporary Directory</a>. Disconnect from the internet.</li>
+<li> On Windows, regularly defragment your hard disk drive (this should happen automatically on Windows, but do not schedule defragmentation during a recording). Disable Windows Update while recording. Consider creating hardware or software profiles that load only essential hardware and services for a recording session. </li>
+<li> Set Audacity to a higher priority in the operating system.   </li>
+<li> If you are using a USB recording device. connect directly to a USB port, not a hub.</li>
+<li> Whatever the audio device, ensure it has the latest <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/index.php?title=Updating_Sound_Device_Drivers">drivers</a> as supplied by the motherboard or device manufacturer (as appropriate).   </li>
+<li> A faster processor or more <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Random-access_memory">RAM</a> could help solve the problem. </li>
+<li> Set <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/DMA_mode">DMA mode</a> for the hard drive on Windows and Linux, hardware acceleration for the video card and avoid sound card interrupt sharing. </li></ul>
+<div class="note">More detailed advice on addressing computer and hardware issues can be found at <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers">Managing Computer Resources and Drivers</a> on the Audacity Wiki.</div>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="vista_7"></div>
+<h2><span class="mw-headline" id="Why_can_I_not_record_in_Windows.3F">Why can I not record in Windows?</span></h2>
+<p>On Windows systems, you may receive "Error while opening sound device" when you try to record. This typically happens when you first use Audacity for recording and have no audio input devices (or only the built-in microphone) showing in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>.  See <a href="faq_errors.html#sound_device" title="FAQ:Errors">Why do I get "Error while opening sound device"?</a> for more details on this error.
+</p><p>If your <a href="device_toolbar.html#host" title="Device Toolbar">Audio Host</a> is not already set to <a href="glossary.html#mme" title="Glossary">MME</a> <i>(the Audacity default)</i> in Device Toolbar, try changing it to MME as this host is the most compatible with all audio devices. 
+</p><p>To investigate this further, exit Audacity then on Windows, right-click over the <span class="menu">Speaker icon</span> by the system clock and choose <span class="menu">Recording Devices</span>. This opens the <i>Recording</i> tab of Windows "Sound". Follow the steps on our  <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#vistacp">instructions for Windows "Sound"</a> to show then enable all disconnected and disabled recording devices. 
+</p><p>Many new Windows laptop, notebook or netbook computers only have a single audio input port. This will often be a mono port only meant for microphones. On some machines this single port may also be able to accept stereo line level input which is essential to record from standalone cassette decks or home audio systems. However the stereo quality or separation may be poor.  See "<a href="how_to_connect_your_equipment.html" title="How to connect your equipment">How to connect your equipment</a>" before connecting high output devices to a sole input. 
+</p><p>See also: 
+</p>
+<ul><li> <a href="faq_recording_how_to_s.html#streaming" title="FAQ:Recording - How To's">Can Audacity record YouTube, internet radio or other streaming audio?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="mac_crackle"></div>
+<h2><span class="mw-headline" id="How_can_I_prevent_clicky_recordings_on_Mac.3F">How can I prevent clicky recordings on Mac?</span></h2>
+<p>There are several possible fixes. 
+</p>
+<ul><li> Open <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a> and adjust the "Buffer Length" setting. Reduce the setting to 0 milliseconds. If recording breaks up or does not start, increase "Buffer Length" in increments of 10 milliseconds until recording is smooth.   </li>
+<li> If you are recording from an external USB or Firewire interface, open /Applications/Utilities/Audio MIDI Setup and select the device. On the Input tab, make sure that the sample rate and number of channels matches with those chosen in Audacity. </li>
+<li> Turn off WiFi.</li>
+<li> Mitigate power saving features in Mavericks or later that can interfere with recordings.  
+<ul><li>  Right-click or Control-click Audacity.app then "Get Info" and enable the "Prevent App Nap" checkbox. This should prevent the Mac putting Audacity into a paused state when it does not have focus.   </li>
+<li> A few users have reported that <a rel="nofollow" class="external text" href="http://www.tomsick.net/projects/antipop.html">Antipop</a> helps. This prevents the Mac shutting down the audio system when there is no playback. </li></ul></li></ul>
+<p>See also:
+</p>
+<ul><li> <a href="#sync">Why is my new track out of sync with the previous ones, or sounds crackly or at wrong pitch?</a></li></ul>
+<div id="new_device"></div>
+<h2><span class="mw-headline" id="Why_can.27t_Audacity_see_the_audio_device_I_just_connected.3F">Why can't Audacity see the audio device I just connected?</span></h2>
+<p><b>Built-in audio devices</b>
+</p><p>Generally, if you connect a cable to one of the inputs of the built-in audio device, Audacity will be able to record immediately from that device. If not, on Windows go to the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#vistacp">"Sound" control panel</a> and make sure the device is enabled. On Mac, you can configure devices in <span class="path">/Applications/Utilities/Audio MIDI Setup.app</span>. On Linux systems that use <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/PulseAudio">PulseAudio</a>, install and open PulseAudio Volume Control. Restart Audacity after making changes to system audio.
+</p><p>On systems with only one audio port for both input and output, you may need to change the output to an input. On Windows you can do that in the audio interface's own control panel. On Mac, use the Input tab of "Sound" in System Preferences and change the “Use audio port for:" menu to "Sound Input". 
+</p>
+<div id="new_external"></div>
+<p><b>External audio devices</b>
+</p><p>Audacity does not automatically search for new external playback or recording devices (such as headsets, turntables or microphones that connect by USB cable) if you connect these while Audacity is already running. To solve this, make sure the device is <a href="#detect">detected by the operating system</a>, then either restart Audacity or use <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> in the Audacity <a href="menu_reference.html" title="Menu Reference">Menu Bar</a>. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">For most larger audio interfaces it is essential that you install the latest drivers and/or firmware for your operating system from the interface manufacturer's site. Otherwise, the device may not be detected or may not work correctly.
+</td></tr></table></div>
+<p>See also:
+</p>
+<ul><li> <a href="faq_errors.html#sound_device" title="FAQ:Errors">Why do I get "Error while opening sound device"?</a></li>
+<li> <a href="#sync">Why is my new track out of sync with the previous ones, or sounds crackly or at wrong pitch?</a> </li>
+<li> <a href="faq_recording_how_to_s.html#multi" title="FAQ:Recording - How To's">Can I record from a multi-channel device (more than stereo)?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="playthrough"></div>
+<h2><span class="mw-headline" id="Why_can.E2.80.99t_I_hear_what_I.E2.80.99m_recording.3F">Why can’t I hear what I’m recording?</span></h2>
+<p>To listen while Audacity is recording, enable what is known as software or hardware playthrough as explained below. If you use software playthrough and want to listen to the input without recording it, you must also left-click in the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter Toolbar</a> to turn on <a href="meter_toolbar.html#monitoring" title="Meter Toolbar">monitoring</a>.   
+</p><p>In the <a href="recording_preferences.html" title="Recording Preferences">Recording</a> section on the left, put a checkmark in the “Software Playthrough” box and click OK. You can also turn Software Playthrough on and off in the <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> menu. This type of playthrough has latency, so you will hear what you are recording a noticeable time afterwards. You could also experience audio breakup.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">For professional multi-track recordings you may find that Audacity's Software Playthrough has unacceptable latency.
+<ul><li> If the computer's built-in sound device lacks hardware playthrough, you can buy an external USB or Firewire device and hardware monitor through its headphones jack with near zero latency. </li>
+<li> Alternatively, lower latency software playthrough may be possible using the computer sound device.</li></ul>
+<p>For details, see our <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Tutorial - Recording Multi-track Overdubs</a>.
+</p>
+</td></tr></table>
+</div>
+<p>See also:
+</p>
+<ul><li> <a href="faq_playback.html#usb" title="FAQ:Playback">Why have I lost sound after connecting a USB device on Windows?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="delay"></div>
+<h2><span class="mw-headline" id="Why_is_there_a_delay_or_echo_when_listening_to_what_I_am_recording.3F">Why is there a delay or echo when listening to what I am recording?</span></h2>
+<p><a href="recording_preferences.html#playthrough" title="Recording Preferences">Software playthrough</a> usually causes a delay (latency) of the live recording input due to the time it takes to reach your headphones. To prevent this, turn software playthrough off. This can be done most conveniently by choosing <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> and clicking it to remove the check (tick) mark.
+</p><p>To listen to the live recording input without playthrough latency requires <b>hardware</b> monitoring - that is; the input signal must be routed directly through the audio device from the input to the output rather than being passed through software from input to output.
+</p><p>Enabling hardware monitoring is not possible with all audio devices. In particular it can only be achieved when the same device is used for input and output. For example, monitoring a USB microphone through headphones that are plugged into a different audio device will always have latency. If hardware playthrough is not available with your hardware it may be necessary to listen to the audio source directly (acoustically) rather than through the computer.  
+</p><p>For some typical examples of how to set up equipment to record without playthrough latency, see this Tutorial about <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Recording overdubs</a>.
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="enhancements"></div>
+<h2><span class="mw-headline" id="Why_do_my_recordings_fade_out_or_sound_as_if_they_were_made_in_a_tunnel.3F">Why do my recordings fade out or sound as if they were made in a tunnel?</span></h2>
+<p>This issue can occur on newer Windows machines and can occasionally occur on newer Mac computers. These and other symptoms can also occur on other machines if the sound device is applying an effect or a corrective enhancement. 
+</p>
+<ul><li> If the recording is fading out after a few seconds, look for a "<b>Noise Suppression</b>" setting you can turn off in the <i>Recording</i> side of the sound device settings. </li>
+<li> If the recording sounds like it was made in a tunnel, look for an "<b>Echo Cancellation</b>" setting you can turn off. 
+<ul><li> If there is no echo cancellation setting or it does not help, look for "<b>Environment</b>" sound effects in the <i>Playback</i> side of the sound device settings - these will affect recordings of computer playback and sometimes other recordings too.   </li></ul></li></ul>
+<p>To change settings on <b>Windows</b>:
+</p>
+<ol><li> Right-click over the <span class="menu">Speaker icon</span> by the system clock then choose <span class="menu">Recording Devices</span> to open the <i>Recording</i> tab of "Sound" </li>
+<li> Right-click over <span class="menu">Microphone</span> (or whatever device you are recording from) and choose <span class="menu"> Properties</span> </li>
+<li> There will probably be an <i>Enhancements</i> tab where you can disable all or selected "Sound Effects" - if needs be, also look in the <i>Levels</i> or <i>Custom</i> tabs</li>
+<li> You may also need to change or disable environment settings. To check settings, click the <i>Playback</i> tab in the main window of "Sound", right-click over <span class="menu">Speakers</span>, choose <span class="menu"> Properties</span> then click the <i>Enhancements</i> tab.     </li></ol>
+<p>If there are no settings to change, or on <b>older versions of Windows</b>, go to the "Sound" or similar section of the Windows Control Panel and look for a custom control panel for your sound device.
+</p><p>On <b>Mac</b>:
+</p>
+<ol><li> Navigate <span class="menu">Apple Menu &gt; System Preferences &gt; Hardware &gt; Sound</span> </li>
+<li> Choose the "Input" tab and ensure that "Use ambient noise reduction" is unchecked. You may have to select the built-in internal microphone to make this checkbox visible. If checked, it may apply effects to external microphones as well as the internal microphone.  </li></ol>
+<div class="note">
+<p>Unwanted fading or poor quality can sometimes be caused by inappropriate or outdated sound device drivers. For help, see our Wiki page <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/index.php?title=Updating_Sound_Device_Drivers">Updating Sound Device Drivers</a>.
+</p>
+</div>
+<p>See also:
+</p>
+<ul><li> <a href="faq_playback.html#muted" title="FAQ:Playback">Why does playback go quiet when I record or adjust the recording volume?</a> </li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="sync"></div>
+<h2><span class="mw-headline" id="Why_is_my_new_track_out_of_sync_with_the_previous_ones.2C_or_sounds_crackly_or_at_wrong_pitch.3F">Why is my new track out of sync with the previous ones, or sounds crackly or at wrong pitch?</span></h2>
+<p>When you make an <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdub recording</a> (listening to an existing track while recording a new one), computers cannot lay down what you record at the exact instant you sing or play in response to the beat. Therefore without intervention, the recording inevitably gets laid down after the beat. Audacity tries to correct for this "recording latency" automatically by pushing the recorded track backwards after recording stops, but further adjustment may be needed. 
+</p><p>If a new track is not synchronized with the others, you can zoom in and use <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a> ( shortcut <span class="kbrd" style="background-color: #e0e0f0">F5</span> ) to drag the track to the correct location. If you are doing a lot of overdubbing, try our <a href="latency_test.html" title="Latency Test">Latency Test</a> to set a custom value for Audacity's latency correction which can then be applied in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>.
+</p>
+<div class="note">
+<p><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Tutorial - Recording Multi-track Overdubs</a> gives a step-by-step 
+guide for manually correcting for latency.
+</p>
+</div>
+<p>Recording while playing is much more demanding for the sound device than simply recording. Hardware and sound driver problems or <i><b><a href="glossary.html#sample_rate" title="Glossary">sample&#160;rate</a></b></i> mismatches between Audacity, the operating system and the sound device can cause poor audio quality or make tracks play and record at different speeds. If a new track is being recorded at a different speed, it will progressively drift apart from the beat of the other tracks, so latency correction will never synchronize it correctly along its entire length. 
+</p><p><b>To fix speed drift, pitch and quality problems, try the following tips.</b>   
+</p>
+<ul><li> Use the same device for playback and recording. </li>
+<li> Ensure your sound device has <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">up-to-date drivers</a> specifically intended for your particular computer model and operating system, as provided by the motherboard or sound device manufacturer. Ensure USB or Firewire devices have the manufacturer's latest firmware.</li>
+<li> If you hear crackling while playing and recording at the same time, try increasing the "Audio to buffer" setting in <a href="recording_preferences.html#Latency" title="Recording Preferences">Recording Preferences</a>. On Mac you may need to <i>reduce</i> the Audio to buffer setting, even if only recording.  </li>
+<li> If crackling occurs while playing the tracks together, check if the <a href="meter_toolbar.html#playback" title="Meter Toolbar">Playback Meter's</a> red <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> warning is showing, which would indicate the combined volume of the tracks is too loud. To fix the clipping, use the <a href="audio_tracks.html#gain" title="Audio Tracks">gain sliders</a> on one or more tracks to reduce the overall level. </li>
+<li> Make sure the rate of the pre-existing tracks (as stated above the mute/solo buttons) is the same as the project rate. Select the tracks and click <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample...</a></span> to resample the track to the project rate. </li>
+<li> Set the <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> bottom left of the Audacity screen to 44100 Hz <i>(or if your audio interface only uses a particular rate such as 48000 Hz, set the project rate to that)</i>. Look at <span class="menu">Help &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info...</a></span> to see the rates the device claims to support.  </li>
+<li> If you are recording with a USB or Firewire interface, sample rates and number of recording channels <b>must</b> be the same everywhere. Match the Audacity project rate and the number of recording channels set in the Audacity preferences with those specified:  
+<ul><li> in the Windows <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#cp">Control Panel</a> or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#osx">Apple Audio MIDI Setup</a></li>
+<li> in any software control panel the device has </li>
+<li> on any hardware control the device has.</li></ul></li>
+<li> Ensure your USB device is connected to a spare USB port of the computer and not to a USB hub. </li>
+<li> If you are on Windows:
+<ul><li>Set the Audacity project rate to the same rate as the <b>Default Format</b> for your sound device. To view the "Default Format", go to the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Windows_Vista_OS#cp">Windows Control Panel</a>, select the Playback" and "Recording" tabs in turn, right-click over a device entry &gt; Properties, and look in the "Advanced" tab. If the playback and recording format rates are different, make them the same. Also make sure the number of recording channels set in the Audacity Preferences matches with that specified in Default Format. </li>
+<li>If that does not help, select <b>Windows DirectSound</b> as the "host" in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> in Audacity. On the "Advanced" tab of "Sound" in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Windows_Vista_OS#cp">Windows Control Panel</a>, ensure both boxes for <b>Exclusive Mode</b> are checked. For this to work, the Audacity project rate <b>must</b> be a rate supported by your device and all other sample rate settings <b>must</b> be at that same rate.    </li></ul></li>
+<li> If you suspect recording dropouts as the cause of loss of synchronization, read our tips about <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers">managing computer resources</a>.</li></ul>
+<div class="note">To fix recordings already made which are out of step with other tracks, you can use <span class="menu">Effect &gt; <a href="change_speed.html" title="Change Speed">Change Speed...</a></span>. Only a very modest speed change will be needed.</div>
+<p><a href="#top">back to top</a>
+</p>
+<div id="keyboards"></div>
+<h2><span class="mw-headline" id="Why_can.27t_I_record_my_electronic_keyboard_or_electronic_instrument_using_the_USB_cable.3F">Why can't I record my electronic keyboard or electronic instrument using the USB cable?</span></h2>
+<p>The USB connection on electronic keyboards, pianos, drum machines or other electronic instruments is often a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> connection containing instructions with which MIDI software like Finale or Cubase can create notes of specific pitch and duration. Audacity cannot yet accept MIDI input, so it can only record an audio signal (the actual sound that the keyboard produces).
+</p><p>If your keyboard manual says you can send audio over USB but there is a problem, try tightening or replacing the USB cable, ensure it is connected directly to a spare USB port on the computer, then restart Audacity or the computer. 
+</p><p>In the absence of a USB audio output:
+</p>
+<ul><li> connect from the <b>AUX</b> or <b>Line</b> outputs of the keyboard to the line-in (blue) port of the computer </li>
+<li> if there is no AUX or Line output, connect from the <b>headphones out</b> of the keyboard to computer line-in</li>
+<li> record using a <b>high quality microphone</b> - see <a href="tutorial_connecting_a_microphone.html" title="Tutorial - Connecting a Microphone">Connecting a Microphone</a></li>
+<li> some keyboards may have a function to record direct to a USB flash or hard drive - choose WAV format if available if you want to edit the recordings in Audacity.</li></ul>
+<div class="note">Connecting from headphones out will disconnect the keyboard speakers. In this case you can use an adaptor that doubles the headphones out, or enable <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> in Audacity to listen as you record. See <a href="tutorial_connecting_an_instrument.html" title="Tutorial - Connecting an Instrument">Tutorial - Connecting an Instrument</a> for details and images of suitable audio connectors.</div> 
+<p>Many new laptop computers these days only come with a mono "microphone" (pink) input which will distort if you connect a keyboard to it. Occasionally the pink input can be switched to stereo line level in the audio control panel or may be "compatible" with stereo line level (this may not be of highest quality). Check your computer manual or experiment connecting from the keyboard headphones out with the volume <b>turned well down</b>. However in most cases it is preferable to purchase a <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Sound_Devices_and_Interfaces#USB_Interfaces">USB interface with line level input</a> instead. 
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="stream"></div>
+<h2><span class="mw-headline" id="Why_doesn.27t_recording_from_YouTube_.28or_other_streaming_audio.29_work.3F">Why doesn't recording from YouTube (or other streaming audio) work?</span></h2>
+<p>See this tutorial: <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer">Recording audio playing on the computer</a>.
+</p>
+<div class="note">Rather than recording YouTube videos as they play, consider downloading the YouTube videos directly. Search Google or other search portal for how to do that.</div>
+<p><a href="#top">back to top</a>
+</p>
+<div id="clipping"></div>
+<h2><span class="mw-headline" id="Why_do_I_get_crackles.2C_pops.2C_or_distortion_when_the_recording_is_loud.3F">Why do I get crackles, pops, or distortion when the recording is loud?</span></h2>
+<p>If you hear crackles, pops, or distortion when the recording is loud, or if the waveform is clearly touching the top and bottom edges of the track, you probably have <a href="audacity_waveform.html#clip" title="Audacity Waveform">clipping</a>, which means that the signal has exceeded the maximum allowed level.  
+</p><p>Try lowering the recording level using the Audacity <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a> or the slider in the operating system. You can also check to see if you can lower the volume on the input source itself (such as the <b>tape deck</b>,  <b>record player</b> or <b>microphone</b>). Many sound cards and USB turntables or USB tape decks have an independent volume control for the playback signal level.  See <a href="recording_with_usb_turntables.html" title="Recording with USB turntables">Recording with USB turntables or USB cassette decks</a> for more help with USB turntables or tape decks.    
+</p><p>When recording, try to aim for a maximum peak of around –6 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> in the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter</a> so as to prevent the meter's <a href="meter_toolbar.html#annotated" title="Meter Toolbar">red clipping warning</a> coming on. If the meters are set to <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i>, the equivalent level to aim for is 0.5. Clicking and dragging on the meter's right edge lets you expand the meter to gauge levels more easily. After recording, you can boost the level safely using the <a href="amplify.html" title="Amplify">Amplify</a> or <a href="normalize.html" title="Normalize">Normalize</a> effects.
+</p>
+<div class="note"><b>Help with repairing clipped recordings:</b>
+If there is only a small amount of <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> (just the tops of a few isolated peaks), <span class="menu">Effect &gt; <a href="clip_fix.html" title="Clip Fix">Clip Fix</a></span> can be applied to just the clipped sections.  This will attempt to reconstruct the missing peaks by <i><b><a href="glossary.html#interpolate" title="Glossary">interpolating</a></b></i>  the lost signal. In other cases where there is mild distortion throughout a recording, using  <span class="menu">Effect &gt; <a href="equalization.html" title="Equalization">Equalization...</a></span> to reduce the higher frequencies can help to mitigate the damage.  Sometimes a bass cut will help also by making the result sound less "muddy". </div>
+<p>If you are recording <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdubs</a>, note that when multiple tracks are <a href="mixing.html" title="Mixing">mixed</a> together their volume is combined. This may make the mix clip, even if the individual tracks did not. To fix it, use the <a href="audio_tracks.html#gain" title="Audio Tracks">gain sliders</a> on one or more tracks to reduce the overall level. 
+</p><p>See also: 
+</p>
+<ul><li> <a href="#input_slider">Why is the Audacity recording slider grayed out on maximum?</a></li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="red_line"></div>
+<h2><span class="mw-headline" id="Why_do_I_see_a_lot_of_vertical_red_lines_in_the_track_I_just_recorded.3F">Why do I see a lot of vertical red lines in the track I just recorded?</span></h2>
+<p>This is a visual indication that your recording has <a href="audacity_waveform.html#clip" title="Audacity Waveform">clipping</a>. See the immediately previous FAQ above.  
+</p><p>The vertical red lines show where the clipping has occurred; these clipping indicators can be turned on and off <i>(Audacity default setting is "off")</i> by selecting <span class="menu">View &gt; <a href="view_menu.html#showclippingonoff" title="View Menu">Show Clipping</a></span>.
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="input_slider"></div>
+<h2><span class="mw-headline" id="Why_is_the_Audacity_recording_slider_grayed_out_on_maximum.3F">Why is the Audacity recording slider grayed out on maximum?</span></h2>
+<p>The recording slider in <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a>  is purposely disabled if it cannot directly manipulate the operating system's slider for the sound device, or if that device has no system slider.  Turning down the Audacity slider to prevent distortion would be inadequate unless it also turned down the system slider. It would only make existing distortion quieter instead of removing it.  
+</p><p>If the slider is disabled, check first in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> that you are selecting the correct device. Audacity should be able to control the recording level of most built-in sound devices subject to the device having appropriate <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Sound Device Drivers</a>. 
+</p><p>If necessary look in the operating system mixer or in the audio interface's control panel for an input slider. To locate the system mixer see the help on our Wiki for <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#cp">Windows</a>, <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#osx">Mac</a> or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#linux">Linux</a>.
+</p><p>External recording devices such as <a href="recording_with_usb_turntables.html" title="Recording with USB turntables">USB turntables</a> or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Recommended_sound_devices#USB_Interfaces">interfaces</a> may not have an operating system slider, especially on Mac. For all cases where there is no system slider, try to adjust the playback level on the recording device itself.   
+</p><p>See also:
+</p><p><a href="#clipping">Why do I get crackles, pops, or distortion when the recording is loud?</a>
+</p><p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="pauses"></div>
+<h2><span class="mw-headline" id="Why_does_my_recording_keep_pausing_automatically_or_why_is_my_recording_cursor_stuck.3F">Why does my recording keep pausing automatically or why is my recording cursor stuck?</span></h2>
+<p>The recording cursor can legitimately appear to be stuck in Audacity if you have accidentally enabled <a href="transport_menu.html#sar" title="Transport Menu">Sound Activated Recording</a> in the <b>Transport Menu</b> and the current recording input is below the threshold level at which recording is set to start. You can tell this is the case because the blue Pause button will be depressed after you press Record. 
+</p><p>To disable Sound Activated Recording, click the <span class="menu">Transport</span> menu and uncheck <i>Sound Activated Recording (on/off)</i>. 
+</p><p>To make a Sound Activated recording commence, increase the recording level, or reduce the "Activation level" at <span class="menu">Transport &gt; Transport Otions &gt; Sound Activation Level...</span>.   
+</p><p><b>Out of resources</b>
+</p><p>If you have not activated <a href="transport_menu.html#sar" title="Transport Menu">Sound Activated Recording</a> and the red recording cursor will not move from the position where you start to record or stalls while recording, this usually means you are out of computer resources. Rebooting the computer may solve the problem. 
+</p><p><b>Note:</b> Windows 8 and later default to shut down performing a "hybrid boot" that retains the kernel session in memory, so producing a "Fast Startup". When you want to replenish resources you should do a traditional "cold boot" (full shutdown) instead, waiting a few seconds after shutting down before powering on the computer.
+</p><p>Leaving Fast Startup enabled, you can cold boot by holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking the "Shut down" menu option from the Start Menu, Start Screen or Win + X menu (on Windows 8.1 only, unmodified click on "Shut Down" in the Win + X menu always performs a full shutdown). If preferred you can turn off Fast Startup at <span class="menu">Control Panel (icons view) &gt; Power Options &gt; Choose what the power button does</span> then any Shut Down menu item will cold boot.
+</p>
+<div class="note">
+<p>For an in-depth approach to resolving resources problems, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers#resources">Managing Computer Resources and Drivers</a> in the Audacity Wiki.
+</p>
+</div>
+<p><b>Preferences</b>
+</p>
+<ul><li> Check the "Audio to buffer" setting by opening <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>. Buffer should normally be set to the default of 100 milliseconds. Very low settings will prevent recording starting.</li>
+<li> Other non-default settings such as excessive <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> could prevent recording starting. It can sometimes help to completely <a href="faq_installation_and_plug_ins.html#reset" title="FAQ:Installation and Plug-Ins">reset preferences</a>.   </li></ul>
+<p><b>USB turntables and tape decks</b>
+</p><p>Reports of recordings from USB turntables freezing or having dropouts are not that uncommon. Generally they are <b>not</b> caused by Audacity, but by poor quality equipment and cables, or lack of sufficient USB bandwidth.   
+</p>
+<ul><li> Check the Project Rate bottom left of the Audacity screen is set to either 44100 or 48000 Hz - setting a very high rate might overload the USB bandwidth and cause transmission problems </li></ul>
+<ul><li> Check the USB cable for tightness at both ends and try using a different cable instead</li></ul>
+<ul><li> Always use a spare USB port, not a hub</li></ul>
+<ul><li> Limit USB bandwidth whilst recording by using other USB devices sparingly e.g. simply disconnecting from the internet may help if you use a USB modem for internet access. </li></ul>
+<ul><li> Check for any system warnings (e.g. in Device Manager in Windows) about the Universal Serial Bus Controllers. </li></ul>
+<ul><li> There have been isolated reports that recordings freeze up if they are attempted whilst the unit's RCA cables are connected to an external input such as a home stereo, although concurrent recording and playing through external equipment is implied as being possible.  </li></ul>
+<p>Generally, if you find you can record into Audacity without interruption from another source such as a microphone plugged into your computer's microphone port, this implicates the turntable or USB cable. To check if other sources record satisfactorily, go to <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> and change the <a href="device_toolbar.html#record" title="Device Toolbar">Recording Device</a> to your inbuilt sound. 
+</p><p>If recordings from sources other than the turntable are also freezing or have dropouts, there could be problems with insufficient computer resources, see above. Please see the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers#resources">Managing Computer Resources and Drivers</a> page in the Audacity Wiki for tips on correcting this. 
+</p><p>If you're using "software playthrough", it's also possible that  problems with your inbuilt sound device (used to play back your recording whilst you are making it) are disrupting the recording. Please look at our list of tips on the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating Sound Device Drivers</a>  Wiki page for help.
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="flatline"></div>
+<h2><span class="mw-headline" id="Why_do_I_get_only_a_flat_line_and_no_sound_when_I_try_to_record.3F">Why do I get only a flat line and no sound when I try to record?</span></h2>
+<p>If the red recording cursor moves across the screen but no waveform is drawn behind it (only a flat line), you need to start from the beginning and set up your recording device and input source properly. 
+</p><p><b>Step 1: input device</b>
+</p><p>Select the <b>Recording Device</b> you are using (such as microphone or line-in) in the dropdown selector of the Audacity <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. <i>The dropdown selector you need is the one with the microphone icon.</i>
+</p><p>If you are plugging a microphone or line-in input directly into the jacks on the computer, or recording computer playback such as internet radio, choose the name of the built-in sound device or sound card.
+</p>
+<div class="note"><b>By default, Windows only enables the microphone input.</b> You must exit Audacity, then go to "Sound" in the Windows Control Panel to show and enable other inputs before you can record from them. Instructions can be found <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#vistacp">here</a> in the Wiki.</div>        
+<p>If you are connecting an external device to the computer, such as a USB sound card, USB microphone or USB turntable, choose "USB Audio Codec" or similar.
+</p>
+<div id="detect"></div>
+<div class="note"><b>Detecting USB and Firewire devices:</b><br />If Audacity does not recognize the device, try exiting Audacity and relaunching it, or in current Audacity choose <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span>. If that does not help, use the following steps.
+<ol><li> Exit Audacity.</li>
+<li> Unplug all other USB devices, then switch off and unplug the recording device at the USB connection and at the mains <i>(on Windows, use the "Safely Remove Hardware" icon in the System Tray).</i></li>
+<li> Plug the recording device into a spare USB port (not a USB hub), and switch it on.</li>
+<li> Wait a few minutes then completely shut down the computer and restart it. On <b>Windows 8 or later</b> you should <a rel="nofollow" class="external text" href="https://superuser.com/questions/656459/disabling-hybrid-boot-in-windows-8?answertab=votes#tab-top">disable hybrid boot</a> (or Shift-click on the "Shut down" choice, or on Windows 8.1 only, use Windows key and X, then "Shut down") to ensure the USB drivers are fully re-initialized. </li>
+<li> When the computer has finished rebooting, launch Audacity.</li>
+<li> If Audacity still does not recognize the device, try another USB cable, or a different empty USB port, then repeat steps 1 to 5. </li></ol>
+<p><b>Setting sample rates for USB or Firewire interfaces:</b><br />It's important to set the same sample rate in the project rate bottom left of the Audacity window, in the operating system mixer, in any settings in the device's control panel and on any controls on the device itself.</p></div>
+<p><b>Step 2: playback device</b>
+</p><p>Also in the dropdown selector of the Audacity <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> select the playback device you are using, usually this will be your computer's on-board sound card. <i>The dropdown selector you need this time is the one with the loudspeaker icon.</i>
+</p><p><b>Step 3: channels</b>
+</p><p>In the Audacity <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> set the <b>Recording Channels</b> to <b>1 (mono)</b> or <b>2 (stereo)</b> as required.
+</p><p><b>Step 4: recording signal level</b>
+</p><p>In the <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a>, adjust the <b>recording level</b> using the recording slider <i>(the one that has the "microphone" symbol)</i> in conjunction with the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter</a> level to set the correct recording level before starting to record for real. 
+</p><p>If the Audacity recording slider does not control the recording level of the device, use the slider in the operating system instead. This is usually accessed by a loudspeaker icon near the system clock.
+</p><p><b>Further Help</b>
+</p>
+<ul><li><i>Recording source unavailable/unselectable, or records incorrectly:</i> Try selecting it instead in the system mixer - see the help for <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#Using_the_Control_Panel">Windows</a>, <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#OS_X-specific_issues">OS&#160;X</a> or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#Linux-specific_issues">Linux</a>. </li>
+<li><i>Recording computer playback:</i> See the special help for <a href="tutorial_recording_computer_playback_on_windows.html" title="Tutorial - Recording Computer Playback on Windows">Windows</a>, <a href="tutorial_recording_computer_playback_on_mac.html" title="Tutorial - Recording Computer Playback on Mac">Mac</a> or <a href="tutorial_recording_computer_playback_on_linux.html" title="Tutorial - Recording Computer Playback on Linux">Linux</a>.</li></ul>
+<p><a href="#top">back to top</a>
+</p>
+<div id="noise6"></div>
+<h2><span class="mw-headline" id="Why_do_I_get_a_periodic_noise_every_6_-_12_seconds_when_recording.3F">Why do I get a periodic noise every 6 - 12 seconds when recording?</span></h2>
+<p>Audacity writes to disk roughly every 6 or 12 seconds, depending on your preferences settings. If you hear a funny noise in the background that's relatively consistent every 6 - 12 seconds, it means that your sound card is picking up the noise from your hard drive. 
+</p><p>See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Improving_recording_quality">Improving recording quality</a> in the Audacity Wiki, because you'll probably need to find a better driver or upgrade your hardware. 
+</p><p>Also consider however if a security application could be scanning Audacity's disk writes. If so, the noise could come from increased CPU activity as a result of the scan. You should not turn off security applications unless you are disconnected from the internet, but you may be able to add an exception to the application so that it does not scan Audacity or its <a href="directories_preferences.html" title="Directories Preferences">temporary folder</a>.  
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="half_volume"></div>
+<h2><span class="mw-headline" id="How_can_I_prevent_a_half-volume_mono_recording.3F">How can I prevent a half-volume mono recording?</span></h2>
+<p>This can occur when connecting to one channel only of a device that has separate left and right channel inputs. Recording in mono will often result in a half-volume track that cannot be made louder without adding distortion. If this happens:
+</p>
+<ol><li> <a href="faq_recording_how_to_s.html#rinstereo" title="FAQ:Recording - How To's">Record in stereo</a> using <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a></li>
+<li> After recording, use the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> to "Split Stereo to Mono"</li>
+<li> Use the track Close button <span class="button">[X]</span> top left of the upper track to close the silent track. The remaining mono track will play out of both speakers. </li></ol>
+<p><a href="#top">back to top</a>
+</p>
+<div id="unbalanced"></div>
+<h2><span class="mw-headline" id="How_can_I_prevent_unbalanced_or_poorly_separated_stereo_recording.3F">How can I prevent unbalanced or poorly separated stereo recording?</span></h2>
+<p>Ensure Audacity is set to <a href="faq_recording_how_to_s.html#rinstereo" title="FAQ:Recording - How To's">record in stereo</a> using <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. Your recorded track will then say "Stereo" in its <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> and two channels, left above right, will be displayed when you press the <b>Record</b> <img alt="image of record button" src="../m/images/e/e8/record.png" title="image of record button" width="16" height="16" /> button. 
+</p><p>Also ensure that the Recording Device is set in the system mixer to record in stereo and that the left and right channels are balanced.  
+</p>
+<ul><li> On <b>Windows</b>, access the recording section of <span class="menu"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/index.php?title=Mixer_Toolbar_Issues#vistacp">Sound</a></span> or <span class="menu"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/index.php?title=Mixer_Toolbar_Issues#xpcp">Sounds and Audio Devices</a></span> in the Windows Control Panel. This is  usually accessed by right-clicking over the speaker icon by the system clock. On Windows, devices often default to mono, which will lead to identical left and right channels in Audacity.</li>
+<li> On <b>Mac</b> go to  <span class="menu">Applications &gt; Utilities &gt; Audio-MIDI Setup: Audio Devices</span>. </li></ul>
+<p>Ensure that any balance controls on your mixer, amplifier or record player/cassette deck are centrally placed. 
+</p><p>For non-USB recordings, make sure you are using a clean, tightly connected <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Connecting_your_Equipment#trs">stereo plug</a>. Ensure that the computer port you are connecting to is stereo. Most microphone ports are mono. A laptop that only has a single input will usually offer only low quality, poorly separated stereo when using a stereo plug. You can buy modestly priced, decent quality USB interfaces with line level stereo input if needs be. 
+</p>
+<div class="note">If your source is mono but Audacity is set to record in stereo, it is often best to change Audacity to record in mono using Device Toolbar. Otherwise, you may have a silent right channel (or sometimes two identical channels, according to the sound device). </div>
+<p><a href="#top">back to top</a>
+</p>
+<div id="rebalance"></div>
+<h2><span class="mw-headline" id="How_can_I_correct_an_unbalanced_stereo_recording.3F">How can I correct an unbalanced stereo recording?</span></h2>
+<p>If you cannot <a href="#unbalanced">prevent the imbalance</a> at the input stage, you can correct a stereo imbalance using the <a href="normalize.html" title="Normalize">Normalize</a> effect after the recording has been made.
+</p>
+<ol><li>In Audacity, click the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> where it says "Stereo" to select all the audio of the track, then click <span class="menu">Effect &gt; <a href="normalize.html" title="Normalize">Normalize...</a></span>. </li>
+<li>In the dialog box, put a check mark in <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Normalize maximum amplitude to:</span> and type the <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> level you require <i>(-6 dB is a good choice if you have further editing to do)</i>.  </li>
+<li>Put a check mark in <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Normalize stereo channels independently</span>. Then press the <span class="button">OK</span> button.</li></ol>
+<p>This will adjust the volume of each channel independently so that both have the same maximum (peak) level (in our example, the peak is 6 dB less than the distortion level).
+</p><p><b>Custom balancing</b>
+</p><p>Sometimes the track may still <i>sound</i> louder in one channel than the other, even after normalizing. This usually happens because of the content. For example, one channel may have more deep bass sounds which are naturally louder, or one channel may be mostly quiet but have one loud peak. 
+</p><p>To adjust each channel to its own peak volume, click the downward-pointing arrow in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> to open the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> then choose "Split Stereo Track". Click on "Left" in the Track Control Panel of the upper track to select it, then use <span class="menu">Effect &gt; <a href="amplify.html" title="Amplify">Amplify...</a></span> and choose your required <a href="amplify.html" title="Amplify">New Peak Amplitude</a>. Click OK, then amplify the right channel to your chosen New Peak Amplitude. To rejoin the channels into one track, use the Track Dropdown Menu again and choose "Make Stereo Track". 
+</p><p>Custom rebalancing can also be carried out during playback while the track is split into two channels, using the Gain Slider <a href="https://alphamanual.audacityteam.org/man/File:TrackGain.png" class="image" title="Track Gain Slider"><img alt="Track Gain Slider" src="../m/images/a/ae/trackgain.png" width="97" height="25" /></a> on each channel. This method can lead to distortion, so check that the  <a href="meter_toolbar.html#playback" title="Meter Toolbar">Playback Meter</a> does not show the red <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> indicator. As soon as you are happy that the balance, use <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span> to render the gain changes and rejoin the stereo track.  
+</p><p>If the sound remains unbalanced due to a few loud peaks, you could instead use <span class="menu">Effect &gt; <a href="compressor.html" title="Compressor">Compressor...</a></span> on the unsplit stereo track to reduce the difference between loud and soft.
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="offset"></div>
+<h2><span class="mw-headline" id="Why_is_the_recorded_waveform_not_centered_on_the_horizontal_line_at_0.0.3F">Why is the recorded waveform not centered on the horizontal line at 0.0?</span></h2>
+<p><b>Cause and impact</b>
+</p><p>This off-setting of a signal from zero is known as <a href="dc_offset.html" title="DC offset">DC offset</a>. A signal with DC offset would appear in the Audacity default <a href="audacity_waveform.html" title="Audacity Waveform">Waveform</a> view as not centered on the 0.0 horizontal line. 
+</p><p>A sound that has DC offset will not be at its loudest possible volume when normalized or amplified (because the offset consumes <i><b><a href="glossary.html#headroom" title="Glossary">headroom</a></b></i>). This problem can possibly extend to the mix as a whole, because a sound with DC offset and a sound without DC offset will have DC offset when mixed.
+</p><p>DC offset can cause clicks at the start and end of the audio or audible distortion after running effects.  
+DC offset can also cause inaudible low level distortion which becomes audible after applying a <i><b><a href="glossary.html#filter" title="Glossary">filter</a></b></i> or if the audio is <a href="exporting_audio.html" title="Exporting Audio">exported</a> to a <b><i><a href="glossary.html#compressed_format" title="Glossary">compressed audio format</a>. </i></b>
+</p><p><b>Removal</b>
+</p><p>You can use <span class="menu">Effect &gt; <a href="normalize.html" title="Normalize">Normalize...</a></span> to remove DC offset. Put a check mark in the <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Remove any DC offset...</span> box but leave the <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Normalize maximum amplitude..</span> box unchecked and then press the <span class="button">OK</span> button.
+</p><p><b>Hardware upgrade</b>
+</p><p>The usual cause of DC offset is a faulty or inadequate audio interface.  It may be worthwhile considering upgrading your computer's built-in sound card or purchasing an external audio interface. However recent built-in sound cards on Windows machines sometimes have a <a href="dc_offset.html#cancel" title="DC offset">DC offset cancellation</a> control which can be set for each input.
+</p><p><a href="#top">back to top</a> 
+</p><p><br />
+</p><p><a href="faq_recording_how_to_s.html" title="FAQ:Recording - How To's"><b>&gt;</b>&#160; Forward To: FAQ:Recording - How To's</a> <br />
+</p><p><a href="faq_installation_and_plug_ins.html" title="FAQ:Installation and Plug-Ins"><b>&gt;</b>&#160; Back To: FAQ:Installation, Startup and Plug-Ins</a> <br /> 
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112032
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.227 seconds
+Real time usage: 0.234 seconds
+Preprocessor visited node count: 752/1000000
+Preprocessor generated node count: 2137/1000000
+Post‐expand include size: 17188/2097152 bytes
+Template argument size: 11047/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   65.708      1 - -total
+ 51.14%   33.600      1 - Template:I18n
+ 47.96%   31.514      1 - Template:I18n_box
+ 41.87%   27.515      1 - Template:I18n_list
+ 23.39%   15.372      7 - Template:I18n_link
+ 13.65%    8.966      7 - Template:Autoglossonym
+  8.24%    5.417     25 - Template:Menu
+  7.27%    4.776      9 - Template:Note
+  4.46%    2.929      2 - Template:Tip
+  4.33%    2.845      2 - Template:Hint
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4053-0!*!0!!en!5!* and timestamp 20180917112031 and revision id 60983
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_Troubleshooting">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

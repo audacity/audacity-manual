@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Vocoder - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Vocoder rootpage-Vocoder skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Vocoder</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Vocoder#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+
+
+<p><br />
+</p>
+<div class="intro"><i><b>Vocoder...</b></i> synthesizes a <i>modulator</i> (usually a voice) in the left channel of a stereo track with a <i>carrier wave</i> in the right channel to produce a modified version of the left channel. Vocoding a normal voice with white noise as provided in the effect will produce a robot-like voice for special effects. Other carriers can be used for subtly different voices, such as a sawtooth tone, a musical tone or a synthesized string chord. 
+<p>The Audacity Vocoder effect simulates a classical analog multiband vocoder, as described in the "History" section of the Wikipedia <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Vocoder">Vocoder</a> page.
+</p>
+</div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Vocoder...</span></dd>
+<dd><span title="Vocoder effect dialog"><img alt="Vocoder.png" src="../m/images/b/bd/vocoder.png" width="570" height="329" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Vocoder only works on unsplit stereo tracks.
+</td></tr></table></div>
+<h2><span class="mw-headline" id="Distance">Distance</span></h2>
+<p>Defines the distance between the center frequency of the vocoder band to the cutoff frequency of the respective envelope low pass filter. With the default distance of 20.0 the envelope signals ( generated from the modulator band-pass filters) are twenty times slower than the center frequency of the band-pass filters of the respective vocoder band. The distance controls the "responsivness" of the Vocoder to changes in the modulator signal. The higher the distance, the slower the response. The smaller the distance, the more of the original modulator signal can be heard in the output signal.
+</p>
+<h2><span class="mw-headline" id="Output_choice">Output choice</span></h2>
+<ul><li> <b>Both channels:</b> The modulated vocoder output signal is duplicated into both stereo channels. This is most convenient when fine-adjusting the vocoder output using headphones.</li>
+<li> <b>Right only:</b> The modulated vocoder output signal appears only in the right channel, while the left channel still contains the unmodified modulator signal. This is useful when applying a mono modulator to a stereo carrier, since the modulator can be reused when processing the right channel of the carrier. </li></ul>
+<h2><span class="mw-headline" id="Number_of_vocoder_bands">Number of vocoder bands</span></h2>
+<p>Defines the frequency resolution of the Vocoder. This behaves similarly to a multiband equalizer. The more bands, the finer the different frequencies that can be manipulated and modulated. The default setting is 40. Increasing the number of Vocoder bands slows down the processing time.  
+</p>
+<h2><span class="mw-headline" id="Amplitude_of_original_audio_.28percent.29">Amplitude of original audio (percent)</span></h2>
+<p>Defines how much of the original audio signal shall be contained in the carrier signal; the default setting is 100%.
+</p>
+<h2><span class="mw-headline" id="Amplitude_of_white_noise_.28percent.29">Amplitude of white noise (percent)</span></h2>
+<p>The amount of white noise that is added to the right channel before applying the vocoder; the default setting is 0%.
+</p>
+<h2><span class="mw-headline" id="Amplitude_of_Radar_Needles_.28percent.29">Amplitude of Radar Needles (percent)</span></h2>
+<p>The amplitude of "radar needles" that are added to the right channel before applying the vocoder. The default setting is 0%.
+</p>
+<div class="note">"Radar needles" are a series of very short pulses (clicks), also known as "pulse train" in speech synthesizers. They have a pulse width of only one sample and a spectrum ranging from the frequency specified by the Frequency slider (below) up to much greater than 20 kHz.</div>  
+<h2><span class="mw-headline" id="Frequency_of_Radar_Needles_.28Hz.29">Frequency of Radar Needles (Hz)</span></h2>
+<p>The number of "radar needles" per second where only one sample per period has a non-zero value. This is the most-broadband signal possible, even more broadband than white noise.   The default setting is 30.0 Hz.  <i>See also Wikipedia <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Dirac_comb">Dirac Comb</a> for a detailed description.</i>
+</p><p>Best results may be obtained if you first mix the radar needles with another sound, then apply Vocoder.
+</p>
+
+
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
+<p>Clicking on the command buttons give the following results:
+</p>
+<ul><li><span class="button">Manage</span> gives a dropdown menu enabling you to manage presets for the tool and to see some detail about the tool. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a></li>
+<li><span class="button">Preview</span> plays a short preview of what the audio would sound like if the effect is applied with the current settings, without making actual changes to the audio.  The length of preview is determined by your setting in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span>, the default setting is 6 seconds.</li>
+<li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
+<li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> brings you to the appropriate page in the Manual, this page</li></ul>
+<p><br />
+</p><p><br />
+</p>
+<div class="example"><div id="examples"></div>
+<h3><span class="mw-headline" id="Usage_examples_with_stereo_and_mono_modulators_and_carriers">Usage examples with stereo and mono modulators and carriers</span></h3>
+<div class="note"><b>Keeping the voice prominent in the processed audio:</b>
+<p>If you have a carrier signal with a very limited spectrum and most of the voice gets lost after processing because the spectra are too different you have two choices:
+</p>
+<ol><li> Add some white noise - the result will sound like an old tape recorder</li>
+<li> Add some low-frequency radar needles - this will sound like a tremolo.</div></li></ol>
+
+<p>This section uses the terms "modulator" and "carrier". In a vocoder, the modulator is the signal that modulates or controls the carrier signal. In audio context, the modulator is the sound you want to change (often a voice talking or singing), and the carrier you use to change that sound is often a steady musical tone or note, or sometimes a natural sound like some kind of noise.
+</p><p>So for the purposes of the steps in all the following examples, we assume the modulator to be a "voice" track and the carrier to be a "music" track.
+</p>
+ 
+<p>The modulator and carrier will thus usually be two separate audio tracks. Self-made voice or speech recordings are usually mono, but voice or speech recordings from radio or CD often contain stereo reverb effects. Music signals can be either mono or stereo. There are thus four different practical cases:
+</p>
+<ul><li> <a href="#mm">Case 1: Applying a mono modulator to a mono carrier</a> - the simplest case</li>
+<li> <a href="#ms">Case 2: Applying a mono modulator to a stereo carrier</a> - the most common case</li>
+<li> <a href="#sm">Case 3: Applying a stereo modulator to a mono carrier</a></li>
+<li> <a href="#ss">Case 4: Applying a stereo modulator to a stereo carrier</a></li></ul>
+<p>To apply the Vocoder effect, Audacity needs to combine the modulator and carrier signals into a stereo audio track where the <b>modulator is in the left channel</b> (the upper waveform of the stereo track) and the <b>carrier is in the right channel</b> (the lower waveform). The remainder of this section thus describes the steps needed to combine the signals in the four cases above.   
+</p>
+<div class="note">"Stereo" means two-channel stereo, because in Audacity stereo signals with more than two channels are handled as multiple mono tracks - there is no standard way to handle audio signals with more than two channels. Vocoding a Dolby 5.1 signal in Audacity means "Applying a mono modulator to a mono carrier" six times on six mono tracks</div>.
+<div id="mm"></div>
+<h3><span class="mw-headline" id="Case_1:_Applying_a_mono_modulator_to_a_mono_carrier">Case 1: Applying a mono modulator to a mono carrier</span></h3>
+<p>This means that the modulator (voice) and carrier (music) initially are two separate Audacity mono audio tracks. 
+</p>
+<ol><li> If necessary, move the voice track directly above the music track. </li>
+<li> In the upper track (voice), open the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> and choose "Make Stereo Track". </li>
+<li> Select the stereo track and apply Vocoder with "output choice" set to "both channels". You now have a "dual mono" track where the same content is in left and right channels of the stereo track.  </li>
+<li> Select the stereo track and choose <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_stereo_down_to_mono" title="Tracks Menu: Mix">Mix Stereo down to Mono</a></span> to make a mono track again.  </li></ol>
+<div id="ms"></div>
+<h3><span class="mw-headline" id="Case_2:_Applying_a_mono_modulator_to_a_stereo_carrier">Case 2: Applying a mono modulator to a stereo carrier</span></h3>
+<p>This means that the modulator (voice) is a mono audio track and carrier (music) is a stereo audio track. This is a very common case because voice recordings are usually mono while music recordings are most often stereo.
+</p>
+<ol><li> Open the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> of the stereo music track and choose "Split Stereo Track". We now have a "Left" music track above a "Right" music track. </li>
+<li> If necessary, move the voice track directly above the left music track. </li>
+<li> In the voice track, open the Track Dropdown Menu and choose "Make Stereo Track". </li>
+<li> Select only the upper stereo track and apply the Vocoder with "Output choice" set to "right only". This processes the "Left" channel of the original music track, and lets us retain the mono voice track for reuse in step 8.</li>
+<li> In the upper stereo track, open the Track Dropdown Menu and choose "Split Stereo Track" </li>
+<li> Move the first track down one track so that it is above the right music track</li>
+<li> Open the Track Dropdown Menu in the second track and choose "Make Stereo Track". </li>
+<li> Select only the resulting stereo track and apply Vocoder with "output choice" set to "both channels". This now processes the "Right" channel of the original music track. </li>
+<li> Select the stereo track, and choose <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_stereo_down_to_mono" title="Tracks Menu: Mix">Mix Stereo down to Mono</a></span>. </li>
+<li> In the upper mono track, open the Track Dropdown Menu and choose "Make Stereo Track". Now we have the two processed music channels combined into a stereo track.</li></ol>
+<div id="sm"></div>
+<h3><span class="mw-headline" id="Case_3:_Applying_a_stereo_modulator_to_a_mono_carrier">Case 3: Applying a stereo modulator to a mono carrier</span></h3>
+<p>This means that the modulator (voice) is a stereo track and carrier (music) is a mono audio track. 
+</p>
+<ol><li> If necessary, move the stereo voice track above the mono music track.   </li>
+<li> Select the (upper) stereo voice track, open the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> and choose "Split Stereo Track".</li>
+<li> Select the mono (third) music track, and choose <span class="menu">Edit &gt; Duplicate</span>. </li>
+<li> Move the first music track (the third track on screen) up one track so that you now from top to bottom of the screen:
+<ol><li> "Left" voice track </li>
+<li> The original mono music track</li>
+<li> "Right" voice track </li>
+<li> The duplicated mono music track.</li></ol></li>
+<li> Select the "Left" voice track, open the Track Dropdown Menu and choose "Make Stereo Track".</li>
+<li> Select only the track you just made into stereo (the upper stereo track) and apply the Vocoder with "Output choice" set to "both channels".  </li>
+<li> Select only the stereo track you just processed, and choose <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_stereo_down_to_mono" title="Tracks Menu: Mix">Mix Stereo down to Mono</a></span>. </li>
+<li> Select the "Right" voice track, open the Track Dropdown Menu and choose "Make Stereo Track".</li>
+<li> Select only the track you just made into stereo (the lower stereo track) and apply the Vocoder with "Output choice" set to "both channels".  </li>
+<li> Select only the stereo track you just processed, and choose <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_stereo_down_to_mono" title="Tracks Menu: Mix">Mix Stereo down to Mono</a></span>. </li>
+<li> Open the Track Dropdown Menu in the upper track and choose "Make Stereo Track". Now we have a stereo track, containing processed left and right channels of the original stereo voice and mono music track.</li></ol>
+<div id="ss"></div>
+<h3><span class="mw-headline" id="Case_4:_Applying_a_stereo_modulator_to_a_stereo_carrier">Case 4: Applying a stereo modulator to a stereo carrier</span></h3>
+<p>This means that the modulator (voice) and the carrier (music) are both stereo audio tracks.
+</p>
+<ol><li> If necessary, move the stereo voice track above the stereo music track.   </li>
+<li> Select the (upper) stereo voice track, open the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> and choose "Split Stereo Track".</li>
+<li> Select the (lower) stereo music track, open the Track Dropdown Menu and choose "Split Stereo Track". </li>
+<li> Move the "Left" music track up one track so that you now have two "Left" tracks above two "Right" tracks.  </li>
+<li> Select the "Left" of the voice track (the uppermost track), open the Track Dropdown Menu and choose "Make Stereo Track". </li>
+<li> Select only the track you just made into stereo (the upper stereo track) and apply the Vocoder with "Output choice" set to "both channels".  </li>
+<li> Select the "Right" of the voice track (the third track), open the Track Dropdown Menu and choose "Make Stereo Track". </li>
+<li> Select only the track you just made into stereo (the lower stereo track) and apply the Vocoder with "Output choice" set to "both channels".  </li>
+<li> Select both stereo tracks. You can do this by holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> on the keyboard while clicking in the upper (unselected) stereo track, or hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while pressing <span class="kbrd" style="background-color: #e0e0f0">Up</span> arrow on the keyboard. With both tracks selected, choose <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_stereo_down_to_mono" title="Tracks Menu: Mix">Mix Stereo down to Mono</a></span>. </li>
+<li> Open the Track Dropdown Menu in the upper track and choose "Make Stereo Track". Now we have a stereo track, containing processed left and right channels of the original stereo voice and stereo music track.</div></li></ol>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112648
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.135 seconds
+Real time usage: 0.142 seconds
+Preprocessor visited node count: 496/1000000
+Preprocessor generated node count: 2095/1000000
+Post‐expand include size: 27316/2097152 bytes
+Template argument size: 14907/2097152 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   55.810      1 - -total
+ 33.48%   18.685      1 - Template:I18n
+ 30.82%   17.198      1 - Template:I18n_box
+ 26.75%   14.928      1 - Template:I18n_list
+ 19.11%   10.663      1 - Template:Effectbuttons
+ 15.71%    8.767      1 - Template:Example
+ 14.78%    8.249      1 - Template:Buttonlist
+ 13.01%    7.261      1 - Template:No-rename
+ 11.62%    6.484      6 - Template:Ednote
+ 11.03%    6.155     10 - Template:Button
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4072-0!*!0!!*!5!* and timestamp 20180917112648 and revision id 60962
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Vocoder">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

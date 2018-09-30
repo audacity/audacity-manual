@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial - Recording Computer Playback on Linux - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tutorial_-_Recording_Computer_Playback_on_Linux rootpage-Tutorial_-_Recording_Computer_Playback_on_Linux skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial - Recording Computer Playback on Linux</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_Computer_Playback_on_Linux#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">On Linux there are in general two different sound systems that provide drivers to your sound device, <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Open_Sound_System">OSS</a> and the more recent <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture">ALSA</a>. Additionally, advanced sound servers such as <a rel="nofollow" class="external text" href="https://www.freedesktop.org/wiki/Software/PulseAudio/">PulseAudio</a> and <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/JACK_Audio_Connection_Kit">JACK</a> can use ALSA to provide professional audio features such as routing of inputs and outputs, high quality mixing and resampling, aggregation of audio interfaces and (in the case of JACK) very low <a rel="nofollow" class="external text" href="https://manual.audacityteam.org/man/Glossary#latency">latencies</a>.  </div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top"><i><b>Copyright or website restrictions may prevent you recording or distributing material. Check first.</b></i>
+</td></tr></table></div>
+<div id="pulse"></div> 
+<h2><span class="mw-headline" id="PulseAudio">PulseAudio</span></h2>
+<p><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/PulseAudio">PulseAudio</a> is a sound server providing professional audio features such as mixing and input/output routing. It is the default audio device on many Linux distributions including <a rel="nofollow" class="external text" href="https://www.ubuntu.com/">Ubuntu</a>, <a rel="nofollow" class="external text" href="https://www.linuxmint.com/">Linux Mint</a>, <a rel="nofollow" class="external text" href="https://www.opensuse.org/en/">Open Suse</a> and many Debian/Ubuntu-based distributions. PulseAudio operates as a proxy between sound applications and the audio hardware (usually via ALSA). PulseAudio Volume Control  provides a "Monitor" device which listens for the audio output of other applications such as <a rel="nofollow" class="external text" href="https://www.mozilla.com/en-US/firefox/firefox.html">Firefox</a> or <a rel="nofollow" class="external text" href="https://projects.gnome.org/rhythmbox/">Rhythmbox</a>. Setting PulseAudio Volume Control to capture from the Monitor device lets Audacity record computer playback when its input device is set to pulse.  
+</p>
+<ol>
+<li> If not already installed, add PulseAudio Volume Control (pavucontrol) to your system. This is usually available in the distribution's repository. 
+<li> Ensure that PulseAudio is running. In Audacity's <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>, set the Host to <b>ALSA</b> and the recording device to <b>pulse</b>. 
+<ul><li> On systems where PulseAudio is the default sound system the recording device may be set to <b>default</b>.
+<li>Audacity's playback device may be set to <b>pulse</b> or to any available audio interface.</ul>
+<dl><dd><span title="Recording device set to pulse in Device Toolbar"><img alt="Pulse-device-toolbar.png" src="../m/images/4/48/pulse_device_toolbar.png" width="624" height="29" /></span></dd></dl>
+<li>Ensure that "Software Playthrough" is not enabled in the <a href="transport_menu.html" title="Transport Menu">Transport Menu</a> then left-click on the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter</a> to turn monitoring on.
+<li>Open PulseAudio Volume Control and choose the "Recording" tab.
+<li>In the "Capture <i>from</i>" dropdown, select the "Monitor" option of the playback device used by the application you want to record from, as shown below:
+<dl><dd><span title="Capture from Monitor device"><img alt="Pavucontrol-CaptureMonitor.png" src="../m/images/1/1b/pavucontrol_capturemonitor.png" width="715" height="333" /></span></dd></dl>
+<li>Launch the application that you wish to record and begin playback. 
+<li>In the "Recording" tab of PulseAudio Volume Control, drag the volume sliders so that the recording level in Audacity's Recording Meter is to left of 0 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> (-6 dB is a good level to aim for). 
+<ul><li>The playback level of the application being recorded will also affect the level of the recording. Use the "Playback" tab in PulseAudio Volume Control or the volume control in the application to adjust the output level.
+<li>If you want to record without hearing the audio, you can turn down the Audacity playback slider or turn down the sliders on the Output Devices tab of PulseAudio Volume Control. Don't use the Mute button in PulseAudio Volume Control, because this will cause Audacity to record silence. You can also set the port on the Output Devices tab of PulseAudio volume control to the audio output such as "headphones" but not connect any headphones or speakers to the port. </ul>
+<li>When the recording level has been correctly adjusted, press the Record button in Audacity .</ol>
+<p>For a detailed description using Ubuntu 10, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Stereo_mix_with_Ubuntu_10">Stereo Mix with Ubuntu 10</a> on the Audacity wiki.
+</p>
+<div id="jack"></div>
+<h2><span class="mw-headline" id="JACK">JACK</span></h2>
+<p>Jack Audio System is commonly used in Linux distributions that specialise in media creation such as <a rel="nofollow" class="external text" href="https://ubuntustudio.org/">Ubuntu Studio</a> and <a rel="nofollow" class="external text" href="http://www.64studio.com/">Studio&#160;64</a>.
+</p><p>To use Audacity with Jack it is useful or in some cases essential to have a few additional packages installed. This documentation assumes that you have Jack Audio System working on your machine. For help with setting up Jack, please consult the documentation for your Linux distribution.
+</p><p>Recording sounds playing from other applications is rather easy with Jack. Jack may be started using QjackCtl or from the command-line. If Audacity is launched after Jack is started then "Jack Audio Connection Kit" will be an available host option in the <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. If Jack is started after Audacity has been launched then it will be necessary to <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> for new audio devices before jack is available to Audacity.
+</p><p>Any Jack-compatible applications that are running before Audacity is launched will have their ports available in Device Toolbar. To make an application available to Audacity that is launched after Audacity it is necessary to use Rescan Audio Devices in the Transport Menu. After rescanning audio devices, input and output ports from other applications will be available in the Recording and Playback boxes in Device Toolbar.
+</p><p>In this image the output of Hydrogen drum machine is being selected as the recording source. This will enable Audacity to record directly from the audio output from Hydrogen. If "System" is selected as the recording source then Audacity will record from the physical audio interface input.
+</p>
+<dl><dd><span title="Selecting the recording source in Device Toolbar"><img alt="Select Jack recording input.png" src="../m/images/9/98/select_jack_recording_input.png" width="600" height="106" /></span></dd></dl>
+<p>Applications that do not directly support Jack may also be used with Jack on a system that uses PulseAudio (such as Ubuntu and Debian based distributions) by installing "pulseaudio-module-jack". This provides the modules "Jack Source" and "Jack Sink" that allow PulseAudio to use Jack. For example, to record sounds playing through Firefox, PulseAudio Volume Control (pavucontrol) can be used to direct the output from Firefox to Jack Sink. The recording input for Audacity can then be set to record from "PulseAudio Jack Sink" and the sound will be recorded.
+</p>
+<div id="alsa"></div>
+<h2><span class="mw-headline" id="ALSA">ALSA</span></h2>
+<h3><span class="mw-headline" id="Alsamixer">Alsamixer</span></h3>
+</li></ul>
+<p>For systems that have ALSA but do not have PulseAudio or Jack Audio System, it may still be possible to record sounds playing on the computer. Alsamixer is a command-line tool with "view" options to represent the sound device graphically. It is installed by default in most desktop distributions. To view the alsamixer manual, open a terminal window and enter <b>man alsamixer</b> or view the manual <a rel="nofollow" class="external text" href="https://linux.die.net/man/1/alsamixer">online</a>.
+</p><p>To start alsamixer, type <b>alsamixer</b> in a terminal window. If a <b>Mix</b> device is shown as a <i>capture</i> device, set this as the active device to enable recording sounds that are playing on the computer.
+</p>
+<div id="oss"></div>
+<h2><span class="mw-headline" id="OSS">OSS</span></h2>
+<p><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Open_Sound_System">OSS</a> was the standard audio API in Linux up through the 2.4 series of official (kernel.org) Linux kernels. ALSA was added starting with 2.5, in those versions, Linux kernel authors marked OSS as deprecated.
+</p><p>Development of OSS was continued by <a rel="nofollow" class="external text" href="http://www.opensound.com/">4Front Technology</a>, initially as proprietary software but later released as partially open source. Possible solutions to recording audio playing on a computer using OSS are described <a rel="nofollow" class="external text" href="http://www.opensound.com/wiki/index.php/Tips_And_Tricks#Recording_sound_output_of_a_program">here</a>.
+</p>
+<div id="other"></div>
+
+<h2><span class="mw-headline" id="Other_Methods">Other Methods</span></h2>
+<h3><span class="mw-headline" id="Alternative_programs_for_recording_computer_playback">Alternative programs for recording computer playback</span></h3>
+<p>An alternative to recording streaming audio from the Internet is to download the data directly to disk, either by using command-line tools such as <a rel="nofollow" class="external text" href="http://streamripper.sourceforge.net/">streamripper</a> or <a rel="nofollow" class="external text" href="http://www.mplayerhq.hu">mplayer</a>, or with a browser plug-in (many available for Firefox), or writing the stream to disk from a media player such as <a rel="nofollow" class="external text" href="https://www.videolan.org/vlc/index.html">VLC</a> or <a rel="nofollow" class="external text" href="http://www.xmms.org/">xmms</a>, or using a graphical down-loader such as <a rel="nofollow" class="external text" href="http://www.nongnu.org/streamtuner/">streamtuner</a>.
+</p>
+<div id="alsa_pcm"></div>
+<h3><span class="mw-headline" id="Using_the_ALSA_PCM_file">Using the ALSA PCM file</span></h3>
+<p>It is not necessary to use Audacity to record sounds playing on the computer. You can capture the sound from the application producing it before it reaches the sound device, which avoids capturing unwanted system sounds. This solution can be used even if there is no sound device. <b>Note:</b> this solution may not work on a system using <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/PulseAudio">PulseAudio</a> but you can use <a href="#pulse">PulseAudio Volume Control</a> instead.     
+</p><p>First you need to create (or if it already exists, add to the end of the file) ~/.asoundrc file. Do it with your favorite plain text editor. <b>Note:</b> <b>~</b> is your home directory so change that to /home/john or whatever if you are not working in a Linux shell.
+</p>
+
+<pre>pcm.teeraw {
+   type empty
+   slave.pcm "tee:default,'/tmp/out.raw',raw"
+   # 48000 S16_LE 2ch (aplay -t raw -f dat)
+}</pre>
+<p>Now tell the application from which you are trying to record to use the "teeraw" ALSA device for playback - read the application's manual for help. Although there is no interface to do this for Adobe Flash, it can be achieved by setting the <i>FLASH_ALSA_DEVICE</i> environment variable to the name of the sound device to use, for example:
+</p>
+<pre>FLASH_ALSA_DEVICE=teeraw firefox</pre>
+<p>Thanks to <a rel="nofollow" class="external text" href="http://www.wensley.org.uk/divert">wensley.org</a> for this tip. 
+</p><p>Run the application. Stop the application. Now /tmp/out.raw should contain your sound with perfect quality. If you change "default" to "null" in the above text, you will not hear anything but sound will still go to the file. If "empty" does not work with your ALSA library try with "copy".
+</p><p>If you want to record all sounds played through the computer, you'll need to set the teeraw device as your default device with something like:
+</p>
+<pre>pcm.!default{
+   type empty
+   slave.pcm "teeraw"
+}</pre>
+<p>In this case though, you will need to change "tee:default,'/tmp/out.raw',raw" to "tee:null,'/tmp/out.raw',raw" or something else because otherwise you create a loop. In many cases changing "null" to "dmix" should do the trick - you record any application audio and still hear it through your speakers. Note that you'll pick up random sounds from other applications such as system "dings" and the raw file could get corrupted or overwritten. Unless your ALSA install allows you a setup like below you must absolutely make sure that only the desired application is producing sound while you are recording this way.
+</p><p>With newer ALSA versions you can try these parameters for convenience (also you can adapt to use a different encoder than lame):
+</p>
+<pre>pcm.teewav {
+   type copy
+   slave.pcm "tee:default,'/tmp/out.raw',wav"
+}
+pcm.teemp3 {
+    type file
+    format "raw"
+    slave.pcm "default"
+    file '|/usr/local/bin/lame -S -r -s&#160;%r --bitwidth&#160;%b -m j - /tmp/asound-$$.mp3'
+}</pre>
+<div id="loopback"></div>
+<h2><span class="mw-headline" id="Use_a_loopback_cable">Use a loopback cable</span></h2>
+<p>This is a simple and effective method of recording what is playing on the computer. It has the disadvantage that the audio signal is converted from digital to analog, then from analog to digital, instead of staying in the digital domain. This may result in some slight increase in noise and distortion.
+</p><p>Plug your line-out or headphones-out to the line-in using a cable with a stereo mini-plug at each end, then record from line-in. To hear the sound while recording, use a single to double stereo connector to give you a jack for the speakers or headphones.
+</p><p>If you have only mic-in and no line-in is selectable through alsamixer, you can build an <a rel="nofollow" class="external text" href="http://www.epanorama.net/circuits/line_to_mic.html">attenuator</a> to reduce the line level output to a level suitable for mic-in. But probably this will only provide mono recording, because mic-in is mono in most cases. As well, the quality may be questionable.
+</p>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="tutorial_recording_audio_playing_on_the_computer.html#setup" title="Tutorial - Recording audio playing on the computer"><b>|&lt;</b> Tutorial - Recording audio playing on the computer</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180917112124
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.108 seconds
+Real time usage: 0.115 seconds
+Preprocessor visited node count: 262/1000000
+Preprocessor generated node count: 1178/1000000
+Post‐expand include size: 4047/2097152 bytes
+Template argument size: 2267/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   35.180      1 - -total
+ 70.87%   24.932      1 - Template:I18n
+ 65.53%   23.055      1 - Template:I18n_box
+ 54.22%   19.075      1 - Template:I18n_list
+ 19.81%    6.970      2 - Template:I18n_link
+ 14.81%    5.211      2 - Template:Ednote
+ 11.53%    4.055      2 - Template:Autoglossonym
+  9.45%    3.325      1 - Template:Hint
+  5.19%    1.825      1 - Template:Advice
+  5.15%    1.812      1 - Template:Menu
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3506-0!*!0!!*!5!* and timestamp 20180917112124 and revision id 61003
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_Computer_Playback_on_Linux">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>
