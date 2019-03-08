@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Windows: accessing the Windows Sound controls - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Windows_accessing_the_Windows_Sound_controls rootpage-Windows_accessing_the_Windows_Sound_controls skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Windows: accessing the Windows Sound controls</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Windows:_accessing_the_Windows_Sound_controls#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">A quick guide for Windows users who are unaware of how to access the sound controls for soundcards and sound devices <i>(microphones, speakers, USB input devices)</i>.<p>There are several ways to access the Windows sound controls - those available to you may depend upon your version of Windows and your PC.</p> </div>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Windows_10"><span class="tocnumber">1</span> <span class="toctext">Windows 10</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Accessing_the_Settings_dialog"><span class="tocnumber">1.1</span> <span class="toctext">Accessing the Settings dialog</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Windows_Settings"><span class="tocnumber">1.2</span> <span class="toctext">Windows Settings</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Settings_window"><span class="tocnumber">1.3</span> <span class="toctext">Settings window</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Sound_settings_dialog"><span class="tocnumber">1.4</span> <span class="toctext">Sound settings dialog</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Device_settings"><span class="tocnumber">1.5</span> <span class="toctext">Device settings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Control_Panel_for_older_Windows_versions"><span class="tocnumber">2</span> <span class="toctext">Control Panel for older Windows versions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Control_Panel"><span class="tocnumber">2.1</span> <span class="toctext">Control Panel</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Hardware_and_Sound"><span class="tocnumber">2.2</span> <span class="toctext">Hardware and Sound</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Sound"><span class="tocnumber">2.3</span> <span class="toctext">Sound</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Device_settings_2"><span class="tocnumber">2.4</span> <span class="toctext">Device settings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Speaker_icon_in_System_Tray"><span class="tocnumber">3</span> <span class="toctext">Speaker icon in System Tray</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Direct_access_to_the_Control_Panel_Sound_settings"><span class="tocnumber">4</span> <span class="toctext">Direct access to the Control Panel Sound settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#For_the_technically-minded"><span class="tocnumber">4.1</span> <span class="toctext">For the technically-minded</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Managing_the_settings"><span class="tocnumber">5</span> <span class="toctext">Managing the settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Recording_Settings"><span class="tocnumber">5.1</span> <span class="toctext">Recording Settings</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Playback_Settings"><span class="tocnumber">5.2</span> <span class="toctext">Playback Settings</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Communications_Settings_adjustment_.28even_if_you_don.27t_make_Internet_calls.29"><span class="tocnumber">5.3</span> <span class="toctext">Communications Settings adjustment <i>(even if you don't make Internet calls)</i></span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Alternative_settings_if_crackly_recording_or_playback_occurs.2C_or_if_recordings_made_while_playing_other_tracks_are_not_synchronized"><span class="tocnumber">5.4</span> <span class="toctext">Alternative settings if crackly recording or playback occurs, or if recordings made while playing other tracks are not synchronized</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Audacity_rescan.2Frestart_and_settings"><span class="tocnumber">5.5</span> <span class="toctext">Audacity rescan/restart and settings</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Windows_10">Windows 10</span></h2>
+<div id="access"></div> 
+<h3><span class="mw-headline" id="Accessing_the_Settings_dialog">Accessing the Settings dialog</span></h3>
+<p>Windows 10 has a new Settings dialog which can be accessed in a number of ways
+</p>
+<dl><dd><img alt="Windows Settings.png" src="../m/images/2/29/windows_settings.png" width="517" height="232" /></dd></dl>
+Click on the Windows icon at the bottom left of your Windows screen and clock on the <b>Cog</b> icon that appears above it, as in the above image.<p>Alternatively, at the bottom left of your Windows screen there is a search box.  Where it says "Type here to search" simply type "<b>Settings</b>".</p>
+<div id="windows_settings"></div>
+<h3><span class="mw-headline" id="Windows_Settings">Windows Settings</span></h3>
+<p>Then click on the <b>System</b> entry to get the appropriate <b>Settings</b> dialog.
+</p>
+<dl><dd><img alt="W10 Windows Settings 60percent cropped.png" src="../m/images/3/37/w10_windows_settings_60percent_cropped.png" width="725" height="397" /></dd></dl>
+<div id="settings"></div>
+<h3><span class="mw-headline" id="Settings_window">Settings window</span></h3>
+<p>Then click on "<b>Sound</b>" in the left column of the <b>Settings</b> window that appears.
+</p>
+<dl><dd><img alt="W10 Sound Settings scaled 60percent.png" src="../m/images/d/d8/w10_sound_settings_scaled_60percent.png" width="723" height="561" /></dd>
+<dd><b>Windows 10 Settings window for sound</b></dd></dl>
+<div id="sound_settings"></div>
+<h3><span class="mw-headline" id="Sound_settings_dialog">Sound settings dialog</span></h3>
+<p>Click on <b>Sound control panel</b> on the right and you will get the <b>Sound</b> settings window:
+</p>
+<dl><dd><img alt="Windows Sound management dialog 60percent.png" src="../m/images/7/7f/windows_sound_management_dialog_60percent.png" width="722" height="558" /></dd>
+<dd><b>Sound settings window showing playback devices available - <i>exact contents depend on your available devices</i></b></dd></dl>
+<div id="device_settings"></div>
+<h3><span class="mw-headline" id="Device_settings">Device settings</span></h3>
+To change to the Sound settings for input devices, click on the <b>Recording</b> tab - and then click on the required device. <p>Click then on the required settings tab, in this example <b>Advanced</b>, <i>(which is usually the one required)</i>:</p>
+<dl><dd><img alt="Windows Microphone management dialog 60percent.png" src="../m/images/2/2b/windows_microphone_management_dialog_60percent.png" width="728" height="561" /></dd>
+<dd><b>Sound settings showing the Advanced settings for Microphone input </b></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">You can also access the sound controls via the <b>output</b> and <b>input</b> devices shown in the center of this window by clicking on their respective <b>Device properties</b>.<p>The devices to be worked on can be selected from the dropdown menus.</p>
+</td></tr></table>
+</div>
+<p>&#160;
+&#160;
+&#160;
+&#160;
+</p>
+<div id="control_panel"></div>
+<h2><span class="mw-headline" id="Control_Panel_for_older_Windows_versions">Control Panel for older Windows versions</span></h2>
+<h3><span class="mw-headline" id="Control_Panel">Control Panel</span></h3>
+<p>The older way (for earlier versions of Windows) of accessing controls was via the Sound Control Panel:
+</p>
+<dl><dd><img alt="Windows Control Panel 75percent.png" src="../m/images/b/b9/windows_control_panel_75percent.png" width="472" height="482" /></dd>
+<dd><b>Windows Control Panel</b></dd></dl>
+<div id="cphardware.26sound"></div>
+<h3><span class="mw-headline" id="Hardware_and_Sound">Hardware and Sound</span></h3>
+<p>Click on <b>Hardware and Sound</b> and you will get:
+</p>
+<dl><dd><img alt="Windows Control Panel - Sound75percent.png" src="../m/images/f/f6/windows_control_panel_sound75percent.png" width="471" height="480" /></dd>
+<dd><b>Windows Control Panel - Hardware and Sound</b></dd></dl>
+<div id="cpsound"></div>
+<h3><span class="mw-headline" id="Sound">Sound</span></h3>
+<p>Click on <b>Sound</b> and you will get the Sound settings window:
+</p>
+<dl><dd><img alt="Windows Control Panel - H&amp;S Sound75percent.png" src="../m/images/0/04/windows_control_panel_h_s_sound75percent.png" width="474" height="556" /></dd>
+<dd><b>Sound settings window showing available playback devices<p><i>exact contents depend on your available devices</i></b></p></dd></dl>
+<div id="cpdevice_settings"></div>
+<h3><span class="mw-headline" id="Device_settings_2">Device settings</span></h3>
+To change to the Sound settings for input devices, click on the <b>Recording</b> tab - and then click on the required device. <p>Click then on the required settings tab, in this example <b>Advanced</b>, <i>(which is usually the one required)</i>:</p>
+<dl><dd><img alt="Windows Sound Recording Advanced 75percent.png" src="../m/images/2/26/windows_sound_recording_advanced_75percent.png" width="536" height="561" />
+<dl><dd><b>Sound settings showing the Advanced settings for Microphone input </b></dd></dl></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">See <a href="#mmsys"><b>below</b></a> for a method of direct access to the Control Panel Sound settings
+</td></tr></table>
+</div>
+<p>&#160;
+&#160;
+&#160;
+&#160;
+</p>
+<div id="speaker"></div>
+<h2><span class="mw-headline" id="Speaker_icon_in_System_Tray">Speaker icon in System Tray</span></h2>
+<p>At the bottom right of you Windows screen there is the System tray. 
+</p>
+<dl><dd><img alt="W10 System Tray - speaker icon highlighted.png" src="../m/images/b/b1/w10_system_tray_speaker_icon_highlighted.png" width="390" height="105" /> </dd>
+<dd><b>Windows System Tray - Speaker icon highlighted.</b></dd></dl>
+<p>Right-click on the <b>Speaker</b> icon to get a context menu, the exact contents of which may vary.
+</p>
+<ul><li>If you have a <b>Sounds</b> entry, clicking on that will take you direct to the <b><a href="#sound_settings">Sound settings</a></b> dialog.</li>
+<li>If you have an <b>Open Sound settings</b> entry, clicking on that will take you to the <b><a href="#settings">Settings</a></b> window for <b>Sound</b>.</li></ul>
+<p><br />
+</p>
+<div id="mmsys"></div>
+<h2><span class="mw-headline" id="Direct_access_to_the_Control_Panel_Sound_settings">Direct access to the Control Panel Sound settings</span></h2>
+<p><b>mmsys.cpl</b> is a <a rel="nofollow" class="external text" href="https://support.microsoft.com/en-us/help/149648/description-of-control-panel-cpl-files">control panel file</a> (.cpl) provided by Microsoft to manage Multi-Media Properties.   .cpl files merely invoke functions that are otherwise available by clicking on sections of the Windows Control Panel.
+</p><p>The beauty of this approach is that it will work on all flavors of Windows systems using the Windows logo button on your keyboard:
+</p>
+<ul><li>open the run dialog with <span class="button">Windows logo</span> + <span class="button">R</span></li>
+<li>enter: <span class="menu">mmsys.cpl</span></li>
+<li>press the <span class="button">OK</span> button</li></ul>
+<p>This will open up directly the Windows <b>Sound</b> settings window at whatever tab was opne the last time you used the <b>Sound</b> settings.
+</p>
+<h3><span class="mw-headline" id="For_the_technically-minded">For the technically-minded</span></h3>
+<p>On Windows 10 with a slightly longer command string you can control precisely which of the <b>Sound</b> settings tabs is opened:
+</p>
+<ul><li>open the run dialog with <span class="button">Windows logo</span> + <span class="button">R</span></li>
+<li>enter: <span class="menu">control mmsys.cpl,,1</span></li>
+<li>press the <span class="button">OK</span> button</li></ul>
+<p>This will open up directly the Windows <b>Sound</b> settings window at the <b>Recording</b> tab
+</p><p>Changing that final numerical parameter will open the different tabs
+</p>
+<ul><li>0 Playback</li>
+<li>1 Recording</li>
+<li>2 Sounds</li>
+<li>3 Communications</li></ul>
+<div id="manage"></div>
+<h2><span class="mw-headline" id="Managing_the_settings">Managing the settings</span></h2>
+<p>It is common on Vista and later that <b>not all recording inputs are automatically enabled in the Recording tab</b>. This means they are invisible in that tab, and also invisible to recording applications like Audacity. So you need to make them visible, then enable and make default the main one you want to use, following the steps below.   
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">All the settings below are specific to each recording or playback device. Therefore after enabling, making default and adjusting settings for your main recording and playback devices, it is best to enable and adjust settings for each other device you want to use.
+</td></tr></table>
+</div>
+<div id="recording"></div> 
+<h3><span class="mw-headline" id="Recording_Settings">Recording Settings</span></h3>
+<p>Choose the <b>Recording</b> tab: 
+</p>
+<ol><li>Right-click anywhere inside the empty, white space, of the <b>Recording</b> tab and choose <b>"Show disabled devices"</b> then right-click again and check <b>"Show Disconnected Devices"</b>. </li>
+<li>For a device having a physical input like line-in or microphone, connect the required cable and make sure it fits tightly - a physical device not connected may show as "currently unavailable".</li>
+<li>Right-click specifically over the input device you want to record with (for example, line-in or "Stereo Mix"), and if visible, choose <b>"Enable"</b>.</li>
+<li>Right-click once again over the input device you want to record with, and choose <b>"Set as Default Device"</b>, <i>this will not show if you only have the one input device</i>.</li>
+<li>Right-click once again over the input device you want to record with, click <span class="menu">Properties</span> then the <span class="menu">Levels</span> tab and ensure the volume slider is turned up.</li>
+<li>Right-click once again over the required input device, click <span class="menu">Properties</span> then click the <span class="menu">Advanced</span> tab and set the required format (channels and sample rate) using the dropdown menu for <b>Default Format</b>
+<ol><li><b>Set Default Format to mono or stereo</b> to match with the number of "recording channels" in Audacity's <a rel="nofollow" class="external text" href="https://manual.audacityteam.org/o/man/device_toolbar.html">Device&#160;Toolbar</a> or the <b>Devices</b> tab of Audacity Preferences.</li>
+<li><b>Set the sample rate in Default Format</b> so that it's the same as the project rate bottom left of the Audacity screen. 44100 Hz is a safe choice if you are unsure. Now click the <span class="button">OK</span> button.</li></ol></li></ol>
+<div id="playback"></div>
+<h3><span class="mw-headline" id="Playback_Settings">Playback Settings</span></h3>
+<p>Now choose the <b>Playback</b> tab: 
+</p>
+<ol><li>Right-click over your desired "Speakers" or "Headphones" sound device and if visible, choose <b>"Set as Default Device"</b>. If the right-click menu also shows "Set as Default Communication Device", choose that as well, then by default all applications will use that device. </li>
+<li>Right-click over your desired device again, choose <span class="menu">Properties</span> then the <span class="menu">Advanced</span> tab, and set <b>Default Format</b> to a stereo choice with the same sample rate you chose in step 6.2 of the "Recording Settings" above.  </li>
+<li>To ensure the soundcard does not add unwanted playback or recording sound effects like "Cathedral" or "Closet", look for <span class="menu">Levels</span>, <span class="menu">Custom</span> or <span class="menu">Effects</span> tabs and turn off all effects that are not required. Click the <span class="button">OK</span> button to close Windows "Sound".</li></ol>
+<div id="communications"></div> 
+<h3><span class="mw-headline" id="Communications_Settings_adjustment_.28even_if_you_don.27t_make_Internet_calls.29">Communications Settings adjustment <i>(even if you don't make Internet calls)</i></span></h3>
+<p>Windows sound settings are often optimized for <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Voice_over_Internet_Protocol">VoIP</a> (Internet calls or video conferencing) using applications such as <a rel="nofollow" class="external text" href="https://www.skype.com">Skype</a>, but these settings can interfere with high quality microphone recordings of music.
+</p>
+<ol><li>Look for and turn off all sound enhancements and any other sound effects unless you need them. To do this, right-click over "Microphone", choose <span class="menu">Properties</span> then look for an <span class="menu">Effects</span> or <span class="menu">Enhancements</span> tab where you can disable all effects. </li>
+<li>On Windows 10, Windows 8 or Windows 7, also click the <b>Communications</b> tab, then under "When Windows detects communications activity:", choose <b>"Do nothing"</b>. This should prevent unwanted playback volume changes when recording computer playback or when recording over playback of another track.</li>
+<li>If you do make Internet calls and require to use specific devices for calls, proceed as follows.
+<ul><li>To use a particular microphone only for calls, right-click over that device and choose "Set as Default Communication Device" (a green "telephone" icon will appear by the device). </li>
+<li>Similarly, to use for example headphones as playback device for calls and speakers or other devices for music, choose the <b>Playback</b> tab at the top of "Sound", right-click over the device to use for calls and choose "Set as Default Communication Device".</li>
+<li>If you want to use a headset for calls, choose "Set as Default Communication Device" for the headset on both the <b>Recording</b> and <b>Playback</b> tabs.</li></ul></li></ol>
+<div id="crackly"></div>
+<h3><span class="mw-headline" id="Alternative_settings_if_crackly_recording_or_playback_occurs.2C_or_if_recordings_made_while_playing_other_tracks_are_not_synchronized">Alternative settings if crackly recording or playback occurs, or if recordings made while playing other tracks are not synchronized</span></h3>
+<ol><li> Open Windows "Sound", choose the <b>Recording</b> tab then right-click over your chosen recording device and choose "Properties". Click the "Advanced" tab, then put a checkmark (tick) in both <b>Exclusive Mode</b> boxes.</li>
+<li> Choose the <b>Playback</b> tab then right-click over your chosen playback device, choose "Properties," click the "Advanced" tab and similarly enable both <b>Exclusive Mode</b> boxes. </li>
+<li>Restart Audacity or use <span class="menu">Transport &gt; Rescan Audio Devices</span> then choose <b>Windows DirectSound</b> host in Device Toolbar or Devices Preferences.
+<ul><li> In Exclusive Mode, the sample rate selected in "Default Format" no longer applies, so be sure at bottom left of Audacity to <b>choose a project rate that your device supports</b>.}}</li></ul></li></ol>
+<div id="rescan"></div> 
+<h3><span class="mw-headline" id="Audacity_rescan.2Frestart_and_settings">Audacity rescan/restart and settings</span></h3>
+<p>To make Audacity aware of all the changes in <b>Sound</b>, use <span class="menu">Transport &gt; Rescan Audio Devices</span> or restart Audacity.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20190226112409
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.118 seconds
+Real time usage: 0.122 seconds
+Preprocessor visited node count: 323/1000000
+Preprocessor generated node count: 766/1000000
+Post‐expand include size: 3071/2097152 bytes
+Template argument size: 1177/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   18.936      1 - -total
+ 24.22%    4.586      8 - Template:Button
+ 21.18%    4.011     16 - Template:Menu
+ 14.16%    2.681      1 - Template:Intro
+  7.99%    1.513      3 - Template:Tip
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6544-0!*!0!!en!5!* and timestamp 20190226112409 and revision id 63058
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Windows:_accessing_the_Windows_Sound_controls">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

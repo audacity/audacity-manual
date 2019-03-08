@@ -57,14 +57,11 @@
 <h2><span class="mw-headline" id="How_can_I_record_in_stereo.3F">How can I record in stereo?</span></h2>
 <p>Audacity by default should already be set to record in stereo.  If this is not the case, use <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> to select the playback and recording devices and to set the channels to <b>"2 (stereo) Recording Channels"</b>.
 </p><p>Alternatively you can open the <a href="preferences.html" title="Preferences">Audacity Preferences</a>, choose the “<a href="devices_preferences.html" title="Devices Preferences">Devices</a>” section on the left, then in the "Recording" panel, change the number of recording channels to "2 (Stereo)".
+{{note|<b>Windows:</b> Many USB recording devices, even if stereo, are seen as "microphones" so set by Windows to record in mono. If Audacity is set to record in stereo this will cause both channels to have the same content as one of the channels. To set Windows to record the device in stereo:
 </p>
-<div class="note">
-<p><b>Windows:</b> Many USB recording devices, even if stereo, are seen as "microphones" so set by Windows to record in mono. If Audacity is set to record in stereo this will cause both channels to have the same content as one of the channels. To set Windows to record the device in stereo:
-</p>
-<ol><li> By the system clock, right-click over the <span class="menu">Speaker icon &gt; Recording Devices</span> then right-click over <span class="menu">USB Audio Codec &gt; "Properties"</span>
-<li> On the "Advanced" tab, in the "Default Format" section, make sure the dropdown menu is set to <b>"2 channel 16-bit 44100 Hz"</b>.</ol>
-</div>
-<p><br />
+<ul><li>By the system clock, right-click over the <span class="menu">Speaker icon</span> select <span class="menu">Sounds</span> then the <span class="menu">Recording</span> tab, and then click on the <b>USB device</b> in the list and click <span class="button">Properties</span>. Click the <span class="menu">Advanced</span> tab set your required bit rate and sample rate from the <b>Default Format</b> dropdown (normally <b>"2 channel 16-bit 44100 Hz"</b>).</li></ul>
+<p>For a more detailed walk-through of the above steps for Windows <i>(or if that does not work for your version of Windows)</i>, see <b><a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows: accessing the Windows Sound controls</a>.</b>
+</p><p><br />
 <a href="#top">back to top</a>
 </p>
 <div id="olevel"></div>
@@ -101,7 +98,7 @@
 <p>This is known as recording an <i><b>overdub</b></i> to create a <i><b>multi-track</b></i> recording. It makes it possible to record harmonies with yourself, or add new instruments or vocals to an existing recording. To do this in Audacity, follow these instructions:
 </p>
 <ol><li>Select the recording device you are plugged into (probably microphone or line-in) in the Recording Device menu in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> 
-<ul><li> If you do not see your required recording device, enable it and make it default in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mixer_Toolbar_Issues#Further_help">operating system's mixer</a>, then in Audacity, choose<span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span>     </li></ul></li>
+<ul><li> If you do not see your required recording device, enable it and make it default in the operating system's mixer. For Windows see <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows: accessing the Windows Sound controls</a>. To locate the system mixer for Mac and Linux see the help on our Wiki for <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mac_OS_X">Mac</a> or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Linux_System_Mixer">Linux</a>, then in Audacity, choose<span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span>     </li></ul></li>
 <li><a href="importing_audio.html" title="Importing Audio">Import</a> or record the first track </li>
 <li>Choose {<span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a></span></li>
 <li>Press the <b>Record</b> button <img alt="Record button image" src="../m/images/e/e8/record.png" title="Record button image" width="16" height="16" />&#160;.</li></ol>
@@ -165,7 +162,7 @@ See <a href="multi_channel_recording.html" title="Multi-channel Recording">Multi
 <ul><li>On <b>Windows</b> you can try the following.
 <ul><li>Some applications can route two devices to one stream. Use <a rel="nofollow" class="external text" href="http://vb-audio.pagesperso-orange.fr/Voicemeeter/index.htm">Voice Meeter</a> (donationware - see this <a rel="nofollow" class="external text" href="https://youtu.be/atobXq-iA-k">YouTube video tutorial</a>) or <a rel="nofollow" class="external text" href="http://software.muzychenko.net/eng/vac.htm">Virtual Audio Cable</a> (not free).
 <li> It may also be possible on Windows to use the "Listen" feature to route inputs to the output, though this is slightly lossy.
-<ol><li>Right-click over the speaker icon by the system clock, then choose "Recording devices".
+<ol><li>Right-click over the speaker icon by the system clock, choose "Sound" then choose "Recording devices".
 <li>Right-click over the first device, choose "Properties" then the "Listen" tab (if available). 
 <li> Check "Listen to this device" and set it to play through the required audio interface. 
 <li> Repeat the steps for the other devices. 
@@ -190,32 +187,33 @@ See <a href="multi_channel_recording.html" title="Multi-channel Recording">Multi
 
 <!-- 
 NewPP limit report
-Cached time: 20180917111919
+Cached time: 20190226112152
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.110 seconds
-Real time usage: 0.115 seconds
-Preprocessor visited node count: 383/1000000
-Preprocessor generated node count: 1085/1000000
-Post‐expand include size: 5165/2097152 bytes
-Template argument size: 1971/2097152 bytes
+CPU time usage: 0.120 seconds
+Real time usage: 0.126 seconds
+Preprocessor visited node count: 407/1000000
+Preprocessor generated node count: 1179/1000000
+Post‐expand include size: 5266/2097152 bytes
+Template argument size: 1964/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   38.562      1 - -total
- 84.90%   32.740      1 - Template:I18n
- 80.43%   31.017      1 - Template:I18n_box
- 69.36%   26.746      1 - Template:I18n_list
- 38.93%   15.011      7 - Template:I18n_link
- 22.95%    8.852      7 - Template:Autoglossonym
-  6.07%    2.341      6 - Template:Menu
-  4.65%    1.795      1 - Template:Note
+100.00%   46.097      1 - -total
+ 80.60%   37.152      1 - Template:I18n
+ 75.83%   34.956      1 - Template:I18n_box
+ 66.67%   30.733      1 - Template:I18n_list
+ 37.01%   17.059      7 - Template:I18n_link
+ 22.13%   10.201      7 - Template:Autoglossonym
+  6.46%    2.979      8 - Template:Menu
+  3.89%    1.794      1 - Template:Button
+  3.26%    1.504      1 - Template:Note
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4054-0!*!0!!en!5!* and timestamp 20180917111919 and revision id 60980
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4054-0!*!0!!en!5!* and timestamp 20190226112152 and revision id 63090
  -->
 </div>
 										<!-- end content -->
@@ -246,10 +244,11 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
-<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -259,6 +258,7 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
 <li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
 <li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
 		</div>
@@ -270,7 +270,7 @@ Transclusion expansion time report (%,ms,calls,template)
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
 <li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
 		</div>
 		</div>
 		
@@ -285,7 +285,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_How_To%27s">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_How_To%27s">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

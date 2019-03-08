@@ -135,16 +135,17 @@ The current value of the slider can be seen by hovering over it with the mouse.<
 <h2><span class="mw-headline" id="Other_buttons">Other buttons</span></h2>
 <p>Clicking on the command buttons give the following results:
 </p>
-
 <ul><li> <span class="button">Manage</span> gives a dropdown menu enabling you to click "About" to see some details about the effect. </li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
 </td>
 <td align="left" valign="top">The Presets features are not working yet. Use Save / Manage Curves to save, rename, export and import predefined curves.
-</td></tr></table></div>
+</li></ul>
+</td></tr></table>
+</div>
 
 <ul><li> <span class="button">Preview</span> plays a short preview of what the audio would sound like if the effect is applied with the current settings, without making actual changes to the audio.  The length of preview is determined by your setting in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span>, the default setting is 6 seconds.</li>
 <li> <span class="button">OK</span> applies the effect to the selected audio with the current effect settings.</li>
@@ -157,7 +158,8 @@ The current value of the slider can be seen by hovering over it with the mouse.<
 </p><p><b>EQDefaultCurves.xml file:</b> This text file which ships with Audacity is located outside Audacity's folder for application data. The file contains the default curves Audacity ships with and which are restored when you press "Defaults" in "Save/Manage" Curves...". This file should not be edited. Doing so may prevent new or updated curves in future versions of Audacity from being installed correctly.</p></div>
 
 </li></ul>
-
+<p><br />
+</p>
 <div id="limitations"></div>
 <h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
 <p>To process Equalization, all tracks in the project must have the same sample rate. To change the sample rate of a track without affecting speed or pitch, use <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample...</a></span>.    
@@ -168,34 +170,34 @@ The current value of the slider can be seen by hovering over it with the mouse.<
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180917112006
+Cached time: 20190226112228
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.173 seconds
-Real time usage: 0.179 seconds
-Preprocessor visited node count: 703/1000000
-Preprocessor generated node count: 1980/1000000
-Post‐expand include size: 23892/2097152 bytes
-Template argument size: 17496/2097152 bytes
+CPU time usage: 0.155 seconds
+Real time usage: 0.161 seconds
+Preprocessor visited node count: 695/1000000
+Preprocessor generated node count: 1962/1000000
+Post‐expand include size: 15783/2097152 bytes
+Template argument size: 9420/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   67.005      1 - -total
- 45.24%   30.314      1 - Template:I18n
- 42.92%   28.760      1 - Template:I18n_box
- 39.39%   26.390      1 - Template:I18n_list
- 23.44%   15.704      7 - Template:I18n_link
- 14.88%    9.968     18 - Template:Button
- 13.79%    9.241      7 - Template:Autoglossonym
- 10.31%    6.906      1 - Template:No-rename
-  9.59%    6.427      7 - Template:Ednote
-  3.63%    2.433      2 - Template:Advice
+100.00%   61.184      1 - -total
+ 46.47%   28.433      1 - Template:I18n
+ 43.71%   26.741      1 - Template:I18n_box
+ 39.53%   24.184      1 - Template:I18n_list
+ 23.04%   14.098      7 - Template:I18n_link
+ 15.19%    9.297     18 - Template:Button
+ 13.47%    8.242      7 - Template:Autoglossonym
+ 11.74%    7.184      1 - Template:No-rename
+ 10.60%    6.487      6 - Template:Ednote
+  3.05%    1.868      2 - Template:Key
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2494-0!*!0!!*!5!* and timestamp 20180917112006 and revision id 61097
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2494-0!*!0!!*!5!* and timestamp 20190226112228 and revision id 62585
  -->
 </div>
 										<!-- end content -->
@@ -226,10 +228,11 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing Audacity</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
-<li> <a href="installing_effect_generator_and_analyzer_plug_ins.html" title="Installing Effect, Generator and Analyzer plug-ins"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li></ul></li></ul>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -239,6 +242,7 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
 <li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
 <li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
 		</div>
@@ -250,7 +254,7 @@ Transclusion expansion time report (%,ms,calls,template)
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
 <li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">WIT</a></span></li></ul>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
 		</div>
 		</div>
 		
@@ -265,7 +269,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2018-09-17 - <a href="https://alphamanual.audacityteam.org/man/Equalization">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Equalization">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

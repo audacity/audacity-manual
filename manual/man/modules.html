@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Modules - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Modules rootpage-Modules skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Modules</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Modules#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Audacity has experimental support for "modules", which are a type of plug-in, usually written in C++, that integrate closely with the main Audacity application. There are currently no modules included in the release binaries, but there are four experimental modules included in the code base (and included in the Linux tarballs). Before any of these modules can be used, they must be built from the source code. Previous experience building C++ projects is recommended.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Modules should be built on the same date as Audacity, otherwise the version string check will prevent the module loading.
+</td></tr></table>
+</div>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Nyquist_Workbench"><span class="tocnumber">1</span> <span class="toctext">Nyquist Workbench</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Mod-script_pipe"><span class="tocnumber">2</span> <span class="toctext">Mod-script pipe</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Mod-track-panel"><span class="tocnumber">3</span> <span class="toctext">Mod-track-panel</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Mod-null"><span class="tocnumber">4</span> <span class="toctext">Mod-null</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Installing_modules"><span class="tocnumber">5</span> <span class="toctext">Installing modules</span></a></li>
+</ul>
+</div>
+
+<h3><span class="mw-headline" id="Nyquist_Workbench">Nyquist Workbench</span></h3>
+<p><b><a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/tree/master/lib-src/mod-nyq-bench">Nyquist Workbench:</a></b> This module provides a simple graphical editor to create and run arbitrary <a href="nyquist.html" title="Nyquist">Nyquist</a> code in Audacity. The Workbench can be <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Building_On_Windows">compiled</a> along with the Audacity application from our <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity">source code</a>. Nyquist Workbench is not essential for writing Nyquist plug-ins for Audacity as most of the functionality is now available in the <a href="nyquist_prompt.html" title="Nyquist Prompt">Nyquist Prompt</a>.
+</p>
+<dl><dd><a href="https://alphamanual.audacityteam.org/man/File:Nyquist_Workbench_W10.png" class="image" title="Nyquist Workbench with notch.ny plug-in loaded in Script window."><img alt="Nyquist Workbench with notch.ny plug-in loaded in Script window." src="../m/images/1/10/nyquist_workbench_w10.png" width="612" height="485" /></a></dd></dl>
+<p>Current Workbench features include:
+</p>
+<ul>
+<li> Full support for Generate, Process and Analyze effects
+<li> Auto load last file
+<li> Built-in output/debug screen
+<li> Parentheses matching.
+</ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Mod-script_pipe">Mod-script pipe</span></h3>
+<p><b><a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/tree/master/lib-src/mod-script-pipe">Mod-script pipe:</a></b> This is a GUI plug-in that allows Audacity to be driven from an external script, using any scripting language that supports named pipes (Python3 is the recommended language). Please be aware of the security implications of allowing other applications or processes to control Audacity. For more information, see <a href="scripting.html" title="Scripting">Scripting</a>. 
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Mod-track-panel">Mod-track-panel</span></h3>
+<p><b><a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/tree/master/lib-src/mod-track-panel">Mod-track-panel:</a></b> This is the start of an experiment that will ultimately provide a more flexible panel for the audio, label, MIDI and note tracks. It is currently only of value to developers and must be compiled from the latest Audacity source code.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Mod-null">Mod-null</span></h3>
+<p><b><a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/tree/master/lib-src/mod-null">Mod-null:</a></b> is a bare bones demonstration module.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Installing_modules">Installing modules</span></h2>
+<p>To install a module, a new folder should be created and named "modules", and the built module placed directly inside it.
+</p>
+<ul><li> Windows: the "modules" folder should be in the same location as audacity.exe</li>
+<li> Mac: the "modules" folder should be in the "Contents" folder.</li>
+<li> Linux: the "modules" folder can most easily be created in the home folder as ~/.audacity-files/modules</li></ul>
+<p>The module may then be enabled in <a href="modules_preferences.html" title="Modules Preferences">Preferences</a>. Restarting Audacity is required after enabling.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20190226112521
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.047 seconds
+Real time usage: 0.048 seconds
+Preprocessor visited node count: 34/1000000
+Preprocessor generated node count: 104/1000000
+Post‐expand include size: 950/2097152 bytes
+Template argument size: 590/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.612      1 - -total
+ 64.98%    2.347      1 - Template:Intro
+ 29.82%    1.077      1 - Template:Tip
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6541-0!*!0!!en!5!* and timestamp 20190226112521 and revision id 62802
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Modules">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>
