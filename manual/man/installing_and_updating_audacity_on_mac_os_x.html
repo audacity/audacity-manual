@@ -127,25 +127,13 @@
 <td align="left" valign="top">Audacity 2.3.1 on Mac is now a 64-bit application. <p>This means that if you are a user of previous Audacity versions on Mac and had installed the optional LAME library then you <i><b>must</b></i> now install the 64-bit versions of the LAME library, otherwise your MP3 exports will no longer work.</p><p>Installing the 64-bit LAME library will not overwrite or delete your 32-bit LAME library if you have one installed.</p>
 </td></tr></table></div>
 <div id="maclame_installer"></div>
-<h3><span class="mw-headline" id="Recommended_Installer">Recommended Installer</span></h3>
+<h3><span class="mw-headline" id="Recommended_package_Installer">Recommended package Installer</span></h3>
 <ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
-<li> In the <b>64-bit LAME</b> section, left-click the <b>Recommended download</b> link  "<b>lame_64bit_osx.dmg</b>" </li>
-<li> This should download the file "<b>lame_64bit_osx.dmg</b>"  to your <b>Downloads</b> folder</li>
-<li> Double-click on that "<b>lame_64bit_osx.dmg</b>"  file to bring up the installer dialog
-<ul><li>You should see a "Lego brick" with a file name <b>libmp3lame64bit.dylib</b> on the left hand side - <i>this is the file to be installed</i></li>
-<li>On the right you should see a folder called <b>libs</b> - <i>this is the folder where the files are to be installed, in full:  /<b>Library/Application Support/audacity/libs</b> </i></li></ul></li>
-<li> Click on the  "Lego brick" and drag it to the <b>libs</b> folder folder </li>
-<li> Exit the installation dialog.</li></ol>
-<dl><dd>Audacity should detect LAME automatically when you export as MP3. If Audacity cannot find LAME, then follow the instructions <a href="#LAMElocate">below</a> to locate <b>libmp3lame64bit.dylib</b> using the Libraries Preferences.</dd></dl>
-<div id="maclame_zip"></div>
-<h3><span class="mw-headline" id="Alternative_zip_download">Alternative zip download</span></h3>
-<div class="note">It is not recommended to extract the LAME library to /usr/local/lib because administrative or root permissions may be needed to read the LAME library from there.</div>
-<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
-<li> In the <b>64-bit LAME</b> section, left-click the link <b>"Lame_Library_64bit_MAC_OSX_for_Audacity_2.3.1_and_above.zip"</b></li>
-<li> On most Macs this should extract the contents of the ZIP to your <b>Downloads</b> folder, it will be a single file called:  <b>libmp3lame64bit.dylib</b>
-<ul><li>Otherwise extract the contents of the downloaded ZIP file to obtain the file: libmp3lame64bit.dylib</li></ul></li>
-<li> Then copy the file "libmp3lame64bit.dylib" and paste it anywhere you have full permissions. 
-<ul><li> The preferred default Audacity location is <b>/Library/Application Support/audacity/libs</b></li></ul></li></ol>
+<li> In the <b>64-bit LAME</b> section, left-click the link <b>"lame_64bit_osx.pkg"</b>.</li>
+<li> When you have finished downloading, double-click the <b>"lame_64bit_osx.pkg"</b> in your <b>Downloads</b>folder. </li>
+<li> You will be guided through the installation</li>
+<li> Click through the steps in the installer. This will the 3.100 libmp3lame64bit.dylib file in the system library at /Library/Application Support/audacity/libs/.</li></ol>
+<dl><dd>Audacity should detect LAME automatically when you export as MP3 or restart Audacity. If Audacity cannot find LAME, then follow the <a href="#LAMElocate"><b>instructions above</b></a> to locate <b>libmp3lame64bit.dylib</b> using the Libraries Preferences.</dd></dl>
 <div id="LAMElocate"></div>
 <h3><span class="mw-headline" id="Locating_the_LAME_library_manually">Locating the LAME library manually</span></h3>
 <ol><li> In Audacity, click <span class="menu">Audacity &gt; <a href="preferences.html" title="Preferences">Preferences...</a></span> then choose "<b>Libraries</b>" on the left.</li>
@@ -158,6 +146,37 @@
 <li> Note the LAME library has been located and should show alongside "<b>MP3 Library Version:</b>" as <b>LAME 3.100</b> </li>
 <li> Then click <span class="button">OK</span> to exit Preferences.</li></ol>
 <dl><dd>You should now be able to export MP3s without any further configuration, choosing <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export as MP3</a></span> </dd></dl>
+<p><br />
+</p>
+<div class="example"><div id="maclame_dmg"></div>
+<h3><span class="mw-headline" id="Alternative_DMG_installer">Alternative DMG installer</span></h3>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">This will not work unless you have previously installed the 32-bit version of the library.
+</td></tr></table></div>
+<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
+<li> In the <b>64-bit LAME</b> section, left-click the <b>Recommended download</b> link  "<b>lame_64bit_osx.dmg</b>" </li>
+<li> This should download the file "<b>lame_64bit_osx.dmg</b>"  to your <b>Downloads</b> folder</li>
+<li> Double-click on that "<b>lame_64bit_osx.dmg</b>"  file to bring up the installer dialog
+<ul><li>You should see a <i>"Lego brick"</i> with a file name <b>libmp3lame64bit.dylib</b> on the left-hand side - <i>this is the file to be installed</i></li>
+<li>On the right you should see a folder called <b>libs</b> - <i>this is the folder where the files are to be installed, in full:  /<b>Library/Application Support/audacity/libs</b> </i></li></ul></li>
+<li> Click on the  <i>"Lego brick"</i> and drag it to the <b>libs</b> folder</li>
+<li> Exit the installation dialog.</li></ol>
+<dl><dd>Audacity should detect LAME automatically when you export as MP3. If Audacity cannot find LAME, then follow the <a href="#LAMElocate"><b>instructions below</b></a> to locate <b>libmp3lame64bit.dylib</b> using the Libraries Preferences.</dd></dl>
+<div id="maclame_zip"></div>
+<h3><span class="mw-headline" id="Alternative_zip_download">Alternative zip download</span></h3>
+<div class="note">It is not recommended to extract the LAME library to /usr/local/lib because administrative or root permissions may be needed to read the LAME library from there.</div>
+<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
+<li> In the <b>64-bit LAME</b> section, left-click the link <b>"Lame_Library_64bit_MAC_OSX_for_Audacity_2.3.1_and_above.zip"</b></li>
+<li> On most Macs this should extract the contents of the ZIP to your <b>Downloads</b> folder, it will be a single file called:  <b>libmp3lame64bit.dylib</b>
+<ul><li>Otherwise extract the contents of the downloaded ZIP file to obtain the file: libmp3lame64bit.dylib</li></ul></li>
+<li> Then copy the file "libmp3lame64bit.dylib" and paste it anywhere you have full permissions. 
+<ul><li> The preferred default Audacity location is <b>/Library/Application Support/audacity/libs</b></li></ul></li></ol>
+&#160;</div>
 <p><br />
 </p>
 <div id="macff"></div>
@@ -173,38 +192,19 @@
 </td>
 <td align="left" valign="top">Audacity 2.3.1 on Mac is now a 64-bit application. <p>This means that if you are a user of previous Audacity versions on Mac and had installed the optional FFmpeg library then you <i><b>must</b></i> now install the 64-bit versions of the FFmpeg library, otherwise your imports and exports that depend upon FFmpeg will no longer work.</p><p>Installing the 64-bit FFmpeg library will not overwrite or delete your 32-bit FFmpeg library if you have one installed.</p>
 </td></tr></table></div>
-<div id="macff_dmg"></div>
-<h3><span class="mw-headline" id="Recommended_Installer_2">Recommended Installer</span></h3>
+<div id="macff_pkg"></div>
+<h3><span class="mw-headline" id="Recommended_package_installer_2">Recommended package installer</span></h3>
 <ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
-<li> In the <b>64-bit FFmpeg</b> section, left-click the <b>Recommended download</b> link  "<b>ffmpeg_64bit_osx.dmg</b>" , left-click the link "<b>ffmpeg_64bit_osx.dmg</b>" </li>
-<li> This should download the file "<b>ffmpeg_64bit_osx.dmg</b>"  to your <b>Downloads</b> folder</li>
-<li> Double-click on that "<b>ffmpeg_64bit_osx.dmg</b>"  file to bring up the installer dialog
-<ul><li> You should see three "Lego bricks" with file names on the left hand side - <i>these are the files to be installed</i></li>
-<li> On the right you should see a folder called <b>libs</b> - <i>this is the folder where the files are to be installed, in full:  /<b>Library/Application Support/audacity/libs'</b> ' </i></li></ul></li>
-<li> Either Select each "Lego brick" one at a time and drag it to the <b>libs</b> folder - or select all three "Lego bricks" using <span class="kbrd" style="background-color: #e0e0f0">Shift + left-click</span> and drag all three to the <b>libs</b> folder </li>
-<li> Exit the installation dialog.</li></ol>
-<dl><dd>Then follow the instructions <a href="#locate">below</a> to locate <b>ffmpeg.55.64bit.dylib</b> using the Libraries Preferences.</dd></dl>
-<div id="macff_zip"></div>
-<h3><span class="mw-headline" id="Alternative_Zip_download_2">Alternative Zip download</span></h3>
-<div class="note">It is not recommended to extract the files to /usr/local/lib because administrative or root permissions may be needed to read the FFmpeg library from there.</div>
-<ol><li>Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i></li>
-<li>In the <b>64-bit FFmpeg</b> section, left-click the link <b>"FFmpeg64bit_MAC_OSX_for_Audacity_2.3.1_and_above.zip"</b></li>
-<li>Some Mac computers may extract the files from the zip automatically to a new folder in the <b>Downloads</b> directory called:  <b>FFmpeg64bit MAC OSX for Audacity</b> 
-<ul><li>Otherwise extract the contents of the downloaded ZIP file to obtain the folder to anywhere you have full permissions</li></ul></li>
-<li>This folder will contain three files:  <b>ffmpeg_codecs.55.64bit.dyli</b>, <b>ffmpeg_utils.52.64bit.dylib</b> and <b>ffmpeg.55.64bit.dylib</b></li>
-<li> Copy all three files and paste them anywhere you have full permissions (such as your Documents folder) 
-<ul><li> The preferred default Audacity location is <b>/Library/Application Support/audacity/libs</b></li></ul></li></ol>
-<dl><dd>Then follow the instructions <a href="#locate">below</a> to locate <b>ffmpeg.55.64bit.dylib</b> using the Libraries Preferences.</dd></dl>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
-</td>
-<td align="left" valign="top"><b>Compiling Audacity against another build of FFmpeg:</b>
-<ul style="list-style-image: none; list-style-type: none">You can also build and install your own copy of FFmpeg using source code from the <a rel="nofollow" class="external text" href="https://www.ffmpeg.org/">FFmpeg project</a>. Then build Audacity from <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity">Git sources</a> according to <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/blob/master/mac/Build.txt">mac/Build.txt</a>, linking to your self-installed copy of FFmpeg according to <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewtopic.php?f=17&amp;t=7245&amp;p=29157#p29157">these principles</a>. </ul>
-</td></tr></table>
-</div>
+<li> In the <b>64-bit FFmpeg</b> section, ...</li>
+<li> Directly underneath "For FFmpeg/LAME on Mac click below:", left-click the link <b>"ffmpeg_64bit_osx.pkg"</b> and save the file anywhere on your computer. </li>
+<li> When you have finished downloading, double-click the PKG file to ... </li></ol>
+<dl><dd><dl><dd>PKG instructions to replace the below</dd></dl></dd></dl>
+<ol><li> In the DMG window, double-click the "ffmpeg-mac-2.2.2.pkg" to launch the standard OS X package installer. If you receive a warning that the package cannot be opened, right-click or Ctrl-click the package, choose "Open", then click "Open". </li>
+<li> Click through the steps in the installer, accepting the defaults in all cases. This will install the FFmpeg libraries in /Library/Application Support/audacity/libs.</li>
+<li> Restart Audacity if it was running when you installed FFmpeg then Audacity should detect FFmpeg automatically.   </li></ol>
+<dl><dd>Audacity should automatically find the FFmpeg library. If you have problems with Audacity detecting FFmpeg, follow the steps below to <a href="#locate"><b>manually locate FFmpeg</b></a>.</dd></dl>
+<p><br />
+</p>
 <div id="locate"></div>
 <h3><span class="mw-headline" id="Locating_the_FFmpeg_library_manually">Locating the FFmpeg library manually</span></h3>
 <p>If you installed FFmpeg while Audacity was running, or if you installed FFmpeg to a non-default location, Audacity will ask you to configure Preferences to locate the FFmpeg library. 
@@ -221,6 +221,48 @@
 <li> Note that the FFmpeg library has been located</li>
 <li> Then click <span class="button">OK</span> to close Preferences.</li></ol>
 <dl><dd><b>FFmpeg Library Version</b> should now show a set of three version numbers for the sub-libraries of FFmpeg ("F" for libavformat version, "C" for libavcodec version and "U" for libavutil version). <p>If you still see "not found", you may have installed the wrong libraries. Click the <span class="button">Download...</span> button to obtain the correct library for your operating system. You can also choose <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#show_log" title="Help Menu: Diagnostics">Show Log...</a></span> to see diagnostic information about FFmpeg detection.</p></dd></dl>
+<p><br />
+</p>
+<div class="example"><div id="macff_dmg"></div>
+<h3><span class="mw-headline" id="Alternative_DMG_installer_2">Alternative DMG installer</span></h3>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">This will not work unless you have previously installed the 32-bit version of the library.
+</td></tr></table></div>
+<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
+<li> In the <b>64-bit FFmpeg</b> section, left-click the <b>Recommended download</b> link  "<b>ffmpeg_64bit_osx.dmg</b>" , left-click the link "<b>ffmpeg_64bit_osx.dmg</b>" </li>
+<li> This should download the file "<b>ffmpeg_64bit_osx.dmg</b>"  to your <b>Downloads</b> folder</li>
+<li> Double-click on that "<b>ffmpeg_64bit_osx.dmg</b>"  file to bring up the installer dialog
+<ul><li> You should see three <i>"Lego bricks"</i> with file names on the left-hand side - <i>these are the files to be installed</i></li>
+<li> On the right you should see a folder called <b>libs</b> - <i>this is the folder where the files are to be installed, in full:  /<b>Library/Application Support/audacity/libs'</b> ' </i></li></ul></li>
+<li> Either Select each <i>"Lego brick"</i> one at a time and drag it to the <b>libs</b> folder - or select all three <i>"Lego bricks"</i> using <span class="kbrd" style="background-color: #e0e0f0">Shift + left-click</span> and drag all three to the <b>libs</b> folder </li>
+<li> Exit the installation dialog.</li></ol>
+<dl><dd>Then follow the <a href="#locate"><b>instructions above</b></a> to locate <b>ffmpeg.55.64bit.dylib</b> using the Libraries Preferences.</dd></dl>
+<div id="macff_zip"></div>
+<h3><span class="mw-headline" id="Alternative_Zip_download_2">Alternative Zip download</span></h3>
+<div class="note">It is not recommended to extract the files to /usr/local/lib because administrative or root permissions may be needed to read the FFmpeg library from there.</div>
+<ol><li>Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i></li>
+<li>In the <b>64-bit FFmpeg</b> section, left-click the link <b>"FFmpeg64bit_MAC_OSX_for_Audacity_2.3.1_and_above.zip"</b></li>
+<li>Some Mac computers may extract the files from the zip automatically to a new folder in the <b>Downloads</b> directory called:  <b>FFmpeg64bit MAC OSX for Audacity</b> 
+<ul><li>Otherwise extract the contents of the downloaded ZIP file to obtain the folder to anywhere you have full permissions</li></ul></li>
+<li>This folder will contain three files:  <b>ffmpeg_codecs.55.64bit.dyli</b>, <b>ffmpeg_utils.52.64bit.dylib</b> and <b>ffmpeg.55.64bit.dylib</b></li>
+<li> Copy all three files and paste them anywhere you have full permissions 
+<ul><li> The preferred default Audacity location is <b>/Library/Application Support/audacity/libs</b></li></ul></li></ol>
+<dl><dd>Then follow the instructions <a href="#locate">above</a> to locate <b>ffmpeg.55.64bit.dylib</b> using the Libraries Preferences.</div></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>Compiling Audacity against another build of FFmpeg:</b>
+<ul style="list-style-image: none; list-style-type: none">You can also build and install your own copy of FFmpeg using source code from the <a rel="nofollow" class="external text" href="https://www.ffmpeg.org/">FFmpeg project</a>. Then build Audacity from <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity">Git sources</a> according to <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/blob/master/mac/Build.txt">mac/Build.txt</a>, linking to your self-installed copy of FFmpeg according to <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewtopic.php?f=17&amp;t=7245&amp;p=29157#p29157">these principles</a>. </ul>
+</td></tr></table>
+</div>
 <p><br />
 </p>
 <div id="purge"></div>
@@ -274,34 +316,34 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20190226103925
+Cached time: 20190308165134
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.152 seconds
+CPU time usage: 0.153 seconds
 Real time usage: 0.158 seconds
-Preprocessor visited node count: 552/1000000
-Preprocessor generated node count: 1910/1000000
-Post‐expand include size: 13731/2097152 bytes
-Template argument size: 8330/2097152 bytes
+Preprocessor visited node count: 574/1000000
+Preprocessor generated node count: 2018/1000000
+Post‐expand include size: 20113/2097152 bytes
+Template argument size: 13976/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   55.804      1 - -total
- 40.91%   22.831      1 - Template:I18n
- 37.67%   21.020      1 - Template:I18n_box
- 31.04%   17.321      1 - Template:I18n_list
- 14.68%    8.191     15 - Template:Button
- 12.60%    7.030      2 - Template:I18n_link
- 12.19%    6.804      1 - Template:Intro
-  7.47%    4.168      2 - Template:Autoglossonym
-  5.21%    2.907      7 - Template:Note
-  4.07%    2.270      6 - Template:Menu
+100.00%   47.618      1 - -total
+ 40.26%   19.171      1 - Template:I18n
+ 36.71%   17.480      1 - Template:I18n_box
+ 30.25%   14.402      1 - Template:I18n_list
+ 14.36%    6.840     15 - Template:Button
+ 11.86%    5.650      2 - Template:I18n_link
+ 10.67%    5.082      1 - Template:Intro
+  9.00%    4.285      2 - Template:Example
+  7.02%    3.342      2 - Template:Autoglossonym
+  4.74%    2.259      8 - Template:Advice
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5421-0!*!0!!*!5!* and timestamp 20190226103925 and revision id 63364
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5421-0!*!0!!*!5!* and timestamp 20190308165134 and revision id 63406
  -->
 </div>
 										<!-- end content -->
@@ -373,7 +415,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Mac_OS_X">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-03-08 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Mac_OS_X">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
