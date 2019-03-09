@@ -117,7 +117,7 @@
 </p>
 <div id="maclame"></div>
 <h2><span class="mw-headline" id="Installing_LAME_on_Mac">Installing LAME on Mac</span></h2>
-<div class="note">Audacity does mot include <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding software or distribute such software from its own websites. Instead, use the following instructions to download and install the free and recommended <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> third-party encoder to export MP3 files with Audacity. </div>
+<div class="note">Audacity does not include <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding software or distribute such software from its own websites. Instead, use the following instructions to download and install the free and recommended <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> third-party encoder to export MP3 files with Audacity. </div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -147,29 +147,8 @@
 <li> Note the LAME library has been located and should show alongside "<b>MP3 Library Version:</b>" as <b>LAME 3.100</b> </li>
 <li> Then click <span class="button">OK</span> to exit Preferences.</li></ol>
 <dl><dd>You should now be able to export MP3s without any further configuration, choosing <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export as MP3</a></span> </dd></dl>
-<p><br />
-</p>
-<div class="example"><div id="maclame_dmg"></div>
-<h3><span class="mw-headline" id="Alternative_DMG_installer">Alternative DMG installer</span></h3>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">This will not work unless you have previously installed the 32-bit version of the library.
-</td></tr></table></div>
-<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
-<li> In the <b>64-bit LAME</b> section, left-click the <b>Recommended download</b> link  "<b>lame_64bit_osx.dmg</b>" </li>
-<li> This should download the file "<b>lame_64bit_osx.dmg</b>"  to your <b>Downloads</b> folder</li>
-<li> Double-click on that "<b>lame_64bit_osx.dmg</b>"  file to bring up the installer dialog
-<ul><li>You should see a <i>"Lego brick"</i> with a file name <b>libmp3lame64bit.dylib</b> on the left-hand side - <i>this is the file to be installed</i></li>
-<li>On the right you should see a folder called <b>libs</b> - <i>this is the folder where the files are to be installed, in full:  /<b>Library/Application Support/audacity/libs</b> </i></li></ul></li>
-<li> Click on the  <i>"Lego brick"</i> and drag it to the <b>libs</b> folder</li>
-<li> Exit the installation dialog.</li></ol>
-<dl><dd>Audacity should detect LAME automatically when you export as MP3. If Audacity cannot find LAME, then follow the <a href="#LAMElocate"><b>instructions above</b></a> to locate <b>libmp3lame64bit.dylib</b> using the Libraries Preferences.</dd></dl>
-<div id="maclame_zip"></div>
-<h3><span class="mw-headline" id="Alternative_zip_download">Alternative zip download</span></h3>
+<div class="example"><div id="maclame_zip"></div>
+<h3><span class="mw-headline" id="Alternative_zip_download_for_expert_users_who_want_to_choose_their_own_library_location">Alternative zip download for expert users who want to choose their own library location</span></h3>
 <div class="note">It is not recommended to extract the LAME library to /usr/local/lib because administrative or root permissions may be needed to read the LAME library from there.</div>
 <ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
 <li> In the <b>64-bit LAME</b> section, left-click the link <b>"Lame_Library_64bit_MAC_OSX_for_Audacity_2.3.1_and_above.zip"</b></li>
@@ -223,27 +202,8 @@
 <dl><dd><b>FFmpeg Library Version</b> should now show a set of three version numbers for the sub-libraries of FFmpeg ("F" for libavformat version, "C" for libavcodec version and "U" for libavutil version). <p>If you still see "not found", you may have installed the wrong libraries. Click the <span class="button">Download...</span> button to obtain the correct library for your operating system. You can also choose <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#show_log" title="Help Menu: Diagnostics">Show Log...</a></span> to see diagnostic information about FFmpeg detection.</p></dd></dl>
 <p><br />
 </p>
-<div class="example"><div id="macff_dmg"></div>
-<h3><span class="mw-headline" id="Alternative_DMG_installer_2">Alternative DMG installer</span></h3>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">This will not work unless you have previously installed the 32-bit version of the library.
-</td></tr></table></div>
-<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
-<li> In the <b>64-bit FFmpeg</b> section, left-click the <b>Recommended download</b> link  "<b>ffmpeg_64bit_osx.dmg</b>" , left-click the link "<b>ffmpeg_64bit_osx.dmg</b>" </li>
-<li> This should download the file "<b>ffmpeg_64bit_osx.dmg</b>"  to your <b>Downloads</b> folder</li>
-<li> Double-click on that "<b>ffmpeg_64bit_osx.dmg</b>"  file to bring up the installer dialog
-<ul><li> You should see three <i>"Lego bricks"</i> with file names on the left-hand side - <i>these are the files to be installed</i></li>
-<li> On the right you should see a folder called <b>libs</b> - <i>this is the folder where the files are to be installed, in full:  /<b>Library/Application Support/audacity/libs'</b> ' </i></li></ul></li>
-<li> Either Select each <i>"Lego brick"</i> one at a time and drag it to the <b>libs</b> folder - or select all three <i>"Lego bricks"</i> using <span class="kbrd" style="background-color: #e0e0f0">Shift + left-click</span> and drag all three to the <b>libs</b> folder </li>
-<li> Exit the installation dialog.</li></ol>
-<dl><dd>Then follow the <a href="#locate"><b>instructions above</b></a> to locate <b>ffmpeg.55.64bit.dylib</b> using the Libraries Preferences.</dd></dl>
-<div id="macff_zip"></div>
-<h3><span class="mw-headline" id="Alternative_Zip_download_2">Alternative Zip download</span></h3>
+<div class="example"><div id="macff_zip"></div>
+<h3><span class="mw-headline" id="Alternative_zip_download_for_expert_users_who_want_to_choose_their_own_library_location_2">Alternative zip download for expert users who want to choose their own library location</span></h3>
 <div class="note">It is not recommended to extract the files to /usr/local/lib because administrative or root permissions may be needed to read the FFmpeg library from there.</div>
 <ol><li>Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i></li>
 <li>In the <b>64-bit FFmpeg</b> section, left-click the link <b>"FFmpeg64bit_MAC_OSX_for_Audacity_2.3.1_and_above.zip"</b></li>
@@ -316,34 +276,34 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20190308170559
+Cached time: 20190309145344
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.153 seconds
-Real time usage: 0.158 seconds
-Preprocessor visited node count: 574/1000000
-Preprocessor generated node count: 2018/1000000
-Post‐expand include size: 20119/2097152 bytes
-Template argument size: 13982/2097152 bytes
+CPU time usage: 0.150 seconds
+Real time usage: 0.157 seconds
+Preprocessor visited node count: 549/1000000
+Preprocessor generated node count: 1911/1000000
+Post‐expand include size: 16007/2097152 bytes
+Template argument size: 10628/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   48.202      1 - -total
- 40.25%   19.400      1 - Template:I18n
- 36.73%   17.706      1 - Template:I18n_box
- 30.15%   14.531      1 - Template:I18n_list
- 14.20%    6.842     15 - Template:Button
- 11.80%    5.689      2 - Template:I18n_link
- 10.99%    5.299      1 - Template:Intro
-  8.95%    4.315      2 - Template:Example
-  6.98%    3.366      2 - Template:Autoglossonym
-  4.74%    2.285      8 - Template:Advice
+100.00%   55.781      1 - -total
+ 44.79%   24.985      1 - Template:I18n
+ 40.61%   22.655      1 - Template:I18n_box
+ 33.42%   18.643      1 - Template:I18n_list
+ 14.16%    7.898     15 - Template:Button
+ 12.38%    6.907      2 - Template:I18n_link
+ 11.37%    6.344      1 - Template:Intro
+  7.25%    4.044      2 - Template:Autoglossonym
+  4.61%    2.572      7 - Template:Note
+  4.35%    2.424      6 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5421-0!*!0!!*!5!* and timestamp 20190308170559 and revision id 63418
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5421-0!*!0!!*!5!* and timestamp 20190309145344 and revision id 63425
  -->
 </div>
 										<!-- end content -->
