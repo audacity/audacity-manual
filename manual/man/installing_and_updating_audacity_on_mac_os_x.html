@@ -132,8 +132,9 @@
 <li> In the <b>64-bit LAME</b> section, left-click the link <b>"lame_64bit_osx.pkg"</b>.</li>
 <li> When you have finished downloading, double-click the <b>"lame_64bit_osx.pkg"</b> in your <b>Downloads</b>folder. </li>
 <li> You will be guided through the installation</li>
-<li> Click through the steps in the installer. This will the 3.100 libmp3lame64bit.dylib file in the system library at /Library/Application Support/audacity/libs/.</li></ol>
-<dl><dd>Audacity should detect LAME automatically when you export as MP3 or restart Audacity. If Audacity cannot find LAME, then follow the <a href="#LAMElocate"><b>instructions above</b></a> to locate <b>libmp3lame64bit.dylib</b> using the Libraries Preferences.</dd></dl>
+<li> Click through the steps in the installer. This will install the <b>3.100 libmp3lame64bit.dylib</b> file in the system library at <b>/Library/Application Support/audacity/libs/</b>.
+<ul><li> <i>On some Macs the process may look as though it has stalled on "Validating packages" - just be patient and wait for it to complete.</i></li></ul></li></ol>
+<dl><dd>Audacity should detect LAME automatically when you export as MP3 or restart Audacity. If Audacity cannot find LAME, then follow the <a href="#LAMElocate"><b>instructions below</b></a> to locate <b>libmp3lame64bit.dylib</b> using the Libraries Preferences.</dd></dl>
 <div id="LAMElocate"></div>
 <h3><span class="mw-headline" id="Locating_the_LAME_library_manually">Locating the LAME library manually</span></h3>
 <ol><li> In Audacity, click <span class="menu">Audacity &gt; <a href="preferences.html" title="Preferences">Preferences...</a></span> then choose "<b>Libraries</b>" on the left.</li>
@@ -166,7 +167,7 @@
 <li>On the right you should see a folder called <b>libs</b> - <i>this is the folder where the files are to be installed, in full:  /<b>Library/Application Support/audacity/libs</b> </i></li></ul></li>
 <li> Click on the  <i>"Lego brick"</i> and drag it to the <b>libs</b> folder</li>
 <li> Exit the installation dialog.</li></ol>
-<dl><dd>Audacity should detect LAME automatically when you export as MP3. If Audacity cannot find LAME, then follow the <a href="#LAMElocate"><b>instructions below</b></a> to locate <b>libmp3lame64bit.dylib</b> using the Libraries Preferences.</dd></dl>
+<dl><dd>Audacity should detect LAME automatically when you export as MP3. If Audacity cannot find LAME, then follow the <a href="#LAMElocate"><b>instructions above</b></a> to locate <b>libmp3lame64bit.dylib</b> using the Libraries Preferences.</dd></dl>
 <div id="maclame_zip"></div>
 <h3><span class="mw-headline" id="Alternative_zip_download">Alternative zip download</span></h3>
 <div class="note">It is not recommended to extract the LAME library to /usr/local/lib because administrative or root permissions may be needed to read the LAME library from there.</div>
@@ -195,14 +196,13 @@
 <div id="macff_pkg"></div>
 <h3><span class="mw-headline" id="Recommended_package_installer_2">Recommended package installer</span></h3>
 <ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
-<li> In the <b>64-bit FFmpeg</b> section, ...</li>
-<li> Directly underneath "For FFmpeg/LAME on Mac click below:", left-click the link <b>"ffmpeg_64bit_osx.pkg"</b> and save the file anywhere on your computer. </li>
-<li> When you have finished downloading, double-click the PKG file to ... </li></ol>
-<dl><dd><dl><dd>PKG instructions to replace the below</dd></dl></dd></dl>
-<ol><li> In the DMG window, double-click the "ffmpeg-mac-2.2.2.pkg" to launch the standard OS X package installer. If you receive a warning that the package cannot be opened, right-click or Ctrl-click the package, choose "Open", then click "Open". </li>
-<li> Click through the steps in the installer, accepting the defaults in all cases. This will install the FFmpeg libraries in /Library/Application Support/audacity/libs.</li>
+<li> In the <b>64-bit FFmpeg</b> section, left-click the link <b>"ffmpeg_64bit_osx.pkg"</b> and save the file anywhere on your computer. </li>
+<li> When you have finished downloading, double-click the <b>"ffmpeg_64bit_osx.pkg"</b> in your <b>Downloads</b> folder. </li>
+<li> You will be guided through the installation</li>
+<li> Click through the steps in the installer. This will install the <b>ffmpeg.55.64bit.dylib</b> file in the system library at <b>/Library/Application Support/audacity/libs/</b>.
+<ul><li> <i>On some Macs the process may look as though it has stalled on "Validating packages" - just be patient and wait for it to complete.</i></li></ul></li>
 <li> Restart Audacity if it was running when you installed FFmpeg then Audacity should detect FFmpeg automatically.   </li></ol>
-<dl><dd>Audacity should automatically find the FFmpeg library. If you have problems with Audacity detecting FFmpeg, follow the steps below to <a href="#locate"><b>manually locate FFmpeg</b></a>.</dd></dl>
+<dl><dd>If you have problems with Audacity detecting FFmpeg, follow the steps below to <a href="#locate"><b>manually locate FFmpeg</b></a>.</dd></dl>
 <p><br />
 </p>
 <div id="locate"></div>
@@ -216,7 +216,7 @@
 <ol><li> Click the <span class="button">Locate...</span> button to right of <b>FFmpeg Library:</b></li>
 <li> If a "<b>Success</b>" message indicates Audacity has now automatically detected valid FFmpeg libraries and asks if you want to detect them manually, click <span class="button">No</span>, then <span class="button">OK</span> to close Preferences </li>
 <li> If the "<b>Locate FFmpeg</b>" dialog appears, click <span class="button">Browse...</span></li>
-<li> Navigate to the folder that contains FFmpeg and select the file "<b>ffmpeg.55,64bit.dylib</b>" </li>
+<li> Navigate to the folder that contains FFmpeg and select the file "<b>ffmpeg.55.64bit.dylib</b>" </li>
 <li> Click <span class="button">Open</span> then <span class="button">OK</span> </li>
 <li> Note that the FFmpeg library has been located</li>
 <li> Then click <span class="button">OK</span> to close Preferences.</li></ol>
@@ -252,7 +252,7 @@
 <li>This folder will contain three files:  <b>ffmpeg_codecs.55.64bit.dyli</b>, <b>ffmpeg_utils.52.64bit.dylib</b> and <b>ffmpeg.55.64bit.dylib</b></li>
 <li> Copy all three files and paste them anywhere you have full permissions 
 <ul><li> The preferred default Audacity location is <b>/Library/Application Support/audacity/libs</b></li></ul></li></ol>
-<dl><dd>Then follow the instructions <a href="#locate">above</a> to locate <b>ffmpeg.55.64bit.dylib</b> using the Libraries Preferences.</div></dd></dl>
+<dl><dd>Then follow the <a href="#locate"><b>instructions above</b></a> to locate <b>ffmpeg.55.64bit.dylib</b> using the Libraries Preferences.</div></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -316,34 +316,34 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20190308165134
+Cached time: 20190308170559
 Cache expiry: 86400
 Dynamic content: false
 CPU time usage: 0.153 seconds
 Real time usage: 0.158 seconds
 Preprocessor visited node count: 574/1000000
 Preprocessor generated node count: 2018/1000000
-Post‐expand include size: 20113/2097152 bytes
-Template argument size: 13976/2097152 bytes
+Post‐expand include size: 20119/2097152 bytes
+Template argument size: 13982/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   47.618      1 - -total
- 40.26%   19.171      1 - Template:I18n
- 36.71%   17.480      1 - Template:I18n_box
- 30.25%   14.402      1 - Template:I18n_list
- 14.36%    6.840     15 - Template:Button
- 11.86%    5.650      2 - Template:I18n_link
- 10.67%    5.082      1 - Template:Intro
-  9.00%    4.285      2 - Template:Example
-  7.02%    3.342      2 - Template:Autoglossonym
-  4.74%    2.259      8 - Template:Advice
+100.00%   48.202      1 - -total
+ 40.25%   19.400      1 - Template:I18n
+ 36.73%   17.706      1 - Template:I18n_box
+ 30.15%   14.531      1 - Template:I18n_list
+ 14.20%    6.842     15 - Template:Button
+ 11.80%    5.689      2 - Template:I18n_link
+ 10.99%    5.299      1 - Template:Intro
+  8.95%    4.315      2 - Template:Example
+  6.98%    3.366      2 - Template:Autoglossonym
+  4.74%    2.285      8 - Template:Advice
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5421-0!*!0!!*!5!* and timestamp 20190308165134 and revision id 63406
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5421-0!*!0!!*!5!* and timestamp 20190308170559 and revision id 63418
  -->
 </div>
 										<!-- end content -->
@@ -415,7 +415,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-03-08 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Mac_OS_X">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-03-09 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Mac_OS_X">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
