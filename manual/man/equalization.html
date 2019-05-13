@@ -56,6 +56,8 @@
 <ul><li><b>Vertical Scale:</b> This scale is in <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> and shows the amount of <i><b><a href="glossary.html#gain" title="Glossary">gain</a></b></i> (amplification above 0 dB or attenuation below 0 dB) that will be applied to the audio at any given <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i>. </li>
 <li><b>Horizontal Scale:</b> This shows the frequencies in <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i> to which volume adjustments will be applied. Dragging the Equalization window wider displays some additional points on the scale and makes it easier to plot the graph accurately. </li>
 <li> <b>Vertical scale sliders:</b> By default the vertical scale reads from + 30 dB to - 30 dB, but these two sliders to left of the scale let you adjust the upper and lower dB values so as to change the visible range on the graph. Note that moving either slider changes the horizontal position of the 0 dB line. Reducing the visible range lets you make a finer adjustment to how loud the frequencies sound, but the changes will be more subtle because the volume adjustment will be less. </li></ul>
+<p><br />
+</p>
 <div id="draw"></div>
 <h2><span class="mw-headline" id="Draw_Curves">Draw Curves</span></h2>
 <ul><li><b>Equalization Curves and Control Points:</b> If you look closely at the curve in the image above, you'll see it's composed of a blue curve joining together a number of white circles, and a green curve which follows the general shape of the blue curve. The white circles are called "control points". When in "<b>Draw Curves</b>" mode, the blue curve is drawn by either clicking in the graph at any position, or clicking on the blue curve and dragging it to a position. Doing either creates a control point at that position, then creating further control points draws the curve. To remove a control point, drag it outside the graph.<br />The green curve is the one that Audacity actually uses to perform the effect, taking into account the limitations of the equalization <i><b><a href="glossary.html#algorithm" title="Glossary">algorithm</a></b></i>. The green curve usually follows the blue curve closely, but will be forced to a smoother path if there are sudden changes in <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> over a small frequency range. </li>
@@ -73,6 +75,8 @@
 </td>
 <td align="left" valign="top">No account is taken of whether your equalization curve will result in the selection being amplified beyond the <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> (distortion) level.<p> If your curve amplifies any frequencies, especially the lower frequencies which are normally the loudest, <span class="menu">Effect&#160;&gt;&#160;<a href="effect_menu.html#Normalize..." title="Effect Menu">Normalize</a></span> the track(s) first to -3 dB or lower. If necessary you can always <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> the Equalization, Normalize again to a lower level, then re-apply Equalization.</p>
 </td></tr></table></div>
+<p><br />
+</p>
 <div id="graphic"></div>
 <h2><span class="mw-headline" id="Graphic_EQ">Graphic EQ</span></h2>
 <dl><dd><span title="Equalization window in Graphic mode"><img alt="Equalization Graphic EQ.png" src="../m/images/c/ce/equalization_graphic_eq.png" width="783" height="580" /></span></dd></dl>
@@ -83,12 +87,15 @@
 <li> Holding down <span class="kbrd" style="background-color: #e0e0f0">Shift</span> then either dragging the slider handle or using the arrow keys to increment by 0.1 dB. </ul>
 The current value of the slider can be seen by hovering over it with the mouse.</ul>
 <div class="note">In "<b>Graphic EQ</b>" mode only, a dropdown box lets you choose between three different <i><b><a href="glossary.html#interpolate" title="Glossary">interpolation</a></b></i> methods. B-spline tends to reduce somewhat the amount of gain set on the sliders, whilst spreading it to more of the surrounding frequencies. Cubic affects the surrounding frequencies the most, introducing a small opposite gain (for example an attenuation if you specified an amplification) at frequencies furthest from the frequency stated on the slider.</div>
+<p><br />
+</p>
 <div id="settings"></div>
 <h2><span class="mw-headline" id="Equalization_settings_and_presets">Equalization settings and presets</span></h2>
 <ul><li> <b>Draw Curves:</b> Selecting this radio button gives you the "<b>Draw Curves</b>" mode, in which the equalization curve is drawn by manipulating control points. </li>
 <li> <b>Graphic EQ:</b> This button switches to the simpler "<b>Graphic EQ</b>" mode, in which the equalization curve is drawn by adjusting the frequency sliders.</li>
-<li> <b>Length of filter:</b> How many <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i> of audio Audacity processes in each analysis step. Generally, it's best left at the default value of 4001. If the green curve Audacity uses to perform the effect is very different from the blue curve you created, try increasing the length of the <i><b><a href="glossary.html#filter" title="Glossary">filter</a></b></i>. Higher settings will process the audio in a greater number of narrow frequency bands, but may introduce <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/ringing_artifacts">ringing artifacts</a> at very high settings.
+<li> <b>Length of Filter:</b> How many <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i> of audio Audacity processes in each analysis step. Generally, it's best left at the default value of 4001 <i>(a Filter Length, FFT, size) of around 4000 gives a good balance between frequency resolution and time resolution, for technical (Audacity code) reasons the number must be odd.)</i>. 
 <ul><li> At high <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rates</a></b></i> the actual time represented by a given number of samples will be less and the frequency bands will be broader so as to cover the increased frequency range. As a result, the green curve will fit to the blue line less closely at any given "Length of filter" than for lower sample rates.</li>
+<li>If the green curve Audacity uses to perform the effect is very different from the blue curve you created, try increasing the length of the <i><b><a href="glossary.html#filter" title="Glossary">filter</a></b></i>. Higher settings will process the audio in a greater number of narrow frequency bands, but may introduce <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/ringing_artifacts">ringing artifacts</a> at very high settings.</li>
 <li> A shorter filter length may sometimes be preferable. It will take less time to process the effect, and the smoother curve produced may actually <i>sound</i> better, unless you are modifying very low frequencies.</li></ul></li>
 <li><b>Select curve:</b> Click the dropdown triangle to select from a list of preset equalizations. These are either your own saved presets (see "Save/Manage Curves" below) or built-in presets, such as <i><b><a href="glossary.html#filter" title="Glossary">filters</a></b></i> to remove unwanted low frequencies that could cause poor sound, or the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/RIAA_equalization">RIAA</a> curve to equalize an LP recorded into Audacity without equalization. A curve will display as an "unnamed" curve if it is not yet saved as a preset, or if it is a modified preset. </li></ul>
 <div class="note">There will also be the following instances where curves can only be matched approximately, so will display as "unnamed":  
@@ -99,6 +106,8 @@ The current value of the slider can be seen by hovering over it with the mouse.<
 <ul><li> <span class="button">Save/Manage Curves</span>: This opens the "Manage Curves" dialog described <a href="#manage">below</a>. </li>
 <li> <span class="button">Flatten</span>: A quick way to set a "level response curve".  This means the curve on the graph is drawn from left to right at 0 dB on the vertical scale, so that no frequencies will have their volume level modified.</li>
 <li> <span class="button">Invert</span>: Turns the current curve in the window upside down, changing positive gains at a particular frequency into negative, and vice versa. To negate incorrect RIAA equalization of a 78 rpm record that was recorded with a modern turntable, you can apply the already supplied "Inverse RIAA" curve in the "Select Curve" dropdown, without using the "Invert" button.</li></ul>
+<p><br />
+</p>
 <div id="manage"></div>
 <h2><span class="mw-headline" id="Manage_Curves">Manage Curves</span></h2>
 <dl><dd><span title="Manage Curves dialog"><img alt="Equalization Manage Curves.png" src="../m/images/c/cb/equalization_manage_curves.png" width="360" height="439" /></span></dd></dl>
@@ -131,6 +140,8 @@ The current value of the slider can be seen by hovering over it with the mouse.<
 <p>The updated curve for the preset will still show as "unnamed" in the "Select Curve" box but is identical to the curve obtainable by selecting the name of the preset. 
 </p>
 </div>
+<p><br />
+</p>
 <div id="buttons"></div>
 <h2><span class="mw-headline" id="Other_buttons">Other buttons</span></h2>
 <p>Clicking on the command buttons give the following results:
@@ -142,7 +153,7 @@ The current value of the slider can be seen by hovering over it with the mouse.<
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">The Presets features are not working yet. Use Save / Manage Curves to save, rename, export and import predefined curves.
+<td align="left" valign="top">The Presets features are not working yet. Use the <span class="button">Save / Manage Curves</span> button to save, rename, export and import predefined curves.
 </li></ul>
 </td></tr></table>
 </div>
@@ -163,6 +174,7 @@ The current value of the slider can be seen by hovering over it with the mouse.<
 <div id="limitations"></div>
 <h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
 <p>To process Equalization, all tracks in the project must have the same sample rate. To change the sample rate of a track without affecting speed or pitch, use <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample...</a></span>.    
+</p><p><br />
 </p>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
@@ -170,34 +182,34 @@ The current value of the slider can be seen by hovering over it with the mouse.<
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190226112228
+Cached time: 20190503130249
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.155 seconds
-Real time usage: 0.161 seconds
-Preprocessor visited node count: 695/1000000
-Preprocessor generated node count: 1962/1000000
-Post‐expand include size: 15783/2097152 bytes
-Template argument size: 9420/2097152 bytes
+CPU time usage: 0.170 seconds
+Real time usage: 0.179 seconds
+Preprocessor visited node count: 704/1000000
+Preprocessor generated node count: 1982/1000000
+Post‐expand include size: 15918/2097152 bytes
+Template argument size: 9499/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   61.184      1 - -total
- 46.47%   28.433      1 - Template:I18n
- 43.71%   26.741      1 - Template:I18n_box
- 39.53%   24.184      1 - Template:I18n_list
- 23.04%   14.098      7 - Template:I18n_link
- 15.19%    9.297     18 - Template:Button
- 13.47%    8.242      7 - Template:Autoglossonym
- 11.74%    7.184      1 - Template:No-rename
- 10.60%    6.487      6 - Template:Ednote
-  3.05%    1.868      2 - Template:Key
+100.00%   76.503      1 - -total
+ 48.04%   36.753      1 - Template:I18n
+ 45.10%   34.501      1 - Template:I18n_box
+ 41.31%   31.605      1 - Template:I18n_list
+ 23.22%   17.764      7 - Template:I18n_link
+ 15.04%   11.505     19 - Template:Button
+ 13.49%   10.324      7 - Template:Autoglossonym
+ 11.78%    9.009      1 - Template:No-rename
+ 10.44%    7.989      6 - Template:Ednote
+  3.38%    2.585      2 - Template:Alert
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2494-0!*!0!!*!5!* and timestamp 20190226112228 and revision id 62585
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2494-0!*!0!!*!5!* and timestamp 20190503130249 and revision id 63657
  -->
 </div>
 										<!-- end content -->
@@ -232,7 +244,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -269,7 +282,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Equalization">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Equalization">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

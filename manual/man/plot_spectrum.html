@@ -41,8 +41,7 @@
 
 <div class="intro"><i><b>Plot Spectrum</b></i> takes the selected audio (which is a set of sound pressure values at points in time) and converts it to a graph of frequencies (the horizontal scale in  <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i>) against <i><b><a href="glossary.html#amplitude" title="Glossary">amplitudes</a></b></i> (the vertical scale in <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>).</div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Analyze &gt; Plot Spectrum...</span></dd>
-<dd><span title="Plot Spectrum effect dialog"><img alt="Plot Spectrum.png" src="../m/images/b/b7/plot_spectrum.png" width="493" height="559" /></span></dd></dl>
-
+<dd><span title="Plot Spectrum effect dialog"><img alt="Plot Spectrum.png" src="../m/images/b/b7/plot_spectrum.png" width="496" height="562" /></span></dd></dl>
 <p>Plots are made using a mathematical <i><b><a href="glossary.html#algorithm" title="Glossary">algorithm</a></b></i> known as a Fast <i><b><a href="glossary.html#ft" title="Glossary">Fourier Transform</a></b></i> or <i><b><a href="glossary.html#fft" title="Glossary">FFT</a></b></i>. This gives a value for each narrow band of frequencies that represents how much of those frequencies is present. All the values are then interpolated to create the graph.
 </p><p>Plot Spectrum take the audio in blocks of 'Size' samples, does the FFT, and averages all the blocks together.
 </p>
@@ -60,7 +59,7 @@
 <div class="note">There is an audio version of the Uncertainty Principle that says "Frequency_Resolution*Time_Resolution = 2." <b>Size</b> lets you choose the FFT size which is the number of consecutive audio samples to be analyzed. If you choose 1024 samples, you will get 512 <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> bins covering the frequency range up to half the sampling frequency. Most projects use 44100 Hz sampling frequency. Thus, in this example, Time_Resolution = 1024/44.1 = 23.2 milliseconds and the frequency resolution is 44100/2/512 = 43 <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i>.</div>
 <div id="function"></div>
 <h2><span class="mw-headline" id="Function">Function</span></h2>
-<p>Function offers choices like Rectangular, Hanning, Hamming and others. We suggest you use the default Hanning <i>(actually it is a Hann window, but Hanning is widely accepted)</i> for most situations. The fundamental principle at work here is that the way we observe our data changes what we see. The "true spectrum" of your project would be computed over the entire project and would provide very detailed frequency resolution but essentially no time resolution at all. In other words, this "true spectrum" would offer an average frequency distribution over the entire project. If we select a short interval of audio, the short-time <i><b><a href="glossary.html#spectrum" title="Glossary">spectrum</a></b></i> has frequency resolution limited by the observation window time AND the result is affected by the spectrum of the window itself. For general audio analysis, the Rectangular window is least desirable, and the other options offer slightly different effects. 
+<p>Function offers choices like Rectangular, Hann, Hamming and others. We suggest you use the default Hann for most situations. The fundamental principle at work here is that the way we observe our data changes what we see. The "true spectrum" of your project would be computed over the entire project and would provide very detailed frequency resolution but essentially no time resolution at all. In other words, this "true spectrum" would offer an average frequency distribution over the entire project. If we select a short interval of audio, the short-time <i><b><a href="glossary.html#spectrum" title="Glossary">spectrum</a></b></i> has frequency resolution limited by the observation window time AND the result is affected by the spectrum of the window itself. For general audio analysis, the Rectangular window is least desirable, and the other options offer slightly different effects. 
 </p>
 <div class="note">
 <ul><li> Currently, only the first 10485760 samples (237.8 seconds at 44100 Hz sample rate) of selected audio can be analyzed.</li>
@@ -94,34 +93,34 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190226112227
+Cached time: 20190503130248
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.107 seconds
-Real time usage: 0.114 seconds
-Preprocessor visited node count: 298/1000000
-Preprocessor generated node count: 1371/1000000
-Post‐expand include size: 6634/2097152 bytes
-Template argument size: 3518/2097152 bytes
+CPU time usage: 0.103 seconds
+Real time usage: 0.110 seconds
+Preprocessor visited node count: 291/1000000
+Preprocessor generated node count: 1351/1000000
+Post‐expand include size: 6492/2097152 bytes
+Template argument size: 3407/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   46.105      1 - -total
- 50.29%   23.186      1 - Template:I18n
- 46.22%   21.308      1 - Template:I18n_box
- 40.36%   18.608      1 - Template:I18n_list
- 17.34%    7.996      1 - Template:No-rename
- 14.72%    6.785      2 - Template:I18n_link
- 13.78%    6.353      2 - Template:Ednote
- 11.02%    5.080      5 - Template:Button
-  8.58%    3.956      2 - Template:Autoglossonym
-  8.21%    3.785      3 - Template:Note
+100.00%   44.637      1 - -total
+ 52.38%   23.379      1 - Template:I18n
+ 48.10%   21.472      1 - Template:I18n_box
+ 41.93%   18.717      1 - Template:I18n_list
+ 17.67%    7.889      1 - Template:No-rename
+ 15.02%    6.705      2 - Template:I18n_link
+ 13.53%    6.038      1 - Template:Ednote
+ 11.15%    4.975      5 - Template:Button
+  8.79%    3.924      2 - Template:Autoglossonym
+  7.13%    3.182      3 - Template:Note
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4192-0!*!0!!*!5!* and timestamp 20190226112227 and revision id 57575
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4192-0!*!0!!*!5!* and timestamp 20190503130248 and revision id 64025
  -->
 </div>
 										<!-- end content -->
@@ -156,7 +155,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -193,7 +193,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Plot_Spectrum">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Plot_Spectrum">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

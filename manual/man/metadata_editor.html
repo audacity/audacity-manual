@@ -36,7 +36,7 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro"><i><b>Metadata Tags Editor</b></i> is used to enter or confirm text description <i><b><a href="glossary.html#metadata" title="Glossary">metadata tag</a></b></i> information, such as artist, year or genre) that will be embedded in the Audacity project and passed through into <a href="file_export_dialog.html" title="File Export Dialog">exported</a> audio files. Metadata that is embedded in audio files displays in software applications like iTunes® or Windows Media Player, or portable players like iPod®. <p>Most export formats support at least the seven default tags in Metadata Editor, but support in player applications varies from almost universal for the <i><b><a href="glossary.html#id3" title="Glossary">ID3</a></b></i> tags used by <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> to very limited for <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>. See this <a href="faq_opening_and_saving_files.html#meta" title="FAQ:Opening and Saving Files">Frequently Asked Question</a> for details.</p><p> For both MP3 and MP2, only ID3v2.3 tags are exported. ID3v1 can be exported using <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">Cmd-line export</a>.</p></div>
 <dl><dd><b>Accessed by:'</b> <span class="menu">Edit  &gt; Metadata...</span></dd>
-<dd><span title="Metadata Editor with completed value fields"><a href="https://alphamanual.audacityteam.org/man/File:Metadata_Tags_editor_W10.png" class="image"><img alt="Metadata Tags editor W10.png" src="../m/images/b/b3/metadata_tags_editor_w10.png" width="545" height="393" /></a></span></dd></dl>
+<dd><span title="Metadata Editor with completed value fields"><img alt="Metadata Tags editor - with off setting.png" src="../m/images/7/73/metadata_tags_editor_with_off_setting.png" width="535" height="421" /></span></dd></dl>
 <div class="note">
 <ul><li> <b>By default, Metadata Tags Editor appears for each exported file</b> after choosing the file format in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> or <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> dialogs. </li>
 <li> <b>When using Export Multiple</b>, it's often easier to uncheck "Show Metadata Tags editor prior to export step" in <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>, then enter any tags common to all tracks at <span class="menu">Edit &gt; Metadata...</span> before exporting.  Audacity will then add the automatically generated Track Title and Track Number tags for each exported file without the editor appearing.</li>
@@ -44,6 +44,15 @@
 <li> <b>Use the <span class="button">OK</span> button in Metadata Tags editor to complete the Export.</b> The <span class="button">Save...</span> button only saves an optional template of tag names and values.</li></ul>
 </div>
 <div id="tag"></div>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Tag_and_Value_fields"><span class="tocnumber">1</span> <span class="toctext">Tag and Value fields</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Genres"><span class="tocnumber">2</span> <span class="toctext">Genres</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Suppress_the_metadata_dialog"><span class="tocnumber">4</span> <span class="toctext">Suppress the metadata dialog</span></a></li>
+</ul>
+</div>
+
 <h2><span class="mw-headline" id="Tag_and_Value_fields">Tag and Value fields</span></h2>
 <ul><li><b>Tag Name:</b> The first seven Tag names are permanent and cannot be edited. You can add more tag rows and give them a customised name and value using the "<b>Add</b>" button (see below).
 <ul><li> <b>WAV files:</b> Some applications such as iTunes will not see tags in WAV files. Some applications such as those made by Microsoft can only read INFO tags in WAV files, in which case the only customised tags they will see will be "Copyright" and "Software".</li></ul></li>
@@ -64,37 +73,45 @@
 <li><b>Save:</b> Saves the current list of tag names and values to a file on your drive.</li>
 <li><b>Set Default:</b> Makes the current list of tag names and non-empty values the default state whenever opening a new, empty project. To clear the default, press <span class="button">Clear</span> then <span class="button">Set Default</span>. <p> Even if you set a Default, if you import a file containing metadata, that metadata will appear in Metadata Editor. If you always want a fixed set of metadata to show after importing a file, you need to save that set as a template then load the template after importing the file.</p>  </li></ul>
 
+<div id="hide"></div>
+<h2><span class="mw-headline" id="Suppress_the_metadata_dialog">Suppress the metadata dialog</span></h2>
+<p>At the bottom left of the dialog is a checkbox labelled "<b>Don't show this when exporting audio</b>"
+</p><p>Checking this "on" will cause subsequent exports to take effect without interruptions for the Metadata Editor dialog.  This is equivalent to un-checking the checkbox labelled "<b>Show Metadata Tags editor</b>" in <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a> <i>(they are basically the same Preference setting)</i>.
+</p>
+<div class="note">With this option checked:
+<ul><li> Metadata will still be written if imported files already contain metadata</li>
+<li> Export Multiple will still write metadata for Track Title and Track Number.</div></li></ul>
 
 <!-- 
 NewPP limit report
-Cached time: 20190226100922
+Cached time: 20190503130140
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.117 seconds
-Real time usage: 0.123 seconds
-Preprocessor visited node count: 492/1000000
-Preprocessor generated node count: 1606/1000000
-Post‐expand include size: 6418/2097152 bytes
-Template argument size: 2727/2097152 bytes
+CPU time usage: 0.114 seconds
+Real time usage: 0.121 seconds
+Preprocessor visited node count: 508/1000000
+Preprocessor generated node count: 1632/1000000
+Post‐expand include size: 6622/2097152 bytes
+Template argument size: 2906/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   51.508      1 - -total
- 50.67%   26.098      1 - Template:I18n
- 46.77%   24.090      1 - Template:I18n_box
- 39.69%   20.446      1 - Template:I18n_list
- 19.71%   10.153     19 - Template:Key
- 19.39%    9.988      4 - Template:I18n_link
- 11.25%    5.796      4 - Template:Autoglossonym
-  8.25%    4.251      1 - Template:Note
-  6.51%    3.352      5 - Template:Button
-  3.47%    1.790      1 - Template:Intro
+100.00%   57.035      1 - -total
+ 52.87%   30.153      1 - Template:I18n
+ 49.19%   28.056      1 - Template:I18n_box
+ 41.90%   23.895      1 - Template:I18n_list
+ 19.62%   11.191      4 - Template:I18n_link
+ 18.47%   10.536     19 - Template:Key
+ 11.33%    6.464      4 - Template:Autoglossonym
+  6.46%    3.686      2 - Template:Note
+  6.08%    3.469      5 - Template:Button
+  3.89%    2.216      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2566-0!*!0!!*!5!* and timestamp 20190226100922 and revision id 62567
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2566-0!*!0!!en!5!* and timestamp 20190503130140 and revision id 63953
  -->
 </div>
 										<!-- end content -->
@@ -129,7 +146,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -166,7 +184,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Metadata_Editor">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Metadata_Editor">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

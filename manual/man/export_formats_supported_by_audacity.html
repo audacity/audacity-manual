@@ -57,11 +57,57 @@
 </p><p>There is no loss of quality compared to the original audio when playing uncompressed formats, except for some possible loss of low frequencies in the 4-bit (A)DPCM formats. Those 4-bit formats and the lossless 8-bit U-Law/A-Law formats save file size by reducing their <i><b><a href="glossary.html#sample_format" title="Glossary">bit depth</a></b></i>, in a similar way that any of the uncompressed formats can be made proportionately smaller by reducing their <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> (and thus reducing the high frequencies they can contain). GSM 6.10 WAV (mobile) will also exhibit considerable loss of quality as it was a format designed for mobile telephony.
 </p>
 <ul><li><b><a href="other_uncompressed_files_export_options.html" title="Other uncompressed files Export Options">Other uncompressed files</a>:</b> includes all the uncompressed audio formats that Audacity can export, including 4-bit (A)DPCM, 8-bit U-Law/A-Law, 24-bit, 32-bit and 64-bit options. Also <a href="glossary.html#gsm" title="Glossary">GSM 6.10 WAV (mobile)</a> which produces a mono WAV file encoded with the compressed, lossy GSM 6.10 <i><b><a href="glossary.html#codec" title="Glossary">codec</a></b></i> as used in mobile telephones. This menu item defaults to WAV (Microsoft) signed 16-bit PCM on Windows and Linux and to AIFF (Apple/SGI) signed 16-bit PCM on Mac. </li>
-<li><b> <i><a href="glossary.html#aiff" title="Glossary">AIFF (Apple/SGI) signed 16-bit PCM</a></i> </b> <i>No options for this format</i>: AIFF is a lossless format that can both be played on Mac and Windows computers, though it is far more likely to be selected by Mac users. AIFF 16-bit PCM is suitable whenever you want to burn your exported file to an <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">audio CD</a>.</li>
+<li><b> <i><a href="glossary.html#aiff" title="Glossary">AIFF (Apple/SGI) signed 16-bit PCM</a></i> </b> <i>No options for this format</i>: AIFF is a lossless format that can both be played on Mac and Windows computers, though it is far more likely to be selected by Mac users. AIFF 16-bit PCM is suitable whenever you want to burn your exported file to an <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">audio CD</a>. </li>
 <li><b> <i><a href="glossary.html#wav" title="Glossary">WAV (Microsoft) signed 16-bit PCM</a></i> </b> <i>No options for this format</i>: WAV is a lossless format that can both be played on Windows or Mac computers. WAV 16-bit PCM is eminently suitable whenever you want to burn your exported file to an <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">audio CD</a>.</li>
+<li><b> <i><a href="glossary.html#wav" title="Glossary">WAV (Microsoft) signed 24-bit PCM</a></i> </b> <i>No options for this format</i>: 24-bit PCM gives higher quality than 16-bit PCM, but takes up more space.</li>
 <li><b> <i><a href="glossary.html#wav" title="Glossary">WAV (Microsoft) 32-bit float</a></i> </b> <i>No options for this format</i>: 32-bit float WAV is a lossless format, a maximum quality "raw capture" file.   32-bit float resolution gives the highest quality of the three uncompressed choices, but takes twice the storage space on disk compared to 16-bit resolution. It will not play on many players or player apps.  It is mostly useful as a backup archive of raw captured recordings or finished projects.</li></ul>
-<p>16-bit WAV and AIFF formats produce large files and are best-suited for use on computers rather than portable players or devices.  
+<div class="note">16-bit WAV and AIFF formats produce large files and are best-suited for use on computers rather than portable players or devices. </div> 
+<div id="wavtime"></div>
+<h3><span class="mw-headline" id="Size_limits_for_WAV_and_AIFF_PCM-encoded_files">Size limits for WAV and AIFF PCM-encoded files</span></h3>
+<p>WAV and AIFF files are limited to a maximum size of 4GB <i>(this is a general restriction and not an Audacity one)</i>. 
+</p><p>See the following table for how this translates to approximate time durations:
 </p>
+<dl><dd><table class="prettytablerows" width="27%" rules="rows">
+<caption> Maximum sizes for files in time duration (hours:minutes)
+</caption>
+<tr style="background: #add8e6">
+<td valign="top"><b>Sample Format</b>
+</td>
+<td valign="top"><b>Stereo</b>
+</td>
+<td valign="top"><b>Mono</b>
+</td></tr>
+<tr>
+<td>16-bit (default)
+</td>
+<td>6h:45m
+</td>
+<td>13h:31m
+</td></tr>
+<tr>
+<td>24-bit
+</td>
+<td>4h:30m
+</td>
+<td>9h:01m
+</td></tr>
+<tr>
+<td>32-bit
+</td>
+<td>3h:22m
+</td>
+<td>6h:45m
+</td></tr></table></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">These timings are the theoretical maximum times.  You would be well-advised to restrict yourself to slightly lower limits to afford some head-room.
+</td></tr></table>
+</div>
+
 <div id="compressed"></div>
 <h2><span class="mw-headline" id="Compressed_format_types">Compressed format types</span></h2>
 <p><i><b><a href="glossary.html#compressed_format" title="Glossary">Size-compressed</a></b></i> formats produce files that are usually significantly smaller than uncompressed formats, as seen in the <a href="#compare">table</a> below. The file formats that are significantly smaller are always of lower quality than the original audio, but are well suited for use on portable devices where storage space is limited. 
@@ -294,34 +340,34 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190226112512
+Cached time: 20190503130426
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.101 seconds
-Real time usage: 0.105 seconds
-Preprocessor visited node count: 187/1000000
-Preprocessor generated node count: 1149/1000000
-Post‐expand include size: 5221/2097152 bytes
-Template argument size: 3657/2097152 bytes
+CPU time usage: 0.120 seconds
+Real time usage: 0.125 seconds
+Preprocessor visited node count: 213/1000000
+Preprocessor generated node count: 1221/1000000
+Post‐expand include size: 6051/2097152 bytes
+Template argument size: 4096/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   28.377      1 - -total
- 65.03%   18.454      1 - Template:I18n
- 58.71%   16.659      1 - Template:I18n_box
- 45.24%   12.839      1 - Template:I18n_list
- 12.28%    3.485      1 - Template:I18n_link
- 11.96%    3.393      1 - Template:Advice
-  6.96%    1.975      1 - Template:Autoglossonym
-  6.61%    1.877      2 - Template:Ednote
-  6.28%    1.781      1 - Template:Button
-  6.08%    1.724      1 - Template:Intro
+100.00%   40.313      1 - -total
+ 52.10%   21.004      1 - Template:I18n
+ 47.29%   19.064      1 - Template:I18n_box
+ 37.60%   15.157      1 - Template:I18n_list
+ 16.32%    6.579      1 - Template:Advice
+ 10.60%    4.272      1 - Template:I18n_link
+  9.08%    3.659      1 - Template:Intro
+  8.29%    3.340      1 - Template:Button
+  7.40%    2.983      3 - Template:Note
+  5.85%    2.358      1 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5118-0!*!0!!*!5!* and timestamp 20190226112512 and revision id 57062
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5118-0!*!0!!*!5!* and timestamp 20190503130426 and revision id 64170
  -->
 </div>
 										<!-- end content -->
@@ -356,7 +402,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -393,7 +440,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Export_Formats_supported_by_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Export_Formats_supported_by_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

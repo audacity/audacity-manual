@@ -37,7 +37,7 @@
 <div class="intro">A <i><b>Label Track</b></i> is an additional track that can be created in your project. The labels in the label track can be used to reference points or regions in the project's audio tracks but the label track itself does not contain audio.</div>
 <p><br />
 </p>
-<dl><dd><div class="noresize"><map name="ImageMap_1_863383672"><area href="track_control_panel_and_vertical_scale.html" shape="rect" coords="6,73,104,109" alt="Track Control Panel controls this track" title="Track Control Panel controls this track"/><area href="track_control_panel_and_vertical_scale.html" shape="rect" coords="3,3,185,33" alt="For controlling this track" title="For controlling this track"/><area href="#point" shape="rect" coords="189,74,302,108" alt="Point Label labels just one moment" title="Point Label labels just one moment"/><area href="#point" shape="rect" coords="3,150,120,180" alt="For labelling just one moment" title="For labelling just one moment"/><area href="#region" shape="rect" coords="325,74,829,108" alt="Region Label for labelling a time range with a start and end" title="Region Label for labelling a time range with a start and end"/><area href="#region" shape="rect" coords="185,3,315,33" alt="For labelling a time range with a start and end" title="For labelling a time range with a start and end"/></map><img alt="LabelTrackAnnotated.png" src="../m/images/5/55/labeltrackannotated.png" width="845" height="185" usemap="#ImageMap_1_863383672"/></div></dd></dl>
+<dl><dd><div class="noresize"><map name="ImageMap_1_1859088991"><area href="track_control_panel_and_vertical_scale.html" shape="rect" coords="6,73,104,109" alt="Track Control Panel controls this track" title="Track Control Panel controls this track"/><area href="track_control_panel_and_vertical_scale.html" shape="rect" coords="3,3,185,33" alt="For controlling this track" title="For controlling this track"/><area href="#point" shape="rect" coords="189,74,302,108" alt="Point Label labels just one moment" title="Point Label labels just one moment"/><area href="#point" shape="rect" coords="3,150,120,180" alt="For labelling just one moment" title="For labelling just one moment"/><area href="#region" shape="rect" coords="325,74,829,108" alt="Region Label for labelling a time range with a start and end" title="Region Label for labelling a time range with a start and end"/><area href="#region" shape="rect" coords="185,3,315,33" alt="For labelling a time range with a start and end" title="For labelling a time range with a start and end"/></map><img alt="LabelTrackAnnotated.png" src="../m/images/5/55/labeltrackannotated.png" width="845" height="185" usemap="#ImageMap_1_1859088991"/></div></dd></dl>
 <div style="position:relative;">
 <div class="note" style="width:150px;position:absolute;left:693px;top:-55px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
 </div>
@@ -56,6 +56,7 @@
 <li><a href="#editor">Labels Editor</a></li>
 <li><a href="#menu">Editing or moving the Label Track using the Label Track Dropdown Menu</a></li>
 <li><a href="#collapse">Collapsing the Label Track</a></li>
+<li><a href="#select">Selecting the Label track</a></li>
 <li><a href="#export">Importing and Exporting Labels</a></li></ul>
 <p><br />
 </p>
@@ -206,7 +207,7 @@
 <h2><span class="mw-headline" id="Editing_or_moving_the_label_track_using_the_Label_Track_Dropdown_Menu">Editing or moving the label track using the Label Track Dropdown Menu</span></h2>
 <p>Clicking the label track's name by the downward-pointing triangle (or using shortcut <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> or the keyboard Menu key when the label track has focus) opens the Label Track Dropdown Menu:
 </p>
-<dl><dd><span title="Label Track Dropdown menu"><img alt="LabelTrackDropdownMenu.png" src="../m/images/4/43/labeltrackdropdownmenu.png" width="234" height="179" /></span></dd></dl>
+<dl><dd><span title="Label Track Dropdown menu"><img alt="TrackDropdownMenu.png" src="../m/images/9/9c/trackdropdownmenu.png" width="240" height="190" /></span></dd></dl>
 <ul><li><b>Name</b></li></ul>
 <dl><dd>Displays the "Track Name" dialog where you can give the track a new name. Useful in multi-track projects to provide a visual indication of the content of each track.</dd></dl>
 <ul><li><b>Font</b></li></ul>
@@ -223,10 +224,20 @@
 </p>
 <div id="collapse"></div>
 <h2><span class="mw-headline" id="Collapsing_the_Label_Track">Collapsing the Label Track</span></h2>
-<p><b>Track Collapse Button:</b>
+<p><span style="font-weight: bold; font-size:118%">Track Collapse Button:</span>
 </p>
 <div style="margin-top:-7px">
-<dl><dd><span style="position:relative;bottom:-7px"> <span title="Track Collapse Button"><img alt="TrackCollapse.png" src="../m/images/5/5d/trackcollapse.png" width="62" height="20" /></span> </span>Click on this to make the track 'fold up' into a smaller size.  Click again, or drag the lower edge of the track to restore the size.</div></dd></dl>
+<dl><dd><span style="position:relative;bottom:-7px"> <span title="Track Collapse button"><img alt="TrackCollapse.png" src="../m/images/5/5d/trackcollapse.png" width="17" height="19" /></span> </span></dd></dl>
+Click on this to make the track 'fold up' into a smaller size.  Click again, or drag the lower edge of the track to restore the size.</div>
+<p><br />
+</p>
+<div id="select"></div>
+<h2><span class="mw-headline" id="Selecting_the_Label_Track">Selecting the Label Track</span></h2>
+<p><span style="font-weight: bold; font-size:118%">Track Select Button:</span>
+</p>
+<div style="margin-top:-7px">
+<dl><dd><span style="position:relative;bottom:-7px"> <span title="Track Select button"><img alt="Track Select button.png" src="../m/images/a/ae/track_select_button.png" width="60" height="19" /></span> </span></dd></dl>
+Click on this to select the whole label track.</div>
 <p><br />
 </p>
 <div id="export"></div>
@@ -236,34 +247,34 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190226103656
+Cached time: 20190503130117
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.206 seconds
-Real time usage: 0.214 seconds
-Preprocessor visited node count: 951/1000000
-Preprocessor generated node count: 3107/1000000
-Post‐expand include size: 11773/2097152 bytes
-Template argument size: 4474/2097152 bytes
+CPU time usage: 0.189 seconds
+Real time usage: 0.196 seconds
+Preprocessor visited node count: 973/1000000
+Preprocessor generated node count: 3171/1000000
+Post‐expand include size: 11925/2097152 bytes
+Template argument size: 4514/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  110.233      1 - -total
- 37.18%   40.984      1 - Template:Annotated
- 25.32%   27.911      1 - Template:I18n
- 23.73%   26.159      1 - Template:I18n_box
- 20.72%   22.843      1 - Template:I18n_list
- 11.46%   12.633      6 - Template:I18n_link
-  9.68%   10.675     20 - Template:Key
-  8.82%    9.720     13 - Template:Shortcut
-  8.60%    9.476      5 - Template:Note
-  6.84%    7.537      6 - Template:Autoglossonym
+100.00%   97.157      1 - -total
+ 33.78%   32.820      1 - Template:Annotated
+ 27.48%   26.703      1 - Template:I18n
+ 25.75%   25.021      1 - Template:I18n_box
+ 22.44%   21.800      1 - Template:I18n_list
+ 12.66%   12.305      6 - Template:I18n_link
+  9.46%    9.193     20 - Template:Key
+  8.93%    8.676     13 - Template:Shortcut
+  8.02%    7.794      5 - Template:Note
+  7.50%    7.285      6 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1986-0!*!0!!*!5!* and timestamp 20190226103655 and revision id 62339
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1986-0!*!0!!*!5!* and timestamp 20190503130117 and revision id 64068
  -->
 </div>
 										<!-- end content -->
@@ -298,7 +309,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -335,7 +347,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Label_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Label_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

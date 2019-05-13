@@ -40,7 +40,7 @@
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Why_do_I_get_.22Error_opening_sound_device.22.3F"><span class="tocnumber">1</span> <span class="toctext">Why do I get "Error opening sound device"?</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Why_do_I_get_.22Error_opening_sound_device.22_or_.22Error_opening_recording_device.22.3F"><span class="tocnumber">1</span> <span class="toctext">Why do I get "Error opening sound device" or "Error opening recording device"?</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Why_do_I_get_.22FFmpeg_Error_-_Can.27t_open_audio_codec_0x15002.22_.28or_0x15003.29.3F"><span class="tocnumber">2</span> <span class="toctext">Why do I get "FFmpeg Error - Can't open audio codec 0x15002" (or 0x15003)?</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Why_do_I_get_.22Audacity_is_already_running_....22_error_message.3F"><span class="tocnumber">3</span> <span class="toctext">Why do I get "Audacity is already running ..." error message?</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Why_does_the_computer_reboot_or_show_a_blue_screen_message_when_I_launch_Audacity_or_play_or_record.3F"><span class="tocnumber">4</span> <span class="toctext">Why does the computer reboot or show a blue screen message when I launch Audacity or play or record?</span></a></li>
@@ -52,13 +52,13 @@
 </div>
 
 <div id="sound_device"></div>
-<h2><span class="mw-headline" id="Why_do_I_get_.22Error_opening_sound_device.22.3F">Why do I get "Error opening sound device"?</span></h2>
-<p>This error message asks you to check the recording or playback device settings and the Audacity <a href="selection_toolbar.html" title="Selection Toolbar">project sample rate</a>. If the message mentions "recording device", it means there's a problem with your Audacity, operating system or sound device recording settings. If the message mentions "playback device", it means there is a problem with your playback settings. 
-</p><p>There are three forms of this message
+<h2><span class="mw-headline" id="Why_do_I_get_.22Error_opening_sound_device.22_or_.22Error_opening_recording_device.22.3F">Why do I get "Error opening sound device" or "Error opening recording device"?</span></h2>
+<p>These error messages ask you to check the recording or playback device settings and the Audacity <a href="selection_toolbar.html" title="Selection Toolbar">project sample rate</a>. If the message mentions "recording device", it means there's a problem with your Audacity, operating system or sound device recording settings. If the message mentions "playback device", it means there is a problem with your playback settings. 
+</p><p>There are two forms of this message:
 </p>
 <ul><li><b>Error opening recording device - Error code -xxxx</b>  this means there is a problem with your Audacity, operating system or sound device recording settings, where xxxx is replaced by a numeric code <a href="error_opening_sound_device.html#codes" title="Error opening sound device">see here for details</a>.</li>
-<li><b>Error opening recording device - Error code -xxxx</b>  this means there is a problem with your playback settings, where xxxx is replaced by a numeric code <a href="error_opening_sound_device.html#codes" title="Error opening sound device">see here for details</a>.</li>
-<li><b>Error opening sound device ...</b> this is a generic message that is associated with a failure to start the audio stream.</li></ul>
+<li><b>Error opening sound device ...</b> this is a generic message that is associated with a failure to start the audio playback stream.</li></ul>
+</li></ul>
 <p>These messages can suggest a problem with the drivers of the sound device, or possibly that you are asking the device to do something it cannot do. For example you will see this error if you attempt to <a href="transport_menu.html#record" title="Transport Menu">Record</a> to more channels than your device supports, or if you try to <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdub</a> on a device that can either record or play back but not both.
 </p><p>The recording device message most commonly occurs on Windows when one of the sound device inputs is not properly enabled or otherwise cannot respond to Audacity's request to start recording.   
 </p><p>For details of how to fix this please see <a href="error_opening_sound_device.html" title="Error opening sound device">Error opening sound device</a>.
@@ -75,7 +75,20 @@
 <div id="already_running"></div>
 <h2><span class="mw-headline" id="Why_do_I_get_.22Audacity_is_already_running_....22_error_message.3F">Why do I get "Audacity is already running ..." error message?</span></h2>
 <p>This can occur if an old Audacity "lock file" is still present <i>(we believe that this error only occurs on Mac computers)</i>.
-</p><p>See <a href="faq_installation_and_plug_ins.html#already" title="FAQ:Installation and Plug-Ins">FAQ:Installation, Startup and Plug-ins</a> for details.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">On Mac the lock file is in:
+<ul><li><b>~/Library/Application Support/audacity/SessionData</b></li></ul>
+<p>Look in the SessionData folder and delete any files and folders you find there.
+</p>
+</td></tr></table>
+</div>
+<p>See <a href="faq_installation_and_plug_ins.html#already" title="FAQ:Installation and Plug-Ins">FAQ:Installation, Startup and Plug-ins</a> for details.
 </p><p><br />
 <a href="#top">back to top</a>
 </p><p><br />
@@ -141,33 +154,34 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190225235748
+Cached time: 20190503130212
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.103 seconds
-Real time usage: 0.111 seconds
-Preprocessor visited node count: 361/1000000
-Preprocessor generated node count: 1067/1000000
-Post‐expand include size: 5281/2097152 bytes
-Template argument size: 1877/2097152 bytes
+CPU time usage: 0.106 seconds
+Real time usage: 0.112 seconds
+Preprocessor visited node count: 376/1000000
+Preprocessor generated node count: 1127/1000000
+Post‐expand include size: 6158/2097152 bytes
+Template argument size: 2388/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   46.233      1 - -total
- 84.93%   39.264      1 - Template:I18n
- 79.94%   36.959      1 - Template:I18n_box
- 70.25%   32.480      1 - Template:I18n_list
- 39.40%   18.214      7 - Template:I18n_link
- 23.12%   10.688      7 - Template:Autoglossonym
-  5.13%    2.370      4 - Template:Menu
-  4.79%    2.214      1 - Template:Advice
-  3.37%    1.556      1 - Template:Note
+100.00%   47.794      1 - -total
+ 77.85%   37.207      1 - Template:I18n
+ 73.27%   35.018      1 - Template:I18n_box
+ 64.46%   30.810      1 - Template:I18n_list
+ 36.00%   17.208      7 - Template:I18n_link
+ 21.27%   10.166      7 - Template:Autoglossonym
+  4.92%    2.351      1 - Template:Advice
+  4.34%    2.074      4 - Template:Menu
+  3.53%    1.689      1 - Template:Ednote
+  3.45%    1.649      1 - Template:Tip
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3852-0!*!0!!en!5!* and timestamp 20190225235747 and revision id 63193
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3852-0!*!0!!en!5!* and timestamp 20190503130212 and revision id 64138
  -->
 </div>
 										<!-- end content -->
@@ -202,7 +216,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -239,7 +254,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Errors">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Errors">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

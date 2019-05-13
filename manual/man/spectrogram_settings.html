@@ -42,7 +42,7 @@
 <h2><span class="mw-headline" id="Per_track_Spectrogram_Settings">Per track Spectrogram Settings</span></h2>
 <p>Open the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> on the Spectrogram track you want to change, then choose <b>Spectrogram Settings...</b>.  This opens the dialog below: 
 </p>
-<dl><dd><span title="Audio track Spectrogram Settings dialog"><img alt="Spectrogram Track Settings.png" src="../m/images/b/b3/spectrogram_track_settings.png" width="432" height="387" /></span></dd></dl>
+<dl><dd><span title="Audio track Spectrogram Settings dialog"><img alt="Spectrogram Track Settings.png" src="../m/images/b/b3/spectrogram_track_settings.png" width="426" height="383" /></span></dd></dl>
 <div class="note">The available settings are the same as those offered in <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a> with the addition of a <a href="#preferences">Use Preferences</a> checkbox.</div>
 <div id="changes"></div>
 <h2><span class="mw-headline" id="Persistence_of_changes_made_here">Persistence of changes made here</span></h2>
@@ -80,7 +80,7 @@
 <li><b>Reassignment</b>: The method of reassignment sharpens blurry time-frequency data by relocating the data according to local estimates of instantaneous frequency and group delay. This mapping to reassigned time-frequency coordinates is very precise for signals that are separable in time and frequency with respect to the analysis window.</li>
 <li><b>Pitch (EAC)</b>: Highlights the contour of the fundamental frequency (musical pitch) of the audio, using the Enhanced Autocorrelation (EAC) algorithm. The EAC Algorithm was developed to produce a mathematical representation of the changes of pitch in a piece of audio. The aim was to allow automated comparison of sound files so that two versions of the same tune could be recognized as being similar, even if played in different keys, or on different instruments.</li></ul></li>
 <li><span style="font-weight: bold; font-size:118%">Window Size:</span> The dropdown menu lets you choose the size of the <i><b><a href="glossary.html#fft" title="Glossary">Fast Fourier Transform</a></b></i> (<i><b><a href="glossary.html#fft" title="Glossary">FFT</a></b></i>) window which affects how much vertical (<i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i>) detail you see.  Larger FFT window sizes give more low frequency resolution and less temporal resolution, and are slower. </li>
-<li> <span style="font-weight: bold; font-size:118%">Window type:</span> Determines precisely how the spectrogram is computed.  'Rectangular' is slightly faster than other methods, but introduces some artifacts.  All methods give broadly similar results.</li>
+<li> <span style="font-weight: bold; font-size:118%">Window type:</span> Determines precisely how the spectrogram is computed. <b>Hann</b> is the default setting.  'Rectangular' is slightly faster than other methods, but introduces some artifacts.  All methods give broadly similar results.</li>
 <li> <span style="font-weight: bold; font-size:118%">Zero padding factor:</span> Larger values give finer interpolation of the colors along the vertical axis, at the expense of more computation time.  Does not affect the time vs. frequency resolution tradeoff.  This option has no effect and is grayed out when the Pitch (EAC) algorithm is selected.</li></ul>
 <div id="specsel"></div>
 <h2><span class="mw-headline" id="Enable_Spectral_Selection">Enable Spectral Selection</span></h2>
@@ -92,11 +92,11 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190226104926
+Cached time: 20190503130545
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.090 seconds
-Real time usage: 0.094 seconds
+CPU time usage: 0.083 seconds
+Real time usage: 0.086 seconds
 Preprocessor visited node count: 209/1000000
 Preprocessor generated node count: 634/1000000
 Post‐expand include size: 5306/2097152 bytes
@@ -107,17 +107,17 @@ Expensive parser function count: 0/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   19.644      1 - -total
- 34.87%    6.849      1 - Template:No-rename
- 31.65%    6.218      3 - Template:Ednote
- 19.87%    3.903      4 - Template:Button
- 17.33%    3.405     11 - Template:Bh
- 15.45%    3.034      3 - Template:Note
-  6.92%    1.359      1 - Template:Intro
-  5.80%    1.139      1 - Template:Alert
+100.00%   20.638      1 - -total
+ 36.47%    7.527      1 - Template:No-rename
+ 32.18%    6.641      3 - Template:Ednote
+ 20.15%    4.158      4 - Template:Button
+ 15.82%    3.264     11 - Template:Bh
+ 15.50%    3.198      3 - Template:Note
+  7.93%    1.637      1 - Template:Intro
+  5.83%    1.204      1 - Template:Alert
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5772-0!*!0!!*!5!* and timestamp 20190226104926 and revision id 61115
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5772-0!*!0!!*!5!* and timestamp 20190503130545 and revision id 63486
  -->
 </div>
 										<!-- end content -->
@@ -152,7 +152,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -189,7 +190,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Spectrogram_Settings">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Spectrogram_Settings">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

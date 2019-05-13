@@ -62,7 +62,6 @@
 <ol><li><a href="#install">Installing Audacity on Mac</a></li>
 <li><a href="#updates">Check for Updates</a></li>
 <li><a href="#plugins">Plug-ins from previous Audacity installations</a></li>
-<li><a href="#maclame">Installing LAME on Mac</a></li>
 <li><a href="#macff">Installing the FFmpeg Import/Export Library on Mac</a></li>
 <li><a href="#purge">Reset Audacity Settings</a></li></ol>
 <p><br />
@@ -97,6 +96,10 @@
 <div id="compatible_projects"></div>
 <h3><span class="mw-headline" id="Projects_saved_by_old_versions_of_Audacity">Projects saved by old versions of Audacity</span></h3>
 <p>Current Audacity is compatible with project files saved by versions of Audacity 1.3.x and later, including 2.x.x. 
+</p>
+<div id="lamein"></div>
+<h3><span class="mw-headline" id="LAME_is_now_built-in_as_part_of_Audacity">LAME is now built-in as part of Audacity</span></h3>
+<p>The software patent on <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> encoding library has expired, so now the <b>LAME</b> library for <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> export is built-in with Audacity for Mac.
 </p><p><br />
 </p>
 <div id="updates"></div>
@@ -113,50 +116,7 @@
 <ul><li> You can remove any duplicates that don't run by using <span class="menu">Effect &gt; <a href="effect_menu.html#add_remove_plugins" title="Effect Menu">Add / Remove Plug-ins...</a></span> then click <span class="button">OK</span>. This does not remove the duplicates from the Plug-in Manager's list, but disables them so they do not appears in the menus.</li>
 <li> Alternatively you can remove all unwanted duplicates, whether you have deleted the old Audacity installation folder or not, by deleting the file <b>pluginregistry.cfg</b> in <b>~/Library/Application Support/audacity/</b>.
 <ul><li> If you delete the Audacity folder from a previous installation, remember to move any optional plug-ins you added to its plug-ins folder to the new Audacity Plug-Ins folder at <b>~/Library/Application Support/audacity/Plug-Ins</b>.      </li></ul></li></ul>
-<p><br />
-</p>
-<div id="maclame"></div>
-<h2><span class="mw-headline" id="Installing_LAME_on_Mac">Installing LAME on Mac</span></h2>
-<div class="note">Audacity does not include <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding software or distribute such software from its own websites. Instead, use the following instructions to download and install the free and recommended <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> third-party encoder to export MP3 files with Audacity. </div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">Audacity 2.3.1 on Mac is now a 64-bit application. <p>This means that if you are a user of previous Audacity versions on Mac and had installed the optional LAME library then you <i><b>must</b></i> now install the 64-bit versions of the LAME library, otherwise your MP3 exports will no longer work.</p><p>Installing the 64-bit LAME library will not overwrite or delete your 32-bit LAME library if you have one installed.</p>
-</td></tr></table></div>
-<div id="maclame_installer"></div>
-<h3><span class="mw-headline" id="Recommended_package_Installer">Recommended package Installer</span></h3>
-<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
-<li> In the <b>64-bit LAME</b> section, left-click the link <b>"lame_64bit_osx.pkg"</b>.</li>
-<li> When you have finished downloading, double-click the <b>"lame_64bit_osx.pkg"</b> in your <b>Downloads</b>folder. </li>
-<li> You will be guided through the installation</li>
-<li> Click through the steps in the installer. This will install the <b>3.100 libmp3lame64bit.dylib</b> file in the system library at <b>/Library/Application Support/audacity/libs/</b>.
-<ul><li> <i>On some Macs the process may look as though it has stalled on "Validating packages" - just be patient and wait for it to complete.</i></li></ul></li></ol>
-<dl><dd>Audacity should detect LAME automatically when you export as MP3 or restart Audacity. If Audacity cannot find LAME, then follow the <a href="#LAMElocate"><b>instructions below</b></a> to locate <b>libmp3lame64bit.dylib</b> using the Libraries Preferences.</dd></dl>
-<div id="LAMElocate"></div>
-<h3><span class="mw-headline" id="Locating_the_LAME_library_manually">Locating the LAME library manually</span></h3>
-<ol><li> In Audacity, click <span class="menu">Audacity &gt; <a href="preferences.html" title="Preferences">Preferences...</a></span> then choose "<b>Libraries</b>" on the left.</li>
-<li> Click <span class="button">Locate...</span> to right of "<b>MP3 Library:</b>", then in the "<b>Locate LAME</b>" dialog that appears, click <span class="button">Browse...</span>. 
-<ul><li> This will normally open the Audacity default libraries location:  <b>/Library/Application Support/audacity/libs</b></li></ul></li>
-<li> Navigate to and open the folder where "<b>libmp3lame64bit.dylib</b>" is, and select the "<b>libmp3lame64bit.dylib</b>" file 
-<ul><li> If the file is grayed out, change the <b>File type:</b> dropdown entry to <b>All Files</b> or <b>Dynamic Libraries</b></li></ul></li>
-<li> Click <span class="button">Open</span> to return to the Locate Lame dialog</li>
-<li> Click <span class="button">OK</span> in the Locate LAME dialog </li>
-<li> Note the LAME library has been located and should show alongside "<b>MP3 Library Version:</b>" as <b>LAME 3.100</b> </li>
-<li> Then click <span class="button">OK</span> to exit Preferences.</li></ol>
-<dl><dd>You should now be able to export MP3s without any further configuration, choosing <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export as MP3</a></span> </dd></dl>
-<div class="example"><div id="maclame_zip"></div>
-<h3><span class="mw-headline" id="Alternative_zip_download_for_expert_users_who_want_to_choose_their_own_library_location">Alternative zip download for expert users who want to choose their own library location</span></h3>
-<div class="note">It is not recommended to extract the LAME library to /usr/local/lib because administrative or root permissions may be needed to read the LAME library from there.</div>
-<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lameosx64bitdl"><b>download page</b></a> <br />&#160;<i><b>Left-click this link, do not right-click</b></i>.</li>
-<li> In the <b>64-bit LAME</b> section, left-click the link <b>"Lame_Library_64bit_MAC_OSX_for_Audacity_2.3.1_and_above.zip"</b></li>
-<li> On most Macs this should extract the contents of the ZIP to your <b>Downloads</b> folder, it will be a single file called:  <b>libmp3lame64bit.dylib</b>
-<ul><li>Otherwise extract the contents of the downloaded ZIP file to obtain the file: libmp3lame64bit.dylib</li></ul></li>
-<li> Then copy the file "libmp3lame64bit.dylib" and paste it anywhere you have full permissions. 
-<ul><li> The preferred default Audacity location is <b>/Library/Application Support/audacity/libs</b></li></ul></li></ol>
-&#160;</div>
 <p><br />
 </p>
 <div id="macff"></div>
@@ -189,7 +149,7 @@
 <p>If you installed FFmpeg while Audacity was running, or if you installed FFmpeg to a non-default location, Audacity will ask you to configure Preferences to locate the FFmpeg library. 
 </p><p>To do this, access <a href="preferences.html" title="Preferences">Preferences</a> then the "<b>Libraries</b>" tab on the left: 
 </p>
-<dl><dd><span title="Libraries Preferences showing the FFmpeg Locate... and Download... buttons, showing FFmpeg library not found"><img alt="Preferences Libraries FFmpeg NOT Found Mac.png" src="../m/images/d/d8/preferences_libraries_ffmpeg_not_found_mac.png" width="782" height="467" /></span></dd></dl>
+<dl><dd><span title="Libraries Preferences showing the FFmpeg Locate... and Download... buttons, showing FFmpeg library not found"><img alt="Preferences Libraries FFmpeg NOT Found Mac LAME built-in.png" src="../m/images/4/40/preferences_libraries_ffmpeg_not_found_mac_lame_built_in.png" width="780" height="483" /></span></dd></dl>
 <p>As in the image above, the "FFmpeg Library Version" will say "<b>FFmpeg library not found</b>". To correct this:
 </p>
 <ol><li> Click the <span class="button">Locate...</span> button to right of <b>FFmpeg Library:</b></li>
@@ -276,34 +236,34 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20190309145344
+Cached time: 20190503130131
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.150 seconds
-Real time usage: 0.157 seconds
-Preprocessor visited node count: 549/1000000
-Preprocessor generated node count: 1911/1000000
-Post‐expand include size: 16007/2097152 bytes
-Template argument size: 10628/2097152 bytes
+CPU time usage: 0.151 seconds
+Real time usage: 0.156 seconds
+Preprocessor visited node count: 536/1000000
+Preprocessor generated node count: 1939/1000000
+Post‐expand include size: 20592/2097152 bytes
+Template argument size: 15182/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   55.781      1 - -total
- 44.79%   24.985      1 - Template:I18n
- 40.61%   22.655      1 - Template:I18n_box
- 33.42%   18.643      1 - Template:I18n_list
- 14.16%    7.898     15 - Template:Button
- 12.38%    6.907      2 - Template:I18n_link
- 11.37%    6.344      1 - Template:Intro
-  7.25%    4.044      2 - Template:Autoglossonym
-  4.61%    2.572      7 - Template:Note
-  4.35%    2.424      6 - Template:Menu
+100.00%   49.093      1 - -total
+ 40.04%   19.657      1 - Template:I18n
+ 36.56%   17.948      1 - Template:I18n_box
+ 29.95%   14.705      1 - Template:I18n_list
+ 16.53%    8.115      2 - Template:Ednote
+ 15.27%    7.496     15 - Template:Button
+ 11.57%    5.680      2 - Template:I18n_link
+ 10.74%    5.273      1 - Template:Intro
+  6.84%    3.359      2 - Template:Autoglossonym
+  5.40%    2.649      2 - Template:Example
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5421-0!*!0!!*!5!* and timestamp 20190309145344 and revision id 63425
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5421-0!*!0!!*!5!* and timestamp 20190503130131 and revision id 63902
  -->
 </div>
 										<!-- end content -->
@@ -338,7 +298,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -375,7 +336,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-03-09 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Mac_OS_X">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Mac_OS_X">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

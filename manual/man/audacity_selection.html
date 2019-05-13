@@ -50,6 +50,7 @@
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#all">Selecting the entire project</a>
 <ul><li><a href="#auto">Auto-select, if selection required</a></li></ul></li>
+<li><a href="#track">Selecting the whole of an individual track</a></li>
 <li><a href="#mouse">Selecting regions using the mouse - <i>quick and easy</i></a>
 <ul><li> <a href="#mouse-selection-tips">Mouse selection tips</a></li></ul></li>
 <li><a href="#snapto">Snap-To</a> - <i>to force-snap the cursor or selection edges to the closest or previous position of the current selection format</i></li>
@@ -72,10 +73,27 @@
 <p>You can select the <b>entire length</b> of all tracks on screen with <span class="menu">Select &gt; <a href="select_menu.html#all" title="Select Menu">All</a></span> or use the shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + A</span> <i>(or <span class="kbrd" style="background-color: #d0d0f8">&#8984; + A</span> on a Mac)</i>. 
 </p>
 <div id="auto"></div>
-<h3><span class="mw-headline" id="Auto-select.2C_if_selection_required">Auto-select, if selection required</span></h3>
-<p>There is a setting in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors</a> Preferences called "<b>Auto-select, if selection required</b>" that auto-selects the entire project <i>(whenever you issue an editing command that depends on a selection)</i> if you have made no explicit time selection in audio tracks. 
-</p><p>If you have a Time selection, made by using the <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>, but with no audio tracks selected, then the Auto-select will operate on just that time range in all audio tracks.
-</p><p><br />
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>Select all audio, if selection required</b>
+<p>There is a setting in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors</a> Preferences called "<b>Select all audio, if selection required</b>" that auto-selects the entire project <i>(whenever you issue an editing command that depends on a selection)</i> if you have made no explicit time selection in audio tracks. 
+</p>
+ </li></ul>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="track"></div>
+<h2><span class="mw-headline" id="Selecting_the_whole_of_an_individual_track">Selecting the whole of an individual track</span></h2>
+<p>The whole of an individual track can be selected by clicking in the <span class="button">Select</span> button in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> to the left of a track.
+</p><p>Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> <i>(or <span class="kbrd" style="background-color: #d0d0f8">&#8984; + A</span> on a Mac)</i> and clicking on the <span class="button">Select</span> button <b>toggles the selectedness</b> of the track. 
+</p>
+<dl><dd><span title="Select button highlighted in the Track Control Panel"><img alt="Select button in TCP.png" src="../m/images/b/b6/select_button_in_tcp.png" width="302" height="154" /></span></dd></dl>
+<p><br />
 </p>
 <div id="mouse"></div>
 <h2><span class="mw-headline" id="Selecting_regions_using_the_mouse"><a href="https://alphamanual.audacityteam.org/man/File:IBeam.png" class="image"><img alt="IBeam.png" src="../m/images/1/1f/ibeam.png" width="27" height="27" /></a> Selecting regions using the mouse</span></h2>
@@ -126,16 +144,29 @@
 </p>
 <div id="track_mouse"></div>
 <h2><span class="mw-headline" id="Selecting_.2F_deselecting_tracks_using_the_mouse">Selecting / deselecting tracks using the mouse</span></h2>
-<p>Tracks can be selected, deselecting any other tracks that are already selected, by clicking in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> to the left of a track. Make sure that you click in a neutral area of the Track Control Panel, not inside one of the buttons or sliders. 
-</p><p>Clicking on a track's Track Control Panel selects the entire track. That's a very easy way to apply an effect to an entire track.  If you want to quickly select the entirety of all tracks, you can choose <span class="menu">Select &gt; <a href="select_menu.html#all" title="Select Menu">All</a></span> or use the <span class="kbrd" style="background-color: #e0e0f0">Ctrl + A</span> shortcut.  
-</p><p>There is another handy way to select an entire track - just double-click inside it. If the track has more than one <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a>, the double-click selects just that clip. 
-</p><p>You can also add specific tracks to the selection and remove specific tracks from the selection as follows <i>(remember to use <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac instead of <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span></i>):
+<p>Tracks can be selected, deselecting any other tracks that are already selected, by clicking in the <span class="button">Select</span> button in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> to the left of a track. 
 </p>
-<ul><li> Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and clicking in a track's Track Control Panel <b>toggles the selectedness</b> of that track only. So if a track is not selected, <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span>-clicking its Track Control Panel selects it, or deselects it if it is already selected. </li>
-<li>If you select a track by clicking on its Track Control Panel and then use <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and click in another track's Track Control Panel, all tracks between and including those two tracks will be selected.</li></ul>
+<dl><dd><span title="Select button highlighted in the Track Control Panel"><img alt="Select button in TCP.png" src="../m/images/b/b6/select_button_in_tcp.png" width="302" height="154" /></span></dd></dl>
+<p>Clicking on a track's <span class="button">Select</span> button selects the entire track. That's a very easy way to apply an effect to an entire track.  If you want to quickly select the entirety of all tracks, you can choose <span class="menu">Select &gt; <a href="select_menu.html#all" title="Select Menu">All</a></span> or use the <span class="kbrd" style="background-color: #e0e0f0">Ctrl + A</span> shortcut. 
+</p>
+<ul><li> Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and clicking on the <span class="button">Select</span> button <b>toggles the selectedness</b> of that track only. So if a track is not selected, <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span>-clicking its Track Control Panel selects it, or deselects it if it is already selected.  </li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">There is another handy way to select an entire track - just double-click inside it. If the track has more than one <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a>, the double-click selects just that clip.
+</td></tr></table>
+</div> 
+<h3><span class="mw-headline" id="Adding_tracks_to_the_selection">Adding tracks to the selection</span></h3>
+<p>You can also add specific tracks to the selection and remove specific tracks from the selection as follows <i>(remember to use <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac instead of <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span></i>):
+</p>
+<ul><li> Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and clicking in a track's Track Control Panel will add it to the selection.</li>
+<li> If you select a track by clicking on its Track Control Panel and then use <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and click in another track's Track Control Panel, all tracks between and including those two tracks will be selected.</li></ul>
 <div class="note">If you deselect all tracks (by toggling selectedness off in all tracks or by clicking in the gray background underneath the bottom track in the project), any region that was present (as a selection previously) will remain visible in the Timeline. 
-<ul><li>This gives you a way to play this selection even though no tracks are selected.  </li>
-<li>Also you can restore selectedness of that region to any of the tracks by holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and clicking in the track's Track Control Panel. </div></li></ul>
+<ul><li> This gives you a way to play this selection even though no tracks are selected.  </li>
+<li> Also you can restore selectedness of that region to any of the tracks by holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and clicking in the track's Track Control Panel. </div></li></ul>
 <p><br />
 </p>
 <div id="keyboard"></div>
@@ -329,34 +360,34 @@ You can also change which tracks are selected independently of the range, so tha
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190226112041
+Cached time: 20190503130124
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.272 seconds
-Real time usage: 0.285 seconds
-Preprocessor visited node count: 1286/1000000
-Preprocessor generated node count: 3080/1000000
-Post‐expand include size: 14172/2097152 bytes
-Template argument size: 5069/2097152 bytes
+CPU time usage: 0.281 seconds
+Real time usage: 0.292 seconds
+Preprocessor visited node count: 1404/1000000
+Preprocessor generated node count: 3348/1000000
+Post‐expand include size: 16728/2097152 bytes
+Template argument size: 6377/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  102.684      1 - -total
- 33.02%   33.911      1 - Template:I18n
- 30.97%   31.804      1 - Template:I18n_box
- 28.12%   28.879     63 - Template:Key
- 26.96%   27.682      1 - Template:I18n_list
- 13.59%   13.953      5 - Template:I18n_link
-  7.87%    8.081      5 - Template:Autoglossonym
-  6.74%    6.916      9 - Template:Shortcut
-  2.44%    2.502      3 - Template:Note
-  2.06%    2.116      1 - Template:Toolbar
+100.00%  107.875      1 - -total
+ 28.15%   30.365      1 - Template:I18n
+ 26.92%   29.045     65 - Template:Key
+ 26.43%   28.512      1 - Template:I18n_box
+ 23.18%   25.008      1 - Template:I18n_list
+ 11.67%   12.585      5 - Template:I18n_link
+  7.07%    7.625     10 - Template:Shortcut
+  6.90%    7.445      5 - Template:Autoglossonym
+  3.62%    3.903      1 - Template:Toolbar
+  3.32%    3.581      5 - Template:Button
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2050-0!*!0!!*!5!* and timestamp 20190226112041 and revision id 61640
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2050-0!*!0!!*!5!* and timestamp 20190503130124 and revision id 63836
  -->
 </div>
 										<!-- end content -->
@@ -391,7 +422,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -428,7 +460,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Selection">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Selection">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

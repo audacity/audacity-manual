@@ -33,10 +33,8 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Vertical_Zooming#searchInput">search</a></div>
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>.
-</p>
-<div class="intro">If you want to carefully inspect a small portion of your audio in detail, you will want to use one of these Vertical Zoom methods.
-<ul><li>Vertical Zooming works in <a href="audio_tracks.html" title="Audio Tracks">Audio Tracksaudio</a> tracks regardless of the view type - and works in <a href="note_tracks.html" title="Note Tracks">note tracks</a>.</li>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">If you want to carefully inspect a small portion of your audio in detail, you will want to use one of these Vertical Zoom methods.
+<ul><li>Vertical Zooming works in <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a> regardless of the view type - and works in <a href="note_tracks.html" title="Note Tracks">note tracks</a>.</li>
 <li>Vertical Zooming is not available for <a href="label_tracks.html" title="Label Tracks">label tracks</a> or <a href="time_tracks.html" title="Time Tracks">time tracks</a>.</li></ul>
 <div class="note">All the zooms on this page are in the <i>vertical</i> direction, as opposed to a <i>horizontal</i> zoom on the <a href="timeline.html" title="Timeline">Timeline</a>. See <a href="zooming.html" title="Zooming">Zooming</a> for more details of vertical and horizontal zooming.</div>  </div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -140,23 +138,37 @@ If you commence a drag to zoom in by mistake, you can press <span class="kbrd" s
 <li><b>Zoom In:</b> zooms in vertically, centered on where you click in the vertical scale for the menu. It can be used repeatedly</li>
 <li><b>Zoom Out:</b> zooms out vertically, centered on where you click in the vertical scale for the menu. It can be used repeatedly</li></ul></li></ul>
 <div class="note">Above the line are commands to change the <a href="spectrogram_view.html#others" title="Spectrogram View">spectrogram view</a> type <i>(these are not zoom commands)</i>.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">
+<ul><li> Hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and rotate the mouse wheel to scroll up and down at the same zoom level. </li>
+<li> Hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> <i>(<span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> and rotate the mouse wheel to zoom in or out at the mouse pointer's position.    </li></ul>
+</td></tr></table>
+</div>
 <p><br />
 </p>
 <div id="note"></div>
 <h2><span class="mw-headline" id="Vertical_Zooming_in_Note_Tracks">Vertical Zooming in Note Tracks</span></h2>
-
+</li></ul></li></ul>
 <p>For <a href="note_tracks.html" title="Note Tracks">Note Tracks</a> the Vertical Scale displays note pitches like a piano's keys, ranging from the lowest to the highest possible MIDI notes (C -1 to G 9).  Each octave is labeled at C (and the notes above are in that octave).
 </p>
 <h3><span class="mw-headline" id="Simple">Simple</span></h3>
 <dl><dd><table>
 
 <tr>
-<td valign="top"><span title="Note Track Vertical Scale (piano) with right-click context menu - Mac image"><img alt="Note Track VScale context menu - Mac image.png" src="../m/images/3/3e/note_track_vscale_context_menu_mac_image.png" width="199" height="158" /></span>
+<td valign="top"><span title="Note Track Vertical Scale (piano) with right-click context menu"><img alt="Note Track VScale context menu 2.3.2.png" src="../m/images/5/57/note_track_vscale_context_menu_2.3.2.png" width="199" height="247" /></span>
 </td>
-<td valign="top" style="padding-left:10px">A Note Track's Vertical Scale also has a context menu accressed by right clicking in the Vertical Scale:
-<ul><li><b>Zoom Reset</b> - zoom out in one step to show the entire range of notes (from C -1 to G 9).</li>
+<td valign="top" style="padding-left:10px">A Note Track's Vertical Scale also has a context menu accessed by right-clicking in the Vertical Scale:
+<ul><li><b>Zoom Reset</b> - zoom out to show the bottom and top notes from the track (the same as when it was initially imported).</li>
+<li><b>Max Zoom</b> - zoom out in one step to show the entire range of notes (from C -1 to G 9).</li>
 <li><b>Zoom In</b> - zooms in vertically, centered on where you click in the vertical scale for the menu.  It can be used repeatedly.</li>
-<li><b>Zoom Out</b> - zooms out vertically, centered on where you click in the vertical scale for the menu.  It can be used repeatedly..</li></ul>
+<li><b>Zoom Out</b> - zooms out vertically, centered on where you click in the vertical scale for the menu.  It can be used repeatedly.</li>
+<li><b>Up Octave</b> - scrolls up one octave, without changing the zoom level.</li>
+<li><b>Down Octave</b> - scrolls down one octave, without changing the zoom level.</li></ul>
 </td></tr>
 </table></dd></dl>
 <h3><span class="mw-headline" id="Advanced">Advanced</span></h3>
@@ -165,45 +177,45 @@ If you commence a drag to zoom in by mistake, you can press <span class="kbrd" s
 <tr>
 <td valign="top"><span title="Note Track Vertical Scale (piano), with magnifier zoom icon"><img alt="Note Track VScale - with magnifier.png" src="../m/images/3/3f/note_track_vscale_with_magnifier.png" width="153" height="164" /></span>
 </td>
-<td valign="top" style="padding-left:10px">With advanced mode activated, when the mouse pointer is over the scale it changes to a magnify icon <img alt="MagnifyPointer.png" src="../m/images/2/2f/magnifypointer.png" width="17" height="17" />.
+<td valign="top" style="padding-left:10px">With <a href="#advanced">advanced mode</a> activated, when the mouse pointer is over the scale it changes to a magnify icon <img alt="MagnifyPointer.png" src="../m/images/2/2f/magnifypointer.png" width="17" height="17" />.
 <ul><li> Left-click in the Vertical Scale to zoom in. The range displayed on the scale will be centered at the value you clicked at. Left-click and drag a region up or down then release to zoom into that region. You can press <span class="kbrd" style="background-color: #e0e0f0">Esc</span> to cancel the zoom operation if you commence a drag by mistake.</li>
 <li> Hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and left-click to zoom out progressively. When the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key is held down the plus sign on the magnify icon changes to a minus icon.</li>
 <li> Hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and rotate the mouse wheel to scroll up and down at the same zoom level, using the same visible range.</li>
 <li> Hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and rotate the mouse wheel to zoom in or out at the mouse pointer's position.</li>
-<li> Hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and right-click to zoom out in one step to show the entire range of notes (from C -1 to G 9).</li></ul>
+<li> Hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and right-click to zoom out to zoom out to show all notes.  Hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and right-clicking again to show the entire range of notes (from C -1 to G 9).</li></ul>
 </td></tr>
 </table></dd></dl>
 <div class="note">Observe carefully the little black marks above and below the colored notes in both images. These indicate that there are additional notes in the Note Track above and below them.  More notes can me made visible by using <a href="#note" title="Vertical Zooming"><b>Vertical Zooming</b></a>. </div>
 
 <!-- 
 NewPP limit report
-Cached time: 20190226112107
+Cached time: 20190503130145
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.132 seconds
-Real time usage: 0.140 seconds
-Preprocessor visited node count: 288/1000000
-Preprocessor generated node count: 783/1000000
-Post‐expand include size: 5681/2097152 bytes
-Template argument size: 3610/2097152 bytes
+CPU time usage: 0.129 seconds
+Real time usage: 0.134 seconds
+Preprocessor visited node count: 330/1000000
+Preprocessor generated node count: 883/1000000
+Post‐expand include size: 6928/2097152 bytes
+Template argument size: 4257/2097152 bytes
 Highest expansion depth: 4/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   28.081      1 - -total
- 34.55%    9.701     17 - Template:Key
- 25.21%    7.080      2 - Template:Tip
- 16.77%    4.709      1 - Template:Intro
- 13.14%    3.691      1 - Template:Example
-  6.73%    1.889      3 - Template:Note
-  5.85%    1.644      3 - Template:Menu
-  4.57%    1.284      1 - Template:Bh
-  4.39%    1.233      1 - Template:Ednote
+100.00%   26.133      1 - -total
+ 36.98%    9.665     21 - Template:Key
+ 29.38%    7.679      3 - Template:Tip
+ 15.61%    4.078      1 - Template:Intro
+ 11.37%    2.971      1 - Template:Example
+  6.10%    1.594      3 - Template:Note
+  5.60%    1.464      3 - Template:Menu
+  4.11%    1.073      1 - Template:Ednote
+  4.01%    1.049      1 - Template:Bh
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6283-0!*!0!!*!5!* and timestamp 20190226112107 and revision id 62519
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6283-0!*!0!!*!5!* and timestamp 20190503130145 and revision id 63986
  -->
 </div>
 										<!-- end content -->
@@ -238,7 +250,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -275,7 +288,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Vertical_Zooming">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Vertical_Zooming">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -33,9 +33,28 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Manage_Macros#searchInput">search</a></div>
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">.
 
 <div class="intro"><i><b>Manage Macros</b></i> allows you to edit, remove or rename existing Macros or add a new Macro and to apply Macros to you project or a set of files. Any <a href="effect_menu.html#built-in" title="Effect Menu">built-in</a>, <a href="effect_menu_ladspa.html" title="Effect Menu: LADSPA">LADSPA</a>, <a href="effect_menu_lv2.html" title="Effect Menu: LV2">LV2</a>, <a href="effect_menu_nyquist.html" title="Effect Menu: Nyquist">Nyquist</a>, <a href="effect_menu_vst.html" title="Effect Menu: VST">VST</a> or <a href="effect_menu_audiounit.html" title="Effect Menu: AudioUnit">Audio Unit</a> (Mac) effect shown in the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a> can be added to a Macro. You can also add plug-ins in any format that are shown in the <a href="generate_menu.html" title="Generate Menu">Generate</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze</a> Menus (including <a href="analyze_menu.html#vamp" title="Analyze Menu">Vamp</a> analysis effects), the built-in <a href="find_clipping.html" title="Find Clipping">Find Clipping</a> analyzer and a number of export commands.<p>Macros may be applied to either the entirety of the current project or to a selection of files using the <span class="menu">Tools &gt; <a href="macros.html" title="Macros">Macros...</a></span> command.</p><p>It is possible to use <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a> in Macros but see <a href="noise_reduction.html#macros" title="Noise Reduction">Noise Reduction Tips</a> for how the Noise Profile is captured.</p> </div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#access">Accessing Macros</a></li>
+<li><a href="#select">Select a Macro</a></li>
+<li><a href="#editsteps">Edit Steps in the Macro</a>
+<ol><li><a href="#command">Command</a></li>
+<li><a href="#edit">Editing an existing command</a></li>
+<li><a href="#export">Export commands</a></li>
+<li><a href="#deprecated">Deprecated Export commands</a></li></ol></li>
+<li><a href="#shrink">Shrink - reduced Macros Palette dialog</a></li>
+<li><a href="#apply">Apply Macro</a></li>
+<li><a href="#cancel">Cancel</a></li>
+<li><a href="#store">Where Macros are stored</a>
+<ul><li><a href="#share">Sharing a Macro</a></li></ul></li>
+<li><a href="#examples">Macros Examples</a></li>
+<li><a href="#error">Error: Batch command not recognized</a></li></ol>
+<p><br />
+</p>
+<div id="access"></div>
+<h2><span class="mw-headline" id="Accessing_Macros">Accessing Macros</span></h2>
 <dl><dd><b>Accessed by:</b> </dd></dl>
 <ul><li> The menu <span class="menu"><a href="tools_menu.html" title="Tools Menu">Tools</a> &gt; Macros...</span>, OR</li>
 <li> Using the <span class="button">Expand</span> button in the <a href="apply_macro.html" title="Apply Macro">Macros Palette</a> dialog.</li></ul>
@@ -47,6 +66,7 @@
 </p>
 <div id="chains"></div>
 <div id="macros"></div>
+<div id="select"></div>
 <h2><span class="mw-headline" id="Select_Macro">Select  Macro</span></h2>
 <p><i><b>Select Macro</b></i> contains a list of already defined Macros.  You can define the name of a new Macro and select which Macro is active. 
 </p><p>The left hand box in the dialog (labeled <b>Select Macro</b>) contains a list of already defined Macros. Until you add a new Macro, it only has a single built-in "MP3 Conversion" Macro. You can:
@@ -56,8 +76,6 @@
 <li>Delete any user-added Macro with the <span class="button">Remove</span> button</li>
 <li>Rename any user-added Macro with the <span class="button">Rename</span> button</li></ul>
 <div class="note">The Remove and Rename buttons are grayed out when the Macros that ship with Audacity are selected.</div>
-<p><br />
-</p>
 <ul><li><span class="button">New</span>: Add a new Macro to the list.</li>
 <li><span class="button">Remove</span>: Remove the selected Macro from the list.</li>
 <li><span class="button">Rename...</span>: Rename the selected Macro.</li>
@@ -65,10 +83,11 @@
 <li><span class="button">Export</span>: not currently active</li></ul>
 <p><br />
 </p>
+<div id="editsteps"></div>
 <div id="chain"></div>
 <div id="macro"></div>
-<h2><span class="mw-headline" id="Macro">Macro</span></h2>
-<p><i><b>Macro</b></i> lists the sequence of commands in order of first to last (End) for the Macro selected in the "Select Macros" box to left. 
+<h2><span class="mw-headline" id="Edit_Steps_in_the_Macro">Edit Steps in the Macro</span></h2>
+<p><i><b>Edit Steps</b></i> lists the sequence of commands in order of first to last (End) for the Macro selected in the "Select Macros" box to left. 
 </p>
 <ul><li>The Macro can include a number of common Audacity functions and effects to be executed in any order you specify.</li>
 <li>To create an audio file as part of the Macro process you must include an "Export" command (such as <a href="#export"><b>Export as WAV</b></a>).  </li>
@@ -78,8 +97,7 @@
 <ul><li>Add or remove commands for the selected Macro</li>
 <li>Change the order in which the commands execute in the Macro </li>
 <li>Edit the parameters for some effects in the Macro  </li></ul>
-<p><br />
-</p>
+<div id="command"></div>
 <h3><span class="mw-headline" id="Command">Command</span></h3>
 <ul><li><span class="button">Insert</span>: Insert a new command into the list</li>
 <li><span class="button">Edit</span>: Edit the parameters of the currently selected command</li>
@@ -87,31 +105,25 @@
 <li><span class="button">Move Up</span>: Move the currently selected command up in the list</li>
 <li><span class="button">Move Down</span>: Move the currently selected command down in the list</li>
 <li><span class="button">Defaults</span>: This button is only active when the Audacity supplied Macros are selected in the "Select Macros" list on the left, and will reset the Macro to its default values.</li></ul>
-<p><br />
-</p>
 <div id="edit"></div>
 <h3><span class="mw-headline" id="Editing_an_existing_command">Editing an existing command</span></h3>
 <p>To edit an existing command double-click it, or use the <b>Up</b> or <b>Down</b> keyboard arrow to select it then press <span class="kbrd" style="background-color: #e0e0f0">Space</span>.  The parameter settings dialog for that command will be displayed.
 </p>
 <div id="insert"></div>
 <h3><span class="mw-headline" id="Inserting_a_new_command">Inserting a new command</span></h3>
-<p>To insert a new command in a Macro, left-click or use the <b>Up</b> or <b>Down</b> keyboard arrow to select an existing command; the new command to be inserted will be placed above this selected command. Then press <span class="button">Insert</span>. 
+<p>To insert a new command in a Macro, left-click or use the <b>Up</b> or <b>Down</b> keyboard arrow to select an existing command. The new command to be inserted will be placed above this selected command. Then press <span class="button">Insert</span>. 
 </p>
 <ul><li>The "Select Command" dialog appears, listing all the available commands. Double-click a command from the list to insert it in the "Command" box, as shown in the image below after inserting "Normalize". </li></ul>
 <dl><dd>Alternatively, use the <b>Up</b> or <b>Down</b> keyboard arrow to select the command, then press <span class="kbrd" style="background-color: #e0e0f0">Space</span>. </dd>
 <dd><span title="Edit Macros &#39;Select Command&#39; dialog showing default commands, with &#39;Normalize&#39; selected and inserted"><img alt="SelectCommand.png" src="../m/images/2/2d/selectcommand.png" width="766" height="553" /></span></dd></dl>
-<p><br />
-</p>
 <div class="note"> &#160;
 <ul><li> The full list of all commands, with descriptions, is available at <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>.</li>
 <li> Some 'scriptable' commands are particularly useful for Macros.  See these pages for details:
 <ul><li> <a href="extra_menu_scriptables_i.html" title="Extra Menu: Scriptables I">Extra Menu: Scriptables I</a> - most commonly useful scriptables. </li>
-<li> <a href="extra_menu_scriptables_ii.html" title="Extra Menu: Scriptables II">Extra Menu: Scriptables II</a> - less commonly useful scripatables, but also including <b>Select</b> and <b>Set Track</b>, which combine functionality of several scriptables.</li></ul></li></ul>
+<li> <a href="extra_menu_scriptables_ii.html" title="Extra Menu: Scriptables II">Extra Menu: Scriptables II</a> - less commonly useful scriptables, but also including <b>Select</b> and <b>Set Track</b>, which combine functionality of several scriptables.</li></ul></li></ul>
 <p>&#160;
 </p>
 </div>
-<p><br />
-</p>
 <ul><li>If the command has editable parameters, the <span class="button">Edit Parameters</span> button will be active. Clicking this button will bring up the dialog box for the effect where you can set the parameters as if you were applying the standalone effect.</li>
 <li>If you have previously created <a href="manage_presets.html" title="Manage presets">user presets</a> for an effect you can use the <span class="button">Use Preset</span> to select one for use with that effect in the Macro.</li>
 <li>Choose <span class="button">OK</span> in the effect dialog to accept the parameters you entered, or <span class="button">Cancel</span> to revert to the default parameters.</li>
@@ -140,7 +152,25 @@
 </td></tr></table></div>
 <h3><span class="mw-headline" id="Special_Export_command">Special Export command</span></h3>
 <ul><li><a href="extra_menu_scriptables_ii.html#export2" title="Extra Menu: Scriptables II"><b>Export2</b></a>:  there is also a special Export command <a href="extra_menu_scriptables_ii.html#export2" title="Extra Menu: Scriptables II"><b>Export2</b></a> which enables you to export to a specific target file and format. When using <b>Export2</b> you have to give the <i><b>full</b></i> file name (including path and filename extension). <p>Note carefully that the filename is not dynamically changeable when running the Macro, once set in the Export2 parameters, so you may wish to create several Macros the Export2 each targeting different file locations, names and filetype.</p></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">
+<p>Example:
+<b>"C:\Users\&lt;username&gt;\Desktop\my file.flac"</b> <i>(this works)</i>
+</p><p>Not: C:\Users\&lt;username&gt;\Desktop\my file.flac <i>(the file name is not quoted)</i>
+</p><p>Not: "my file.flac" <i>(no path given)</i>
+</p><p>Not: "C:\Users\&lt;username&gt;\Desktop\myfile" <i>(no file extension)</i>
+</p><p>The quote marks around the file pathing are supplied by Audacity once the Export2 command has been edited in setting up or edoting the Macro
+</p><p>When entering the pathing data in the edit parameters dialog for the command you don't put the quote marks i.e.
+C:\Users\&lt;username&gt;\Desktop\my file.flac 
+</p>
+</td></tr></table>
+</div>
+<div id="deprecated"></div>
 <h3><span class="mw-headline" id="Deprecated_Export_commands">Deprecated Export commands</span></h3>
 <p>The following two commands are now deprecated and may well be removed in future versions of Audacity.  They were  part of "<b>CleanSpeech</b>" <i>(which has long been removed from Audacity)</i>.
 </p>
@@ -162,15 +192,45 @@
 </p><p>See <b><a href="apply_macro.html#apply" title="Apply Macro">Macros Palette</a></b> for details of how these two buttons operate.
 </p><p><br />
 </p>
+<div id="cancel"></div>
 <h2><span class="mw-headline" id="Cancel_to_exit_the_dialog">Cancel to exit the dialog</span></h2>
 <p>The dialog will remain open on the screen, but allowing you to perform other Audacity functions.
 </p><p>To dismiss the dialog simply click on the <span class="button">Cancel</span> button
 </p><p><br />
 </p>
+<div id="store"></div>
+<h2><span class="mw-headline" id="Where_Macros_are_stored">Where Macros are stored</span></h2>
+<p>Each Macro is automatically saved as a separate text file with TXT <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> in the "<b>Macros</b>" folder in Audacity's folder for application data:
+</p>
+<ul><li> <b>Windows:</b> Users\&lt;username&gt;\AppData\Roaming\audacity\Macros</li>
+<li> <b>Mac:</b> ~/Library/Application Support/audacity/Macros</li>
+<li> <b>Linux:</b> ~/.audacity-data/Macros</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">In order to see the <b>Macros</b> folder on Windows, macOS or GNU/Linux, you must show hidden files and folders or type the folder location into your file manager's address bar.<p>
+<ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, double-click the AppData or Application Data folder and navigate through that. If necessary, show hidden files and folders on <a rel="nofollow" class="external text" href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Windows</a> or type <b>%appdata%\audacity\Macros</b> or <b>shell:appdata\audacity\Macros</b> into the Explorer address bar then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on your keyboard.</p><p></li>
+<li> <b>macOS:</b> Open Finder, use the <span class="menu">Go</span> menu, choose <span class="menu">Go to Folder</span> and type <b>~/Library/Application Support/audacity/Macros</b>, or set Finder to <a rel="nofollow" class="external text" href="http://osxdaily.com/2011/07/22/access-user-library-folder-in-os-x-lion/">show your User Library folder</a>.</p></li></ul>
+</td></tr></table>
+</div>
 <div id="share"></div>
-<h2><span class="mw-headline" id="Sharing_a_Macro">Sharing a Macro</span></h2>
-<p>Each Macro is automatically saved as a separate text file with TXT <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> in the "Macros" folder in Audacity's <a href="preferences.html#stored" title="Preferences">folder for application data</a>. This allows you  to copy a Macro and send it to another user, or to copy another user's Macro into this folder so as to add to your own list of Macros. An updated list of Macros will be available next time you open "Manage Macros" in Audacity.
-</p><p><br />
+<h3><span class="mw-headline" id="Sharing_a_Macro">Sharing a Macro</span></h3>
+<p>You can copy a Macro from your <a href="#store">Macros folder</a> and send it to another user, or to copy another user's Macro into your Macros folder so as to add to your own list of Macros. An updated list of Macros will be available next time you open "Manage Macros" in Audacity.
+</p><p>You can also edit your Macros using copy and paste between them.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>Comments in Macros: </b>since Macros just ignore invalid commands you can edit your TXT Macros to add comments. <p>We suggest using the <b>#</b> character to start your comment lines:  "<b># this is my comment ...</b>"</p>
+</td></tr></table>
+</div>
+<p><br />
 </p>
 <div id="examples"></div>
 <h2><span class="mw-headline" id="Macros_Examples"><a href="macros_examples.html" title="Macros Examples">Macros Examples</a></span></h2>
@@ -178,7 +238,7 @@
 </p><p><br />
 </p>
 <div id="error"></div>
-<h2><span class="mw-headline" id="Batch_command_not_recognized_error">Batch command not recognized error</span></h2>
+<h2><span class="mw-headline" id="Error:_Batch_command_not_recognized">Error: Batch command not recognized</span></h2>
 <div class="note">This error may sometimes occur for one or more commands in a Macro when updating from a previous Audacity version. The error may also occur if users sharing Macro have different Audacity versions or different versions of the plug-ins used in the Macro. The error will occur if:
 <ul><li> any command in the Macro uses a different text format than that recognized by the version of Audacity in use </li>
 <li> any plug-ins listed in the Macro are missing, in an incorrect location or are incompatible with the version of Audacity in use. </li></ul>
@@ -188,34 +248,34 @@ To resolve these errors, ensure you have compatible versions of all required plu
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190226112532
+Cached time: 20190503130335
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.139 seconds
-Real time usage: 0.143 seconds
-Preprocessor visited node count: 565/1000000
-Preprocessor generated node count: 1955/1000000
-Post‐expand include size: 10532/2097152 bytes
-Template argument size: 6387/2097152 bytes
+CPU time usage: 0.161 seconds
+Real time usage: 0.168 seconds
+Preprocessor visited node count: 618/1000000
+Preprocessor generated node count: 2081/1000000
+Post‐expand include size: 12815/2097152 bytes
+Template argument size: 7579/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   49.983      1 - -total
- 35.77%   17.878      1 - Template:I18n
- 32.83%   16.411      1 - Template:I18n_box
- 26.57%   13.279      1 - Template:I18n_list
- 23.54%   11.766     27 - Template:Button
-  8.87%    4.436      2 - Template:Advice
-  8.43%    4.213      1 - Template:I18n_link
-  5.71%    2.852      2 - Template:Ednote
-  5.29%    2.643      1 - Template:Intro
-  4.55%    2.276      1 - Template:Autoglossonym
+100.00%   60.878      1 - -total
+ 35.65%   21.703      1 - Template:I18n
+ 32.46%   19.762      1 - Template:I18n_box
+ 25.95%   15.798      1 - Template:I18n_list
+ 21.82%   13.285     27 - Template:Button
+  7.48%    4.551      2 - Template:Advice
+  7.23%    4.402      1 - Template:I18n_link
+  6.59%    4.011      1 - Template:Intro
+  5.15%    3.134      1 - Template:Ednote
+  4.61%    2.809      4 - Template:Tip
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2557-0!*!0!!*!5!* and timestamp 20190226112532 and revision id 63159
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2557-0!*!0!!*!5!* and timestamp 20190503130335 and revision id 63469
  -->
 </div>
 										<!-- end content -->
@@ -250,7 +310,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -287,7 +348,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Manage_Macros">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Manage_Macros">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

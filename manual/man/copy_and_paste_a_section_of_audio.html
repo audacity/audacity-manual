@@ -33,77 +33,149 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Copy_and_Paste_a_section_of_audio#searchInput">search</a></div>
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"></li></ul>
 
-<div class="intro">Copying and pasting a section of audio from one track to another is a useful way to paste the good sections of one take over the bad sections of another take.  In this example the track with the "good" section is the "Source" track and the track with the "bad" section is the "Target" track.</div>
+<div class="intro">Copying and pasting a section of audio from one track to another is a useful way to paste the good sections of one take over the bad sections of another take.  
+<ul><li>In these examples the track with the "good" section is the "Source" track and the track with the "bad" section is the "Target" track.</li>
+<li>The examples mostly use an un-lifelike sine tone chirp to make it visually clearer as to what is happening.</div></li></ul>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#selection">Select the required audio</a></li>
+<li><a href="#target">Pasting into an existing TARGET track</a></li>
+<li><a href="#new">Pasting into a new track</a></li>
+<li><a href="#zero">To avoid clicks try to start and stop your selection at zero</a></li></ol>
+<div id="selection"></div>
 <h2><span class="mw-headline" id="Select_the_required_audio">Select the required audio</span></h2>
-<p>Use the Selection Tool <img alt="The Selection tool" src="../m/images/2/25/tool_select.png" title="The Selection tool" width="27" height="27" /> to select a section of audio from the source track (the source and target tracks are labeled Source and Target in the examples.)    
+<p>Use the Selection Tool <img alt="The Selection tool" src="../m/images/2/25/tool_select.png" title="The Selection tool" width="27" height="27" /> to select a section of audio from the source track with click-and-drag (the source and target tracks are labeled SOURCE and TARGET in the examples.)    
 </p>
-<dl><dd><span title="selecting a section of audio"><img alt="SelectSectionSource.gif" src="../m/images/d/da/selectsectionsource.gif" width="228" height="164" /></span></dd></dl>
-<p>To make sure your selection includes exactly the section of audio you want, you can use the zoom tools under the View menu to zoom in to the beginning and end of your selection and select the exact samples you want.  To prevent "popping" sounds in your final audio track, try to select a section of audio that starts and ends at the 0.0 line.
+<dl><dd><span title="selecting a section of audio"><img alt="01 Cut-Paste make selection.png" src="../m/images/1/13/01_cut_paste_make_selection.png" width="790" height="283" /></span></dd>
+<dd><b>For our examples we make a 1 minute selection in the SOURCE track from 2 minutes to 3 minutes</b></dd></dl>
+<p>To make sure your selection includes exactly the section of audio you want, you can use the zoom tools under the <a href="view_menu_zoom.html" title="View Menu: Zoom">View menu</a>, or the Zoom tools in the <a href="edit_toolbar.html" title="Edit Toolbar">Edit Toolbar</a> to zoom in to the beginning and end of your selection and select the exact samples you want.  
+</p><p>See <a href="#zero">this section</a> for advice on how to prevent "popping" sounds in your final audio track.
 </p>
-
-<dl><dd><span title="start of selection adjusted"><img alt="AdjustStartOfSelection.gif" src="../m/images/8/86/adjuststartofselection.gif" width="302" height="177" /></span></dd></dl>
-<p>You'll want to select a section of audio that <b>ends</b> at the 0.0 line as well.  
-</p>
-<dl><dd><span title="end of selection adjusted"><img alt="AdjustEndOfSelection.gif" src="../m/images/5/5d/adjustendofselection.gif" width="301" height="174" /></span></dd></dl>
-<p><br />
-Now that you have a well-formed selection, you can copy and paste it to the target track.
-</p><p>Zoom out so you can see your entire selection.  
-</p>
-<dl><dd><span title="zoomed out to see the entire selection"><img alt="ZoomOutSelectionForCopy.gif" src="../m/images/6/67/zoomoutselectionforcopy.gif" width="343" height="297" /></span></dd></dl>
-
-<h2><span class="mw-headline" id="Make_the_copy">Make the copy</span></h2>
-<p>Copy the selected audio to the Audacity clipboard by clicking on <span class="menu">Edit &gt; Copy</span> or press the shortcut <span class="kbrd" style="background-color: #e0e0f0">Ctrl + C</span>.
-</p>
-<h2><span class="mw-headline" id="Apply_the_paste">Apply the paste</span></h2>
-<p>Hold the <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> key and click in the Track Control Panel of the target track with the channel, rate and format information.  This selects the target track without changing any of its controls and extends the selection into the target track. Then <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span>-click in the Track Control Panel of the source track to deselect it. 
-</p>
-<dl><dd><span title="target track selected for Paste"><img alt="SelectTargetTrackForPaste.gif" src="../m/images/f/fb/selecttargettrackforpaste.gif" width="336" height="302" /></span></dd></dl>
-<p>Select  <span class="menu">Edit &gt; Paste</span> from the Edit Menu or press the shortcut <span class="kbrd" style="background-color: #e0e0f0">Ctrl + V</span>. 
+<h3><span class="mw-headline" id="Make_the_copy">Make the copy</span></h3>
+<p>Copy the selected audio to the Audacity clipboard by clicking on <span class="menu">Edit &gt; Copy</span> or press the shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + C</span> or <i><span class="kbrd" style="background-color: #d0d0f8">&#8984; + C</span> on Mac)</i>.
 </p><p><br />
 </p>
-<div class="note">You can also get "popping" if the target track hops from 0.0 before and after the audio you paste, so you may want to write down your Selection Start, End and Audio Position so you can adjust gaps before and after your pasted audio,  with either the Draw Tool <img alt="Draw-button.png" src="../m/images/9/92/draw_button.png" width="27" height="27" /> or Fade Out from the Effect Menu.
-<dl><dd><span title="gap adjusted with the Draw Tool"><img alt="AdjustGapWithDrawTool.gif" src="../m/images/9/9f/adjustgapwithdrawtool.gif" width="322" height="300" /></span></div></dd></dl>
+<div id="target"></div>
+<h2><span class="mw-headline" id="Pasting_into_an_existing_TARGET_track">Pasting into an existing TARGET track</span></h2>
+<h3><span class="mw-headline" id="Apply_the_paste">Apply the paste</span></h3>
+<p>To make the paste select  <span class="menu">Edit &gt; Paste</span> from the Edit Menu or press the shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + V</span> or <i>(<span class="kbrd" style="background-color: #d0d0f8">&#8984; +V</span> on Mac)</i>.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Restrictions
+<ul><li> You can paste from a mono track into a stereo track - the mono audio will be replicated in both stereo channels.</li>
+<li> You cannot paste from a stereo track into a mono track   <i>(you will get an error message if you try to do this.)</i>. </li></ul>
+</td></tr></table>
+</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Note that the TARGET track can be the same track as the SOURCE track - that is, it is possible to cut and paste within the same track.
+</td></tr></table>
+</div>
+<h3><span class="mw-headline" id="Pasting_into_a_point_selection">Pasting into a point selection</span></h3>
+If you make a point selection in the TARGET track at 2m 30s and paste the above 1 minute selection, the pasted section will start at 2m 30s <p>and will push the existing audio rightwards lengthen the track by 1 minute to now be 6 minutes long.</p>
+<dl><dd><span title="Pasting a 1 minute selection at Time = 2m 30s"><img alt="02 Cut-Paste paste into point selection.png" src="../m/images/4/41/02_cut_paste_paste_into_point_selection.png" width="787" height="285" /></span></dd>
+<dd><b>Pasted 1 minute selection starts at 2m 30s and extends the TARGET track by 1 minute to be 6 minutes long</b></dd></dl>
+<h3><span class="mw-headline" id="Pasting_into_a_longer_selection">Pasting into a longer selection</span></h3>
+<p>If you paste over a selection that is longer that the one on the clipboard this will overwrite the longer selection and shorten the track.
+</p>
+<dl><dd><span title="Selecting 3 minutes from 1 minute to 4 minutes to paste over"><img alt="03 Cut-Paste paste into a longer selection - before.png" src="../m/images/7/73/03_cut_paste_paste_into_a_longer_selection_before.png" width="793" height="284" /></span></dd>
+<dd><b>Selecting 3 minutes from 1 minute to 4 minutes to paste over</b></dd></dl>
+<dl><dd><span title="After the paste the TARGET track is shortened to 3 minutes"><img alt="03 Cut-Paste paste into a longer selection.png" src="../m/images/1/18/03_cut_paste_paste_into_a_longer_selection.png" width="787" height="283" /></span></dd>
+<dd><b>After the paste the TARGET track is shortened to 3 minutes</b></dd></dl>
+<h3><span class="mw-headline" id="Pasting_into_a_shorter_selection">Pasting into a shorter selection</span></h3>
+If you paste over a selection that is shorter than the one on the clipboard this will overwrite the shorter selection and lengthen the track, <p>pushing the audio to the right of the selection rightwards.</p>
+<dl><dd><span title="Selecting 30 seconds from 3:30 to 4 minutes to paste over"><img alt="04 Cut-Paste paste into shorter selection - before.png" src="../m/images/0/06/04_cut_paste_paste_into_shorter_selection_before.png" width="789" height="282" /></span></dd>
+<dd><b>Selecting 30 seconds from 3:30 to 4 minutes to paste over</b></dd></dl>
+<dl><dd><span title="After the paste the TARGET track is lengthened to 5 minutes 30 seconds"><img alt="04 Cut-Paste paste into shorter selection.png" src="../m/images/6/68/04_cut_paste_paste_into_shorter_selection.png" width="790" height="286" /></span></dd>
+<dd><b>After the paste the TARGET track is lengthened to 5 minutes 30 seconds</b></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">If you need to paste into a target track at precisely the same size and position in the source track, you can:
+<ul><li> Make the selection in the target track and use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + C</span> to make the copy.</li>
+<li> Hold down the <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and click in the <span class="button">Select</span> button in the target track's Track Control Panel.  This will extend the selection to the target track.</li>
+<li> Hold down the <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and click in the <span class="button">Select</span> button in the source track's Track Control Panel.  This will remove the selection from the source track.</li>
+<li> Make the paste into the target track with <span class="kbrd" style="background-color: #d0d0f8">Ctrl + V</span>.</li></ul>
+<p>On Mac use <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> in place of <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span>.
+</p>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="new"></div>
 <h2><span class="mw-headline" id="Pasting_into_a_new_track">Pasting into a new track</span></h2>
-<p>If you want to create a new track and paste into that, the paste will automatically create a new mono or stereo track as appropriate, with the audio starting at time zero, if you:
+<p>If you want to paste into a new track at a specific start time you must first create the new track, then select the start time in that track and then make the paste.
 </p>
+<dl><dd><span title="Selecting in the source track after having added the new track"><img alt="07 Cut-Paste paste into new track - add new track make the selection.png" src="../m/images/9/95/07_cut_paste_paste_into_new_track_add_new_track_make_the_selection.png" width="791" height="332" /></span></dd>
+<dd><b>Selecting in the source track after having added the new track</b></dd></dl>
+<dl><dd><span title="After clicking at T=3 minutes in the New Track and then making the paste"><img alt="07 Cut-Paste paste into new track - at a specified start time.png" src="../m/images/7/7c/07_cut_paste_paste_into_new_track_at_a_specified_start_time.png" width="786" height="334" /></span></dd>
+<dd><b>After clicking at T=3 minutes in the New Track and then making the paste</b></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">If you want to create a new track and paste into that, the paste will automatically create a new mono or stereo track as appropriate, with the audio starting at time zero, if you:
 <ul><li> Paste into an empty project window </li>
-<li> Click in the gray background underneath the last track in the project to deselect all the tracks, then paste.</li>
-<li> You can paste from a mono track into a stero track - the mono audio will be replicated in both stereo channels.</li>
-<li> You cannot paste from a stereo track into a mono track.   <i>(You will get an error message if you try to do this.)</i></li></ul>
-<p>If you want the paste to start at other than time zero you must first use Tracks &gt; Add New &gt; Mono Track (or Add New &gt; Stereo Track), place the cursor where you want to paste, then make the paste.
+<li> Click in the gray background underneath the last track in the project to deselect all the tracks, then paste.</li></ul>
+</td></tr></table>
+</div>
+<p><br />
 </p>
+<div id="zero"></div>
+<h2><span class="mw-headline" id="To_avoid_clicks_try_to_start_and_stop_your_selection_at_zero">To avoid clicks try to start and stop your selection at zero</span></h2>
+<p>In order to avoid clicks/pops at the joins of your paste, try to select a section of audio that starts and ends at the 0.0 line in the <a href="audio_tracks.html#scale" title="Audio Tracks">Vertical Scale</a>  - both for the SOURCE and the TARGET selections.
+</p>
+<dl><dd><span title="Selection starting ad stopping at 0"><img alt="08 selection with zero crossings.png" src="../m/images/9/9e/08_selection_with_zero_crossings.png" width="787" height="185" /></span></dd>
+<dd><b>Selection starting ad stopping at 0</b></dd></dl>
+<p>This is a very short, zoomed-in, example so in order to achieve this in real life (with longer selections) you may need to use zooming and add labels to mark the start and end of your selection.
+</p>
+For mono tracks you can also try <span class="menu">Select &gt; <a href="select_menu_at_zero_crossings.html" title="Select Menu: At Zero Crossings">At Zero Crossings</a></span> once you have made your rough selection.  <p><b>At Zero Crossings</b> seldom works well with stereo tracks as the two channels seldom reach zero at the same time.</p>
+
 <!-- 
 NewPP limit report
-Cached time: 20190226112104
+Cached time: 20190503130143
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.104 seconds
-Real time usage: 0.113 seconds
-Preprocessor visited node count: 209/1000000
-Preprocessor generated node count: 1202/1000000
-Post‐expand include size: 3598/2097152 bytes
-Template argument size: 2087/2097152 bytes
+CPU time usage: 0.134 seconds
+Real time usage: 0.143 seconds
+Preprocessor visited node count: 341/1000000
+Preprocessor generated node count: 1533/1000000
+Post‐expand include size: 6865/2097152 bytes
+Template argument size: 3172/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   35.889      1 - -total
- 63.43%   22.764      1 - Template:I18n
- 58.00%   20.817      1 - Template:I18n_box
- 46.16%   16.567      1 - Template:I18n_list
- 13.39%    4.807      1 - Template:I18n_link
- 10.13%    3.635      4 - Template:Key
-  7.40%    2.657      1 - Template:Autoglossonym
-  5.04%    1.809      1 - Template:Intro
-  4.58%    1.644      3 - Template:Ednote
-  4.54%    1.631      2 - Template:Menu
+100.00%   44.111      1 - -total
+ 42.87%   18.910      1 - Template:I18n
+ 38.77%   17.102      1 - Template:I18n_box
+ 30.01%   13.238      1 - Template:I18n_list
+ 23.82%   10.506      3 - Template:Tip
+ 13.73%    6.056      6 - Template:Shortcut
+  8.69%    3.833      1 - Template:I18n_link
+  7.38%    3.255      4 - Template:Key
+  4.80%    2.119      2 - Template:Button
+  4.74%    2.092      1 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3040-0!*!0!!*!5!* and timestamp 20190226112104 and revision id 60347
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3040-0!*!0!!*!5!* and timestamp 20190503130143 and revision id 64137
  -->
 </div>
 										<!-- end content -->
@@ -138,7 +210,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -175,7 +248,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Copy_and_Paste_a_section_of_audio">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Copy_and_Paste_a_section_of_audio">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

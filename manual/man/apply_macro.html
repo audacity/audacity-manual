@@ -36,13 +36,28 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 
 <div class="intro"><i><b>Macros Palette</b></i> automatically applies a series of preconfigured commands in a set order. The dialog allows you to select a Macro (which is a sequence of effect and/or export commands created using <span class="menu">Tools &gt; <a href="manage_macros.html" title="Manage Macros">Macros</a></span> then apply that Macro to either the entirety of the current project or to selected audio files in a single directory. </div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#palette">Macros Palette</a></li>
+<li><a href="#select">Select Macro</a></li>
+<li><a href="#apply">Apply Macro to...</a>
+<ul><li><a href="#project">Project</a></li>
+<li><a href="#files">Files</a></li></ul></li>
+<li><a href="#expand">Expand</a></li>
+<li><a href="#presets">Presets</a></li>
+<li><a href="#cancel">Cancel</a></li>
+<li><a href="#examples">Examples</a></li></ol>
+<p><br />
+</p>
+<div id="palette"></div>
+<h2><span class="mw-headline" id="Macros_Palette">Macros Palette</span></h2>
 <dl><dd><b>Accessed by:</b> </dd></dl>
 <ul><li> Using the <span class="button">Shrink</span> button in the <a href="manage_macros.html" title="Manage Macros">Manage Macros</a> dialog, OR</li>
 <li> Directly from the menu <span class="menu">Tools &gt; Apply Macros &gt; <a href="tools_menu_apply_macro.html" title="Tools Menu: Apply Macro">Palette</a></span></li></ul>
-<p><br />
-</p>
 <dl><dd><span title="Macros Palette dialog showing as-shipped Macros and several user-added Macros"><img alt="MacrosPalette.png" src="../m/images/2/20/macrospalette.png" width="293" height="393" /></span></dd></dl>
 <div style="width:28em; margin-left:1.5em; margin-bottom:10px"><i>Macros Palette showing several user-added Macros as well as the as-shipped "MP3 Conversion" and "Fade Ends" Macros</i></div>
+<p><br />
+</p>
+<div id="select"></div>
 <div id="chain"></div>
 <div id="macro"></div>
 <h2><span class="mw-headline" id="Select_Macro">Select Macro</span></h2>
@@ -53,6 +68,7 @@
 <div id="current"></div>
 <div id="apply_chain"></div>
 <h2><span class="mw-headline" id="Apply_Macro_to">Apply Macro to</span></h2>
+<div id="project"></div>
 <h3><span class="mw-headline" id="Project">Project</span></h3>
 <p>Use the <span class="button">Project</span> button to apply the selected Macro to the current project. 
 </p>
@@ -67,10 +83,10 @@
 </td></tr></table></div>
 <p>The effects in the Macro are applied to the <a href="audacity_selection.html" title="Audacity Selection">selected</a> region of <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> in the selected <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a>. Usually the selected Macro would not include an <a href="exporting_audio.html" title="Exporting Audio">export</a> command so as to use the greater flexibility of the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a>. 
 </p><p>If an export command is included in the Macro, the entire project audio is exported irrespective of track or region selection. Therefore if the project contains multiple audio tracks, they will be <a href="mixing.html" title="Mixing">mixed</a> together, unless any of the tracks are muted on the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>. 
-</p><p>The exported files will be saved in a folder named "<b>cleaned</b>". 
+</p><p>The exported files will be saved in a folder named "<b>macro-output</b>". 
 </p>
-<ul><li> If the project has been Saved, then the "cleaned" folder will be in the same directory location as the project and the audio file name will be the same as the project name but with the extension appropriate to the export type.</li>
-<li> If the audio in the project came from an imported file or files, the "cleaned" folder will be inside the directory from which the first file was imported. The original files are not altered.</li>
+<ul><li> If the project has been Saved, then the "macro-output" folder will be in the same directory location as the project and the audio file name will be the same as the project name but with the extension appropriate to the export type.</li>
+<li> If the audio in the project came from an imported file or files, the "macro-output" folder will be inside the directory from which the first file was imported. The original files are not altered.</li>
 <li> If the project has not been saved and no audio has been imported, the normal Export Audio dialog will appear enabling you to choose the name and location of the exported file.</li></ul>
 </li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -90,7 +106,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">The selected Macro <i><b>must</b></i> include an <b>Export</b> step, otherwise the processed audio will not be retained.  <p>The exported files will be saved in a folder named "<b>cleaned</b>" in the same folder that the original audio files came from. The original files are <i><b>not</b></i> altered.</p>
+<td align="left" valign="top">The selected Macro <i><b>must</b></i> include an <b>Export</b> step, otherwise the processed audio will not be retained.  <p>The exported files will be saved in a folder named "<b>macro-output</b>" in the same folder that the original audio files came from. The original files are <i><b>not</b></i> altered.</p>
 </td></tr></table></div>
 <p>The typical purpose of this option is <b>batch processing</b> - apply the Macro to multiple audio files so as to apply one or more effects to them, and/or convert them to another file format. You can convert from any file format <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">supported by Audacity</a> to WAV, MP3, OGG or FLAC.
 </p><p>You cannot process <a href="file_export_dialog.html#compare" title="File Export Dialog">multi-channel audio files</a> (for example, 5.1 surround sound files) using Macros, even if <a href="import_export_preferences.html#export" title="Import - Export Preferences">Import / Export Preferences</a> has been set to "Use custom mix". Any multi-channel files you import will be mixed down on export.  
@@ -99,7 +115,7 @@
 <ul><li> A standard File Open dialog box will appear. Choose a directory then you can select one or any number of supported audio files in that directory, but <b>not</b> Audacity AUP project files. You cannot select files outside that directory, and files in folders inside that directory will not be processed. It is convenient therefore to first put all the audio files you want to process into one folder before applying the Macro.  </li>
 <li> After selecting the audio files you want to process, choose <span class="button">Open</span>. </li>
 <li> Each file will be imported into Audacity and processed, exported to the format you chose in the Macro, then the processed audio will be removed so as to clear the temporary disk space that had been used. </li>
-<li> The exported files will be saved in a folder named "<b>cleaned</b>" in the same folder that the original files came from.</li></ul>
+<li> The exported files will be saved in a folder named "<b>macro-output</b>" in the same folder that the original files came from.</li></ul>
 <div class="note">When a Macro is applied to files, the only option is to import and process the entire file. Thus the entire file will be exported unless an action or effect in the Macro (such as <a href="edit_toolbar.html#cut" title="Edit Toolbar">Cut</a> or <a href="truncate_silence.html" title="Truncate Silence">Truncate Silence</a>) removes some audio. 
 <ul><li> If modifying the audio before exporting, the <a href="extra_menu_scriptables_i.html#select_time" title="Extra Menu: Scriptables I">Select Time</a> function may be useful to select audio to remove or modify.</li>
 <li> Some optional <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins">Nyquist plug-ins</a> have parameters to  <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Download_Nyquist_Plug-ins#time">trim or extend audio by a specific length</a> and Nyquist can do calculations too, so it may be helpful to use Nyquist plug-ins from within a macro.</div></li></ul>
@@ -112,11 +128,15 @@
 <td align="left" valign="top">It is recommended not to process more than <b>500</b> files at a time.
 </td></tr></table>
 </div>
+<p><br />
+</p>
+<div id="expand"></div>
 <h2><span class="mw-headline" id="Expand">Expand</span></h2>
 <p>Use the <span class="button">Expand</span> to return to the full-size, full-function <a href="manage_macros.html" title="Manage Macros">Manage Macros</a> dialog.
 </p><p>The apply Macro buttons are also available on the <a href="manage_macros.html" title="Manage Macros">Manage Macros</a> dialog - so all Macro operations can be made from that full dialog.
 </p><p><br />
 </p>
+<div id="presets"></div>
 <h2><span class="mw-headline" id="Presets_for_effects">Presets for effects</span></h2>
 <p>Since it is quite possible to have just a single command in a Macro you can use Macros to store your regularly used effects along with your favored settings.
 </p>
@@ -140,6 +160,7 @@
 </div>
 <p><br />
 </p>
+<div id="cancel"></div>
 <h2><span class="mw-headline" id="Cancel_to_exit_the_dialog">Cancel to exit the dialog</span></h2>
 <p>The dialog will remain open on the screen, but allowing you to perform other Audacity functions.
 </p><p>To dismiss the dialog simply click on the <span class="button">Cancel</span> button
@@ -154,34 +175,34 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190226112533
+Cached time: 20190503130235
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.127 seconds
-Real time usage: 0.134 seconds
-Preprocessor visited node count: 306/1000000
-Preprocessor generated node count: 1461/1000000
-Post‐expand include size: 8729/2097152 bytes
-Template argument size: 4586/2097152 bytes
+CPU time usage: 0.114 seconds
+Real time usage: 0.119 seconds
+Preprocessor visited node count: 320/1000000
+Preprocessor generated node count: 1481/1000000
+Post‐expand include size: 8748/2097152 bytes
+Template argument size: 4605/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   39.387      1 - -total
- 50.60%   19.931      1 - Template:I18n
- 46.15%   18.176      1 - Template:I18n_box
- 36.73%   14.468      1 - Template:I18n_list
- 12.16%    4.789      1 - Template:I18n_link
-  9.90%    3.898      6 - Template:Button
-  7.84%    3.090      1 - Template:Intro
-  7.60%    2.994      2 - Template:Ednote
-  6.69%    2.635      1 - Template:Autoglossonym
-  5.24%    2.064      3 - Template:Advice
+100.00%   35.374      1 - -total
+ 53.17%   18.809      1 - Template:I18n
+ 48.00%   16.981      1 - Template:I18n_box
+ 36.74%   12.997      1 - Template:I18n_list
+ 10.80%    3.819      1 - Template:I18n_link
+  9.20%    3.255      6 - Template:Button
+  8.71%    3.081      2 - Template:Ednote
+  7.58%    2.680      1 - Template:Intro
+  6.08%    2.149      3 - Template:Advice
+  5.78%    2.045      1 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2779-0!*!0!!*!5!* and timestamp 20190226112533 and revision id 63221
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2779-0!*!0!!*!5!* and timestamp 20190503130235 and revision id 63788
  -->
 </div>
 										<!-- end content -->
@@ -216,7 +237,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -253,7 +275,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Apply_Macro">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Apply_Macro">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

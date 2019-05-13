@@ -121,11 +121,21 @@
 </p><p>In pinned playhead mode the mouse pointer position always directly determines the speed of scrub or seek. The further away you move the mouse pointer from the Timeline playhead (in either direction), the faster the scrub or seek. The current scrub or seek speed is shown permanently in lime green text, superimposed on the track.  The default maximum scrub speed is +1.00 (for forwards play) and -1.00 (for backwards play), that is normal speed. The default maximum seek speed is +10.00 (for forwards play) and -10.00 (for backwards play).
 </p><p>The speed of scrolling scrub or seek as determined by the mouse position can be varied by rotating the mouse wheel (if your mouse is so equipped). Move the wheel upwards to increase the speed or downwards to reduce the speed. This works at the same time as modifying the speed by moving the pointer left or right. The maximum possible speed with the pointer at either edge of the window and the wheel at maximum speed is 32.00x for Seeking and 320.00x for Scrubbing. Changed speeds set by the mouse wheel are not remembered if you stop playback and restart Seeking.
 </p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">The default pinned position is the center of the Timeline, but you can change this by clicking on the pinned head and dragging it along the Timeline while you are playing or recording.  A double-click on the head will restore it to its default position in the center of the Timeline.
+</td></tr></table>
+</div>
 <div class="example">A very useful setting for using scrubbing with pinned playhead is to move the pointer to the extreme right (100%) position and increase the maximum speed to 2.00x.<p> With this setting, when you move the pointer back to the 75% position on the waveform you will get normal speed forwards  playback and at 25% position you will get normal speed backwards playback.  Moving the pointer towards the center from there will give you gradually slower than normal speed and moving towards the right or left edges will give you gradually faster than normal speed up to your chosen maximum of 2.00x.</p>
 <p><span title="Forwards scrubbing at 1.00x speed at 75% position, 2.00x maximum speed"><img alt="Pinned x2 Scrubbing at x1 speed.png" src="../m/images/f/fa/pinned_x2_scrubbing_at_x1_speed.png" width="689" height="163" /></span>
 </p>
 <dl><dd><b>Image of forwards scrubbing at 1.00x speed having set a 2.00x maximum speed, waveform moving leftwards.</b></div></dd></dl>
 <p><br />
+</p><p><br />
 </p>
 <div id="toolbar"></div>
 <h2><span class="mw-headline" id="Scrubbing_and_Seeking_using_the_Scrub_Toolbar">Scrubbing and Seeking using the Scrub Toolbar</span></h2>
@@ -140,34 +150,34 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190225150041
+Cached time: 20190503085043
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.185 seconds
-Real time usage: 0.197 seconds
-Preprocessor visited node count: 348/1000000
-Preprocessor generated node count: 1553/1000000
-Post‐expand include size: 7033/2097152 bytes
-Template argument size: 3818/2097152 bytes
+CPU time usage: 0.187 seconds
+Real time usage: 0.201 seconds
+Preprocessor visited node count: 355/1000000
+Preprocessor generated node count: 1573/1000000
+Post‐expand include size: 7652/2097152 bytes
+Template argument size: 4102/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   55.227      1 - -total
- 48.49%   26.780      1 - Template:I18n
- 44.05%   24.327      1 - Template:I18n_box
- 36.04%   19.904      1 - Template:I18n_list
- 12.69%    7.011      2 - Template:I18n_link
-  7.74%    4.275     11 - Template:Menu
-  7.50%    4.143      2 - Template:Autoglossonym
-  7.09%    3.918      3 - Template:Key
-  6.83%    3.770      3 - Template:Tip
-  6.30%    3.477      1 - Template:Intro
+100.00%   49.604      1 - -total
+ 52.70%   26.141      1 - Template:I18n
+ 47.82%   23.723      1 - Template:I18n_box
+ 38.23%   18.964      1 - Template:I18n_list
+ 13.46%    6.674      2 - Template:I18n_link
+  7.99%    3.963      2 - Template:Autoglossonym
+  7.73%    3.833     11 - Template:Menu
+  6.53%    3.237      3 - Template:Key
+  5.54%    2.746      4 - Template:Tip
+  5.30%    2.630      1 - Template:Shortcut
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5215-0!*!0!!*!5!* and timestamp 20190225150041 and revision id 62460
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5215-0!*!0!!*!5!* and timestamp 20190503085043 and revision id 63964
  -->
 </div>
 										<!-- end content -->
@@ -202,7 +212,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -239,7 +250,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Scrubbing_and_Seeking">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Scrubbing_and_Seeking">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

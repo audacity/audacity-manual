@@ -36,111 +36,209 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
 </p>
 <center><a href="http://audacityteam.org/" title="size=50%" rel="nofollow"><img alt="size=50%" src="../m/images/8/88/audacity_logo_signika_512_transparent.png" width="512" height="138" /></a></center>
-<div class="intro"><span style="font-size:120%"><b>This page is an overview of the key new functionality that has been introduced in Audacity 2.3.1</b></span>
-<ul><li> <span style="font-size:110%">Details of all the major changes since 2.3.0 can be found in <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_2.3.1">Release Notes 2.3.1</a>.</span></div></li></ul>
+<div class="intro"><span style="font-size:120%"><b>This page is an overview of the key new functionality that has been introduced in Audacity 2.3.2</b></span>
+<ul><li> <span style="font-size:110%">Details of all the major changes since 2.3.1 can be found in <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_2.3.2">Audacity Release Notes 2.3.2</a>.</span></div></li></ul>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<ol><li><a href="#mac64">64-bit Mac build</a></li>
-<li><a href="#scrubruler">Scrub Ruler</a></li>
-<li><a href="#avz">Advanced Vertical Zooming</a></li>
-<li><a href="#microfades">Micro-fades option added</a></li>
-<li><a href="#ril">Regular Interval Labels improvements</a></li>
+<ol><li><a href="#lame">LAME is now built-in in Audacity for Windows and Mac</a></li>
+<li><a href="#tcp"><b>Select</b> button in Track Control Panel</a></li>
+<li><a href="#nyquist">Nyquist Plug-in Installer</a></li>
+<li><a href="#macros">Macros - "cleaned" folder renamed to "<b>macro-output</b>"</a></li>
+<li><a href="#msp">mod-script-pipe provided with Audacity, on Windows and Mac</a></li>
+<li><a href="#label">Preference for "Type to create a label"</a></li>
+<li><a href="#4gb">Size restrictions on WAV and AIFF exports</a></li>
 <li><a href="#bugs">Bug Fixes</a></li></ol>
+<p><br />
+</p>
 </li></ul></li></ul>
 </li></ol>
 <p><br />
 </p>
-<div id="mac64"></div>
-<h2><span class="mw-headline" id="64-bit_Mac_build">64-bit Mac build</span></h2>
-<p>The 2.3.1 release of Audacity for macOS is now a 64-bit build and will only run on modern 64-bit Macs, running OSX 10.7 or later.
-</p><p>Note carefully that if you use the <a href="installing_and_updating_audacity_on_mac_os_x.html#maclame" title="Installing and updating Audacity on Mac OS X"><b>LAME</b></a> library for MP3 export or the <a href="installing_and_updating_audacity_on_mac_os_x.html#macff" title="Installing and updating Audacity on Mac OS X"><b>FFmpeg</b></a> library you will need to install the 64-bit versions of those libraries.
-</p><p><i>FFmpeg is used for importing and exporting a much larger <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/FFmpeg_integration#Functionality">range of audio formats</a> including </i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b><i>, AC3, AMR (narrow band) and </i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b><i>. </i>
-</p><p><br />
+<div id="lame"></div>
+<h2><span class="mw-headline" id="LAME_is_now_built-in_in_Audacity_for_Windows_and_Mac">LAME is now built-in in Audacity for Windows and Mac</span></h2>
+<p>The LAME library, which is needed for exporting MP3 audio files, is now built-in to Audacity on Windows and macOS as a part of the application. 
+</p><p><i>With previous releases it was necessary to download and locate the LAME library as an optional extra.</i>
+</p><p>If you go to <a href="libraries_preferences.html" title="Libraries Preferences">Libraries preferences</a> you will see that the option to locate the library is no longer there and the dialog tells you what version of LAME is built-in.
 </p>
-<div id="scrubruler"></div>
-<h2><span class="mw-headline" id="Scrub_Ruler">Scrub Ruler</span></h2>
-<p>The <a href="scrubbing_and_seeking.html#scrubruler" title="Scrubbing and Seeking">Scrub Ruler</a> is now turned <b>"off"</b> by default and is not displayed.  The reason we did this was because we found too many users were accidentally clicking in the Scrub Ruler and then finding themselves stuck in Scrubbing mode.
-</p><p>This will only affect you if you opt to reset your preferences settings as part of the 2.3.1 installation, manually reset your preferences or install Audacity for the first time.
-</p><p>If you want/need to turn it back on again use either the <span class="menu">Transport &gt; <a href="transport_menu_scrubbing.html" title="Transport Menu: Scrubbing">Scrubbing</a></span> and check the Scrub Ruler to be "on".  Or right click in the <b><a href="timeline.html" title="Timeline">Timeline</a></b> and select <b><a href="timeline.html#menu" title="Timeline">Enable Scrub Ruler</a></b>.
+<dl><dd><span title="Libraries preferences showing LAME as built-in as part of Audacity"><img alt="LAME built-in.png" src="../m/images/3/37/lame_built_in.png" width="584" height="285" /></span></dd></dl>
+<div class="note">LAME is not built into Audacity on Linux - you will still need to acquire an locate the optional LAME library.</div>
+<p><br />
 </p>
+<div id="tcp"></div>
+<h2><span class="mw-headline" id="Select_button_in_Track_Control_Panel"><b>Select</b> button in Track Control Panel</span></h2>
+<p>There is now a <span class="button">Select</span> button in the <a href="track_control_panel_and_vertical_scale.html" title="Track Control Panel and Vertical Scale">Track Control Panel</a>.
+</p><p>The whole of an individual track can be selected by clicking this <span class="button">Select</span> button.
+</p><p>Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> <i>(or <span class="kbrd" style="background-color: #d0d0f8">&#8984; + A</span> on a Mac)</i> and clicking on the <span class="button">Select</span> button toggles the selectedness of the track. 
+</p>
+<dl><dd><span title="Select button highlighted in the Track Control Panel"><img alt="Select button in TCP.png" src="../m/images/b/b6/select_button_in_tcp.png" width="302" height="154" /></span></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
-<td align="left" valign="top">The <b>Scrub</b> and <b>Seek</b> commands are still readily available from the <a href="transport_menu_scrubbing.html" title="Transport Menu: Scrubbing"><b>Transport</b></a> menu.
+<td align="left" valign="top">You can still select a whole track in the previous ways if that is what you are used to:
+<ul><li>Click in the neutral gray area of the Track Control Panel <i>(this is hard when the tracks are reduced size, as in this image)</i></li>
+<li>Double-click in the track.</li></ul>
 </td></tr></table>
 </div>
 <p><br />
 </p>
-<div id="avz"></div>
-<h2><span class="mw-headline" id="Advanced_Vertical_Zooming">Advanced Vertical Zooming</span></h2>
-<p>We have added a new command to the <span class="menu"> View &gt; <a href="view_menu_zoom.html" title="View Menu: Zoom">Zoom</a></span> menu for turning <b><a href="vertical_zooming.html#advanced" title="Vertical Zooming">Advanced Vertical Zooming</a></b> "on" or "off".
-</p><p>Advanced Vertical Zooming enables you to use left-click gestures in the <a href="audio_tracks.html#scale" title="Audio Tracks">Vertical Scale</a> to control zooming <i>(this is in addition to the Simple mode vertical zooming commands available from the right-click context menu in the Vertical Scale)</i>. 
+<div id="nyquist"></div>
+<h2><span class="mw-headline" id="Nyquist_Plug-in_Installer"><a href="nyquist_plug_in_installer.html" title="Nyquist Plug-in Installer">Nyquist Plug-in Installer</a></span></h2>
+<p>The new <a href="nyquist_plug_in_installer.html" title="Nyquist Plug-in Installer">Nyquist Plug-in Installer</a> is itself a Nyquist plug-in.  It simplifies the installation of other Nyquist plug-ins.  It is installed by default in Audacity and can be found in the <a href="tools_menu.html" title="Tools Menu">Tools Menu</a>.
+</p><p>This plug-in installer provides a file browser for selecting the plug-in '.NY' file <i>(Nyquist plug-ins are plain text files that have the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Filename_extension">filename extension</a> '.NY')</i>, and then copies the file to the correct location. 
 </p>
-<div class="note">In version 2.2.2 we changed the way <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_2.2.2#Vertical_Zooming_changes">vertical zooming</a> works, splitting it into Simple and Advanced forms with the Advanced form turned off by default.  Advanced mode could be turned on in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors</a> preferences but many users failed to find it there.  Accordingly we introduced this new command to make this more discoverable. </div>
-<p><br />
-</p>
-<div id="microfades"></div>
-<h2><span class="mw-headline" id="Micro_Fades">Micro Fades</span></h2>
-<p>Micro fades (introduced in 2.3.0) can reduce the click when playback starts and stops.  We've now made this an opt-in feature rather than provide it all the time, this can be set in <a href="playback_preferences.html#options" title="Playback Preferences">Playback Preferences</a>. 
+<dl><dd><b>Accessed by:</b> <span class="menu">Tools &gt; <a href="nyquist_plug_in_installer.html" title="Nyquist Plug-in Installer">Nyquist Plug-in Installer...</a></span></dd>
+<dd><span title="Nyquist Plug-in Installer dialog"><img alt="Nyquist Plug-in Installer.png" src="../m/images/1/13/nyquist_plug_in_installer.png" width="442" height="181" /></span></dd></dl>
+<p>Once the plug-in has been installed, in order to use it it must be enabled using the <a rel="nofollow" class="external text" href="https://manual.audacityteam.org/man/manage_effects_generators_and_analyzers.html"><b>Plug-in Manager</b></a>.
+</p><p>For details please see <a href="nyquist_plug_in_installer.html" title="Nyquist Plug-in Installer">this page</a>.
 </p><p><br />
 </p>
-<div id="ril"></div>
-<h2><span class="mw-headline" id="Regular_Interval_Labels_improvements">Regular Interval Labels improvements</span></h2>
-<p>We have made some improvements to Regular Interval Labels, accessed by <span class="menu"> Tools &gt; <a href="regular_interval_labels.html" title="Regular Interval Labels">Regular Interval Labels</a> </span>.
-</p><p>In particular we have made it possible to create <a href="label_tracks.html#type" title="Label Tracks"><b>range labels</b></a> and not just point labels with this Tool.  You can do this by specifying the label length in the new input field <b>Length of label region (seconds)</b>
-</p><p>See <a href="regular_interval_labels.html" title="Regular Interval Labels"><b>this page</b></a> for full details of how the improved Tool works.
+<div id="macros"></div>
+<h2><span class="mw-headline" id="Macros_-_.22cleaned.22_folder_renamed_to_.22macro-output.22"><a href="apply_macro.html#apply" title="Apply Macro">Macros - "cleaned" folder renamed to "macro-output"</a></span></h2>
+<p>The folder that is created by Audacity when running a Macro on files, or when an Export command is used in a Macro that is run on the current project, has been renamed to "<b>macro-output</b>" to give it a more meaningful name.  
+</p><p>The created folder used to be called "cleaned" <i>(which was a hangover from functionality that used to be in Audacity, bit was removed many versions ago)</i>.
+</p><p>For details please see <a href="apply_macro.html#apply" title="Apply Macro">this page</a>.
+</p><p><br />
+</p>
+<div id="msp"></div>
+<h2><span class="mw-headline" id="mod-script-pipe_provided_with_Audacity_on_Windows_and_Mac">mod-script-pipe provided with Audacity on Windows and Mac</span></h2>
+<div class="intro">The add-on module "mod-script-pipe" provides a programming interface that allows Audacity to be controlled by an external program or from the command line. When enabled, mod-script-pipe intercepts <a href="scripting_reference.html" title="Scripting Reference">scripting commands</a> that are sent to it from an external program (usually <a rel="nofollow" class="external text" href="https://www.python.org/">Python</a>) via a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Named_pipe">named pipe</a>.</div>
+<p>The experimental <b>mod-script-pipe</b> is now available with Audacity for Windows and Mac.  You  need to enable it in <a href="modules_preferences.html" title="Modules Preferences">Modules Preferences</a>.
+</p>
+
+<p><br />
+</p><p><br />
+</p>
+<div id="label"></div>
+<h2><span class="mw-headline" id="Preference_for_.22Type_to_create_a_label.22">Preference for "Type to create a label"</span></h2>
+<p>The default setting for the "Type to create a label" in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a> has been changed from "on" to "off".  
+</p><p>When enabled "on", if there is already a <a href="label_tracks.html" title="Label Tracks">label track</a> that has the yellow focus border, you do not need to use "Add Label at Selection" or its <span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference">shortcut</a> to create a new label. Just type your required label text to create a new label at the position of the editing cursor or selection region.
+</p><p>The change was made as some users were confused by:
+a) shortcuts not working when the label track has focus
+b) labels not being created when the label track did not have focus.
+</p><p>This will not affect any previous setting that you have, or have made, for this Preference unless you chose to have your preferences reset as part of an upgrade installation.
+</p><p><br />
+</p>
+<div id="4gb"></div>
+<h2><span class="mw-headline" id="Size_restrictions_on_WAV_and_AIFF_exports">Size restrictions on WAV and AIFF exports</span></h2>
+<p>WAV and AIFF audio files are size limited to a maximum of 4 GB.  This is a general restriction and not an Audacity restriction.
+</p><p>In earlier versions of Audacity if you exported a WAV or AIFF file that would exceed those limits the file would be corrupted and truncated and this would happen without warning.
+</p><p>For 2.3.2 we have implemented an error trap to catch this and stop it happening. Now when attempting to export an oversized WAV or AIFF file Audacity will not do this and you will get the following error message:
+</p>
+<dl><dd><span title="Error message for oversized WAV or AIFF file for export"><img alt="Error for oversize WAV-AIFF.png" src="../m/images/c/ca/error_for_oversize_wav_aiff.png" width="430" height="136" /></span></dd></dl>
+<p>Clicking on the <a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> Help button in the message will show the following table in the Manual
+</p>
+<h3><span class="mw-headline" id="Aproximate_maximum_time_durations_for_WAV_and_AIFF_files">Aproximate maximum time durations for WAV and AIFF files</span></h3>
+<dl><dd><table class="prettytablerows" width="27%" rules="rows">
+<caption> Maximum sizes for files in time duration (hours:minutes)
+</caption>
+<tr style="background: #add8e6">
+<td valign="top"><b>Sample Format</b>
+</td>
+<td valign="top"><b>Stereo</b>
+</td>
+<td valign="top"><b>Mono</b>
+</td></tr>
+<tr>
+<td>16-bit (default)
+</td>
+<td>6h:45m
+</td>
+<td>13h:31m
+</td></tr>
+<tr>
+<td>24-bit
+</td>
+<td>4h:30m
+</td>
+<td>9h:01m
+</td></tr>
+<tr>
+<td>32-bit
+</td>
+<td>3h:22m
+</td>
+<td>6h:45m
+</td></tr></table></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">These timings are the theoretical maximum times.  You would be well-advised to restrict yourself to slightly lower limits to afford some head-room.
+</td></tr></table>
+</div>
+<p><br />
 </p><p><br />
 </p>
 <div id="bugs"></div>
 <h2><span class="mw-headline" id="Bug_Fixes">Bug Fixes</span></h2>
-<ul><li>Linux: Audacity 2.3.0 was available only for Mac and Windows, and Linux used 2.2.1.  Audacity 2.3.1 is available for Linux.</li>
-<li>Windows and Linux: Intermittent truncation of the end of a recording - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2009">Bug #2009</a></li>
-<li>Can't adjust Time Track envelope when Logarithmic scale selected - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1832">Bug #1832</a></li>
-<li>Mixer Board does not automatically update when tracks added or removed - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2022">Bug #2022</a></li>
-<li>Regular Interval Labels fails - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2014">Bug #2014</a></li>
-<li>Windows: Regular Interval Labels on multiple tracks produces multiple labels - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1298">Bug #1298</a></li>
-<li>Multiple problems with Change Pitch - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2016">Bug #2016</a></li>
-<li>Mac:  Audacity crashes when right clicking in label after copying label text to ano app - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2028">Bug #2028</a></li>
-<li>Linux: Assert on recording or generating when main Window minimized  - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2040">Bug #2040</a></li>
-<li>Windows:  Macros - "ExportMP3 before" and "ExportMP3 after" overwrite causing non-critical data loss  - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2054">Bug #2054</a></li>
-<li>Macros: Change Pitch in a Macro does not remember speed parameter setting  - see <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2069">Bug #2069</a></li></ul>
+<div class="note">Click on the bug number for full details in the bug thread.</div>
+<ul><li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2078">2078</a> - Append recording into a collapsed track causes a crash</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2068">2068</a> - Mac: misleading error message when importing M4A without FFmpeg installed</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2082">2082</a> - Expand function after Append Record to a collapsed track fails</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2086">2086</a> - Incorrect Mixer Board behaviour</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2096">2096</a> - High quality stretching in Change Pitch/Tempo causes the Preview to malfunction and remove the selection</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=723">723</a> - Recording does not stop at end of selection. </li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1534">1534</a> - Linux: Malformed tooltips/"Untitled window" in taskbar when clicking or hovering over toolbar sliders</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1899">1899</a> - Windows: previously deleted folders are unnecessarily re-created on next Save</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2007">2007</a> - Windows: Empty folder created on Import if last used import folder does not exist</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1762">1762</a> - Importing keystrokes can fail to import keystrokes that are not in standard set</li>
+<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2080">2080</a> - Windows: Using WASAPI, after recording, playback can fail with "opening sound device error"</li>
+<li>P5 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2050">2050</a> - Misleading LAME version error message</li>
+<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2084">2084</a> - Enh: Auto-select behaviour changed from previous version and not documented.</li>
+<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1248">1248</a> - Windows: TAB does not navigate out of mouse-created focus in sliders.</li>
+<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2087">2087</a> - Mixer Board gain control dialog is ridiculously over-long vertically</li>
+<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2064">2064</a> - Linux: ESC key does not work to abort drags in the Timeline Ruler</li>
+<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1965">1965</a> - Enh: Track name overlay display for all track types</li>
+<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2051">2051</a> - Shortcut for Edit&gt;Clip&gt;Boundaries&gt;Split (Ctrl+i) should be in the Standard shortcut set</li>
+<li>P5 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2053">2053</a> - Splitting or joining collapsed stereo tracks causes broken scroll bar behavior</li></ul>
+<h3><span class="mw-headline" id="Note_Track_bugs_fixed">Note Track bugs fixed</span></h3>
+<ul><li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1815">1815</a> - NoteTrack: Hidden notes on importing MIDI</li>
+<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2093">2093</a> - Note Track: Vertical Zoom Reset produces max. zoom out and not a reset</li>
+<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1820">1820</a> - Note tracks don't save the pitch height, which may lead to hidden notes</li></ul>
 <p><br />
 </p><p><br />
-</p><p><br />
+</p>
+
+<p><br />
 </p>
 <div id="appendix"></div>
 
 <h2><span class="mw-headline" id="Links">Links</span></h2>
-<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_2.3.1"><b>&gt;</b> Audacity Release Notes 2.3.1</a> <i>- detailed release notes for this release of Audacity</i>
+<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_2.3.2"><b>&gt;</b> Audacity Release Notes 2.3.2</a> <i>- detailed release notes for this release of Audacity</i>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190308150859
+Cached time: 20190503150524
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.086 seconds
-Real time usage: 0.092 seconds
-Preprocessor visited node count: 113/1000000
-Preprocessor generated node count: 330/1000000
-Post‐expand include size: 2154/2097152 bytes
-Template argument size: 1598/2097152 bytes
-Highest expansion depth: 3/40
+CPU time usage: 0.112 seconds
+Real time usage: 0.118 seconds
+Preprocessor visited node count: 245/1000000
+Preprocessor generated node count: 698/1000000
+Post‐expand include size: 3983/2097152 bytes
+Template argument size: 2426/2097152 bytes
+Highest expansion depth: 4/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   13.127      1 - -total
- 26.82%    3.521      1 - Template:Intro
- 15.93%    2.091      3 - Template:Ednote
- 15.43%    2.026      3 - Template:Menu
- 13.25%    1.739      1 - Template:Tip
- 12.89%    1.692      1 - Template:Note
+100.00%   17.998      1 - -total
+ 15.77%    2.838      2 - Template:Intro
+ 14.06%    2.531      4 - Template:Button
+ 12.12%    2.181      2 - Template:Shortcut
+ 10.62%    1.911      5 - Template:Ednote
+  7.86%    1.415      2 - Template:Note
+  7.45%    1.340      1 - Template:Key
+  6.42%    1.155      2 - Template:Tip
+  5.73%    1.032      1 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5555-0!*!0!!*!5!* and timestamp 20190308150859 and revision id 63365
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5555-0!*!0!!*!5!* and timestamp 20190503150523 and revision id 64190
  -->
 </div>
 										<!-- end content -->
@@ -175,7 +273,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -212,7 +311,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-03-08 - <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

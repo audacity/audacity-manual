@@ -52,7 +52,6 @@
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#install">Installing Audacity on Windows</a></li>
 <li><a href="#updates">Check for Updates</a></li>
-<li><a href="#winlame">Installing LAME on Windows</a></li>
 <li><a href="#winff">Installing the FFmpeg Import/Export Library on Windows</a></li>
 <li><a href="#purge">Reset Audacity Settings</a></li></ol>
 <p><br />
@@ -86,6 +85,10 @@ If you install a new Audacity version after installing a previous one, the insta
 <div id="compatible_projects"></div>
 <h3><span class="mw-headline" id="Projects_saved_by_old_versions_of_Audacity">Projects saved by old versions of Audacity</span></h3>
 <p>Current Audacity is compatible with project files saved by versions of Audacity 1.3.x and later, including 2.x.x. 
+</p>
+<div id="lamein"></div>
+<h3><span class="mw-headline" id="LAME_is_now_built-in_as_part_of_Audacity">LAME is now built-in as part of Audacity</span></h3>
+<p>The software patent on <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> encoding library has expired, so now the <b>LAME</b> library for <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> export is built-in with Audacity for Windows.
 </p><p><br />
 </p>
 <div id="updates"></div>
@@ -93,40 +96,8 @@ If you install a new Audacity version after installing a previous one, the insta
 <p>You can check to see if you have the latest version of Audacity by using <span class="menu">Help &gt; Check for Updates...</span>.
 </p><p>This takes you to the <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/">Download page</a> of the Audacity website where you can check what the latest release version of Audacity is. 
 </p><p>You can then compare the latest release with the version you have now as shown by using <span class="menu">Help &gt; About Audacity...</span>. 
-</p><p><br />
 </p>
-<div id="winlame"></div>
-<h2><span class="mw-headline" id="Installing_LAME_on_Windows">Installing LAME on Windows</span></h2>
-<div class="note">Audacity does not include <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding software or distribute such software from its own websites. Instead, use the following instructions to download and install the free and recommended <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> third-party encoder to export MP3 files with Audacity. </div>
-<ol><li>Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lamewindl"><b>LAME download page</b></a><br />&#160;<i><b>Left-click this link, do not right-click</b></i>   </li>
-<li>Directly underneath "TO DOWNLOAD Lame and FFmpeg for Windows, click links BELOW:", left-click the link <b>Lame v3.99.3 for Windows.exe</b> and save the file anywhere on your computer</li>
-<li>Double-click "Lame v3.99.3 for Windows.exe" to launch it (you can safely ignore any warnings that the "publisher could not be verified")</li>
-<li>Follow the Setup instructions to install LAME for Audacity, making sure not to change the offered installation location of "<b>C:\Program Files\Lame for Audacity</b>" (or "<b>C:\Program Files (x86)\Lame for Audacity</b>" on a 64-bit version of Windows).  </li></ol>
-<dl><dd>You should now be able to export MP3s without any further configuration, choosing <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export as MP3</a></span>.</dd></dl>
-<h3><span class="mw-headline" id="ZIP_file_option">ZIP file option</span></h3>
-<p>If you cannot run the LAME installer due to restrictions on your computer, or if you want a later specially built LAME 3.99.5 version, download the appropriate ZIP file from the <a rel="nofollow" class="external text" href="https://lame.buanzo.org/#lamewindl">LAME download page</a>. Extract the contents of the ZIP file to a location of your choosing, then use the <span class="button">Locate...</span> button for LAME in <a href="libraries_preferences.html" title="Libraries Preferences">Libraries Preferences</a> to browse for and open the extracted DLL file.  
-</p>
-<h3><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h3>
-<p>Occasionally, there may be a conflict where Audacity still tries to detect the path to an older lame_enc.dll file. To correct this:
-</p>
-<ol><li>Ensure there are no older versions of lame_enc.dll in any locations where Audacity detects it, namely:</li> 
-<ul><li> <b>C:\Program Files\Lame for Audacity</b> or <b>C:\Program Files (x86)\Lame for Audacity</b> (this is where the installer puts the new .dll)</li>
-<li> the Audacity installation folder (usually <b>C:\Program Files\Audacity</b> or <b>C:\Program Files (x86)\Audacity</b>), or in the "<b>Plug-Ins</b>" folder inside that</li></ul>
-<li> Exit Audacity and navigate to the <i><b>audacity.cfg</b></i> preferences file at:</li>
-<ul><li><b>Users\&lt;username&gt;\AppData\Roaming\Audacity\audacity.cfg</b></li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
-</td>
-<td align="left" valign="top">In order to see audacity.cfg, you may need to set the operating system to show hidden files and folders. See instructions for  <a rel="nofollow" class="external text" href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Showing hidden files on Windows</a>.
-</td></tr></table>
-</div>
-<li> Open audacity.cfg in a text editor such as Notepad, and delete the two lines starting with:
-<ul style="list-style-image: none; list-style-type: none"><li><b>[MP3]<br />MP3LibPath= </b></li></ul>
-<li> Save the changes to audacity.cfg and restart Audacity.</li></ol>
-<div class="note">As an alternative to editing the audacity.cfg file, you may instead delete that file itself. However this will completely reset your <a href="preferences.html" title="Preferences">Audacity Preferences</a>, which may not be what you want.</div>
 <p><br />
 </p>
 <div id="winff"></div>
@@ -151,7 +122,7 @@ If you install a new Audacity version after installing a previous one, the insta
 <h3><span class="mw-headline" id="Locating_the_FFmpeg_library_manually">Locating the FFmpeg library manually</span></h3>
 <p>If you installed FFmpeg while Audacity was running, or if you installed FFmpeg to a non-default location, Audacity will ask you to configure Preferences to locate the FFmpeg library. To do this, access <a href="preferences.html" title="Preferences">Preferences</a> then the "Libraries" tab on the left: 
 </p>
-<dl><dd><span title="Libraries Preferences showing the FFmpeg Locate... and Download... buttons, with the FFmpeg libray not found"><img alt="Preferences Libraries NOT Found W10.png" src="../m/images/c/c7/preferences_libraries_not_found_w10.png" width="618" height="497" /></span></dd></dl>
+<dl><dd><span title="Libraries Preferences showing the FFmpeg Locate... and Download... buttons, with the FFmpeg libray not found"><img alt="Preferences Libraries NOT Found W10 LAME built-in.png" src="../m/images/b/b3/preferences_libraries_not_found_w10_lame_built_in.png" width="630" height="473" /></span></dd></dl>
 <p>As seen in the image above, the "FFmpeg Library Version" will say "not found". To correct this:
 </p>
 <ol><li> Click the <span class="button">Locate...</span> button to right of "<b>FFmpeg Library:</b>"</li>
@@ -185,34 +156,34 @@ If you install a new Audacity version after installing a previous one, the insta
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190225114802
+Cached time: 20190503150549
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.123 seconds
-Real time usage: 0.129 seconds
-Preprocessor visited node count: 422/1000000
-Preprocessor generated node count: 1576/1000000
-Post‐expand include size: 9628/2097152 bytes
-Template argument size: 6365/2097152 bytes
+CPU time usage: 0.134 seconds
+Real time usage: 0.139 seconds
+Preprocessor visited node count: 419/1000000
+Preprocessor generated node count: 1616/1000000
+Post‐expand include size: 13345/2097152 bytes
+Template argument size: 10051/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   47.035      1 - -total
- 49.97%   23.501      1 - Template:I18n
- 44.87%   21.105      1 - Template:I18n_box
- 36.33%   17.087      1 - Template:I18n_list
- 14.75%    6.937      2 - Template:I18n_link
- 11.63%    5.471      9 - Template:Button
- 11.07%    5.209      1 - Template:Intro
-  8.74%    4.110      2 - Template:Autoglossonym
-  5.63%    2.650      6 - Template:Note
-  4.07%    1.914      4 - Template:Menu
+100.00%   47.414      1 - -total
+ 48.80%   23.140      1 - Template:I18n
+ 44.47%   21.086      1 - Template:I18n_box
+ 35.26%   16.718      1 - Template:I18n_list
+ 13.42%    6.362      2 - Template:I18n_link
+ 13.17%    6.246      1 - Template:Ednote
+ 11.53%    5.466      1 - Template:Intro
+ 11.08%    5.252      9 - Template:Button
+  7.97%    3.780      2 - Template:Autoglossonym
+  5.65%    2.677      6 - Template:Note
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5420-0!*!0!!*!5!* and timestamp 20190225114802 and revision id 63316
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5420-0!*!0!!*!5!* and timestamp 20190503150549 and revision id 63904
  -->
 </div>
 										<!-- end content -->
@@ -247,7 +218,8 @@ Transclusion expansion time report (%,ms,calls,template)
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
-<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li></ul></li></ul>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -284,7 +256,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-02-26 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Windows">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Windows">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
