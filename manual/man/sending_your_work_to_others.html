@@ -39,15 +39,11 @@
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Sending_Projects_to_others"><span class="tocnumber">1</span> <span class="toctext">Sending Projects to others</span></a>
+<li class="toclevel-1 tocsection-1"><a href="#Sending_Projects_to_others"><span class="tocnumber">1</span> <span class="toctext">Sending Projects to others</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Sending_an_exported_audio_file"><span class="tocnumber">2</span> <span class="toctext">Sending an exported audio file</span></a>
 <ul>
-<li class="toclevel-2 tocsection-2"><a href="#Dependencies_on_other_audio_files"><span class="tocnumber">1.1</span> <span class="toctext">Dependencies on other audio files</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-3"><a href="#Sending_an_exported_audio_file"><span class="tocnumber">2</span> <span class="toctext">Sending an exported audio file</span></a>
-<ul>
-<li class="toclevel-2 tocsection-4"><a href="#Sending_files_by_email"><span class="tocnumber">2.1</span> <span class="toctext">Sending files by email</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Exporting_from_multi-track_projects"><span class="tocnumber">2.2</span> <span class="toctext">Exporting from multi-track projects</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Sending_files_by_email"><span class="tocnumber">2.1</span> <span class="toctext">Sending files by email</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Exporting_from_multi-track_projects"><span class="tocnumber">2.2</span> <span class="toctext">Exporting from multi-track projects</span></a></li>
 <li class="toclevel-2"><a href="#Sending_to_someone_using_a_different_version_of_Audacity"><span class="tocnumber">2.3</span> <span class="toctext">Sending to someone using a different version of Audacity</span></a></li>
 <li class="toclevel-2"><a href="#Sending_to_someone_using_a_different_operating_system_or_platform"><span class="tocnumber">2.4</span> <span class="toctext">Sending to someone using a different operating system or platform</span></a></li>
 </ul>
@@ -57,7 +53,7 @@
 
 <div id="projects"></div>
 <h2><span class="mw-headline" id="Sending_Projects_to_others">Sending Projects to others</span></h2>
-<p>It's quite possible to send an Audacity Project to another person or open it on another computer of your own, so that the Project can be opened in another copy of Audacity with all the tracks, label and envelope information in situ. However when opening the AUP Project file you need to have its associated _data folder with the same name as the AUP file present in the same folder. For example, to send a Project to someone else you could send the AUP file and _data folder in a compressed .zip archive. Free Windows tools to create .zip archives include <a rel="nofollow" class="external text" href="http://www.7-zip.org/">7-Zip</a> or <a rel="nofollow" class="external text" href="http://www.izarc.org/">IZArc</a>. Free Mac tools include <a rel="nofollow" class="external text" href="http://mac.softpedia.com/get/Utilities/keka.shtml">Keka</a> or Apple's built-in compression utility. Zip compression is lossless, so does not reduce the space on disk very much. Ask your recipient to extract both the AUP file and _data folder to the same directory then open the AUP file from inside that folder. 
+<p>It's quite possible to send an Audacity Project to another person or open it on another computer of your own, so that the Project can be opened in another copy of Audacity with all the tracks, label and envelope information in situ. However when opening the AUP Project file you need to have its associated _data folder with the same name as the AUP file present in the same folder. For example, to send a Project to someone else you could send the AUP file and _data folder in a compressed .zip archive. Free Windows tools to create .zip archives include <a rel="nofollow" class="external text" href="https://www.7-zip.org/">7-Zip</a> or <a rel="nofollow" class="external text" href="http://www.izarc.org/">IZArc</a>. Free Mac tools include <a rel="nofollow" class="external text" href="http://mac.softpedia.com/get/Utilities/keka.shtml">Keka</a> or Apple's built-in compression utility. Zip compression is lossless, so does not reduce the space on disk very much. Ask your recipient to extract both the AUP file and _data folder to the same directory then open the AUP file from inside that folder. 
 </p><p>In practice, the problem with sending such a folder to someone else is the size of the _data folder. At Audacity's default 32-bit float sample format / 44100 Hz sample rate using lossless uncompressed audio, stereo Projects take 20 MB of space per minute, which rules out sending the project by email. 
 </p><p>To send your project, first close it (saving changes) so that Audacity can discard the surplus data files which allow undo and redo of edits while projects are open. This way, only the audio for the current state of the project is included. If you forget to close the project before zipping, Audacity will complain about these surplus files, calling them "orphan block files". If this happens, the safest course is to tell Audacity to "continue without deleting" the orphans, at least until you are sure the audio of the project is correct.  
 </p><p>Then use a zip application like those above to place the AUP file and _data folder inside a zip file. Then find a suitable free internet file transfer service to send your zip file. Recommendable services include the following. Check the limitations for free accounts on size and number of uploads, maximum permitted number of downloads, and length of time files are stored for.      
@@ -72,12 +68,8 @@
 <div class="note"><i>You can produce a small, compressed project for distribution to others using <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_compressed_copy_of_project" title="File Menu: Save Project">Save Compressed Copy of Project...</a></span>. </i>
 <ul><li> The audio in the _data folder is in the form of one <a href="glossary.html#ogg" title="Glossary">OGG</a> file per track of the project. </li>
 <li> The OGG files are very slightly lossy, whereas when saving a project by <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> or <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As...</a></span> the .au files in the _data folder are lossless.</div></li></ul>
-<h3><span class="mw-headline" id="Dependencies_on_other_audio_files">Dependencies on other audio files</span></h3>
-<p><b>If you save a standard uncompressed project which contains audio imported into Audacity from a WAV or AIFF file</b>, you must have previously set Audacity to make a copy of that original audio when you imported it, so that it's included in the _data folder.  Note that when importing compressed audio like MP3 or OGG, Audacity always copies the audio into the _data folder.
+<p><br />
 </p>
-<ul><li>When you import a WAV or AIFF there will by default be a warning where you can choose to copy in the file or not.</li>
-<li>You can always check if you need to copy in files to the current project, and copy them in if necessary at <span class="menu">Help &gt; Diagnostics &gt; <a href="dependencies_dialog.html" title="Dependencies Dialog">Check Dependencies...</a></span>.</li>
-<li>You can change your preference for future copying in or not in <a href="import_export_preferences.html" title="Import - Export Preferences">Import/Export Preferences</a>, and you can turn the warning on or off in <a href="warnings_preferences.html" title="Warnings Preferences">Warnings Preferences</a>.</li></ul>
 <div id="files"></div>
 <h2><span class="mw-headline" id="Sending_an_exported_audio_file">Sending an exported audio file</span></h2>
 <p>You can also send an exported audio file from your Project to the other user. Only Project–specific information such as label and envelope data will be lost by exporting instead of saving a project. 
@@ -121,34 +113,34 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130359
+Cached time: 20191115102426
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.061 seconds
-Real time usage: 0.065 seconds
-Preprocessor visited node count: 242/1000000
-Preprocessor generated node count: 1250/1000000
-Post‐expand include size: 7132/2097152 bytes
-Template argument size: 5342/2097152 bytes
+CPU time usage: 0.070 seconds
+Real time usage: 0.075 seconds
+Preprocessor visited node count: 231/1000000
+Preprocessor generated node count: 1226/1000000
+Post‐expand include size: 7040/2097152 bytes
+Template argument size: 5276/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   29.872      1 - -total
- 65.53%   19.574      1 - Template:I18n
- 59.84%   17.877      1 - Template:I18n_box
- 48.79%   14.574      1 - Template:I18n_list
- 18.68%    5.581      2 - Template:I18n_link
- 16.15%    4.825      2 - Template:Hint
- 12.09%    3.612      3 - Template:Note
- 10.86%    3.243      2 - Template:Autoglossonym
-  6.96%    2.079      7 - Template:Menu
-  4.79%    1.432      1 - Template:Intro
+100.00%   39.190      1 - -total
+ 64.47%   25.264      1 - Template:I18n
+ 58.87%   23.073      1 - Template:I18n_box
+ 48.60%   19.045      1 - Template:I18n_list
+ 17.94%    7.032      2 - Template:I18n_link
+ 17.45%    6.838      2 - Template:Hint
+ 12.89%    5.052      3 - Template:Note
+ 10.47%    4.104      2 - Template:Autoglossonym
+  6.69%    2.621      6 - Template:Menu
+  5.71%    2.237      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4853-0!*!0!!en!*!* and timestamp 20190503130359 and revision id 60615
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4853-0!*!0!!en!*!* and timestamp 20191115102426 and revision id 64786
  -->
 </div>
 										<!-- end content -->
@@ -221,7 +213,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Sending_your_work_to_others">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Sending_your_work_to_others">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

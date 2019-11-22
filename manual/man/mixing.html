@@ -34,6 +34,7 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+
 <div class="intro"><i><b>Mixing</b></i> refers to the process of combining multiple Audacity <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">tracks</a> which play simultaneously into a single track.
 <p>Audacity mixes automatically when playing or exporting, but it can also physically mix <a href="audacity_selection.html" title="Audacity Selection">selected</a> multiple tracks together into one within the project. All selected tracks are mixed, regardless if the <span class="button">Mute</span> or <span class="button">Solo</span> buttons on any tracks are set to silence their playback. 
 </p><p>The channel of a track being mixed affects whether it will be mixed into the left channel of the resulting track(s), the right channel, or both (mono).  For example, if you have four tracks:
@@ -43,13 +44,19 @@
 <li> Track 3: right channel</li>
 <li> Track 4: mono channel</li></ul></dd></dl>
 and you select them all and perform a Mix and Render, you will end up with one stereo track: the left channel will contain a mix of tracks 1, 2, and 4 and the right channel will contain a mix of tracks 3 and 4.</div>
+<h2><span class="mw-headline" id="Mixing">Mixing</span></h2>
 <p>Mixing can be done for a number of reasons, for example <a href="tutorial_mixing_a_narration_with_background_music.html" title="Tutorial - Mixing a Narration With Background Music">mixing speech with background music</a> to make a podcast, or adding different instruments into the same song.  Concatenating songs (for example, playing three songs one after the other) does not necessarily involve mixing, but if you wanted the songs to fade into each other it would involve mixing. 
 </p><p>Within an Audacity project, you can physically mix selected multiple selected tracks into a single mono or stereo track using either of two <a href="#mix">explicit&#160;mix&#160;commands</a>:
 </p>
-<ul><li><span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span> - which replaces the original track(s) with the mixed track, or,</li>
+<ul><li><span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span> - which replaces the original track(s) with the mixed track</li>
 <li> <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render_to_new_track" title="Tracks Menu: Mix">Mix and Render to New Track</a></span> - which adds the mixed track to the project, preserving the original tracks.</li></ul>
-<p>However in Audacity, <b>mixing is automatic</b>. You could just put audio into two different tracks, <a href="transport_toolbar.html" title="Transport Toolbar">play</a> to listen to the result then <a href="file_export_dialog.html" title="File Export Dialog">export</a> it as an audio file like <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> or <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or burn the WAV to <i><b><a href="glossary.html#audio_cd" title="Glossary">Audio CD</a></b></i>.  
-</p><p>However once audio has been finally mixed <i>(as in an audio file you might <a href="importing_audio.html" title="Importing Audio">import</a> into Audacity)</i> it is essentially impossible to separate out all the original parts again; it's like trying to take the banana out of a banana milkshake after you've already put it through the blender.  There are a few occasions when it actually is possible to separate sounds a bit - you can sometimes isolate the bass, or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Vocal_Removal">remove the lead vocals</a>.  But these processes do not always work well and usually cause some quality loss. So remember, as long as the multiple tracks are inside an Audacity project, you can manipulate them independently, but once you export as a mixed down file you cannot expect to separate the different parts again. So keep your Audacity project around if you plan to continue editing!
+<p>By default, multiple stereo tracks are mixed down to a single stereo file on Export.
+</p><p>Also by default, multiple mono tracks are mixed down to a mono file, but if you <a href="audio_tracks.html#pan" title="Audio Tracks">pan</a> any mono tracks to left or right or if there are any stereo tracks in the mix, the tracks are mixed to a stereo file.  Note that the mono tracks are mixed to both the left and right channels of the resulting stereo file.
+</p>
+<div class="note">The Mixed and Rendered track will be placed at the bottom of the project and given the name "<b>Mix</b>". <p>Unless, that is, a single selected track is rendered in which case it will retain its track name, but lose its properties (display type, waveform color) and be moved out of position to the bottom of the project, note that this may cause it to lose its membership of any Sync-Locked Track group to which it may have formerly belonged.</p>
+ </div>
+<p>In Audacity, <b>mixing is automatic</b>. You could just put audio into two different tracks, <a href="transport_toolbar.html" title="Transport Toolbar">play</a> to listen to the result then <a href="file_export_dialog.html" title="File Export Dialog">export</a> it as an audio file like <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> or <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or burn the WAV to <i><b><a href="glossary.html#audio_cd" title="Glossary">Audio CD</a></b></i>.  
+</p><p>However once audio has been finally mixed <i>(using <b>Mix and Render</b> or as in an audio file you might <a href="importing_audio.html" title="Importing Audio">import</a> into Audacity)</i> it is essentially impossible to separate out all the original parts again; it's like trying to take the banana out of a banana milkshake after you've already put it through the blender.  There are a few occasions when it actually is possible to separate sounds a bit - you can sometimes isolate the bass, or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Vocal_Removal">remove the lead vocals</a>.  But these processes do not always work well and usually cause some quality loss. So remember, as long as the multiple tracks are inside an Audacity project, you can manipulate them independently, but once you export as a mixed down file you cannot expect to separate the different parts again. So keep your Audacity project around if you plan to continue editing!
 </p>
 <div class="note">Although Audacity by default exports files as either two channel stereo or single channel mono (if exporting unpanned mono tracks), you can also export multi-channel files having more than two channels, such as a 5:1 file. To enable this, choose "Use custom mix" in the <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>.</div>     
 <p>The controls used for mixing are the <span class="button">Mute</span> and <span class="button">Solo</span> buttons and the Gain (-.....+) and Pan (L.....R) sliders.
@@ -64,9 +71,9 @@ and you select them all and perform a Mix and Render, you will end up with one s
 <ul><li> <span class="button">Mute</span> causes a track to be silenced.  More than one track can be muted.</li>
 <li> <span class="button">Solo</span> can behave in two different ways depending on the setting made in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>. 
 <ul><li> Default behavior, the "<b>Simple</b>" setting, is that clicking Solo on any track mutes all the other tracks.  To solo more than one track, hold <span class="kbrd">Shift</span> down while clicking the <span class="button">Solo</span> button on the additional tracks to be soloed. On the additional tracks that are soloed, the Solo button overrides the Mute button.</li>
-<li> Selecting "<b>Multi-track</b>" setting will suit those used to mixing desks and other professional audio software. Any number of tracks can be made solo so that they <strong class="selflink">mix</strong> together. If any Solo button is down this overrides the Mute button. If on any occasion you want the Solo button to play only one track at a time (so that clicking it releases any other Solo buttons), hold down <span class="kbrd">Shift</span> when clicking Solo. </li></ul></li></ul>
-<p>A third option in Tracks Preferences, the "<b>None</b>" setting, removes the Solo button from all tracks, leaving just a Mute button which silences whichever track or tracks it is applied to.  If on any occasion you want the Mute button to silence only one track at a time (so that clicking it releases any other Mute buttons), hold down <span class="kbrd">Shift</span> while clicking Mute.
-</p><p>You can press the Mute and Solo buttons while tracks are playing.
+<li> Selecting "<b>Multi-track</b>" setting will suit those used to mixing desks and other professional audio software. Any number of tracks can be made solo so that they <strong class="selflink">mix</strong> together. If any Solo button is down this overrides the Mute button. If on any occasion you want the Solo button to play only one track at a time (so that clicking it releases any other Solo buttons), hold down <span class="kbrd">Shift</span> when clicking Solo. </li></ul></li>
+<li><b>None:</b> A third option in Tracks Preferences, the "<b>None</b>" setting, removes the Solo button from all tracks, leaving just a Mute button which silences whichever track or tracks it is applied to.  If on any occasion you want the Mute button to silence only one track at a time (so that clicking it releases any other Mute buttons), hold down <span class="kbrd">Shift</span> while clicking Mute.</li></ul>
+<p>You can press the <span class="button">Mute</span> and <span class="button">Solo</span> buttons while tracks are playing.
 </p><p>If you're using the keyboard, <span class="kbrd" style="background-color: #e0e0f0">Shift+U</span> toggles muting on the currently focused track which has the yellow border, and <span class="kbrd" style="background-color: #e0e0f0">Shift + S</span> toggles soloing. The solo shortcut works even if you hide the Solo button. 
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -91,7 +98,7 @@ and you select them all and perform a Mix and Render, you will end up with one s
 <div class="note">If you do not see the gain or pan slider for a track, you may need to make it taller.  Position the mouse on the bottom edge of the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> and drag  downwards. You can use the button with the upward pointing arrow (below the pan slider) to collapse the track upwards to a minimal height. </div> 
 <div id="mix"></div>
 <h2><span class="mw-headline" id="Explicit_Mixing_and_Rendering">Explicit Mixing and Rendering</span></h2>
-<p>While mixing is automatic, there are times when you may want to explicitly tell Audacity to mix several tracks.  This is useful in several ways:
+<p>While mixing is automatic on playback and export, there are times when you may want to explicitly tell Audacity to mix several tracks.  This is useful in several ways:
 </p>
 <ul><li> You can consolidate tracks which you have finished working on, making it easier to see the other tracks without scrolling up and down</li>
 <li> Playback may respond more quickly with fewer tracks </li>
@@ -107,17 +114,17 @@ and you select them all and perform a Mix and Render, you will end up with one s
 <td align="left" valign="top">For mouse users, a quick way to select multiple tracks is to select the first track by clicking on its <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>, then hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking on the Track Control Panels of the other tracks you want to select.
 </td></tr></table>
 </div>
-<p>Several things happen when you choose either Mix and Render command. 
+<p>Several things happen when you choose either of the Mix and Render commands: 
 </p>
-<ul><li> All selected tracks are mixed down to a single track called "Mix". </li>
-<li> If you choose "Mix and Render", the resulting "Mix" track replaces the selected original tracks. </li>
-<li> If you choose "Mix and Render to New Track", the original tracks are preserved so that the resulting "Mix" track becomes an additional track in the project.  </li>
+<ul><li> All selected tracks are mixed down to a single track called "Mix". 
+<ul><li>Except when Rendering just a single track, when it will retain its original track name.</li></ul></li>
+<li> If you choose "Mix and Render", the resulting track replaces the selected original track(s). </li>
+<li> If you choose "Mix and Render to New Track", the original tracks are preserved so that the resulting track becomes an additional track in the project.  </li>
 <li> The "Mix" track is always placed underneath any non-selected or remaining tracks.  </li>
 <li> The new mixed track will be stereo unless the tracks you mixed were mono tracks panned to center.     </li>
 <li> If any of the original tracks did not match the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> of the project (set at bottom left of the project window in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>), they will be <i><b><a href="glossary.html#resampling" title="Glossary">resampled</a></b></i> to match the project rate.</li>
 <li> Any <a href="envelope_tool.html" title="Envelope Tool">envelope points</a> defining <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> modifications will be applied and the previous envelope points removed.</li>
-<li> Gain and panning changes will be applied and the sliders reset to normal in the mixed track.</li>
-<li> Mute and Solo button states will be released. </li></ul>
+<li> Gain and panning changes will be applied and the sliders reset to normal in the mixed track.</li></ul>
 <p>You can always <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> if you're not happy with the results of Mix and Render, then make changes and try it again.
 </p>
 <div id="levels"></div>
@@ -139,34 +146,34 @@ and you select them all and perform a Mix and Render, you will end up with one s
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130147
+Cached time: 20191115102035
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.132 seconds
-Real time usage: 0.139 seconds
-Preprocessor visited node count: 476/1000000
-Preprocessor generated node count: 1784/1000000
-Post‐expand include size: 7893/2097152 bytes
-Template argument size: 3708/2097152 bytes
+CPU time usage: 0.139 seconds
+Real time usage: 0.146 seconds
+Preprocessor visited node count: 522/1000000
+Preprocessor generated node count: 1902/1000000
+Post‐expand include size: 9012/2097152 bytes
+Template argument size: 4628/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   55.790      1 - -total
- 43.19%   24.094      1 - Template:I18n
- 39.44%   22.005      1 - Template:I18n_box
- 31.86%   17.773      1 - Template:I18n_list
- 12.64%    7.049     12 - Template:Key
- 12.33%    6.879      2 - Template:I18n_link
-  9.50%    5.300      8 - Template:Button
-  9.09%    5.072      1 - Template:Intro
-  7.12%    3.973      2 - Template:Autoglossonym
-  5.13%    2.863      2 - Template:Tip
+100.00%   58.245      1 - -total
+ 42.00%   24.466      1 - Template:I18n
+ 38.63%   22.500      1 - Template:I18n_box
+ 31.53%   18.365      1 - Template:I18n_list
+ 11.62%    6.769      2 - Template:I18n_link
+ 11.17%    6.504     10 - Template:Button
+ 10.13%    5.899     12 - Template:Key
+  8.77%    5.110      1 - Template:Intro
+  6.78%    3.952      2 - Template:Autoglossonym
+  4.61%    2.684      8 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2279-0!*!0!!*!5!* and timestamp 20190503130146 and revision id 63700
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2279-0!*!0!!*!5!* and timestamp 20191115102035 and revision id 65342
  -->
 </div>
 										<!-- end content -->
@@ -239,7 +246,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Mixing">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Mixing">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

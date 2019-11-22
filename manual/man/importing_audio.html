@@ -50,15 +50,13 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">Do <i><b>not</b></i> attempt to open, import or manipulate any individual AU files. See <a href="audacity_projects.html" title="Audacity Projects">Audacity Projects</a> for more information.&lt;/p&gt;
+<td align="left" valign="top">Do <i><b>not</b></i> attempt to open, import or manipulate any individual AU files. See <a href="audacity_projects.html" title="Audacity Projects">Audacity Projects</a> for more information.
 </td></tr></table></div> </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#formats">Audio File Formats Supported by Audacity</a></li>
 <li><a href="#ways">Three Ways to Import Audio</a></li>
 <li><a href="#metadata">Metadata</a></li>
 <li><a href="#filetypes">Using the file type dropdown menu in the Open and Import Audio Dialogs</a></li>
-<li><a href="#uncompressed">Importing Uncompressed Audio Files</a></li>
-<li><a href="#compressed">Importing Compressed Audio Files</a></li>
 <li><a href="#cd">Importing audio from CDs</a></li>
 <li><a href="#rate_and_depth">Sample Rate and Sample Format of imported files</a></li></ol>
 <p><br />
@@ -74,8 +72,7 @@
 <p><a href="glossary.html#compressed_format" title="Glossary">Compressed</a> audio: <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i>, <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> and <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> can be imported into Audacity.
 </p>
 <h3><span class="mw-headline" id="FFmpeg_for_other_importable_audio_formats"><a href="faq_installing_the_ffmpeg_import_export_library.html" title="FAQ:Installing the FFmpeg-Import-Export Library">FFmpeg</a> for other importable audio formats</span></h3>
-You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>FFmpeg library</b></a> to import a much larger <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/FFmpeg_integration#Functionality">range of audio formats</a> including <b>AC3, AMR(NB), M4A, MP4 and WMA</b> (if the files are not <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM-protected</a> to work only in particular software). <p>FFmpeg will also import audio from most video files or DVDs that are not DRM-protected.</p>
-</li></ul>
+You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>FFmpeg library</b></a> to import a much larger range of audio formats including <b>AC3, AMR(NB), M4A, MP4 and WMA</b> (if the files are not <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM-protected</a> to work only in particular software). <p>FFmpeg will also import audio from most video files or DVDs that are not DRM-protected.</p>
 <div class="note">Older uncompressed file types such as WAV with U-Law or IMA ADPCM encoding are generally supported provided they contain correctly formatted header information. 
 <ul><li> If files do not have header information (such as RAW or <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Dialogic_ADPCM">VOX ADPCM</a>) or have non-standard header information, you can normally import them using <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#raw" title="File Menu: Import">Raw Data...</a></span>.</li>
 <li> WAV files from portable recorders may contain proprietary compressed audio. These should not be imported as Raw Data, but by installing the <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.   </li>
@@ -87,6 +84,7 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
 <td align="left" valign="top">Audacity does not natively support <b>Opus</b> format. If <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> is installed, Audacity will attempt to use FFmpeg for importing <b>Opus</b> files.
+
 </td></tr></table>
 </div>
 <h3><span class="mw-headline" id="You_cannot_Import_Audacity_Projects">You cannot Import Audacity Projects</span></h3>
@@ -143,50 +141,6 @@ As with the other three import methods, Open does not directly open your selecte
 <ul><li> The file type choice <b>determines which importer attempts the file first</b> when using the Open or Import Audio dialogs. For example, a WAV file could be imported by Audacity's native WAV importer or by the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> if this was installed.</li></ul>
 <p>Additionally, rules for the order in which different importers attempt files of particular types can be created at <a href="extended_import_preferences.html" title="Extended Import Preferences">Extended Import Preferences</a> with an option to over-ride the Open and Import Audio file type choice. See <a href="import_filtering_and_importer_order.html" title="Import Filtering and Importer Order">Import Filtering and Importer Order</a> for more details.
 </p><p><br />
-</p>
-<div id="uncompressed"></div>
-<h2><span class="mw-headline" id="Importing_Uncompressed_Audio_Files">Importing Uncompressed Audio Files</span></h2>
-<p>The two most common uncompressed file types you will encounter are WAV and AIFF.
-</p>
-<div id="warning"></div>
-<h3><span class="mw-headline" id="Warning_Dialog_when_Importing_Uncompressed_Audio_Files">Warning Dialog when Importing Uncompressed Audio Files</span></h3>
-<p>The first time you import an uncompressed audio file into Audacity, you will see this dialog.
-</p>
-<dl><dd><span title="Warning Importing Uncompressed Audio dialog"><img alt="Warning Import Uncompressed Audio.png" src="../m/images/f/f7/warning_import_uncompressed_audio.png" width="513" height="364" /></span></dd></dl>
-<p>For each imported file, you can choose:
-</p>
-<ul><li> Whether to copy the imported file's data into the project or to read its data directly from the file, as described below. </li>
-<li> Whether to make your copy or read directly choice permanent and never show this warning again.</li></ul>
-<div id="method"></div>
-<h3><span class="mw-headline" id="Import_Methods">Import Methods</span></h3>
-<ul><li><b>Make a copy before editing (safer)</b>
-<ul><li> This is the default setting. When this option is chosen, Audacity copies the imported file(s) into the project's audio data. It is <b>essential</b> that files are copied into the project if the Audacity project is to be moved, opened on another computer or sent to someone else, or if you need to to move, rename or delete the original files.</li>
-<li> This option does <b>not</b> make a backup copy of the original file in its original location. If you do not want to lose the original content of the file when <a href="exporting_audio.html" title="Exporting Audio">exporting</a> to the same file name and location, please change the file name when exporting. </li></ul></li>
-<li><b>Read directly from the original (faster)</b>
-<ul><li> When this option is chosen Audacity always reads imported files from the folder you first imported them from, <i>without copying them into the project</i>. Therefore with this option set, <i>you must not move, rename or delete imported uncompressed files, or the folder they are in</i>. The advantage of this option is that you can begin editing a long file almost immediately, since <a href="on_demand_loading.html" title="On-Demand Loading">On-Demand Loading</a> will be used to import the file.</li>
-<li> If you export to the same file name and location as the original file, Audacity will make a copy of the original file's content (renamed to include "-old" and a number) and will then read the project from this "-old" file. Therefore <i>you must not move, rename or delete any "-old" files until you have completely finished working on the project</i>.  </li></ul></li></ul>
-<div class="note">You can change your import preference at any time in <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>, and you can turn the warning dialog on and off in <a href="warnings_preferences.html" title="Warnings Preferences">Warnings Preferences</a>.</div>
-<div id="dependencies"></div>
-<h3><span class="mw-headline" id="Dependencies">Dependencies</span></h3>
-<p>If you import any uncompressed audio files into your project using the "read directly" option, then your project <b>depends</b> on those files remaining available. At any time you can check which files your project depends on by clicking on <span class="menu">Help &gt; Diagnostics &gt; <a href="dependencies_dialog.html" title="Dependencies Dialog">Check Dependencies...</a></span>. See the <a href="dependencies_dialog.html" title="Dependencies Dialog">Dependencies Dialog</a> page for details.
-</p><p>When you save a project you can choose whether or not to copy dependent files into the project. See the <a href="projects_preferences.html" title="Projects Preferences">Projects Preferences</a> page for details.
-</p><p><br />
-</p>
-<div id="compressed"></div>
-<h2><span class="mw-headline" id="Importing_Compressed_Audio_Files">Importing Compressed Audio Files</span></h2>
-<p>When you import a compressed audio file into your project on Windows or Mac, either a <a href="glossary.html#lossy" title="Glossary">lossy</a> format like <b>MP3</b>, <b>MP2</b>, <b>M4A</b> or <b>Ogg Vorbis</b> or the <a href="glossary.html#lossless" title="Glossary">lossless</a> compressed <b>FLAC</b> format, there is no choice between "safer" and "faster" - the file's data is <i>always copied into the project</i>. 
-</p><p>However by default on Linux, FLAC is imported by the Audacity importer for uncompressed files, so the warning for "Importing uncompressed audio files" will appear with the choice to copy in the audio or read it directly. Reading directly permits faster <a href="on_demand_loading.html" title="On-Demand Loading">On-Demand Loading</a>.
-</p>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top"><b>Re-encoding lossy compressed audio files</b><p>If you import a <a href="glossary.html#lossy" title="Glossary">lossy</a> compressed audio file into Audacity, edit it then export it as a lossy compressed audio file, you will lose quality <i><b>twice</b></i>, once in the original encoding of the imported audio, then again when you export it from Audacity as a compressed file. So never do production work in lossy compressed audio formats, instead work with a lossless format such as WAV, AIFF or FLAC and for final use then export to compressed formats.</p><p>
-See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/MP3#mp3apps">this page</a> in the Audacity Wiki for other applications that can be used to directly edit MP3 audio files, thereby avoiding lossy re-encoding.</p>
-</td></tr></table></div>
-<p><br />
 </p>
 <div id="cd"></div>
 <h2><span class="mw-headline" id="Importing_audio_from_CDs">Importing audio from CDs</span></h2>
@@ -274,37 +228,45 @@ See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/
 <td>32
 </td></tr></table></dd></dl>
 <p><a href="glossary.html#ogg" title="Glossary">OGG</a> is unusual in that it will always import at 16-bit resolution using the standard OGG Vorbis importer, irrespective of Default Sample Format. This is due to the design of the OGG codec. However OGG can be imported at 32-bit resolution using <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a>, as described at <a href="#filetypes">Using the file type dropdown menu</a>.
+</p><p><br />
+</p>
+<div id="links"></div>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="exporting_audio.html" title="Exporting Audio"><b>&gt;</b>&#160; Exporting Audio</a> <br />
+</p><p><a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins"><b>&gt;</b>&#160; LAME MP3 Export</a> <br />
+</p><p><a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>&gt;</b>&#160; FFmpeg import/export libraries for more formats</a> <br />
+</p><p><a href="metadata_editor.html" title="Metadata Editor"><b>&gt;</b>&#160; Metadata Tags Editor</a> <br />
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130139
+Cached time: 20191115024150
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.146 seconds
-Real time usage: 0.152 seconds
-Preprocessor visited node count: 415/1000000
-Preprocessor generated node count: 1691/1000000
-Post‐expand include size: 11029/2097152 bytes
-Template argument size: 7171/2097152 bytes
+CPU time usage: 0.129 seconds
+Real time usage: 0.136 seconds
+Preprocessor visited node count: 373/1000000
+Preprocessor generated node count: 1605/1000000
+Post‐expand include size: 9760/2097152 bytes
+Template argument size: 6293/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   42.888      1 - -total
- 48.33%   20.728      1 - Template:I18n
- 44.55%   19.108      1 - Template:I18n_box
- 37.20%   15.955      1 - Template:I18n_list
- 17.77%    7.621      1 - Template:Intro
- 12.68%    5.439      2 - Template:I18n_link
- 12.31%    5.281     22 - Template:Menu
-  9.72%    4.170      3 - Template:Note
-  9.27%    3.977      1 - Template:Alert
-  7.40%    3.175      2 - Template:Autoglossonym
+100.00%   49.151      1 - -total
+ 52.80%   25.954      1 - Template:I18n
+ 47.92%   23.552      1 - Template:I18n_box
+ 38.63%   18.986      1 - Template:I18n_list
+ 17.33%    8.516      1 - Template:Intro
+ 13.84%    6.804      2 - Template:I18n_link
+ 12.47%    6.128     21 - Template:Menu
+  8.96%    4.402      1 - Template:Alert
+  8.79%    4.318      2 - Template:Note
+  8.14%    4.003      2 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3466-0!*!0!!*!5!* and timestamp 20190503130139 and revision id 63879
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3466-0!*!0!!*!5!* and timestamp 20191115024150 and revision id 64879
  -->
 </div>
 										<!-- end content -->
@@ -377,7 +339,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

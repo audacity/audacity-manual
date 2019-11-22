@@ -34,18 +34,22 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">You <b>must</b> use one of the <a href="file_menu.html#export" title="File Menu">Export</a> commands to make an audio file for playing on your music player, burning <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">CDs</a> or for use in other applications. <a href="file_menu.html#save" title="File Menu">Saving</a> an <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a> only makes a text file that tells Audacity how to work with the audio you see in Audacity itself.</div>
+<div class="intro">You <b>must</b> use one of the <a href="file_menu.html#export" title="File Menu">Export</a> commands to make an audio file for playing on your music player, burning <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">CDs</a> or for use in other applications. <a href="file_menu.html#save" title="File Menu">Saving</a> an <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a> only makes a text file that tells Audacity how to work with the audio you see in Audacity itself.
+<div class="note">Please be aware that when using <b>Export</b> or <b>Export Multiple</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. So what you hear by previewing with playback prior to export is what you will get in the Exported audio file.
+<ul><li>When using <b>Export Selected Audio</b>, however, Audacity will Export the selection from <i><b>all</b></i> selected tracks even if some if those tracks are grayed-out and inaudible on playback.</div></div></li></ul>
 <div id="commands"></div>
 <h2><span class="mw-headline" id="Export_Commands">Export Commands</span></h2>
 <p>There are two Export commands for exporting a <b>single audio file</b>. These let you export either the whole project or a <a href="audacity_selection.html" title="Audacity Selection">selected</a> part of it.  
 </p>
-<ul><li> <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> exports all the <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a> in the project. By default, multiple mono tracks are mixed down to a mono file, but if you <a href="audio_tracks.html#pan" title="Audio Tracks">pan</a> any mono tracks to left or right or if there are any stereo tracks, the tracks are mixed to a stereo file. See <a href="mixing.html" title="Mixing">Mixing</a> for details.  </li>
-<li> <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportselectedaudio" title="File Menu: Export">Export Selected Audio...</a></span> exports only the selected audio, mixing it down as above. </li></ul>
+<ul><li> <span class="menu">File &gt; Export &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> exports all the <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a> in the project. By default, multiple mono tracks are mixed down to a mono file, but if you <a href="audio_tracks.html#pan" title="Audio Tracks">pan</a> any mono tracks to left or right or if there are any stereo tracks among the tracks to be exported, the tracks are mixed to a stereo file. </li></ul>
+<dl><dd>Note that the mono tracks are mixed to both the left and right channels of the resulting stereo file. See <b><a href="mixing.html" title="Mixing">Mixing</a></b> for details.  </dd></dl>
+<ul><li> <span class="menu">File &gt; Export &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Selected Audio...</a></span> exports only the selected audio, mixing it down as above. </li></ul>
+<h3><span class="mw-headline" id="Export_Multiple">Export Multiple</span></h3>
 <p>Alternatively, you may export <b>multiple audio files</b> in a single process. This is useful when making a long recording or group of recordings that you want to export as separate songs. Selected tracks or regions are ignored when exporting multiple.  
 </p>
 <ul><li> <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> exports multiple files in one process, one file for each audio track, or one file for each <a href="label_tracks.html" title="Label Tracks">labeled</a> area in a track.</li>
-<li>Use <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#addlabelatplaybackposition" title="Edit Menu: Labels">Add Label at Playback Position</a></span> prior to export to add labels so as to <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">split a long Audacity track into separate song tracks</a>. 
-<ul><li> If there are multiple audio tracks, exporting multiple files split on labels will export a <a href="mixing.html" title="Mixing">mix</a> of the tracks for each labeled area.   </li></ul></li></ul>
+<li><span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#addlabelatplaybackposition" title="Edit Menu: Labels">Add Label at Playback Position</a></span> should be used prior to export to add labels so as to <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">split a long Audacity track into separate song tracks</a>. </li></ul>
+<div class="note">If there are multiple audio tracks, exporting multiple files split on labels will export a <a href="mixing.html" title="Mixing">mix</a> of the tracks for each labeled area.</div>   
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -53,7 +57,7 @@
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
 <td align="left" valign="top">
-<p>For either Export Audio, Export Selected Audio or Export Multiple, tracks on which the <a href="audio_tracks.html#mute" title="Audio Tracks">Mute</a> button is pressed are not exported. There will be a warning if you export with all audio tracks muted.
+<p>For <b>Export Audio</b>, <b>Export Selected Audio</b> or <b>Export Multiple</b>, tracks on which the <a href="audio_tracks.html#mute" title="Audio Tracks">Mute</a> button is pressed are <i><b>not</b></i> exported. There will be a warning if you export with all audio tracks muted.
 </p>
 </td></tr></table></div>
 <div id="single"></div>
@@ -111,37 +115,45 @@
 <ul><li>As shipped formats include <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>, <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i>.</li>
 <li>To export as <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>, the optional <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">Lame MP3 encoder</a> must be installed.</li>
 <li>You may install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> to  export to many more audio formats including <b>AC3, AMR(NB), <i><a href="glossary.html#aac" title="Glossary">M4A(AAC) including MP4</a></i> and <i><a href="glossary.html#wma" title="Glossary">WMA</a></i></b>.</li></ul>
-
+<p><br />
+</p>
+<div id="links"></div>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="importing_audio.html" title="Importing Audio"><b>&gt;</b>&#160; Importing Audio</a> <br />
+</p><p><a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins"><b>&gt;</b>&#160; LAME MP3 Export</a> <br />
+</p><p><a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>&gt;</b>&#160; FFmpeg import/export libraries for more formats</a> <br />
+</p><p><a href="metadata_editor.html" title="Metadata Editor"><b>&gt;</b>&#160; Metadata Tags Editor</a> <br />
+</p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130139
+Cached time: 20191115102027
 Cache expiry: 86400
 Dynamic content: false
 CPU time usage: 0.112 seconds
-Real time usage: 0.119 seconds
-Preprocessor visited node count: 300/1000000
-Preprocessor generated node count: 1353/1000000
-Post‐expand include size: 5661/2097152 bytes
-Template argument size: 2471/2097152 bytes
+Real time usage: 0.118 seconds
+Preprocessor visited node count: 339/1000000
+Preprocessor generated node count: 1443/1000000
+Post‐expand include size: 7338/2097152 bytes
+Template argument size: 3986/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   44.537      1 - -total
- 55.26%   24.611      1 - Template:I18n
- 50.50%   22.493      1 - Template:I18n_box
- 41.30%   18.393      1 - Template:I18n_list
- 14.70%    6.548      2 - Template:I18n_link
- 10.37%    4.619      6 - Template:Button
-  8.54%    3.804      2 - Template:Autoglossonym
-  4.76%    2.120      1 - Template:Intro
-  4.57%    2.036      4 - Template:Menu
-  3.99%    1.776      2 - Template:Note
+100.00%   47.203      1 - -total
+ 53.34%   25.176      1 - Template:I18n
+ 49.00%   23.129      1 - Template:I18n_box
+ 40.54%   19.135      1 - Template:I18n_list
+ 14.65%    6.917      1 - Template:Intro
+ 14.65%    6.916      2 - Template:I18n_link
+ 11.41%    5.387      8 - Template:Button
+ 10.84%    5.116      4 - Template:Note
+  8.54%    4.031      2 - Template:Autoglossonym
+  4.44%    2.094      4 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4278-0!*!0!!*!5!* and timestamp 20190503130139 and revision id 57065
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4278-0!*!0!!*!5!* and timestamp 20191115102027 and revision id 65331
  -->
 </div>
 										<!-- end content -->
@@ -214,7 +226,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Exporting_Audio">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Exporting_Audio">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

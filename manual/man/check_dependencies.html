@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Check Dependencies - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Check_Dependencies rootpage-Check_Dependencies skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Check Dependencies</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Check_Dependencies#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro"><i><b>On-Demand Loading</b></i> was an optional faster method of <a href="importing_audio.html" title="Importing Audio">importing audio</a> when importing most <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> files like  <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (and on Linux, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i>). It has been withdrawn from Audacity in version 2.3.3 and onwards. 
+<p>It enabled uncompressed audio files to avoid being copied into the project, thereby saving space. Instead, Audacity keeps a reference to these files, and the project is <i>dependent</i> on them. Dependencies Dialog lists these dependencies and allows you to optionally remove them. You may select some, none or all the files to be copied in.
+</p>
+Although you can no longer create projects with dependent fiiles, you may have projects created in older versions of Audacity that still have dependencies.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top"><b>If you have a project that depends on external audio files, do <i>NOT</i> rename, move or delete those files</b>, otherwise your project will be missing audio.
+</td></tr></table></div>
+<dl><dd><b>Accessed by <span class="menu">Help &gt; Diagnostics &gt; Check Dependencies...</span></b></dd>
+<dd><span title="image of Check Dependencies dialog"><img alt="CheckDependenciesDialog.png" src="../m/images/b/b6/checkdependenciesdialog.png" width="360" height="310" /></span></dd></dl>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Project_Dependencies">Project Dependencies</span></h2>
+<p>This dialog appears when you click <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#check_dependencies" title="Help Menu: Diagnostics">Check Dependencies...</a></span> and the project depends on other files. 
+</p>
+<ul><li><b>File list:</b> When the dialog opens, you can move into the list using the keyboard by pressing &lt;<b>up arrow</b>&gt; (on Mac, focus is already in the list). You can resize the list columns by hovering the mouse over the boundary between them and then drag when the pointer changes to arrows. On Windows, hovering over a file name shows a tooltip containing the complete path to the file.</li></ul>
+<dl><dd><ul><li><b>Audio File:</b> Lists the uncompressed files that were imported using the "Read uncompressed audio files directly from the original (faster)" option in <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>.</li>
+<li><b>Disk space:</b> Shows the amount of additional disk space that will be used by the project if the file(s) are copied in. The disk space shown will depend on the default <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i> of the project as set in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>.</li></ul></dd></dl>
+<ul><li><b>Copy Selected Files:</b> Copies the files selected in the list into the project. The project no longer depends on the selected files but still depends on the unselected files. </li>
+<li><b>Do Not Copy:</b> Dismisses the dialog (but continues to save the project if you were saving it) without copying any of the listed files into the project. The project will continue to depend on the listed files, so you must <b>not</b> move, rename or delete those files, or the folder they are in.</li>
+<li><b>Copy All Files (Safer):</b> All the listed files will be copied into the project, removing all the dependencies. You can then safely move, rename or delete those files if you wish.</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20191115102334
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.079 seconds
+Real time usage: 0.085 seconds
+Preprocessor visited node count: 124/1000000
+Preprocessor generated node count: 991/1000000
+Post‐expand include size: 3093/2097152 bytes
+Template argument size: 1519/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   31.033      1 - -total
+ 79.12%   24.553      1 - Template:I18n
+ 71.29%   22.122      1 - Template:I18n_box
+ 57.07%   17.710      1 - Template:I18n_list
+ 16.66%    5.169      1 - Template:I18n_link
+  9.66%    2.997      1 - Template:Autoglossonym
+  6.37%    1.976      1 - Template:Intro
+  6.00%    1.863      2 - Template:Menu
+  5.05%    1.568      1 - Template:Advice
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3086-0!*!0!*!*!5!* and timestamp 20191115102334 and revision id 64831
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Check_Dependencies">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

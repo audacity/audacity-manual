@@ -35,6 +35,7 @@
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 
+
 <div class="intro">Before exporting audio for use in iTunes it is important to consider which audio file <a href="#format">format</a> you want to use.  <a href="#wavaiff">WAV</a> and <a href="#wavaiff">AIFF</a> files produce high quality lossless audio files but consume a lot of disk space.  <a href="#mp3">MP3</a> and <a href="#aac">AAC</a> files are compressed so they occupy less disk space, but audio damage may result as a result of the compression especially when using low bitrates.</div>
 <div class="note">Submitting a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Podcast">podcast</a> to the <b>iTunes Store</b> is a different process than exporting an Audacity file to an iTunes library. See our Tutorial on <a href="tutorial_mixing_a_narration_with_background_music.html" title="Tutorial - Mixing a Narration With Background Music">Tutorial - Mixing a Narration With Background Music</a> and our Wiki page on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_to_publish_a_Podcast">How to publish a Podcast</a> for more help with creating and publishing a podcast.</div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
@@ -54,9 +55,10 @@
 </p>
 <ol><li> Use the <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> command or  in Audacity (or <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span>).</li>
 <li> Choose the export format in the Export dialog, to export the particular format you want your file(s) to be in (the best choices are <a href="#wavaiff">WAV</a>, <a href="#wavaiff">AIFF</a>, <a href="#mp3">MP3</a> or <a href="#aac">AAC</a>).</li>
-<li> Move the file(s) into iTunes from the location you exported it to, using the iTunes <span class="menu">File &gt; Add File to Library...</span> (or <span class="menu">File &gt; Add Folder to Library...</span>) command.</li>
+<li> Copy the file(s) into iTunes from the location you exported it to, using the iTunes <span class="menu">File &gt; Add File to Library...</span> (or <span class="menu">File &gt; Add Folder to Library...</span>) command.</li>
 <li> Or you can set the file location on export from Audacity to <a href="#auto">auto-import</a> into iTunes</li></ol>
 <div class="note">You may also want to read this workflow tutorial <a href="sample_workflow_for_exporting_to_itunes.html" title="Sample workflow for exporting to iTunes">Sample workflow for exporting to iTunes</a>. </div>
+
 <p><br />
 </p>
 <div id="location"></div>
@@ -66,15 +68,14 @@
 </p>
 <ul><li> Use the <span class="menu">File &gt; Add File to Library...</span> or <span class="menu">File &gt; Add Folder to Library...</span> command from within iTunes, to add a single audio file or a folder of audio files.</li>
 <li> Select <span class="menu">Library &gt; Songs</span> in iTunes and drag the file from the location you exported it to, into the iTunes window. If you just want to <a href="burning_music_files_to_a_cd.html#iTunes" title="Burning music files to a CD">burn the files to CD</a>, it's best to drag them directly into an iTunes Playlist in the left-hand panel.</li></ul>
+
 <div id="auto"></div>
-<div class="note">
-</li></ul>
 <p>You can export files from Audacity directly to your iTunes library.  Exporting a file to the following locations will cause iTunes to automatically place it in the Music section of your library. You can then play the audio on your computer with iTunes or add it to your iPod, iPhone or iPad.
 </p><p>Set the destination folder as:
 </p>
-<ul><li><b>Windows:</b> <span class="path">Computer\Music\iTunes\iTunes Music\Automatically Add to iTunes</span></li>
-<li><b>Mac:</b> <span class="path">Home/Music/iTunes/iTunes Media/Automatically Add to iTunes</span>.</li></ul>
-</div>
+<ul><li><b>Windows:</b> <span class="path">C:\Users\&lt;user name&gt;\Music\iTunes\iTunes Media\Automatically Add to iTunes</span></li>
+<li><b>Mac:</b> <span class="path">~/Music/iTunes/iTunes Media/Automatically Add to iTunes</span>.</li></ul>
+
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -82,13 +83,15 @@
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
 <td align="left" valign="top">By default iTunes is a "virtual" Library containing no actual files but only links to them. To avoid losing your files, do <b>*not*</b> delete the exported files from the location you exported them to, unless you have already gone to <span class="menu">Edit &gt; Preferences &gt; Advanced</span> in iTunes and enabled the "<b>Copy files to iTunes Media folder when adding to library</b>" option. <p>It is strongly recommended that you make this setting in iTunes.</p>
+
 </td></tr></table></div>
 <div id="conversion"></div>
 <h2><span class="mw-headline" id="Export_to_other_Formats_using_iTunes">Export to other Formats using iTunes</span></h2>
+
 <p>Alternatively you can export to WAV or AIFF and convert to MP3, AAC or Apple Lossless <b>in iTunes</b>:
 </p>
 <ol><li>Click <span class="menu">Edit &gt; Preferences</span> (or <span class="menu">iTunes &gt; Preferences</span> on Mac)</li>
-<li>Click on the leftmost "General" tab</li>
+<li>Click on the leftmost "<b>General</b>" tab</li>
 <li>Click the <span class="button">Import Settings...</span> button</li>
 <li>In the "Import Using" dropdown, choose "<b>MP3 Encoder</b>",  "<b>AAC Encoder</b>" or "<b>Apple Lossless Encoder</b>" as required</li>
 <li>Click OK and OK</li>
@@ -140,34 +143,34 @@ you should choose <b>WAV</b> or <b>AIFF</b>. It is strongly recommended you expo
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130205
+Cached time: 20191115102058
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.118 seconds
-Real time usage: 0.124 seconds
-Preprocessor visited node count: 374/1000000
-Preprocessor generated node count: 1621/1000000
-Post‐expand include size: 7354/2097152 bytes
-Template argument size: 4684/2097152 bytes
+CPU time usage: 0.122 seconds
+Real time usage: 0.127 seconds
+Preprocessor visited node count: 430/1000000
+Preprocessor generated node count: 1799/1000000
+Post‐expand include size: 8409/2097152 bytes
+Template argument size: 5479/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   50.906      1 - -total
- 53.50%   27.236      1 - Template:I18n
- 48.64%   24.759      1 - Template:I18n_box
- 38.02%   19.353      1 - Template:I18n_list
- 14.39%    7.325      2 - Template:I18n_link
-  9.42%    4.795      5 - Template:Note
-  8.45%    4.301     15 - Template:Menu
-  7.74%    3.941      2 - Template:Autoglossonym
-  4.17%    2.125      2 - Template:Button
-  3.98%    2.026      1 - Template:Intro
+100.00%   49.074      1 - -total
+ 48.09%   23.598      1 - Template:I18n
+ 43.40%   21.296      1 - Template:I18n_box
+ 34.95%   17.149      1 - Template:I18n_list
+ 13.80%    6.770      2 - Template:I18n_link
+ 10.26%    5.035     20 - Template:Menu
+  9.97%    4.892      7 - Template:Ednote
+  8.16%    4.003      2 - Template:Autoglossonym
+  5.39%    2.645      1 - Template:Advice
+  4.04%    1.982      4 - Template:Note
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2562-0!*!0!!*!5!* and timestamp 20190503130205 and revision id 63227
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2562-0!*!0!!*!5!* and timestamp 20191115102058 and revision id 65648
  -->
 </div>
 										<!-- end content -->
@@ -240,7 +243,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Exporting_to_iTunes">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Exporting_to_iTunes">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

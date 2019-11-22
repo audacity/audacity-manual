@@ -38,26 +38,22 @@
 <p>The standard structure to display a label denoting its <a href="timeline.html" title="Timeline">Timeline</a> position and any text it contains is as below.
 </p>
 <div class="example">
-<p><code>
-2.150000&#160;&#160;&#8594;&#160;&#160;2.150000&#160;&#160;&#8594;&#160;&#160;point label at 2.15 seconds<br />
+<pre>2.150000&#160;&#160;&#8594;&#160;&#160;2.150000&#160;&#160;&#8594;&#160;&#160;point label at 2.15 seconds
 3.400000&#160;&#160;&#8594;&#160;&#160;6.100000&#160;&#160;&#8594;&#160;&#160;region label from 3.4 to 6.1 seconds
-</p>
-</code></div>
+</pre></div>
 <p>In the example above, the first column has the start time in seconds, the second column has the end time, and the third column if present shows the text of the label. Start time and end time are identical for a point label. Values are separated by tab characters (which will often appear as an arrow in text editors, as shown above).
 </p><p>If a label is created from a point or region in a <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">Spectrogram</a> track where <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a> is enabled (or if a label is otherwise created when a low frequency and high frequency value are already stored in the project), the labels file also contains the frequency range for that label.     
 </p>
 <div class="example">
-<p><code>
-1.000000&#160;&#160;&#8594;&#160;&#160;1.000000&#160;&#160;&#8594;&#160;&#160;This point was clicked at 6928.456055 Hz<br />
-\&#160;&#160;&#8594;&#160;&#160;6928.456055&#160;&#160;&#8594;&#160;&#160;6928.456055<br />
-2.000000&#160;&#160;&#8594;&#160;&#160;2.500000&#160;&#160;&#8594;&#160;&#160;Low frequency undefined, High frequency 6334.588867 Hz<br />
-\&#160;&#160;&#8594;&#160;&#160;-1.000000&#160;&#160;&#8594;&#160;&#160;6334.588867<br />
-3.000000&#160;&#160;&#8594;&#160;&#160;3.500000&#160;&#160;&#8594;&#160;&#160;Low frequency 8908.015625, High frequency undefined<br />
-\&#160;&#160;&#8594;&#160;&#160;8908.015625&#160;&#160;&#8594;&#160;&#160;-1.000000<br />
-4.000000&#160;&#160;&#8594;&#160;&#160;4.500000&#160;&#160;&#8594;&#160;&#160;Low frequency 1484.669312 Hz, High frequency 2969.338523 Hz<br />
+<pre>1.000000&#160;&#160;&#8594;&#160;&#160;1.000000&#160;&#160;&#8594;&#160;&#160;This point was clicked at 6928.456055 Hz
+\&#160;&#160;&#8594;&#160;&#160;6928.456055&#160;&#160;&#8594;&#160;&#160;6928.456055
+2.000000&#160;&#160;&#8594;&#160;&#160;2.500000&#160;&#160;&#8594;&#160;&#160;Low frequency undefined, High frequency 6334.588867 Hz
+\&#160;&#160;&#8594;&#160;&#160;-1.000000&#160;&#160;&#8594;&#160;&#160;6334.588867
+3.000000&#160;&#160;&#8594;&#160;&#160;3.500000&#160;&#160;&#8594;&#160;&#160;Low frequency 8908.015625, High frequency undefined
+\&#160;&#160;&#8594;&#160;&#160;8908.015625&#160;&#160;&#8594;&#160;&#160;-1.000000
+4.000000&#160;&#160;&#8594;&#160;&#160;4.500000&#160;&#160;&#8594;&#160;&#160;Low frequency 1484.669312 Hz, High frequency 2969.338523 Hz
 \&#160;&#160;&#8594;&#160;&#160;1484.669312&#160;&#160;&#8594;&#160;&#160;2969.338523 
-</p>
-</code></div>
+</pre></div>
 <p>In the example above, there is a point label at 1 second, then three region labels each starting one second further along. After the time position and text content information in the first line, a second line for each label records the low frequency followed by the high frequency. 
 </p>
 <div class="note">To view the low and high frequency values for a label, either select the label then look in <a href="spectral_selection_toolbar.html" title="Spectral Selection Toolbar">Spectral Selection Toolbar</a>, or right-click the label and choose "Edit" to open the <a href="labels_editor.html" title="Labels Editor">Edit Labels</a> window.</div>   
@@ -80,34 +76,34 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130625
+Cached time: 20191115102833
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.079 seconds
-Real time usage: 0.086 seconds
-Preprocessor visited node count: 164/1000000
-Preprocessor generated node count: 1071/1000000
-Post‐expand include size: 4781/2097152 bytes
-Template argument size: 2896/2097152 bytes
+CPU time usage: 0.076 seconds
+Real time usage: 0.082 seconds
+Preprocessor visited node count: 170/1000000
+Preprocessor generated node count: 1111/1000000
+Post‐expand include size: 3721/2097152 bytes
+Template argument size: 1836/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   37.749      1 - -total
- 69.22%   26.130      1 - Template:I18n
- 62.74%   23.685      1 - Template:I18n_box
- 51.38%   19.394      1 - Template:I18n_list
- 18.31%    6.913      2 - Template:I18n_link
- 10.59%    3.996      2 - Template:Autoglossonym
-  6.63%    2.503      2 - Template:Example
-  6.19%    2.337      1 - Template:Intro
-  4.77%    1.800      2 - Template:Menu
-  4.36%    1.647      1 - Template:Note
+100.00%   37.745      1 - -total
+ 66.51%   25.106      1 - Template:I18n
+ 61.15%   23.080      1 - Template:I18n_box
+ 50.49%   19.057      1 - Template:I18n_list
+ 18.77%    7.083      2 - Template:I18n_link
+ 10.94%    4.128      2 - Template:Autoglossonym
+  9.60%    3.625      2 - Template:Example
+  6.40%    2.417      1 - Template:Intro
+  4.70%    1.775      1 - Template:Note
+  4.48%    1.692      2 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4565-0!*!0!*!*!5!* and timestamp 20190503130625 and revision id 57410
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4565-0!*!0!*!*!5!* and timestamp 20191115102833 and revision id 65586
  -->
 </div>
 										<!-- end content -->
@@ -180,7 +176,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Importing_and_Exporting_Labels">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Importing_and_Exporting_Labels">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

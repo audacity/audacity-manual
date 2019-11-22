@@ -2,7 +2,7 @@
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Spectral Selection - Audacity Manual</title>
+<title>Spectral Selection and Editing - Audacity Manual</title>
 
 
 
@@ -25,7 +25,7 @@
 				
 				<div class="mw-indicators">
 </div>
-				<h1 id="firstHeading" class="firstHeading" lang="en">Spectral Selection</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Spectral Selection and Editing</h1>
 				
 				<div id="bodyContent" class="mw-body-content">
 					<div id="siteSub">From Audacity Development Manual</div>
@@ -34,63 +34,86 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>Spectral Selection</b></i> is used to make selections that include a frequency range as well as a time range on tracks in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> view. Spectral Selection is used with special <a href="#edit">spectral edit</a> effects to make changes to the <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> content of the selected audio.<p> Among other purposes, spectral selection and editing can be used for cleaning up unwanted sound, enhancing certain resonances, changing the quality of a voice or removing mouth sounds from voice work.</p>
-<p>All of the <a href="audacity_selection.html" title="Audacity Selection">time-based selection techniques</a> (horizontal selection) are still available when making a spectral selection.</p>
-</div>
-<div id="enabled"></div>
+
+<div class="intro"><i><b>Spectral Selection</b></i> is used to make selections that include a frequency range as well as a time range on tracks in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> view. Spectral Selection is used with special <a href="#edit">spectral editing</a> effects to make changes to the <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> content of the selected audio.<p> Among other purposes, spectral selection and editing can be used for cleaning up unwanted sound, enhancing certain resonances, changing the quality of a voice or removing mouth sounds from voice work.</p>
+<p>All of the <a href="audacity_selection.html" title="Audacity Selection">time-based selection techniques</a> (horizontal selection) are still available when making a spectral selection, enabling you define the time rage of a spectral selection.</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top"><b>Spectral Selection is disabled by default.</b>
-<p>In order to use Spectral Selection you must first enable the <b>Enable Spectral Selection</b> checkbox in either:
-</p>
-<ul><li><a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a>, or</li>
-<li><b>Spectrogram Settings</b> for an audio track, accessed by opening the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">dropdown menu</a> in its <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> then choosing Spectrogram Settings... (if "Spectrogram Settings..." is grayed out, select "Spectrogram" then reopen the menu).
-<ul><li>Note: this latter choice will only turn on Spectral Selection for that particular track while the project window is open. </li></ul></li></ul>
+<td align="left" valign="top">All other effects, as well as all the time-based editing commands (such as Cut, Copy, Delete or Trim) are available when there is a spectral selection but those effects and commands will not take into account the frequency range of the spectral selection.
 </td></tr></table></div>
+</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>Spectral Selection and editing</b> is <i><b>only</b></i> ideal for removing <b>a single constant frequency with few harmonics</b>, such as removing 50Hz mains hum. We do not have good instructions for using it for anything else.  <p>You will not get far trying to remove, say, traffic noise, or the sound of a mobile phone ringing.</p>
+</td></tr></table>
+</div>
+<div id="enabled"></div>
+
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<ol><li> <a href="#select">Making a Spectral Selection</a></li>
-<li> <a href="#adjust">Adjusting a Spectral Selection</a></li>
+<ol><li> <a href="#select">Making a Spectral Selection</a>
+<ul><li> <a href="#adjust">Adjusting a Spectral Selection</a></li>
 <li> <a href="#labels">Storing the frequency range in a Label</a></li>
 <li> <a href="#toggling">Toggling Spectral Selection on or off</a></li>
-<li> <a href="#edit">Spectral editing</a></li>
-<li> <a href="#example">Example</a></li>
-<li> <a href="#limitations">Limitations</a></li></ol>
+<li> <a href="#limitations">Limitations</a></li></ul></li>
+<li> <a href="#edit">Spectral editing</a>
+<ul><li> <a href="#multi">Spectral edit multi tool</a></li>
+<li> <a href="#eq">Spectral edit parametric EQ</a></li>
+<li> <a href="#shelves">Spectral edit shelves</a></li>
+<li> <a href="#example">Example</a></li></ul></li></ol>
 <div id="select"></div>
 <h2><span class="mw-headline" id="Making_a_Spectral_Selection">Making a Spectral Selection</span></h2>
-</li></ul>
 <p>Here is a track with a few seconds of speech shown in waveform view:
 </p>
 <dl><dd><span title="Audio track in waveform view"><img alt="Spectral 01.png" src="../m/images/0/0d/spectral_01.png" width="559" height="194" /></span></dd></dl>
 <p>To define a time range change the track to <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> view, hover at a vertical position that you want to be the approximate <i>center frequency</i> to act on then click and drag a selection horizontally. A horizontal line appears beside the I-Beam mouse pointer that defines the center frequency. 
 </p><p>Drag vertically (with or without continuing to drag horizontally) to define the <i>bandwidth</i> (range of frequencies) to be acted on. A "box" containing a combined frequency and time range is now drawn in a colored tint as shown below <i>(the exact color of the tint will depend on the version of Audacity and the settings of your monitor)</i>:   
 </p>
-<dl><dd><span title="Audio track in &#39;&#39;&#39;Spectrogram&#39;&#39;&#39; view with annotated spectral selection"><img alt="Spectral 02.png" src="../m/images/1/11/spectral_02.png" width="559" height="194" /></span></dd></dl>
+<dl><dd><span title="Audio track in &#39;&#39;&#39;Spectrogram&#39;&#39;&#39; view with annotated spectral selection"><img alt="Spectral 02.png" src="../m/images/1/11/spectral_02.png" width="559" height="194" /></span></dd>
+<dd><b>In this example, the spectral selection is the green box</b></dd></dl>
 <div class="note">The center frequency is <i>proportionally</i> in the center and is a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Geometric_mean">geometric mean</a> (which is appropriate for filtering purposes) rather than an arithmetic mean. Thus if as in the above image the Spectrogram scale is set to the default "Linear" choice (using <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a> or the track's Spectrogram Settings in the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>), the center line will appear below the visual center of the frequency range. The center line will be visually centered in Logarithmic scale.</div>  
 <p>If either the low or high frequency limits are not defined, no center frequency will be shown. In the illustration below, the selection has been dragged from about 5000 Hz to the bottom of the track. The high frequency selection is about 5000 Hz and the low frequency selection is not defined, so the selection includes everything below 5000 Hz:
 </p>
-<dl><dd><span title="Audio track in &#39;&#39;&#39;Spectrogram&#39;&#39;&#39; view with spectral selection from 0 Hz"><img alt="Spectral 02a.png" src="../m/images/6/6f/spectral_02a.png" width="559" height="194" /></span></dd></dl>
-<p>If the selection is dragged up to the top of the track, then the high frequency will be undefined, so the selection will include everything above the low frequency limit.
+<dl><dd><span title="Audio track in &#39;&#39;&#39;Spectrogram&#39;&#39;&#39; view with spectral selection from 0 Hz"><img alt="Spectral 02a.png" src="../m/images/6/6f/spectral_02a.png" width="559" height="194" /></span></dd>
+<dd><b>Spectral selection from 0 Hz to 5 kHz</b></dd></dl>
+<p>If, instead, the selection is dragged up to the top of the track, then the high frequency will be undefined, so the selection will include everything above the low frequency limit.
 </p><p>If neither the upper or lower frequency limits are defined, then the full frequency range is selected, just like a 'normal' audio selection.
 </p>
 <div id="adjust"></div>
-<h2><span class="mw-headline" id="Adjusting_a_Spectral_Selection">Adjusting a Spectral Selection</span></h2>
+<h3><span class="mw-headline" id="Adjusting_a_Spectral_Selection">Adjusting a Spectral Selection</span></h3>
 
 <p>When you hover the mouse pointer over the center frequency line it changes to a double triangle to show that the center frequency can be dragged. When you click and drag to move the center frequency and the current frequency range to a new position, the center frequency will snap to frequency peaks. To move the center frequency smoothly (without snapping to frequency peaks) hold down the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key then left click and drag.
 </p>
-<dl><dd><span title="Audio track in spectrogram showing how to move center frequency and range"><img alt="Spectral 03.png" src="../m/images/9/9f/spectral_03.png" width="559" height="194" /></span></dd></dl>
+<dl><dd><span title="Audio track in spectrogram showing how to move center frequency and range"><img alt="Spectral 03.png" src="../m/images/9/9f/spectral_03.png" width="559" height="194" /></span></dd>
+<dd><b>Dragging the spectral selection by the center frequency</b></dd></dl>
 <div class="note">The bandwidth in <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Octave">octaves</a> around the center frequency is preserved when dragging the center frequency. Therefore in <b>Spectrogram</b> view the frequency range will expand when dragging the center frequency to higher frequencies and will contract when dragging to lower frequencies, but in <b>Spectrogram Logarithmic</b> view the vertical height of the frequency/time box will remain constant.</div>
-<p>To adjust the bandwidth of the selection hover the mouse over the upper or lower boundary until the pointer changes to a double triangle then left click and drag. This moves the upper and lower frequency boundaries so they remain equally spaced around the center frequency (thus not changing the center frequency).</p>
-<dl><dd><span title="Audio track with spectral selection how to adjust bandwidth"><img alt="Spectral 03a.png" src="../m/images/6/61/spectral_03a.png" width="559" height="194" /></span></dd></dl>
-<p>To adjust the upper or lower boundary while holding the opposite boundary constant hold down the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key then hover the mouse near the upper or lower boundary until the pointer changes to a single triangle then click and drag (this will change the center frequency).</p>
-<dl><dd><span title="Audio track with spectral selection showing how to adjust one frequency boundary"><img alt="Spectral 03b.png" src="../m/images/5/51/spectral_03b.png" width="559" height="194" /></span></dd></dl>
-<div class="note"><b>Tips:</b>
+<p>To adjust the bandwidth of the selection hover the mouse over the upper or lower boundary until the pointer changes to a double triangle then left click and drag. This moves the upper and lower frequency boundaries so they remain equally spaced around the center frequency (thus not changing the center frequency).
+</p>
+<dl><dd><span title="Audio track with spectral selection how to adjust bandwidth"><img alt="Spectral 03a.png" src="../m/images/6/61/spectral_03a.png" width="559" height="194" /></span></dd>
+<dd><b>Dragging the spectral selection by the upper frequency</b></dd></dl>
+<p>To adjust the upper or lower boundary while holding the opposite boundary constant hold down the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key then hover the mouse near the upper or lower boundary until the pointer changes to a single triangle then click and drag (this will change the center frequency).
+</p>
+<dl><dd><span title="Audio track with spectral selection showing how to adjust one frequency boundary"><img alt="Spectral 03b.png" src="../m/images/5/51/spectral_03b.png" width="559" height="194" /></span></dd>
+<dd><b>Dragging the spectral selection by the upper frequency while maintaining the lower frequency</b></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>Tips:</b>
 <ul><li>When the lower boundary is at 0 Hz you can drag that boundary up by carefully hovering the mouse near the bottom of the track until the single down-arrow pointer appears then left clicking and dragging up.</li>
 <li>When the upper boundary is at the Nyquist frequency of the track you can drag that boundary down by carefully hovering the mouse near the top of the track until the single up-arrow pointer appears then left clicking and dragging down.</li>
-<li>You can use the <a href="toolbars_overview.html#spectral_selection" title="Toolbars Overview">Spectral Selection Toolbar</a> to create and/or precisely adjust a spectral selection using the keyboard.</div></li></ul>
+<li>You can use the <a href="toolbars_overview.html#spectral_selection" title="Toolbars Overview">Spectral Selection Toolbar</a> to create and/or precisely adjust a spectral selection.</li></ul>
+</td></tr></table>
+</div>
 <div id="labels"></div>
 <h3><span class="mw-headline" id="Storing_the_frequency_range_in_a_Label">Storing the frequency range in a Label</span></h3>
 <p>If you add a <a href="label_tracks.html" title="Label Tracks">label</a> at a time region, that region's Low Frequency and High Frequency are stored in the label and recalled when you select the label. Similarly if you add a label at the cursor position, the frequency at which you clicked to set the cursor is stored in the label. 
@@ -99,10 +122,32 @@
 <div id="toggling"></div>
 <h3><span class="mw-headline" id="Toggling_Spectral_Selection_on_and_off">Toggling Spectral Selection on and off</span></h3>
 <p>Press the shortcut <span class="kbrd" style="background-color: #d0d0f8">Q</span> key to change from the last selected spectral selection (one that has at least the lower or upper boundary defined) to one where the lower boundary is 0 Hz and the upper boundary is the Nyquist frequency of the track. In this case there is no longer a spectral selection (all frequencies are selected which is the same as making a time selection in waveform view). Press the <span class="kbrd" style="background-color: #d0d0f8">Q</span> key again to restore the previous upper and lower boundaries. This command works whether in a <b>Spectrogram</b> view or not.  
+</p><p>Alternatively you can turn "on" or "off" the <b>Enable Spectral Selection</b> checkbox in either:
+</p>
+<ul><li><b><a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a></b>, or</li>
+<li><b>Spectrogram Settings</b> for an audio track, accessed by opening the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">dropdown menu</a> in its <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> then choosing Spectrogram Settings... (if "Spectrogram Settings..." is grayed out, select "Spectrogram" then reopen the menu).
+<ul><li>Note: this latter choice will only turn on Spectral Selection for that particular track while the project window is open.</li></ul></li></ul>
+<div id="limitations"></div>
+<h3><span class="mw-headline" id="Limitations">Limitations</span></h3>
+<p>The permitted upper frequency of the spectral selection is determined by the <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> and not by the track sample rate. Therefore if a project includes a track that has a lower sample rate than the project rate, <b>Spectral Selection Toolbar</b> could display an "illegal" frequency selection above the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Nyquist_frequency">Nyquist frequency</a> for the track at the lower project rate. Audacity will disregard this "illegal" selection when running Spectral edit effects.
+</p><p><br />
+&#160;
+&#160;
+&#160;
+&#160;
+&#160;
 </p>
 <div id="edit"></div>
 <h2><span class="mw-headline" id="Spectral_editing">Spectral editing</span></h2>
-<div class="note">To make use of the frequency range defined in a spectral selection you must currently use one of the specific <a href="effect_menu.html#spectral_multi" title="Effect Menu">spectral effects</a> (detailed below) whose name begins with "Spectral edit". All other effects, as well as all the time-based editing commands (such as Cut, Copy, Delete or Trim) are available when there is a spectral selection but those effects and commands will not take into account the frequency range of the spectral selection.</div>
+<div class="note">To make use of the frequency range defined in a spectral selection you must currently use one of the specific <a href="effect_menu.html#spectral_multi" title="Effect Menu">spectral effects</a> (detailed below) whose name begins with "Spectral edit". 
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">All other effects, as well as all the time-based editing commands (such as Cut, Copy, Delete or Trim) are available when there is a spectral selection but those effects and commands will not take into account the frequency range of the spectral selection.
+</td></tr></table></div> </div>
 <div id="multi"></div> 
 <h3><span class="mw-headline" id="Spectral_edit_multi_tool"><a href="spectral_edit_multi_tool.html" title="Spectral edit multi tool">Spectral edit multi tool</a></span></h3>
 <p>Use this to greatly attenuate or remove part of the frequency range in the spectral selection, for example to repair damaged audio. Depending on how the track is displayed and what spectral selection has been made, this effect will do one of the following:
@@ -113,7 +158,7 @@
 <li> When the upper frequency bound of the spectral selection is undefined, this effect performs a <i><b><a href="glossary.html#lp" title="Glossary">low pass filter</a></b></i> with a roll-off of 12 dB/octave and with the cutoff frequency defined by the lower boundary of the spectral selection.</li>
 <li> When both the upper and lower frequency bound of the spectral selection are undefined, an error message will be displayed. You should go back and define one or both frequency bounds.  </li></ul>
 <div class="note">
-<p>If the attenuation is not sufficient, you can use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + R</span> to repeat the effect.
+<p>If the attenuation is not sufficient, you can use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + R</span> to repeat the effect - <i>(on Mac use: <span class="kbrd" style="background-color: #d0d0f8">&#8984; + R</span>).</i> 
 </p>
 </div> 
 <p>You can see some specific examples of this effect on the <a href="spectral_edit_multi_tool.html#Examples" title="Spectral edit multi tool">Spectral edit multi tool</a> page.
@@ -121,7 +166,7 @@
 <div id="eq"></div>
 <h3><span class="mw-headline" id="Spectral_edit_parametric_EQ"><a href="spectral_edit_parametric_eq.html" title="Spectral edit parametric EQ">Spectral edit parametric EQ</a></span></h3>
 <dl><dd><span title="Spectral edit parametric EQ dialog"><img alt="Spectral edit parametric EQ.png" src="../m/images/8/8e/spectral_edit_parametric_eq.png" width="570" height="178" /></span></dd></dl>
-<p>Use this like an <a href="equalization.html" title="Equalization">Equalizer</a> to modify the tone quality, boosting or reducing the amplitude of the selected frequency band using the Gain control. As with an Equalizer, frequencies outside the selected band may be boosted or reduced, but less so than those within the frequency band.     
+<p>Use this like an <a href="filter_curve.html" title="Filter Curve">equalizer</a> to modify the tone quality, boosting or reducing the amplitude of the selected frequency band using the Gain control. As with an equalizer, frequencies outside the selected band may be boosted or reduced, but less so than those within the frequency band.     
 </p><p>Depending on how the track is displayed and what spectral selection has been made, this effect will do one of the following:
 </p>
 <ul><li> When the track is not in <b>Spectrogram</b> view with Spectral Selection enabled, an error message will be displayed. </li>
@@ -132,8 +177,9 @@
 <div id="shelves"></div>
 <h3><span class="mw-headline" id="Spectral_edit_shelves"><a href="spectral_edit_shelves.html" title="Spectral edit shelves">Spectral edit shelves</a></span></h3>
 <dl><dd><span title="Spectral edit shelves dialog"><img alt="Spectral edit shelves.png" src="../m/images/0/0c/spectral_edit_shelves.png" width="570" height="178" /></span></dd></dl>
-<p>A shelf filter curve is flat at both ends rather than flat only at the frequencies being passed. Use these filters when you don't want to reduce the lowest bass or highest treble frequencies in the spectral selection as much as you would with a standard <i><b><a href="glossary.html#hp" title="Glossary">high pass</a></b></i> or  <i><b><a href="glossary.html#lp" title="Glossary">low pass</a></b></i> filter, or if you actually want to boost either the low or high frequencies respectively.</p>
-<p>Depending on how the track is displayed and what spectral selection has been made, this effect will do one of the following:</p>
+<p>A shelf filter curve is flat at both ends rather than flat only at the frequencies being passed. Use these filters when you don't want to reduce the lowest bass or highest treble frequencies in the spectral selection as much as you would with a standard <i><b><a href="glossary.html#hp" title="Glossary">high pass</a></b></i> or  <i><b><a href="glossary.html#lp" title="Glossary">low pass</a></b></i> filter, or if you actually want to boost either the low or high frequencies respectively.
+</p><p>Depending on how the track is displayed and what spectral selection has been made, this effect will do one of the following:
+</p>
 <ul><li> When the track is not in Spectrogram view with Spectral Selection enabled, an error message will be displayed.</li>
 <li> When the spectral selection begins at 0 Hz or its lower bound is undefined, this effect applies a low frequency shelving filter with the half-gain frequency (the mid-point of the gain section of the curve) defined by the upper boundary of the spectral selection. The gain control sets the amount of low-frequency boost or cut. This is similar to adjusting the bass control on a stereo.</li>
 <li> When the spectral selection ends at the Nyquist frequency of the track or its upper bound is undefined, this effect applies a high frequency shelving filter with the half-gain frequency defined by the lower frequency of the spectral selection. The gain control sets the amount of high-frequency boost or cut. This is similar to adjusting the treble control on a stereo.</li>
@@ -175,40 +221,37 @@
 </p>
 <dl><dd><span title="Audio with high frequency whistle"><img alt="SpectralEdit 06.png" src="../m/images/3/36/spectraledit_06.png" width="543" height="164" /></span></dd></dl>
 The whistle is gone.</div>
-<div id="limitations"></div>
-<h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
-<p>The permitted upper frequency of the spectral selection is determined by the <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> and not by the track sample rate. Therefore if a project includes a track that has a lower sample rate than the project rate, <b>Spectral Selection Toolbar</b> could display an "illegal" frequency selection above the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Nyquist_frequency">Nyquist frequency</a> for the track at the lower project rate. Audacity will disregard this "illegal" selection when running Spectral edit effects.
-</p>
+
 <!-- 
 NewPP limit report
-Cached time: 20190503130142
+Cached time: 20191115102037
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.164 seconds
-Real time usage: 0.176 seconds
-Preprocessor visited node count: 349/1000000
-Preprocessor generated node count: 1497/1000000
-Post‐expand include size: 9834/2097152 bytes
-Template argument size: 6916/2097152 bytes
+CPU time usage: 0.165 seconds
+Real time usage: 0.174 seconds
+Preprocessor visited node count: 386/1000000
+Preprocessor generated node count: 1615/1000000
+Post‐expand include size: 13949/2097152 bytes
+Template argument size: 9536/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   46.201      1 - -total
- 55.70%   25.733      1 - Template:I18n
- 51.09%   23.603      1 - Template:I18n_box
- 42.96%   19.848      1 - Template:I18n_list
- 15.78%    7.292      2 - Template:I18n_link
-  9.66%    4.465      2 - Template:Autoglossonym
-  7.36%    3.402      6 - Template:Note
-  6.12%    2.829      1 - Template:Example
-  6.08%    2.808      3 - Template:Shortcut
-  5.19%    2.399      1 - Template:Intro
+100.00%   49.270      1 - -total
+ 48.74%   24.015      1 - Template:I18n
+ 44.92%   22.134      1 - Template:I18n_box
+ 37.49%   18.469      1 - Template:I18n_list
+ 13.66%    6.731      2 - Template:I18n_link
+  9.57%    4.716      5 - Template:Note
+  8.29%    4.083      4 - Template:Shortcut
+  7.96%    3.922      2 - Template:Autoglossonym
+  7.25%    3.571      1 - Template:Intro
+  6.63%    3.265      1 - Template:Example
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4991-0!*!0!!*!5!* and timestamp 20190503130142 and revision id 60960
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4991-0!*!0!!*!5!* and timestamp 20191115102036 and revision id 65122
  -->
 </div>
 										<!-- end content -->
@@ -281,7 +324,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Spectral_Selection">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Spectral_Selection">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

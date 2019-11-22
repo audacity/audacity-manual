@@ -43,7 +43,6 @@
 <li> The project was saved containing <b>non-English or accented characters</b> using an old ANSI build of Audacity for Windows. ANSI builds are not properly <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> aware, so do not support non-English or accented characters. 
 <ul><li> The <a rel="nofollow" class="external text" href="http://www.audacityteam.org/download/windows">latest version of Audacity</a> will always fully support Unicode. You can check your Audacity version at <span class="menu">Help &gt; <a href="help_menu.html#about_audacity" title="Help Menu">About Audacity...</a></span> <i>(or <span class="menu">Audacity &gt; About Audacity</span> on Mac)</i>. </li></ul></li></ul>
 If Audacity or the computer crashed, Audacity will try to <a href="recovery.html" title="Recovery">recover</a> the project from its <a href="audacity_projects.html#autosave" title="Audacity Projects">AUTOSAVE</a> file, but the crash may have created a redundant line near the end of the file that triggers the token error. Very occasionally, the AUP file may become corrupted by one or more redundant lines, giving a token error even if there was no apparent crash. To correct this, see <a href="#autosave">remove redundant lines in an AUTOSAVE or AUP file</a>. </div>
-</li></ul></li></ul>
 <div id="meta"></div> 
 <h2><span class="mw-headline" id="Solution_for_error_caused_by_control_characters">Solution for error caused by control characters</span></h2>
 <ol>
@@ -114,7 +113,7 @@ If Audacity or the computer crashed, Audacity will try to <a href="recovery.html
 <ol>
 <li>In the AutoSave folder, right-click the AUTOSAVE file and choose "Cut". 
 <li>Go to the folder Audacity is installed in, such as "C:\Program Files (x86)\Audacity", then right-click in empty space and choose "Paste". Provide the administrator password if asked. 
-<li>Open an administrator command prompt. On Windows Vista or Windows 7, click Windows Start, go to All applications &gt; Accessories, then right-click the Command Prompt shortcut and select "Run as Administrator". Or see <a rel="nofollow" class="external text" href="http://www.eightforums.com/tutorials/2754-elevated-command-prompt-open-windows-8-a.html">instructions for Windows 8 or Windows 10</a>.    
+<li>Open an administrator command prompt. On Windows 7, click Windows Start, go to All applications &gt; Accessories, then right-click the Command Prompt shortcut and select "Run as Administrator". Or see <a rel="nofollow" class="external text" href="http://www.eightforums.com/tutorials/2754-elevated-command-prompt-open-windows-8-a.html">instructions for Windows 8 or Windows 10</a>.    
 <li>Assuming the prompt in the command window shows some location in C:\ and Audacity is installed in some location in C:\, type "cd" (without quotes) then a space. If Audacity is on some other drive than the prompt indicates, type the name of that drive letter and a colon (such as D:), press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, and then type "cd" (without quotes) then a space. 
 <li>Go up one level in Explorer then drag the icon for the Audacity installation folder into the command window. The path "C:\Program Files (x86)\Audacity" (or whatever it is) will appear. Press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to change the prompt to the path you dragged in. 
 <li>At the end of the path, type "audacity" (without quotes), a space, then "/d" (also without quotes), another space, then drag the AUTOSAVE file into the command window. Here is what an example should look like:
@@ -157,34 +156,34 @@ It probably means there is a specific problem with the syntax of the tags in the
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130450
+Cached time: 20191115102538
 Cache expiry: 86400
 Dynamic content: false
 CPU time usage: 0.095 seconds
 Real time usage: 0.097 seconds
-Preprocessor visited node count: 254/1000000
-Preprocessor generated node count: 828/1000000
-Post‐expand include size: 10708/2097152 bytes
-Template argument size: 7304/2097152 bytes
+Preprocessor visited node count: 247/1000000
+Preprocessor generated node count: 808/1000000
+Post‐expand include size: 8686/2097152 bytes
+Template argument size: 5313/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   26.440      1 - -total
- 25.02%    6.615     14 - Template:Key
- 23.57%    6.233      1 - Template:No-rename
- 19.63%    5.189      3 - Template:Ednote
- 10.74%    2.840      1 - Template:Intro
-  8.66%    2.289      1 - Template:Button
-  6.90%    1.824      2 - Template:Hint
-  6.07%    1.604      3 - Template:Note
-  5.47%    1.447      2 - Template:Code
-  5.06%    1.338      3 - Template:Menu
+100.00%   26.452      1 - -total
+ 25.92%    6.855     14 - Template:Key
+ 23.52%    6.221      1 - Template:No-rename
+ 18.69%    4.945      2 - Template:Ednote
+ 10.99%    2.908      1 - Template:Intro
+  8.41%    2.226      1 - Template:Button
+  6.99%    1.848      2 - Template:Hint
+  6.24%    1.650      3 - Template:Note
+  5.49%    1.451      2 - Template:Code
+  5.42%    1.434      3 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5796-0!*!0!!*!5!* and timestamp 20190503130450 and revision id 59918
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5796-0!*!0!!*!5!* and timestamp 20191115102538 and revision id 64886
  -->
 </div>
 										<!-- end content -->
@@ -257,7 +256,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Error:_not_well-formed_(invalid_token)_at_line_x">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Error:_not_well-formed_(invalid_token)_at_line_x">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

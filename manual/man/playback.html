@@ -43,7 +43,8 @@
 <ul><li> <a href="#play_1s">Play One Second</a></li>
 <li> <a href="#play_sel">Play To Selection</a></li>
 <li> <a href="#play_cut">Play Cut Preview</a></li></ul></li>
-<li> <a href="#play_short">Play short periods around selections</a></li></ol>
+<li> <a href="#play_short">Play short periods around selections</a></li>
+<li> <a href="#muteandsolo">Mute and Solo buttons</a></li></ol>
 <p><br />
 </p>
 <div id="play"></div>
@@ -229,37 +230,61 @@
 </td>
 <td align="left" valign="top">Note that you must enable the "Full" keyboard shortcut set in <b><a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a></b> for the first four commands in this table to be active.
 </td></tr></table></div>
+<p><br />
+</p>
+<div id="muteandsolo"></div>
+<h2><span class="mw-headline" id="Mute_and_Solo_buttons">Mute and Solo buttons</span></h2>
+<p>On the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> for each track there are two buttons <span class="button">Mute</span> and <span class="button">Solo</span>.  These buttons can be used to prevent muted tracks being played on playbck <i>(or exported to an audio file)</i>
+</p>
+<div id="mute"></div>
+<p><span style="font-weight: bold; font-size:118%">Mute Button:</span>
+</p>
+<dl><dd><span title="Track Mute Button"><img alt="Track Mute button.png" src="../m/images/d/d9/track_mute_button.png" width="48" height="18" /></span> Click to silence this track when playing.  Click again to unsilence. </dd></dl>
+<div id="solo"></div>
+<p><span style="font-weight: bold; font-size:118%">Solo Button:</span>
+</p>
+<dl><dd><span title="Track Solo Button"><img alt="Track Solo button.png" src="../m/images/a/a3/track_solo_button.png" width="48" height="18" /></span> Click to play just this track.  Click again to release the button.  Whenever playing audio, Solo takes precedence over Mute by default - the Mute buttons have no effect whilst any Solo button is down.  </dd></dl>
+<dl><dd>There are two other options for Solo button behavior in the <a href="tracks_behaviors_preferences.html#solo" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a>.  One of these is to remove the Solo button, leaving only a Mute button. The other is more complex suitable for people used to mixing desks, enabling multiple tracks to be "soloed" simultaneously.</dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Keyboard shortcuts: <span class="kbrd" style="background-color: #e0e0f0">Shift+U</span> toggles muting on the currently focused track which has the yellow border, and <span class="kbrd" style="background-color: #e0e0f0">Shift + S</span> toggles soloing. The solo shortcut works even if you hide the Solo button.
+</td></tr></table>
+</div>
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130223
+Cached time: 20191115102023
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.180 seconds
-Real time usage: 0.188 seconds
-Preprocessor visited node count: 725/1000000
-Preprocessor generated node count: 1501/1000000
-Post‐expand include size: 7758/2097152 bytes
-Template argument size: 2123/2097152 bytes
+CPU time usage: 0.193 seconds
+Real time usage: 0.200 seconds
+Preprocessor visited node count: 799/1000000
+Preprocessor generated node count: 1703/1000000
+Post‐expand include size: 8819/2097152 bytes
+Template argument size: 2489/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   54.015      1 - -total
- 28.84%   15.577     32 - Template:Key
- 24.58%   13.275     18 - Template:Shortcut
-  7.97%    4.307      2 - Template:Hint
-  5.94%    3.209      1 - Template:Intro
-  5.35%    2.891      3 - Template:Note
-  3.11%    1.681      1 - Template:Ednote
-  3.07%    1.656      3 - Template:Menu
-  2.77%    1.494      2 - Template:Advice
-  2.41%    1.300      1 - Template:Tip
+100.00%   53.020      1 - -total
+ 28.40%   15.059     34 - Template:Key
+ 21.90%   11.611     18 - Template:Shortcut
+  6.83%    3.623      2 - Template:Hint
+  4.82%    2.554      2 - Template:Tip
+  4.57%    2.425      3 - Template:Note
+  4.39%    2.327      1 - Template:Intro
+  3.49%    1.850      2 - Template:Button
+  2.63%    1.392      3 - Template:Menu
+  2.41%    1.279      2 - Template:Advice
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5250-0!*!0!!*!5!* and timestamp 20190503130223 and revision id 61456
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5250-0!*!0!!*!5!* and timestamp 20191115102023 and revision id 65241
  -->
 </div>
 										<!-- end content -->
@@ -332,7 +357,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Playback">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Playback">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

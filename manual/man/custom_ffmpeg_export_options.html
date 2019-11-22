@@ -34,7 +34,7 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The custom FFmpeg exporter is available if you have installed the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>. The dialog lets you export a specific codec in a specific format container.<p>The <b>Custom FFmpeg format options</b> dialog appears in response to the <span class="button">Open custom FFmpeg format options</span> button in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> or <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> dialog's Options pane when you have chosen <b>Custom FFmpeg Export</b> in the <b>Save as type</b> dropdown.</p></div>
-<dl><dd><span title="Custom FFmpeg format options"><img alt="Custom FFmpeg format options W10.png" src="../m/images/9/90/custom_ffmpeg_format_options_w10.png" width="710" height="534" /></span></dd></dl>
+<dl><dd><span title="Custom FFmpeg format options"><img alt="Custom FFmpeg format options W10.png" src="../m/images/9/90/custom_ffmpeg_format_options_w10.png" width="676" height="533" /></span></dd></dl>
 <h2><span class="mw-headline" id="Presets">Presets</span></h2>
 <p>You can save and load presets for custom FFmpeg export choices. You can also export already saved presets to an external XML file and import presets from this file, thus allowing you to share presets with other users.
 </p><p>Select both a format and a codec from the respective lists. Then click on the black triangle at the right of the text box to open the <b>Preset:</b> dropdown menu and select the saved preset required. You will also then need to use the <span class="button">Load Preset</span> button for the selected preset to become active. 
@@ -43,7 +43,7 @@
 <li> <span class="button">Save Preset</span>: Saves a single preset to Audacity's internal storage. Type a name for the preset in the box next to <b>Preset:</b>.  If you save a preset with a name that already exists, Audacity will ask if you want to overwrite it. Saved presets are stored in a file called "ffmpeg_presets.xml" in the Audacity data directory:
 <ul><li> <b>Windows:</b> Users\&lt;username&gt;\AppData\Roaming\Audacity</li>
 <li> <b>Mac:</b> ~/Library/Application Support/audacity/</li>
-<li> <b>Linux: ~/.audacity-data/</b>.</li></ul></li></ul>
+<li> <b>Linux:</b> ~/.audacity-data/</li></ul></li></ul>
 <ul><li> <span class="button">Delete Preset</span>: Removes the selected preset in the Preset: dropdown from Audacity's internal storage. </li>
 <li> <span class="button">Import Presets</span>: Imports an existing set of one or more presets from an external XML file. Imported presets will be added to your existing list of presets. If an imported preset has the same name as an existing preset, Audacity will ask if you want to overwrite that existing preset with the settings of the imported preset. </li>
 <li> <span class="button">Export Presets</span>: Exports all the currently saved presets as an external XML file to a file name and folder of your choice. To export a new or modified preset you must first use <span class="button">Save Preset</span> to save it.</li></ul>
@@ -73,13 +73,14 @@
 <div id="example"></div>
 <h2><span class="mw-headline" id="Example">Example</span></h2>
 <div class="example">
-<p>Custom FFmpeg Export provides a way to specify the bit rate of exported M4A (AAC files) which is not currently possible by choosing "M4A (AAC) Files" in the Export Audio dialog. 
+<p>Custom FFmpeg Export provides an alternative way to specify the bit rate of exported M4A (AAC files) rather than using the Quality slider  for "M4A (AAC) Files" in the Export Audio dialog. 
 </p>
 <ol><li> Select <b>mp4</b> in the Formats list.</li>
 <li> Select <b>libvo_aacenc</b> in the Codecs List.</li>
 <li> In <b>Bit Rate:</b> in the General Options pane, enter a <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> up to 320 kbps expressed in bits per second. For example, to export at 280 kbps, enter "280000" (without quotes).</li>
 <li> Click the <span class="button">OK</span> button.</li>
 <li> Back in the Export Audio dialog, enter your desired file name then add "m4a" (without quotes) at the end of the name.</div></li></ol>
+
 <h2><span class="mw-headline" id="Limitations_and_Disclaimer">Limitations and Disclaimer</span></h2>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -87,35 +88,36 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">Audacity aims to provide the same exporting/importing features as FFmpeg. That is, you should be able to use Audacity to transcode audio with the same results as using FFmpeg directly. This also means that if FFmpeg cannot perform a particular conversion, Audacity cannot do it either. The limitations apply to both specific formats and codecs and to their metadata. In particular, FFmpeg can only export about two-thirds of the formats that it can import.<p> Possibly incomplete information about known limitations can be seen at <a rel="nofollow" class="external free" href="https://wiki.audacityteam.org/wiki/FFmpeg_integration#Functionality">https://wiki.audacityteam.org/wiki/FFmpeg_integration#Functionality</a>. One way to test if there is a problem in the Audacity implementation of FFmpeg is to use a command-line version of FFmpeg separately to perform the same task. If it fails in FFmpeg, then Audacity has the same limitation. </p>
+<td align="left" valign="top">Audacity aims to provide the same exporting/importing features as FFmpeg. That is, you should be able to use Audacity to transcode audio with the same results as using FFmpeg directly. This also means that if FFmpeg cannot perform a particular conversion, Audacity cannot do it either. The limitations apply to both specific formats and codecs and to their metadata. In particular, FFmpeg can only export about two-thirds of the formats that it can import.<p>One way to test if there is a problem in the Audacity implementation of FFmpeg is to use a command-line version of FFmpeg separately to perform the same task. If it fails in FFmpeg, then Audacity has the same limitation. </p>
 </td></tr></table></div>
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130432
+Cached time: 20191115102443
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.075 seconds
-Real time usage: 0.079 seconds
-Preprocessor visited node count: 183/1000000
-Preprocessor generated node count: 452/1000000
-Post‐expand include size: 3643/2097152 bytes
-Template argument size: 2609/2097152 bytes
+CPU time usage: 0.084 seconds
+Real time usage: 0.090 seconds
+Preprocessor visited node count: 191/1000000
+Preprocessor generated node count: 486/1000000
+Post‐expand include size: 3940/2097152 bytes
+Template argument size: 2875/2097152 bytes
 Highest expansion depth: 4/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   17.616      1 - -total
- 45.12%    7.949     11 - Template:Button
- 32.15%    5.664      1 - Template:Intro
- 11.21%    1.974      1 - Template:Example
-  8.47%    1.492      1 - Template:Note
-  7.24%    1.275      1 - Template:Advice
+100.00%   22.836      1 - -total
+ 36.11%    8.247     11 - Template:Button
+ 26.12%    5.965      1 - Template:Intro
+ 12.95%    2.956      1 - Template:Example
+ 11.20%    2.557      1 - Template:Advice
+  8.71%    1.989      1 - Template:Note
+  7.95%    1.815      1 - Template:Ednote
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5266-0!*!0!!*!5!* and timestamp 20190503130432 and revision id 61128
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5266-0!*!0!!*!5!* and timestamp 20191115102443 and revision id 64883
  -->
 </div>
 										<!-- end content -->
@@ -188,7 +190,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Custom_FFmpeg_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Custom_FFmpeg_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -34,6 +34,7 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+
 <div class="intro">All editing in Audacity is done as a project. It is important to note that a project is not a single audio file but a complex set of files managed by Audacity.
 <ul><li> Audacity projects have a top-level <i><b><a href="glossary.html#audacity_project_format" title="Glossary">AUP</a></b></i> file and a related folder containing the sound files <i>(the audio data)</i>. The <i><b><a href="glossary.html#audacity_project_format" title="Glossary">AUP</a></b></i> is <b>not</b> a sound file, it is merely a list of instructions that tell Audacity how to construct the project from the sound files in the folder. Audacity projects can <b>only</b> be used by Audacity. </li>
 <li> To make an audio file (such as  <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>) for playing on your music player, or for use in other applications, use one of the <a href="file_menu_export.html#exports" title="File Menu: Export">Export Audio</a> commands, available from the <span class="menu">File &gt; <a href="file_menu_export.html" title="File Menu: Export">Export</a></span> menu.</div></li></ul>
@@ -42,7 +43,6 @@
 <li><a href="#save">Saving an Audacity Project</a></li>
 <li><a href="#copies">Saving copies of projects</a></li>
 <li><a href="#open">Opening an Audacity Project</a></li>
-<li><a href="#dependencies">Project Dependencies</a></li>
 <li><a href="#move">Moving or sending an Audacity project</a></li>
 <li><a href="#backup">Backing up Audacity projects</a></li>
 <li><a href="#delete">Deleting an Audacity project</a></li>
@@ -134,30 +134,8 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <li>Projects created in legacy <b>Audacity 1.1.x or earlier</b> can only be opened by exporting each audio track as WAV in the legacy version of Audacity, then import the WAV files into the current version of Audacity.</li></ul>
 </td></tr></table>
 </div>
-<div id="dependencies"></div>
-<h2><span class="mw-headline" id="Project_Dependencies">Project Dependencies</span></h2>
-<p>When importing <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> audio files, such as <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>, Audacity has an <a href="import_export_preferences.html" title="Import - Export Preferences">import preference</a> that lets you save disk space and <a href="on_demand_loading.html" title="On-Demand Loading">edit the files almost immediately</a> by reading them directly from their original source location, rather than copying them into the project. In that case Audacity will reference the original file directly (but not make any changes to that audio file unless you export over it). If you import the files by reading them directly, you must not at that point rename, move or delete those original source files and must not modify them outside Audacity.
-</p><p>When you first import a file by any means, for example by using <span class="menu">File &gt; <a href="file_menu.html#Import" title="File Menu">Import</a></span> or by dragging the file in, the preference is automatically set to "copy in" and a <a href="warnings_preferences.html#uncompressed" title="Warnings Preferences">Warning dialog</a> is presented explaining the difference between copy-in and read-directly and asking which method should be used for this import. You can opt for Audacity to use your current choice in future and not ask again, but you can change your choice at any time in <a href="import_export_preferences.html" title="Import - Export Preferences">Import - Export Preferences</a>.   
-</p><p>When a project is saved and the "faster" option has been chosen, Audacity will display a dialog box showing these dependencies and give the option of copying all of the audio data into the project. This makes the project independent of external audio files and makes it safe to delete, move, rename or modify the original audio files if necessary. The <a href="projects_preferences.html" title="Projects Preferences">Projects Preferences</a> settings can be modified so that Audacity will not ask when saving a project but will always either <i>"never copy"</i> the dependent audio files, or <i>"always copy"</i> them into the project.
-</p><p>At any time it is possible to click on <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#check_dependencies" title="Help Menu: Diagnostics">Check Dependencies...</a></span> to see if the project depends on any <a href="dependencies_dialog.html" title="Dependencies Dialog">external files</a>.
+<p><br />
 </p>
-<h3><span class="mw-headline" id="Import_settings:_.22faster.22_versus_.22safer.22">Import settings: "faster" versus "safer"</span></h3>
-<p>There are two settings that determine how Audacity imports a WAV or AIFF file.
-</p>
-<ul><li> <b>Copy uncompressed files into the project (safer):</b> This is the default setting. Audacity copies in the entire audio data of files when importing them. </li></ul>
-<div class="note">Choose this "Safer" option if:
-<ul><li> Plenty of disk space is available and the time taken to import is not crucial</li>
-<li> You want peace of mind that the project will never depend on other files</li>
-<li> The Audacity project is to be opened on another computer or sent to someone else (if you only want to send an <i><b>exported</b></i> audio file to someone else, you do not need to choose "Safer").</div></li></ul>
-<ul><li> <b>Read uncompressed files from the original location (faster):</b> Audacity uses <a href="on_demand_loading.html" title="On-Demand Loading">On-Demand Loading</a>. This imports files much faster by only writing small AUF "summary" files that reference the imported file and so depend on that imported file remaining available. Audio data is only copied in for any parts of the file that you subsequently edit. If you apply an edit to the <i><b>entire</b></i> audio of the imported file, Audacity will at that point copy the entire audio data in, so providing you do not undo that edit of the entire audio, the project will henceforward no longer depend on the imported file.<p>Note that if you overwrite a read-directly WAV or AIFF file by exporting to the same file name and location, Audacity renames the imported file with a suffix containing "-old" and a number, then this "-old" file becomes the dependent file for the project. Do not delete "-old" file(s) until you are happy with the exported file and no longer require the Audacity project.</p>  </li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">Do <i><b>not</b></i> choose the "Faster" option unless you completely understand the implications. If you move, rename or delete the imported file, the project data may be lost.
-</td></tr></table></div>
 <div id="move"></div>
 <h2><span class="mw-headline" id="Moving.2C_renaming_or_sending_an_Audacity_project">Moving, renaming or sending an Audacity project</span></h2>
 <p>Moving or renaming Audacity projects can be tricky due to their complex structure as described above.  Any project can be moved on the same computer, or renamed, by making a copy of the project with either the <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_lossless_copy_of_project" title="File Menu: Save Project">Save Lossless Copy of Project...</a></span> or the <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As...</a></span> command.
@@ -214,34 +192,34 @@ Note that this will <i><b>not</b></i> remove the listing of your project under <
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190502211603
+Cached time: 20191114120243
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.146 seconds
-Real time usage: 0.151 seconds
-Preprocessor visited node count: 577/1000000
-Preprocessor generated node count: 2006/1000000
-Post‐expand include size: 12521/2097152 bytes
-Template argument size: 7520/2097152 bytes
+CPU time usage: 0.154 seconds
+Real time usage: 0.161 seconds
+Preprocessor visited node count: 547/1000000
+Preprocessor generated node count: 1948/1000000
+Post‐expand include size: 11518/2097152 bytes
+Template argument size: 6903/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   44.839      1 - -total
- 49.91%   22.380      1 - Template:I18n
- 46.31%   20.767      1 - Template:I18n_box
- 39.20%   17.576      1 - Template:I18n_list
- 18.88%    8.465      4 - Template:I18n_link
- 14.78%    6.629     35 - Template:Menu
- 11.01%    4.935      4 - Template:Autoglossonym
-  6.03%    2.703      1 - Template:Intro
-  5.49%    2.463      3 - Template:Note
-  4.59%    2.057      2 - Template:Shortcut
+100.00%   60.135      1 - -total
+ 51.65%   31.062      1 - Template:I18n
+ 47.71%   28.689      1 - Template:I18n_box
+ 40.32%   24.245      1 - Template:I18n_list
+ 19.97%   12.007      4 - Template:I18n_link
+ 13.60%    8.176     33 - Template:Menu
+ 11.52%    6.929      4 - Template:Autoglossonym
+  6.26%    3.766      1 - Template:Intro
+  5.35%    3.219      2 - Template:Note
+  4.45%    2.674      2 - Template:Shortcut
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2523-0!*!0!!*!5!* and timestamp 20190502211602 and revision id 61127
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2523-0!*!0!!*!5!* and timestamp 20191114120243 and revision id 65183
  -->
 </div>
 										<!-- end content -->
@@ -314,7 +292,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Projects">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Projects">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

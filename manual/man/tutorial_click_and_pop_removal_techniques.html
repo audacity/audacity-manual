@@ -55,11 +55,10 @@
 <ul>
 <li class="toclevel-2 tocsection-6"><a href="#Spectrum_analysis"><span class="tocnumber">5.1</span> <span class="toctext">Spectrum analysis</span></a></li>
 <li class="toclevel-2 tocsection-7"><a href="#Subtraction"><span class="tocnumber">5.2</span> <span class="toctext">Subtraction</span></a></li>
-<li class="toclevel-2"><a href="#Hard_limiting"><span class="tocnumber">5.3</span> <span class="toctext">Hard limiting</span></a></li>
-<li class="toclevel-2 tocsection-9"><a href="#Repair_of_broader_clicks"><span class="tocnumber">5.4</span> <span class="toctext">Repair of broader clicks</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Repair_of_broader_clicks"><span class="tocnumber">5.3</span> <span class="toctext">Repair of broader clicks</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-10"><a href="#Alternative_applications"><span class="tocnumber">6</span> <span class="toctext">Alternative applications</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Alternative_applications"><span class="tocnumber">6</span> <span class="toctext">Alternative applications</span></a></li>
 </ul>
 </div>
 
@@ -90,7 +89,7 @@
 <p>Silencing highly zoomed areas or redrawing samples can get tedious even over a relatively short stretch of audio. Here are a few other tricks you can try if Click Removal did not help as much as you hoped.  
 </p>
 <h3><span class="mw-headline" id="Spectrum_analysis">Spectrum analysis</span></h3>
-<p>Analyse the area with <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span> to see if any spikes are concentrated in particular frequencies and then use <span class="menu">Effect &gt; <a href="equalization.html" title="Equalization">Equalization</a></span> to reduce the volume of those frequencies. 
+<p>Analyse the area with <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span> to see if any spikes are concentrated in particular frequencies and then use <span class="menu">Effect &gt; <a href="filter_curve.html" title="Filter Curve">Filter Curve</a></span> or <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span> to reduce the volume of those frequencies. 
 </p><p>You can do this more precisely with the <span class="menu">Effect &gt; <a href="notch_filter.html" title="Notch Filter">Notch Filter</a></span>.
 </p>
 <h3><span class="mw-headline" id="Subtraction">Subtraction</span></h3>
@@ -101,7 +100,6 @@
 <li> Now select one of the channels by clicking where it says "Mono". In the menus at the top, choose <span class="menu">Effect &gt; <a href="invert.html" title="Invert">Invert</a></span>.</li></ul>
 <p>When you export the result as a stereo track, the area you split out will be effectively mono <i>(in the sense that the previous music signal in the left and right channels will be mixed into both channels)</i>, but the click should be sharply attenuated without harming the music too much.
 </p>
-
 <h3><span class="mw-headline" id="Repair_of_broader_clicks">Repair of broader clicks</span></h3>
 <p>Click Removal may not work well with broader clicks of 10 milliseconds or longer. Here are two <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Nyquist plug-ins</a> you can try. Installation instructions for Nyquist plug-ins are <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins#Installation">here</a>: 
 </p>
@@ -130,34 +128,34 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130203
+Cached time: 20191115102055
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.122 seconds
-Real time usage: 0.128 seconds
-Preprocessor visited node count: 376/1000000
-Preprocessor generated node count: 1599/1000000
-Post‐expand include size: 12971/2097152 bytes
-Template argument size: 10101/2097152 bytes
+CPU time usage: 0.124 seconds
+Real time usage: 0.131 seconds
+Preprocessor visited node count: 363/1000000
+Preprocessor generated node count: 1553/1000000
+Post‐expand include size: 7146/2097152 bytes
+Template argument size: 4337/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   49.291      1 - -total
- 50.74%   25.009      1 - Template:I18n
- 45.97%   22.660      1 - Template:I18n_box
- 38.02%   18.739      1 - Template:I18n_list
- 15.47%    7.623      2 - Template:I18n_link
- 11.48%    5.658      5 - Template:Shortcut
-  8.67%    4.274      2 - Template:Autoglossonym
-  6.48%    3.196      1 - Template:Intro
-  6.05%    2.981      9 - Template:Menu
-  5.06%    2.496      3 - Template:Ednote
+100.00%   51.444      1 - -total
+ 49.09%   25.256      1 - Template:I18n
+ 45.33%   23.319      1 - Template:I18n_box
+ 37.45%   19.266      1 - Template:I18n_list
+ 13.24%    6.810      2 - Template:I18n_link
+ 11.23%    5.775      5 - Template:Shortcut
+  8.25%    4.246      1 - Template:Intro
+  7.67%    3.945      2 - Template:Autoglossonym
+  7.22%    3.715     10 - Template:Menu
+  3.90%    2.005      3 - Template:Note
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5210-0!*!0!!en!5!* and timestamp 20190503130202 and revision id 60560
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5210-0!*!0!!en!5!* and timestamp 20191115102055 and revision id 65126
  -->
 </div>
 										<!-- end content -->
@@ -230,7 +228,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Click_and_pop_removal_techniques">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Click_and_pop_removal_techniques">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

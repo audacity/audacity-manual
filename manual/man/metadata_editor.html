@@ -34,7 +34,9 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>Metadata Tags Editor</b></i> is used to enter or confirm text description <i><b><a href="glossary.html#metadata" title="Glossary">metadata tag</a></b></i> information, such as artist, year or genre) that will be embedded in the Audacity project and passed through into <a href="file_export_dialog.html" title="File Export Dialog">exported</a> audio files. Metadata that is embedded in audio files displays in software applications like iTunes® or Windows Media Player, or portable players like iPod®. <p>Most export formats support at least the seven default tags in Metadata Editor, but support in player applications varies from almost universal for the <i><b><a href="glossary.html#id3" title="Glossary">ID3</a></b></i> tags used by <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> to very limited for <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>. See this <a href="faq_opening_and_saving_files.html#meta" title="FAQ:Opening and Saving Files">Frequently Asked Question</a> for details.</p><p> For both MP3 and MP2, only ID3v2.3 tags are exported. ID3v1 can be exported using <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">Cmd-line export</a>.</p></div>
+
+<div class="intro"><i><b>Metadata Tags Editor</b></i> is used to enter or confirm text description <i><b><a href="glossary.html#metadata" title="Glossary">metadata tag</a></b></i> information, such as artist, year or genre) that will be embedded in the Audacity project and passed through into <a href="file_export_dialog.html" title="File Export Dialog">exported</a> audio files. Metadata that is embedded in audio files displays in software applications like iTunes® or Windows Media Player, or portable players like iPod®. <p>Most export formats support at least the seven default tags in Metadata Editor, but support in player applications varies from almost universal for the <i><b><a href="glossary.html#id3" title="Glossary">ID3</a></b></i> tags used by <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> to very limited for <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>. See this <a href="faq_opening_and_saving_files.html#meta" title="FAQ:Opening and Saving Files">Frequently Asked Question</a> for details.</p><p> For both MP3 and MP2, only ID3v2.3 tags are exported. ID3v1 can be exported using <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">Cmd-line export</a>.</p>
+</div>
 <dl><dd><b>Accessed by:'</b> <span class="menu">Edit  &gt; Metadata...</span></dd>
 <dd><span title="Metadata Editor with completed value fields"><img alt="Metadata Tags editor - with off setting.png" src="../m/images/7/73/metadata_tags_editor_with_off_setting.png" width="535" height="421" /></span></dd></dl>
 <div class="note">
@@ -50,6 +52,7 @@
 <li class="toclevel-1 tocsection-2"><a href="#Genres"><span class="tocnumber">2</span> <span class="toctext">Genres</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Suppress_the_metadata_dialog"><span class="tocnumber">4</span> <span class="toctext">Suppress the metadata dialog</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Links"><span class="tocnumber">5</span> <span class="toctext">Links</span></a></li>
 </ul>
 </div>
 
@@ -72,7 +75,6 @@
 <ul><li><b>Load:</b> Loads a previously saved list of tag names and values into Metadata Editor.</li>
 <li><b>Save:</b> Saves the current list of tag names and values to a file on your drive.</li>
 <li><b>Set Default:</b> Makes the current list of tag names and non-empty values the default state whenever opening a new, empty project. To clear the default, press <span class="button">Clear</span> then <span class="button">Set Default</span>. <p> Even if you set a Default, if you import a file containing metadata, that metadata will appear in Metadata Editor. If you always want a fixed set of metadata to show after importing a file, you need to save that set as a template then load the template after importing the file.</p>  </li></ul>
-
 <div id="hide"></div>
 <h2><span class="mw-headline" id="Suppress_the_metadata_dialog">Suppress the metadata dialog</span></h2>
 <p>At the bottom left of the dialog is a checkbox labelled "<b>Don't show this when exporting audio</b>"
@@ -81,37 +83,45 @@
 <div class="note">With this option checked:
 <ul><li> Metadata will still be written if imported files already contain metadata</li>
 <li> Export Multiple will still write metadata for Track Title and Track Number.</div></li></ul>
-
+<p><br />
+</p>
+<div id="links"></div>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="importing_audio.html" title="Importing Audio"><b>&gt;</b>&#160; Importing Audio</a> <br />
+</p><p><a href="exporting_audio.html" title="Exporting Audio"><b>&gt;</b>&#160; Exporting Audio</a> <br />
+</p><p><a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins"><b>&gt;</b>&#160; LAME MP3 Export</a> <br />
+</p><p><a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>&gt;</b>&#160; FFmpeg import/export libraries for more formats</a> <br />
+</p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130140
+Cached time: 20191115102027
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.114 seconds
-Real time usage: 0.121 seconds
-Preprocessor visited node count: 508/1000000
-Preprocessor generated node count: 1632/1000000
-Post‐expand include size: 6622/2097152 bytes
-Template argument size: 2906/2097152 bytes
+CPU time usage: 0.110 seconds
+Real time usage: 0.116 seconds
+Preprocessor visited node count: 520/1000000
+Preprocessor generated node count: 1658/1000000
+Post‐expand include size: 6880/2097152 bytes
+Template argument size: 3133/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   57.035      1 - -total
- 52.87%   30.153      1 - Template:I18n
- 49.19%   28.056      1 - Template:I18n_box
- 41.90%   23.895      1 - Template:I18n_list
- 19.62%   11.191      4 - Template:I18n_link
- 18.47%   10.536     19 - Template:Key
- 11.33%    6.464      4 - Template:Autoglossonym
-  6.46%    3.686      2 - Template:Note
-  6.08%    3.469      5 - Template:Button
-  3.89%    2.216      1 - Template:Intro
+100.00%   49.363      1 - -total
+ 49.97%   24.666      1 - Template:I18n
+ 46.89%   23.147      1 - Template:I18n_box
+ 40.42%   19.953      1 - Template:I18n_list
+ 19.87%    9.809      4 - Template:I18n_link
+ 18.73%    9.246     19 - Template:Key
+ 11.78%    5.813      4 - Template:Autoglossonym
+  8.03%    3.966      2 - Template:Note
+  6.56%    3.238      5 - Template:Button
+  4.36%    2.150      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2566-0!*!0!!en!5!* and timestamp 20190503130140 and revision id 63953
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2566-0!*!0!!en!5!* and timestamp 20191115102027 and revision id 65560
  -->
 </div>
 										<!-- end content -->
@@ -184,7 +194,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Metadata_Editor">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Metadata_Editor">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

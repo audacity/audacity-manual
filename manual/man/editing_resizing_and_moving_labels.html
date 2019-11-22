@@ -34,7 +34,6 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-
 <div class="intro">Methods for changing labels: moving them, resizing them, changing their text content.</div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#mouse">Changing the length and position of labels with the mouse</a></li>
@@ -44,12 +43,27 @@
 <li><a href="#junction">Adjusting the junction point where two labels meet</a></li>
 <li><a href="#selected">Moving a label when there is a selection</a></li>
 <li><a href="#cutcopypaste">Using cut, copy and paste</a></li>
-<li><a href="#context">Using the Context Menu</a></li></ol>
+<li><a href="#context">Using the Context Menu</a></li>
+<li><a href="#editor">Using the Labels Editor</a></li></ol>
 <div id="mouse"></div>
 <h2><span class="mw-headline" id="Changing_the_length_and_position_of_labels_with_the_mouse">Changing the length and position of labels with the mouse</span></h2>
-<p>You can move a label by clicking and dragging its circle handle. You can change the length of a label by clicking and dragging its triangle handle.
-</p><p>Holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while dragging reverses this behavior, so that dragging a circle handle changes the length of the label, and dragging a triangle handle moves the label. For example, this lets you resize a label by holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while dragging its circle handle, then release <span class="kbrd" style="background-color: #e0e0f0">Shift</span> to move the resized label without having to move the mouse pointer to its triangle handle.
-</p><p>In the case where two labels meet you can adjust the junction point where they meet by clicking and dragging their shared circle handle.
+<p>You can <b>move a label</b> by clicking and dragging its circle handle. You can <b>change the length of a label</b> by clicking and dragging its triangle handle.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while dragging reverses this behavior, so that
+<ul><li>dragging a circle handle changes the length of the label, and </li>
+<li>dragging a triangle handle moves the label. </li></ul>
+<p>For example, this lets you resize a label by holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while dragging its circle handle, then release <span class="kbrd" style="background-color: #e0e0f0">Shift</span> to move the resized label without having to move the mouse pointer to its triangle handle.
+</p>
+</td></tr></table>
+</div>
+<p>In the case where two labels meet you can adjust the junction point where they meet by clicking and dragging their shared circle handle.
+</p><p><br />
 </p>
 <div id="move_point"></div>
 <h2><span class="mw-headline" id="Moving_a_point_label">Moving a point label</span></h2>
@@ -58,15 +72,17 @@
 <dl><dd><table>
 
 <tr>
-<td><span title="Before"><img alt="PointMoveBefore.png" src="../m/images/0/0c/pointmovebefore.png" width="262" height="191" /></span>
+<td><span title="Before moving a point label"><img alt="PointMoveBefore W10.png" src="../m/images/9/9a/pointmovebefore_w10.png" width="419" height="194" /></span>
 </td>
-<td><span title="After"><img alt="PointMoveAfter.png" src="../m/images/8/80/pointmoveafter.png" width="262" height="191" /></span>
+<td><span title="After moving a point label"><img alt="PointMoveAfter W10.png" src="../m/images/3/36/pointmoveafter_w10.png" width="419" height="192" /></span>
 </td></tr>
 <tr>
-<td align="center">Before
+<td align="center"><b>Before</b>
 </td>
-<td align="center">After
+<td align="center"><b>After</b>
 </td></tr></table></dd></dl>
+<p><br />
+</p>
 <div id="expand_point"></div>
 <h2><span class="mw-headline" id="Expanding_a_point_label">Expanding a point label</span></h2>
 <p>You can expand a point label into a region label by clicking and dragging either of its triangle handles:
@@ -74,15 +90,17 @@
 <dl><dd><table>
 
 <tr>
-<td><span title="Before"><img alt="PointExpandBefore.png" src="../m/images/6/6c/pointexpandbefore.png" width="308" height="193" /></span>
+<td><span title="Before expanding a point label"><img alt="PointExpandBefore W10.png" src="../m/images/9/95/pointexpandbefore_w10.png" width="418" height="192" /></span>
 </td>
-<td><span title="After"><img alt="PointExpandAfter.png" src="../m/images/3/36/pointexpandafter.png" width="308" height="193" /></span>
+<td><span title="After expanding a point label"><img alt="PointExpandAfter W10.png" src="../m/images/0/09/pointexpandafter_w10.png" width="417" height="194" /></span>
 </td></tr>
 <tr>
-<td align="center">Before
+<td align="center"><b>Before</b>
 </td>
-<td align="center">After
+<td align="center"><b>After</b>
 </td></tr></table></dd></dl>
+<p><br />
+</p>
 <div id="move_region"></div>
 <h2><span class="mw-headline" id="Moving_and_resizing_a_region_label">Moving and resizing a region label</span></h2>
 <p>You can move a region label by clicking and dragging either of its circle handles:
@@ -90,29 +108,31 @@
 <dl><dd><table>
 
 <tr>
-<td><span title="Before"><img alt="RegionMoveBefore.png" src="../m/images/a/a6/regionmovebefore.png" width="308" height="193" /></span>
+<td><span title="Before moving a region label"><img alt="RegionMoveBefore W10.png" src="../m/images/a/a2/regionmovebefore_w10.png" width="417" height="194" /></span>
 </td>
-<td><span title="After"><img alt="RegionMoveAfter.png" src="../m/images/5/51/regionmoveafter.png" width="308" height="193" /></span>
+<td><span title="After moving a region label"><img alt="RegionMoveAfter W10.png" src="../m/images/4/44/regionmoveafter_w10.png" width="419" height="192" /></span>
 </td></tr>
 <tr>
-<td align="center">Before
+<td align="center"><b>Before</b>
 </td>
-<td align="center">After
+<td align="center"><b>After</b>
 </td></tr></table></dd></dl>
 <p>You can change the length of a region label by clicking and dragging one of its triangle handles:
 </p>
 <dl><dd><table>
 
 <tr>
-<td><span title="Before"><img alt="RegionAdjustBefore.png" src="../m/images/9/99/regionadjustbefore.png" width="308" height="193" /></span>
+<td><span title="Before resizing a region label"><img alt="RegionAdjustBefore W10.png" src="../m/images/4/4e/regionadjustbefore_w10.png" width="417" height="193" /></span>
 </td>
-<td><span title="After"><img alt="RegionAdjustAfter.png" src="../m/images/5/5f/regionadjustafter.png" width="308" height="193" /></span>
+<td><span title="After resizing a region label"><img alt="RegionAdjustAfter W10.png" src="../m/images/9/9e/regionadjustafter_w10.png" width="416" height="192" /></span>
 </td></tr>
 <tr>
-<td align="center">Before
+<td align="center"><b>Before</b>
 </td>
-<td align="center">After
+<td align="center"><b>After</b>
 </td></tr></table></dd></dl>
+<p><br />
+</p>
 <div id="junction"></div>
 <h2><span class="mw-headline" id="Adjusting_the_junction_point_where_two_labels_meet">Adjusting the junction point where two labels meet</span></h2>
 <p>You can adjust the junction point where two labels meet by clicking and dragging their shared circle handle:
@@ -120,15 +140,17 @@
 <dl><dd><table>
 
 <tr>
-<td><span title="Before"><img alt="LinkedRegionMoveBefore.png" src="../m/images/1/17/linkedregionmovebefore.png" width="394" height="193" /></span>
+<td><span title="Before adjusting the junction point where two labels meet"><img alt="LinkedRegionMoveBefore W10.png" src="../m/images/c/c9/linkedregionmovebefore_w10.png" width="417" height="194" /></span>
 </td>
-<td><span title="After"><img alt="LinkedRegionMoveAfter.png" src="../m/images/f/fe/linkedregionmoveafter.png" width="394" height="193" /></span>
+<td><span title="After adjusting the junction point where two labels meet"><img alt="LinkedRegionMoveAfter W10.png" src="../m/images/e/eb/linkedregionmoveafter_w10.png" width="418" height="193" /></span>
 </td></tr>
 <tr>
-<td align="center">Before
+<td align="center"><b>Before</b>
 </td>
-<td align="center">After
+<td align="center"><b>After</b>
 </td></tr></table></dd></dl>
+<p><br />
+</p>
 <div id="selected"></div>
 <h2><span class="mw-headline" id="Moving_a_label_when_there_is_a_selection">Moving a label when there is a selection</span></h2>
 <p>The illustration below shows what happens if you click in a label to select it, press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, then move the label.
@@ -136,99 +158,109 @@
 <dl><dd><table>
 
 <tr>
-<td><span title="Before"><img alt="LabelRegionMove1Before.png" src="../m/images/3/3e/labelregionmove1before.png" width="283" height="199" /></span>
+<td><span title="Before moving a label when there is a selection but the label is selected"><img alt="LabelRegionMove1Before - W10.png" src="../m/images/7/71/labelregionmove1before_w10.png" width="419" height="194" /></span>
 </td>
-<td><span title="After"><img alt="LabelRegionMove1After.png" src="../m/images/d/d7/labelregionmove1after.png" width="283" height="199" /></span>
+<td><span title="After moving a label when there is a selection but the label is selected"><img alt="LabelRegionMove1After W10.png" src="../m/images/c/cc/labelregionmove1after_w10.png" width="418" height="194" /></span>
 </td></tr>
 <tr>
-<td align="center">Before
+<td align="center"><b>Before moving a label with a selection</b>
 </td>
-<td align="center">After
+<td align="center"><b>After moving a label with a selection</b>
 </td></tr></table></dd></dl>
 <p>Contrast this to what happens if you click in a label to select it, then move the label.
 </p>
 <dl><dd><table>
 
 <tr>
-<td><span title="Before"><img alt="LabelRegionMove2Before.png" src="../m/images/c/ce/labelregionmove2before.png" width="283" height="199" /></span>
+<td><span title="Before moving a label when the label is selected"><img alt="LabelRegionMove2Before W10.png" src="../m/images/8/8f/labelregionmove2before_w10.png" width="418" height="193" /></span>
 </td>
-<td><span title="After"><img alt="LabelRegionMove2After.png" src="../m/images/f/f5/labelregionmove2after.png" width="283" height="199" /></span>
+<td><span title="After moving a label when the label is selected"><img alt="LabelRegionMove2After W10.png" src="../m/images/0/04/labelregionmove2after_w10.png" width="418" height="192" /></span>
 </td></tr>
 <tr>
-<td align="center">Before
+<td align="center"><b>Before moving a label when the label is selected</b>
 </td>
-<td align="center">After
+<td align="center"><b>After moving a label when the label is selected</b>
 </td></tr></table></dd></dl>
+<p><br />
+</p>
 <div id="cutcopypaste"></div>
 <h2><span class="mw-headline" id="Using_cut.2C_copy_and_paste">Using cut, copy and paste</span></h2>
 <div class="note">The following examples of cutting labels with <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span> will move back any labels that follow to right of the removed label(s).  To cut the label without moving following labels, use  <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#split_cut" title="Edit Menu: Remove Special">Split Cut</a></span>.</div>
 <h3><span class="mw-headline" id="Cutting_and_Pasting_Region_Labels">Cutting and Pasting Region Labels</span></h3>
 <p>You can cut and paste region labels using <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span> and <span class="menu">Edit &gt; <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">Paste</a></span>, but you have to make sure you do not select any audio, or you will end up cutting and pasting audio where you probably did not intend.
-</p><p>In the image below, the label was selected by clicking in it, then the audio track was unselected by shift-clicking in the Track Control Panel of the audio track (this can also be done with the keyboard by <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, <span class="kbrd" style="background-color: #e0e0f0">Up</span> then <span class="kbrd" style="background-color: #e0e0f0">Enter</span>). The label was then cut to the clipboard with <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span>:
 </p>
-<dl><dd><span title="image of label in label track ready for Edit Cut"><img alt="LabelTrackPrepareToCopy.png" src="../m/images/3/33/labeltrackpreparetocopy.png" width="503" height="176" /></span></dd></dl>
-<p>To paste the label at a different point in the audio track, either a) click in the audio track at the point where you would like the label to begin then shift-click in the label track to select it; or b) click in the label track at the point where you would like the label to begin. The label can then be pasted to that spot using <span class="menu">Edit &gt; <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">Paste</a></span>.
+In the image below, the label was selected by clicking in it, then the audio track was unselected by <span class="kbrd" style="background-color: #e0e0f0">Ctrl-clicking</span> in the Track Control Panel's <span class="button">Select</span> button of the audio track (this can also be done with the keyboard by <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, <span class="kbrd" style="background-color: #e0e0f0">Up</span> then <span class="kbrd" style="background-color: #e0e0f0">Enter</span>). <p>The label was then cut to the clipboard with <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span>:</p>
+<dl><dd><span title="image of label in label track ready for Edit Cut"><img alt="LabelTrackPrepareToCopy W10.png" src="../m/images/0/0b/labeltrackpreparetocopy_w10.png" width="418" height="194" /></span></dd></dl>
+<p>To paste the label at a different point in the audio track, either 
 </p>
-<dl><dd><span title="image of label track after Edit Paste"><img alt="LabelTrackAfterPaste.png" src="../m/images/2/20/labeltrackafterpaste.png" width="499" height="174" /></span></dd></dl>
+<ul><li>click in the label track at the point where you would like the label to begin, or</li>
+<li>click in the audio track at the point where you would like the label to begin then <span class="kbrd" style="background-color: #e0e0f0">Shift + Down-arrow</span> to extend the selection to the label track.</li></ul>
+<p>The label can then be pasted to that spot using <span class="menu">Edit &gt; <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">Paste</a></span>.
+</p>
+<dl><dd><span title="image of label track after with label moved after Edit Paste"><img alt="LabelTrackAfterPaste W10.png" src="../m/images/7/73/labeltrackafterpaste_w10.png" width="416" height="193" /></span></dd></dl>
 <h3><span class="mw-headline" id="Cutting_and_Pasting_Point_Labels">Cutting and Pasting Point Labels</span></h3>
-<p>You can also cut and paste point labels, but the procedure is tricky.
-In the image below, the point label is selected for editing as in the above example with a region label, <i>but there is no selected region in the label track</i>.
-</p>
-<dl><dd><span title="image of label track with point label selected for editing"><img alt="PointLabelCutFail.png" src="../m/images/d/d8/pointlabelcutfail.png" width="498" height="178" /></span></dd></dl>
-<p>What happens next depends on the setting of the "Select all audio in project, if none selected" preference in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>:
-</p>
-<ul><li> If that preference <i>is not</i> selected, <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span> will be disabled and pressing <span class="kbrd" style="background-color: #d0d0f8">Ctrl + X</span> will do nothing.</li>
-<li> If that preference <i>is</i> selected and you do <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span>, <i>all audio and labels in the project will be cut to the clipboard</i>.</li></ul>
 <p>To cut and paste a point label to a different location, first select the <i>text</i> of the label as shown below. Note the difference in appearance of selected label text (the text is highlighted separately from the box) versus a selected label (where the entire label box is highlighted).
 </p>
-<dl><dd><span title="image of label track with point label text selected"><img alt="PointLabelTextSelected.png" src="../m/images/7/7f/pointlabeltextselected.png" width="501" height="176" /></span></dd></dl>
-<p>Do <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span> - the <i>text</i> of the label is cut to the clipboard, leaving a label with no text. Press <span class="kbrd" style="background-color: #e0e0f0">Delete</span> to delete the label.
-Click in the new location for the label and do <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#paste_text" title="Edit Menu: Labels">Paste Text to New Label</a></span>:
+<dl><dd><span title="image of label track with point label text selected"><img alt="PointLabelTextSelected W10.png" src="../m/images/f/f9/pointlabeltextselected_w10.png" width="418" height="193" /></span></dd></dl>
+<ol><li>Do <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span> <i>(shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + X</span>)</i> - the <i>text</i> of the label is cut to the clipboard, leaving a label with no text. </li>
+<li>Press <span class="kbrd" style="background-color: #e0e0f0">Delete</span> to delete the label, or right-click in the label and choose <span class="menu">Delete Label</span> from the <a href="#context">context menu</a>.</li>
+<li>Click in the new location for the label and do <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#paste_text" title="Edit Menu: Labels">Paste Text to New Label</a></span>.</li></ol>
+<dl><dd><span title="image of label track after Paste Text to New Label"><img alt="PasteTextToNewLabel W10.png" src="../m/images/a/ac/pastetexttonewlabel_w10.png" width="416" height="193" /></span></dd></dl>
+<p><br />
 </p>
-<dl><dd><span title="image of label track after Paste Text to New Label"><img alt="PasteTextToNewLabel.png" src="../m/images/9/9f/pastetexttonewlabel.png" width="502" height="175" /></span></dd></dl>
 <div id="context"></div>
 <h2><span class="mw-headline" id="Using_the_Context_Menu">Using the Context Menu</span></h2>
-<p>There is a handy feature where you can select an area of text in a label then right-click to cut, copy or paste over (if there is text currently in the clipboard) that text. This allows you to click in another label, right-click, then paste that text in. So in our example you could select and copy "Question" and then paste it into the appropriate labels without having to type that word every time. The example below shows one way this can be used.
-</p><p>Click in a label, then select the label text. Note the difference in appearance of selected label text (as shown below - the text is highlighted separately from the box) versus a selected label (where the entire label box is highlighted). Right-click in the label:
+<p>If you right-click on a label, the label's context menu will appear:
 </p>
-<dl><dd><span title="image of contextual menu in a label with Copy selected, Windows 7 Basic style"><img alt="ContextLabelCopy added Delete.png" src="../m/images/0/02/contextlabelcopy_added_delete.png" width="469" height="216" /></span></dd></dl>
-<p>Now select the range of audio corresponding to the second question and click on <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#addlabelatselection" title="Edit Menu: Labels">Add Label at Selection</a></span>. Right click (control-click on a Mac) in the new label:
+<dl><dd><span title="image of contextual menu in a label with Copy selected, Windows 7 Basic style"><img alt="Label context menu.png" src="../m/images/5/53/label_context_menu.png" width="418" height="291" /></span></dd></dl>
+<p>The context menu offers the following options
 </p>
-<dl><dd><span title="image of new label and contextual menu ready to paste text into the label, Windows 7 Basic style"><img alt="ContextLabelPaste added delete.png" src="../m/images/9/9d/contextlabelpaste_added_delete.png" width="469" height="212" /></span></dd></dl>
-<p>The text "Question" will be pasted into the label, and all you have to type is " 2" to complete the label. Alternatively you could select the range in the label track instead of the audio track, then <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#paste_text" title="Edit Menu: Labels">Paste Text to New Label</a></span> to create the label with that text.
-</p><p><br />
-</p><p><a href="label_tracks.html#editing" title="Label Tracks"><b>|&lt;</b> Label Tracks</a>
+<ul><li><span style="font-weight: bold; font-size:118%">Cut:</span> - cuts any selected text in the label and place it on the clipboard</li>
+<li><span style="font-weight: bold; font-size:118%">Copy:</span> - copies any selected text in the label and place it on the clipboard</li>
+<li><span style="font-weight: bold; font-size:118%">Paste:</span> - pastes the contents of the clipboard to the label</li>
+<li><span style="font-weight: bold; font-size:118%">Delete Label:</span> - deletes the entire label </li>
+<li><span style="font-weight: bold; font-size:118%">Edit:</span> - opens the <a href="labels_editor.html" title="Labels Editor">Labels Editor</a> with just the current label</li></ul>
+<p><br />
+</p>
+<div id="editor"></div>
+<h2><span class="mw-headline" id="Using_the_Labels_Editor">Using the <a href="labels_editor.html" title="Labels Editor">Labels Editor</a></span></h2>
+<p>The <a href="labels_editor.html" title="Labels Editor">Labels Editor</a> lets you add or remove Label Tracks and edit their labels entirely using the keyboard, so is particularly useful for visually impaired users. 
+</p><p><span class="menu">Edit &gt; Labels &gt; Edit Labels...</span> launches a keyboard-accessible Labels Editor. This shows all the labels at once in a tabular view, similar to a spreadsheet. Each row represents a single individual label:
+</p>
+<dl><dd><span title="Edit Labels dialog box with tabular view of labels"><img alt="EditLabelDialog - vertical buttons.png" src="../m/images/b/bd/editlabeldialog_vertical_buttons.png" width="703" height="355" /></span></dd></dl>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="label_tracks.html#editing" title="Label Tracks"><b>|&lt;</b> Label Tracks</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130713
+Cached time: 20191115103024
 Cache expiry: 86400
 Dynamic content: false
 CPU time usage: 0.153 seconds
-Real time usage: 0.165 seconds
-Preprocessor visited node count: 365/1000000
-Preprocessor generated node count: 1593/1000000
-Post‐expand include size: 3886/2097152 bytes
-Template argument size: 1809/2097152 bytes
+Real time usage: 0.163 seconds
+Preprocessor visited node count: 425/1000000
+Preprocessor generated node count: 1763/1000000
+Post‐expand include size: 4945/2097152 bytes
+Template argument size: 2129/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   36.954      1 - -total
- 49.98%   18.470      1 - Template:I18n
- 45.31%   16.744      1 - Template:I18n_box
- 36.49%   13.486      1 - Template:I18n_list
- 12.84%    4.745      8 - Template:Key
- 10.13%    3.742      1 - Template:I18n_link
-  8.36%    3.090     12 - Template:Menu
-  7.96%    2.943      1 - Template:Note
-  5.77%    2.132      1 - Template:Autoglossonym
-  4.30%    1.588      1 - Template:Intro
+100.00%   40.095      1 - -total
+ 44.03%   17.653      1 - Template:I18n
+ 39.96%   16.023      1 - Template:I18n_box
+ 31.91%   12.793      1 - Template:I18n_list
+ 12.97%    5.200     10 - Template:Key
+ 10.56%    4.234      1 - Template:I18n_link
+ 10.24%    4.107      1 - Template:Tip
+  7.19%    2.882      1 - Template:Note
+  6.45%    2.587     10 - Template:Menu
+  5.87%    2.354      1 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4563-0!*!0!!*!5!* and timestamp 20190503130713 and revision id 57038
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4563-0!*!0!!*!5!* and timestamp 20191115103023 and revision id 65468
  -->
 </div>
 										<!-- end content -->
@@ -301,7 +333,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Editing,_resizing_and_moving_Labels">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Editing,_resizing_and_moving_Labels">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

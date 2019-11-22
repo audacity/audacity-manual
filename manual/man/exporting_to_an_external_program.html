@@ -36,7 +36,7 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro"><i><b>Exporting to an External Program</b></i> sends audio via a command-line to an external application, either for processing or for encoding as a file. <p>This is a way to export to the installed <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoder or <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> encoder with additional parameters not supported in the <a href="file_export_dialog.html#options" title="File Export Dialog">options dialogs</a> in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a>. Command-line export could also be used to export to the very latest versions of LAME or FFmpeg, to an alternative MP3 encoder or to a specialised encoder in a format not otherwise supported by Audacity.</p> </div>
 <dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span>, then choose <b>(external program)</b> from the <b>Save as type</b> dropdown menu.</dd>
-<dd><span title="Export Audio dialog with command-line options"><img alt="Export to external program dialog.png" src="../m/images/1/17/export_to_external_program_dialog.png" width="571" height="576" /></span></dd>
+<dd><span title="Export Audio dialog with command-line options"><img alt="Export to external program dialog.png" src="../m/images/1/17/export_to_external_program_dialog.png" width="637" height="613" /></span></dd>
 <dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>(external program)</b>  from the <b>Save as type</b> dropdown menu.</dd></dl>
 <div id="encoder"></div>
 <h2><span class="mw-headline" id="Specify_Export_location">Specify Export location</span></h2>
@@ -67,6 +67,15 @@
 <p>The "Command" box holds up to the last 12 items entered. When a thirteenth command is entered, the first one (at the bottom of the list) is removed.
 </p>
 <div class="note"><b>Note:</b> <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> does not appear before command-line exports, nor are any tags it already contains passed to the external program. Use the appropriate command for your program to write metadata to the output file as described below. </div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">On Mac with either the LAME or FFmpeg Commands that the dialog offers by default <i>(as shown above)</i>, the export fails and an error message will be shown.<p>This is logged as <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2178">Bug #2178</a> on our bug-tracker.</p>
+
+</td></tr></table></div>
 <div id="path"></div>
 <h2><span class="mw-headline" id="Setting_the_path_to_the_encoder">Setting the path to the encoder</span></h2>
 <p>Accessing the LAME or FFmpeg command-line program with just the "lame" or "ffmpeg" command only works on Windows and Linux, assuming LAME or FFmpeg are installed on the system in the standard location. On Windows, this requires that you used the <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME</a> or <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> EXE installer and did not change the installation directory.
@@ -164,34 +173,34 @@ This command exports a FLAC file, specifying TITLE and ARTIST tags:
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130429
+Cached time: 20191115102457
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.110 seconds
-Real time usage: 0.117 seconds
-Preprocessor visited node count: 333/1000000
-Preprocessor generated node count: 1391/1000000
-Post‐expand include size: 6985/2097152 bytes
-Template argument size: 2665/2097152 bytes
+CPU time usage: 0.117 seconds
+Real time usage: 0.129 seconds
+Preprocessor visited node count: 347/1000000
+Preprocessor generated node count: 1459/1000000
+Post‐expand include size: 7918/2097152 bytes
+Template argument size: 3227/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   46.741      1 - -total
- 57.95%   27.086      1 - Template:I18n
- 53.64%   25.072      1 - Template:I18n_box
- 44.98%   21.023      1 - Template:I18n_list
- 18.21%    8.513      3 - Template:I18n_link
- 10.53%    4.922     13 - Template:Code
- 10.48%    4.897      3 - Template:Autoglossonym
-  5.33%    2.490      2 - Template:Button
-  4.68%    2.189      1 - Template:Intro
-  4.16%    1.945      2 - Template:Menu
+100.00%   49.443      1 - -total
+ 62.56%   30.929      1 - Template:I18n
+ 58.65%   28.998      1 - Template:I18n_box
+ 50.72%   25.077      1 - Template:I18n_list
+ 17.07%    8.440      3 - Template:I18n_link
+  9.58%    4.735      3 - Template:Autoglossonym
+  7.84%    3.877     13 - Template:Code
+  5.44%    2.688      1 - Template:Advice
+  4.09%    2.023      2 - Template:Button
+  3.43%    1.695      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2537-0!*!0!!*!5!* and timestamp 20190503130429 and revision id 57067
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2537-0!*!0!!*!5!* and timestamp 20191115102457 and revision id 65137
  -->
 </div>
 										<!-- end content -->
@@ -264,7 +273,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Exporting_to_an_External_Program">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Exporting_to_an_External_Program">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

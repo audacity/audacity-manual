@@ -33,33 +33,44 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Punch_and_Roll_Record#searchInput">search</a></div>
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>Accessed by:</b> <span class="menu">Transport &gt; Recording &gt; <a href="transport_menu_recording.html#punch_and_roll_record" title="Transport Menu: Recording">Punch and Roll Record</a></span> 
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>Accessed by:</b> <span class="menu">Transport &gt; Recording &gt; <a href="transport_menu_recording.html" title="Transport Menu: Recording">Punch and Roll Record</a></span> 
 <ul><li>This enables you to to correct errors easily during the course of a recording session.</li>
 <li>You can stop, back up over a mistake, and continue recording, resulting in one track that eliminates the errors and is properly timed, without the use of cutting, pasting, and clip-moving commands, or mixing of multiple tracks.  </li>
-<li>You can do rough editing as you go, with minimal interruption of your performance <i>(saving you the trouble and extra work of having to come back later and make the edits)</i>. </li>
-<li>Be aware that this is not punch-in patch repair - the repair recording carries on rolling <i>(as the command name implies)</i> until you specifically stop it. </div></li></ul>
-</li></ul>
+<li>You can do rough editing as you go, with minimal interruption of your performance <i>(saving you the trouble and extra work of having to come back later and make the edits)</i>.  </li>
+<li>It is recommended to use headphones when using Punch and Roll recording.</div></li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top"><span style="font-weight: bold; font-size:118%">Adjusting settings before you record:</span>
-<ol><li>It is advisable to tune the <a href="latency_test.html" title="Latency Test">latency correction</a> setting  for your audio interface so that play-back and recording are synchronized.</li>
-<li>You may wish to adjust the pre-roll duration and crossfade duration in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a> to suit your personal preferences:
-<ul><li><b>Pre-roll</b> is the amount of existing audio, in seconds, that will be played before the repair recording starts.  The default is five seconds.</li>
-<li><b>Crossfade</b>  is the length of crossfade, in milliseconds, that Audacity will apply at the splice point to smooth the transition.  The default is ten milliseconds.</li></ul></li>
-<li>The <a href="recording_preferences.html" title="Recording Preferences">Overdub</a> preference determines whether other tracks are played during pre-roll playback and after the splice point while re-recording.</li></ol>
-</td></tr></table>
-</div>
+<td align="left" valign="top">Be aware that this is <i><b>not</b></i> <a href="tutorial_punch_in_repair_of_recordings.html" title="Tutorial - Punch-in repair of recordings">punch-in patch repair</a> - the Punch and Roll repair recording carries on rolling <i>(as the command name implies)</i> until you specifically stop it.
+</td></tr></table></div>
+</li></ul>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<ol><li><a href="#record">Record as usual, until you make a mistake</a></li>
+<ol><li><a href="#settings">Adjusting settings before you record</a></li>
+<li><a href="#record">Record as usual, until you make a mistake</a></li>
 <li><a href="#splice">Choose a splicing point</a></li>
 <li><a href="#punch_and_roll_record">Using Punch and Roll Record</a></li>
 <li><a href="#results">Final results</a></li>
 <li><a href="#example">Example</a></li></ol>
 <p><br />
+</p>
+<div id="settings"></div>
+<h2><span class="mw-headline" id="Adjusting_settings_before_you_record">Adjusting settings before you record</span></h2>
+<h3><span class="mw-headline" id="Latency_correction:">Latency correction:</span></h3>
+<p>It is a <i><b>pre-requesite</b></i> that you tune the <a href="latency_test.html" title="Latency Test"><b>latency correction</b></a> setting  for your audio interface so that play-back and recording are synchronized.
+</p><p>Failure to do this may result in unwanted bursts of audio at the splice point, especially if you are not using headphones.
+</p>
+<h3><span class="mw-headline" id="Pre-roll_and_Crossfade">Pre-roll and Crossfade</span></h3>
+<p>You may wish to adjust the pre-roll duration and crossfade duration in <b><a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a></b> to suit your personal preferences:
+</p>
+<ol><li><b>Pre-roll</b> is the amount of existing audio, in seconds, that will be played before the repair recording starts.  The default is five seconds.</li>
+<li><b>Crossfade</b>  is the length of crossfade, in milliseconds, that Audacity will apply at the splice point to smooth the transition.  The default is ten milliseconds.</li></ol>
+<h3><span class="mw-headline" id="Overdub">Overdub</span></h3>
+<p>The <a href="recording_preferences.html" title="Recording Preferences"><b>Overdub</b></a> preference determines whether other tracks are played during pre-roll playback and after the splice point while re-recording. 
+</p><p><br />
+</p><p><br />
 </p>
 <div id="record"></div>
 <h2><span class="mw-headline" id="Record_as_usual.2C_until_you_make_a_mistake">Record as usual, until you make a mistake</span></h2>
@@ -112,8 +123,16 @@
 <td align="left" valign="top">Repeat your performance in unison with the pre-roll playback, and continue as the playhead moves beyond the end of the track. This is easier than trying to start just as soon as the recording starts.
 </td></tr></table>
 </div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">If your microphone is close to the speaker, e.g. you're not using headphones, your microphone will pick up sound from the speaker during your recording.  This is fine if everything is set up correctly, as the speaker is silent during the recording phase of Punch and Roll!  However, there will be a problem if your microphone can pick up sound from the speaker and your <a href="latency_test.html" title="Latency Test">latency correction</a> setting is incorrect.  When that situation happens, record can record part of the pre-roll being played back, and in any case even if not picking up that unwanted sound, the positioning of your 'punched in' recording will be slightly out.  So you <b>do need to have set your <a href="latency_test.html" title="Latency Test">latency correction</a> setting carefully to get good results from Punch and Roll</b>.
+</td></tr></table></div>
 <h3><span class="mw-headline" id="Still_not_satisfied.3F">Still not satisfied?</span></h3>
-<p>If you are not satisfied with your re-take, simply stop recording and use <img alt="The Undo tool" src="../m/images/8/8b/undo.png" title="The Undo tool" width="26" height="24" /> or <span class="menu">Edit &gt; <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo</a></span> or its shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Z</span>.  The track and selection will be restored as they were just before the Punch and Roll Record command began.
+<p>If you are not satisfied with your re-take, simply stop recording and use <img alt="The Undo tool" src="../m/images/8/8b/undo.png" title="The Undo tool" width="26" height="24" /> or <span class="menu">Edit &gt; <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo</a></span> or its shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Z</span> <i>(<span class="kbrd" style="background-color: #d0d0f8">&#8984; + Z</span> on Mac)</i>.  The track and selection will be restored as they were just before the Punch and Roll Record command began.
 </p><p>Or if you are happy with the existing splicing point and just want to make a further re-take then just use <span class="kbrd" style="background-color: #d0d0f8">Shift + D</span> to restart Punch and Roll.
 </p><p><br />
 </p>
@@ -143,36 +162,45 @@ The user presses <span class="kbrd" style="background-color: #d0d0f8">Shift + D<
 <h3><span class="mw-headline" id="Repairing_the_mistake">Repairing the mistake</span></h3>
 Once the pre-roll playback reaches the splice point Audacity switched to record mode.<p>Observe that the red recordhead shows during the rolling repair recording.</p><p>This enables the user to continue with their recording, repairing the mistake as they go, with minimal interruption to their workflow.</p>
 <dl><dd><span title="The author/narrator continues from just after the mistake"><img alt="Punch and Roll 03.png" src="../m/images/4/4d/punch_and_roll_03.png" width="767" height="207" /></span></div></dd></dl>
-
+<p><br />
+</p><p><br />
+</p>
+<div id="links"></div>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="timeline.html#tqp" title="Timeline"><b>&gt;</b>&#160; Quick-Play</a> <br />
+</p><p><a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking"><b>&gt;</b>&#160; Scrubbing and Seeking</a> <br />
+</p><p><a href="timer_record.html" title="Timer Record"><b>&gt;</b>&#160; Timer Recording</a> <br />
+</p><p><a href="playing_and_recording.html" title="Playing and Recording"><b>|&lt;</b> Playing and Recording</a>
+</p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130138
+Cached time: 20191115102026
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.104 seconds
-Real time usage: 0.108 seconds
-Preprocessor visited node count: 230/1000000
-Preprocessor generated node count: 643/1000000
-Post‐expand include size: 7171/2097152 bytes
-Template argument size: 4650/2097152 bytes
+CPU time usage: 0.120 seconds
+Real time usage: 0.126 seconds
+Preprocessor visited node count: 273/1000000
+Preprocessor generated node count: 687/1000000
+Post‐expand include size: 7591/2097152 bytes
+Template argument size: 4642/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   23.478      1 - -total
- 26.90%    6.315      7 - Template:Shortcut
- 19.57%    4.594      1 - Template:Intro
- 14.12%    3.316      4 - Template:Tip
- 10.44%    2.451      1 - Template:Example
-  9.45%    2.218      5 - Template:Menu
-  5.94%    1.395      1 - Template:Note
-  5.41%    1.271      1 - Template:Ednote
-  5.26%    1.236      1 - Template:Bh
+100.00%   24.478      1 - -total
+ 28.63%    7.009      8 - Template:Shortcut
+ 19.03%    4.659      1 - Template:Intro
+  9.87%    2.417      1 - Template:Example
+  9.30%    2.276      5 - Template:Menu
+  6.45%    1.580      3 - Template:Tip
+  6.35%    1.555      2 - Template:Advice
+  5.74%    1.405      1 - Template:Note
+  5.01%    1.226      1 - Template:Ednote
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6451-0!*!0!!*!5!* and timestamp 20190503130138 and revision id 63907
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6451-0!*!0!!*!5!* and timestamp 20191115102025 and revision id 65641
  -->
 </div>
 										<!-- end content -->
@@ -245,7 +273,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Punch_and_Roll_Record">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Punch_and_Roll_Record">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

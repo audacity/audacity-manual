@@ -52,7 +52,7 @@
 <td align="left" valign="top"> This table shows the items in the menus that are scriptable.
 <ul><li> The Scripting Ids, parameters and defaults are all likely to change between versions.</li>
 <li> Actions that end with '...' and have "Parameters <i>none</i>" listed will pop up a dialog during the script to get the paramters, and are not properly supported by scripting.  Use at your own risk.</li>
-<li> Boolean values must be given as 0 or 1, NOT true or false.</li></ul>
+<li> Boolean values must be given as <b>1</b> (true) or <b>0</b> (false).</li></ul>
 </td></tr></table></div>
 <div id="file_menu"></div>
 <h2><span class="mw-headline" id="File_Menu"><a href="file_menu.html" title="File Menu">File Menu</a></span></h2>
@@ -2260,22 +2260,6 @@
 <td>Repeats the selected audio again and again, normally softer each time and normally not blended into the original sound until some time after it starts. The delay time between each repeat is fixed, with no pause in between each repeat. For a more configurable echo effect with a variable delay time and pitch-changed echoes, see <a href="effect_menu.html#Delay" title="Effect Menu">Delay</a>.
 </td></tr>
 <tr>
-<td><b>Equalization:</b>
-</td>
-<td><a href="effect_menu_built_in.html#equalization" title="Effect Menu: Built-in">Equalization...</a>
-</td>
-<td><i>size_t <b>FilterLength</b>, (default:4001)</i><br />
-<p><i>string <b>CurveName</b>, (default:unnamed)</i><br />
-<i>bool <b>InterpolateLin</b>, (default:False)</i><br />
-<i>enum <b>InterpolationMethod</b>, (default:B-spline)</i><br />
-</p>
-<ul><li> B-spline</li>
-<li> Cosine</li>
-<li> Cubic</li></ul>
-</td>
-<td>Adjusts the volume levels of particular frequencies.
-</td></tr>
-<tr>
 <td><b>Fade In:</b>
 </td>
 <td><a href="effect_menu_built_in.html#fade_in" title="Effect Menu: Built-in">Fade In</a>
@@ -2292,6 +2276,28 @@
 <td><i>none</i>
 </td>
 <td>Applies a <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> fade-out to the selected audio - the rapidity of the fade-out depends entirely on the length of the selection it is applied to.  For a more customizable <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> fade, use the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> on the <a href="tools_toolbar.html" title="Tools Toolbar">Tools Toolbar</a>.<br />
+</td></tr>
+<tr>
+<td><b>Filter Curve:</b>
+</td>
+<td><a href="effect_menu_built_in.html#filter_curve" title="Effect Menu: Built-in">Filter Curve...</a>
+</td>
+<td><i>string <b>CurveName</b>, (default:unnamed)</i><br />
+<p><i>bool <b>InterpolateLin</b>, (default:False)</i><br />
+</p>
+</td>
+<td>Adjusts the volume levels of particular frequencies, using drawn curves.
+</td></tr>
+<tr>
+<td><b>Graphic EQ:</b>
+</td>
+<td><a href="effect_menu_built_in.html#graphic_eq" title="Effect Menu: Built-in">Graphic EQ...</a>
+</td>
+<td><i>string <b>CurveName</b>, (default:unnamed)</i><br />
+<p><i>bool <b>InterpolateLin</b>, (default:False)</i><br />
+</p>
+</td>
+<td>Adjusts the volume levels of particular frequencies, using sliders.
 </td></tr>
 <tr>
 <td><b>Invert:</b>
@@ -4179,7 +4185,8 @@
 <td><a href="extra_menu_scriptables_i.html#set_project" title="Extra Menu: Scriptables I">Set Project...</a>
 </td>
 <td><i>string <b>Name</b>, (default:unchanged)</i><br />
-<p><i>int <b>X</b>, (default:unchanged)</i><br />
+<p><i>int <b>Rate</b>, (default:unchanged)</i><br />
+<i>int <b>X</b>, (default:unchanged)</i><br />
 <i>int <b>Y</b>, (default:unchanged)</i><br />
 <i>int <b>Width</b>, (default:unchanged)</i><br />
 <i>int <b>Height</b>, (default:unchanged)</i><br />
@@ -4497,34 +4504,34 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130211
+Cached time: 20191115055113
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.539 seconds
-Real time usage: 0.545 seconds
-Preprocessor visited node count: 1613/1000000
-Preprocessor generated node count: 4292/1000000
-Post‐expand include size: 10911/2097152 bytes
-Template argument size: 7230/2097152 bytes
+CPU time usage: 0.556 seconds
+Real time usage: 0.573 seconds
+Preprocessor visited node count: 1609/1000000
+Preprocessor generated node count: 4284/1000000
+Post‐expand include size: 10919/2097152 bytes
+Template argument size: 7238/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   73.460      1 - -total
- 21.61%   15.877     56 - Template:Hoverext
- 15.31%   11.246     56 - Template:Note
-  9.31%    6.837      1 - Template:No-rename
-  7.04%    5.171      1 - Template:Ednote
-  6.16%    4.528      8 - Template:Key
-  3.08%    2.263      1 - Template:Button
-  2.32%    1.705      1 - Template:Intro
-  2.15%    1.576      1 - Template:Shortcut
-  2.07%    1.518      4 - Template:Menu
+100.00%   75.215      1 - -total
+ 22.06%   16.591     56 - Template:Hoverext
+ 15.34%   11.540     56 - Template:Note
+  9.41%    7.074      1 - Template:No-rename
+  6.77%    5.091      1 - Template:Ednote
+  5.73%    4.309      8 - Template:Key
+  3.20%    2.407      1 - Template:Button
+  2.51%    1.886      1 - Template:Shortcut
+  2.43%    1.825      4 - Template:Menu
+  1.93%    1.449      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6317-0!*!0!!*!5!* and timestamp 20190503130211 and revision id 63580
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6317-0!*!0!!*!5!* and timestamp 20191115055112 and revision id 65142
  -->
 </div>
 										<!-- end content -->
@@ -4597,7 +4604,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

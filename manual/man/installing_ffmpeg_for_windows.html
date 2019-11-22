@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Installing FFmpeg for Windows - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Installing_FFmpeg_for_Windows rootpage-Installing_FFmpeg_for_Windows skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Installing FFmpeg for Windows</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Installing_FFmpeg_for_Windows#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The optional <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg library</a> allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files. 
+<ul><li> Because of software patents, Audacity cannot include the FFmpeg software or distribute it from its own websites. Instead, use the following instructions to download and install the free and recommended FFmpeg third-party library.</li>
+<li><b>Advanced usage:</b> If you already have Audacity-compatible FFmpeg 2.2.x or 2.3.x shared libraries in the system PATH, Audacity will use those as long as you do not install FFmpeg from the links below and as long as you do not specify the FFmpeg you want Audacity to use in <a href="libraries_preferences.html" title="Libraries Preferences">Libraries Preferences</a>.</div> </li></ul>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Recommended_Installer"><span class="tocnumber">1</span> <span class="toctext">Recommended Installer</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Alternative_zip_download_for_FFmpeg_2.2.2"><span class="tocnumber">1.1</span> <span class="toctext">Alternative zip download for FFmpeg 2.2.2</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Locating_the_FFmpeg_library_manually"><span class="tocnumber">2</span> <span class="toctext">Locating the FFmpeg library manually</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Recommended_Installer">Recommended Installer</span></h2>
+<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lamewindl"><b>FFmpeg download page</b></a>.</li>
+<li> Directly underneath "TO DOWNLOAD Lame and FFmpeg for Windows, click links BELOW:", left-click the link <b>ffmpeg-win-2.2.2.exe</b> and save the file anywhere on your computer. </li>
+<li> Double-click <b>ffmpeg-win-2.2.2.exe</b> to launch the installer (you can safely ignore any warnings that the "publisher could not be verified").</li>
+<li> Read the License and click Next, Next and Install to install the required files to <b>C:\Program Files\FFmpeg for Audacity</b> (or <b>C:\Program Files (x86)\FFmpeg for Audacity</b> on a 64-bit version of Windows). </li>
+<li> If Audacity was running when you installed FFmpeg, either restart Audacity or follow the steps to <a href="#locate">manually locate FFmpeg</a>.</li></ol>
+<div class="note">If you have the previous FFmpeg 0.6.2 installed you should remove that before installing FFmpeg 2.2.2</div>
+<div id="winff_zip"></div>
+<h3><span class="mw-headline" id="Alternative_zip_download_for_FFmpeg_2.2.2">Alternative zip download for FFmpeg 2.2.2</span></h3>
+<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org#lamewindl"><b>FFmpeg download page</b></a>.</li>
+<li> Under "TO DOWNLOAD Lame and FFmpeg for Windows, click links BELOW:". </li>
+<li> Left click the link <b>ffmpeg-win-2.2.2.zip</b></li>
+<li> Extract the entire contents of the downloaded ZIP file to a folder called "ffmpeg-win-2.2.2" anywhere on your computer, then follow the instructions <a href="#locate">below</a> to locate the file "avformat-55.dll" using the Libraries Preferences.  </li></ol>
+<p><br />
+</p>
+<div id="locate"></div>
+<h2><span class="mw-headline" id="Locating_the_FFmpeg_library_manually">Locating the FFmpeg library manually</span></h2>
+<p>If you installed FFmpeg while Audacity was running, or if you installed FFmpeg to a non-default location, Audacity will ask you to configure Preferences to locate the FFmpeg library. To do this, access <a href="preferences.html" title="Preferences">Preferences</a> then the "Libraries" tab on the left: 
+</p>
+<dl><dd><span title="Libraries Preferences showing the FFmpeg Locate... and Download... buttons, with the FFmpeg libray not found"><img alt="Preferences Libraries NOT Found W10 LAME built-in.png" src="../m/images/b/b3/preferences_libraries_not_found_w10_lame_built_in.png" width="630" height="473" /></span></dd></dl>
+<p>As seen in the image above, the "FFmpeg Library Version" will say "not found". To correct this:
+</p>
+<ol><li> Click the <span class="button">Locate...</span> button to right of "<b>FFmpeg Library:</b>"</li>
+<li> If a "<b>Success</b>" message indicates Audacity has now automatically detected valid FFmpeg libraries and asks if you want to detect them manually, click <span class="button">No</span>, then <span class="button">OK</span> to close Preferences </li>
+<li> If the "<b>Locate FFmpeg</b>" dialog appears, click <span class="button">Browse...</span></li>
+<li> Navigate to the folder that contains FFmpeg, and select the file <b>avformat-55.dll</b></li>
+<li> Click <span class="button">Open</span> then <span class="button">OK</span> and <span class="button">OK</span> again to close Preferences.</li></ol>
+<dl><dd><b>FFmpeg Library Version</b> should now show a set of three version numbers for the sub-libraries of FFmpeg ("F" for libavformat version, "C" for libavcodec version and "U" for libavutil version). <p>If you still see "not found", you may have installed the wrong libraries. Click the <span class="button">Download...</span> button to obtain the correct library for your operating system. You can also choose <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#show_log" title="Help Menu: Diagnostics">Show Log...</a></span> to see diagnostic information about FFmpeg detection.</p></dd></dl>
+<p><br />
+<a href="installing_and_updating_audacity_on_windows.html" title="Installing and updating Audacity on Windows"><b>|&lt;</b> Installing and updating Audacity on Windows</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20191115102644
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.061 seconds
+Real time usage: 0.064 seconds
+Preprocessor visited node count: 106/1000000
+Preprocessor generated node count: 336/1000000
+Post‐expand include size: 1608/2097152 bytes
+Template argument size: 1084/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   12.564      1 - -total
+ 39.63%    4.979      8 - Template:Button
+ 23.15%    2.908      1 - Template:Intro
+ 10.73%    1.348      1 - Template:Note
+  8.65%    1.087      1 - Template:Menu
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6616-0!*!0!!en!5!* and timestamp 20191115102644 and revision id 65352
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Installing_FFmpeg_for_Windows">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

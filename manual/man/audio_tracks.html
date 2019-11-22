@@ -99,19 +99,22 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <div id="mute"></div>
 <p><span style="font-weight: bold; font-size:118%">Mute Button:</span>
 </p>
-<dl><dd><span title="Track Mute Button"><img alt="Track Mute button.png" src="../m/images/d/d9/track_mute_button.png" width="48" height="18" /></span> Click to silence this track when playing. By default, the track will only be silenced if no Solo buttons are depressed. Click again to unsilence. </dd></dl>
+<dl><dd><span title="Track Mute Button"><img alt="Track Mute button.png" src="../m/images/d/d9/track_mute_button.png" width="48" height="18" /></span> Click to silence this track when playing. Click again to unsilence. </dd></dl>
+<div id="solo"></div>
+<p><span style="font-weight: bold; font-size:118%">Solo Button:</span>
+</p>
+<dl><dd><span title="Track Solo Button"><img alt="Track Solo button.png" src="../m/images/a/a3/track_solo_button.png" width="48" height="18" /></span> Click to play just this track.  Click again to release the button.  Whenever playing audio, Solo takes precedence over Mute by default - the Mute buttons have no effect whilst any Solo button is down.  There are two other options for Solo button behavior in the <a href="tracks_behaviors_preferences.html#solo" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a>.  One of these is to remove the Solo button, leaving only a Mute button. The other is more complex suitable for people used to mixing desks, enabling multiple tracks to be "soloed" simultaneously.</dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
-<td align="left" valign="top">Tracks on which the Mute button is pressed are never <a href="file_menu.html#export" title="File Menu">exported</a>.
-</td></tr></table></div>
-<div id="solo"></div>
-<p><span style="font-weight: bold; font-size:118%">Solo Button:</span>
-</p>
-<dl><dd><span title="Track Solo Button"><img alt="Track Solo button.png" src="../m/images/a/a3/track_solo_button.png" width="48" height="18" /></span> Click to play just this track.  Click again to release the button.  Whenever playing audio, Solo takes precedence over Mute by default - the Mute buttons have no effect whilst any Solo button is down.  There are two other options for Solo button behavior in the <a href="tracks_behaviors_preferences.html#solo" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a>.  One of these is to remove the Solo button, leaving only a Mute button. </dd></dl>
+<td align="left" valign="top">Keyboard shortcuts: <span class="kbrd" style="background-color: #e0e0f0">Shift+U</span> toggles muting on the currently focused track which has the yellow border, and <span class="kbrd" style="background-color: #e0e0f0">Shift + S</span> toggles soloing. The solo shortcut works even if you hide the Solo button.
+</td></tr></table>
+</div>
+<div class="note">Please be aware that when using <b>Export</b> or <b>Export Multiple</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="#panel" title="Audio Tracks">Track Control Panels</a>. So what you hear by previewing with playback prior to export is what you will get in the Exported audio file.
+<ul><li>When using <b>Export Selected Audio</b>, however, Audacity will Export the selection from <i><b>all</b></i> selected tracks even if some if those tracks are grayed-out and inaudible on playback.</div></li></ul>
 <div id="gain"></div>
 <p><span style="font-weight: bold; font-size:118%">Gain Slider:</span>
 </p>
@@ -234,37 +237,44 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <li> <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audacity Tracks and Clips</a>: all about <b>clips</b> - separate, movable regions of audio within a track</li>
 <li> <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Locked Track Groups</a>: keeping a group of tracks in sync</li>
 <li> <a href="zooming.html" title="Zooming">Zooming</a>: seeing what you need to see</li></ul>
-
+<p><br />
+</p>
+<div id="links"></div>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="track_control_panel_and_vertical_scale.html" title="Track Control Panel and Vertical Scale"><b>&gt;</b>&#160; Track Control Panel and Vertical Scale</a> <br />
+</p><p><a href="label_tracks.html" title="Label Tracks"><b>&gt;</b>&#160; Label Tracks</a> <br />
+</p><p><a href="note_tracks.html" title="Note Tracks"><b>&gt;</b>&#160; Note Tracks (MIDI)</a> <br />
+</p>
 <!-- 
 NewPP limit report
-Cached time: 20190503091721
+Cached time: 20191114182922
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.212 seconds
-Real time usage: 0.235 seconds
-Preprocessor visited node count: 635/1000000
-Preprocessor generated node count: 1834/1000000
-Post‐expand include size: 7323/2097152 bytes
-Template argument size: 2969/2097152 bytes
+CPU time usage: 0.197 seconds
+Real time usage: 0.205 seconds
+Preprocessor visited node count: 683/1000000
+Preprocessor generated node count: 1934/1000000
+Post‐expand include size: 8568/2097152 bytes
+Template argument size: 3946/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   60.339      1 - -total
- 51.57%   31.118      1 - Template:I18n
- 47.13%   28.439      1 - Template:I18n_box
- 40.37%   24.360      1 - Template:I18n_list
- 20.81%   12.556      5 - Template:I18n_link
- 15.11%    9.119     15 - Template:Key
- 12.58%    7.591      5 - Template:Autoglossonym
-  6.69%    4.035      1 - Template:Intro
-  4.73%    2.855      3 - Template:Note
-  4.38%    2.642      7 - Template:Bh
+100.00%   53.589      1 - -total
+ 51.92%   27.826      1 - Template:I18n
+ 48.98%   26.246      1 - Template:I18n_box
+ 42.70%   22.882      1 - Template:I18n_list
+ 23.30%   12.486      5 - Template:I18n_link
+ 14.79%    7.928     17 - Template:Key
+ 13.94%    7.468      5 - Template:Autoglossonym
+  7.97%    4.272      4 - Template:Note
+  5.11%    2.741      1 - Template:Intro
+  4.08%    2.186      7 - Template:Bh
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2481-0!*!0!!*!5!* and timestamp 20190503091721 and revision id 63990
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2481-0!*!0!!*!5!* and timestamp 20191114182921 and revision id 65242
  -->
 </div>
 										<!-- end content -->
@@ -337,7 +347,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

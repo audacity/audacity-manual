@@ -37,9 +37,9 @@
 <div class="intro">The scripting module is a <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/GUI_Plugins">plug-in</a> for advanced users that allows Audacity to be driven from an external <a rel="nofollow" class="external text" href="https://www.python.org/">Python</a> or <a rel="nofollow" class="external text" href="https://www.perl.org/">Perl</a> script.  Commands are sent to Audacity over a 'named pipe'.<br /><br />
 Any scripting language that supports named pipes can be used.</div>
 <div class="note"><b>Obtaining mod-script-pipe</b><br />
-<p>The plug-in is called <b>mod-script-pipe</b>.<br />
+<p>The plug-in <b>mod-script-pipe</b> is now shipped with Audacity and just needs to be enabled using preferences..<br />
 </p>
-Follow this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mod-script-pipe">link to instructions for obtaining mod-script-pipe</a></div>
+<s>Follow this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mod-script-pipe">link for older instructions for obtaining mod-script-pipe</a></s></div>
 <div class="note">Scripting is most often used from Python.
 <ul><li> The full set of Scripting Commands is listed at <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>.</li>
 <li> Many of the commands in the <a href="extra_menu_scriptables_i.html" title="Extra Menu: Scriptables I">Scriptables I</a> and <a href="extra_menu_scriptables_ii.html" title="Extra Menu: Scriptables II">Scriptables II</a> menus were created because they are useful in scripting.</li>
@@ -116,25 +116,15 @@ Follow this <a rel="nofollow" class="external text" href="https://wiki.audacityt
 <div id="test"></div>
 <h2><span class="mw-headline" id="Getting_Started">Getting Started</span></h2>
 <h3><span class="mw-headline" id="Enable_mod-script-pipe">Enable mod-script-pipe</span></h3>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top"><b>mod-script-pipe</b> is not yet shipped with Audacity and has the be built with Audacity from the <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/source">source code</a>.
-<p>For help building Audacity, please see the Wiki documentation for <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Developing_On_Windows">Windows</a>, <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Developing_On_Mac">Mac</a> and <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Linux_Issues#Compiling_Audacity">Linux</a>.
-</p>
-</td></tr></table></div>
-<p>The plug-in module "mod-script-pipe" must be enabled in <a href="modules_preferences.html" title="Modules Preferences">Audacity preferences</a>.  
+<p>The plug-in module "<b>mod-script-pipe</b>" is not enabled by default in Audacity, so must be enabled in <a href="modules_preferences.html" title="Modules Preferences">Audacity preferences</a>.  
 </p><p>After enabling it for the first time, you will need to restart Audacity.  You can then check that it is enabled and was started by revisiting the preferences page.
 </p>
 <ul><li> Run Audacity</li>
-<li> Go into edit-&gt;preferences-&gt;modules
-<ul><li> Choose mod-script-pipe (which should show 'New') and change that to 'Enabled'.  </li></ul></li>
+<li> Go into <span class="menu">Edit &gt; Preferences &gt; <a href="modules_preferences.html" title="Modules Preferences">Modules</a></span>
+<ul><li> Choose <b>mod-script-pipe</b> (which should show <b>New</b>) and change that to <b>Enabled</b>.  </li></ul></li>
 <li> Restart Audacity </li>
-<li> Check that it now does show 'Enabled'.</li></ul>
-<p>This establishes that Audacity is finding mod-script pipe, and that the version is compatible (compiled on the same day).
+<li> Check that it now does show <b>Enabled</b>.</li></ul>
+<p>This establishes that Audacity is finding mod-script pipe, and that the version is compatible.
 </p>
 <h3><span class="mw-headline" id="Check_mod-script-pipe_works">Check mod-script-pipe works</span></h3>
 <p>You'll also need the scripting language Python (version 3.6 or later recommended) to try out the examples.
@@ -213,34 +203,34 @@ Follow this <a rel="nofollow" class="external text" href="https://wiki.audacityt
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130155
+Cached time: 20191115055338
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.101 seconds
-Real time usage: 0.107 seconds
-Preprocessor visited node count: 273/1000000
-Preprocessor generated node count: 1164/1000000
-Post‐expand include size: 8297/2097152 bytes
-Template argument size: 4723/2097152 bytes
+CPU time usage: 0.106 seconds
+Real time usage: 0.114 seconds
+Preprocessor visited node count: 272/1000000
+Preprocessor generated node count: 1174/1000000
+Post‐expand include size: 7685/2097152 bytes
+Template argument size: 4425/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   38.994      1 - -total
- 69.02%   26.914      1 - Template:I18n
- 64.87%   25.297      1 - Template:I18n_box
- 55.43%   21.616      1 - Template:I18n_list
- 22.88%    8.921      3 - Template:I18n_link
- 13.14%    5.124      3 - Template:Autoglossonym
-  6.22%    2.424      2 - Template:Note
-  5.89%    2.298      4 - Template:Advice
-  5.45%    2.124      1 - Template:Hint
-  3.68%    1.434      1 - Template:Alert
+100.00%   41.561      1 - -total
+ 68.00%   28.262      1 - Template:I18n
+ 62.39%   25.931      1 - Template:I18n_box
+ 52.01%   21.617      1 - Template:I18n_list
+ 21.38%    8.887      3 - Template:I18n_link
+ 12.34%    5.128      3 - Template:Autoglossonym
+  5.52%    2.294      3 - Template:Advice
+  5.35%    2.222      1 - Template:Hint
+  4.94%    2.052      2 - Template:Note
+  4.15%    1.725      1 - Template:Alert
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2703-0!*!0!!en!5!* and timestamp 20190503130155 and revision id 63911
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2703-0!*!0!!en!5!* and timestamp 20191115055338 and revision id 64706
  -->
 </div>
 										<!-- end content -->
@@ -313,7 +303,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Scripting">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Scripting">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

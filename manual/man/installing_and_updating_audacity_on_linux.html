@@ -36,7 +36,7 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">This page provides instructions for installing and updating Audacity on Linux computer platforms.
 <ul><li>In addition to basic Audacity you may wish to install the optional <a href="#linlame">LAME</a> <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding software</li>
-<li>Also the optional <a href="#linff">FFmpeg</a> library which allows Audacity to import and export a much larger <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/FFmpeg_integration#Functionality">range of audio formats</a> including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files.  </li></ul>
+<li>Also the optional <a href="#linff">FFmpeg</a> library which allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files.  </li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -86,7 +86,15 @@
 </p>
 <div id="linlame"></div>
 <h2><span class="mw-headline" id="Installing_LAME">Installing LAME</span></h2>
-<p>You may download (or compile) then install a compatible version of the LAME MP3 encoder then  <a href="#locate_linlame">locate</a> it in <a href="libraries_preferences.html" title="Libraries Preferences">Libraries Preferences</a>.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">When Audacity is installed from the official distribution repository, most distributions also install LAME automatically.
+</td></tr></table></div>
+<p>If you have installed Audacity and MP3 export is not available in Audacity, you may download (or compile) then install a compatible version of the LAME MP3 encoder. After installing LAME, it may be necessary to <a href="#locate_linlame">locate</a> it in <a href="libraries_preferences.html" title="Libraries Preferences">Libraries Preferences</a>.
 </p><p>Most Linux distributions have some sort of package manager that fetches software packages from the Internet and installs them for you. Open that package manager, search for LAME, and install it if it is not already installed.  
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -100,41 +108,39 @@
 </p>
 </td></tr></table></div>
 <div id="dynamic_lame"></div>
-<h3><span class="mw-headline" id="Removal_of_Libraries_Preferences">Removal of Libraries Preferences</span></h3>
+<h3><span class="mw-headline" id="Libraries_Preferences">Libraries Preferences</span></h3>
 <p>Some distributions (for example, current Ubuntu) package Audacity with MP3 encoding and FFmpeg (or <a rel="nofollow" class="external text" href="https://libav.org">Libav</a>) already linked dynamically to the relevant system libraries. In these packaged Audacity builds there is no need to locate LAME or FFmpeg, so Audacity will have no "Libraries" Preferences.
 </p><p>Users compiling Audacity from <a rel="nofollow" class="external text" href="http://audacityteam.org/download/source">source code</a> can similarly remove the "Libraries" Preferences by configuring Audacity with <span style="white-space:nowrap"><i>--disable-dynamic-loading</i></span>. Then build Audacity linked to the system LAME (and also to system or locally-compiled <a href="#linff">FFmpeg or libav</a> if required). 
+</p><p><br />
 </p>
-<h3><span class="mw-headline" id="Installing_LAME_on_Ubuntu_11.10_and_later">Installing LAME on Ubuntu 11.10 and later</span></h3>
-<p>In Ubuntu 11.10 and later the default package manager is the "Ubuntu Software Center". It is often most convenient to install the "Ubuntu Restricted Extras" as this includes LAME, FFmpeg and other useful media encoding/decoding tools. 
-</p><p>If you wish to install only the LAME package required for MP3 export, search for LAME in the Ubuntu Software Center and install it. 
-</p>
-<h3><span class="mw-headline" id="Installing_LAME_on_other_Debian-based_systems">Installing LAME on other Debian-based systems</span></h3>
-<p>The following are detailed instructions for installing LAME using the Synaptic package manager on recent Debian-based systems and in Ubuntu 11.04 and earlier.   
-</p>
-<ol><li>Open Synaptic:
-<ul><li>In GNOME (the default desktop environment for many Debian-based systems), access Synaptic by clicking <span class="menu">System &gt; Administration</span></li>
-<li>In KDE there will be a similar menu accessible from the bottom-left of the screen</li></ul></li>
-<li>Enter the root password when asked for it.</li>
-<li>In the Synaptic window, choose "Settings", then "Repositories"</li>
-<li>In the "<i>distribution</i> Software" tab, check the box for "non free" (on Ubuntu based systems this is called "multiverse"), then hit the Close button.</li>
-<li>Back in the main Synaptic Window, type "lame" in the "Quick search" box.</li>
-<li>The search results will show the packages "lame" and "libmp3lame0" at the top of the list - mark both for installation by double-clicking.</li>
-<li>Click "Apply", and on "OK" for any warnings; the LAME software will automatically download and install.</li>
-<li>Right-click over the entry for "libmp3lame0" &gt; Properties</li>
-<li>On the "Installed Files" tab, note the location of "libmp3lame.so.0", probably at /usr/lib/libmp3lame.so.0</li>
-<li>Close all the Synaptic windows.</li></ol>
 <div id="locate_linlame"></div>
 <h3><span class="mw-headline" id="Locating_LAME">Locating LAME</span></h3>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">In most cases, Audacity will locate the LAME library automatically. The instructions below apply <i>only</i> if the LAME option exists in <a href="libraries_preferences.html" title="Libraries Preferences">Library Preferences</a>, <i>and</i> you have a compatible version of LAME that is NOT installed in a standard location.
+</td></tr></table></div>
 <ol><li>Open Audacity, click <span class="menu">Edit &gt; <a href="preferences.html" title="Preferences">Preferences...</a></span> then "Libraries" in the list on the left.</li>
 <li>In <b>MP3 Export Library</b>, check if a LAME version number displays to right of <b>MP3 Library Version</b>. If so, LAME has already been detected and you should now be able to export MP3 and skip the remainder of these instructions. If the MP3 Library is stated as "not found":
 <ol><li> Click the <span class="button">Locate...</span> button to right of <b>MP3 Library</b> </li>
 <li> In the "Locate Lame" dialog that appears, click "Browse"</li>
-<li> In the "Where is libmp3lame.so.0?" dialog, navigate to the location you noted in step 9 in the installation instructions, select <b>libmp3lame.so.0</b>, click <span class="button">Open</span>, then <span class="button">OK</span> and <span class="button">OK</span> to exit Preferences.</li></ol></li></ol>
+<li> In the "Where is libmp3lame.so.0?" dialog, navigate to the location of the LAME library, select <b>libmp3lame.so.0</b>, click <span class="button">Open</span>, then <span class="button">OK</span> and <span class="button">OK</span> to exit Preferences.</li></ol></li></ol>
 <div id="linff"></div>
 <h2><span class="mw-headline" id="Installing_the_FFmpeg_Import.2FExport_Library">Installing the FFmpeg Import/Export Library</span></h2>
-<div class="note">The optional <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg library</a> allows Audacity to import and export a much larger <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/FFmpeg_integration#Functionality">range of audio formats</a> including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files. 
+<div class="note">The optional <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg library</a> allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files. 
 <ul><li> Because of software patents, Audacity cannot include the FFmpeg software or distribute it from its own websites. Instead, use the following instructions to download and install the free and recommended FFmpeg third-party library.</li>
 <li><b>Advanced usage:</b> If you already have Audacity-compatible FFmpeg 2.2.x or 2.3.x shared libraries in the system PATH, Audacity will use those as long as you do not install FFmpeg from the links below and as long as you do not specify the FFmpeg you want Audacity to use in <a href="libraries_preferences.html" title="Libraries Preferences">Libraries Preferences</a>.</div> </li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Some distributions (including Ubuntu), include FFmpeg by default when Audacity is installed from the official distribution repository. In this case, no additional installation is required,
+</td></tr></table></div>
 <h3><span class="mw-headline" id="Obtaining_FFmpeg">Obtaining FFmpeg</span></h3>
 <p>You may download (or compile) and install a compatible version of the FFmpeg or libav library for your purposes then <a href="#locate">locate</a> it in Libraries Preferences.
 </p><p>If you download a pre-built library, this might be either a "shared" or "static" build. A static build consists of a single libavformat library, whereas a shared build has at least three libraries (libavformat, libavcodec and libavutil). It is recommended to use a shared build, but Audacity will also work with a static build.  
@@ -142,7 +148,6 @@
 </p>
 <h4><span class="mw-headline" id="FFmpeg_version_support">FFmpeg version support</span></h4>
 <div id="2009"></div>
-  
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -157,7 +162,7 @@
 <li> <b>No-longer-supported FFmpeg/libav:</b> Audacity 2.0.6 and later may still build against unsupported FFmpeg/libav (such as FFmpeg 0.8 which is system-installed on Debian Wheezy), but configuring with --disable-dynamic-loading will usually be necessary. This will cause mono WMA files to export with no audio data. </li></ul>
 <ul style="list-style-image: none; list-style-type: none">See the "Compiling" section in the 2.0.6 or later <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Category:Release_Notes">Release Notes</a> for more guidance.</ul>
 <div id="dynamic_ff"></div>
-<h4><span class="mw-headline" id="Removal_of_Libraries_Preferences_2">Removal of Libraries Preferences</span></h4>
+<h4><span class="mw-headline" id="Removal_of_Libraries_Preferences">Removal of Libraries Preferences</span></h4>
 <p>Some Linux distributions or versions thereof may package Audacity with MP3 encoding and FFmpeg support already linked dynamically to the relevant system libraries. In these packaged builds there is no need to locate LAME or FFmpeg, so Audacity will have no "Libraries" Preferences. 
 </p><p>Users compiling Audacity from source code can similarly remove the "Libraries" Preferences by configuring Audacity with <span style="white-space:nowrap"><i>--disable-dynamic-loading</i></span>. Then build Audacity linked to system LAME and to a system (or locally compiled) version of FFmpeg 1.2 to 3.x.x (libav 0.8 to 12), according to the version of Audacity as described above. 
 </p>
@@ -208,38 +213,43 @@ As in the image above, the <b>FFmpeg Library Version</b> will say "not found". T
 <ul><li><b>pluginregistry.cfg</b> file</li>
 <li><b>pluginsettings.cfg</b> file</li>
 <li><b>Plug-Ins</b> folder</li></ul>
-<p>Then restart Audacity
+<p>Then restart Audacity.
+</p><p><br />
+</p>
+<div id="links"></div>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="installing_effect_generator_and_analyzer_plug_ins_on_linux.html" title="Installing Effect, Generator and Analyzer plug-ins on Linux"><b>&gt;</b>&#160; Installing Effect, Generator and Analyzer plug-ins on Linux</a> <br />
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130132
+Cached time: 20191114150700
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.136 seconds
-Real time usage: 0.143 seconds
-Preprocessor visited node count: 481/1000000
-Preprocessor generated node count: 1720/1000000
-Post‐expand include size: 9602/2097152 bytes
-Template argument size: 5411/2097152 bytes
+CPU time usage: 0.146 seconds
+Real time usage: 0.154 seconds
+Preprocessor visited node count: 485/1000000
+Preprocessor generated node count: 1738/1000000
+Post‐expand include size: 10761/2097152 bytes
+Template argument size: 5607/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   53.474      1 - -total
- 49.91%   26.687      1 - Template:I18n
- 45.70%   24.440      1 - Template:I18n_box
- 37.81%   20.219      1 - Template:I18n_list
- 14.33%    7.660      2 - Template:I18n_link
- 13.13%    7.020     12 - Template:Button
-  8.23%    4.399      2 - Template:Autoglossonym
-  7.34%    3.923      1 - Template:Intro
-  4.59%    2.455      6 - Template:Menu
-  4.55%    2.432      5 - Template:Advice
+100.00%   55.354      1 - -total
+ 49.00%   27.125      1 - Template:I18n
+ 44.48%   24.623      1 - Template:I18n_box
+ 37.08%   20.527      1 - Template:I18n_list
+ 13.11%    7.258      2 - Template:I18n_link
+ 13.01%    7.199     12 - Template:Button
+  8.37%    4.631      1 - Template:Intro
+  7.66%    4.238      2 - Template:Autoglossonym
+  6.50%    3.597      8 - Template:Advice
+  4.38%    2.423      5 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5422-0!*!0!!*!5!* and timestamp 20190503130132 and revision id 58605
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5422-0!*!0!!*!5!* and timestamp 20191114150700 and revision id 64955
  -->
 </div>
 										<!-- end content -->
@@ -312,7 +322,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Linux">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Linux">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

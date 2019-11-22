@@ -34,20 +34,11 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>On-Demand Loading</b></i> is an optional faster method of <a href="importing_audio.html" title="Importing Audio">importing audio</a>. Instead of a progress bar appearing while Audacity waits to import the entire file, the <a href="audacity_waveform.html" title="Audacity Waveform">normal Audacity waveform</a> starts to display almost immediately. You can play or edit wherever the normal waveform is displayed while the remaining waveform is still being drawn as a process running in the background.<p>
-On-Demand Loading is available as an option when importing most <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> files like  <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (and on Linux, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i>). </p></div> 
-<div id="import"></div>
-<h2><span class="mw-headline" id="Importing_different_file_types_using_On-Demand_Loading">Importing different file types using On-Demand Loading</span></h2>
-<h3><span class="mw-headline" id="Uncompressed_files">Uncompressed files</span></h3>
-<p>On-Demand Loading is used for most <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> files when choosing to read these files "directly from the original (faster)" instead of copying them in. The "read directly" option can be chosen when the warning appears for importing uncompressed audio files:
-</p>
-<dl><dd><span title="Warning for importing uncompressed audio files set to read directly"><img alt="Preferences Warnings Uncompressed set directly W10.png" src="../m/images/d/db/preferences_warnings_uncompressed_set_directly_w10.png" width="513" height="364" /></span></dd></dl>
-<p>and also in the <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>:
-</p>
-<dl><dd><span title="Import / Export Preferences set to read directly"><img alt="EnableOD.png" src="../m/images/0/06/enableod.png" width="337" height="74" /></span></dd></dl>
-<p>The warning can be turned off in the <a href="warnings_preferences.html" title="Warnings Preferences">Warnings Preferences</a>, in which case the current import setting in Preferences will be used automatically. 
-</p><p>On-Demand Loading of uncompressed files is much faster than copying in the audio, even if you wait for the waveform drawing to complete before playing or editing.   
-</p><p>Uncompressed files shorter than 30 seconds long will always import using the normal progress bar even if you choose to "read directly". However on most machines the import will still seem to be immediate unless it is a slower machine or the processor is very busy with other tasks.  
+<div class="intro"><i><b>On-Demand Loading</b></i> was an optional faster method of <a href="importing_audio.html" title="Importing Audio">importing audio</a> when importing most <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> files like  <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (and on Linux, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i>). It has been withdrawn from Audacity in version 2.3.3 and onwards. </div>
+<h2><span class="mw-headline" id="Opening_older_projects_that_still_depend_on_external_audio_files">Opening older projects that still depend on external audio files</span></h2>
+<p>In earlier versions of Audacity (2.3.2 and previous) it was possible to reference external uncompressed audio files rather than importing and reading them into the Audacity project. This was quicker and saved space but was rather dangerous, as the project could become unusable if the files were moved or renamed. 
+</p><p>Accordingly we removed this feature from Audacity and now all imported audio files are fully read into the Audacity project, making the project self-contained.
+</p><p>However there will still be some projects created with earlier versions of Audacity that still depend on external audio files.  In order for these projects to continue to work On-Demand Loading has been retained for such projects.  
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -55,53 +46,40 @@ On-Demand Loading is available as an option when importing most <i><b><a href="g
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top"><b>If you choose "read directly" when importing WAV, AIFF or FLAC files, do not rename, move or delete those files</b>, otherwise your project will be missing audio. You can still copy in the audio to the project at any time at <span class="menu">Help &gt; Diagnostics &gt; <a href="dependencies_dialog.html" title="Dependencies Dialog">Check Dependencies...</a></span>. See <a href="audacity_projects.html" title="Audacity Projects">Audacity Projects</a> for more details.
+<td align="left" valign="top"><b>If you have a project that depends on external audio files, do <i>NOT</i> rename, move or delete those files</b>, otherwise your project will be missing audio.
+<p>You can copy in the audio to the project at any time, making the project fully self-contained, at <span class="menu">Help &gt; Diagnostics &gt; <a href="check_dependencies.html" title="Check Dependencies">Check Dependencies...</a></span>. 
+</p>
 </td></tr></table></div>
-<p><br />
-</p>
-<h2><span class="mw-headline" id="Using_On-Demand_Loading">Using On-Demand Loading</span></h2>
-<p>When you import an On-Demand file by any means ( <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a></span>, <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#audio" title="File Menu: Import">Audio...</a></span> or dragging in), a sequence of patterned blocks appears almost immediately, representing the uncomputed waveform. The blocks are then progressively replaced from left to right by the <a href="audacity_waveform.html" title="Audacity Waveform">normal Audacity waveform</a> as soon as it has been computed. You can <a href="play.html" title="Play">play</a> or <a href="edit.html" title="Edit">edit</a> the track at once wherever that normal waveform is displaying, without waiting for the remainder of the waveform to be drawn. 
-</p><p>You can also change the focal point from which the waveform is computed. To do this, either click in the track at the leftmost point from which you want the waveform drawn, or drag a selection in either direction. In the image below, we clicked to place the cursor in the waveform at a time of 1 hour 15 minutes, two thirds of the way along. The waveform then started being drawn rightwards from the cursor point:
-</p>
-<dl><dd><span title="On-Demand loading focal point moved to two thirds of the way along the track"><img alt="ODinprogress.png" src="../m/images/9/9f/odinprogress.png" width="696" height="227" /></span></dd></dl>
-<p>Using read-directly On-Demand, you can now edit or play from the new focal point. You can also start playback from a new position without changing the focal point of the waveform by clicking or dragging a region in the <a href="timeline.html" title="Timeline">Timeline</a>.
-</p><p>Once the computation point has reached the end of the track, any uncomputed waveform will be drawn from right to left, unless interrupted by clicking elsewhere at an uncomputed point.     
-</p>
-<div class="note">Multiple files may be imported simultaneously, and the waveform computation point moved from one to track to the other by clicking in the required track.</div>  
-<p>The percentage of the waveform that has been computed is displayed on the <a href="status_bar.html" title="Status Bar">Status Bar</a>, as shown at bottom left of the image above. When multiple files are being imported, the Status Bar will display the <i>overall</i> percentage of the multiple tracks that has been computed. To make the Status Bar display the percentage completion of a particular track, move the mouse over that track.     
-</p>
-<h3><span class="mw-headline" id="Slow_seeking_when_moving_the_focal_position">Slow seeking when moving the focal position</span></h3>
-<p>If the drive the file is being imported from is not able to seek rapidly through the file, the On-Demand imported track may be slow to respond when moving the focal position. This will be especially noticeable before the waveform has been fully computed. Slow seeking could occur on Mac computers when importing <a href="faq_opening_and_saving_files.html#fromcd" title="FAQ:Opening and Saving Files">CD tracks</a> from the Finder, or when using older external USB drives.
-</p>
+
 <!-- 
 NewPP limit report
-Cached time: 20190503130140
+Cached time: 20191115102431
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.099 seconds
-Real time usage: 0.106 seconds
-Preprocessor visited node count: 279/1000000
-Preprocessor generated node count: 1029/1000000
-Post‐expand include size: 4414/2097152 bytes
-Template argument size: 1589/2097152 bytes
+CPU time usage: 0.076 seconds
+Real time usage: 0.080 seconds
+Preprocessor visited node count: 242/1000000
+Preprocessor generated node count: 977/1000000
+Post‐expand include size: 4480/2097152 bytes
+Template argument size: 1707/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   37.655      1 - -total
- 83.63%   31.490      1 - Template:I18n
- 78.43%   29.532      1 - Template:I18n_box
- 67.79%   25.528      1 - Template:I18n_list
- 34.61%   13.032      5 - Template:I18n_link
- 20.47%    7.709      5 - Template:Autoglossonym
-  8.11%    3.053      1 - Template:Advice
-  4.93%    1.856      3 - Template:Menu
-  4.11%    1.546      1 - Template:Note
+100.00%   36.691      1 - -total
+ 84.42%   30.975      1 - Template:I18n
+ 79.90%   29.318      1 - Template:I18n_box
+ 69.62%   25.544      1 - Template:I18n_list
+ 35.44%   13.003      5 - Template:I18n_link
+ 20.92%    7.677      5 - Template:Autoglossonym
+  8.17%    2.999      1 - Template:Advice
+  6.04%    2.215      1 - Template:Intro
+  3.31%    1.214      1 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2587-0!*!0!!*!5!* and timestamp 20190503130140 and revision id 58155
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2587-0!*!0!*!*!5!* and timestamp 20191115102431 and revision id 64830
  -->
 </div>
 										<!-- end content -->
@@ -174,7 +152,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/On-Demand_Loading">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/On-Demand_Loading">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

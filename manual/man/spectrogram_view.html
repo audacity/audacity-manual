@@ -34,7 +34,19 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The <i><b>Spectrogram</b></i> View of an audio track provides a visual indication of how the energy in different frequency bands changes over time. The Spectrogram can show sudden onset of a sound, so it can often be easier to see clicks and other glitches or to line up beats in this view rather than in one of the <a href="audio_track_dropdown_menu.html#Waveform" title="Audio Track Dropdown Menu">waveform</a> views.
-<p>To select Spectrogram view, click on the track name (or the black triangle) in the <a href="audio_tracks.html#panel" title="Audio Tracks"> Track Control Panel</a> which opens the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Track Dropdown Menu</a>.</p></div>
+<p>To select Spectrogram view, click on the track name (or the black triangle) in the <a href="audio_tracks.html#panel" title="Audio Tracks"> Track Control Panel</a> which opens the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Track Dropdown Menu</a>.</p> </div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><a href="#spectral_selection"><b>Spectral selections</b></a>, made in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> view, are used to make selections that include a frequency range as well as a time range on tracks in .
+<ul><li>They can be used with special spectral editing effects to make changes to the <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> content of the selected audio.</li>
+<li>Among other purposes, spectral selection and editing can be used for cleaning up unwanted sound, enhancing certain resonances, changing the quality of a voice or removing mouth sounds from voice work.</li>
+<li>For full details, see <a href="spectral_selection.html" title="Spectral Selection"><b>Spectral Selection and Editing</b></a>. </li></ul>
+</td></tr></table>
+</div>
 
 
 
@@ -178,14 +190,18 @@
 <li> Maximum frequency 22000 (include display of higher frequencies).</li></ul>
 <dl><dd><span title="Music track shown in Logarithmic Spectrogram view with window size 2048, minimum frequency 20, and maximum frequency 22000"><img alt="SpectrogramView 11.png" src="../m/images/4/49/spectrogramview_11.png" width="601" height="247" /></span></dd></dl>
 <div id="spectral_selection"></div>
-<h2><span class="mw-headline" id="Spectral_selection">Spectral selection</span></h2>
-<div class="note">In order to define a <a href="spectral_selection.html" title="Spectral Selection">spectral selection</a> you need to be in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> view. Also you must have checked on the Enable Spectral Selection in either <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a>, or the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">dropdown menu</a> of the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> choosing <b>Spectrogram Settings...</b>.
-</div>
+<h2><span class="mw-headline" id="Spectral_selection"><a href="spectral_selection.html" title="Spectral Selection">Spectral selection</a></span></h2>
+<div class="note">In order to define a <a href="spectral_selection.html" title="Spectral Selection"><b>spectral selection</b></a> you need to be in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> view. 
+<p>Also you must have checked on the Enable Spectral Selection in either <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a>, or the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">dropdown menu</a> of the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> choosing <b>Spectrogram Settings...</b>.
+</p><p><i><b>Spectral Selection</b></i> is used to make selections that include a frequency range as well as a time range on tracks in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> view. Spectral Selection is used with special <a href="#edit">spectral editing</a> effects to make changes to the <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> content of the selected audio. Among other purposes, spectral selection and editing can be used for cleaning up unwanted sound, enhancing certain resonances, changing the quality of a voice or removing mouth sounds from voice work. 
+</p>
+For full details, see <a href="spectral_selection.html" title="Spectral Selection"><b>Spectral Selection and Editing</b></a>.</div>
 <p>To define a time range combined with a spectral range, hover at a vertical position that you want to be the approximate center frequency to act on then click and drag a selection horizontally. A horizontal line appears beside the I-Beam mouse pointer that defines the center frequency. 
 </p><p>Drag vertically, with or without continuing to drag horizontally, to define the range of frequencies to be acted on. A "box" containing a combined frequency and time range is now drawn in a colored tint as shown below <i>(the exact color of the tint will depend on the version of Audacity and the settings of your monitor)</i>: 
 </p>
 <dl><dd><span title="Audio track in spectrogram view with annotated spectral selection"><img alt="Spectral 02.png" src="../m/images/1/11/spectral_02.png" width="559" height="194" /></span></dd></dl>
-<p>The frequencies in the spectral selection can then be  <i><b><a href="glossary.html#filter" title="Glossary">filtered</a></b></i> in various ways, affecting their <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i>, using the special <a href="spectral_selection.html#edit" title="Spectral Selection">Spectral edit</a> effects in the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a>. This can be useful to remove unwanted extraneous noises from the audio or to apply very specific tone quality changes to it. For full details, see <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a>.
+<p>The frequencies in the spectral selection can then be  <i><b><a href="glossary.html#filter" title="Glossary">filtered</a></b></i> in various ways, affecting their <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i>, using the special <a href="spectral_selection.html#edit" title="Spectral Selection">Spectral edit</a> effects in the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a>. This can be useful to remove unwanted extraneous noises from the audio or to apply very specific tone quality changes to it. 
+</p><p>For full details, see <a href="spectral_selection.html" title="Spectral Selection"><b>Spectral Selection and Editing</b></a>.
 </p><p><br />
 </p>
 <div id="spectrogram_settings"></div>
@@ -198,29 +214,30 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503150557
+Cached time: 20191115102021
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.131 seconds
-Real time usage: 0.136 seconds
-Preprocessor visited node count: 160/1000000
-Preprocessor generated node count: 396/1000000
-Post‐expand include size: 2942/2097152 bytes
-Template argument size: 2687/2097152 bytes
+CPU time usage: 0.169 seconds
+Real time usage: 0.180 seconds
+Preprocessor visited node count: 167/1000000
+Preprocessor generated node count: 422/1000000
+Post‐expand include size: 4586/2097152 bytes
+Template argument size: 3996/2097152 bytes
 Highest expansion depth: 3/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%    8.526      1 - -total
- 28.67%    2.444      1 - Template:Intro
- 18.31%    1.561      4 - Template:Ednote
- 16.43%    1.401      1 - Template:Button
- 15.22%    1.298      2 - Template:Note
+100.00%   10.691      1 - -total
+ 25.86%    2.765      1 - Template:Intro
+ 15.53%    1.661      4 - Template:Ednote
+ 14.21%    1.519      1 - Template:Button
+ 13.13%    1.404      2 - Template:Note
+ 10.51%    1.123      1 - Template:Tip
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5030-0!*!0!!*!5!* and timestamp 20190503150557 and revision id 63475
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5030-0!*!0!!*!5!* and timestamp 20191115102021 and revision id 64369
  -->
 </div>
 										<!-- end content -->
@@ -293,7 +310,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Spectrogram_View">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Spectrogram_View">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

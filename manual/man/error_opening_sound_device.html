@@ -106,7 +106,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 </p>
 <div id="device"></div>
 <h2><span class="mw-headline" id="Check_PCI_card_or_external_sound_device_settings_and_connections">Check PCI card or external sound device settings and connections</span></h2>
-<p>If you use a high-end PCI sound card or external USB or Firewire interface, you must make the sample rate, bit-depth and number of input channels the same in all possible places. This is especially important if you are recording <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Multi-Track Overdubs</a> where you play and record at the same time. Settings must match in:
+<p>If you use a high-end PCI sound card or external USB or FireWire interface, you must make the sample rate, bit-depth and number of input channels the same in all possible places. This is especially important if you are recording <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Multi-Track Overdubs</a> where you play and record at the same time. Settings must match in:
 </p>
 <ul><li> the Audacity Project Rate</li>
 <li> the track(s) in Audacity (to resample tracks to the Project Rate, <a href="audacity_selection.html" title="Audacity Selection">select</a> each track in turn then choose <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample...</a></span>). </li>
@@ -117,10 +117,9 @@ The recording device message most commonly occurs on Windows when one of the sou
 </p>
 <div id="wasapi"></div>
 <h2><span class="mw-headline" id="Windows_WASAPI:_Recording_from_a_USB_device">Windows WASAPI: Recording from a USB device</span></h2>
-
 <p>You may get this error if you set Audacity to record from a USB device and playback through your onboard soundcard with the <b><a href="device_toolbar.html" title="Device Toolbar">Audio Host</a></b> set to <b><a href="glossary.html#wasapi" title="Glossary">WASAPI</a></b>.
 </p>
-<div class="note">We believe that this is likely to be a problem with Microsoft's WASAPI not liking working with two devices at once.  There may probably be no fix that we can make in Audacity, but this issue is logged as a bug in Audacity and will continue to research this. </div>
+<div class="note">We believe that this is likely to be a problem with Microsoft's WASAPI not liking working with two devices at once.  There is no fix that we can make in Audacity. </div>
 <h3><span class="mw-headline" id="Workarounds">Workarounds</span></h3>
 <ul><li> Use <b><a href="glossary.html#mme" title="Glossary">MME</a></b> or <b><a href="glossary.html#wds" title="Glossary">Windows Direct Sound</a></b> as your Audio Host</li>
 <li> Use your USB device for both input and output <i>(not possible if recording from a USB turntable or USB tapedeck)</i></li></ul>
@@ -142,30 +141,29 @@ The recording device message most commonly occurs on Windows when one of the sou
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130349
+Cached time: 20191115102354
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.055 seconds
-Real time usage: 0.058 seconds
-Preprocessor visited node count: 154/1000000
-Preprocessor generated node count: 431/1000000
-Post‐expand include size: 4061/2097152 bytes
-Template argument size: 3647/2097152 bytes
+CPU time usage: 0.047 seconds
+Real time usage: 0.049 seconds
+Preprocessor visited node count: 146/1000000
+Preprocessor generated node count: 397/1000000
+Post‐expand include size: 3794/2097152 bytes
+Template argument size: 3411/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   15.124      1 - -total
- 29.19%    4.414      2 - Template:Hint
- 23.50%    3.554      1 - Template:Intro
- 20.63%    3.120      4 - Template:Note
- 18.44%    2.789      8 - Template:Menu
-  8.42%    1.273      1 - Template:Ednote
+100.00%   10.377      1 - -total
+ 31.37%    3.255      2 - Template:Hint
+ 24.85%    2.579      4 - Template:Note
+ 24.01%    2.492      1 - Template:Intro
+ 21.87%    2.270      8 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5795-0!*!0!!*!*!* and timestamp 20190503130349 and revision id 63207
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5795-0!*!0!!*!*!* and timestamp 20191115102354 and revision id 64870
  -->
 </div>
 										<!-- end content -->
@@ -238,7 +236,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

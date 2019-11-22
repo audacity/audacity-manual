@@ -34,41 +34,28 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<p><br />
+<div class="intro"><a href="glossary.html#latency" title="Glossary"><b>Latency</b></a> refers to the delay between the time the audio enters the computer and the time Audacity is able to record it to a track. For example, if you are recording a keyboard track, latency is the delay between the time you strike a key and the time that note is recorded.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Latency correction is only "set and forget" if you always use the same recording device, the same sound system, the same sample rate ... every time that you record.
+<p>If that is not the case then latency correction should be tested and set each time that you record, if there's a chance that you may use a <a href="#important">feature</a> that requires it to be set. 
 </p>
-<div id="latency"></div>
-<h2><span class="mw-headline" id="What_is_Latency.3F">What is Latency?</span></h2>
-<p>Latency refers to the delay between the time the audio enters the computer and the time Audacity is able to record it to a track. For example, if you are recording a keyboard track, latency is the delay between the time you strike a key and the time that note is recorded.
-</p><p>Latency is important only when you are overdubbing, that is, recording a new track while listening to previously-recorded track(s). You want what you play to be in sync with the tracks you are listening to. Audacity can correct for latency, but you have to tell it what the correction amount is. You enter this correction amount in the <a href="devices_preferences.html" title="Devices Preferences">Devices tab</a> of the Preferences dialog.
+</td></tr></table>
+</div>
+<div id="important"></div>
+<h2><span class="mw-headline" id="When_latency_adjustment_is_important">When latency adjustment is important</span></h2>
+<p>Latency is only important when you are using:
+</p>
+<ul><li><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs"><b>overdubbing</b></a>, that is, recording a new track while listening to previously-recorded track(s). You want what you play to be in sync with the tracks you are listening to. Audacity can correct for latency, but you have to tell it what the correction amount is. You enter this correction amount in the <a href="devices_preferences.html" title="Devices Preferences">Devices tab</a> of the Preferences dialog</li>
+<li><b><a href="punch_and_roll_record.html" title="Punch and Roll Record">Punch and Roll Record</a></b> to quick-fix recording errors.</li></ul>
+<p><br />
 </p>
 <div id="need"></div>
 <h2><span class="mw-headline" id="What_you_need">What you need</span></h2>
-<p>To do a latency test you will need a loop-back cable. The type of cable you need will depend on the way you are connecting your recording equipment to the computer.
-</p>
-<h3><span class="mw-headline" id="Connecting_to_the_line_input_and_line_output_ports_on_the_computer">Connecting to the line input and line output ports on the computer</span></h3>
-<p>If you are connecting your recording equipment to the line input and line output jacks on your computer you need a cable with a stereo mini-plug at each end.
-</p>
-<dl><dd><table>
-<tr>
-<td><span title="picture of a stereo loop-back cable"><img alt="StereoMini-Loopback.jpg" src="../m/images/b/bb/stereomini_loopback.jpg" width="256" height="192" /></span>
-</td>
-<td><span title="ure of a loop-back cable plugged in to the back of a computer"><img alt="Loopback-PluggedIn.jpg" src="../m/images/2/2b/loopback_pluggedin.jpg" width="256" height="192" /></span>
-</td></tr>
-<tr>
-<td align="center"><b>A stereo loop-back cable</b>
-</td>
-<td align="center"><b>A loop-back cable plugged in</b>
-</td></tr></table></dd></dl>
-<h3><span class="mw-headline" id="Using_an_external_USB_audio_interface">Using an external USB audio interface</span></h3>
-<p>If you are not using the line input and/or line output ports on your computer but are instead using a USB audio interface device for input and/or output, plug the loop-back cable into the appropriate jacks on the USB interface. Depending on your interface you may need a different type of loop-back cable.
-</p>
-<dl><dd><table>
-<tr>
-<td><span title="picture of USB interface with loopback cable"><img alt="Uca202HeadphoneFoldbacksmaller.JPG" src="../m/images/4/43/uca202headphonefoldbacksmaller.jpg" width="240" height="214" /></span>
-</td></tr>
-<tr>
-<td align="center"><b>Example of loopback with a USB audio adapter</b>
-</td></tr></table></dd></dl>
 <h3><span class="mw-headline" id="Using_a_microphone">Using a microphone</span></h3>
 <p>If you  are using a microphone to record overdubs then the loop-back cable method will not work for you. Instead you need to set up the microphone in front of a speaker or headphones! Don't worry, you will not get feedback because you've turned <i>Software Playthrough</i> off. 
 </p>
@@ -79,25 +66,55 @@
 <tr>
 <td align="center"><b>Example of loopback using a microphone</b>
 </td></tr></table></dd></dl>
+<h3><span class="mw-headline" id="Using_a_laptop_computer.27s_on-board_microphone">Using a laptop computer's on-board microphone</span></h3>
+<p>You can just, straightforwardly, use the laptop's onboard microphone and speaker(s) for the latency test, if that is what you are planning to use for subsequent recording.
+</p>
+<h3><span class="mw-headline" id="Using_a_desk-top_computer">Using a desk-top computer</span></h3>
+<p>To use a desk-top computer you will need to connect the line input and line output ports on the computer, using a loop-back cable. The type of cable you need will depend on the way you are connecting your recording equipment to the computer.
+</p><p>If you are connecting your recording equipment to the line input and line output jacks on your computer you need a cable with a stereo mini-plug at each end.
+</p>
+<dl><dd><table>
+<tr>
+<td><span title="picture of a stereo loop-back cable"><img alt="StereoMini-Loopback.jpg" src="../m/images/b/bb/stereomini_loopback.jpg" width="256" height="192" /></span>
+</td>
+<td><span title="picture of a loop-back cable plugged in to the back of a computer"><img alt="Loopback-PluggedIn.jpg" src="../m/images/2/2b/loopback_pluggedin.jpg" width="256" height="192" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>A stereo loop-back cable</b>
+</td>
+<td align="center"><b>A loop-back cable plugged in</b>
+</td></tr></table></dd></dl>
+<h3><span class="mw-headline" id="Using_an_external_USB_audio_interface">Using an external USB audio interface</span></h3>
+<p>If you are not using the line input and/or line output ports on your computer but are instead using a USB audio interface device for input and/or output, plug the loop-back cable into the appropriate jacks on the USB interface. 
+</p><p>Depending on your interface you may need a different type of loop-back cable.
+</p>
+<dl><dd><table>
+<tr>
+<td><span title="picture of USB interface with loopback cable"><img alt="Uca202HeadphoneFoldbacksmaller.JPG" src="../m/images/4/43/uca202headphonefoldbacksmaller.jpg" width="240" height="214" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>Example of loopback with a USB audio adapter</b>
+</td></tr></table></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">Note that using a USB microphone is not the best way to record overdubs. These microphones are great for podcasters who just want to record their voice and are not worried about syncing to music. The problem with these microphones is that the only way you can hear yourself in your headphones is by turning <i>Software Playthrough</i> On. Software playthrough introduces its own delay (different from latency) which you will hear in your headphones. Tests on the same system used for the latency test below revealed that the Software Playthrough delay was 65 milliseconds. This does not sound like much, but it's like hearing your voice coming out of speakers 70 feet away. If you are serious about overdubbing, get an inexpensive mixer and a good microphone to go with it.
+<td align="left" valign="top">Note that using a USB microphone is not the best way to record overdubs. These microphones are great for podcasters who just want to record their voice and are not worried about syncing to music. The problem with these microphones is that the only way you can hear yourself in your headphones is by turning <i>Software Playthrough</i> On. Software playthrough introduces its own delay (different from latency) which you will hear in your headphones. Tests on the same system used for the latency test below revealed that the Software Playthrough delay was 65 milliseconds. This does not sound like much, but it is like hearing your voice coming out of speakers 70 feet away. If you are serious about overdubbing, get an inexpensive mixer and a good microphone to go with it.
 <p><b>For more information on overdubbing with Audacity, see our <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Tutorial - Recording Multi-track Overdubs</a></b>
 </p>
 </td></tr></table></div>
-<div id="test"></div>
-<h2><span class="mw-headline" id="Doing_the_latency_test">Doing the latency test</span></h2>
-<p>Turn off un-necessary applications before starting the test so that the computer can mostly concentrate on playing and recording the audio.    
-</p><p>Plug in the appropriate loop-back cable for your setup.
-</p><p>Launch Audacity. Click on <span class="menu">Edit &gt; <a href="preferences.html" title="Preferences">Preferences</a></span>.
+<p><br />
+</p>
+<div id="settings"></div>
+<h2><span class="mw-headline" id="Making_the_necessary_settings">Making the necessary settings</span></h2>
+<h3><span class="mw-headline" id="Recording_preferences">Recording preferences</span></h3>
+<p>Click on <span class="menu">Edit &gt; <a href="preferences.html" title="Preferences">Preferences</a></span>.
 </p><p>On the <a href="recording_preferences.html" title="Recording Preferences">Recording tab</a>, set the following settings:
 </p>
-<ul><li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Other tracks while recording (overdub)</span> checked.</li>
-<li> <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Software Playthrough of input</span> not checked.</li></ul>
+<ul><li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Play other tracks while recording (overdub)</span> checked.</li>
+<li> <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Software playthrough of input</span> not checked.</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -105,19 +122,33 @@
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
 <td align="left" valign="top">In Audacity by default using the Record button <img alt="image of Record button" src="../m/images/e/e8/record.png" title="image of Record button" width="16" height="16" /> will append record onto your existing track, see the <a href="recording.html" title="Recording">Recording</a> page.
-<ul><li>In order to record on a new track, for multi-track overdubbing, you will need to use <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and the <b>Record new track</b> button <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" />, <i>or use its shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span></i>.</li>
+<ul><li>In order to record on a new track, for multi-track overdubbing, you will need to use <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and the <span class="button">Record New track</span> button <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" />, <i>or use its shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span></i>.</li>
 <li>You can change this in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a> by checking "<b>on</b>" the "<b>Record on a new track</b>", doing this will make Audacity record on a new track with just the Record button and <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and <img alt="The Record on same Track button" src="../m/images/d/d9/recordbeside.png" title="The Record on same Track button" width="16" height="16" /> will append record onto your existing track.  </li></ul>
 </td></tr></table>
 </div>
+<h3><span class="mw-headline" id="Devices_preferences">Devices preferences</span></h3>
 <p>On the <a href="devices_preferences.html" title="Devices Preferences">Devices tab</a>, in the Latency section, set the following settings:
 </p>
-<ul><li> Set the <b>Latency compensation<i> to </i></b><i>0'</i> (zero). </li>
-<li> Leave the <i>Buffer length</i> value at its default value. </li>
+<ul><li> Set the <b>Latency compensation</b> to <b>0</b> (zero), so that you get an absolute reading.</li>
+<li> Leave the <b>Buffer length</b> value at its default value. </li>
 <li> Click <span class="button">OK</span>.</li></ul>
-<div class="note">The Buffer length value will affect latency, but the effect will vary between systems. 100 milliseconds is a safe value that will not put too much load on the CPU. Too low a value may put too much load on the CPU causing dropouts in the recording. If you are feeling adventurous you can repeat this test with different values for Buffer length. But in the end you should settle on a value for both <i>Buffer length</i> and <i>Latency compensation</i> and leave them there. </div>
-<p>In <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> make sure that "<a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a>" is set to "Off". Above the second and thrid group of numbers, make sure that <span class="button">Beginning and Length of Selection &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> is selected. Click on one of the downward-pointing arrows in the digits boxes to the right of <b>Snap-To</b> and select <span class="button">hh:mm:ss + milliseconds &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span>.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">The Buffer length value will affect latency, but the effect will vary between systems. 100 milliseconds is a safe value that will not put too much load on the CPU. Too low a value may put too much load on the CPU causing dropouts in the recording. If you are feeling adventurous you can repeat this test with different values for Buffer length. But in the end you should settle on a value for both <i>Buffer length</i> and <i>Latency compensation</i> and leave them there.
+</td></tr></table></div>
+<h3><span class="mw-headline" id="Selection_toolbar">Selection toolbar</span></h3>
+<p>In <b><a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a></b> make sure that "<a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a>" is set to "Off". Above the second and thrid group of numbers, make sure that <span class="button">Beginning and Length of Selection &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> is selected. Click on one of the downward-pointing arrows in the digits boxes to the right of <b>Snap-To</b> and select <span class="button">hh:mm:ss + milliseconds &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span>.
+</p><p><br />
+</p>
+<div id="test"></div>
+<h2><span class="mw-headline" id="Doing_the_latency_test">Doing the latency test</span></h2>
+<p>Turn off un-necessary applications before starting the test so that the computer can mostly concentrate on playing and recording the audio.
 </p><p>Click on <span class="menu">Generate &gt; Rhythm Track</span>. Set "Number of Measures (bars)" to 2, and set the "Beat Sound" to <span class="button">Ping &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span>. Click <span class="button">OK</span> to generate the click track. Make sure the first track is completely selected (if you do nothing, it will be completely selected). 
-</p><p>Now click <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and the <b>Record new track</b> button <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" /> in the <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> - the rhythm track will be played back and recorded on a new track through the loop-back cable. You will now have something like this:
+</p><p>Now click <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and the <b>Record new track</b> button <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" /> in the <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> - the rhythm track will be played back and recorded on a new track. You will now have something like this:
 </p>
 <dl><dd><table>
 <tr>
@@ -127,7 +158,9 @@
 <td align="center"><b>The top track is the original click track, the bottom track is the looped-back recording. Note the delay.</b>
 </td></tr></table></dd></dl>
 <p><br />
-Zoom in so you can see one of the clicks in the top track and its delayed version on the bottom track. Using Selection Tool, drag a selection starting at the start of the click in the top track and ending at the start of the delayed click in the second track. You should see something like this (your numbers will likely be different):
+Zoom in so you can see one of the clicks in the top track and its delayed version on the bottom track. 
+</p><p>Using Selection Tool, drag a selection starting at the start of the click in the top track and ending at the start of the delayed click in the second track. 
+</p><p>You should see something like this <i>(your numbers are likely to be different)</i>:
 </p><p><br />
 </p>
 <dl><dd><table>
@@ -138,12 +171,17 @@ Zoom in so you can see one of the clicks in the top track and its delayed versio
 <td align="center"><b>The selections go from the original click to the delayed version in the bottom track.</b>
 </td></tr></table></dd></dl>
 <p><br />
-You can now read the latency directly from the second panel of numbers. In this case it is 0.096 seconds, or 96 milliseconds. Click on <span class="menu">Edit &gt; Preferences</span>, click on the <a href="devices_preferences.html" title="Devices Preferences">Devices tab</a>, and enter the negative of this number in the <b>Latency compensation<i> box - in this case it would be </i></b><i>-96'</i>.
+You can now read the latency directly from the second panel of numbers. In this case it is 0.096 seconds, or 96 milliseconds. 
+</p><p>Click on <span class="menu">Edit &gt; Preferences</span>, click on the <a href="devices_preferences.html" title="Devices Preferences">Devices tab</a>, and enter the negative of this number in the <b>Latency compensation</b> box - in this case it would be <b>-96</b>.
+</p><p><br />
 </p>
 <div id="check"></div>
 <h2><span class="mw-headline" id="Checking_the_result">Checking the result</span></h2>
-<p>Delete the second track by clicking the close box <span class="button">X</span> in its Track Control Panel. Click the <b>Fit to Width</b> <img alt="Image for the &quot;Fit to Width&quot; button" src="../m/images/4/4a/zoomfit.png" title="Image for the &quot;Fit to Width&quot; button" width="27" height="27" /> button to see the entire click track. Click in the Track Control Panel of the remaining track to select it, then click the <i>Record</i> button.  After the recording is finished Audacity will apply the latency Correction by pushing the newly-recorded track back by the Latency Correction amount. Note the two arrows at the left end of the second track - they are warning you that latency correction has been applied and part of the recorded track has been pushed left so that it starts before 0 seconds. This is OK, it is what we wanted to happen. The arrows are there to remind you that latency correction has been applied, just in case that's not what you wanted.
+<p>Delete the second track by clicking the close box <span class="button">X</span> in its Track Control Panel. 
+</p><p>Click the <b>Fit to Width</b> <img alt="Image for the &quot;Fit to Width&quot; button" src="../m/images/4/4a/zoomfit.png" title="Image for the &quot;Fit to Width&quot; button" width="27" height="27" /> button to see the entire click track. Click in the Track Control Panel of the remaining track to select it, then click the <i>Record</i> button.  
+</p><p>After the recording is finished Audacity will apply the latency Correction by pushing the newly-recorded track back by the Latency Correction amount. 
 </p>
+<div class="note">Note the two arrows at the left end of the second track - they are warning you that latency correction has been applied and part of the recorded track has been pushed left so that it starts before 0 seconds. This is OK, it is what we wanted to happen. The arrows are there to remind you that latency correction has been applied, just in case that is not what you wanted.</div>
 <dl><dd><table>
 <tr>
 <td><span title="image of track showing arrows at left end"><img alt="LatencyCorrection 220 03.png" src="../m/images/4/43/latencycorrection_220_03.png" width="869" height="358" /></span>
@@ -151,7 +189,8 @@ You can now read the latency directly from the second panel of numbers. In this 
 <tr>
 <td align="center"><b>Note the arrows at left end of recorded track: latency correction has been applied with the track moved backwards.</b>
 </td></tr></table></dd></dl>
-<p>Zoom in on one of the clicks and verify that the clicks in the two tracks line up.
+<p><br />
+Zoom in on one of the clicks and verify that the clicks in the two tracks line up.
 </p>
 <dl><dd><table>
 <tr>
@@ -160,7 +199,10 @@ You can now read the latency directly from the second panel of numbers. In this 
 <tr>
 <td align="center"><b>Note that there is still a tiny delay between the two tracks</b>
 </td></tr></table></dd></dl>
-<p>You'll never get it absolutely perfect. In this case we're still off by 17 samples. At 44100 samples per second that's about 0.39 milliseconds. This is as close as we're going to get, and it is not an audible difference. This is the length of time it takes a sound wave to travel about 5 inches, and the latency will probably have natural variability greater than this each time you record. However if you really need to, you can set the latency correction amount to a fraction of a millisecond (for example -96.4).
+<p>You will never get it absolutely perfect. In this case we are still off by 17 samples. At 44100 samples per second that is about 0.39 milliseconds. 
+</p><p>This is as close as we are going to get, and it is not an audible difference. This is the length of time it takes a sound wave to travel about 5 inches, and the latency will probably have natural variability greater than this each time you record. 
+</p><p>However if you really need to, you can set the latency correction amount to a fraction of a millisecond (for example -96.4).
+</p><p><br />
 </p>
 <div id="change"></div>
 <h2><span class="mw-headline" id="If_you_change_recording_or_playback_devices_or_audio_host">If you change recording or playback devices or audio host</span></h2>
@@ -171,34 +213,34 @@ You can now read the latency directly from the second panel of numbers. In this 
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130149
+Cached time: 20191115030241
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.148 seconds
-Real time usage: 0.156 seconds
-Preprocessor visited node count: 386/1000000
-Preprocessor generated node count: 1499/1000000
-Post‐expand include size: 7575/2097152 bytes
-Template argument size: 3759/2097152 bytes
+CPU time usage: 0.166 seconds
+Real time usage: 0.173 seconds
+Preprocessor visited node count: 439/1000000
+Preprocessor generated node count: 1635/1000000
+Post‐expand include size: 9417/2097152 bytes
+Template argument size: 4845/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   52.993      1 - -total
- 54.79%   29.035      1 - Template:I18n
- 51.09%   27.076      1 - Template:I18n_box
- 43.82%   23.219      1 - Template:I18n_list
- 20.95%   11.103      4 - Template:I18n_link
- 12.26%    6.495      1 - Template:Tip
- 11.33%    6.006      4 - Template:Autoglossonym
-  5.40%    2.860      3 - Template:Key
-  5.14%    2.723      3 - Template:Button
-  3.91%    2.073      1 - Template:Shortcut
+100.00%   53.411      1 - -total
+ 50.83%   27.149      1 - Template:I18n
+ 46.98%   25.094      1 - Template:I18n_box
+ 39.89%   21.304      1 - Template:I18n_list
+ 19.23%   10.270      4 - Template:I18n_link
+ 14.37%    7.674      2 - Template:Tip
+ 10.97%    5.861      4 - Template:Autoglossonym
+  5.22%    2.788      4 - Template:Button
+  4.57%    2.442      3 - Template:Key
+  3.81%    2.033      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2749-0!*!0!!*!5!* and timestamp 20190503130149 and revision id 62573
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2749-0!*!0!!*!5!* and timestamp 20191115030241 and revision id 65638
  -->
 </div>
 										<!-- end content -->
@@ -271,7 +313,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Latency_Test">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Latency_Test">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

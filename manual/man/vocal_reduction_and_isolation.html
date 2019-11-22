@@ -47,20 +47,45 @@
 <dd><span title="Vocal Reduction and Isolation effect dialog"><img alt="Vocal Reduction and Isolation.png" src="../m/images/6/60/vocal_reduction_and_isolation.png" width="570" height="227" /></span></dd></dl>
 <div id="action"></div>
 <h2><span class="mw-headline" id="Action">Action</span></h2>
-<ul><li><b>Remove Vocals:</b> (default). If the audio is center-panned, removes the vocal range defined by the <a href="#lowcut">Low Cut</a> and <a href="#highcut">High Cut</a> sliders, and returns it as a stereo track. Audio is said to be "<i>center-panned</i>" if it is common to both left and right channels.</li></ul>
+<h3><span class="mw-headline" id="Bandwidth_Limited_Actions">Bandwidth Limited Actions</span></h3>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">The Low Cut and High Cut sliders affect these actions.
+</td></tr></table></div>
+<ul><li><b>Remove Vocals: to mono:</b> (default). If the audio is center-panned, removes the vocal range defined by the <a href="#lowcut">Low Cut</a> and <a href="#highcut">High Cut</a> sliders, and returns it as a dual-channel mono track. Audio is said to be "<i>center-panned</i>" if it is common to both left and right channels. <i>Cancellation</i> of center panned audio is achieved by the well known "invert and mix" method.</li></ul>
+<div class="note">This option is usually much quicker than the other actions because the processing is much simpler.
+<ul><li>This setting is identical to the <b>"Vocal Remover</b> &gt; Remove frequency band" effect in previous versions of Audacity.</li>
+<li>The <a href="#strength">Strength</a> slider is <b>not</b> used when "Remove Vocals: to mono:" is selected.</div></li></ul>
+<ul><li><b>Remove Vocals: </b> If the audio is center-panned, removes the vocal range defined by the <a href="#lowcut">Low Cut</a> and <a href="#highcut">High Cut</a> sliders, and returns it as a stereo track. </li></ul>
 <ul><li><b>Isolate Vocals:</b> If the audio is center-panned, extracts the slider-defined vocal range and returns it as a (dual) mono track.</li></ul>
 <ul><li><b>Isolate Vocals and Invert:</b> If the audio is center-panned, extracts the slider-defined vocal range and returns it as an inverted (dual) mono track.</li></ul>
 <div class="note"> <b>Inverting</b> a waveform is the action of flipping the audio samples upside-down, reversing their polarity. The positive samples (above the horizontal zero line in the Audacity Waveform) are moved below the zero line (so becoming negative), and negative samples are made positive.
-<ul><li> The "and Invert" options may be useful when processing using duplicated tracks. See the <a href="#examples">examples</a> below.</div></li></ul>
+<ul><li> This option is equivalent to applying the <b>Isolate Vocals</b> option and then <a href="invert.html" title="Invert">inverting</a>.</li>
+<li> The "and Invert" options may be useful when processing using duplicated tracks. See the <a href="#examples">examples</a> below.</div></li></ul>
+<h3><span class="mw-headline" id="Full_Spectrum_Actions">Full Spectrum Actions</span></h3>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">The Low Cut and High Cut sliders have no effect with these actions.
+</td></tr></table></div>
+<ul><li><b>Remove Center: to mono:</b> Removes all audio (the whole <a href="glossary.html#spectrum" title="Glossary">frequency spectrum</a>) that is common to both left and right channels and returns a (dual) mono track. <i>Cancellation</i> of center panned audio is achieved by the well known "invert and mix" method.</li></ul>
+<div class="note">This option is usually much quicker than the other actions because the processing is much simpler.
+<ul><li>This setting is identical to the "<b>Vocal Remover</b> &gt; entire spectrum" effect in previous versions of Audacity.</li>
+<li><i><b>None</b></i> of the sliders are used when "Remove Center: to mono" is selected.</div></li></ul>
 <ul><li><b>Remove Center:</b> Removes all audio (the whole <a href="glossary.html#spectrum" title="Glossary">frequency spectrum</a>) that is common to both left and right channels and returns a true stereo track. </li></ul>
-<div class="note">The Low Cut and High Cut sliders have no effect when "Remove Center" is selected.</div>
 <ul><li><b>Isolate Center:</b> If the audio is center-panned, extracts the whole frequency spectrum and returns it as a (dual) mono track.</li></ul>
 <ul><li><b>Isolate Center and Invert:</b> If the audio is center-panned,  extracts the whole frequency spectrum from and returns it as an inverted (dual) mono track.</li></ul>
-<div class="note">The Low Cut and High Cut sliders have no effect when either "Isolate Center" action is selected</div>
-<ul><li><b>Remove Center Classic: (Mono):</b> Removes all audio (the whole <a href="glossary.html#spectrum" title="Glossary">frequency spectrum</a>) that is common to both left and right channels and returns a (dual) mono track. This is identical to full frequency removal in the legacy <a href="vocal_remover.html" title="Vocal Remover">Vocal Remover</a> effect.</li></ul>
-<div class="note"> This option is usually much quicker than the other actions because the processing is much simpler.
-<ul><li>The "Strength", "Low Cut" and "High Cut" sliders have no effect when "Remove Center Classic: (Mono)" is selected.</div></li></ul>
+<div class="note">This option is equivalent to applying the <b>Isolate Center</b> option and then <a href="invert.html" title="Invert">inverting</a>.</div>
+<h3><span class="mw-headline" id="Analysis_Action">Analysis Action</span></h3>
 <ul><li><b>Analyze:</b> Tells you how great the chances are of a successful vocal reduction or isolation. It returns also the average Pan position for the selected audio. See <a href="#analysis">below</a> for an in-depth explanation.</li></ul>
+<div class="note">This option only analyzes the audio. The selected audio is not modified by the effect.</div>
 <p><br />
 </p>
 <div id="strength"></div>
@@ -75,16 +100,22 @@
 <ul><li><b>Less than 1.0:</b> Produces a peak like a <i><b>U</b></i> shape upside down, similar to an arch. Only extreme left and right are eliminated.</li>
 <li><b>1.0 - the default:</b> Produces a peak like a <i><b>V</b></i> shape upside down. The power distribution is preserved.  You might want a higher value when a lot of side audio leaks in. This is also the recommended setting when working with two tracks (options with <b>...and Invert</b>).</li>
 <li><b>Greater than 1.0:</b> Produces a peak with an <i><b>A</b></i> shape like the Eiffel Tower (with a sharp point). This will attenuate most of the side energy but might produce artifacts or musical noise. <a href="normalize.html" title="Normalize">Normalize</a> the audio after using Isolate with a high strength setting.</li></ul>
+<p><br />
+</p>
 <div id="lowcut"></div>
 <h2><span class="mw-headline" id="Low_Cut_for_Vocals">Low Cut for Vocals</span></h2>
 <p>All actions with <b>Vocals</b> in the name use this value. The frequencies below will  either not be removed or not be included in the isolated audio. It is useful to exclude bass and kick drum. The default value of 120 Hz is good for most lead vocals, or even low male voices. You can enter a higher value around 170 Hz for female voices and about 230 Hz for those of children.
 </p>
 <div class="note">This control only affects "<a href="#action">Actions</a>" that contain the word <b>Vocals</b> in their name.</div>
+<p><br />
+</p>
 <div id="highcut"></div>
 <h2><span class="mw-headline" id="High_Cut_for_Vocals">High Cut for Vocals</span></h2>
 <p>All actions with <b>Vocals</b> in the name use this value. The frequencies above  will  either not be removed or not be included in the isolated audio. It is useful to exclude high sounds like bells, cymbals or Hi-hat. Note that human sounds like <b>S</b> or <b>Z</b> can also be very high in frequency - 5000 to 8000 Hz, so listen carefully to the preview.
 </p>
 <div class="note">This control only affects "<a href="#action">Actions</a>" that contain the word <b>Vocals</b> in their name.</div>
+<p><br />
+</p>
 <div id="buttons"></div>
 <h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
 <p>Clicking on the command buttons give the following results:
@@ -110,6 +141,8 @@
 <li> Copy the value for the Pan Position. Double-click in the Pan slider to open the adjustment dialog then paste in the value with reversed sign (that is, put a minus sign in front of a positive value and a positive sign in front of a negative value). </li>
 <li> Mix and render the track. The voice will now be exactly centered and you can remove or isolate it. </li>
 <li> Don't forget to readjust the selection. </div></li></ol>
+<p><br />
+</p>
 <div id="limitations"></div>
 <h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
 <ul><li>The input must be a true stereo track and not mere (dual) mono.</li>
@@ -124,6 +157,8 @@
 </td>
 <td align="left" valign="top">The whole processing is done in memory. Long selections (over half an hour) might therefore cause Audacity to crash.
 </td></tr></table></div>
+<p><br />
+</p>
 <div id="examples"></div>
 <h2><span class="mw-headline" id="Examples">Examples</span></h2>
 <div class="example">This effect can be used in a variety of ways:                      
@@ -153,40 +188,42 @@
 <dl><dd><dl><dd><dl><dd>Make the two tracks stereo and  choose <b>Analyze</b>. The correlation value is the measure for the similarity in percent.</dd></dl></dd></dl></dd></dl>
 <ul><li>Applying a brick wall filter to mono tracks</li></ul>
 <dl><dd><dl><dd><dl><dd>Duplicate a mono track, make it stereo and choose <b>Isolate Vocals</b> for band pass and <b>Remove Vocals</b> for band stop filtering. Adjust the frequencies accordingly.</div></dd></dl></dd></dl></dd></dl>
+<p><br />
+</p>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130522
+Cached time: 20191115102142
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.111 seconds
-Real time usage: 0.117 seconds
-Preprocessor visited node count: 311/1000000
-Preprocessor generated node count: 1061/1000000
-Post‐expand include size: 22004/2097152 bytes
-Template argument size: 7512/2097152 bytes
+CPU time usage: 0.125 seconds
+Real time usage: 0.129 seconds
+Preprocessor visited node count: 348/1000000
+Preprocessor generated node count: 1133/1000000
+Post‐expand include size: 23569/2097152 bytes
+Template argument size: 8347/2097152 bytes
 Highest expansion depth: 14/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   37.263      1 - -total
- 37.44%   13.952      1 - Template:Effectbuttons
- 27.54%   10.264      1 - Template:Buttonlist
- 18.38%    6.849      1 - Template:No-rename
- 17.79%    6.627     10 - Template:Button
- 14.06%    5.239      1 - Template:Ednote
-  8.68%    3.234      1 - Template:Effects
-  7.28%    2.714      1 - Template:Hint
-  7.05%    2.626      7 - Template:Note
-  4.83%    1.800      1 - Template:Example
+100.00%   35.758      1 - -total
+ 34.66%   12.395      1 - Template:Effectbuttons
+ 25.54%    9.133      1 - Template:Buttonlist
+ 21.99%    7.864      1 - Template:No-rename
+ 18.26%    6.530     10 - Template:Button
+ 16.80%    6.008      1 - Template:Ednote
+  7.92%    2.831      8 - Template:Note
+  5.72%    2.046      2 - Template:Hint
+  4.42%    1.580      3 - Template:Advice
+  4.42%    1.579      1 - Template:Effects
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5236-0!*!0!!*!5!* and timestamp 20190503130522 and revision id 62734
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5236-0!*!0!!*!5!* and timestamp 20191115102142 and revision id 65676
  -->
 </div>
 										<!-- end content -->
@@ -259,7 +296,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Vocal_Reduction_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Vocal_Reduction_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

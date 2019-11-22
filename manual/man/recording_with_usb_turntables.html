@@ -34,6 +34,7 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+
 <div class="intro"><p>Audacity is often included with USB turntables, USB cassette decks or USB audio interfaces, and is suitable for recording from any USB audio device using the instructions on this page.</p><p>USB audio devices connect to the computer's USB port and are used to transfer records, or tapes, to digital audio files (from which <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">audio CDs</a> can be burnt). This is very useful if your computer does not have the necessary line-in port for digitizing LPs or cassettes with a conventional turntable or tape deck. USB turntables often include a line input to which standard tape decks or similar sources can be connected for transfer to the computer.</p></div>
 <div class="note">Much of the information on this page, and the pages linked to below, also apply to recording with USB tape cassette decks and audio devices connected with external USB audio interfaces.
 <p>Please see the Audacity Wiki page on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/USB_turntables">USB Turntables</a> for a fuller discussion of the operation of these devices.
@@ -50,14 +51,14 @@ and, if needed, download the latest Audacity for your operating system.
 <p>The guides provided with the devices might be confusing, they are written by the device manufacturer rather than by Audacity. Sometimes the guides supplied with the devices are out-of-date or have errors. Here are some errors that you may come across: 
 </p>
 <ul><li> Many manuals state that you should "select stereo mix for your input".  This is not the case, rather <b>you should be setting the USB device as your input</b>. </li></ul>
-<ul><li> <b>Audacity Preferences are not under the <span class="menu">File</span> menu</b>, as many manuals state, except in the legacy 1.0.0 version of Audacity which is only appropriate for Mac OS 9 and Windows 95.  Preferences are under the <span class="menu">Edit</span> menu, or under the <span class="menu">Audacity</span> menu on Mac.     </li></ul>
+<ul><li> <b>Audacity Preferences are not under the <span class="menu">File</span> menu</b>, as many manuals state. Preferences are under the <span class="menu">Edit</span> menu <i>(or under the <span class="menu">Audacity</span> menu on Mac)</i>.     </li></ul>
 <ul><li> <b>You do not need to select <span class="menu">Start Monitoring</span> each time you launch Audacity</b>, as some manuals urge you to.  Monitoring the input is optional and allows you to hear the device through the computer speakers just like an ordinary turntable, or cassette deck, whenever it's playing, without having to record. If you want to select <span class="menu">Start Monitoring</span>, you need to have the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter</a> enabled (note: <b>NOT</b> the Mixer Toolbar that some guides state). Instructions on this are below.</li></ul>
 <div id="setup"></div>
 <h2><span class="mw-headline" id="Set_up_Audacity_to_record_from_the_USB_audio_device">Set up Audacity to record from the USB audio device</span></h2>
 <h3><span class="mw-headline" id="Connect_the_USB_device">Connect the USB device</span></h3>
-<p>Connect the USB cable of the device to the computer. Connect to an empty USB port on the computer, not to a USB hub (a device that allows multiple USB devices to be connected to one of your computer's USB ports). 
-</p><p><br />
-</p>
+<ul><li>Connect the USB cable of the device to the computer. Connect to an empty USB port on the computer, not to a USB hub (a device that allows multiple USB devices to be connected to one of your computer's USB ports).  </li>
+<li>Then launch Audacity. 
+<ul><li>If Audacity was already running when you connected the cable, choose <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> or restart Audacity. </li></ul></li></ul>
 <div class="note"><b>System settings needed for Windows and Mac</b>
 <p><span style="font-weight: bold; font-size:118%">Windows:</span>
 </p>
@@ -92,12 +93,8 @@ and, if needed, download the latest Audacity for your operating system.
 <ul><li>These settings can also be changed in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>.  </li></ul></li></ul>
 Windows calls most USB external devices "microphones". Some higher-end USB recording interfaces may appear as their explicit manufacturer's name. </ul>
 <h3><span class="mw-headline" id="Software_Playthrough">Software Playthrough</span></h3>
-<p>Use <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> and click <b>"Software Playthrough"</b> to turn it "on" (the checkmark is shown when it is "on"). This setting can also be enabled or disabled in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>. Software Playthrough lets you hear the turntable through the computer speakers when recording. It also lets you hear the turntable <i>without</i> recording if you turn on monitoring (see the next section below).  
+<p>Use <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> and click <b>"Software Playthrough"</b> to turn it "on" (the checkmark is shown when it is "on"). This setting can also be enabled or disabled in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>. Software Playthrough lets you hear the turntable through the computer speakers when recording. It also lets you hear the turntable <i>without</i> recording if you turn on monitoring (see the next section below).
 </p>
-<div class="note">
-<p>If Audacity's Software Playthrough does not produce audio on Mac, try the third-party <a rel="nofollow" class="external text" href="https://www.rogueamoeba.com/freebies/">LineIn</a> application.
-</p>
-</div>
 <h3><span class="mw-headline" id="Monitoring">Monitoring</span></h3>
 <p>Enable monitoring to set the recording level
 </p>
@@ -116,6 +113,7 @@ Windows calls most USB external devices "microphones". Some higher-end USB recor
 </p>
 <div id="recedex"></div>
 <h2><span class="mw-headline" id="Recording.2C_editing_and_exporting">Recording, editing and exporting</span></h2>
+
 <p>Once your USB turntable or cassette deck is set up and working properly, go to the <a href="basic_recording_editing_and_exporting.html" title="Basic Recording, Editing and Exporting">Basic Recording, Editing and Exporting</a> section of our <a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD">Tutorial - Copying tapes, LPs or MiniDiscs to CD</a> for instructions on how to:
 </p>
 <ul><li> make and edit your recording</li>
@@ -131,34 +129,34 @@ Windows calls most USB external devices "microphones". Some higher-end USB recor
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130310
+Cached time: 20191115102239
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.119 seconds
-Real time usage: 0.126 seconds
-Preprocessor visited node count: 402/1000000
-Preprocessor generated node count: 1592/1000000
-Post‐expand include size: 9365/2097152 bytes
-Template argument size: 6849/2097152 bytes
+CPU time usage: 0.118 seconds
+Real time usage: 0.123 seconds
+Preprocessor visited node count: 416/1000000
+Preprocessor generated node count: 1644/1000000
+Post‐expand include size: 9568/2097152 bytes
+Template argument size: 6989/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   48.192      1 - -total
- 55.64%   26.812      1 - Template:I18n
- 52.07%   25.095      1 - Template:I18n_box
- 44.08%   21.244      1 - Template:I18n_list
- 20.04%    9.657      4 - Template:Note
- 18.36%    8.850      3 - Template:I18n_link
- 11.27%    5.433     19 - Template:Menu
- 10.97%    5.288      3 - Template:Autoglossonym
-  4.61%    2.221      1 - Template:Intro
-  3.58%    1.725      2 - Template:Bh
+100.00%   42.520      1 - -total
+ 56.64%   24.084      1 - Template:I18n
+ 51.53%   21.910      1 - Template:I18n_box
+ 42.06%   17.886      1 - Template:I18n_list
+ 19.96%    8.488      3 - Template:I18n_link
+ 17.06%    7.256      3 - Template:Note
+ 12.03%    5.117      3 - Template:Autoglossonym
+ 10.22%    4.348     20 - Template:Menu
+  3.56%    1.514      2 - Template:Ednote
+  3.53%    1.503      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2561-0!*!0!!*!5!* and timestamp 20190503130310 and revision id 63007
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2561-0!*!0!!*!5!* and timestamp 20191115102239 and revision id 65565
  -->
 </div>
 										<!-- end content -->
@@ -231,7 +229,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Recording_with_USB_turntables">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Recording_with_USB_turntables">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

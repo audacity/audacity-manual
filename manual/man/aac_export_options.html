@@ -34,12 +34,8 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<p><br />
-</p>
-<div class="intro"><b>AAC</b> is a <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>, <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i> audio format. It is the default audio format for Apple iTunes®, iPod® and iPhone®. </div>
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> then choosing <b>M4A(AAC) Files FFmpeg</b> from the <b>Save as type</b> dropdown menu</dd></dl>
-<dl><dd><span title="AAC Export Options at the bottom of the Export Audio dialog"><img alt="AACExportOptions.png" src="../m/images/4/47/aacexportoptions.png" width="571" height="576" /></span></dd></dl>
-<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>M4A(AAC) Files FFmpeg</b>  from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
+<div class="intro"><b>AAC</b> is a <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>, <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i> audio format. It is the default audio format for Apple iTunes®, iPod® and iPhone®.
+
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -47,42 +43,47 @@
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
 <td align="left" valign="top">FFmpeg is not shipped with Audacity but you can download it and then export as AAC by following <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">these instructions</a>.
-</td></tr></table></div>
+</td></tr></table></div> </div>
+<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> then choosing <b>M4A(AAC) Files FFmpeg</b> from the <b>Save as type</b> dropdown menu</dd></dl>
+<dl><dd><span title="AAC Export Options at the bottom of the Export Audio dialog"><img alt="AACExportOptions.png" src="../m/images/4/47/aacexportoptions.png" width="637" height="613" /></span></dd></dl>
+<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>M4A(AAC) Files FFmpeg</b>  from the <b>Save as type</b> dropdown menu. <p>In this case the options dialog will appear in the center of the Export Multiple dialog.</p></dd></dl>
+<p><br />
+</p>
 <div id="setup"></div>
 <h2><span class="mw-headline" id="Format_Options">Format Options</span></h2>
-
-<ul><li><b>Quality:</b> Currently this slider has no effect with the version of FFmpeg <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">recommended for Windows and Mac</a>. The exported file is always a constant bit rate (<i><b><a href="glossary.html#cbr" title="Glossary">CBR</a></b></i>) 196 kbps (stereo) or 98 kbps (mono) file. Exporting more than two channels using <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a> is not currently supported.<p>To specify a different constant bit rate for a mono or stereo AAC file, choose <b>Custom FFmpeg Export</b> in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a>. Then use the <span class="button">Open custom FFmpeg format options</span> button to open the <a href="custom_ffmpeg_export_options.html" title="Custom FFmpeg Export Options">Custom FFmpeg Export Options</a> dialog. See the <a href="custom_ffmpeg_export_options.html#example" title="Custom FFmpeg Export Options">example</a> on that page for details.</p></li></ul>
+<ul><li><b>Quality:</b> This slider controls the quality (bitrate in kbps) of the output AAC file. The Maximum bitrate (best quality) is 320 kbps (stereo) 160 kbps (mono) and the minimum is 98 kbps (mono). The current quality setting is displayed in the center of the slider scale.<p>The default quality setting of 160 typically produces a similar sized, but slightly higher quality file compared to an <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> at Audacity's default 128 kbps constant <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i>. A stereo file is always produced, but a file exported from a mono track will have about half the bit rate <i>(and hence half the file size)</i> of one exported from a stereo track.</p></li></ul>
+<div class="note">Like <i><b><a href="glossary.html#ogg" title="Glossary">OGG</a></b></i>, AAC encoding is a form of <i><b><a href="glossary.html#vbr" title="Glossary">VBR</a></b></i> or variable bit rate encoding, as opposed to the <i><b><a href="glossary.html#cbr" title="Glossary">CBR</a></b></i> or constant bit rate encoding used by default when exporting MP3 files. <p>This means that in order to maintain consistent quality throughout a track, a higher bit rate will be used when encoding a complex piece of audio (such as a full orchestral passage) than when encoding a solo voice or instrument.  A recording which has more  complex audio will produce a larger file. Increasing the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>  in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> will increase the bit rate and so the file size (and vice versa). </p></div>
 
 <!-- 
 NewPP limit report
-Cached time: 20190503070102
+Cached time: 20191115074855
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.090 seconds
-Real time usage: 0.096 seconds
-Preprocessor visited node count: 331/1000000
-Preprocessor generated node count: 1173/1000000
-Post‐expand include size: 8564/2097152 bytes
-Template argument size: 3917/2097152 bytes
+CPU time usage: 0.094 seconds
+Real time usage: 0.101 seconds
+Preprocessor visited node count: 319/1000000
+Preprocessor generated node count: 1115/1000000
+Post‐expand include size: 7842/2097152 bytes
+Template argument size: 3251/2097152 bytes
 Highest expansion depth: 13/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   46.160      1 - -total
- 74.15%   34.227      1 - Template:Flag
- 70.82%   32.692      1 - Template:I18n
- 66.89%   30.877      1 - Template:I18n_box
- 58.71%   27.100      1 - Template:I18n_list
- 33.74%   15.574      7 - Template:I18n_link
- 19.76%    9.121      7 - Template:Autoglossonym
-  6.44%    2.972      1 - Template:Ednote
-  5.31%    2.450      1 - Template:Advice
-  3.99%    1.843      1 - Template:Intro
+100.00%   49.237      1 - -total
+ 79.06%   38.929      1 - Template:Flag
+ 75.06%   36.956      1 - Template:I18n
+ 70.93%   34.923      1 - Template:I18n_box
+ 62.47%   30.758      1 - Template:I18n_list
+ 34.25%   16.864      7 - Template:I18n_link
+ 19.85%    9.775      7 - Template:Autoglossonym
+ 12.07%    5.944      1 - Template:Intro
+  3.52%    1.732      2 - Template:Menu
+  3.33%    1.641      1 - Template:Note
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3034-0!*!0!*!*!5!* and timestamp 20190503070102 and revision id 60346
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3034-0!*!0!*!*!5!* and timestamp 20191115074855 and revision id 65569
  -->
 </div>
 										<!-- end content -->
@@ -155,7 +156,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/AAC_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/AAC_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

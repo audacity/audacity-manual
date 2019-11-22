@@ -256,7 +256,7 @@
 <tr>
 <td id="fft" valign="top"> <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Fast_Fourier_transform"><img src="../manual/images/8/8f/wikipedia1.png" alt="Wikipedia1.png" /></a>
 </td>
-<td valign="top"> <b>FFT:</b>
+<td valign="top"> <b>FFT&#160;:</b>
 </td>
 <td valign="top"> Fast Fourier Transform. A method for performing <i><b><a href="#ft">Fourier transforms</a></b></i> quickly.
 </td></tr>
@@ -552,7 +552,7 @@
 </td>
 <td valign="top"> <b>Windows WASAPI:</b>
 </td>
-<td valign="top"> The most recent Windows interface between applications (such as Audacity) and the audio interface driver. It is one of the "audio hosts" selectable in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. WASAPI was first officially released in 2007 in <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Windows_Vista">Windows Vista</a>.
+<td valign="top"> The most recent Windows interface between applications (such as Audacity) and the audio interface driver. It is one of the "audio hosts" selectable in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. WASAPI was first officially released in 2007.
 
 </td></tr>
 <tr>
@@ -569,7 +569,7 @@
 </p>
 <ul><li> <b>WAV</b> format is widely used on Windows and is needed for creating an audio CD.</li>
 <li> <b>AIFF</b> is widely used on Apple's operating systems.</li>
-<li> Compressed formats are used on portable music players.</li></ul>
+<li> Compressed formats (like <b>MP3</b> and <b>AAC</b> are used on portable music players.</li></ul>
 </div>
 
 <table class="prettytablerows">
@@ -614,6 +614,13 @@
 <td valign="top"> A <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Container_format_(digital)">container</a> format, used by Audacity for storage of  <i><b><a href="#lossless">lossless</a></b></i>, <i><b><a href="#uncompressed_format">uncompressed</a></b></i>, <i><b><a href="#pcm">PCM</a></b></i> audio data.  Not be confused with <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Au_file_format">Sun/NeXT AU</a> files, which are usually U-Law encoded PCM files but may be headerless.
 </td></tr>
 <tr>
+<td id="caf" valign="top"> <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Core_Audio_Formatt"><img src="../manual/images/8/8f/wikipedia1.png" alt="Wikipedia1.png" /></a>
+</td>
+<td width="120px" valign="top"> <b>CAF:</b>
+</td>
+<td valign="top"> A <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Container_format_(digital)">container</a> format for storing audio, developed by Apple Inc. It is designed to overcome limitations of older digital audio formats.  Unlike WAV and AIFF its size is virtually unlimited and can theoretically save hundreds of years of recorded audio due to its use of 64-bit file offsets.
+</td></tr>
+<tr>
 <td id="flac" valign="top"> <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/FLAC"><img src="../manual/images/8/8f/wikipedia1.png" alt="Wikipedia1.png" /></a>
 </td>
 <td width="120px" valign="top"> <b>FLAC:</b>
@@ -656,6 +663,20 @@
 <td valign="top"> An Open Source <i><b><a href="#lossy">lossy</a></b></i>, <i><b><a href="#compressed_format">size-compressed</a></b></i> audio format, strictly speaking the  <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Vorbis">Vorbis</a> format in a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Container_format_%28digital%29">container</a> having <b>OGG</b> <i><b><a href="#extension">extension</a></b></i>.
 </td></tr>
 <tr>
+<td id="raw" valign="top"> <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Raw_audio_format"><img src="../manual/images/8/8f/wikipedia1.png" alt="Wikipedia1.png" /></a>
+</td>
+<td valign="top"> <b>RAW:</b>
+</td>
+<td valign="top"> RAW Audio format is an audio file format for storing uncompressed audio in raw form. Comparable to WAV or AIFF in size, RAW Audio file does not include any header information (sampling rate, bit depth, endian, or number of channels).
+</td></tr>
+<tr>
+<td id="rf64" valign="top"> <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/RF64"><img src="../manual/images/8/8f/wikipedia1.png" alt="Wikipedia1.png" /></a>
+</td>
+<td valign="top"> <b>RF64:</b>
+</td>
+<td valign="top"> A <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Container_format_(digital)">container</a> format, based on the Microsoft RIFF/WAVE format and Wave (WAV) Format.  It allows for more than 4 GB file sizes when needed (the maximum filesize is now approximately 16 exabytes, which is effectively unlimited.
+</td></tr>
+<tr>
 <td id="wav" valign="top"> <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Wav"><img src="../manual/images/8/8f/wikipedia1.png" alt="Wikipedia1.png" /></a>
 </td>
 <td valign="top"> <b>WAV:</b>
@@ -672,32 +693,32 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20190503125807
+Cached time: 20191115004525
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.165 seconds
-Real time usage: 0.170 seconds
+CPU time usage: 0.196 seconds
+Real time usage: 0.201 seconds
 Preprocessor visited node count: 376/1000000
 Preprocessor generated node count: 1059/1000000
-Post‐expand include size: 5238/2097152 bytes
-Template argument size: 1656/2097152 bytes
+Post‐expand include size: 5192/2097152 bytes
+Template argument size: 1610/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   37.527      1 - -total
- 87.55%   32.856      1 - Template:I18n
- 82.98%   31.138      1 - Template:I18n_box
- 74.09%   27.803      1 - Template:I18n_list
- 45.60%   17.113      9 - Template:I18n_link
- 26.78%   10.050      9 - Template:Autoglossonym
-  5.99%    2.248      2 - Template:Ednote
-  4.53%    1.701      1 - Template:Intro
+100.00%   47.601      1 - -total
+ 89.28%   42.496      1 - Template:I18n
+ 84.64%   40.291      1 - Template:I18n_box
+ 76.04%   36.195      1 - Template:I18n_list
+ 45.69%   21.749      9 - Template:I18n_link
+ 26.35%   12.542      9 - Template:Autoglossonym
+  5.29%    2.516      2 - Template:Ednote
+  3.82%    1.819      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2430-0!*!0!!*!*!* and timestamp 20190503125807 and revision id 62844
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2430-0!*!0!!*!*!* and timestamp 20191115004525 and revision id 65564
  -->
 </div>
 										<!-- end content -->
@@ -770,7 +791,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Glossary">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Glossary">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

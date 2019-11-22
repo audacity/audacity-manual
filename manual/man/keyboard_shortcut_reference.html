@@ -33,8 +33,7 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference#searchInput">search</a></div>
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
-</p>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 
 <div class="intro">This page lists all commands in the Audacity menus and all pre-defined keyboard shortcuts.  The default <b>Standard</b> set of shortcuts is a reduced set, compared to earlier versions of Audacity, to simplify the set of shortcuts somewhat and to provide greater flexibilty for users who wish to create their own shortcuts. There is also an extended <b>Full</b> set of keyboard shortcuts that can be selected from the <span class="button">Defaults</span> button on the <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> dialog.  This <b>Full</b> set is the set that was available in Audacity 2.1.3 and earlier.  You can use <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> to change or remove existing shortcuts or to assign a shortcut to commands that lack a default shortcut. 
 <ul><li> Standard shortcuts are shown like so: <span class="kbrd" style="background-color: #d0d0f8">Ctrl + A</span>.  </li>
@@ -1957,11 +1956,18 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <td>Repeats the selected audio again and again, normally softer each time and normally not blended into the original sound until some time after it starts. The delay time between each repeat is fixed, with no pause in between each repeat. For a more configurable echo effect with a variable delay time and pitch-changed echoes, see <a href="effect_menu.html#Delay" title="Effect Menu">Delay</a>.
 </td></tr>
 <tr>
-<td><a href="effect_menu_built_in.html#equalization" title="Effect Menu: Built-in">Equalization...</a>
+<td><a href="effect_menu_built_in.html#filter_curve" title="Effect Menu: Built-in">Filter Curve...</a>
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Adjusts the volume levels of particular frequencies.
+<td>Adjusts the volume levels of particular frequencies, using drawn curves.
+</td></tr>
+<tr>
+<td><a href="effect_menu_built_in.html#graphic_eq" title="Effect Menu: Built-in">Graphic EQ...</a>
+</td>
+<td><i>(unassigned)</i>
+</td>
+<td>Adjusts the volume levels of particular frequencies, using sliders.
 </td></tr>
 <tr>
 <td><a href="effect_menu_built_in.html#fade_in" title="Effect Menu: Built-in">Fade In</a>
@@ -2140,21 +2146,21 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view, applies a  <i><b><a href="glossary.html#notch" title="Glossary">notch filter</a></b></i>, <i><b><a href="glossary.html#hp" title="Glossary">high pass filter</a></b></i> or <i><b><a href="glossary.html#lp" title="Glossary">low pass filter</a></b></i> according to the spectral selection made. This effect can also be used to change the audio quality as an alternative to using <a href="equalization.html" title="Equalization">Equalization</a>.
+<td>When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view, applies a  <i><b><a href="glossary.html#notch" title="Glossary">notch filter</a></b></i>, <i><b><a href="glossary.html#hp" title="Glossary">high pass filter</a></b></i> or <i><b><a href="glossary.html#lp" title="Glossary">low pass filter</a></b></i> according to the spectral selection made. This effect can also be used to change the audio quality as an alternative to using equalization with either <a href="filter_curve.html" title="Filter Curve">Filter Curve</a> or <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a>.
 </td></tr>
 <tr>
 <td><a href="effect_menu_nyquist.html#spectral_edit_parametric_eq" title="Effect Menu: Nyquist">Spectral edit parametric EQ...</a>
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view and the spectral selection has a center frequency and an upper and lower boundary, performs the specified <i><b><a href="glossary.html#band_stop" title="Glossary">band cut</a></b></i> or <i><b><a href="glossary.html#band_pass" title="Glossary">band boost</a></b></i>. This can be used as an alternative to <a href="equalization.html" title="Equalization">Equalization</a> or may also be useful to repair damaged audio by reducing frequency spikes or boosting other frequencies to mask spikes.
+<td>When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view and the spectral selection has a center frequency and an upper and lower boundary, performs the specified <i><b><a href="glossary.html#band_stop" title="Glossary">band cut</a></b></i> or <i><b><a href="glossary.html#band_pass" title="Glossary">band boost</a></b></i>. This can be used as an alternative to equalization with either <a href="filter_curve.html" title="Filter Curve">Filter Curve</a> or <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a> or may also be useful to repair damaged audio by reducing frequency spikes or boosting other frequencies to mask spikes.
 </td></tr>
 <tr>
 <td><a href="effect_menu_nyquist.html#spectral_edit_shelves" title="Effect Menu: Nyquist">Spectral edit shelves...</a>
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view, applies either a low- or high-frequency shelving filter or both filters, according to the spectral selection made. This can be used as an alternative to <a href="equalization.html" title="Equalization">Equalization</a> or may also be useful to repair damaged audio by reducing frequency spikes or boosting other frequencies to mask spikes.
+<td>When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view, applies either a low- or high-frequency shelving filter or both filters, according to the spectral selection made. This can be used as an alternative to equalization with either <a href="filter_curve.html" title="Filter Curve">Filter Curve</a> or <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a> or may also be useful to repair damaged audio by reducing frequency spikes or boosting other frequencies to mask spikes.
 </td></tr>
 <tr>
 <td><a href="effect_menu_nyquist.html#studio_fade_out" title="Effect Menu: Nyquist">Studio Fade Out</a>
@@ -2176,13 +2182,6 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <td><i>(unassigned)</i>
 </td>
 <td>Attempts to remove or isolate center-panned audio from a stereo track.  Most  "Remove" options in this effect preserve the stereo image.
-</td></tr>
-<tr>
-<td><a href="effect_menu_nyquist.html#vocal_remover" title="Effect Menu: Nyquist">Vocal Remover...</a>
-</td>
-<td><i>(unassigned)</i>
-</td>
-<td>(Legacy effect) Attempts to remove center-panned vocals from a stereo track. The output from this effect will always be mono. Help text is available from within the dialog.
 </td></tr>
 <tr>
 <td><a href="effect_menu_nyquist.html#vocoder" title="Effect Menu: Nyquist">Vocoder...</a>
@@ -2303,6 +2302,13 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <td><i>(unassigned)</i>
 </td>
 <td>Brings up a dialog where you can enter Nyquist commands. Nyquist is a programming language for generating, processing and analyzing audio. For more information see <a rel="nofollow" class="external text" href="http://wiki.audacityteam.org/wiki/Nyquist_Plugins_Reference">Nyquist Plug-ins Reference</a>.
+</td></tr>
+<tr>
+<td><a href="tools_menu.html#nyquist_plugin_installer" title="Tools Menu">Nyquist Plug-in Installer</a>
+</td>
+<td><i>(unassigned)</i>
+</td>
+<td>The Nyquist Plug-in Installer is itself a Nyquist plug-in that simplifies the installation of other Nyquist plug-ins.  For details see <a href="nyquist_plug_in_installer.html" title="Nyquist Plug-in Installer">Nyquist Plug-in Installer</a>.
 </td></tr>
 <tr>
 <td><a href="tools_menu.html#regular_interval_labels" title="Tools Menu">Regular Interval Labels...</a>
@@ -3474,34 +3480,34 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130153
+Cached time: 20191115015746
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.826 seconds
-Real time usage: 0.835 seconds
-Preprocessor visited node count: 4469/1000000
-Preprocessor generated node count: 9981/1000000
-Post‐expand include size: 44659/2097152 bytes
-Template argument size: 13480/2097152 bytes
+CPU time usage: 0.848 seconds
+Real time usage: 0.857 seconds
+Preprocessor visited node count: 4479/1000000
+Preprocessor generated node count: 10009/1000000
+Post‐expand include size: 44763/2097152 bytes
+Template argument size: 13537/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  297.806      1 - -total
- 21.53%   64.126    105 - Template:Shortcut
- 10.58%   31.496      1 - Template:I18n
- 10.01%   29.814      1 - Template:I18n_box
-  8.69%   25.890      1 - Template:I18n_list
-  7.92%   23.583     37 - Template:Fullshortcut
-  5.83%   17.361     58 - Template:Note
-  5.36%   15.964     57 - Template:Hoverext
-  4.52%   13.467      1 - Template:Intro
-  4.24%   12.618    255 - Template:Unassigned
+100.00%  301.360      1 - -total
+ 22.00%   66.309    105 - Template:Shortcut
+  9.70%   29.219      1 - Template:I18n
+  9.16%   27.592      1 - Template:I18n_box
+  8.00%   24.103     37 - Template:Fullshortcut
+  7.97%   24.029      1 - Template:I18n_list
+  5.74%   17.293     58 - Template:Note
+  5.54%   16.701     57 - Template:Hoverext
+  4.34%   13.071    256 - Template:Unassigned
+  3.73%   11.227      4 - Template:I18n_link
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1959-0!*!0!!*!5!* and timestamp 20190503130153 and revision id 63578
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1959-0!*!0!!*!5!* and timestamp 20191115015745 and revision id 65529
  -->
 </div>
 										<!-- end content -->
@@ -3574,7 +3580,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

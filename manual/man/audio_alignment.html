@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Audio Alignment - Audacity Manual</title>
+
+
+
+
+<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Audio_Alignment rootpage-Audio_Alignment skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Audio Alignment</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Audio_Alignment#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">This page explains how to align multiple tracks so that their audio starts at the same point on the timeline above the waveform.<p>For example you would often want to do this when you have recorded one track against another and need to ensure the recorded track is properly synchronized with the other track(s).</p></div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#menu">Using the Tracks Menu</a></li>
+<li><a href="#timeshift">Time Shift Tool</a></li>
+<li><a href="#nomouse">Aligning tracks without a mouse - for visually impaired users</a></li>
+<li><a href="#marking">Marking alignment points</a></li></ol>
+<p><br />
+</p>
+<div id="menu"></div>
+<h2><span class="mw-headline" id="Using_the_Tracks_Menu">Using the Tracks Menu</span></h2>
+<p>The menu commands in the <b><span class="menu">Tracks &gt; <a href="tracks_menu_align_tracks.html" title="Tracks Menu: Align Tracks">Align Tracks</a></span></b> submenu provide an automatic way of aligning <a href="audacity_selection.html" title="Audacity Selection">selected tracks</a> with the cursor, the selection, or with the start of the project:
+</p>
+<dl><dd><img alt="Tracks-Align TracksMenu.png" src="../m/images/a/a6/tracks_align_tracksmenu.png" width="489" height="270" /></dd></dl>
+<ul><li> <span style="font-weight: bold; font-size:118%">Align End to End:</span></li></ul>
+<dl><dd>Aligns the selected tracks one after the other, based on their top-to-bottom order in the project window. The first selected track remains where it is, the start of the second selected track aligns with the end of the first selected track and so on. </dd></dl>
+<ul><li> <span style="font-weight: bold; font-size:118%">Align Together:</span></li></ul>
+<dl><dd>If you select multiple tracks, this command moves the tracks so that they all start at the same time, so audio within them changes its synchronization. </dd></dl>
+<ul><li> <span style="font-weight: bold; font-size:118%">Start to Zero:</span></li></ul>
+<dl><dd>Aligns the start of selected tracks with the start of the project.</dd></dl>
+<ul><li> <span style="font-weight: bold; font-size:118%">Start to Cursor/Selection Start:</span> </li></ul>
+<dl><dd>Aligns the start of selected tracks with the current cursor position or with the start of the current selection.</dd></dl>
+<ul><li> <span style="font-weight: bold; font-size:118%">Start to Selection End:</span> </li></ul>
+<dl><dd>Aligns the start of selected tracks with the end of the current selection.</dd></dl>
+<ul><li> <span style="font-weight: bold; font-size:118%">End to Cursor/Selection Start:</span> </li></ul>
+<dl><dd>Aligns the end of selected tracks with the current cursor position or with the start of the current selection.</dd></dl>
+<ul><li> <span style="font-weight: bold; font-size:118%">End to Selection End:</span> </li></ul>
+<dl><dd>Aligns the end of selected tracks with the end of the current selection.</dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">If <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Lock Tracks</a> is enabled, unselected tracks in a Sync-Locked Track Group will also move so that all the tracks in that group remain synchronized, <b>except for</b> the Align "End to End" and "Together" commands where only the selected tracks will move. Aligning end to end or together overrides Sync-Lock Tracks if necessary, so the selected tracks in that group may become de-synchronized.
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="timeshift"></div>
+<h2><span class="mw-headline" id="Time_Shift_Tool">Time Shift Tool</span></h2>
+<p>An easy way for sighted users to align tracks with each other  is to use the Time Shift Tool <img alt="Time Shift Tool" src="../m/images/a/ad/timeshift.png" title="Time Shift Tool" width="27" height="27" /> which is located, by default, at the top of the Audacity screen in the <a href="tools_toolbar.html" title="Tools Toolbar">Tools Toolbar</a> <img alt="Tools Toolbar Timeshift tool.png" src="../m/images/d/db/tools_toolbar_timeshift_tool.png" width="94" height="55" />
+</p><p>To use the Time Shift Tool, click on the  <img alt="Time Shift Tool" src="../m/images/a/ad/timeshift.png" title="Time Shift Tool" width="27" height="27" /> button so it appears to be depressed, or press its shortcut <span class="kbrd" style="background-color: #d0d0f8">F5</span>. <i>If you wish to change its shortcut to something other than F5, you can do so on the <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard</a> tab of Preferences</i>. 
+</p><p>Then zoom in with <span class="kbrd" style="background-color: #d0d0f8">Ctrl + 1</span> <i>(or <span class="kbrd" style="background-color: #d0d0f8">&#8984; + 1</span> on a Mac)</i> so you can make a more precise alignment. Click in the track you want to move with the left button of the mouse, hold the button down while dragging the track to your required position, then release the mouse button.
+</p><p>There is no visual guesswork needed in aligning tracks as you can snap to track ends or <a href="label_tracks.html" title="Label Tracks">labels</a> when you time shift a track towards them.  If you drag a selection region, the start point of the area on the time line is displayed dynamically, as a yellow vertical line, in the waveforms as you drag.
+</p><p><br />
+</p>
+<div id="nomouse"></div>
+<h2><span class="mw-headline" id="Aligning_tracks_without_a_mouse_-_for_visually_impaired_users">Aligning tracks without a mouse - for visually impaired users</span></h2>
+<p>Visually impaired users can use this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Effect_Plug-ins#Time_Shifter">Time Shifter</a> plug-in to time-shift tracks without a mouse. Instructions are given in Timeshif.TXT inside the zip folder. 
+</p><p>This is one of a number of  <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Effect_Plug-ins">Nyquist plug-ins</a> available for use in Audacity and works on both mono and stereo tracks. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">To install new plug-ins, place them in the "Plug-Ins" folder inside the Audacity installation folder. On Windows computers, your installation folder is usually under "Program Files". On Mac, it is usually under "Applications". Time Shifter will appear in the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a> underneath the separator after you restart Audacity.  See <a href="installing_plug_ins.html" title="Installing Plug-ins">Installing Plug-ins</a> for greater, per platform, detail.
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="marking"></div>
+<h2><span class="mw-headline" id="Marking_alignment_points">Marking alignment points</span></h2>
+ </li></ul>
+<p>Some users find it easier to align tracks together when there is a vertical reference point extending down through all the tracks.
+You can make such a reference point by dragging the cursor down 
+into the other tracks, and optionally by marking cursor positions with labels. 
+</p><p>To drag the cursor into the other tracks, make sure you are using the Selection Tool <span title="Selection tool"><img alt="IBeam.png" src="../m/images/1/1f/ibeam.png" width="20" height="20" /></span> (shortcut <span class="kbrd" style="background-color: #d0d0f8">F1</span>), and place your cursor at a point where you want to line up the tracks. Then hold down <span class="kbrd" style="background-color: #e0e0f0">Shift</span> on your keyboard and click in the Track Control Panels (where the mute/solo buttons are) of all your other tracks. Now you'll see the cursor displayed in all the tracks, and you can switch to the Time Shift Tool and line up all the tracks against the cursor line. 
+</p><p>To add a label at a cursor point, use <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#addlabelatselection" title="Edit Menu: Labels">Add Label at Selection</a></span>. You can use the shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span> <i>(or <span class="kbrd" style="background-color: #d0d0f8">&#8984; + B</span> on a Mac</i>) instead. The label is created in a new Label Track underneath the audio tracks. When you click on the label, all tracks will be selected and the cursor will be displayed through all the tracks, just like when you selected all the tracks by clicking on their Track Control Panels. However the label provides a permanent reference point you can come back to, and because you can have multiple labels in a Label Track, there can be multiple points you can line up with. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"> See <a href="label_tracks.html" title="Label Tracks">Label Tracks</a> for more details on labelling/marking audio in Audacity.
+</td></tr></table>
+</div>
+<p>You could also generate a Rhythm Track before you put other tracks on screen, using the <span class="menu">Generate &gt; <a href="rhythm_track.html" title="Rhythm Track">Rhythm Track</a></span> command. This gives you visible and audible bars in that Rhythm Track at the beat points of a chosen tempo. You could use a beat point to set a cursor position then drag the cursor into the other tracks as described above. You need to close this Rhythm Track when you export your work (by clicking on the [X] top left of the track) so that you do not export the audible clicks, Alternatively you can simply mute the Rhythm Track prior to export by using the <span class="button">mute</span> button in its <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20191115102030
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.120 seconds
+Real time usage: 0.127 seconds
+Preprocessor visited node count: 312/1000000
+Preprocessor generated node count: 1545/1000000
+Post‐expand include size: 5915/2097152 bytes
+Template argument size: 2307/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 11/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   47.091      1 - -total
+ 47.82%   22.518      1 - Template:I18n
+ 43.50%   20.483      1 - Template:I18n_box
+ 34.14%   16.075      1 - Template:I18n_list
+ 13.00%    6.122      6 - Template:Shortcut
+ 11.21%    5.278      1 - Template:I18n_link
+  6.38%    3.006      1 - Template:Autoglossonym
+  5.75%    2.710      7 - Template:Bh
+  4.47%    2.106      1 - Template:Intro
+  3.85%    1.815      3 - Template:Tip
+-->
+
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4887-0!*!0!!*!5!* and timestamp 20191115102029 and revision id 65359
+ -->
+</div>
+										<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
+<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Audio_Alignment">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

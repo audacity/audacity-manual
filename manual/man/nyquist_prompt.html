@@ -55,22 +55,16 @@ When not selected (default), commands entered in the main text window will be in
 </p><p>Version 4 code includes a number of variables that are not available in version 3. In particular, the <b>S</b> variable is no longer used to pass sound from Audacity to Nyquist. In version 4 the <b>S</b> variable has been replaced by <b>*TRACK*</b>. Full details about the difference between version 3 and version 4 code can be found in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plugins_Reference">Audacity wiki</a>.
 </p>
 <h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
+<h3><span class="mw-headline" id="Editing_or_making_Nyquist_plug-ins">Editing or making Nyquist plug-ins</span></h3>
 <ul><li> <span class="button">Load</span> Load a Nyquist plugin or script file saved with .ny extension.</li>
-<li> <span class="button">Save</span> Save the current contents of the editor window as an .ny file. </li>
-<li> <span class="button">Manage</span> Opens a dropdown menu where you can save the window contents as a preset then reload those contents  by selecting the preset. You can also see some descriptive text about the plugin. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a>.</li>
-<li> <span class="button">Debug</span> Clicking this button redirects error messages from Audacity's <a rel="nofollow" class="external text" href="help_menu_diagnostics.html#show_log">error log</a> to a non-editable "Debug" window. An empty debug windows indicates that no errors were detected. Click <span class="button">OK</span> to close the debug window, or using the keyboard; hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> on Windows <i>(or <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. </li>
+<li> <span class="button">Save</span> Save the current contents of the editor window as an .ny file. </li></ul>
+<h3><span class="mw-headline" id="Presets">Presets</span></h3>
+<ul><li> <span class="button">Manage</span> Opens a dropdown menu where you can save the window contents as a preset then reload those contents  by selecting the preset. You can also see some descriptive text about the plugin. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a>.</li></ul>
+<h3><span class="mw-headline" id="Others">Others</span></h3>
+<ul><li> <span class="button">Debug</span> Clicking this button redirects error messages from Audacity's <a rel="nofollow" class="external text" href="help_menu_diagnostics.html#show_log">error log</a> to a non-editable "Debug" window. An empty debug windows indicates that no errors were detected. Click <span class="button">OK</span> to close the debug window, or using the keyboard; hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> on Windows <i>(or <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. </li>
 <li> <span class="button">OK</span> Applies the code to the waveform selection without debug output. Your entered code will be retained next time you open Nyquist Prompt in the Audacity session. Using the keyboard hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> on Windows <i>(or <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. Using the keyboard on Linux, hold down <span class="kbrd" style="background-color: #e0e0f0">Alt</span> and press <span class="kbrd" style="background-color: #e0e0f0">o</span>.</li>
 <li> <span class="button">Cancel</span>  No code is processed or debugged. Any code you entered after opening the window this time will be discarded.</li></ul>
 <div class="note">The Nyquist prompt supports both LISP syntax and SAL syntax. If the code you enter cannot be recognized as valid Nyquist code in either LISP or SAL syntax, an error message will appear with a hint about making a correction.</div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
-</td>
-<td align="left" valign="top"><b>Advanced users:</b> An experimental "<a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Workbench">Nyquist Workbench</a>"  graphical editor module is available if you compile the module and Audacity from source code, then enable the module in <a href="modules_preferences.html" title="Modules Preferences">Modules Preferences</a>.
-</td></tr></table>
-</div>
 
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
@@ -78,34 +72,34 @@ When not selected (default), commands entered in the main text window will be in
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130237
+Cached time: 20191115102144
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.124 seconds
-Real time usage: 0.131 seconds
-Preprocessor visited node count: 422/1000000
-Preprocessor generated node count: 1652/1000000
-Post‐expand include size: 8035/2097152 bytes
-Template argument size: 3746/2097152 bytes
+CPU time usage: 0.114 seconds
+Real time usage: 0.120 seconds
+Preprocessor visited node count: 427/1000000
+Preprocessor generated node count: 1638/1000000
+Post‐expand include size: 7441/2097152 bytes
+Template argument size: 3487/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   55.823      1 - -total
- 41.62%   23.233      1 - Template:I18n
- 38.34%   21.405      1 - Template:I18n_box
- 33.32%   18.601      1 - Template:I18n_list
- 13.09%    7.306      2 - Template:Ednote
- 12.67%    7.070     10 - Template:Button
- 12.60%    7.035      1 - Template:No-rename
- 11.96%    6.679      2 - Template:I18n_link
- 10.33%    5.766      9 - Template:Key
-  6.96%    3.884      2 - Template:Autoglossonym
+100.00%   50.398      1 - -total
+ 39.27%   19.793      1 - Template:I18n
+ 36.15%   18.219      1 - Template:I18n_box
+ 31.44%   15.844      1 - Template:I18n_list
+ 13.59%    6.847      2 - Template:Ednote
+ 12.87%    6.485     10 - Template:Button
+ 12.71%    6.405      1 - Template:No-rename
+ 11.77%    5.932      9 - Template:Key
+ 11.61%    5.853      2 - Template:I18n_link
+  6.83%    3.440      2 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3236-0!*!0!!*!5!* and timestamp 20190503130237 and revision id 62770
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3236-0!*!0!!*!5!* and timestamp 20191115102144 and revision id 64490
  -->
 </div>
 										<!-- end content -->
@@ -178,7 +172,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Nyquist_Prompt">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Nyquist_Prompt">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

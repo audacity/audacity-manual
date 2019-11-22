@@ -37,8 +37,9 @@
 <p><br />
 </p>
 <div class="intro">
-<p>To hear your work in other media applications, export it to an audio file.
+<p>To be able to hear your work in other media applications or players, you need to <b>Export</b> it to an audio file.
 </p>
+<div class="note">Alternatively, <a href="saving.html" title="Saving">saving an Audacity project</a> creates a <b><a href="audacity_projects.html" title="Audacity Projects">project file</a></b> (and linked <b><a href="audacity_projects.html" title="Audacity Projects">_data folder</a></b>) containing all your track contents, including labels and <a href="envelope_tool.html" title="Envelope Tool">envelope points</a>, so you can return to your work later exactly as you left it. However, other applications cannot read Audacity projects.</div>
 </div>
 <p>Audacity as shipped can export to a number of common audio formats including <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>, <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i>. 
 </p><p>To export as MP3, the optional <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">Lame MP3 encoder</a> must be installed.
@@ -48,60 +49,51 @@
 <li> Use <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportselectedaudio" title="File Menu: Export">Export Selected Audio...</a></span> to export only a <a href="audacity_selection.html" title="Audacity Selection">selected</a> area of audio. </li>
 <li> Use <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> to export multiple files at the same time, either one for each audio track, or one for each <a href="label_tracks.html" title="Label Tracks">labeled</a> area in a single track. 
 <ul><li><span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#addlabelatselection" title="Edit Menu: Labels">Add Label at Selection</a></span> lets you <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">split the tracks</a> from an album for multiple export as separate files.</li></ul></li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">
-<p>For either Export Audio, Export Selected Audio or Export Multiple, tracks on which the <a href="audio_tracks.html#mute" title="Audio Tracks">Mute</a> button is pressed are not exported. There will be a warning if you export with all audio tracks muted.
-</p>
-</td></tr></table></div>
+<div class="note">Please be aware that when using <b>Export</b> or <b>Export Multiple</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. So what you hear by previewing with playback prior to export is what you will get in the Exported audio file.
+<ul><li>When using <b>Export Selected Audio</b>, however, Audacity will Export the selection from <i><b>all</b></i> selected tracks even if some if those tracks are grayed-out and inaudible on playback.</li>
+<li>There will be a warning if you export with all audio tracks muted.</div></li></ul>
 <p>See <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> for more help with exporting. 
 </p>
 <h2><span class="mw-headline" id="Export_Formats">Export Formats</span></h2>
-<p>There are a number of audio formats that Audacity, as shipped, can export to; others can be added with additional software.
+<p>There are a number of <a href="file_export_dialog.html#type" title="File Export Dialog">audio formats</a> that Audacity, as shipped, can export to; others can be added with additional software.
 </p>
 <ul><li>As shipped available exports include <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>, <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i>.<br /></li>
 <li>To export as <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>, the optional <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">Lame MP3 encoder</a> must be installed.<br /></li>
 <li>You may install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> to  export to many more audio formats including <b>AC3, AMR(NB), M4A(AAC), MP4 and </b><i><a href="glossary.html#wma" title="Glossary">WMA</a></i><b>.</b></li></ul>
 <p><br />
-</p>
-<div class="note">Alternatively, <a href="saving.html" title="Saving">saving an Audacity project</a> creates a project file (and linked _data folder) containing all your track contents, including labels and <a href="envelope_tool.html" title="Envelope Tool">envelope points</a>, so you can return to your work later exactly as you left it. However, other applications cannot read Audacity projects.</div>
-<p><br />
-<a href="../quick_help.html" title="Quick Help"><b>|&lt;</b> Back to: Getting Started</a>
+</p><p><br />
+</p><p><a href="../quick_help.html" title="Quick Help"><b>|&lt;</b> Back to: Getting Started</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190503130324
+Cached time: 20191115102311
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.090 seconds
-Real time usage: 0.095 seconds
-Preprocessor visited node count: 271/1000000
-Preprocessor generated node count: 1084/1000000
-Post‐expand include size: 4627/2097152 bytes
-Template argument size: 1797/2097152 bytes
+CPU time usage: 0.065 seconds
+Real time usage: 0.069 seconds
+Preprocessor visited node count: 289/1000000
+Preprocessor generated node count: 1148/1000000
+Post‐expand include size: 5554/2097152 bytes
+Template argument size: 2927/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   39.908      1 - -total
- 77.19%   30.804      1 - Template:I18n
- 71.56%   28.558      1 - Template:I18n_box
- 60.81%   24.267      1 - Template:I18n_list
- 32.51%   12.972      5 - Template:I18n_link
- 18.52%    7.391      5 - Template:Autoglossonym
-  7.26%    2.899      1 - Template:Hint
-  4.52%    1.805      4 - Template:Menu
-  4.02%    1.605      1 - Template:Intro
-  3.79%    1.512      1 - Template:Note
+100.00%   40.646      1 - -total
+ 72.69%   29.545      1 - Template:I18n
+ 67.63%   27.489      1 - Template:I18n_box
+ 58.14%   23.631      1 - Template:I18n_list
+ 30.47%   12.386      5 - Template:I18n_link
+ 17.66%    7.176      5 - Template:Autoglossonym
+ 12.33%    5.012      1 - Template:Intro
+ 10.69%    4.345      2 - Template:Note
+  7.31%    2.971      1 - Template:Hint
+  5.39%    2.192      2 - Template:Button
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2637-0!*!0!*!*!5!* and timestamp 20190503130324 and revision id 57057
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2637-0!*!0!*!*!*!* and timestamp 20191115102311 and revision id 65189
  -->
 </div>
 										<!-- end content -->
@@ -174,7 +166,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Export">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Export">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

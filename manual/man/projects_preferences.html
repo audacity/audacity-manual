@@ -37,55 +37,46 @@
 </p>
 
 
-<p><br />
-</p>
-<dl><dd><b>Accessed by:</b> <span class="menu">Edit &gt; Preferences &gt; Projects </span> &#160;&#160;&#160;<i>(on a Mac <span class="menu">Audacity &gt; Preferences &gt; Projects </span>)</i></dd>
-<dd><div class="noresize"><map name="ImageMap_1_1378307965"><area href="devices_preferences.html" shape="rect" coords="24,34,136,50" alt="Devices Preferences" title="Devices Preferences"/><area href="playback_preferences.html" shape="rect" coords="24,52,136,68" alt="Playback Preferences" title="Playback Preferences"/><area href="recording_preferences.html" shape="rect" coords="24,70,136,86" alt="Recording Preferences" title="Recording Preferences"/><area href="midi_devices_preferences.html" shape="rect" coords="24,88,136,104" alt="MIDI Devices Preferences" title="MIDI Devices Preferences"/><area href="quality_preferences.html" shape="rect" coords="24,106,136,122" alt="Quality Preferences" title="Quality Preferences"/><area href="interface_preferences.html" shape="rect" coords="24,124,136,140" alt="Interface Preferences" title="Interface Preferences"/><area href="tracks_preferences.html" shape="rect" coords="24,142,136,158" alt="Tracks Preferences" title="Tracks Preferences"/><area href="tracks_behaviors_preferences.html" shape="rect" coords="44,160,136,176" alt="Tracks Behaviors Preferences" title="Tracks Behaviors Preferences"/><area href="spectrograms_preferences.html" shape="rect" coords="44,178,136,194" alt="Spectrograms Preferences" title="Spectrograms Preferences"/><area href="import_export_preferences.html" shape="rect" coords="24,196,136,212" alt="Import/Export Preferences" title="Import/Export Preferences"/><area href="extended_import_preferences.html" shape="rect" coords="44,214,136,230" alt="Extended Import Preferences" title="Extended Import Preferences"/><area href="#" shape="rect" coords="24,232,136,248" alt="Projects Preferences" title="Projects Preferences"/><area href="libraries_preferences.html" shape="rect" coords="24,250,136,266" alt="Libraries Preferences" title="Libraries Preferences"/><area href="directories_preferences.html" shape="rect" coords="24,268,136,284" alt="Directories Preferences" title="Directories Preferences"/><area href="warnings_preferences.html" shape="rect" coords="24,286,136,302" alt="Warnings Preferences" title="Warnings Preferences"/><area href="effects_preferences.html" shape="rect" coords="24,304,136,320" alt="Effects Preferences" title="Effects Preferences"/><area href="keyboard_preferences.html" shape="rect" coords="24,322,136,338" alt="Keyboard Preferences" title="Keyboard Preferences"/><area href="mouse_preferences.html" shape="rect" coords="24,340,136,356" alt="Mouse Preferences" title="Mouse Preferences"/><area href="modules_preferences.html" shape="rect" coords="24,358,136,374" alt="Modules Preferences" title="Modules Preferences"/><area href="help_button.html" shape="rect" coords="575,457,611,493" alt="Click on this in Audacity to get help" title="Click on this in Audacity to get help"/></map><img alt="Preferences Projects.png" src="../m/images/2/24/preferences_projects.png" width="646" height="481" usemap="#ImageMap_1_1378307965"/></div></dd></dl>
-<div style="position:relative;">
-<div class="note" style="width:150px;position:absolute;left:550px;top:-25px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click in the left column for other preferences</b></div>
-</div>
-<dl><dd><b>Projects Preferences.</b><br /></dd></dl>
-<p><br />
-</p>
-<div id="dependencies"></div>
-<h2><span class="mw-headline" id="When_saving_a_project_that_depends_on_other_audio_files">When saving a project that depends on other audio files</span></h2>
-<p>If you import <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> files into your project with <a href="import_export_preferences.html#import" title="Import - Export Preferences">Import / Export Preferences</a> set to "Read uncompressed audio files directly from the original (faster)", you create a <i>dependency</i> on those files remaining accessible. This option decides what happens the first time you attempt to <a href="file_menu.html#Save_Project" title="File Menu">save</a> that dependent project. 
-</p>
-<ul><li> <span style="font-weight: bold; font-size:118%">Copy all audio into project (safest):</span> All imported files that your project depends on will be copied automatically into the saved project. You can then safely move, rename or delete those imported files if you wish.</li></ul>
-<ul><li> <span style="font-weight: bold; font-size:118%">Do not copy any audio:</span> Every project will be saved automatically, but will always depend on the continued presence of the imported files. <b>You must not move, rename or delete those files, or the folder they are in.</b></li></ul>
-<ul><li> <span style="font-weight: bold; font-size:118%">Ask:</span> The <a href="dependencies_dialog.html" title="Dependencies Dialog">Dependencies Dialog</a> will always appear when you first save a project that depends on imported files. This dialog lets you choose which if any of the dependent files should be copied into the project before saving it.  </li></ul>
-<div class="note">You can check at any time if your project depends on imported files, and copy them in if desired. To do this, click <span class="menu">Help &gt; Diagnostics &gt; <a href="dependencies_dialog.html" title="Dependencies Dialog">Check Dependencies...</a></span> to open <a href="dependencies_dialog.html" title="Dependencies Dialog">Dependencies Dialog</a>.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">This Preference pane and its settings have been removed in Audacity 2.3.3 and onwards when we removed On-Demand-Loading of aliased external audio files from Audacity.
+</td></tr></table></div>
+
 
 <!-- 
 NewPP limit report
-Cached time: 20190503130340
+Cached time: 20191115103026
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.099 seconds
-Real time usage: 0.109 seconds
-Preprocessor visited node count: 246/1000000
-Preprocessor generated node count: 1287/1000000
-Post‐expand include size: 5857/2097152 bytes
-Template argument size: 2033/2097152 bytes
+CPU time usage: 0.074 seconds
+Real time usage: 0.077 seconds
+Preprocessor visited node count: 189/1000000
+Preprocessor generated node count: 1029/1000000
+Post‐expand include size: 5248/2097152 bytes
+Template argument size: 1989/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   79.773      1 - -total
- 62.27%   49.678      1 - Template:Prefs-imagemap
- 26.04%   20.769      1 - Template:I18n
- 24.15%   19.265      1 - Template:I18n_box
- 21.34%   17.023      1 - Template:I18n_list
-  9.03%    7.206      3 - Template:I18n_link
-  7.81%    6.234      1 - Template:No-rename
-  6.00%    4.789      1 - Template:Ednote
-  5.25%    4.184      3 - Template:Autoglossonym
-  2.81%    2.244      1 - Template:Button
+100.00%   31.367      1 - -total
+ 68.64%   21.530      1 - Template:I18n
+ 62.71%   19.670      1 - Template:I18n_box
+ 54.06%   16.958      1 - Template:I18n_list
+ 24.79%    7.777      3 - Template:I18n_link
+ 24.53%    7.694      1 - Template:No-rename
+ 19.31%    6.056      2 - Template:Ednote
+ 14.38%    4.510      3 - Template:Autoglossonym
+  8.57%    2.689      1 - Template:Button
+  4.24%    1.329      1 - Template:Advice
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3074-0!*!0!*!*!5!* and timestamp 20190503130340 and revision id 58179
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3074-0!*!0!*!*!5!* and timestamp 20191115103026 and revision id 64896
  -->
 </div>
 										<!-- end content -->
@@ -158,7 +149,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-05-03 - <a href="https://alphamanual.audacityteam.org/man/Projects_Preferences">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Projects_Preferences">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
