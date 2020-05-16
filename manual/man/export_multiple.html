@@ -37,7 +37,7 @@
 <div class="intro">The <b>Export Multiple</b> dialog appears in response to the <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> command. This command exports multiple files at once, either one file for each Audacity <a href="audio_tracks.html" title="Audio Tracks">audio track</a>, or one file for each <a href="label_tracks.html" title="Label Tracks">label</a> placed below audio tracks. Exporting Multiple by labels is a convenient way to <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">export separate files for each track in a long recording</a>.<p>For Export Multiple, <a href="audacity_selection.html" title="Audacity Selection">selections</a> in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> play no part in determining the audio that is exported.</p><p>See the <a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD">Tutorial - Copying tapes, LPs or MiniDiscs to CD</a> for an example of how
 this is used.</p>
 <div class="note">Please be aware that when using <b>Export Multiple</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. So what you hear by previewing with playback prior to export is what you will get in the Exported audio file.</div></div>
-<dl><dd><span title="Export Multiple dialog"><img alt="Export Multiple by labels with Help button.png" src="../m/images/3/37/export_multiple_by_labels_with_help_button.png" width="712" height="455" /></span></dd></dl>
+<dl><dd><span title="Export Multiple dialog"><img alt="Export Multiple by labels 2-4-0.png" src="../m/images/e/e9/export_multiple_by_labels_2_4_0.png" width="719" height="459" /></span></dd></dl>
 <div id="format"></div>
 <h2><span class="mw-headline" id="Export_Location_and_Format">Export Location and Format</span></h2>
 <ul><li><b>Folder:</b> Shows the location to which the audio files will be exported.</li></ul>
@@ -53,25 +53,22 @@ this is used.</p>
 <ul><li>Note that you will receive a "success" message even when you specify an existing file path or directory.</li></ul>
 </td></tr></table></div>
 <ul><li><b>Format:</b> Choose one of the available export formats from this menu. See <a href="export_formats_supported_by_audacity.html" title="Export Formats supported by Audacity">Export Formats supported by Audacity</a> for advice on which format to choose.</li></ul>
+<div class="note">
+<p><span style="font-weight: bold; font-size:118%">Custom FFmpeg:</span>
+When you select Custom FFmpeg Export in the Format dropdown, the Options pane will contain the <span class="button">Open custom FFmpeg format options</span> button. See <a href="custom_ffmpeg_export_options.html" title="Custom FFmpeg Export Options">Custom FFmpeg Export Options</a> for more details. 
+</p><p><span style="font-weight: bold; font-size:118%">(external program):</span>
+When you choose <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">(external program)</a> in the dropdown, a text box will be provided to enter the export command. 
+</p>
+<ul><li> You should provide suitable extensions for the required file type either in the (external program) Command at the end of each label (or trackname).</li>
+<li> Metadata is not passed through in (external program) export, so the metadata dialog is bypassed regardles of your setting in <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>.</li></ul>
+</div>
 <div id="options"></div>
 <h2><span class="mw-headline" id="Options">Options</span></h2>
 <p>Use the Options pane to choose the options for the export format you have selected. It enables you to make settings like <i>quality</i> or <i>encoding</i> for formats with options. As an example, here is the Export Multiple dialog with the <b>MP3</b> format selected showing the options available for that format:
 </p>
-<dl><dd><span title="Export Multiple MP3 dialog"><img alt="Export Multiple MP3 with Help button.png" src="../m/images/4/4a/export_multiple_mp3_with_help_button.png" width="709" height="453" /></span></dd></dl>
-<h3><span class="mw-headline" id="Custom_FFmpeg_and_.28external_program.29_export_options">Custom FFmpeg and (external program) export options</span></h3>
-<p>When you select <b>Custom FFmpeg Export</b> in the <b>Format</b> dropdown, the Options pane will contain the <span class="button">Open custom FFmpeg format options</span> button. See <a href="custom_ffmpeg_export_options.html" title="Custom FFmpeg Export Options">Custom FFmpeg Export Options</a> for more details. 
-</p><p>When you choose <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">(external program)</a> in the dropdown, a text box will be provided to enter the export command.
+<dl><dd><span title="Export Multiple MP3 dialog"><img alt="Export Multiple MP3 2-4-0.png" src="../m/images/d/de/export_multiple_mp3_2_4_0.png" width="719" height="459" /></span></dd></dl>
+<p><br />
 </p>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">When exporting using Custom FFmpeg Export or (external program), Audacity will not add an <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> to the file name. <p>As workarounds:
-<ul><li>add the appropriate file extension to the labels or the track names</li>
-<li>add the extension to the files after export.</p> </li></ul>
-</td></tr></table></div>
 <div id="split"></div>
 <h2><span class="mw-headline" id="Split_files_based_on:">Split files based on:</span></h2>
 <ul>
@@ -80,9 +77,38 @@ this is used.</p>
 <li style="list-style-image: none; list-style-type: none"> The label track must contain at least one <i>point</i> or <i>region</i> label, thus:
 <dl><dd><dl><dd><dl><dd>&#8226;&#160;Point labels mark the start of each section of audio you want to make into a separate file<br /></dd>
 <dd>&#8226;&#160;Region labels span each section of audio you want to make into a separate file.</dd></dl></dd></dl></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Be <i><b>very</b></i> careful when moving a point label not to accidentally click on a chevron and thus <a href="editing_resizing_and_moving_labels.html#accidental_region" title="Editing, resizing and moving Labels"><b>create a region label</b></a>.  If you do this you may end up exporting a very short region of audio, effectively a null audio file.
+</td></tr></table>
+</div>
 <ul><li><b>Include audio before first label:</b> Check this option only if you do not have a point label marking the start of the first file or do not have a region label spanning the first file.
 <li><b>First file name:</b> If you have checked "Include audio before first label", this option will be enabled. Type in the name you want to be used for the first exported audio file. If you have imported audio files, this text box contains the name of the first imported file, but you can still change the text.</ul></ul>
-<div class="note">For both splitting files based on tracks or labels, the <a href="glossary.html#metadata" title="Glossary">metadata</a> exported for each file will be the same (except for Track Title and Track Number) unless your <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a> are set to show <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> and you enter the metadata for each file manually. If you want to import and export multiple audio files and preserve each file's tag values automatically, use <a href="macros.html" title="Macros">Macros</a> instead. </div>      
+<div class="note">For both splitting files based on tracks or labels, the <a href="glossary.html#metadata" title="Glossary">metadata</a> exported for each file will be the same (except for Track Title and Track Number) unless your <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a> are set to show <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> and you enter the metadata for each file manually. If you want to import and export multiple audio files and preserve each file's tag values automatically, use <a href="macros.html" title="Macros">Macros</a> instead. </div>    
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">When exporting using Custom FFmpeg Export, Audacity will not add an <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> to the file name. <p>As workarounds:
+<ul><li>add the appropriate file extension to the labels or the track names</li>
+<li>add the extension to the files after export.</p> </li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">When exporting using (external program), Audacity will <i><b>not</b></i> export the files, and will show an error message, unless you add an appropriate <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> to the (external program) Command or to the file names <i>(the labels or tracks)</i>.
+</td></tr></table></div>
+<p><br />
+</p>
 <div id="name"></div>
 <h2><span class="mw-headline" id="Name_files:">Name files:</span></h2>
 <ul><li><b>Using Label/Track name:</b> Each file will be named exactly as the text of each label if "Split files based on Labels" was selected, or exactly as the name of each track if "Split files based on Tracks" was selected. If any labels are empty (track names cannot be empty), Audacity will name each associated file as "untitled" and add a number as necessary to distinguish multiple "untitled" files.</li>
@@ -174,34 +200,34 @@ Note that in order to export the pairs and the conclusion excluding the interrup
 
 <!-- 
 NewPP limit report
-Cached time: 20191115102124
+Cached time: 20200501031911
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.135 seconds
-Real time usage: 0.141 seconds
-Preprocessor visited node count: 429/1000000
-Preprocessor generated node count: 1649/1000000
-Post‐expand include size: 12551/2097152 bytes
-Template argument size: 9308/2097152 bytes
+CPU time usage: 0.153 seconds
+Real time usage: 0.160 seconds
+Preprocessor visited node count: 454/1000000
+Preprocessor generated node count: 1763/1000000
+Post‐expand include size: 14790/2097152 bytes
+Template argument size: 10735/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   41.105      1 - -total
- 48.46%   19.921      1 - Template:I18n
- 44.16%   18.150      1 - Template:I18n_box
- 36.16%   14.863      1 - Template:I18n_list
- 16.26%    6.683      1 - Template:Intro
- 14.98%    6.159     13 - Template:Button
- 13.68%    5.623      2 - Template:I18n_link
-  9.77%    4.017      5 - Template:Note
-  7.96%    3.270      2 - Template:Autoglossonym
-  4.70%    1.931      5 - Template:Example
+100.00%   51.761      1 - -total
+ 44.90%   23.241      1 - Template:I18n
+ 40.64%   21.034      1 - Template:I18n_box
+ 32.31%   16.724      1 - Template:I18n_list
+ 14.55%    7.530      6 - Template:Note
+ 14.00%    7.247      2 - Template:I18n_link
+ 14.00%    7.247     13 - Template:Button
+ 13.98%    7.235      1 - Template:Intro
+  7.96%    4.120      2 - Template:Autoglossonym
+  4.34%    2.244      5 - Template:Example
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2791-0!*!0!!*!5!* and timestamp 20191115102124 and revision id 65178
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2791-0!*!0!!*!5!* and timestamp 20200501031911 and revision id 67347
  -->
 </div>
 										<!-- end content -->
@@ -244,7 +270,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -274,7 +301,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Export_Multiple">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Export_Multiple">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

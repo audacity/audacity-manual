@@ -53,8 +53,7 @@ and you select them all and perform a Mix and Render, you will end up with one s
 <p>By default, multiple stereo tracks are mixed down to a single stereo file on Export.
 </p><p>Also by default, multiple mono tracks are mixed down to a mono file, but if you <a href="audio_tracks.html#pan" title="Audio Tracks">pan</a> any mono tracks to left or right or if there are any stereo tracks in the mix, the tracks are mixed to a stereo file.  Note that the mono tracks are mixed to both the left and right channels of the resulting stereo file.
 </p>
-<div class="note">The Mixed and Rendered track will be placed at the bottom of the project and given the name "<b>Mix</b>". <p>Unless, that is, a single selected track is rendered in which case it will retain its track name, but lose its properties (display type, waveform color) and be moved out of position to the bottom of the project, note that this may cause it to lose its membership of any Sync-Locked Track group to which it may have formerly belonged.</p>
- </div>
+<div class="note">The Mixed and Rendered track will be placed where the bottom selected track was and given the name "<b>Mix</b>". <p>Unless, that is, a single selected track is rendered in which case it will retain its position, its track name and its properties (display type, waveform color)</p><p>Note that this may be useful in retaining membership of any Sync-Locked Track group to which the track(s) may have formerly belonged.</p> </div>
 <p>In Audacity, <b>mixing is automatic</b>. You could just put audio into two different tracks, <a href="transport_toolbar.html" title="Transport Toolbar">play</a> to listen to the result then <a href="file_export_dialog.html" title="File Export Dialog">export</a> it as an audio file like <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> or <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or burn the WAV to <i><b><a href="glossary.html#audio_cd" title="Glossary">Audio CD</a></b></i>.  
 </p><p>However once audio has been finally mixed <i>(using <b>Mix and Render</b> or as in an audio file you might <a href="importing_audio.html" title="Importing Audio">import</a> into Audacity)</i> it is essentially impossible to separate out all the original parts again; it's like trying to take the banana out of a banana milkshake after you've already put it through the blender.  There are a few occasions when it actually is possible to separate sounds a bit - you can sometimes isolate the bass, or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Vocal_Removal">remove the lead vocals</a>.  But these processes do not always work well and usually cause some quality loss. So remember, as long as the multiple tracks are inside an Audacity project, you can manipulate them independently, but once you export as a mixed down file you cannot expect to separate the different parts again. So keep your Audacity project around if you plan to continue editing!
 </p>
@@ -120,7 +119,7 @@ and you select them all and perform a Mix and Render, you will end up with one s
 <ul><li>Except when Rendering just a single track, when it will retain its original track name.</li></ul></li>
 <li> If you choose "Mix and Render", the resulting track replaces the selected original track(s). </li>
 <li> If you choose "Mix and Render to New Track", the original tracks are preserved so that the resulting track becomes an additional track in the project.  </li>
-<li> The "Mix" track is always placed underneath any non-selected or remaining tracks.  </li>
+<li> The "Mix" track is always placed in place of <i>(Mix and Render)</i> or underneath <i>(Mix and Render to New Track)</i> the bottom selected track.  </li>
 <li> The new mixed track will be stereo unless the tracks you mixed were mono tracks panned to center.     </li>
 <li> If any of the original tracks did not match the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> of the project (set at bottom left of the project window in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>), they will be <i><b><a href="glossary.html#resampling" title="Glossary">resampled</a></b></i> to match the project rate.</li>
 <li> Any <a href="envelope_tool.html" title="Envelope Tool">envelope points</a> defining <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> modifications will be applied and the previous envelope points removed.</li>
@@ -146,34 +145,34 @@ and you select them all and perform a Mix and Render, you will end up with one s
 
 <!-- 
 NewPP limit report
-Cached time: 20191115102035
+Cached time: 20200430165858
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.139 seconds
-Real time usage: 0.146 seconds
-Preprocessor visited node count: 522/1000000
-Preprocessor generated node count: 1902/1000000
-Post‐expand include size: 9012/2097152 bytes
-Template argument size: 4628/2097152 bytes
+CPU time usage: 0.144 seconds
+Real time usage: 0.153 seconds
+Preprocessor visited node count: 516/1000000
+Preprocessor generated node count: 1880/1000000
+Post‐expand include size: 8555/2097152 bytes
+Template argument size: 4202/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   58.245      1 - -total
- 42.00%   24.466      1 - Template:I18n
- 38.63%   22.500      1 - Template:I18n_box
- 31.53%   18.365      1 - Template:I18n_list
- 11.62%    6.769      2 - Template:I18n_link
- 11.17%    6.504     10 - Template:Button
- 10.13%    5.899     12 - Template:Key
-  8.77%    5.110      1 - Template:Intro
-  6.78%    3.952      2 - Template:Autoglossonym
-  4.61%    2.684      8 - Template:Menu
+100.00%   61.125      1 - -total
+ 44.44%   27.162      1 - Template:I18n
+ 40.67%   24.859      1 - Template:I18n_box
+ 33.82%   20.674      1 - Template:I18n_list
+ 12.86%    7.861      2 - Template:I18n_link
+ 10.61%    6.487     10 - Template:Button
+ 10.57%    6.458     12 - Template:Key
+  7.83%    4.786      1 - Template:Intro
+  7.52%    4.597      2 - Template:Autoglossonym
+  4.33%    2.644      8 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2279-0!*!0!!*!5!* and timestamp 20191115102035 and revision id 65342
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2279-0!*!0!!*!5!* and timestamp 20200430165857 and revision id 66845
  -->
 </div>
 										<!-- end content -->
@@ -216,7 +215,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -246,7 +246,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Mixing">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Mixing">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

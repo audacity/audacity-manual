@@ -34,6 +34,17 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">Audacity Waveforms show you overall loudness best.  They are the default view in Audacity.
+<ul><li>You might see the danger of imminent clipping. </li>
+<li>Precision in cutting and splicing is also best performed in Waveform view. </div></li></ul>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li> <a href="#default">Default Waveform view</a></li>
+<li> <a href="#db">Waveform (dB) view</a></li>
+<li> <a href="#clip">A Waveform with clipping</a></li>
+<li> <a href="#alternate">Alternative audio view formats</a></li>
+<li> <a href="#multi">Multi-view - Waveform and Spectrogram</a></li></ol>
+<p><br />
+</p>
 <div id="default"></div>
 <h2><span class="mw-headline" id="Default_Waveform_view">Default Waveform view</span></h2>
 <p>The default track created in Audacity when you press the record button is a stereo track displayed in Waveform view with a linear vertical scale running from -1.0 (negative values) to +1.0 (positive values), centered on zero <i>(provided you have not changed Audacity's default for the display)</i>.  You will also get a waveform like this if you  <a href="file_menu.html#import" title="File Menu">import</a> a stereo audio file into Audacity.
@@ -45,7 +56,7 @@
 </p>
 <div class="note"> It is tempting to look at this and think that has not been recorded loud enough, but the -0.5 to +0.5 level that this example shows corresponds to -6 dB on the <a href="meter_toolbar.html#meters" title="Meter Toolbar">Meter Toolbar</a> and is an ideal peak level to aim for while recording (the signal can always be amplified in later processing if required).
 </div>
-<div id="linear_sacle"></div>
+<div id="linear_scale"></div>
 <h3><span class="mw-headline" id="The_Vertical_Scale">The Vertical Scale</span></h3>
 <p>The <a href="track_control_panel_and_vertical_scale.html#vscale" title="Track Control Panel and Vertical Scale">Vertical Scale</a> (at the left of the waveform) goes <a href="glossary.html#linear" title="Glossary">linearly</a> from +1 at the top (the maximum possible loudness without distortion when the signal is positive) to -1 at the bottom (the maximum when it is negative). 
 </p>
@@ -60,9 +71,11 @@
 </p><p>Below is an example of a dark blue only waveform, obtained by zooming in about 12 times. The waveform can now be clearly seen as joining together many individual <i><b><a href="glossary.html#sample" title="Glossary">sample</a></b></i> points (the dots). The horizontal center line denoting zero <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> (silence) can also now be clearly seen, with positive samples above the center line, and negative samples below.   
 </p>
 <dl><dd><span title="Image of a track, zoomed until its sample points"><img alt="TrackZoomedToSamples.png" src="../m/images/d/d7/trackzoomedtosamples.png" width="449" height="156" /></span></dd></dl>
+<p><br />
+</p>
 <div id="db"></div>
 <h2><span class="mw-headline" id="Waveform_.28dB.29_view">Waveform (dB) view</span></h2>
-<p>The waveform view can be switched to a <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i>   view by clicking on the track name (or the black triangle) in the <a href="audio_tracks.html#panel" title="Audio Tracks"> Track Control Panel</a>.
+<p>The waveform view can be switched to a <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i>   view by right-clicking on the track's <a href="audio_tracks.html#scale" title="Audio Tracks"><b>Vertical Scale</b></a> and selecting "<b>dB</b>" from the dropdown context menu.
 </p><p>The default linear Waveform view is very convenient for editing since the majority of audible work is on the screen. When <a href="zooming.html" title="Zooming"> zoomed in</a> edit points are easy to find. However, the linear waveform does not correspond to the way your ears work--they sense quiet sounds more effectively. Halving the volume on the linear scale (for example, deamplifying a sound with a peak of +/- 1.0 by -6 dB to bring it to +/- 0.5 on that scale) does not sound all that much quieter. Human hearing would need a reduction of -18 dB to make audio "appear to sound" half as loud.  
 </p><p>The following example is exactly the same recording as that above displayed in Waveform (dB) view.
 </p>
@@ -71,6 +84,7 @@
 </p>
 <h3><span class="mw-headline" id="The_Vertical_Scale_2">The Vertical Scale</span></h3>
 <p>In this view the <a href="track_control_panel_and_vertical_scale.html#vscale" title="Track Control Panel and Vertical Scale">Vertical Scale</a> is shown in <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>. This is a <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> method of displaying the amplitude. See <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Logarithmic_scale">this Wikipedia page</a>.
+</p><p><br />
 </p>
 <div id="clip"></div>
 <h2><span class="mw-headline" id="A_waveform_with_clipping">A waveform with clipping</span></h2>
@@ -82,40 +96,53 @@
 </p><p>When recording, always set your input level to try and avoid clipping, and keep your eyes on the red hold lights to right of the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter</a> for signs of clipping when either playing or recording. 
 </p>
 <div class="note"><b>Help with repairing clipping:</b><br />
-<p>If there is only a little bit of <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> (just the tops of a few isolated peaks), <span class="menu">Effect &gt; <a href="clip_fix.html" title="Clip Fix">Clip Fix</a></span> can be applied to just the clipped sections.  This will attempt to reconstruct the missing peaks by <i><b><a href="glossary.html#interpolate" title="Glossary">interpolating</a></b></i>  the lost signal. In other cases where there is mild distortion throughout a recording, using  <span class="menu">Effect &gt; <a href="filter_curve.html" title="Filter Curve">Filter Curve</a></span> or <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span> to reduce the higher frequencies can help to mitigate the damage.  Sometimes a bass cut will help also by making the result sound less "muddy".
+<p>If there is only a little bit of <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> (just the tops of a few isolated peaks), <span class="menu">Effect &gt; <a href="clip_fix.html" title="Clip Fix">Clip Fix</a></span> can be applied to just the clipped sections.  This will attempt to reconstruct the missing peaks by <i><b><a href="glossary.html#interpolate" title="Glossary">interpolating</a></b></i>  the lost signal. In other cases where there is mild distortion throughout a recording, using  <span class="menu">Effect &gt; <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></span> or <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span> to reduce the higher frequencies can help to mitigate the damage.  Sometimes a bass cut will help also by making the result sound less "muddy".
 </p>
 </div>
+<p><br />
+</p>
 <div id="alternate"></div>
 <h2><span class="mw-headline" id="Alternative_audio_view_formats">Alternative audio view formats</span></h2>
 <p>See <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> for information on the alternative <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"> Spectrogram</a> audio track view formats.  These are not documented here as they are not true "waveform" views.
+</p><p><br />
+</p>
+<div id="multi"></div>
+<h2><span class="mw-headline" id="Multi-view_-_Waveform_and_Spectrogram">Multi-view - Waveform and Spectrogram</span></h2>
+<p>It is also possible to work with a Waveform view and a Spectrogram view in the same track.
+</p>
+<dl><dd><span title="A split waveform and spectrogram view of a mono track- 50:50 default proportions"><img alt="Multi-view mono default 50-50.png" src="../m/images/b/b7/multi_view_mono_default_50_50.png" width="726" height="178" /></span></dd>
+<dd><b>Example of a mono audio track with a Multi-view split 50:50 Waveform/Spectrogram</b></dd></dl>
+<p>To get a split Multi-view for a track select <b>Multi-view</b> from the track's <a href="audio_tracks.html#panel" title="Audio Tracks"><b> Track Control Panel</b></a> dropdown menu.
+</p><p>For details see <b><a href="multi_view.html" title="Multi-view">Multi-view</a></b>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115102020
+Cached time: 20200501031825
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.096 seconds
+CPU time usage: 0.099 seconds
 Real time usage: 0.103 seconds
-Preprocessor visited node count: 226/1000000
-Preprocessor generated node count: 1001/1000000
-Post‐expand include size: 2593/2097152 bytes
-Template argument size: 743/2097152 bytes
+Preprocessor visited node count: 245/1000000
+Preprocessor generated node count: 1067/1000000
+Post‐expand include size: 2837/2097152 bytes
+Template argument size: 962/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   35.143      1 - -total
- 90.17%   31.689      1 - Template:I18n
- 84.14%   29.570      1 - Template:I18n_box
- 70.48%   24.768      1 - Template:I18n_list
- 26.73%    9.394      3 - Template:I18n_link
- 14.82%    5.209      3 - Template:Autoglossonym
-  6.45%    2.268      4 - Template:Menu
+100.00%   28.208      1 - -total
+ 83.27%   23.490      1 - Template:I18n
+ 77.74%   21.928      1 - Template:I18n_box
+ 63.97%   18.045      1 - Template:I18n_list
+ 30.49%    8.601      3 - Template:I18n_link
+ 17.64%    4.975      3 - Template:Autoglossonym
+  6.37%    1.796      4 - Template:Menu
+  5.41%    1.526      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3526-0!*!0!!*!5!* and timestamp 20191115102020 and revision id 65115
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3526-0!*!0!!*!5!* and timestamp 20200501031825 and revision id 66221
  -->
 </div>
 										<!-- end content -->
@@ -158,7 +185,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -188,7 +216,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Waveform">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Waveform">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

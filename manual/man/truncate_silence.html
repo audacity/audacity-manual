@@ -37,13 +37,13 @@
 </p>
 
 
-<div class="intro"><b>Truncate Silence</b> automatically reduces the length of passages where the volume is below a specified level.
-<ul><li> Silences are detected if they remain below the specified level for at least the specified time duration.</li>
+<div class="intro"><b>Truncate Silence</b> automatically reduces the length of passages where the volume is below a specified threshold level.
+<ul><li> Silences are detected if they remain below the specified threshold for at least the specified time duration.</li>
 <li> Detected silences (defined as above) are then made shorter by deleting a section from the middle of the silent region.</li>
 <li> White space between or preceding <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">audio clips</a> will be regarded as absolute silence and will always be removed if at least as long as the specified time duration. </li>
 <li> <a href="label_tracks.html" title="Label Tracks">Labels</a> in <a href="audacity_selection.html" title="Audacity Selection">selected</a> or <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Lock-selected</a> label tracks will be truncated, deleted or moved back by silence truncation.</div></li></ul>
 <div class="note">
-For the purposes of this effect, the words "silence" and "silent" mean sounds that are below the detection level.</div>
+For the purposes of this effect, the words "silence" and "silent" mean sounds that are below the detection threshold level.</div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Truncate Silence...</span></dd>
 <dd><span title="Truncate Silence effect dialog"><img alt="Truncate Silence.png" src="../m/images/6/6e/truncate_silence.png" width="474" height="337" /></span></dd></dl>
 <div id="detection"></div>
@@ -51,7 +51,7 @@ For the purposes of this effect, the words "silence" and "silent" mean sounds th
 <p>There are two controls that determine which audio will be treated as "silence":
 </p>
 <ol><li> <b>Threshold</b> (dB): To be treated as silence, the audio must be below this threshold level. If not enough silences are being reduced, increase the threshold to a higher (less negative) number. Note that due to rounding, audio may be truncated that appears in the <a href="amplify.html" title="Amplify">Amplify</a> effect to be exactly <i>at</i> the threshold level you enter here.      </li>
-<li> <b>Duration</b> (seconds): The minimum duration that will be treated as silence. To be treated as silence, the audio must remain below the "Level (dB)" entered for at least this amount of time. If not enough silences are being reduced, reduce this duration level. The shortest duration value you can enter is 0.001 seconds.   </li></ol>
+<li> <b>Duration</b> (seconds): The minimum duration that will be treated as silence. To be treated as silence, the audio must remain below the "Threshold" entered for at least this amount of time. If not enough silences are being reduced, reduce this "Duration". The shortest duration value you can enter is 0.001 seconds.   </li></ol>
 <div id="mode"></div>
 <h2><span class="mw-headline" id="Action">Action</span></h2>
 <p>There are two methods available for shortening the silence. The simplest method is by <b>truncating</b> the silence <i>(default mode)</i> and a more advanced method is by <b>compressing</b> the length of the silence. 
@@ -60,7 +60,7 @@ For the purposes of this effect, the words "silence" and "silent" mean sounds th
 <h3><span class="mw-headline" id="Truncate_Detected_Silence">Truncate Detected Silence</span></h3>
 <p>When this method is selected, silences are simply shortened to the "Detect Silence" duration (see example <a href="#truncation_example">below</a>).
 </p><p>When this method is selected, the "<b>Truncate to:</b>" <i>(seconds)</i> control is available lower down the interface and the "<b>Compress to:</b>" <i>(percent)</i> control is grayed out.
-</p><p>All detected silences are shortened to the same duration. When the audio remains below the "Detect Silence" level for at least the "Detect Silence" duration, it will be reduced to the "Truncate to" duration entered here.
+</p><p>All detected silences are shortened to the same duration. When the audio remains below the "Detect Silence" threshold level for at least the "Detect Silence" duration, it will be reduced to the "Truncate to" duration entered here.
 </p>
 <div id="compression"></div>
 <h3><span class="mw-headline" id="Compress_Excess_Silence">Compress Excess Silence</span></h3>
@@ -68,7 +68,7 @@ For the purposes of this effect, the words "silence" and "silent" mean sounds th
 </p><p>When this method is selected, silence <i>in excess of the "Detect Silence" duration is reduced to a percentage of its original duration (see example <a href="#compression_example">below</a>).</i>
 </p><p>When this method is selected, the "<b>Compress to:</b>" <i>(percent)</i> control is available lower down the interface and the "<b>Truncate to:</b>" <i>(seconds)</i> control is grayed out.
 Because silences are reduced by a specified percentage, the final duration of each detected silence varies according to its original length.
-</p><p>When the audio remains below the "Detect Silence" level for at least the "Detect Silence" duration, any silence in <i><b>excess</b></i> of the "Detect Silence" duration is reduced to the "Compress to" percentage entered here. The entire detected silence is <b>not</b> proportionally reduced.
+</p><p>When the audio remains below the "Detect Silence" threshold for at least the "Detect Silence" duration, any silence in <i><b>excess</b></i> of the "Detect Silence" duration is reduced to the "Compress to" percentage entered here. The entire detected silence is <b>not</b> proportionally reduced.
 </p>
 <div id="independently"></div>
 <h3><span class="mw-headline" id="Truncate_tracks_independently">Truncate tracks independently</span></h3>
@@ -109,7 +109,7 @@ Because silences are reduced by a specified percentage, the final duration of ea
 <p>This may be useful for shortening inter-track gaps from an LP or cassette recording.
 </p>
 <ol><li> Set the Operation mode in the dropdown to "<a href="#truncation">Truncate Detected Silence</a>".</li>
-<li> Set the detection "<a href="#detection">Level:</a>" control. If there is noticeable background noise you may need to set this as a higher (less negative) value than the default.</li>
+<li> Set the detection "<a href="#detection">Threshold:</a>" control. If there is noticeable background noise you may need to set this as a higher (less negative) value than the default.</li>
 <li> Set the detection "<a href="#detection">Duration:</a>" control to 2 seconds. Silences of 2 seconds or more will be chosen by the effect for truncation.</li>
 <li> Set the "<a href="#truncation">Truncate to:</a>" control to 2 seconds. All detected silences will be truncated to 2 seconds.</li>
 <li> Click <span class="button">OK</span>.</li></ol>
@@ -117,7 +117,7 @@ Because silences are reduced by a specified percentage, the final duration of ea
 <p>This may be useful for removing long pauses in a speech recording, without affecting the natural rhythm of the speech.
 </p>
 <ol><li> Set the Operation mode in the dropdown to "<a href="#truncation">Truncate Detected Silence</a>".</li>
-<li> Set the detection "<a href="#detection">Level:</a>" control.</li>
+<li> Set the detection "<a href="#detection">Threshold:</a>" control.</li>
 <li> Set the detection "<a href="#detection">Duration:</a>" control to 20 seconds. Silences of 20 seconds or more will be chosen by the effect for truncation.</li>
 <li> Set the "<a href="#truncation">Truncate to:</a>" control to 5 seconds. Silences of 20 seconds or more will be truncated to 5 seconds. Silences of less than 20 seconds will remain unchanged.</li>
 <li> Click <span class="button">OK</span>.<p></li></ol>
@@ -130,7 +130,7 @@ Because silences are reduced by a specified percentage, the final duration of ea
 <p>This may be useful when a subtle reduction of longer silences is required while maintaining a sense of the relative length of each silence. In this example we will use a compression setting of 50% for simplicity.
 </p>
 <ol><li> Set the Operation mode in the dropdown to "<a href="#Compress_Excess_Silence">Compress Excess Silence</a>".</li>
-<li> Set the detection "<a href="#detection">Level:</a>" control.</li>
+<li> Set the detection "<a href="#detection">Threshold:</a>" control.</li>
 <li> Set the detection "<a href="#detection">Duration:</a>" control to 2 seconds.</li>
 <li> Set the "<a href="#compression">Compress to:</a>" control to 50 percent.</li>
 <li> Click <span class="button">OK</span>.</li></ol>
@@ -145,7 +145,7 @@ The 8&#160;second silence will therefore be reduced to 2 seconds plus 50% of 6 s
 <p>Strictly speaking <i><b>all</b></i> silences cannot be selected because there is a fixed minimum length of silence that can be detected of 0.001 seconds. However, 0.001 seconds (1 millisecond) is an extremely short period, so we are able to compress all <i>noticeable</i> silences to half their original length. This may be useful to shorten a recorded lecture or dictated notes without affecting the words.
 </p>
 <ol><li> Set the Operation mode in the dropdown to "<a href="#Compress_Excess_Silence">Compress Excess Silence</a>".</li>
-<li> Set the detection "<a href="#detection">Level:</a>" control.</li>
+<li> Set the detection "<a href="#detection">Threshold:</a>" control.</li>
 <li> Set the detection "<a href="#detection">Duration:</a>" control to 0.001 seconds. Note that if set to 0 the <span class="button">Preview</span> and  <span class="button">OK</span> buttons are grayed out and a message is shown above the buttons: <b>Minimum detection duration: 0.001 seconds.</b>.</li>
 <li> Set the "<a href="#compression">Compress to:</a>" control to 50 percent.</li>
 <li> Click <span class="button">OK</span>.<p></li></ol>
@@ -158,34 +158,34 @@ The 8&#160;second silence will therefore be reduced to 2 seconds plus 50% of 6 s
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115102331
+Cached time: 20200501032120
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.144 seconds
-Real time usage: 0.152 seconds
+CPU time usage: 0.121 seconds
+Real time usage: 0.125 seconds
 Preprocessor visited node count: 501/1000000
 Preprocessor generated node count: 1973/1000000
-Post‐expand include size: 19859/2097152 bytes
-Template argument size: 7347/2097152 bytes
+Post‐expand include size: 19899/2097152 bytes
+Template argument size: 7387/2097152 bytes
 Highest expansion depth: 14/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   72.826      1 - -total
- 43.73%   31.845      1 - Template:I18n
- 40.94%   29.815      1 - Template:I18n_box
- 37.56%   27.356      1 - Template:I18n_list
- 19.11%   13.917      1 - Template:Effectbuttons
- 17.85%   13.002      3 - Template:I18n_link
- 13.97%   10.175      1 - Template:Buttonlist
- 12.78%    9.310     16 - Template:Button
- 10.57%    7.700      1 - Template:No-rename
- 10.29%    7.495      3 - Template:Autoglossonym
+100.00%   49.134      1 - -total
+ 37.45%   18.399      1 - Template:I18n
+ 34.48%   16.943      1 - Template:I18n_box
+ 29.93%   14.707      1 - Template:I18n_list
+ 21.42%   10.524      1 - Template:Effectbuttons
+ 16.02%    7.870      1 - Template:Buttonlist
+ 15.95%    7.835     16 - Template:Button
+ 14.13%    6.943      3 - Template:I18n_link
+ 12.38%    6.083      1 - Template:No-rename
+  9.69%    4.762      2 - Template:Example
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2862-0!*!0!!*!5!* and timestamp 20191115102331 and revision id 62063
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2862-0!*!0!!*!5!* and timestamp 20200501032120 and revision id 66274
  -->
 </div>
 										<!-- end content -->
@@ -228,7 +228,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -258,7 +259,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Truncate_Silence">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Truncate_Silence">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

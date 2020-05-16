@@ -2,7 +2,7 @@
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Sample workflow for exporting to iTunes - Audacity Manual</title>
+<title>Sample workflow for exporting to Apple Music/iTunes - Audacity Manual</title>
 
 
 
@@ -25,7 +25,7 @@
 				
 				<div class="mw-indicators">
 </div>
-				<h1 id="firstHeading" class="firstHeading" lang="en">Sample workflow for exporting to iTunes</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Sample workflow for exporting to Apple Music/iTunes</h1>
 				
 				<div id="bodyContent" class="mw-body-content">
 					<div id="siteSub">From Audacity Development Manual</div>
@@ -35,72 +35,94 @@
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 
-<div class="intro">This tutorial outlines a set of example steps that can be used to get Audacity Projects (LP and tape transcriptions for example) into iTunes.  The workflow concentrates on AAC music files because that is Apple's native, default, format.  Some users may prefer to use uncompressed WAVs or AIFFs or compressed Apple Lossless formats for their music files in iTunes.
+<div class="intro">This tutorial outlines a set of example steps that can be used to get Audacity Projects (LP and tape transcriptions for example) into Apple Music/iTunes.  The workflow concentrates on AAC music files because that is Apple's native, default, format.  Some users may prefer to use uncompressed WAVs or AIFFs or compressed Apple Lossless formats for their music files in Apple Music/iTunes.
 <p>It is not the only way of working - there are many alternatives.  Like any recipe it can be adapted to suit your personal needs. You can work in AIFF rather than WAV if required. Many Apple Mac users would probably prefer to work in AIFF.
 </p>
-See also <a href="tutorial_exporting_to_itunes.html" title="Tutorial - Exporting to iTunes">Tutorial - Exporting to iTunes</a> which has further useful information on this topic.</div>
+See also <a href="tutorial_exporting_to_itunes.html" title="Tutorial - Exporting to iTunes">Tutorial - Exporting to Apple Music/iTunes</a> which has further useful information on this topic.</div>
 <h2><span class="mw-headline" id="Workflow">Workflow</span></h2>
 <ol><li> <a href="#export">Export the WAV files</a></li>
-<li> <a href="#add">Add the WAV files into iTunes</a></li>
-<li> <a href="#metadata">Use iTunes to edit the metadata for the album name and artist</a></li>
-<li> <a href="#aac">Use iTunes to make AAC copies in the library from the WAV files</a></li>
+<li> <a href="#add">Add the WAV files into Apple Music/iTunes</a></li>
+<li> <a href="#metadata">Use Apple Music/iTunes to edit the metadata for the album name and artist</a></li>
+<li> <a href="#aac">Use Apple Music/iTunes to make AAC copies in the library from the WAV files</a></li>
 <li> <a href="#delete">Delete the WAV files from the library</a></li>
 <li> <a href="#edit">Edit the metadata tags of the tracks/album</a></li>
 <li> <a href="#artwork">Fetch the album artwork</a></li>
 <li> <a href="#cd">Optionally make a CD - and create cover &amp; playlist</a></li>
-<li> <a href="#backup">Backup your updated iTunes library</a></li>
+<li> <a href="#backup">Backup your updated Apple Music/iTunes library</a></li>
 <li> <a href="#cleanup">Delete the Audacity project and exported WAV files to release hard disk space</a></li>
 <li> <a href="#direxp">Optional direct AAC export from Audacity</a></li></ol>
 <p><br />
 </p>
- </li></ul>
 <div id="export"></div>
 <h3><span class="mw-headline" id="Step_1:_Export_the_WAV_files">Step 1: Export the WAV files</span></h3>
 <p>Use <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> or <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> to produce a WAV file or set of WAVs to any convenient location. With Audacity set to a project rate of 44100 Hz and 32-bit sample format (these are the default <a href="quality_preferences.html" title="Quality Preferences">quality settings</a>), exporting will by default produce 44.1kHz 16-bit PCM WAV files (or AIFF files on Mac). Audacity will down-sample from its 32-bit internal format to 16-bit, with shaped <a href="dither.html" title="Dither">dither</a> noise applied to cover any clicky noise that may result from the conversion to 16-bit. Advanced users can change the type of dither, or turn it off, in the <a href="quality_preferences.html#conversion" title="Quality Preferences">Quality Preferences</a>. 
-</p><p>16-bit export will ensure the files are compatible with all versions of iTunes, They will also be compatible for conversion to AAC or other formats (or for CD burning) in iTunes. It is possible to export 32-bit PCM files too, by choosing "Other uncompressed files" in either export dialog, then clicking <span class="button">Options...</span>. These files will theoretically be of marginally higher quality but twice the size of 16-bit files. Latest versions of iTunes will play them, but other players may not.
+</p><p>16-bit export will ensure the files are compatible with all versions of Apple Music/iTunes, They will also be compatible for conversion to AAC or other formats (or for CD burning) in Apple Music/iTunes. It is possible to export 32-bit PCM files too, by choosing "Other uncompressed files" in either export dialog, then clicking <span class="button">Options...</span>. These files will theoretically be of marginally higher quality but twice the size of 16-bit files. Latest versions of Apple Music/iTunes will play them, but other players may not.
 </p>
 <div id="add"></div>
-<h3><span class="mw-headline" id="Step_2:_Add_the_WAV_files_into_iTunes">Step 2: Add the WAV files into iTunes</span></h3>
-<p>Add the WAV files to the iTunes library (using the iTunes command <span class="menu">File &gt; Add File to Library</span> or <span class="menu">File &gt; Add Folder to Library</span>. Note that even if iTunes Import Preferences are set to Import Using AAC Settings ( <span class="menu">Edit &gt; Preferences &gt; General &gt; Import Settings</span> ), no conversion takes place as this preference only applies to importing from CD.
+<h3><span class="mw-headline" id="Step_2:_Add_the_WAV_files_into_Apple_Music.2FiTunes">Step 2: Add the WAV files into Apple Music/iTunes</span></h3>
+<p>Add the WAV files to the Apple Music/iTunes library 
 </p>
-<div class="note">Be aware that by default iTunes does <b>not</b> copy audio files into its own filespace, rather it makes a link to where you currently have the audio file stored. <p>To change this in iTunes go to <span class="menu">Edit &gt; Preferences &gt; Advanced</span> and mark the checkbox that says <b>"Copy files to iTunes Media folder when adding to library"</b>. It is strongly recommended that you make this setting. </p></div>
-</li></ul>
+<ul><li> in iTunes use the <span class="menu">File &gt; Add File to Library...</span> (or <span class="menu">File &gt; Add Folder to Library...</span>) command</li>
+<li> in Apple Music use the  <span class="menu">File &gt; Import...</span> command.</li></ul>
+<p>Note that even if Apple Music/iTunes Import Preferences (see <a href="tutorial_exporting_to_itunes.html#conversion" title="Tutorial - Exporting to iTunes">here</a>) are set to Import Using AAC Settings no conversion takes place as this preference only applies to importing from CD or <span class="menu">File &gt; Convert</span> in those applications, files ar <i><b>not</b></i> automatically converted in <b>Import</b> into Apple Music/iTunes.
+</p>
+<div class="note">Be aware that by default Apple Music/iTunes does <b>not</b> copy audio files into its own filespace, rather it makes a link to where you currently have the audio file stored. 
+<p>To change this so that Apple Music/iTunes creates its own copy of the audio file(s):
+</p>
+<ul><li>in iTunes go to <span class="menu">Edit &gt; Preferences &gt; Advanced</span>, </li>
+<li>in Apple Music <span class="menu">Preferences &gt; Files</span></li>
+<li>and mark the checkbox that says <b>"Copy files to iTunes Media folder when adding to library"</b>. </li></ul>
+It is <i><b>strongly</b></i> recommended that you make this setting.</div>
 <p><br />
 </p>
 <div id="metadata"></div>
-<h3><span class="mw-headline" id="Step_3:_Use_iTunes_to_edit_the_metadata_for_the_album_name_and_artist">Step 3: Use iTunes to edit the metadata for the album name and artist</span></h3>
-<p>Make sure that one of the columns you have showing in your iTunes library is <b>Kind</b>. The imported files will show as WAV and can be listed together by clicking on the "Kind" column header. 
-</p><p>Select all the WAV files and use iTunes' metadata editor to enter the album name and the artist name so that you can easily find it later when editing the other metadata tags. You could alternatively set this metadata prior to Audacity Export using Audacity's metadata editor – some users report that it is easier to use iTunes rather than Audacity to manage the metadata.
+<h3><span class="mw-headline" id="Step_3:_Use_Apple_Music.2FiTunes_to_edit_the_metadata_for_the_album_name_and_artist">Step 3: Use Apple Music/iTunes to edit the metadata for the album name and artist</span></h3>
+<p>Make sure that one of the columns you have showing in your Apple Music/iTunes library is "<b>Kind</b>". The imported files will show as WAV and can be listed together by clicking on the "<b>Kind</b>" column header. 
+</p><p>Select all the WAV files and use Apple Music's/iTunes' metadata editor to enter the album name and the artist name so that you can easily find it later when editing the other metadata tags. You could alternatively set this metadata prior to Audacity Export using Audacity's metadata editor – some users report that it is easier to use Apple Music/iTunes rather than Audacity to manage the metadata.
 </p>
 <div id="aac"></div>
-<h3><span class="mw-headline" id="Step_4:_Use_iTunes_to_make_AAC_copies_in_the_library_from_the_WAV_files">Step 4: Use iTunes to make AAC copies in the library from the WAV files</span></h3>
-<p>Provided that you did not already have other WAV files in your iTunes library, the WAV files you need should still be the only selected tunes at this stage, providing that you have done no further clicking.  Make sure that you have your iTunes Import Settings set to AAC at your required bitrate.  Convert them to AAC by using the iTunes command <span class="menu">File &gt; Convert</span> . Note carefully that this makes a “copy” not a straight conversion – so at this stage your library will contain both the AAC and the WAV copies of the songs.
+<h3><span class="mw-headline" id="Step_4:_Use_Apple_Music.2FiTunes_to_make_AAC_copies_in_the_library_from_the_WAV_files">Step 4: Use Apple Music/iTunes to make AAC copies in the library from the WAV files</span></h3>
+<p>Provided that you did not already have other WAV files in your Apple Music/iTunes library, the WAV files you need should still be the only selected tunes at this stage, providing that you have done no further clicking.  Make sure that you have your Apple Music/iTunes Import Settings set to AAC at your required bitrate.  Convert them to AAC by using the Apple Music/iTunes command <span class="menu">File &gt; Convert</span> . Note carefully that this makes a “copy” not a straight conversion – so at this stage your library will contain both the AAC and the WAV copies of the songs.
 </p>
-<div class="note">If you have plenty of room you may wish to keep the WAV files in your iTunes library to for their lossless quality and not convert them to AAC.  In that case you should omit this conversion step and the next step which deletes the WAV files from your iTunes library. Yet another option is to set iTunes to convert to Apple Lossless which has about half the file size of WAV.  
-<p>Or you may wish to use MP3 files in your iTunes library instead of AAC.  In that case either export as MP3 from Audacity, to any convenient location, for import into iTunes or import WAVs and set iTunes to convert to MP3 rather than its default AAC.  Note that for equivalent file size, AAC is generally reckoned to give better quality audio than MP3, but MP3 is a much safer choice if you want to send the file to someone else.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">If you have plenty of room you may wish to keep the WAV files in your Apple Music/iTunes library to for their lossless quality and not convert them to AAC.  In that case you should omit this conversion step and the next step which deletes the WAV files from your Apple Music/iTunes library. Yet another option is to set Apple Music/iTunes to convert to Apple Lossless which has about half the file size of WAV.
+<p>Or you may wish to use MP3 files in your Apple Music/iTunes library instead of AAC.  In that case either export as MP3 from Audacity, to any convenient location, for import into Apple Music/iTunes or import WAVs and set Apple Music/iTunes to convert to MP3 rather than its default AAC.  Note that for equivalent file size, AAC is generally reckoned to give better quality audio than MP3, but MP3 is a much safer choice if you want to send the file to someone else.
+</p><p>There are several advantages to using compressed format on iPods. The two main ones are that you can fit a lot more songs into the device <i>(for 256 kbps files you can fit more than 8-9 times as many songs)</i> and compressed files improve battery life (because disk reads are relatively heavy on battery power). 
 </p>
-There are several advantages to using compressed format on iPods. The two main ones are that you can fit a lot more songs into the device <i>(for 256 kbps files you can fit more than 8-9 times as many songs)</i> and compressed files improve battery life (because disk reads are relatively heavy on battery power). </div>
+</td></tr></table>
+</div>
 <div id="delete"></div>
 <h3><span class="mw-headline" id="Step_5:_Delete_the_WAV_files_from_the_library">Step 5: Delete the WAV files from the library</span></h3>
-<p>The WAV files should still remain as the selected tunes - just take extreme care at this stage (the AACs are created but selection is not forced by iTunes) So then just Delete the selected WAV files using the Delete key - and send the files to the wastebasket.
-</p><p>Note carefully that this workflow assumes that you have iTunes is set to copy files in, NOT to reference external files - so the WAVs that are deleted are iTunes’ copies of the original source WAVs. This is set in <b>Edit &gt; Preferences &gt; Advanced</b> with the <b>Copy tunes into iTunes folder when adding to library</b> checkbox.
+<p>The WAV files should still remain as the selected tunes - just take extreme care at this stage (the AACs are created but selection is not forced by Apple Music/iTunes) So then just Delete the selected WAV files using the Delete key - and send the files to the wastebasket.
 </p>
+<div class="note">Note carefully that this workflow assumes that you have Apple Music/iTunes is set to copy files in, NOT to reference external files - so the WAVs that are deleted are Apple Music's/iTunes’ copies of the original source WAVs. <p>This can be set in <b>Edit &gt; Preferences &gt; Advanced</b> in iTunes and <span class="menu">Preferences &gt; Files</span> in Apple Music with the <b>Copy files to iTunes Media folder when adding to library</b> checkbox.</p></div>
 <div id="edit"></div>
 <h3><span class="mw-headline" id="Step_6:_Edit_the_metadata_tags_of_the_tracks.2Falbum">Step 6: Edit the metadata tags of the tracks/album</span></h3>
-<p>Edit the metadata tags for Song Name, track number and similar  The album should be easy to locate in iTunes as you have already edited the Album tag in a previous workflow step above.  You may wish to edit the song titles to remove the leading 01, 02 numbering series that was applied earlier to facilitate the correct ordering of the songs.
+<p>Edit the metadata tags for Song Name, track number and similar  The album should be easy to locate in Apple Music/iTunes as you have already edited the Album tag in a previous workflow step above.  You may wish to edit the song titles to remove the leading 01, 02 numbering series that was applied earlier to facilitate the correct ordering of the songs.
 </p>
 <div id="artwork"></div>
 <h3><span class="mw-headline" id="Step_7:_Fetch_the_album_artwork">Step 7: Fetch the album artwork</span></h3>
-<p>Find a copy of the album artwork - either directly via iTunes if the album is recognized by the Gracenote database CDDB (but note that Gracenote does not always carry the artwork), or by making a digital photo of the album cover, and add the artwork to the album.  <i>You may be able to find a copy of the album artwork on Amazon, Wikipedia or the artist's own website.</i>
+<p>Find a copy of the album artwork - either directly via Apple Music/iTunes if the album is recognized by the Gracenote database CDDB (but note that Gracenote does not always carry the artwork), or by making a digital photo of the album cover, and add the artwork to the album.  <i>You may be able to find a copy of the album artwork on Amazon, Wikipedia or the artist's own website.</i>
 </p>
-<div class="note">If you are using WAV files in your iTunes library then you cannot associate album artwork with these files.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">If you are using WAV files in your Apple Music/iTunes library then you cannot associate album artwork with these files.
+</td></tr></table></div>
 <div id="cd"></div>
 <h3><span class="mw-headline" id="Step_8:_Optionally_make_a_CD_.E2.80.93_and_create_cover_.26_playlist">Step 8: Optionally make a CD – and create cover &amp; playlist</span></h3>
-<p>You may wish to burn a CD from the WAV files.  You can use iTunes to print CD covers with track-list and album cover; to do this you will need to create a temporary iTunes playlist for the album.
+<p>You may wish to burn a CD from the WAV files.  You can use iTunes to print CD covers with track-list and album cover; to do this you will need to create a temporary Apple Music/iTunes playlist for the album.
 </p>
 <div id="backup"></div>
-<h3><span class="mw-headline" id="Step_9:_Backup_your_updated_iTunes_library">Step 9: Backup your updated iTunes library</span></h3>
-
+<h3><span class="mw-headline" id="Step_9:_Backup_your_updated_Apple_Music.2FiTunes_library">Step 9: Backup your updated Apple Music/iTunes library</span></h3>
 <p>This is a critical step – you do not want to lose the valuable fruits of your labors, do you?
 </p><p>We would recommend maintaining two separate backup copies of your library on external disks.
 </p><p>Keep the WAV files that you exported from Audacity and back those up as well (two copies) on external disks.
@@ -116,7 +138,7 @@ There are several advantages to using compressed format on iPods. The two main o
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
-<td align="left" valign="top">You may if you wish export to AAC compressed format (M4A files) from Audacity, to any convenient location, for direct import into iTunes.  AAC export is one of the options available in the Export menus. To export to AAC, download and install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library. The export quality for M4A can be modified using the <span class="button">Options...</span> button. The highest quality Audacity setting is roughly comparable to encoding to AAC in iTunes using VBR encoding at the highest bit rate preset.
+<td align="left" valign="top">You may if you wish export to AAC compressed format (M4A files) from Audacity, to any convenient location, for direct import into Apple Music/iTunes.  AAC export is one of the options available in the Export menus. To export to AAC, download and install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library. The export quality for M4A can be modified using the <span class="button">Options...</span> button. The highest quality Audacity setting is roughly comparable to encoding to AAC in Apple Music/iTunes using VBR encoding at the highest bit rate preset.
 </td></tr></table>
 </div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
@@ -125,34 +147,34 @@ There are several advantages to using compressed format on iPods. The two main o
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115102059
+Cached time: 20200501031854
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.109 seconds
-Real time usage: 0.116 seconds
-Preprocessor visited node count: 315/1000000
-Preprocessor generated node count: 1395/1000000
-Post‐expand include size: 7684/2097152 bytes
-Template argument size: 5489/2097152 bytes
+CPU time usage: 0.115 seconds
+Real time usage: 0.119 seconds
+Preprocessor visited node count: 310/1000000
+Preprocessor generated node count: 1393/1000000
+Post‐expand include size: 7586/2097152 bytes
+Template argument size: 4808/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   48.483      1 - -total
- 58.32%   28.275      1 - Template:I18n
- 53.44%   25.910      1 - Template:I18n_box
- 44.89%   21.766      1 - Template:I18n_list
- 16.20%    7.853      2 - Template:I18n_link
-  9.03%    4.376      2 - Template:Autoglossonym
-  7.48%    3.626      4 - Template:Ednote
-  6.83%    3.311      7 - Template:Menu
-  6.57%    3.185      3 - Template:Note
-  5.39%    2.612      2 - Template:Button
+100.00%   39.397      1 - -total
+ 58.99%   23.240      1 - Template:I18n
+ 53.70%   21.155      1 - Template:I18n_box
+ 42.84%   16.878      1 - Template:I18n_list
+ 18.35%    7.229      2 - Template:I18n_link
+ 10.45%    4.116      2 - Template:Autoglossonym
+  6.85%    2.697      2 - Template:Note
+  6.40%    2.522      8 - Template:Menu
+  5.22%    2.055      2 - Template:Tip
+  5.08%    2.000      2 - Template:Button
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3135-0!*!0!!*!5!* and timestamp 20191115102059 and revision id 65548
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3135-0!*!0!!*!5!* and timestamp 20200501031854 and revision id 66389
  -->
 </div>
 										<!-- end content -->
@@ -195,7 +217,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -225,7 +248,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_exporting_to_iTunes">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_exporting_to_iTunes">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -49,15 +49,16 @@
 <li><a href="#import-error">Error Importing: Aup is an Audacity Project file. Use the File &gt; Open command</a></li>
 <li><a href="#corrupt">Error Opening File or Project: File may be invalid or corrupted</a></li>
 <li><a href="#mismatched">Error Opening Project: mismatched tag at line x</a> </li>
+<li><a href="#missing">Warning - Missing Audio Data Block File(s)</a> </li>
+<li><a href="#orphans">Warning - Orphan Block File(s)</a> </li>
 <li><a href="#others">Other errors opening project</a>  </li></ol>
 <p><br />
 </p>
 <div id="not-well-formed"></div>
 <h2><span class="mw-headline" id="Error_Opening_Project:_not_well-formed_.28invalid_token.29_at_line_x">Error Opening Project: not well-formed (invalid token) at line x</span></h2>
-
 <p>This usually means that when reopening the AUP <a href="audacity_projects.html" title="Audacity Projects">project file</a> normally, Audacity finds an unexpected non-English, accented or control character at the line quoted in the error message. There are two main causes of this.  
 </p>
-<ul><li> The project contains <b>imported files whose <a href="glossary.html#metadata" title="Glossary">metadata</a> (like artist or genre) contains control characters.</b> This mostly occurs with iTunes files on Mac where the project was created in an older version of Audacity. </li>
+<ul><li> The project contains <b>imported files whose <a href="glossary.html#metadata" title="Glossary">metadata</a> (like artist or genre) contains control characters.</b> This mostly occurs with Apple Music/iTunes files on Mac where the project was created in an older version of Audacity. </li>
 <li> The project was saved containing <b>non-English or accented characters</b> using an old ANSI build of Audacity for Windows. ANSI builds are not properly <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> aware, so do not support non-English or accented characters. 
 <ul><li> The <a rel="nofollow" class="external text" href="http://www.audacityteam.org/download/windows">latest version of Audacity</a> will always fully support Unicode. You can check your Audacity version at <span class="menu">Help &gt; <a href="help_menu.html#about_audacity" title="Help Menu">About Audacity...</a></span> <i>(or <span class="menu">Audacity &gt; About Audacity</span> on Mac)</i>. </li></ul></li></ul>
 <p>If Audacity or the computer crashed, Audacity will try to <a href="recovery.html" title="Recovery">recover</a> the project from its <a href="audacity_projects.html#autosave" title="Audacity Projects">AUTOSAVE</a> file, but the crash may have created a redundant line near the end of the file that triggers the token error. Very occasionally, the AUP file may become corrupted by one or more redundant lines, giving a token error even if there was no apparent crash. To correct this, see <a href="error_not_well_formed_invalid_token_at_line_x.html#autosave" title="Error: not well-formed (invalid token) at line x">remove redundant lines in an AUTOSAVE or AUP file</a>. 
@@ -121,6 +122,23 @@
 <td><b>&lt;tags&gt;<br />&#160;&#160;&#160;&lt;tag name="ARTIST" value="Elton"/&gt;<br />&lt;/tags&gt;</b>
 </td></tr></table>
 <p><a href="#top">back to top</a>
+</p><p><br /> 
+</p>
+<div id="missing"></div>
+<h2><span class="mw-headline" id="Warning_-_Missing_Audio_Data_Block_File.28s.29">Warning - Missing Audio Data Block File(s)</span></h2>
+<p><b>Block files:</b> Audacity stores the audio data in multiple short sections or block files (normally six seconds long). For details please see For details please see <a href="audacity_projects.html#AUP" title="Audacity Projects">Structure of an Audacity project</a>.
+</p><p>This warning message will be shown when you attempt to open an Audacity project which has audio data missing for some reason. 
+</p><p>For further details and remedial action please see <a href="warning_missing_audio_data_block_files.html" title="Warning - Missing Audio Data Block Files">Warning - Missing Audio Data Block Files</a>.
+</p><p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="orphans"></div>
+<h2><span class="mw-headline" id="Warning_-_Orphan_Block_File.28s.29">Warning - Orphan Block File(s)</span></h2>
+<p><b>Block files:</b> Audacity stores the audio data in  multiple short sections or block files (normally six seconds long). For details please see <a href="audacity_projects.html#AUP" title="Audacity Projects">Structure of an Audacity project</a>. 
+</p><p>This warning message will be shown when you attempt to open an Audacity project which has audio data which does not appear in any of the tracks in the project.
+</p><p>For further details and remedial action please see <a href="warning_orphan_block_files.html" title="Warning - Orphan Block Files">Warning - Orphan Block Files</a>.
+</p><p><a href="#top">back to top</a>
+</p><p><br />
 </p>
 <div id="others"></div>
 <h2><span class="mw-headline" id="Other_errors_opening_project">Other errors opening project</span></h2>
@@ -136,32 +154,32 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115101015
+Cached time: 20200430194354
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.073 seconds
-Real time usage: 0.075 seconds
-Preprocessor visited node count: 150/1000000
-Preprocessor generated node count: 490/1000000
-Post‐expand include size: 4484/2097152 bytes
-Template argument size: 2516/2097152 bytes
+CPU time usage: 0.077 seconds
+Real time usage: 0.080 seconds
+Preprocessor visited node count: 153/1000000
+Preprocessor generated node count: 482/1000000
+Post‐expand include size: 4297/2097152 bytes
+Template argument size: 2360/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   14.032      1 - -total
- 43.92%    6.163      1 - Template:No-rename
- 37.70%    5.290      4 - Template:Ednote
- 15.70%    2.203      1 - Template:Button
- 13.78%    1.934      6 - Template:Menu
- 11.55%    1.620      3 - Template:Code
-  9.31%    1.306      1 - Template:Intro
-  7.33%    1.029      1 - Template:Alert
+100.00%   19.663      1 - -total
+ 46.09%    9.062      1 - Template:No-rename
+ 37.38%    7.350      3 - Template:Ednote
+ 15.19%    2.987      1 - Template:Button
+ 14.44%    2.840      6 - Template:Menu
+ 12.56%    2.469      3 - Template:Code
+  9.25%    1.819      1 - Template:Intro
+  8.68%    1.706      1 - Template:Alert
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5799-0!*!0!!*!5!* and timestamp 20191115101015 and revision id 65574
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5799-0!*!0!!*!5!* and timestamp 20200430194354 and revision id 66420
  -->
 </div>
 										<!-- end content -->
@@ -204,7 +222,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -234,7 +253,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Errors_on_opening_or_recovering_an_Audacity_project">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Errors_on_opening_or_recovering_an_Audacity_project">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -58,15 +58,15 @@
 </p>
 <ul><li>An <i><b><a href="glossary.html#audacity_project_format" title="Glossary">AUP</a></b></i> <b>project file</b> - the name of the project followed by ".aup", for example  <b>"my_song.aup"</b></li>
 <li>A <b>_data folder</b> with the same project name and in the same folder as the .aup file, for example <b>"my_song_data"</b></li>
-<li>Within that _data folder, a sub-folder structure with lots of little <i><b><a href="glossary.html#au" title="Glossary">AU</a></b></i> files which are individual segments of the audio data. </li></ul>
-<dl><dd><i>Note that default behavior on Windows and Mac is to hide certain file <a href="glossary.html#extension" title="Glossary">extensions</a>&#160;; if this applies, the .aup file will only appear as <b>"my_song"</b> in the computer. On Windows, the .aup extension will be hidden if Audacity was installed from the .exe installer and "Hide file extensions for known file types" remains checked in Windows Explorer. You can unhide extensions on Windows by following <a rel="nofollow" class="external text" href="https://www.bleepingcomputer.com/tutorials/how-to-see-hidden-files-in-windows/">these instructions</a>. </i></dd></dl>
-<p>The project file describes how Audacity links these AU files together to make up the clips and tracks in the project; it also contains gain, pan and envelope information, data to manage the  <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> display and carries links to any dependent audio files being read directly from their source location.
-</p><p>The AUP file is in XML format and can be opened in a text editor if required. The AU files are stored in a <i><b><a href="glossary.html#lossless" title="Glossary">lossless</a></b></i>, uncompressed format. Their default size is 1 MB or less. This Audacity Project Format is designed to make editing audio faster in Audacity.  By updating individual AU files during editing, Audacity can change audio or move it around in the project without copying large quantities of data from one place to another.
+<li>Within that _data folder, a sub-folder structure with lots of little <i><b><a href="glossary.html#au" title="Glossary">AU</a></b></i> block files which are individual segments of the audio data. </li></ul>
+<dl><dd><i>Note that default behavior on Windows and Mac is to hide certain file <a href="glossary.html#extension" title="Glossary">extensions</a>. If this applies, the .aup file will only appear as <b>"my_song"</b> in the computer. On Windows, the .aup extension will be hidden if Audacity was installed from the .exe installer and "Hide file extensions for known file types" remains checked in Windows Explorer. You can unhide extensions on Windows by following <a rel="nofollow" class="external text" href="https://www.bleepingcomputer.com/tutorials/how-to-see-hidden-files-in-windows/">these instructions</a>. </i></dd></dl>
+<p>The project file describes how Audacity links these AU block files together to make up the clips and tracks in the project. It also contains gain, pan and envelope information, data to manage the  <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> display.
+</p><p>The AUP file is in XML format and can be opened in a text editor if required. The AU block files are stored in a <i><b><a href="glossary.html#lossless" title="Glossary">lossless</a></b></i>, uncompressed format. Their default size is 1 MB or less. This Audacity Project Format is designed to make editing audio faster in Audacity.  By updating individual AU block files during editing, Audacity can change audio or move it around in the project without copying large quantities of data from one place to another.
 </p>
 <div id="4rules"></div>
 <div class="note"><b>The four rules for keeping your Audacity Project happy:</b>
 <ol><li>When importing an uncompressed audio file with the "Read uncompressed file directly from the original (faster)" option checked in <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a> <b>never move, rename or delete that file</b> unless you first copy it into the Audacity project. See <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#check_dependencies" title="Help Menu: Diagnostics">Check Dependencies...</a></span> for more information.</li>
-<li><b>Never</b> move, delete or rename any of the files or folders inside the _data folder.</li>
+<li><b>Never</b> move, delete or rename any of the block files or folders inside the _data folder.</li>
 <li><b>Never</b> rename the AUP file or the _data folder by hand.
 <dl><dd>If you want to rename your project (for example, to save a snapshot at a particular point), use one of the <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_lossless_copy_of_project" title="File Menu: Save Project">Save Lossless Copy of Project...</a></span> or <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As...</a></span> commands.</dd></dl></li>
 <li><b>Always</b> keep the AUP file and the _data folder together in the same directory (folder).</div></li></ol>
@@ -120,7 +120,7 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 </p>
 <div id="open"></div>
 <h2><span class="mw-headline" id="Opening_an_Audacity_project">Opening an Audacity project</span></h2>
-<p>When opening an Audacity project always use <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open</a></span> or <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> to open the <b>"my_song.aup"</b>.  Do not attempt to open, import or manipulate any individual <b>AU</b> files. 
+<p>When opening an Audacity project always use <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open</a></span> or <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> to open the <b>"my_song.aup"</b>.  Do not attempt to open, import or manipulate any individual <b>AU</b> block files. 
 </p><p>Audio which was not saved as an Audacity Project will need to be imported using <span class="menu">File &gt; <a href="file_menu.html#Import" title="File Menu">Import</a></span> or by dragging the file in. The Import command is used to import audio data into an already open project.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -134,7 +134,15 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <li>Projects created in legacy <b>Audacity 1.1.x or earlier</b> can only be opened by exporting each audio track as WAV in the legacy version of Audacity, then import the WAV files into the current version of Audacity.</li></ul>
 </td></tr></table>
 </div>
-<p><br />
+<h3><span class="mw-headline" id="Missing_or_orphan_block_files">Missing or orphan block files</span></h3>
+<p>Occasionally when a project is opened Audacity will find that there may be some missing data (<a href="#AUP">block files</a>) or some additional extraneous data not needed for the project.  
+</p><p>This is normally caused by a system or application crash but sometimes can be down to <i>(as yet undiscovered bugs)</i>.
+</p><p>If this happens warning messages will be displayed:
+</p>
+<ul><li><a href="warning_missing_audio_data_block_files.html" title="Warning - Missing Audio Data Block Files">Warning - Missing Audio Data Block Files</a></li>
+<li><a href="warning_orphan_block_files.html" title="Warning - Orphan Block Files">Warning - Orphan Block Files</a></li></ul>
+<p>The above links explain the possible remedial actions you can take in these circumstances.
+</p><p><br />
 </p>
 <div id="move"></div>
 <h2><span class="mw-headline" id="Moving.2C_renaming_or_sending_an_Audacity_project">Moving, renaming or sending an Audacity project</span></h2>
@@ -154,6 +162,7 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <ul><li>If moving the project to a different computer, the project must not depend on external audio files because the actual (absolute) path to these is stored in the AUP file. Use the <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#check_dependencies" title="Help Menu: Diagnostics">Check Dependencies...</a></span> command to check whether the project depends on any external files.  If it does, the dialog box will give you the option to make a copy of those files within the project.  </li></ul>
 <ul><li> It can be difficult to email complex projects to others because of the size of the project data and because you must send a ZIP file containing AUP file and _data folder to ensure the project structure remains intact. If you do not mind sending slightly lossy audio in the project, the file size can be greatly reduced by zipping up a <a href="#compressed">compressed copy of the project</a>. Note that ZIP formats do not support reliable character encoding, so for the name of the project, labels, track names or metadata, only use A to Z or a to z characters, whole numbers (0 to 9), underscore or hyphen-minus (or use the NUMPAD_SUBTRACT key).</li></ul>
 <p>See also <a href="sending_your_work_to_others.html" title="Sending your work to others">Sending your work to others</a> and this <a href="faq_opening_and_saving_files.html#send" title="FAQ:Opening and Saving Files">FAQ</a>.
+</p><p><br />
 </p>
 <div id="backup"></div>
 <h2><span class="mw-headline" id="Backing_up_Audacity_projects">Backing up Audacity projects</span></h2>
@@ -169,17 +178,21 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <td align="left" valign="top">If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended that you immediately export your audio using <span class="menu">File &gt; Export &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
 </td></tr></table>
 </div> 
+<p><br />
+</p>
 <div id="delete"></div>
 <h2><span class="mw-headline" id="Deleting_an_Audacity_project">Deleting an Audacity project</span></h2>
 <p>There is no <b>File &gt; Delete Project</b> command in Audacity; therefore to delete a project to free up disk space it is necessary to make the deletion manually.  You will need to delete both the AUP file and its associated, identically named _data folder.
 '=
 Note that this will <i><b>not</b></i> remove the listing of your project under <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files...</a></span>. After deleting the project you can choose the AUP entry for that project in the Recent Files list in order to remove the entry.
+</p><p><br />
 </p>
 <div id="autosave"></div>
 <h2><span class="mw-headline" id="Autosave_and_Recovery">Autosave and Recovery</span></h2>
 <p>As soon as you open a project window and change the window contents, whether this is a previously saved project or you are creating a new project, Audacity writes a temporary reference file for that project called an "<b>.autosave</b>" file. This allows Audacity to <a href="recovery.html" title="Recovery">automatically recover</a> unsaved changes in the event of a crash or power loss. 
 </p><p>When you use <span class="menu"><a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span>, <span class="menu"><a href="file_menu_save_project.html#save_lossless_copy_of_project" title="File Menu: Save Project">Save Lossless Copy of Project...</a></span> or <span class="menu"><a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As...</a></span> there are no longer unsaved changes, so the ".autosave" file is deleted until fresh unsaved changes are made. The file is stored in the "AutoSave" folder inside Audacity's <a href="preferences.html#stored" title="Preferences">folder for application data</a>.  The file is of identical internal structure to an AUP project file, but is not readable by a text editor. 
 </p><p>Most changes you make to the audio data, such as adding or removing audio or applying an effect to it, trigger writing the ".autosave" file. A change to the position of the <a href="audacity_selection.html" title="Audacity Selection">selection</a> or editing cursor does not write to the ".autosave" file, and is not captured when closing the project, unless the project is already "dirty" (as shown by <b>Save Project</b> in the submenu being not grayed out and being clickable).  
+</p><p><br />
 </p>
 <div id="disk_space"></div>
 <h2><span class="mw-headline" id="Disk_space_usage">Disk space usage</span></h2>
@@ -192,34 +205,34 @@ Note that this will <i><b>not</b></i> remove the listing of your project under <
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191114120243
+Cached time: 20200430143842
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.154 seconds
-Real time usage: 0.161 seconds
-Preprocessor visited node count: 547/1000000
-Preprocessor generated node count: 1948/1000000
-Post‐expand include size: 11518/2097152 bytes
-Template argument size: 6903/2097152 bytes
+CPU time usage: 0.155 seconds
+Real time usage: 0.160 seconds
+Preprocessor visited node count: 551/1000000
+Preprocessor generated node count: 1952/1000000
+Post‐expand include size: 11524/2097152 bytes
+Template argument size: 6909/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   60.135      1 - -total
- 51.65%   31.062      1 - Template:I18n
- 47.71%   28.689      1 - Template:I18n_box
- 40.32%   24.245      1 - Template:I18n_list
- 19.97%   12.007      4 - Template:I18n_link
- 13.60%    8.176     33 - Template:Menu
- 11.52%    6.929      4 - Template:Autoglossonym
-  6.26%    3.766      1 - Template:Intro
-  5.35%    3.219      2 - Template:Note
-  4.45%    2.674      2 - Template:Shortcut
+100.00%   55.058      1 - -total
+ 47.95%   26.400      1 - Template:I18n
+ 44.52%   24.511      1 - Template:I18n_box
+ 37.66%   20.735      1 - Template:I18n_list
+ 18.37%   10.112      4 - Template:I18n_link
+ 14.43%    7.943     33 - Template:Menu
+ 10.67%    5.875      4 - Template:Autoglossonym
+  6.34%    3.490      1 - Template:Intro
+  5.92%    3.259      2 - Template:Note
+  5.02%    2.762      2 - Template:Shortcut
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2523-0!*!0!!*!5!* and timestamp 20191114120243 and revision id 65183
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2523-0!*!0!!*!5!* and timestamp 20200430143841 and revision id 65906
  -->
 </div>
 										<!-- end content -->
@@ -262,7 +275,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -292,7 +306,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Projects">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Projects">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

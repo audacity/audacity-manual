@@ -81,9 +81,9 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <td> <span title="Track Control Panel"><img alt="TrackPanelNew.png" src="../m/images/d/dd/trackpanelnew.png" width="97" height="145" /></span>
 </td>
 <td><div class="note" style="position:relative;top:-0.9em">The <b>Track Control Panel</b> at the left of the audio track has controls and status indicators for this track. Left-clicking other than on a control performs track selection and move as follows.
-<ul><li> Clicking <a href="audacity_selection.html" title="Audacity Selection">selects</a> all this track's audio, <i>deselecting all other tracks</i>. </li>
-<li> Holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking selects all this track's audio, <i>keeping already selected tracks selected</i>.
-<ul><li> (<b>keyboard:</b> use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to give the track <a href="#focus">focus</a>, then <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to select it; hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> then use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to extend selection into another track. Read <a href="audacity_selection.html#keyboard" title="Audacity Selection">keyboard selection</a> for more).    </li></ul></li>
+<ul><li> Clicking the <span class="button">Select</span> button <a href="audacity_selection.html" title="Audacity Selection">selects</a> all this track's audio, <i>deselecting all other tracks</i>. </li>
+<li> Holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking the <span class="button">Select</span> button selects all this track's audio, <i>keeping already selected tracks selected</i>.
+<ul><li> <b>keyboard:</b> use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to give the track <a href="#focus">focus</a>, then <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to select it; hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> then use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to extend selection into another track. Read <a href="audacity_selection.html#keyboard" title="Audacity Selection">keyboard selection</a> for more.    </li></ul></li>
 <li> Click-and-drag moves this track up or down when there are other tracks (<b>keyboard:</b> choose one of the "Move Track" commands in <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>, opened by <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> on the currently focused track ).</div></li></ul>
 </td></tr></table></dd></dl>
 <div id="controls"></div>
@@ -142,7 +142,6 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 </p>
 <div id="scale"></div>
 <h2><span class="mw-headline" id="Vertical_Scale">Vertical Scale</span></h2>
-</li></ul>
 <dl><dd><table>
 
 <tr>
@@ -152,11 +151,15 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <ul><li>The vertical scale displays <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> when showing the  <i><b><a href="glossary.html#waveform" title="Glossary">waveform</a></b></i>, or <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> when showing the <i><b><a href="glossary.html#spectrum" title="Glossary">spectrum</a></b></i>  or <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i>.  </li></ul>
 <ul><li>The amplitude scale shown to left is the default <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> scale
 <ul><li> 1.0 being the maximum value of positive signals and -1.0 the maximum of negative signals. </li></ul></li></ul>
-<ul><li>If the display is changed to <a href="audio_track_dropdown_menu.html#wavedb" title="Audio Track Dropdown Menu">Waveform dB</a> in the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>, the scale shows <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> values for positive signals only 
-<ul><li> These dB values range from maximum 0 dB to the minimum dB level set in <a href="interface_preferences.html" title="Interface Preferences">Interface Preferences</a>, or can be varied using the <a href="zooming.html#vscale" title="Zooming">mouse wheel</a>.</li></ul></li></ul>
-<ul><li>Right-click in the Vertical Scale will bring up a dropdown context menu enabling <a href="vertical_zooming.html" title="Vertical Zooming">Vertical Zooming</a>.</li></ul>
 </td></tr>
 </table></dd></dl>
+<h3><span class="mw-headline" id="Vertical_Scale_context_menu">Vertical Scale context menu</span></h3>
+<p>Right-click in the Vertical Scale will bring up a dropdown context menu enabling <a href="vertical_zooming.html" title="Vertical Zooming">Vertical Zooming</a> and facilitating swapping between <a href="audacity_waveform.html" title="Audacity Waveform">Linear Waveform</a> <i>(default)</i> and <a href="audacity_waveform.html#db" title="Audacity Waveform">Waveform dB</a> view.
+</p>
+<dl><dd><span title="Vertical Scale Waveform context menu"><img alt="Vertical Scale Waveform context menu.png" src="../m/images/b/b5/vertical_scale_waveform_context_menu.png" width="191" height="269" /></span></dd></dl>
+<p>If the display is changed to <a href="audio_track_dropdown_menu.html#wavedb" title="Audio Track Dropdown Menu">Waveform dB</a>, the scale shows <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> values for positive signals only 
+</p>
+<div class="note">These dB values range from maximum 0 dB to the minimum dB level set in <a href="interface_preferences.html" title="Interface Preferences">Interface Preferences</a>, or can be varied using the <a href="zooming.html#vscale" title="Zooming">mouse wheel</a>. </div>
 <p><br />
 </p>
 <div id="name"></div>
@@ -197,9 +200,11 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <h2><span class="mw-headline" id="Changing_the_track_display">Changing the track display</span></h2>
 <div class="note">Click and drag between the two waveforms to change their relative height (<span class="kbrd" style="background-color: #e0e0f0">Esc</span> key can abort that drag). </div>
 <h3><span class="mw-headline" id="Changing_the_height_of_the_channels_in_a_stereo_track">Changing the height of the channels in a stereo track</span></h3>
-<p>Click and drag between the channels.
+<p>Click and drag in the gray strip between the channels.
 </p>
 <dl><dd><span title="Example of resizing the channels of a stereo track"><img alt="DragBetweenTracksStereo.png" src="../m/images/9/98/dragbetweentracksstereo.png" width="520" height="162" /></span></dd></dl>
+<p>To restore a track to default so that each channel is the same size simply double-click in the gray strip between the channels.
+</p>
 <h3><span class="mw-headline" id="Changing_the_height_of_a_track">Changing the height of a track</span></h3>
 <p>Click and drag between the tracks (<span class="kbrd" style="background-color: #e0e0f0">Esc</span> key can abort that drag).
 </p>
@@ -208,10 +213,6 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <p>This indicates that there is audio data in the track before the track start.
 </p>
 <dl><dd><span title="Arrows indicate there is audio before time=0.0"><img alt="Track audio before zero.png" src="../m/images/4/47/track_audio_before_zero.png" width="462" height="159" /></span></dd></dl>
-<h3><span class="mw-headline" id="Display_options">Display options</span></h3>
-<p>The track display can be changed from the default waveform view, to <a href="audio_track_dropdown_menu.html#wavedb" title="Audio Track Dropdown Menu">Waveform (dB)</a> or <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">Spectrogram</a>.  To do this open the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> accessed by clicking in the Track Name, by the downward-pointing triangle <span style="position:relative;bottom:-4px"><span title="Track Name"><img alt="Track dropdown.png" src="../m/images/2/2e/track_dropdown.png" width="77" height="18" /></span></span>  in the <a href="#panel" title="Audio Tracks">Track Control Panel</a>.  This will affect this track only
-</p>
-<dl><dd><span title="Audio Track Dropdown Menu truncated, showing Waveform (dB) and Spectrogram choices"><img alt="Audio Track Dropdown Menu trimmed.png" src="../m/images/b/b4/audio_track_dropdown_menu_trimmed.png" width="287" height="238" /></span></dd></dl>
 <h3><span class="mw-headline" id="Stem_Plots">Stem Plots</span></h3>
 <p>There is an entry in the <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> for <b>Display samples</b>.  This setting changes how <a href="audacity_waveform.html" title="Audacity Waveform">Waveform</a> and <a href="audacity_waveform.html#db" title="Audacity Waveform">Waveform dB</a> views are displayed.  It only affects the appearance of the waveform when you are so far zoomed in that you can see the individual sample dots.  At lower zoom levels it makes no difference.  
 </p>
@@ -227,7 +228,16 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 </p><p>The track that has focus is the track that accepts any command whose name includes "focused track". These commands include commands such as "Close focused track" (<span class="kbrd" style="background-color: #e0e0f0">Shift + C</span>), "Mute/Unmute focused track" (<span class="kbrd" style="background-color: #e0e0f0">Shift + U</span>) and "Toggle focused track" (<span class="kbrd" style="background-color: #e0e0f0">RETURN</span> or <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, which toggles whether the focused track is <a href="audacity_selection.html" title="Audacity Selection">selected</a> or not).
 </p><p>The complete list of "focused track" commands can be seen by searching for "focused track" (without quotes) in <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> or by viewing the description of these commands in <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference">Keyboard Shortcut Reference</a>. 
 </p><p>Track focus is used to <a href="faq_editing.html#select" title="FAQ:Editing">select audio</a> and to <a href="faq_editing.html#selcopy" title="FAQ:Editing">extend or move the selection region into other tracks</a> using the keyboard.
-</p><p><br />
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Note <i><b>carefully</b></i> that a track having focus does not necessarily mean that the current selection is in that track.  It is quite possible to have a selection in one track and for another track to have the focus.
+</td></tr></table></div>
+<p><br />
 </p>
 <div id="working"></div>
 <h2><span class="mw-headline" id="Working_with_Audio_Tracks">Working with Audio Tracks</span></h2>
@@ -247,34 +257,34 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191114182922
+Cached time: 20200430213442
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.197 seconds
-Real time usage: 0.205 seconds
-Preprocessor visited node count: 683/1000000
-Preprocessor generated node count: 1934/1000000
-Post‐expand include size: 8568/2097152 bytes
-Template argument size: 3946/2097152 bytes
+CPU time usage: 0.201 seconds
+Real time usage: 0.210 seconds
+Preprocessor visited node count: 708/1000000
+Preprocessor generated node count: 1986/1000000
+Post‐expand include size: 8952/2097152 bytes
+Template argument size: 3884/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   53.589      1 - -total
- 51.92%   27.826      1 - Template:I18n
- 48.98%   26.246      1 - Template:I18n_box
- 42.70%   22.882      1 - Template:I18n_list
- 23.30%   12.486      5 - Template:I18n_link
- 14.79%    7.928     17 - Template:Key
- 13.94%    7.468      5 - Template:Autoglossonym
-  7.97%    4.272      4 - Template:Note
-  5.11%    2.741      1 - Template:Intro
-  4.08%    2.186      7 - Template:Bh
+100.00%   59.397      1 - -total
+ 47.89%   28.446      1 - Template:I18n
+ 44.86%   26.647      1 - Template:I18n_box
+ 38.97%   23.146      1 - Template:I18n_list
+ 21.25%   12.623      5 - Template:I18n_link
+ 15.28%    9.076     17 - Template:Key
+ 13.01%    7.728      5 - Template:Autoglossonym
+  6.56%    3.898      5 - Template:Note
+  5.70%    3.387      5 - Template:Button
+  5.56%    3.302      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2481-0!*!0!!*!5!* and timestamp 20191114182921 and revision id 65242
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2481-0!*!0!!*!5!* and timestamp 20200430213442 and revision id 67437
  -->
 </div>
 										<!-- end content -->
@@ -317,7 +327,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -347,7 +358,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

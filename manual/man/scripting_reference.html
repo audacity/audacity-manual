@@ -51,7 +51,6 @@
 </td>
 <td align="left" valign="top"> This table shows the items in the menus that are scriptable.
 <ul><li> The Scripting Ids, parameters and defaults are all likely to change between versions.</li>
-<li> Actions that end with '...' and have "Parameters <i>none</i>" listed will pop up a dialog during the script to get the paramters, and are not properly supported by scripting.  Use at your own risk.</li>
 <li> Boolean values must be given as <b>1</b> (true) or <b>0</b> (false).</li></ul>
 </td></tr></table></div>
 <div id="file_menu"></div>
@@ -302,7 +301,7 @@
 </td>
 <td><i>none</i>
 </td>
-<td>Imports a <i><b><a href="glossary.html#midi" title="Glossary">MIDI</a></b></i> (MIDI or MID <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i>) or Allegro (GRO) file to a <a href="note_tracks.html" title="Note Tracks">Note Track</a> where simple cut-and-paste edits can be performed. The result can be exported with the <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#export_midi" title="File Menu: Export">Export MIDI</a></span> command. <b>Note:</b> Currently, MIDI and Allegro files cannot be played.
+<td>Imports a <i><b><a href="glossary.html#midi" title="Glossary">MIDI</a></b></i> (MIDI or MID <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i>) or Allegro (GRO) file to a <a href="note_tracks.html" title="Note Tracks">Note Track</a> where simple cut-and-paste edits can be performed. The result can be exported with the <span class="menu">File &gt; Export&gt; &gt; <a href="file_menu_export.html#export_midi" title="File Menu: Export">Export MIDI</a></span> command. <b>Note:</b> Currently, MIDI and Allegro files cannot be played.
 </td></tr>
 <tr>
 <td><b>ImportRaw:</b>
@@ -552,7 +551,7 @@
 </td>
 <td><i>none</i>
 </td>
-<td>Pastes the text on the Audacity clipboard at the cursor position in the currently selected label track. If there is no selection in the label track a point label is created. If a range is selected in the label track a range label is created. If no label track is selected one is created, and a new label is created.
+<td>Pastes the text on the Audacity clipboard at the cursor position in the currently selected label track. If there is no selection in the label track a point label is created. If a region is selected in the label track a region label is created. If no label track is selected one is created, and a new label is created.
 </td></tr>
 <tr>
 <td><b>TypeToCreateLabel:</b>
@@ -1028,7 +1027,7 @@
 <td>Changes the zoom back and forth between two preset levels.
 </td></tr>
 <tr>
-<td><b>AdvancedVerticalZooming:</b>
+<td><b>AdvancedVZoom:</b>
 </td>
 <td><a href="view_menu_zoom.html#advanced_vertical_zooming" title="View Menu: Zoom">Advanced Vertical Zooming</a>
 </td>
@@ -1193,7 +1192,7 @@
 <td>Cut, copy, paste, trim audio, silence audio, undo, redo, zoom tools
 </td></tr>
 <tr>
-<td><b>ShowPlay-at-SpeedTB:</b>
+<td><b>ShowTranscriptionTB:</b>
 </td>
 <td><a href="view_menu_toolbars.html#playatspeed_toolbar" title="View Menu: Toolbars">Play-at-Speed Toolbar</a>
 </td>
@@ -1563,7 +1562,7 @@
 <td>You can change Audacity to play and record with a fixed head pinned to the Timeline.  You can adjust the position of the fixed head by dragging it
 </td></tr>
 <tr>
-<td><b>Duplex:</b>
+<td><b>Overdub:</b>
 </td>
 <td><a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a>
 </td>
@@ -1739,6 +1738,24 @@
 <td><i>none</i>
 </td>
 <td>Unmutes all the audio tracks in the project as if you had released the mute buttons from the Track Control Panel on each track.
+</td></tr>
+<tr>
+<td><b>MuteTracks:</b>
+</td>
+<td><a href="tracks_menu_mute/unmute.html#mute_tracks" class="mw-redirect" title="Tracks Menu: Mute/Unmute">Mute Tracks</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Mutes the selected tracks.
+</td></tr>
+<tr>
+<td><b>UnmuteTracks:</b>
+</td>
+<td><a href="tracks_menu_mute/unmute.html#unmute_tracks" class="mw-redirect" title="Tracks Menu: Mute/Unmute">Unmute Tracks</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Unmutes the selected tracks.
 </td></tr></table>
 <div id="tracks_pan_submenu"></div>
 <h3><span class="mw-headline" id="Tracks:_Pan"><a href="tracks_menu_pan.html" title="Tracks Menu: Pan">Tracks: Pan</a></span></h3>
@@ -1919,6 +1936,37 @@
 <td>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog where you can enable or disable particular Effects, Generators and Analyzers in Audacity. Even if you do not add any third-party plug-ins, you can use this to make the Effect menu shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Add / Remove Effects, Generators and Analyzers</a>.
 </td></tr>
 <tr>
+<td><b>Built-in:</b>
+</td>
+<td><a href="generate_menu.html#builtin" title="Generate Menu">Built-in</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Shows the list of available Audacity built-in effects but only if the user has effects "Grouped by Type" in Effects Preferences.
+</td></tr>
+<tr>
+<td><b>Nyquist:</b>
+</td>
+<td><a href="generate_menu.html#nyquist" title="Generate Menu">Nyquist</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Shows the list of available Nyquist effects but only if the user has effects "Grouped by Type" in Effects Preferences.
+</td></tr></table>
+<div id="generate_builtin_submenu"></div>
+<h3><span class="mw-headline" id="Generate:_Built-in"><a href="generate_menu.html" title="Generate Menu">Generate: Built-in</a></span></h3>
+<div class="note">Shows the list of available Audacity built-in effects but only if the user has effects "Grouped by Type" in Effects Preferences. </div>
+<table class="prettytablerows" rules="rows" border="2" width="100%">
+<tr>
+<th width="15%">Scripting Id
+</th>
+<th width="15%">Action
+</th>
+<th width="30%">Parameters
+</th>
+<th width="55%">Description
+</th></tr>
+<tr>
 <td><b>Chirp:</b>
 </td>
 <td><a href="generate_menu.html#chirp" title="Generate Menu">Chirp...</a>
@@ -1967,15 +2015,6 @@
 <td>Generates 'white', 'pink' or 'brown' noise.
 </td></tr>
 <tr>
-<td><b>Silence...:</b>
-</td>
-<td><a href="generate_menu.html#silence" title="Generate Menu">Silence...</a>
-</td>
-<td><i>none</i>
-</td>
-<td>Creates audio of zero amplitude, the only configurable setting being duration.
-</td></tr>
-<tr>
 <td><b>Tone:</b>
 </td>
 <td><a href="generate_menu.html#tone" title="Generate Menu">Tone...</a>
@@ -1994,7 +2033,20 @@
 <li> Logarithmic</li></ul>
 </td>
 <td>Generates one of four different tone waveforms: <i>Sine</i>, <i>Square</i>, <i>Sawtooth</i> or <i>Square (no alias)</i>, and a frequency between 1 Hz and <i>half the current project rate</i>.
-</td></tr>
+</td></tr></table>
+<div id="generate_nyquist_submenu"></div>
+<h3><span class="mw-headline" id="Generate:_Nyquist"><a href="generate_menu.html" title="Generate Menu">Generate: Nyquist</a></span></h3>
+<div class="note">Shows the list of available Nyquist effects but only if the user has effects "Grouped by Type" in Effects Preferences. </div>
+<table class="prettytablerows" rules="rows" border="2" width="100%">
+<tr>
+<th width="15%">Scripting Id
+</th>
+<th width="15%">Action
+</th>
+<th width="30%">Parameters
+</th>
+<th width="55%">Description
+</th></tr>
 <tr>
 <td><b>Pluck:</b>
 </td>
@@ -2084,15 +2136,6 @@
 <td>Repeats the last used effect at its last used settings and without displaying any dialog.
 </td></tr>
 <tr>
-<td><b>Built-in:</b>
-</td>
-<td><a href="effect_menu.html#builtin" title="Effect Menu">Built-in</a>
-</td>
-<td><i>none</i>
-</td>
-<td>Shows the list of available Audacity built-in effects but only if the user has effects "Grouped by Type" in Effects Preferences.
-</td></tr>
-<tr>
 <td><b>LADSPA:</b>
 </td>
 <td><a href="effect_menu.html#ladspa" title="Effect Menu">LADSPA</a>
@@ -2100,19 +2143,10 @@
 <td><i>none</i>
 </td>
 <td>Shows the list of available LADSPA effects but only if the user has effects "Grouped by Type" in Effects Preferences.
-</td></tr>
-<tr>
-<td><b>Nyquist:</b>
-</td>
-<td><a href="effect_menu.html#nyquist" title="Effect Menu">Nyquist</a>
-</td>
-<td><i>none</i>
-</td>
-<td>Shows the list of available Nyquist effects but only if the user has effects "Grouped by Type" in Effects Preferences.
 </td></tr></table>
 <div id="effect_builtin_submenu"></div>
 <h3><span class="mw-headline" id="Effect:_Built-in"><a href="effect_menu_built_in.html" title="Effect Menu: Built-in">Effect: Built-in</a></span></h3>
-<div class="note">Shows the list of available Audacity built-in effects but only if the user has effects "Grouped by Type" in Effects Preferences. </div>
+<div class="note"> No special notes for Built-in </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Scripting Id
@@ -2260,7 +2294,7 @@
 <td>Repeats the selected audio again and again, normally softer each time and normally not blended into the original sound until some time after it starts. The delay time between each repeat is fixed, with no pause in between each repeat. For a more configurable echo effect with a variable delay time and pitch-changed echoes, see <a href="effect_menu.html#Delay" title="Effect Menu">Delay</a>.
 </td></tr>
 <tr>
-<td><b>Fade In:</b>
+<td><b>FadeIn:</b>
 </td>
 <td><a href="effect_menu_built_in.html#fade_in" title="Effect Menu: Built-in">Fade In</a>
 </td>
@@ -2269,7 +2303,7 @@
 <td>Applies a <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> fade-in to the selected audio - the rapidity of the fade-in depends entirely on the length of the selection it is applied to.  For a more customizable <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> fade, use the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> on the <a href="tools_toolbar.html" title="Tools Toolbar">Tools Toolbar</a>.
 </td></tr>
 <tr>
-<td><b>Fade Out:</b>
+<td><b>FadeOut:</b>
 </td>
 <td><a href="effect_menu_built_in.html#fade_out" title="Effect Menu: Built-in">Fade Out</a>
 </td>
@@ -2278,26 +2312,40 @@
 <td>Applies a <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> fade-out to the selected audio - the rapidity of the fade-out depends entirely on the length of the selection it is applied to.  For a more customizable <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> fade, use the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> on the <a href="tools_toolbar.html" title="Tools Toolbar">Tools Toolbar</a>.<br />
 </td></tr>
 <tr>
-<td><b>Filter Curve:</b>
+<td><b>FilterCurve:</b>
 </td>
 <td><a href="effect_menu_built_in.html#filter_curve" title="Effect Menu: Built-in">Filter Curve...</a>
 </td>
-<td><i>string <b>CurveName</b>, (default:unnamed)</i><br />
+<td><i>size_t <b>FilterLength</b>, (default:8191)</i><br />
 <p><i>bool <b>InterpolateLin</b>, (default:False)</i><br />
+<i>enum <b>InterpolationMethod</b>, (default:B-spline)</i><br />
+</p>
+<ul><li> B-spline</li>
+<li> Cosine</li>
+<li> Cubic</li></ul>
+<p><i>double <b>f0</b>, (default:0)</i><br />
+<i>double <b>v0</b>, (default:0)</i><br />
 </p>
 </td>
-<td>Adjusts the volume levels of particular frequencies, using drawn curves.
+<td>Adjusts the volume levels of particular frequencies
 </td></tr>
 <tr>
-<td><b>Graphic EQ:</b>
+<td><b>GraphicEq:</b>
 </td>
 <td><a href="effect_menu_built_in.html#graphic_eq" title="Effect Menu: Built-in">Graphic EQ...</a>
 </td>
-<td><i>string <b>CurveName</b>, (default:unnamed)</i><br />
+<td><i>size_t <b>FilterLength</b>, (default:8191)</i><br />
 <p><i>bool <b>InterpolateLin</b>, (default:False)</i><br />
+<i>enum <b>InterpolationMethod</b>, (default:B-spline)</i><br />
+</p>
+<ul><li> B-spline</li>
+<li> Cosine</li>
+<li> Cubic</li></ul>
+<p><i>double <b>f0</b>, (default:0)</i><br />
+<i>double <b>v0</b>, (default:0)</i><br />
 </p>
 </td>
-<td>Adjusts the volume levels of particular frequencies, using sliders.
+<td>Adjusts the volume levels of particular frequencies
 </td></tr>
 <tr>
 <td><b>Invert:</b>
@@ -2309,13 +2357,27 @@
 <td>This effect flips the audio samples upside-down.  This normally does not affect the sound of the audio at all.  It is occasionally useful for vocal removal.
 </td></tr>
 <tr>
-<td><b>Noise Reduction...:</b>
+<td><b>LoudnessNormalization:</b>
+</td>
+<td><a href="effect_menu_built_in.html#loudness_normalization" title="Effect Menu: Built-in">Loudness Normalization...</a>
+</td>
+<td><i>bool <b>StereoIndependent</b>, (default:False)</i><br />
+<p><i>double <b>LUFSLevel</b>, (default:-23)</i><br />
+<i>double <b>RMSLevel</b>, (default:-20)</i><br />
+<i>bool <b>DualMono</b>, (default:True)</i><br />
+<i>int <b>NormalizeTo</b>, (default:0)</i><br />
+</p>
+</td>
+<td>Changes the perceived loudness of the audio.
+</td></tr>
+<tr>
+<td><b>NoiseReduction:</b>
 </td>
 <td><a href="effect_menu_built_in.html#noise_reduction" title="Effect Menu: Built-in">Noise Reduction...</a>
 </td>
 <td><i>none</i>
 </td>
-<td>This effect is ideal for reducing constant background noise such as fans, tape noise, or hums.  It will not work very well for removing talking or music in the background.  More details <a href="noise_reduction.html" title="Noise Reduction">here</a>.
+<td><s>This effect is ideal for reducing constant background noise such as fans, tape noise, or hums.  It will not work very well for removing talking or music in the background.  More details <a href="noise_reduction.html" title="Noise Reduction">here</a></s><br />This effect is not currently available from scripting.
 </td></tr>
 <tr>
 <td><b>Normalize:</b>
@@ -2453,7 +2515,7 @@
 </td></tr></table>
 <div id="effect_nyquist_submenu"></div>
 <h3><span class="mw-headline" id="Effect:_Nyquist"><a href="effect_menu_nyquist.html" title="Effect Menu: Nyquist">Effect: Nyquist</a></span></h3>
-<div class="note">Shows the list of available Nyquist effects but only if the user has effects "Grouped by Type" in Effects Preferences. </div>
+<div class="note"> No special notes for Nyquist </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Scripting Id
@@ -2685,14 +2747,15 @@
 </td>
 <td><a href="effect_menu_nyquist.html#vocal_reduction_and_isolation" title="Effect Menu: Nyquist">Vocal Reduction and Isolation...</a>
 </td>
-<td><i>enum <b>action</b>, (default:Remove)</i><br />
-<ul><li> Remove</li>
+<td><i>enum <b>action</b>, (default:RemoveToMono)</i><br />
+<ul><li> RemoveToMono</li>
+<li> Remove</li>
 <li> Isolate</li>
 <li> IsolateInvert</li>
+<li> RemoveCenterToMono</li>
 <li> RemoveCenter</li>
 <li> IsolateCenter</li>
 <li> IsolateCenterInvert</li>
-<li> RemoveCenter</li>
 <li> Analyze</li></ul>
 <p><i>double <b>strength</b>, (default:0)</i><br />
 <i>double <b>low-transition</b>, (default:0)</i><br />
@@ -2700,25 +2763,6 @@
 </p>
 </td>
 <td>Attempts to remove or isolate center-panned audio from a stereo track.  Most  "Remove" options in this effect preserve the stereo image.
-</td></tr>
-<tr>
-<td><b>VocalRemover:</b>
-</td>
-<td><a href="effect_menu_nyquist.html#vocal_remover" title="Effect Menu: Nyquist">Vocal Remover...</a>
-</td>
-<td><i>enum <b>action</b>, (default:Remove Vocals)</i><br />
-<ul><li> Remove Vocals</li>
-<li> View Help</li></ul>
-<p><i>enum <b>band-choice</b>, (default:Simple)</i><br />
-</p>
-<ul><li> Simple</li>
-<li> Remove</li>
-<li> Retain</li></ul>
-<p><i>double <b>low-range</b>, (default:0)</i><br />
-<i>double <b>high-range</b>, (default:0)</i><br />
-</p>
-</td>
-<td>(Legacy effect) Attempts to remove center-panned vocals from a stereo track. The output from this effect will always be mono. Help text is available from within the dialog.
 </td></tr>
 <tr>
 <td><b>Vocoder:</b>
@@ -2789,7 +2833,20 @@
 </p>
 </td>
 <td>Displays runs of <i><b><a href="glossary.html#clipping" title="Glossary">clipped</a></b></i> samples in a <a href="label_tracks.html" title="Label Tracks">Label Track</a>, as a screen-reader accessible alternative to <span class="menu"><a href="view_menu.html" title="View Menu">View</a> &gt; <a href="view_menu.html#Show_Clipping" title="View Menu">Show Clipping</a></span>. A run must include at least one clipped sample, but may include unclipped samples too.
-</td></tr>
+</td></tr></table>
+<div id="analyze_nyquist_submenu"></div>
+<h3><span class="mw-headline" id="Analyze:_Nyquist"><a href="analyze_menu.html" title="Analyze Menu">Analyze: Nyquist</a></span></h3>
+<div class="note"> No special notes for Nyquist </div>
+<table class="prettytablerows" rules="rows" border="2" width="100%">
+<tr>
+<th width="15%">Scripting Id
+</th>
+<th width="15%">Action
+</th>
+<th width="30%">Parameters
+</th>
+<th width="55%">Description
+</th></tr>
 <tr>
 <td><b>BeatFinder:</b>
 </td>
@@ -2804,9 +2861,9 @@
 </td>
 <td><a href="analyze_menu.html#silence_finder" title="Analyze Menu">Silence Finder...</a>
 </td>
-<td><i>double <b>sil-lev</b>, (default:0)</i><br />
-<p><i>double <b>sil-dur</b>, (default:0)</i><br />
-<i>double <b>labelbeforedur</b>, (default:0)</i><br />
+<td><i>double <b>threshold</b>, (default:0)</i><br />
+<p><i>double <b>min-silence</b>, (default:0)</i><br />
+<i>double <b>label-position</b>, (default:0)</i><br />
 </p>
 </td>
 <td>Divides up a track by placing point <a href="label_tracks.html" title="Label Tracks">labels</a> inside areas of silence.
@@ -2854,7 +2911,7 @@
 </td>
 <td><i>none</i>
 </td>
-<td>Creates a new Macro or edits an existing Macro.
+<td>Creates a new macro or edits an existing macro.
 </td></tr>
 <tr>
 <td><b>Apply Macro:</b>
@@ -2883,6 +2940,7 @@
 <li> Preferences</li>
 <li> Selectionbar</li>
 <li> SpectralSelection</li>
+<li> Timer</li>
 <li> Tools</li>
 <li> Transport</li>
 <li> Mixer</li>
@@ -2905,12 +2963,12 @@
 <li> FirstTrackPlus</li>
 <li> AllTracks</li>
 <li> AllTracksPlus</li></ul>
-<p><i>enum <b>Background</b>, (default:unchanged)</i><br />
+<p><i>enum <b>Background</b>, (default:None)</i><br />
 </p>
 <ul><li> Blue</li>
 <li> White</li>
 <li> None</li></ul>
-<p><i>bool <b>ToTop</b>, (default:unchanged)</i><br />
+<p><i>bool <b>ToTop</b>, (default:True)</i><br />
 </p>
 </td>
 <td>A tool, mainly used in documentation, to capture screenshots of Audacity.
@@ -2936,15 +2994,30 @@
 <td>Brings up a dialog where you can enter Nyquist commands. Nyquist is a programming language for generating, processing and analyzing audio. For more information see <a rel="nofollow" class="external text" href="http://wiki.audacityteam.org/wiki/Nyquist_Plugins_Reference">Nyquist Plug-ins Reference</a>.
 </td></tr>
 <tr>
+<td><b>NyquistPlug-inInstaller:</b>
+</td>
+<td><a href="tools_menu.html#nyquist_plugin_installer" title="Tools Menu">Nyquist Plug-in Installer...</a>
+</td>
+<td><i>string <b>files</b>, (default:)</i><br />
+<p><i>enum <b>overwrite</b>, (default:Disallow)</i><br />
+</p>
+<ul><li> Disallow</li>
+<li> Allow</li></ul>
+</td>
+<td>A  Nyquist plug-in that simplifies the installation of other Nyquist plug-ins.
+</td></tr>
+<tr>
 <td><b>RegularIntervalLabels:</b>
 </td>
 <td><a href="tools_menu.html#regular_interval_labels" title="Tools Menu">Regular Interval Labels...</a>
 </td>
-<td><i>enum <b>mode</b>, (default:Number)</i><br />
-<ul><li> Number</li>
+<td><i>enum <b>mode</b>, (default:Both)</i><br />
+<ul><li> Both</li>
+<li> Number</li>
 <li> Interval</li></ul>
 <p><i>int <b>totalnum</b>, (default:0)</i><br />
 <i>double <b>interval</b>, (default:0)</i><br />
+<i>double <b>region</b>, (default:0)</i><br />
 <i>enum <b>adjust</b>, (default:No)</i><br />
 </p>
 <ul><li> No</li>
@@ -2960,7 +3033,11 @@
 <li> TwoAfter</li>
 <li> ThreeAfter</li></ul>
 <p><i>int <b>firstnum</b>, (default:0)</i><br />
+<i>enum <b>verbose</b>, (default:Details)</i><br />
 </p>
+<ul><li> Details</li>
+<li> Warnings</li>
+<li> None</li></ul>
 </td>
 <td>Places <a href="label_tracks.html" title="Label Tracks">labels</a> in a long track so as to divide it into smaller, equally sized  segments.
 </td></tr>
@@ -3393,7 +3470,7 @@
 <th width="55%">Description
 </th></tr>
 <tr>
-<td><b>NormalPlayAtSpeed:</b>
+<td><b>PlayAtSpeed:</b>
 </td>
 <td><a href="extra_menu_play_at_speed.html#normal_playatspeed" title="Extra Menu: Play-at-Speed">Normal Play-at-Speed</a>
 </td>
@@ -4003,7 +4080,7 @@
 </td></tr></table>
 <div id="extra_scriptables_i_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Scriptables_I"><a href="extra_menu_scriptables_i.html" title="Extra Menu: Scriptables I">Extra: Scriptables I</a></span></h3>
-<div class="note">These commands were originally written for scripting Audacity, e.g via a Python script that uses mod-script-pipe.  The commands though are also present in the menu, available from Macros, and available from within Nyquist using (AUD-DO "command") </div>
+<div class="note">These commands were originally written for scripting Audacity, e.g via a Python script that uses mod-script-pipe.  The commands though are also present in the menu, available from macros, and available from within Nyquist using (AUD-DO "command") </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Scripting Id
@@ -4056,7 +4133,7 @@
 <li> Add</li>
 <li> Remove</li></ul>
 </td>
-<td>Modifies which tracks are selected.  First and Last are track numbers.  The Mode parameter allows complex selections, e.g adding or removing tracks from the current selection.
+<td>Modifies which tracks are selected.  First and Last are track numbers.  High and Low are for spectral selection.  The Mode parameter allows complex selections, e.g adding or removing tracks from the current selection.
 </td></tr>
 <tr>
 <td><b>SetTrackStatus:</b>
@@ -4068,7 +4145,7 @@
 <i>bool <b>Focused</b>, (default:unchanged)</i><br />
 </p>
 </td>
-<td>Sets properties for a track or channel (or both).  Name is used to set the name.  It is not used in choosing the track.
+<td>Sets properties for a track or channel (or both).Name is used to set the name.  It is not used in choosing the track.
 </td></tr>
 <tr>
 <td><b>SetTrackAudio:</b>
@@ -4108,7 +4185,9 @@
 <ul><li> Reset</li>
 <li> Times2</li>
 <li> HalfWave</li></ul>
-<p><i>bool <b>SpecPrefs</b>, (default:unchanged)</i><br />
+<p><i>double <b>VZoomHigh</b>, (default:unchanged)</i><br />
+<i>double <b>VZoomLow</b>, (default:unchanged)</i><br />
+<i>bool <b>SpecPrefs</b>, (default:unchanged)</i><br />
 <i>bool <b>SpectralSel</b>, (default:unchanged)</i><br />
 <i>bool <b>GrayScale</b>, (default:unchanged)</i><br />
 </p>
@@ -4131,7 +4210,7 @@
 </td>
 <td><i>string <b>Name</b>, (default:)</i><br />
 <p><i>string <b>Value</b>, (default:)</i><br />
-<i>bool <b>Reload</b>, (default:unchanged)</i><br />
+<i>bool <b>Reload</b>, (default:False)</i><br />
 </p>
 </td>
 <td>Sets a single preference setting.  Some settings such as them changes require a reload (use Reload=1), but this takes time and slows down a script.
@@ -4185,7 +4264,7 @@
 <td><a href="extra_menu_scriptables_i.html#set_project" title="Extra Menu: Scriptables I">Set Project...</a>
 </td>
 <td><i>string <b>Name</b>, (default:unchanged)</i><br />
-<p><i>int <b>Rate</b>, (default:unchanged)</i><br />
+<p><i>double <b>Rate</b>, (default:unchanged)</i><br />
 <i>int <b>X</b>, (default:unchanged)</i><br />
 <i>int <b>Y</b>, (default:unchanged)</i><br />
 <i>int <b>Width</b>, (default:unchanged)</i><br />
@@ -4266,7 +4345,9 @@
 <ul><li> Reset</li>
 <li> Times2</li>
 <li> HalfWave</li></ul>
-<p><i>bool <b>SpecPrefs</b>, (default:unchanged)</i><br />
+<p><i>double <b>VZoomHigh</b>, (default:unchanged)</i><br />
+<i>double <b>VZoomLow</b>, (default:unchanged)</i><br />
+<i>bool <b>SpecPrefs</b>, (default:unchanged)</i><br />
 <i>bool <b>SpectralSel</b>, (default:unchanged)</i><br />
 <i>bool <b>GrayScale</b>, (default:unchanged)</i><br />
 </p>
@@ -4310,6 +4391,11 @@
 <td><a href="extra_menu_scriptables_ii.html#help" title="Extra Menu: Scriptables II">Help...</a>
 </td>
 <td><i>string <b>Command</b>, (default:Help)</i><br />
+<p><i>enum <b>Format</b>, (default:JSON)</i><br />
+</p>
+<ul><li> JSON</li>
+<li> LISP</li>
+<li> Brief</li></ul>
 </td>
 <td>This is an extract from GetInfo Commands, with just one command.
 </td></tr>
@@ -4339,7 +4425,7 @@
 <td><a href="extra_menu_scriptables_ii.html#open_project" title="Extra Menu: Scriptables II">Open Project...</a>
 </td>
 <td><i>string <b>Filename</b>, (default:test.aup)</i><br />
-<p><i>bool <b>AddToHistory</b>, (default:unchanged)</i><br />
+<p><i>bool <b>AddToHistory</b>, (default:false)</i><br />
 </p>
 </td>
 <td>Opens a project.
@@ -4350,8 +4436,8 @@
 <td><a href="extra_menu_scriptables_ii.html#save_project" title="Extra Menu: Scriptables II">Save Project...</a>
 </td>
 <td><i>string <b>Filename</b>, (default:name.aup)</i><br />
-<p><i>bool <b>AddToHistory</b>, (default:unchanged)</i><br />
-<i>bool <b>Compress</b>, (default:unchanged)</i><br />
+<p><i>bool <b>AddToHistory</b>, (default:False)</i><br />
+<i>bool <b>Compress</b>, (default:False)</i><br />
 </p>
 </td>
 <td>Saves a project.
@@ -4501,37 +4587,70 @@
 </td>
 <td>Lists any WAV or AIFF audio files that your project depends on, and allows you to copy these files into the project
 </td></tr></table>
+<p><br />
+</p>
+<div id="no_menu"></div>
+<h2><span class="mw-headline" id="No_Menu">No Menu</span></h2>
+<div class="note"> These are additional commands that don't appear in any menu </div>
+<table class="prettytablerows" rules="rows" border="2" width="100%">
+<tr>
+<th width="15%">Scripting Id
+</th>
+<th width="15%">Action
+</th>
+<th width="30%">Parameters
+</th>
+<th width="55%">Description
+</th></tr>
+<tr>
+<td><b>PrevWindow:</b>
+</td>
+<td>Previous Window
+</td>
+<td><i>none</i>
+</td>
+<td> Navigates to the previous window.
+</td></tr>
+<tr>
+<td><b>NextWindow:</b>
+</td>
+<td>Next Window
+</td>
+<td><i>none</i>
+</td>
+<td> Navigates to the next window.
+</td></tr></table>
 
 <!-- 
 NewPP limit report
-Cached time: 20191115055113
+Cached time: 20200430165923
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.556 seconds
-Real time usage: 0.573 seconds
-Preprocessor visited node count: 1609/1000000
-Preprocessor generated node count: 4284/1000000
-Post‐expand include size: 10919/2097152 bytes
-Template argument size: 7238/2097152 bytes
+CPU time usage: 0.586 seconds
+Real time usage: 0.590 seconds
+Preprocessor visited node count: 1709/1000000
+Preprocessor generated node count: 4540/1000000
+Post‐expand include size: 10975/2097152 bytes
+Template argument size: 7194/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   75.215      1 - -total
- 22.06%   16.591     56 - Template:Hoverext
- 15.34%   11.540     56 - Template:Note
-  9.41%    7.074      1 - Template:No-rename
-  6.77%    5.091      1 - Template:Ednote
-  5.73%    4.309      8 - Template:Key
-  3.20%    2.407      1 - Template:Button
-  2.51%    1.886      1 - Template:Shortcut
-  2.43%    1.825      4 - Template:Menu
-  1.93%    1.449      1 - Template:Intro
+100.00%   88.217      1 - -total
+ 23.50%   20.735     60 - Template:Hoverext
+ 16.82%   14.838     60 - Template:Note
+  7.29%    6.435      1 - Template:No-rename
+  5.78%    5.098      8 - Template:Key
+  5.54%    4.888      1 - Template:Ednote
+  2.56%    2.258      1 - Template:Button
+  2.18%    1.922      1 - Template:Advice
+  1.87%    1.651      4 - Template:Menu
+  1.86%    1.643      1 - Template:Shortcut
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6317-0!*!0!!*!5!* and timestamp 20191115055112 and revision id 65142
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6317-0!*!0!!*!5!* and timestamp 20200430165922 and revision id 67434
  -->
 </div>
 										<!-- end content -->
@@ -4574,7 +4693,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="#" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -4604,7 +4724,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

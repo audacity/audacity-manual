@@ -58,8 +58,7 @@
 </li>
 <li class="toclevel-1 tocsection-15"><a href="#Does_Audacity_support_low_latency_ASIO_drivers.3F"><span class="tocnumber">12</span> <span class="toctext">Does Audacity support low latency ASIO drivers?</span></a></li>
 <li class="toclevel-1 tocsection-16"><a href="#How_do_I_find_which_Audacity_version_I_have.2C_and_if_this_is_the_latest_version.3F"><span class="tocnumber">13</span> <span class="toctext">How do I find which Audacity version I have, and if this is the latest version?</span></a></li>
-<li class="toclevel-1 tocsection-17"><a href="#Why_doesn.27t_Audacity_ship_with_an_MP3_encoder.3F"><span class="tocnumber">14</span> <span class="toctext">Why doesn't Audacity ship with an MP3 encoder?</span></a></li>
-<li class="toclevel-1 tocsection-18"><a href="#How_can_I_help_to_improve_Audacity.3F"><span class="tocnumber">15</span> <span class="toctext">How can I help to improve Audacity?</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#How_can_I_help_to_improve_Audacity.3F"><span class="tocnumber">14</span> <span class="toctext">How can I help to improve Audacity?</span></a></li>
 </ul>
 </div>
 
@@ -170,13 +169,13 @@ features for those transcribing speech manually.
 </p>
 <div id="64bit"></div>
 <h2><span class="mw-headline" id="Does_Audacity_run_on_64-bit_systems.3F">Does Audacity run on 64-bit systems?</span></h2>
-<p>There is no 64-bit version of Audacity except on Linux 64-bit systems. However 32-bit Audacity  should run fine in principle on 64-bit systems, subject to having appropriate  <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">drivers</a> for the sound device. Sufficient RAM must be available to run Audacity smoothly and support the greater memory requirements of 64-bit systems compared to 32-bit.
+<p>There is no 64-bit version of Audacity on Windows. On Mac and Linux 64-bit systems Audacity is 64-bit. However 32-bit Audacity  should run fine in principle on Windows 64-bit systems, subject to having appropriate  <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">drivers</a> for the sound device. Sufficient RAM must be available to run Audacity smoothly and support the greater memory requirements of 64-bit systems compared to 32-bit.
 </p>
 <h3><span class="mw-headline" id="Windows_64-bit">Windows 64-bit</span></h3>
 <p>On 64-bit versions of Windows, sound device drivers specific to the 64-bit operating system are essential. If upgrading from a 32-bit to 64-bit operating system, a 64-bit capable computer is required, and the sound device drivers must also be updated to a 64-bit version.
 </p>
 <h3><span class="mw-headline" id="Mac_64-bit">Mac 64-bit</span></h3>
-<p>OS X 10.6 and later support both 64-bit and 32-bit processors equally well, with few if any issues with the supplied system drivers.
+<p>With the release of Catalina (macOS 10.14) Macs will now only run 64-bit applications.  Hence Audacity for Mac is now built as 64-bit.
 </p>
 <h3><span class="mw-headline" id="GNU.2FLinux">GNU/Linux</span></h3>
 <p>If you install a 64-bit version of Linux on a 64-bit machine, the repository build of Audacity offered via the packaging system should normally be 64-bit. If you self-compile Audacity from <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/source">source code</a> with default ./configure then you should definitely build a 64-bit version. You can check whether you have a 32-bit or 64-bit version of Audacity using the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/File_%28command%29">file command</a>. 
@@ -194,15 +193,9 @@ features for those transcribing speech manually.
 </p><p>Clicking <span class="menu">Help &gt; <a href="help_menu.html#check_for_updates" title="Help Menu">Check for Updates...</a></span> opens the Audacity download page  <a rel="nofollow" class="external free" href="http://audacityteam.org/download/">http://audacityteam.org/download/</a> in your browser and displays your Audacity version number in the browser address bar. 
 </p>
 
-<div class="note">Whenever <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Asking_Questions">asking for help</a> or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Reporting_Bugs">reporting possible bugs</a>, please quote Audacity's <b>full three-section version number</b> (for example, 2.1.1) and your <b>exact operating system</b> (for example, Windows 7 64-bit).</div>
+<div class="note">Whenever <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Asking_Questions">asking for help</a> or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Reporting_Bugs">reporting possible bugs</a>, please quote Audacity's <b>full three-section version number</b> (for example, 2.1.1) and your <b>exact operating system</b> (for example, Windows 10 Home 64-bit).</div>
 <p><a href="#top">back to top</a>
-</p>
-<div id="mp3"></div>
-<h2><span class="mw-headline" id="Why_doesn.27t_Audacity_ship_with_an_MP3_encoder.3F">Why doesn't Audacity ship with an MP3 encoder?</span></h2>
-<p>Unfortunately, the <i><b><a href="glossary.html#algorithm" title="Glossary">algorithm</a></b></i> to encode or create MP3 files is patented and <b>Audacity</b> would not be able to include an MP3 exporting algorithm without either charging a fee or potentially violating copyright law in some countries.
-</p><p>As a compromise, Audacity comes with the ability to use other MP3 encoders, which you must download separately. It is up to you to make sure you are in compliance with any licensing restrictions imposed by MP3 encoders.
-</p><p>To install LAME, see "<a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">How do I download and install the LAME MP3 encoder?</a>".
-</p><p><a href="#top">back to top</a>
+</p><p><br />
 </p>
 <div id="improve"></div>
 <h2><span class="mw-headline" id="How_can_I_help_to_improve_Audacity.3F">How can I help to improve Audacity?</span></h2>
@@ -214,13 +207,13 @@ features for those transcribing speech manually.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115011045
+Cached time: 20200430140204
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.137 seconds
-Real time usage: 0.142 seconds
-Preprocessor visited node count: 583/1000000
-Preprocessor generated node count: 1276/1000000
+CPU time usage: 0.127 seconds
+Real time usage: 0.131 seconds
+Preprocessor visited node count: 578/1000000
+Preprocessor generated node count: 1270/1000000
 Post‐expand include size: 7829/2097152 bytes
 Template argument size: 2955/2097152 bytes
 Highest expansion depth: 12/40
@@ -229,19 +222,19 @@ Expensive parser function count: 11/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   57.293      1 - -total
- 78.57%   45.013      1 - Template:I18n
- 75.05%   42.997      1 - Template:I18n_box
- 67.96%   38.938      1 - Template:I18n_list
- 44.16%   25.299     11 - Template:I18n_link
- 26.27%   15.049     11 - Template:Autoglossonym
-  4.55%    2.605      6 - Template:Menu
-  3.72%    2.134      2 - Template:Key
-  3.00%    1.720      1 - Template:Note
-  2.79%    1.600      1 - Template:Advice
+100.00%   47.473      1 - -total
+ 78.52%   37.277      1 - Template:I18n
+ 74.92%   35.565      1 - Template:I18n_box
+ 67.74%   32.160      1 - Template:I18n_list
+ 43.97%   20.876     11 - Template:I18n_link
+ 26.17%   12.424     11 - Template:Autoglossonym
+  4.35%    2.064      6 - Template:Menu
+  3.91%    1.854      2 - Template:Key
+  3.35%    1.589      1 - Template:Note
+  2.32%    1.102      1 - Template:Advice
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2704-0!*!0!!en!5!* and timestamp 20191115011045 and revision id 64438
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2704-0!*!0!!en!5!* and timestamp 20200430140203 and revision id 67262
  -->
 </div>
 										<!-- end content -->
@@ -284,7 +277,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -314,7 +308,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/FAQ:About_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/FAQ:About_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

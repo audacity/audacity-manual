@@ -66,12 +66,12 @@
 <li>Select the portion of audio you want to use for your ringtone (say 15-20 seconds). To do this, click in the audio track and drag a selection region to left or right with your mouse - you can see the length of the selected audio in the <a href="timeline.html" title="Timeline">Timeline</a> above the track. Many phones will loop the ringtone automatically (repeat it over and over), so choose your selection region with that in mind. To hear your selection play looped in Audacity hold down <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking the green Play button <img alt="The Play button" src="../m/images/9/90/play.png" title="The Play button" width="16" height="16" /> or use the <span class="kbrd" style="background-color: #d0d0f8">Shift + Space</span> keyboard shortcut. To stop playback, press the <span class="kbrd" style="background-color: #d0d0f8">Space</span> or click the Stop button <img alt="The Stop button" src="../m/images/f/f9/stop.png" title="The Stop button" width="16" height="16" />.  </li>
 <li>Click <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#trim" title="Edit Menu: Remove Special">Trim Audio</a></span>.  This will remove the rest of the audio, leaving only the section you have selected. If you want to use the whole file, then skip this step.</li>
 <li>Add any effects you may want to the ringtone by clicking in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> where the mute/solo buttons are to select all the track (you may also use the Edit menu or a keyboard shortcut), then choose from the <b>Effect</b> menu. Be sparing with effects, but some you may want to consider are:</li></ol>
-<h3><span class="mw-headline" id="Equalization"><a href="filter_curve.html" title="Filter Curve">Equalization</a></span></h3>
-<p>Many phone speakers cannot reproduce very low frequencies so consider attenuating them <i>(a gradual reduction in the amplitude of the sound level)</i>, especially if you are making a ringtone from an original high quality music file. On opening <span class="menu">Effect &gt; <a href="filter_curve.html" title="Filter Curve">Filter Curve</a></span> you will notice a horizontal line at 0 dB, meaning that at that position, no changes are made to the volume of any frequencies. A curve can be created using the mouse, clicking at various points above or below the line. For ringtones, bring the line down to -24 dB on the vertical axis for the low frequencies from 30-300 Hz on the horizontal axis. You may want to increase the lower frequencies from 300 Hz to say 600 Hz by dragging them above 0 dB, then reduce the highest frequencies above say 10,000 Hz. This should make the sound somewhat richer and less "tinny" on a small cellphone speaker by emphasizing the frequency range it can reproduce best.
+<h3><span class="mw-headline" id="Equalization"><a href="filter_curve_eq.html" title="Filter Curve EQ">Equalization</a></span></h3>
+<p>Many phone speakers cannot reproduce very low frequencies so consider attenuating them <i>(a gradual reduction in the amplitude of the sound level)</i>, especially if you are making a ringtone from an original high quality music file. On opening <span class="menu">Effect &gt; <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></span> you will notice a horizontal line at 0 dB, meaning that at that position, no changes are made to the volume of any frequencies. A curve can be created using the mouse, clicking at various points above or below the line. For ringtones, bring the line down to -24 dB on the vertical axis for the low frequencies from 30-300 Hz on the horizontal axis. You may want to increase the lower frequencies from 300 Hz to say 600 Hz by dragging them above 0 dB, then reduce the highest frequencies above say 10,000 Hz. This should make the sound somewhat richer and less "tinny" on a small cellphone speaker by emphasizing the frequency range it can reproduce best.
 </p><p>You can view the sound level in the different frequency bands in your ringtone by clicking <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span>. Here is an example spectrum plot from Audacity 2.x for the Nokia original ringtone Hummingbird.aac (47 kbps, 22050Hz, SBR+PS, Mono) converted to WAV (Mono, 22050Hz, 16-bit). This ringtone is quite acute so you can hear the phone from far, something that is essential for a well-made ringtone.
 </p>
 
-<dl><dd><span title="Hummingbird wav nokia frecuency analysis (Windows 7 image)"><img alt="Hummingbird wav nokia frecuency analysis.png" src="../m/images/1/1b/hummingbird_wav_nokia_frecuency_analysis.png" width="574" height="492" /></span></dd></dl>
+<dl><dd><span title="Hummingbird wav nokia frecuency analysis"><img alt="Hummingbird wav nokia frecuency analysis.png" src="../m/images/1/1b/hummingbird_wav_nokia_frecuency_analysis.png" width="574" height="492" /></span></dd></dl>
 <h3><span class="mw-headline" id="Compressor"><a href="compressor.html" title="Compressor">Compressor</a></span></h3>
 <p>Using the <span class="menu"> Effect &gt; <a href="compressor.html" title="Compressor">Compressor</a></span> will reduce the difference between high and low volume which allows you to make the ringtone louder overall. This suits small cellphone speakers which may not be able to handle large changes in dynamic range. You'll probably want to move the <i>Ratio</i> slider to right of its default setting of 2:1 to give stronger compression.  
 </p>
@@ -85,7 +85,7 @@
 <h2><span class="mw-headline" id="Step_4:_Export_the_file_from_Audacity">Step 4: Export the file from Audacity</span></h2>
 <p>Use the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> dialog to export your custom ringtone or IVR message to various formats. 
 </p><p>You can export to 16-bit PCM WAV by choosing "WAV (Microsoft) 16-bit PCM" in that dialog.
-</p><p>You can export to the smaller-sized MP3 format by adding the optional <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME library</a> to your computer then choose "MP3 Files" in the Export Audio dialog.      
+</p><p>You can export to the smaller-sized MP3 format by choosing "MP3 Files" in the Export Audio dialog.      
 </p>
 <div id="other"></div>
 <h3><span class="mw-headline" id="Phones_and_IVR_systems_requiring_other_formats">Phones and IVR systems requiring other formats</span></h3>
@@ -112,34 +112,34 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115102050
+Cached time: 20200501031847
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.115 seconds
-Real time usage: 0.122 seconds
+CPU time usage: 0.110 seconds
+Real time usage: 0.114 seconds
 Preprocessor visited node count: 374/1000000
 Preprocessor generated node count: 1581/1000000
-Post‐expand include size: 5472/2097152 bytes
-Template argument size: 3229/2097152 bytes
+Post‐expand include size: 5475/2097152 bytes
+Template argument size: 3232/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   42.440      1 - -total
- 47.75%   20.267      1 - Template:I18n
- 42.89%   18.203      1 - Template:I18n_box
- 33.53%   14.229      1 - Template:I18n_list
- 10.29%    4.367      1 - Template:I18n_link
-  9.97%    4.230      4 - Template:Shortcut
-  8.39%    3.560      5 - Template:Button
-  8.21%    3.484     11 - Template:Menu
-  5.66%    2.404      1 - Template:Autoglossonym
-  4.83%    2.049      2 - Template:Note
+100.00%   39.694      1 - -total
+ 47.41%   18.820      1 - Template:I18n
+ 43.02%   17.076      1 - Template:I18n_box
+ 33.35%   13.239      1 - Template:I18n_list
+ 11.01%    4.369      1 - Template:I18n_link
+ 10.18%    4.039      4 - Template:Shortcut
+  8.25%    3.273     11 - Template:Menu
+  8.10%    3.215      5 - Template:Button
+  6.10%    2.422      1 - Template:Autoglossonym
+  4.98%    1.977      2 - Template:Note
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3822-0!*!0!!*!5!* and timestamp 20191115102050 and revision id 65109
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3822-0!*!0!!*!5!* and timestamp 20200501031847 and revision id 67256
  -->
 </div>
 										<!-- end content -->
@@ -182,7 +182,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -212,7 +213,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Making_Ringtones_and_IVR_messages">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Making_Ringtones_and_IVR_messages">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -94,11 +94,10 @@ Digital audio brings analog sounds into a form where they can be stored and mani
 <div id="compression"></div>
 <h2><span class="mw-headline" id="Compressed_Audio">Compressed Audio</span></h2>
 <p>Because digital audio files are so large, reduced sample rates were typically used whenever possible.  In 1991, the MP3 (MPEG I, layer 3) standard changed everything.  MP3 is a <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> compression technique that can dramatically reduce the file size of a digital audio file with surprisingly little effect on the quality.  One second of CD-quality audio takes up 1.4 megabits, while a common <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> for MP3 files is 128 kbps, which is a compression factor of more than 10x!  MP3 works by cleverly "throwing away" details about the audio waveform that humans are not very sensitive to, based on a <i>psychoacoustic model</i> of how our ears and brains process sounds.  All MP3 files are not created alike; different psychoacoustic models will lead to different amounts of perceived distortion in the audio file.
-</p><p>Audacity as shipped can import MP3 files but please add the optional <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME MP3</a> encoding library to your computer in order to export MP3 files from Audacity.
+</p><p>Audacity as shipped can import and export MP3 files.
 </p><p>With good speakers, most people can hear the difference between a 128 kbps MP3 and an uncompressed audio file from a CD. 256 kbps and 320 kbps MP3 files are more popular among audiophiles who prefer higher quality.
 </p><p>There are many other lossy compressed audio file formats.  Audacity fully supports the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Ogg_vorbis"><i>Ogg Vorbis</i></a> format, which is similar to MP3 but is a completely open, patent-free standard.  Over time the quality of Ogg Vorbis files has come to surpass the quality of MP3, and its format is more extensible so more improvements are possible.  Ogg Vorbis is a great choice for your own audio, however the reality is that many more devices such as iPods and other portable audio players support MP3 but not Ogg Vorbis yet.
 </p><p>Other well-known compression methods include ATRAC, used by Sony MiniDisc recorders, Windows Media Audio (WMA), and AAC. Audacity supports more formats by adding the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.
-</p><p><br />
 </p>
 <h2><span class="mw-headline" id="Lossless_Compression">Lossless Compression</span></h2>
 <p>Lossless compression reduces a file's size with no loss of quality. This seemingly magical method of reducing file sizes can be applied to audio files. While MP3s use lossy compression, newer compression algorithms, such as <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#alac" title="Glossary">Apple Lossless</a></b></i> compression, can be used to create lossless compressed audio files.
@@ -107,11 +106,11 @@ Digital audio brings analog sounds into a form where they can be stored and mani
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191114211403
+Cached time: 20200430220902
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.107 seconds
-Real time usage: 0.113 seconds
+CPU time usage: 0.111 seconds
+Real time usage: 0.118 seconds
 Preprocessor visited node count: 343/1000000
 Preprocessor generated node count: 1009/1000000
 Post‐expand include size: 4316/2097152 bytes
@@ -122,17 +121,17 @@ Expensive parser function count: 11/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   42.867      1 - -total
- 89.43%   38.338      1 - Template:I18n
- 83.87%   35.951      1 - Template:I18n_box
- 74.08%   31.756      1 - Template:I18n_list
- 42.41%   18.180      7 - Template:I18n_link
- 24.68%   10.578      7 - Template:Autoglossonym
-  5.29%    2.266      1 - Template:Intro
-  4.22%    1.809      1 - Template:Ednote
+100.00%   39.229      1 - -total
+ 89.85%   35.248      1 - Template:I18n
+ 85.37%   33.488      1 - Template:I18n_box
+ 75.60%   29.658      1 - Template:I18n_list
+ 43.23%   16.960      7 - Template:I18n_link
+ 25.31%    9.927      7 - Template:Autoglossonym
+  5.38%    2.112      1 - Template:Intro
+  3.55%    1.391      1 - Template:Ednote
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2042-0!*!0!!*!5!* and timestamp 20191114211402 and revision id 65004
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2042-0!*!0!!*!5!* and timestamp 20200430220901 and revision id 67252
  -->
 </div>
 										<!-- end content -->
@@ -175,7 +174,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="#" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="#" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -205,7 +205,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Digital_Audio">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Digital_Audio">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

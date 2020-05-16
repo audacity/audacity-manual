@@ -39,31 +39,33 @@
 <ol><li><a href="#mouse">Changing the length and position of labels with the mouse</a></li>
 <li><a href="#move_point">Moving a point label</a></li>
 <li><a href="#expand_point">Expanding a point label</a></li>
-<li><a href="#move_region">Moving and resizing a region label</a></li>
+<li><a href="#move_region">Resizing and moving a region label</a></li>
 <li><a href="#junction">Adjusting the junction point where two labels meet</a></li>
 <li><a href="#selected">Moving a label when there is a selection</a></li>
 <li><a href="#cutcopypaste">Using cut, copy and paste</a></li>
 <li><a href="#context">Using the Context Menu</a></li>
 <li><a href="#editor">Using the Labels Editor</a></li></ol>
+<p><br />
+</p>
 <div id="mouse"></div>
 <h2><span class="mw-headline" id="Changing_the_length_and_position_of_labels_with_the_mouse">Changing the length and position of labels with the mouse</span></h2>
-<p>You can <b>move a label</b> by clicking and dragging its circle handle. You can <b>change the length of a label</b> by clicking and dragging its triangle handle.
-</p>
+<h3><span class="mw-headline" id="Point_label">Point label</span></h3>
+<ul><li>You can <b>move a point label</b> by clicking and dragging its circle handle. </li>
+<li>You can <b>turn a point label into a region label</b> by clicking and dragging either of its chevron handles.</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
-<td align="left" valign="top">Holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while dragging reverses this behavior, so that
-<ul><li>dragging a circle handle changes the length of the label, and </li>
-<li>dragging a triangle handle moves the label. </li></ul>
-<p>For example, this lets you resize a label by holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while dragging its circle handle, then release <span class="kbrd" style="background-color: #e0e0f0">Shift</span> to move the resized label without having to move the mouse pointer to its triangle handle.
-</p>
+<td align="left" valign="top">You can also <b>move a point label</b> by holding the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key down while clicking and dragging the circle or either of its chevron handles.<p>Using this shift-modified click&amp;drag with a point label avoids any risk of <a href="#accidental_region"><b>accidentally creating a region label</b></a>.</p>
 </td></tr></table>
 </div>
-<p>In the case where two labels meet you can adjust the junction point where they meet by clicking and dragging their shared circle handle.
-</p><p><br />
+<h3><span class="mw-headline" id="Region_label">Region label</span></h3>
+<ul><li>You can <b>change the length of a region label</b> by clicking and dragging its circle or either of its chevron handles.</li>
+<li>You can <b>move a region label</b> by holding the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key while clicking and dragging its circle or either of its chevron handles. </li>
+<li>In the case where two region labels meet you can <b>adjust the junction point</b> where they meet by clicking and dragging their shared circle handle.</li></ul>
+<p><br />
 </p>
 <div id="move_point"></div>
 <h2><span class="mw-headline" id="Moving_a_point_label">Moving a point label</span></h2>
@@ -81,11 +83,38 @@
 </td>
 <td align="center"><b>After</b>
 </td></tr></table></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">You can also move a point label by holding the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key down while clicking and dragging the circle or either of its chevron handles. This avoids any risk of accidentally creating a region label.
+</td></tr></table>
+</div>
+<div id="accidental_region"></div>
+<h3><span class="mw-headline" id="Take_care_when_moving_point_labels">Take care when moving point labels</span></h3>
+<p>Be <i><b>very</b></i> careful when moving a point label not to accidentally click on a chevron and thereby expand the point label to a <a href="#expand_point">very short region label</a>.  
+</p><p>This can cause unwanted consequences when using <a href="export_multiple.html#split" title="Export Multiple">Export Multiple</a>, exporting a short audio file based on the short region label.
+</p><p>There is a slight visual cue to distinguish between a point label and a region label too short to display at the current zoom level. 
+</p><p>The region in the label track never collapses down to a single line, rather there is always a line for each edge of the region resulting in a double line, slightly visibly thicker:
+</p>
+<dl><dd><span title="point label and short region label"><img alt="Point Label and very short Region Label visual difference with selection.png" src="../m/images/1/1b/point_label_and_very_short_region_label_visual_difference_with_selection.png" width="779" height="325" /></span></dd>
+<dd><b>Region label of 512 samples selected - <i>note thin white selection line visible in the waveform</i> </b></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">With a compacted region label like this if you click on the circle the label will collapse to a point label.
+</td></tr></table>
+</div>
 <p><br />
 </p>
 <div id="expand_point"></div>
 <h2><span class="mw-headline" id="Expanding_a_point_label">Expanding a point label</span></h2>
-<p>You can expand a point label into a region label by clicking and dragging either of its triangle handles:
+<p>You can expand a point label into a region label by clicking and dragging either of its chevron handles:
 </p>
 <dl><dd><table>
 
@@ -102,22 +131,9 @@
 <p><br />
 </p>
 <div id="move_region"></div>
-<h2><span class="mw-headline" id="Moving_and_resizing_a_region_label">Moving and resizing a region label</span></h2>
-<p>You can move a region label by clicking and dragging either of its circle handles:
-</p>
-<dl><dd><table>
-
-<tr>
-<td><span title="Before moving a region label"><img alt="RegionMoveBefore W10.png" src="../m/images/a/a2/regionmovebefore_w10.png" width="417" height="194" /></span>
-</td>
-<td><span title="After moving a region label"><img alt="RegionMoveAfter W10.png" src="../m/images/4/44/regionmoveafter_w10.png" width="419" height="192" /></span>
-</td></tr>
-<tr>
-<td align="center"><b>Before</b>
-</td>
-<td align="center"><b>After</b>
-</td></tr></table></dd></dl>
-<p>You can change the length of a region label by clicking and dragging one of its triangle handles:
+<h2><span class="mw-headline" id="Resizing_and_moving_a_region_label">Resizing and moving  a region label</span></h2>
+<h3><span class="mw-headline" id="Resizing">Resizing</span></h3>
+<p>You can change the length of a region label by clicking and dragging its circle or either of its chevron handles:
 </p>
 <dl><dd><table>
 
@@ -125,6 +141,21 @@
 <td><span title="Before resizing a region label"><img alt="RegionAdjustBefore W10.png" src="../m/images/4/4e/regionadjustbefore_w10.png" width="417" height="193" /></span>
 </td>
 <td><span title="After resizing a region label"><img alt="RegionAdjustAfter W10.png" src="../m/images/9/9e/regionadjustafter_w10.png" width="416" height="192" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>Before</b>
+</td>
+<td align="center"><b>After</b>
+</td></tr></table></dd></dl>
+<h3><span class="mw-headline" id="Moving">Moving</span></h3>
+<p>You can move a region label by holding the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key while clicking and dragging its circle or either of its chevron handles:
+</p>
+<dl><dd><table>
+
+<tr>
+<td><span title="Before moving a region label"><img alt="RegionMoveBefore W10.png" src="../m/images/a/a2/regionmovebefore_w10.png" width="417" height="194" /></span>
+</td>
+<td><span title="After moving a region label"><img alt="RegionMoveAfter W10.png" src="../m/images/4/44/regionmoveafter_w10.png" width="419" height="192" /></span>
 </td></tr>
 <tr>
 <td align="center"><b>Before</b>
@@ -212,7 +243,7 @@ In the image below, the label was selected by clicking in it, then the audio tra
 <h2><span class="mw-headline" id="Using_the_Context_Menu">Using the Context Menu</span></h2>
 <p>If you right-click on a label, the label's context menu will appear:
 </p>
-<dl><dd><span title="image of contextual menu in a label with Copy selected, Windows 7 Basic style"><img alt="Label context menu.png" src="../m/images/5/53/label_context_menu.png" width="418" height="291" /></span></dd></dl>
+<dl><dd><span title="image of contextual menu in a label with Copy selected, Windows Basic style"><img alt="Label context menu.png" src="../m/images/5/53/label_context_menu.png" width="418" height="291" /></span></dd></dl>
 <p>The context menu offers the following options
 </p>
 <ul><li><span style="font-weight: bold; font-size:118%">Cut:</span> - cuts any selected text in the label and place it on the clipboard</li>
@@ -233,34 +264,34 @@ In the image below, the label was selected by clicking in it, then the audio tra
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115103024
+Cached time: 20200501031923
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.153 seconds
-Real time usage: 0.163 seconds
-Preprocessor visited node count: 425/1000000
-Preprocessor generated node count: 1763/1000000
-Post‐expand include size: 4945/2097152 bytes
-Template argument size: 2129/2097152 bytes
+CPU time usage: 0.167 seconds
+Real time usage: 0.176 seconds
+Preprocessor visited node count: 474/1000000
+Preprocessor generated node count: 1847/1000000
+Post‐expand include size: 5845/2097152 bytes
+Template argument size: 2294/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   40.095      1 - -total
- 44.03%   17.653      1 - Template:I18n
- 39.96%   16.023      1 - Template:I18n_box
- 31.91%   12.793      1 - Template:I18n_list
- 12.97%    5.200     10 - Template:Key
- 10.56%    4.234      1 - Template:I18n_link
- 10.24%    4.107      1 - Template:Tip
-  7.19%    2.882      1 - Template:Note
-  6.45%    2.587     10 - Template:Menu
-  5.87%    2.354      1 - Template:Autoglossonym
+100.00%   38.890      1 - -total
+ 41.00%   15.943      1 - Template:I18n
+ 36.92%   14.359      1 - Template:I18n_box
+ 28.61%   11.126      1 - Template:I18n_list
+ 13.98%    5.437     11 - Template:Key
+  9.31%    3.622      1 - Template:I18n_link
+  8.77%    3.410      3 - Template:Tip
+  6.84%    2.659      1 - Template:Note
+  6.57%    2.556     10 - Template:Menu
+  5.20%    2.021      1 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4563-0!*!0!!*!5!* and timestamp 20191115103023 and revision id 65468
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4563-0!*!0!!*!5!* and timestamp 20200501031923 and revision id 67441
  -->
 </div>
 										<!-- end content -->
@@ -303,7 +334,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -333,7 +365,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Editing,_resizing_and_moving_Labels">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Editing,_resizing_and_moving_Labels">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -39,7 +39,7 @@
 <ol><li> <a href="#ruler">The Timeline ruler</a></li>
 <li> <a href="#symbols">Symbols displayed on the Timeline ruler</a></li>
 <li> <a href="#usage">The Timeline in use</a></li>
-<li> <a href="#pinned">Pinned Recording/Play head</a></li>
+<li> <a href="#pinned">Pinned Play/Record Head</a></li>
 <li> <a href="#tqp">Using Timeline Quick-Play</a></li>
 <li> <a href="#menu">Timeline right-click menu</a> </li></ol>
 <div id="ruler"></div>
@@ -50,13 +50,13 @@
 <p>Optionally the <a href="scrubbing_and_seeking.html#scrubruler" title="Scrubbing and Seeking">Scrub Ruler</a>, the gray strip below the Timeline, can be shown too:
 </p>
 <dl><dd><span title="Timeline shown at default scale with the default Scrub Ruler"><img alt="Timeline default scale with Scrub Ruler.png" src="../m/images/0/0b/timeline_default_scale_with_scrub_ruler.png" width="614" height="47" /></span></dd></dl>
-<p>The Scrub Ruler is used solely for <a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing and Seeking</a> and can be turned on by right-clicking in the Timeline and selecting <span class="menu">Enable Scrub Ruler</span> from the dropdown menu.
+<p>The Scrub Ruler is used solely for <a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing and Seeking</a> and can be turned on in <a href="interface_preferences.html" title="Interface Preferences">Interface Preferences</a> and selecting <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Show Scrub Ruler</span> in the Timeline section.
 </p><p><br />
 </p>
 <div id="symbols"></div>
 <h2><span class="mw-headline" id="Symbols_displayed_on_the_Timeline_ruler">Symbols displayed on the Timeline ruler</span></h2>
-<ul><li> <img alt="Unpinned playhead button.png" src="../m/images/1/1a/unpinned_playhead_button.png" width="29" height="28" />  <b>The Record/Playhead button</b> at the far left of the Timeline (shown in its default unpinned state) controls the record and playheads enabling you to toggle between <a href="#pinned">unpinnned and pinned</a>.  
-<ul><li>Clicking on this button will change to <img alt="Pinned playhead button.png" src="../m/images/e/ef/pinned_playhead_button.png" width="28" height="29" /> pinned (fixed and centered) record/playheads, clicking on it again will revert to unpinned.</li></ul></li></ul>
+<ul><li> <img alt="Unpinned playhead button.png" src="../m/images/1/1a/unpinned_playhead_button.png" width="29" height="28" />  <b>The Play/Record Head button</b> at the far left of the Timeline (shown in its default unpinned state) controls the record and play heads enabling you to toggle between <a href="#pinned">unpinnned and pinned</a>.  
+<ul><li>Clicking on this button will pop up a context menu enabling you to change to <img alt="Pinned playhead button.png" src="../m/images/e/ef/pinned_playhead_button.png" width="28" height="29" /> pinned (fixed and centered) Play/Record heads.</li></ul></li></ul>
 <ul><li> <img alt="SelectionRangeCursor.png" src="../m/images/9/94/selectionrangecursor.png" width="84" height="18" /> <b>The <a href="audacity_selection.html" title="Audacity Selection">selected region</a>:</b> <i>(when present)</i> is shown as a shaded region on the ruler. By default, pressing Play or Record on <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> plays or records from the left edge of this region. 
 <ul><li> In the shaded region, the <b>playback region</b> is shown by thin left-pointing and right-pointing arrowheads connected by a line. This region will be played whenever the Play button <img alt="Play button" src="../m/images/9/90/play.png" title="Play button" width="16" height="16" /> is clicked (see also: <a href="#play-region">Play Region Lock</a>). </li></ul></li></ul>
 <ul><li> <a href="https://alphamanual.audacityteam.org/man/File:PlayStartCursor.png" class="image" title="image of the playback start position cursor"><img alt="image of the playback start position cursor" src="../m/images/5/57/playstartcursor.png" width="7" height="13" /></a> <b>The playback start position cursor</b>. Pressing the Play button <img alt="Play button" src="../m/images/9/90/play.png" title="Play button" width="16" height="16" /> plays from this cursor position. </li></ul>
@@ -116,19 +116,23 @@
 <ul><li> The thick horizontal red bar with arrowheads on each end show the region that will always be played, even if the editing cursor or region in the waveform is at a different position. </li></ul></dd></dl>
 <div class="note">For other methods of navigating to playback points or areas, see <a href="playing_and_recording.html" title="Playing and Recording">Playing and Recording</a>. </div>
 <div id="pinned"></div>
-<h2><span class="mw-headline" id="Pinned_Recordhead.2FPlayhead">Pinned Recordhead/Playhead</span></h2>
+<h2><span class="mw-headline" id="Pinned_Play.2FRecord_Head">Pinned Play/Record Head</span></h2>
+
 <p>You can change Audacity to play and record with a fixed head pinned to a position in the Timeline. In this mode the head remains static and the waveforms will move as the audio is played or recorded.
-</p><p>This behavior is controlled by using the button at the left of the Timeline.  By default this shows as a green downwards-pointing triangle (like the playhead).  In this mode, the playhead or recordhead will move horizontally and the waveform will scroll when necessary, except that if <i><b>Auto-scroll if head unpinned</b></i> is unchecked in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> then scrolling will not occur. 
+</p><p>This behavior is controlled by using the button at the left of the Timeline.  By default this shows as a green downwards-pointing triangle (like the play head).  In this mode, the play head or record head will move horizontally and the waveform will scroll when necessary, except that if <i><b>Auto-scroll if head unpinned</b></i> is unchecked in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> then scrolling will not occur. 
 </p>
-<dl><dd><span title="Unpinned Record/Playhead"><img alt="Unpinned head button.png" src="../m/images/5/56/unpinned_head_button.png" width="257" height="31" /></span></dd></dl>
-<p>Clicking on the green triangle will cause the button icon to change to a drawing-pin.  This indicates that the playhead or recordhead is now pinned to the center of the Timeline and when playing or recording takes place the waveform will move continuously under the fixed head.
+<dl><dd><span title="Unpinned Record/Play Head"><img alt="Unpinned head button.png" src="../m/images/5/56/unpinned_head_button.png" width="257" height="31" /></span></dd></dl>
+<p>Clicking on the green triangle will cause a context menu to be popped up.
 </p>
-<dl><dd><span title="Pinned Record/Playhead"><img alt="Pinned head button.png" src="../m/images/f/f4/pinned_head_button.png" width="259" height="32" /></span></dd></dl>
-<p>When pinned playback or recording is chosen, the playhead displays as a green drawing-pin (as shown in the image below) and the recording head displays as a red drawing-pin. 
+<dl><dd><span title="Head button context menu - pinned play head not selected"><img alt="Head button context menu.png" src="../m/images/b/bb/head_button_context_menu.png" width="312" height="161" /></span></dd></dl>
+<p>From that context menu you can check on <b>Pinned Play Head</b>.  This will cause the button icon to change to a drawing-pin which indicates that the play head or record head is now pinned to the center of the Timeline and when playing or recording takes place the waveform will move continuously under the fixed head.
+</p>
+<dl><dd><span title="Pinned Play/Record head"><img alt="Pinned head button.png" src="../m/images/f/f4/pinned_head_button.png" width="259" height="32" /></span></dd></dl>
+<p>When pinned playback or recording is chosen, the play head displays as a static green drawing-pin and the waveform(s) will move as the audio is played (as shown in the image below). The recording head displays as a red drawing-pin. 
 </p>
 <dl><dd><span title="Pinned head playback"><img alt="Pinned head playback annotated trackname.png" src="../m/images/5/50/pinned_head_playback_annotated_trackname.png" width="687" height="187" /></span></dd></dl>
-<p>Clicking the drawing-pin reverts to default unpinned playback and recording, and the button will change back to the green triangle.
-</p><p>Unpinned or pinned head can also be selected in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>.
+<p>You can revert back to unpinned playback and recording by clicking on the drawing pin and unchecking <b>Pinned Play Head</b>. The button will change back to the green triangle.
+</p><p>Unpinned or pinned head can also be selected in <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span>.
 </p>
 <div class="note">For <a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing and Seeking</a>, Audacity will ignore the setting you make for fixed head playback unless you turn "<b>off</b>" the option for "<b>Always scrub unpinned</b>" in <a href="playback_preferences.html" title="Playback Preferences">Playback</a> preferences.</div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -177,50 +181,49 @@
 <p>Audacity allows the Play Region or Quick-Play Region to be <a href="#play-region">locked</a>. While a region is locked, Timeline Quick-Play will temporarily over-ride the lock, replacing the red locked Play Region with the standard gray Quick-Play region, so allowing Quick-Play to be used. Immediately the left mouse button is released, the red locked Play Region is restored. A locked play region cannot be adjusted.
 </p>
 <div id="menu"></div>
-<h2><span class="mw-headline" id="Timeline_right-click_menu">Timeline right-click menu</span></h2>
+<h2><span class="mw-headline" id="Timeline_right-click_context_menu">Timeline right-click context menu</span></h2>
 <p><span class="kbrd" style="background-color: #d0d0f8">Right-click</span> on the Timeline gives access to options that are convenient when using Timeline Quick-Play, via a short context menu.
 </p>
-<dl><dd><span title="Timeline right-click menu"><img alt="Timeline right click menu.png" src="../m/images/8/88/timeline_right_click_menu.png" width="285" height="177" /></span></dd></dl>
-<p><b>Disable/Enable Quick-Play</b>: Turns the Timeline Quick-Play functionality on or off <i>(some users may find the white cursor line on the waveform distracting when navigating over the Timeline)</i>.  The default setting is "on".
-</p><p><b>Enable/Disable dragging selection</b>:  When disabled (default), left-click and dragging the Play Region adjusts the Play Region only, leaving the current selection or editing cursor unaffected.
+<dl><dd><span title="Timeline right-click context menu"><img alt="Timeline right click menu 2-4-0.png" src="../m/images/f/f5/timeline_right_click_menu_2_4_0.png" width="313" height="165" /></span></dd></dl>
+<p><b>Enable Quick-Play</b>: Turns the Timeline Quick-Play functionality on or off <i>(some users may find the white cursor line on the waveform distracting when navigating over the Timeline)</i>.  The default setting is "on".
+</p><p><b>Enable dragging selection</b>:  When disabled (default), left-click and dragging the Play Region adjusts the Play Region only, leaving the current selection or editing cursor unaffected.
 When enabled, left-click and dragging the Play Region adjusts both the Play Region and the waveform selection together. This is particularly useful when finding the right place for a <a href="tutorial_looping.html" title="Tutorial - Looping">seamless loop</a>. 
-</p><p><b>Disable/Enable Timeline Tooltips</b>: Timeline tooltips are visible when hovering over the Timeline. They are useful for indicating whether Timeline Quick-Play is enabled.  Experienced users may find that the Timeline tooltips get in the way, so this option allows these tooltips to be disabled. These tooltips are enabled by default.
-</p><p><b>Do not scroll while playing</b>: By default the waveform scrolls when playing. Enabling this option not to scroll can be useful when using Quick-Play to adjust the start and end of <a href="tutorial_looping.html" title="Tutorial - Looping">loops</a>. Not scrolling ensures that the edges of the looped selection do not move if zooming in moves the playback point outside the visible area. The alternative method of disabling scrolling is to use <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> and remove the checkmark from <i><b>Auto-scroll if head unpinned</b></i>.
+</p><p><b>Update display while playing</b>: By default the waveform scrolls when playing. Disabling this option so as not to scroll can be useful when using Quick-Play to adjust the start and end of <a href="tutorial_looping.html" title="Tutorial - Looping">loops</a>. Not scrolling ensures that the edges of the looped selection do not move if zooming in moves the playback point outside the visible area. The alternative method of disabling scrolling is to use <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> and remove the checkmark from <i><b>Auto-scroll if head unpinned</b></i>.
 </p><p><b>Lock Play Region</b>: The current position of the Play Region or Quick-Play region can be locked in the Timeline for use in all further standard playback, while still allowing Quick-Play of other regions or from other points.  
 </p>
 
-<p><b>Enable/Disable Scrub Ruler:</b> The <a href="scrubbing_and_seeking.html#scrubruler" title="Scrubbing and Seeking">Scrub Ruler</a> can be displayed or hidden using this command.
+<p><b>Pinned Play Head:</b> You can change Audacity to play and record with a <a href="#pinned">fixed head pinned</a> to a position in the Timeline. In this mode the head remains static and the waveforms will move as the audio is played or recorded. The default setting is "off"
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115101953
+Cached time: 20200430213149
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.233 seconds
-Real time usage: 0.251 seconds
-Preprocessor visited node count: 611/1000000
-Preprocessor generated node count: 1597/1000000
-Post‐expand include size: 8832/2097152 bytes
-Template argument size: 3435/2097152 bytes
+CPU time usage: 0.208 seconds
+Real time usage: 0.219 seconds
+Preprocessor visited node count: 631/1000000
+Preprocessor generated node count: 1665/1000000
+Post‐expand include size: 9992/2097152 bytes
+Template argument size: 4120/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   65.986      1 - -total
- 59.41%   39.200      1 - Template:I18n
- 56.18%   37.070      1 - Template:I18n_box
- 49.60%   32.732      1 - Template:I18n_list
- 29.16%   19.242      8 - Template:I18n_link
- 17.31%   11.420      8 - Template:Autoglossonym
-  9.60%    6.333      7 - Template:Shortcut
-  6.20%    4.090      5 - Template:Key
-  3.39%    2.237      1 - Template:Intro
-  3.38%    2.233      4 - Template:Menu
+100.00%   58.063      1 - -total
+ 58.89%   34.193      1 - Template:I18n
+ 55.40%   32.169      1 - Template:I18n_box
+ 49.55%   28.771      1 - Template:I18n_list
+ 28.13%   16.331      8 - Template:I18n_link
+ 16.44%    9.544      8 - Template:Autoglossonym
+  8.98%    5.213      7 - Template:Shortcut
+  5.37%    3.120      5 - Template:Key
+  4.76%    2.764      3 - Template:Ednote
+  3.19%    1.851      1 - Template:Intro
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2521-0!*!0!!*!5!* and timestamp 20191115101953 and revision id 64881
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2521-0!*!0!!*!5!* and timestamp 20200430213149 and revision id 66825
  -->
 </div>
 										<!-- end content -->
@@ -263,7 +266,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -293,7 +297,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Timeline">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Timeline">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

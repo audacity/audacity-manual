@@ -38,11 +38,11 @@
 
 
 <div class="intro">Graphic EQ is a graphic equalizer. <i><b>Equalization</b></i> is a way of manipulating sounds by <i><b><a href="glossary.html#frequency" title="Glossary">Frequency</a></b></i>.  It allows you to increase the volume of some frequencies and reduce others. This is a more advanced form of the <i>EQ</i> and <i>Tone</i> controls on many audio systems. 
-<p>As an example of equalization, the curve defined by the slider settings below shown below changes the balance of high and low frequencies in the audio to make it sound like a telephone.  High and low frequencies are filtered out.
+<p>As an example of equalization, the curve defined by the slider settings shown below changes the balance of high and low frequencies in the audio, boosting the low frequencies. The default setting is flat with all the sliders set at 0 dB.
 </p>
-<div class="note">Equalization is also available in a "<b>Draw curves</b>" mode, accessed via <span class="menu">Effect &gt; <a href="filter_curve.html" title="Filter Curve">Filter Curve...</a></span> </div> </div> 
+<div class="note">Equalization is also available in a "<b>Draw curves</b>" mode, accessed via <span class="menu">Effect &gt; <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ...</a></span> </div> </div> 
 <dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Graphic EQ...</span></dd>
-<dd><span title="Graphic EQ effect dialog"><img alt="Graphic EQ.png" src="../m/images/8/83/graphic_eq.png" width="806" height="219" /></span></dd></dl>
+<dd><span title="Graphic EQ effect dialog"><img alt="Graphic EQ.png" src="../m/images/8/83/graphic_eq.png" width="869" height="466" /></span></dd></dl>
 <p><br />
 </p>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
@@ -63,7 +63,6 @@
 <p>The sliders can also be made taller by resizing the dialog.  This can make setting the value you want easier.
 </p><p>The current value of the slider can be seen by hovering over it with the mouse.
 </p>
-</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -74,12 +73,8 @@
 </td></tr></table></div>
 <p><br />
 </p>
-<div id="scale"></div>
-</li></ul>
 <div id="settings"></div>
 <h2><span class="mw-headline" id="Equalization_settings">Equalization settings</span></h2>
-
-
 <ul><li> <span class="button">Flatten</span>: A quick way to set a "level response curve".  This means the curve on the graph is drawn from left to right at 0 dB on the vertical scale, so that no frequencies will have their volume level modified.</li>
 <li> <span class="button">Invert</span>: Turns the current curve in the window upside down, changing positive gains at a particular frequency into negative, and vice versa. </li></ul>
 <p><br />
@@ -92,7 +87,17 @@
 <li> <span class="button">Preview</span> plays a short preview of what the audio would sound like if the effect is applied with the current settings, without making actual changes to the audio.  <p>The length of preview is determined by your setting in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span>, the default setting is 6 seconds.</li>
 <li> <span class="button">OK</span> applies the effect to the selected audio with the current effect settings.</p></li>
 <li> <span class="button">Cancel</span> aborts the effect and leaves the audio unchanged.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>Graphic EQ</b> now facilitates the import of pre-existing equalization curves, using the <span class="button">Manage</span> button, for use in the effect.
+<ul><li>Many published curves, such as those on the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/78rpm_playback_curves#curves"><b>Audacity Wiki</b></a>, and curves you may have exported in earlier versions of Audacity with the old Equalization effect, are in .XML format. </li>
+<li>Graphic EQ, like all other Audacity effects, expects the imports to be text files in .TXT format. To facilitate this we have provided a tool <b><a href="eq_xml_to_txt_converter.html" title="EQ XML to TXT Converter">EQ XML to TXT Converter</a></b>, this is not enabled by default but you can enable it with the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><b>Plug-in Manager</b></a> after which it will be present in the <a href="tools_menu.html" title="Tools Menu">Tools Menu</a>. </li></ul>
+</td></tr></table>
+</div>
 <p><br />
 </p>
 <div id="limitations"></div>
@@ -100,40 +105,40 @@
 <p>To process Equalization, all tracks in the project must have the same sample rate. To change the sample rate of a track without affecting speed or pitch, use <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample...</a></span>.    
 </p>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
-<p><a href="filter_curve.html" title="Filter Curve"><b>&gt;</b>&#160; Filter Curve...</a> <br />
+<p><a href="filter_curve_eq.html" title="Filter Curve EQ"><b>&gt;</b>&#160; Filter Curve EQ...</a> <br />
 </p><p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115102141
+Cached time: 20200501031920
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.117 seconds
-Real time usage: 0.122 seconds
-Preprocessor visited node count: 372/1000000
-Preprocessor generated node count: 1736/1000000
-Post‐expand include size: 16928/2097152 bytes
-Template argument size: 13120/2097152 bytes
+CPU time usage: 0.103 seconds
+Real time usage: 0.108 seconds
+Preprocessor visited node count: 316/1000000
+Preprocessor generated node count: 1556/1000000
+Post‐expand include size: 7750/2097152 bytes
+Template argument size: 3899/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   42.288      1 - -total
- 38.74%   16.382      1 - Template:I18n
- 35.15%   14.864      1 - Template:I18n_box
- 29.66%   12.544      1 - Template:I18n_list
- 19.80%    8.374      8 - Template:Ednote
- 14.72%    6.226      1 - Template:No-rename
- 11.80%    4.991      8 - Template:Button
- 10.54%    4.457      1 - Template:Intro
-  8.85%    3.744      1 - Template:I18n_link
-  7.37%    3.117      4 - Template:Note
+100.00%   43.260      1 - -total
+ 40.69%   17.602      1 - Template:I18n
+ 36.53%   15.802      1 - Template:I18n_box
+ 30.52%   13.202      1 - Template:I18n_list
+ 15.68%    6.784      1 - Template:No-rename
+ 13.62%    5.893      8 - Template:Button
+ 12.39%    5.359      1 - Template:Ednote
+ 10.12%    4.376      1 - Template:I18n_link
+  8.90%    3.848      1 - Template:Intro
+  5.67%    2.453      1 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6568-0!*!0!!*!5!* and timestamp 20191115102140 and revision id 65100
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6568-0!*!0!!*!5!* and timestamp 20200501031920 and revision id 67520
  -->
 </div>
 										<!-- end content -->
@@ -176,7 +181,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -206,7 +212,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Graphic_EQ">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Graphic_EQ">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -34,7 +34,7 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">This page describes audio file formats which can be exported to using the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio / Export Selected Audio</a> and <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> dialogs. <p>To export to MP3 you must install the optional <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME</a> encoder and to export to formats listed as "FFmpeg" you must install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.</p></div>
+<div class="intro">This page describes audio file formats which can be exported to using the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio / Export Selected Audio</a> and <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> dialogs. <p>To export to formats listed as "FFmpeg" you must install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.</p></div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -46,12 +46,12 @@
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#uncompressed">Uncompressed format types</a></li>
 <li><a href="#compressed">Compressed format types</a></li>
-<li><a href="#external">External program</a></li>
+<li><a href="#external">External encoder program</a></li>
 <li><a href="#ffmpeg">FFmpeg format types (mostly compressed)</a></li>
 <li><a href="#custom">Custom FFmpeg Export</a></li>
 <li><a href="#compare">File size and channel comparisons by export format</a></li>
 <li><a href="#unlisted">Exporting to formats not listed in the Export Audio Dialog</a></li></ol>
-<div id="uncompressed"></div>    
+<div id="uncompressed"></div>
 <h2><span class="mw-headline" id="Uncompressed_format_types">Uncompressed format types</span></h2>
 <p>The following are all <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> audio formats in which every <i><b><a href="glossary.html#sample" title="Glossary">sample</a></b></i> of sound is represented by a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Binary_numeral_system">binary number</a>. The most common uncompressed formats are <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>.
 </p><p>There is no loss of quality compared to the original audio when playing uncompressed formats, except for some possible loss of low frequencies in the 4-bit (A)DPCM formats. Those 4-bit formats and the lossless 8-bit U-Law/A-Law formats save file size by reducing their <i><b><a href="glossary.html#sample_format" title="Glossary">bit depth</a></b></i>, in a similar way that any of the uncompressed formats can be made proportionately smaller by reducing their <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> (and thus reducing the high frequencies they can contain). GSM 6.10 WAV (mobile) will also exhibit considerable loss of quality as it was a format designed for mobile telephony.
@@ -112,12 +112,12 @@
 <h2><span class="mw-headline" id="Compressed_format_types">Compressed format types</span></h2>
 <p><i><b><a href="glossary.html#compressed_format" title="Glossary">Size-compressed</a></b></i> formats produce files that are usually significantly smaller than uncompressed formats, as seen in the <a href="#compare">table</a> below. The file formats that are significantly smaller are always of lower quality than the original audio, but are well suited for use on portable devices where storage space is limited. 
 </p>
-<ul><li><b><a href="mp3_export_options.html" title="MP3 Export Options">MP3 Files</a>:</b> <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> is a popular <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i>, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> format producing much smaller files than WAV or AIFF, at the expense of some loss of quality. <div class="note">You must download the optional <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME encoder</a> to export to MP3.</div> </li>
+<ul><li><b><a href="mp3_export_options.html" title="MP3 Export Options">MP3 Files</a>:</b> <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> is a popular <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i>, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> format producing much smaller files than WAV or AIFF, at the expense of some loss of quality. </li>
 <li><b><a href="ogg_vorbis_export_options.html" title="Ogg Vorbis Export Options">OGG Vorbis Files</a>:</b> <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i> is the  compressed, lossy Vorbis codec in an OGG container. Vorbis offers higher quality than MP3 for the same file size, and is useful for good quality small-sized mono files, but fewer applications can play the OGG format. </li>
 <li><b><a href="flac_export_options.html" title="FLAC Export Options">FLAC Files</a>:</b> <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> is a compressed but lossless format, giving much larger file sizes than MP3 and OGG but only about half the size of  WAV. </li>
 <li><b><a href="mp2_export_options.html" title="MP2 Export Options">MP2 Files</a>:</b> <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> is a compressed, lossy format similar to MP3, producing slightly larger files than MP3 for the same quality.  </li></ul>
 <div id="external"></div> 
-<h2><span class="mw-headline" id="External_program">External program</span></h2>
+<h2><span class="mw-headline" id="External_encoder_program">External encoder program</span></h2>
 <ul><li><b><a href="exporting_to_an_external_program.html" title="Exporting to an External Program">(external program)</a>:</b> sends audio via the command-line to any executable binary application either for processing or for encoding as a file. This is a method to export using an alternative compressed or uncompressed encoder or to a format not otherwise supported by Audacity.</li></ul>
 <div id="ffmpeg"></div>
 <h2><span class="mw-headline" id="FFmpeg_format_types_.28mostly_compressed.29">FFmpeg format types (mostly compressed)</span></h2>
@@ -340,34 +340,34 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115102453
+Cached time: 20200501021531
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.124 seconds
-Real time usage: 0.131 seconds
-Preprocessor visited node count: 213/1000000
-Preprocessor generated node count: 1221/1000000
-Post‐expand include size: 6051/2097152 bytes
-Template argument size: 4096/2097152 bytes
+CPU time usage: 0.113 seconds
+Real time usage: 0.118 seconds
+Preprocessor visited node count: 212/1000000
+Preprocessor generated node count: 1219/1000000
+Post‐expand include size: 5948/2097152 bytes
+Template argument size: 3993/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   37.606      1 - -total
- 59.36%   22.324      1 - Template:I18n
- 53.73%   20.204      1 - Template:I18n_box
- 42.57%   16.010      1 - Template:I18n_list
- 12.65%    4.756      1 - Template:I18n_link
- 10.38%    3.902      1 - Template:Advice
-  7.84%    2.950      3 - Template:Ednote
-  6.86%    2.579      1 - Template:Autoglossonym
-  6.38%    2.401      3 - Template:Note
-  5.37%    2.020      1 - Template:Intro
+100.00%   35.012      1 - -total
+ 63.43%   22.207      1 - Template:I18n
+ 56.75%   19.869      1 - Template:I18n_box
+ 44.59%   15.613      1 - Template:I18n_list
+ 12.18%    4.264      1 - Template:I18n_link
+  9.82%    3.438      1 - Template:Advice
+  6.77%    2.369      1 - Template:Autoglossonym
+  6.15%    2.153      3 - Template:Ednote
+  6.06%    2.123      1 - Template:Intro
+  5.38%    1.882      3 - Template:Note
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5118-0!*!0!!*!5!* and timestamp 20191115102453 and revision id 64662
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5118-0!*!0!!*!5!* and timestamp 20200501021531 and revision id 67244
  -->
 </div>
 										<!-- end content -->
@@ -410,7 +410,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -440,7 +441,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Export_Formats_supported_by_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Export_Formats_supported_by_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -116,7 +116,7 @@
    slave.pcm "teeraw"
 }</pre>
 <p>In this case though, you will need to change "tee:default,'/tmp/out.raw',raw" to "tee:null,'/tmp/out.raw',raw" or something else because otherwise you create a loop. In many cases changing "null" to "dmix" should do the trick - you record any application audio and still hear it through your speakers. Note that you'll pick up random sounds from other applications such as system "dings" and the raw file could get corrupted or overwritten. Unless your ALSA install allows you a setup like below you must absolutely make sure that only the desired application is producing sound while you are recording this way.
-</p><p>With newer ALSA versions you can try these parameters for convenience (also you can adapt to use a different encoder than lame):
+</p><p>With newer ALSA versions you can try these parameters for convenience (also you can adapt to use a different encoder than LAME):
 </p>
 <pre>pcm.teewav {
    type copy
@@ -139,11 +139,11 @@ pcm.teemp3 {
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191115102326
+Cached time: 20200501032029
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.097 seconds
-Real time usage: 0.103 seconds
+CPU time usage: 0.112 seconds
+Real time usage: 0.117 seconds
 Preprocessor visited node count: 269/1000000
 Preprocessor generated node count: 1198/1000000
 Post‐expand include size: 5398/2097152 bytes
@@ -154,19 +154,19 @@ Expensive parser function count: 11/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   27.701      1 - -total
- 70.50%   19.528      1 - Template:I18n
- 64.34%   17.822      1 - Template:I18n_box
- 52.65%   14.584      1 - Template:I18n_list
- 20.41%    5.653      2 - Template:I18n_link
- 16.45%    4.558      3 - Template:Ednote
- 11.93%    3.304      2 - Template:Autoglossonym
- 10.60%    2.937      1 - Template:Hint
-  5.29%    1.465      1 - Template:Note
-  4.70%    1.301      1 - Template:Advice
+100.00%   30.502      1 - -total
+ 71.87%   21.923      1 - Template:I18n
+ 65.42%   19.953      1 - Template:I18n_box
+ 52.75%   16.091      1 - Template:I18n_list
+ 22.36%    6.820      2 - Template:I18n_link
+ 15.14%    4.618      3 - Template:Ednote
+ 13.09%    3.994      2 - Template:Autoglossonym
+  8.99%    2.743      1 - Template:Hint
+  4.68%    1.427      1 - Template:Note
+  4.26%    1.299      1 - Template:Advice
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3506-0!*!0!!*!5!* and timestamp 20191115102325 and revision id 64564
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3506-0!*!0!!*!5!* and timestamp 20200501032029 and revision id 67255
  -->
 </div>
 										<!-- end content -->
@@ -209,7 +209,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -239,7 +240,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_Computer_Playback_on_Linux">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_Computer_Playback_on_Linux">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

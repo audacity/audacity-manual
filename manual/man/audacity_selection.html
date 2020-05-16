@@ -50,7 +50,8 @@
 <ul><li><a href="#auto">Auto-select, if selection required</a></li></ul></li>
 <li><a href="#track">Selecting the whole of an individual track</a></li>
 <li><a href="#mouse">Selecting regions using the mouse - <i>quick and easy</i></a>
-<ul><li> <a href="#mouse-selection-tips">Mouse selection tips</a></li></ul></li>
+<ul><li> <a href="#cues">Visual cues indicating selection</a></li>
+<li> <a href="#mouse-selection-tips">Mouse selection tips</a></li></ul></li>
 <li><a href="#snapto">Snap-To</a> - <i>to force-snap the cursor or selection edges to the closest or previous position of the current selection format</i></li>
 <li><a href="#boundary-snap-guides">Boundary Snap Guides</a> - <i>facilitates making a selection that starts or ends at a physical boundary</i></li>
 <li><a href="#track_mouse">Selecting tracks using the mouse</a></li>
@@ -63,7 +64,8 @@
 <li><a href="#listening">Listening to the selection</a>
 <ul><li><a href="#playing">Selecting while audio is playing</a></li></ul></li>
 <li><a href="#label">Label Tracks</a> - <i>a useful way to recall particular selections</i> </li>
-<li><a href="#spectral">Spectral selection</a></li></ol>
+<li><a href="#spectral">Spectral selection</a></li>
+<li><a href="#focus">Focus versus selection</a></li></ol>
 <p><br />
 </p>
 <div id="all"></div>
@@ -90,7 +92,8 @@
 </p><p>Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> <i>(or <span class="kbrd" style="background-color: #d0d0f8">&#8984; + A</span> on a Mac)</i> and clicking on the <span class="button">Select</span> button <b>toggles the selectedness</b> of the track. 
 </p>
 <dl><dd><span title="Select button highlighted in the Track Control Panel"><img alt="Select button in TCP.png" src="../m/images/b/b6/select_button_in_tcp.png" width="302" height="154" /></span></dd></dl>
-<p><br />
+<p>You can also select the whole of a track by double-clicking anywhere in the track.
+</p><p><br />
 </p>
 <div id="mouse"></div>
 <h2><span class="mw-headline" id="Selecting_regions_using_the_mouse"><a href="https://alphamanual.audacityteam.org/man/File:IBeam.png" class="image"><img alt="IBeam.png" src="../m/images/1/1f/ibeam.png" width="27" height="27" /></a> Selecting regions using the mouse</span></h2>
@@ -102,9 +105,18 @@
 </p><p>Normally, you select both the tracks and the range simultaneously, by clicking and dragging.  For example, to create the selection in the image below, make sure you're using Selection Tool <span title="Selection tool"><img alt="Tool select.png" src="../m/images/2/25/tool_select.png" width="20" height="20" /></span>, click in the track just after 7.0 seconds in the first track, then drag rightwards to 20.5 seconds as displayed on the <a href="timeline.html" title="Timeline">Timeline</a>, then downwards so that the gray selection region now includes the second track:
 </p>
 <dl><dd><span title="Region from 7 to 20.5 seconds in the first two tracks selected"><img alt="Selecting Audio 01.png" src="../m/images/7/7e/selecting_audio_01.png" width="709" height="417" /></span></dd></dl>
-<p>Note that because the drag started in the second track (as indicated by the yellow focus border) and extended up into the first track, only those two tracks are <i>selected</i>, as indicated by the <i>blue color</i> of the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>. Therefore, any operation you perform will now only affect the selected area of the first two tracks.
+<p>Because the drag started in the second track (as indicated by the yellow focus border) and extended up into the first track, only those two tracks are <i>selected</i>, as indicated by the <i>blue color</i> of the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>. Therefore, any operation you perform will now only affect the selected area of the first two tracks.
 </p><p>This, and the method for selecting all audio are enough for using selections in Audacity.
 </p>
+<div id="cues"></div>
+<h3><span class="mw-headline" id="Visual_cues_indicating_selection">Visual cues indicating selection</span></h3>
+<p>There are two visual cues in tracks to alert you to the fact that you have selections present in those tracks: 
+</p>
+<ol><li>In the above image the selected areas of the two top tracks track where audio waveform is present have their background turned white and areas where no audio waveform is present have their background turned blue where the selection exists.</li>
+<li>The Track Control Panel changes from white to blue when a selection is present anywhere in the track.  This can be useful as the selected audio waveform may not be showing on the screen.</li></ol>
+<p>In contrast the third track which has no selection present has its Track Control Panel background colored white.
+</p>
+<div class="note">These color variations vary when you use different <a href="themes.html" title="Themes">Themes</a> but they always show a clear contrast. </div>
 <div id="mouse-selection-tips"></div>
 <h3><span class="mw-headline" id="Mouse_selection_tips">Mouse selection tips</span></h3>
 <p>Some tips:
@@ -135,7 +147,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">Note carefully that this is distinct from the "<a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a>" options in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> which snap selection edges (or the cursor) to <a href="selection_toolbar.html#formats" title="Selection Toolbar">time units, samples or media frames</a>.
+<td align="left" valign="top">This is distinct from the "<a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a>" options in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> which snap selection edges (or the cursor) to <a href="selection_toolbar.html#formats" title="Selection Toolbar">time units, samples or media frames</a>.
 </td></tr></table></div>
 <p><br />
 </p>
@@ -174,7 +186,7 @@
 <p>To change the focused track, press <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> arrow. In this image, we pressed down arrow to change focus to the "Background" track:
 </p>
 <dl><dd><span title="Pressing DOWN arrow moved the focus to the bottom track"><img alt="Selecting Audio 03.png" src="../m/images/a/ab/selecting_audio_03.png" width="713" height="356" /></span></dd></dl>
-<p>Once a track has focus, press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> or <span class="kbrd" style="background-color: #e0e0f0">Return</span> to change it from being selected to not selected, or from not selected to selected. Selections are only acted upon if the track containing the selection is itself selected.  
+<p>Once a track has focus, press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> or <span class="kbrd" style="background-color: #e0e0f0">Return</span> to change it from being selected to not selected, or from not selected to selected. 
 </p><p>If you only have a cursor position, but not a selection, pressing <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> moves the cursor to left or right respectively, giving you a new cursor position from which to start a selection.
 </p>
 <ul><li> To create a selection starting from the cursor point, hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while pressing <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> arrow to extend the selection leftwards or rightwards respectively from the cursor point, or to further extend the selection. </li>
@@ -207,7 +219,7 @@
 </p>
 <div id="selbar"></div>
 <h2><span class="mw-headline" id="Selection_Toolbar">Selection Toolbar</span></h2>
-<dl><dd><span title="Selection Toolbar"><img alt="Selection Toolbar zeroed.png" src="../m/images/6/69/selection_toolbar_zeroed.png" width="681" height="61" /></span></dd></dl>
+<dl><dd><span title="Selection Toolbar"><img alt="Selection Toolbar zeroed 2-4-0.png" src="../m/images/f/fb/selection_toolbar_zeroed_2_4_0.png" width="509" height="57" /></span></dd></dl>
 <p>One handy way to keep track of what you've selected and to make very precise modifications is to use the <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>. For our purposes here, let's concentrate on its main purpose, the Selection boxes. By changing the <a href="selection_toolbar.html#position" title="Selection Toolbar">dropdown menu selection</a> from "<b>Start and End of Selection</b>" to "<b>Start and Length of Selection</b>", you can display and control the length of the selection instead of the endpoint.  Which one is useful for you depends on the circumstances: if you need a clip from a song that's exactly 30 seconds long, you may want to set the length to 30, and then modify the start until you have just what you want.  Other times you may know the exact end time but need to figure out where to start, independent of the resulting length. 
 </p><p>Selection Toolbar also displays and can move the cursor position without there being a region selected. To move the cursor to an exact position using Selection Toolbar, set the "Selection Start" and "End" boxes to the same value.   
 </p><p>You can set the values displayed in the Selection Toolbar boxes using the mouse and/or keyboard.  To change a particular digit in a box, click on it, or you can navigate to it using only the keyboard: 
@@ -237,7 +249,7 @@
 </td></tr></table></dd></dl>
 <p>Once you have clicked on or navigated to a digit, it will highlight in white to show it is active, as shown in the image below:
 </p>
-<dl><dd><span title="&quot;Selection"><img alt="Selection Toolbar Start-Length digit highlighted.png" src="../m/images/c/c8/selection_toolbar_start_length_digit_highlighted.png" width="680" height="60" /></span></dd></dl>
+<dl><dd><span title="Selection Toolbar showing &#39;Start/End&#39; selected and digit highlighted"><img alt="Selection Toolbar length selected.png" src="../m/images/b/b3/selection_toolbar_length_selected.png" width="507" height="56" /></span></dd></dl>
 <p>You can then increase or decrease the digit's value by scrolling the mouse wheel, by using <span class="kbrd" style="background-color: #e0e0f0">Up</span> arrow or <span class="kbrd" style="background-color: #e0e0f0">Down</span> arrow or by typing a new value over the existing value. After typing a value, the cursor automatically moves to the next digit and selects it, so you can type the required values one after the other. If you type the wrong digit(s) it can be convenient to use <span class="kbrd" style="background-color: #e0e0f0">Backspace</span> which moves the cursor back to the previous digit and resets it to zero.  
 </p>
 <dl><dd><table class="prettytablerows" id="selection_bar_table" width="53%">
@@ -271,7 +283,8 @@
 <p>Once you have a selected range you can move either edge of the selection so as to expand or contract the selected length, or you may want to expand the selection at one edge and contract it at the other so as to select a similar length in a slightly different place; Audacity offers multiple methods to facilitate this:
 </p>
 <ul><li> Hover the mouse pointer near the edge of a selection, when you hover close enough to the edge the mouse pointer changes to a hand with pointing finger (indicating you can now click and drag the selection).  Then click and drag with the mouse to move that edge of the selection.</li></ul>
-<dl><dd><span title="Selection extended, mouse pointer displaying as a hand with pointing finger."><img alt="Selecting Audio 04.png" src="../m/images/1/1a/selecting_audio_04.png" width="404" height="183" /></span></dd></dl>
+<dl><dd><span title="Classic theme: selection extended, mouse pointer displaying as a hand with pointing finger."><img alt="Selecting Audio 04.png" src="../m/images/1/1a/selecting_audio_04.png" width="404" height="183" /></span></dd>
+<dd><b>Classic theme: selection extended, mouse pointer displaying as a hand with pointing finger.</b></dd></dl>
 <div class="note">If you want to turn off that feature, open <a href="preferences.html" title="Preferences">Preferences</a>, choose <a href="tracks_preferences.html" title="Tracks Preferences">Tracks</a> then uncheck "Enable dragging of left and right selection edges".</div>
 <ul><li> You can also extend or contract an existing selection by holding down the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key while left-clicking the mouse near one of the edges of the selection. The nearest edge of the selection will jump to the current position of the mouse pointer. This is really useful if you know exactly what you want to select but it does not easily fit on the screen at once:</li></ul>
 <ol><li>Click at one edge of the selection</li>
@@ -303,7 +316,7 @@ You can also change which tracks are selected independently of the range, so tha
 <p>Use the first two of the above methods when you want to select or deselect non-adjacent tracks.
 </p>
 </div>
-<p>Note that it is possible to have a range selected but no tracks selected.  In that case, you will only see the evidence of the selected range in the Timeline.
+<p>It is possible to have a range selected but no tracks selected.  In that case, you will only see the evidence of the selected range in the Timeline.
 </p><p><b>Advanced:</b> If you enable <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Locked Track Groups</a> you do not need to explicitly select other tracks so as to maintain synchronization when inserting, removing or time-shifting audio.
 </p>
 <div id="menu"></div>
@@ -354,37 +367,55 @@ You can also change which tracks are selected independently of the range, so tha
 <p>Spectral selection is used to make selections that include a frequency range as well as a time range on tracks in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram view</a>. Spectral selection is used with special <a href="spectral_selection.html#edit" title="Spectral Selection">Spectral edit</a> effects to make changes to the frequency content of the selected audio. Among other purposes spectral selection and editing can be used for cleaning up unwanted sound, enhancing certain resonances, changing the quality of a voice or removing mouth sounds from voice work.
 </p><p>All of the <strong class="selflink">time-based selection techniques</strong> (horizontal selection) are still available when doing spectral selection.
 </p><p>See the <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a> page for more details.
+</p><p><br />
 </p>
+<div id="focus"></div>
+<h2><span class="mw-headline" id="Focus_versus_selection">Focus versus selection</span></h2>
+<p>You will have read the term <b>focus</b> several times on this page and you may be wondering what is the difference between "focus" and "Selection".
+</p><p>You may have noticed in the images on this page that the tracks have a yellow border around them. This border indicates that this  track has <i>focus</i>.
+</p><p>The track that has focus is the track that accepts any command whose name includes "focused track". These commands include commands such as "Close focused track" (<span class="kbrd" style="background-color: #e0e0f0">Shift + C</span>), "Mute/Unmute focused track" (<span class="kbrd" style="background-color: #e0e0f0">Shift + U</span>) and "Toggle focused track" (<span class="kbrd" style="background-color: #e0e0f0">RETURN</span> or <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, which toggles whether the focused track is <strong class="selflink">selected</strong> or not).
+</p><p>The complete list of "focused track" commands can be seen by searching for <b>focus</b> in <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> or by viewing the description of these commands in <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference">Keyboard Shortcut Reference</a>.
+</p>
+<dl><dd><img alt="Focus actions.png" src="../m/images/c/c6/focus_actions.png" width="641" height="619" /> </dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">A track having focus does not necessarily mean that the current selection is in that track.  It is quite possible to have a selection in one track and for another track to have the focus.
+</td></tr></table></div>
+
 <!-- 
 NewPP limit report
-Cached time: 20191115102006
+Cached time: 20200501031814
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.278 seconds
-Real time usage: 0.289 seconds
-Preprocessor visited node count: 1398/1000000
-Preprocessor generated node count: 3326/1000000
-Post‐expand include size: 15841/2097152 bytes
-Template argument size: 5521/2097152 bytes
+CPU time usage: 0.303 seconds
+Real time usage: 0.317 seconds
+Preprocessor visited node count: 1456/1000000
+Preprocessor generated node count: 3458/1000000
+Post‐expand include size: 16772/2097152 bytes
+Template argument size: 5818/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  101.811      1 - -total
- 28.45%   28.965     65 - Template:Key
- 25.73%   26.192      1 - Template:I18n
- 23.98%   24.413      1 - Template:I18n_box
- 20.59%   20.958      1 - Template:I18n_list
- 10.57%   10.759      5 - Template:I18n_link
-  6.99%    7.118     10 - Template:Shortcut
-  6.19%    6.298      5 - Template:Autoglossonym
-  4.31%    4.388      1 - Template:Toolbar
-  3.27%    3.333      5 - Template:Button
+100.00%  108.508      1 - -total
+ 28.57%   30.995     69 - Template:Key
+ 27.71%   30.062      1 - Template:I18n
+ 26.16%   28.385      1 - Template:I18n_box
+ 22.69%   24.619      1 - Template:I18n_list
+ 12.02%   13.047      5 - Template:I18n_link
+  7.03%    7.630      5 - Template:Autoglossonym
+  6.92%    7.506     10 - Template:Shortcut
+  3.30%    3.581      5 - Template:Button
+  2.48%    2.686      4 - Template:Note
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2050-0!*!0!!*!5!* and timestamp 20191115102006 and revision id 65006
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2050-0!*!0!!*!5!* and timestamp 20200501031814 and revision id 67438
  -->
 </div>
 										<!-- end content -->
@@ -427,7 +458,8 @@ Transclusion expansion time report (%,ms,calls,template)
 		<h3>Reference</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
-<ul><li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
 <li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
 <li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
 <li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
@@ -457,7 +489,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2019-11-15 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Selection">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Selection">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
