@@ -84,7 +84,7 @@ If Audacity or the computer crashed, Audacity will try to <a href="recovery.html
 <div class="note">If you have an AUP file with a token error not solvable by deleting invalid characters, try checking for and deleting any empty lines or duplicate &lt;/project&gt; lines as per steps 5 through 8 below.</div> 
 <ol>
 <li>Find the autosave file. It will be in an "AutoSave" folder in Audacity's folder for application data as follows:
-<ul><li><b>Windows:</b> Users\&lt;username&gt;\AppData\Roaming\Audacity\
+<ul><li><b>Windows:</b> Users\\&lt;username&gt;\\AppData\\Roaming\\Audacity\\
 <li><b>OS X/macOS</b> ~/Library/Application Support/audacity/
 <li><b>Linux:</b> ~/.audacity-data/ . </ul>
 <li>Make a copy of the AUTOSAVE file as a backup and move the copy somewhere else such as your Desktop. 
@@ -112,14 +112,14 @@ If Audacity or the computer crashed, Audacity will try to <a href="recovery.html
 </p>
 <ol>
 <li>In the AutoSave folder, right-click the AUTOSAVE file and choose "Cut". 
-<li>Go to the folder Audacity is installed in, such as "C:\Program Files (x86)\Audacity", then right-click in empty space and choose "Paste". Provide the administrator password if asked. 
+<li>Go to the folder Audacity is installed in, such as "C:\\Program Files (x86)\\Audacity", then right-click in empty space and choose "Paste". Provide the administrator password if asked. 
 <li>Open an administrator command prompt. See <a rel="nofollow" class="external text" href="http://www.eightforums.com/tutorials/2754-elevated-command-prompt-open-windows-8-a.html">instructions for Windows 8 or Windows 10</a>.    
-<li>Assuming the prompt in the command window shows some location in C:\ and Audacity is installed in some location in C:\, type "cd" (without quotes) then a space. If Audacity is on some other drive than the prompt indicates, type the name of that drive letter and a colon (such as D:), press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, and then type "cd" (without quotes) then a space. 
-<li>Go up one level in Explorer then drag the icon for the Audacity installation folder into the command window. The path "C:\Program Files (x86)\Audacity" (or whatever it is) will appear. Press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to change the prompt to the path you dragged in. 
+<li>Assuming the prompt in the command window shows some location in C:\\ and Audacity is installed in some location in C:\\, type "cd" (without quotes) then a space. If Audacity is on some other drive than the prompt indicates, type the name of that drive letter and a colon (such as D:), press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, and then type "cd" (without quotes) then a space. 
+<li>Go up one level in Explorer then drag the icon for the Audacity installation folder into the command window. The path "C:\\Program Files (x86)\\Audacity" (or whatever it is) will appear. Press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to change the prompt to the path you dragged in. 
 <li>At the end of the path, type "audacity" (without quotes), a space, then "/d" (also without quotes), another space, then drag the AUTOSAVE file into the command window. Here is what an example should look like:
 <table style="margin-left:10px;line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;font-family:monospace;font-size:1.1em;border:1px dashed black" cellpadding="5px">
 <tr>
-<td>C:\Program Files (x86)\Audacity&gt; audacity /d  "C:\Program Files (x86)\Audacity\My Project - 2015-07-01 14-12-35 N-2.autosave"
+<td>C:\\Program Files (x86)\\Audacity&gt; audacity /d  "C:\\Program Files (x86)\\Audacity\\My Project - 2015-07-01 14-12-35 N-2.autosave"
 </td></tr></table>
 <li>Press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. You can see in Explorer that the AUTOSAVE file has been updated.
 <li>Now you can cut the AUTOSAVE file from the Audacity installation folder, and paste it into the AutoSave folder. Now you can make corrections to the file in a text editor. 
@@ -156,14 +156,14 @@ It probably means there is a specific problem with the syntax of the tags in the
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20200501032153
+Cached time: 20200619121642
 Cache expiry: 86400
 Dynamic content: false
 CPU time usage: 0.096 seconds
 Real time usage: 0.099 seconds
 Preprocessor visited node count: 247/1000000
 Preprocessor generated node count: 808/1000000
-Post‐expand include size: 8698/2097152 bytes
+Post-expand include size: 8698/2097152 bytes
 Template argument size: 5325/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
@@ -171,19 +171,19 @@ Expensive parser function count: 0/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   31.604      1 - -total
- 25.75%    8.137     14 - Template:Key
- 24.11%    7.619      1 - Template:No-rename
- 19.35%    6.116      2 - Template:Ednote
- 10.69%    3.377      1 - Template:Intro
-  8.86%    2.799      1 - Template:Button
-  7.10%    2.245      2 - Template:Hint
-  6.07%    1.919      3 - Template:Note
-  5.37%    1.698      2 - Template:Code
-  5.03%    1.589      3 - Template:Menu
+100.00%   33.320      1 - -total
+ 26.16%    8.718      1 - Template:No-rename
+ 24.62%    8.202     14 - Template:Key
+ 20.79%    6.928      2 - Template:Ednote
+ 11.01%    3.667      1 - Template:Intro
+  9.43%    3.143      1 - Template:Button
+  6.74%    2.245      2 - Template:Hint
+  6.23%    2.076      3 - Template:Note
+  5.21%    1.737      3 - Template:Menu
+  5.11%    1.701      2 - Template:Code
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5796-0!*!0!!*!5!* and timestamp 20200501032153 and revision id 66424
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5796-0!*!0!!*!5!* and timestamp 20200619121642 and revision id 66424
  -->
 </div>
 										<!-- end content -->
@@ -257,7 +257,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Error:_not_well-formed_(invalid_token)_at_line_x">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Error:_not_well-formed_(invalid_token)_at_line_x">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

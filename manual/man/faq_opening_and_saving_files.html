@@ -148,7 +148,6 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 <p><a href="#top">back to top</a>
 </p><p><br />
 </p>
- 
 <h2 id="export_extra"><span class="mw-headline" id="How_can_I_export_to_formats_not_listed_in_the_Export_Audio_Dialog.3F">How can I export to formats not listed in the Export Audio Dialog?</span></h2>
 <p>If you install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library you can use the (FFmpeg) choices in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> to export <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i>. If you do not see a choice for one of those specific FFmpeg formats, then the build of FFmpeg you are linking to was not compiled to support encoding in that format.
 </p><p>The most flexible method to export to more formats is to choose (external program) in the Export Audio Dialog which opens the dialog for Audacity's <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">command-line encoder</a>. Point your command to an encoder that supports the format you want to write to, which could be FFmpeg or some other encoder (for example, an alternative AAC or MP3 encoder). On Windows, the recommended EXE installer of <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> includes an ffmpeg.exe which you can use for this purpose. On Mac, you can download a standalone "ffmpeg" binary if you search online. 
@@ -174,10 +173,8 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 </p>
 <div id="fromcd"></div>
 <h2><span class="mw-headline" id="How_do_I_import_tracks_from_an_audio_CD.3F">How do I import tracks from an audio CD?</span></h2>
-<p>Audacity cannot import tracks directly from an audio CD. You must use a separate application like Windows Media Player or <a rel="nofollow" class="external text" href="https://www.apple.com/itunes/">iTunes®</a> to extract (or "rip") CD tracks into a format that Audacity can read, like <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>. Then  you can import those WAV or AIFF files into Audacity.  
-</p>
-
-<p>The only exception is that on Mac computers with optical drives, CD tracks are mounted in Finder as AIFF files so can be imported directly into Audacity. 
+<p>Audacity cannot import tracks directly from an audio CD. You must use a separate application like Windows Media Player or <a rel="nofollow" class="external text" href="https://www.apple.com/itunes/">iTunes\xc2\xae</a> to extract (or "rip") CD tracks into a format that Audacity can read, like <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>. Then  you can import those WAV or AIFF files into Audacity.  
+</p><p>The only exception is that on Mac computers with optical drives, CD tracks are mounted in Finder as AIFF files so can be imported directly into Audacity. 
 </p><p>For more detail see the tutorial <a href="tutorial_how_to_import_cds.html" title="Tutorial - How to import CDs">Tutorial - How to import CDs</a>.
 </p><p><a href="#top">back to top</a>
 </p>
@@ -192,7 +189,7 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 </p>
 <ol><li>At the bottom of the Audacity window, set the <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> to 44100 <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i>.</li>
 <li>If your project does not already contain a stereo track, choose <span class="menu">Tracks &gt; Add New &gt; <a href="tracks_menu_add_new.html#stereo_track" title="Tracks Menu: Add New">Stereo Track</a></span>. This will make Audacity export a stereo file. </li></ol>
-<p>See the <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">Burning music files to a CD</a> Tutorial for tips on CD burning with Windows Media Player or iTunes® and on burning "gapless" CDs or <a href="burning_music_files_to_a_cd.html#longer" title="Burning music files to a CD">longer</a> "data" CDs. 
+<p>See the <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">Burning music files to a CD</a> Tutorial for tips on CD burning with Windows Media Player or iTunes\xc2\xae and on burning "gapless" CDs or <a href="burning_music_files_to_a_cd.html#longer" title="Burning music files to a CD">longer</a> "data" CDs. 
 </p><p>See also: 
 </p>
 <ul><li> <a href="#split">How can I split a long recording into multiple tracks?</a></li></ul>
@@ -235,7 +232,7 @@ On <b>Windows</b> when you <a href="file_export_dialog.html" title="File Export 
 </td></tr>
 <tr>
 <td width="46%"><b>On Windows</b>, all of the following</td>
-<td style="color:red; font-family:monospace; font-size:1.4em; font-weight:bold">\&#160; /&#160;&#160;:&#160; *&#160;&#160;?&#160; "&#160; &lt;&#160; &gt;&#160; |
+<td style="color:red; font-family:monospace; font-size:1.4em; font-weight:bold">\\&#160; /&#160;&#160;:&#160; *&#160;&#160;?&#160; "&#160; &lt;&#160; &gt;&#160; |
 </td></tr>
 <tr>
 <td><b>On Mac OS X/macOS</b>, colon only<sup>(1)</sup></td>
@@ -303,34 +300,34 @@ On <b>Windows</b> when you <a href="file_export_dialog.html" title="File Export 
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20200430165914
+Cached time: 20200619125237
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.178 seconds
-Real time usage: 0.183 seconds
-Preprocessor visited node count: 540/1000000
-Preprocessor generated node count: 1652/1000000
-Post‐expand include size: 12468/2097152 bytes
-Template argument size: 7054/2097152 bytes
+CPU time usage: 0.173 seconds
+Real time usage: 0.180 seconds
+Preprocessor visited node count: 526/1000000
+Preprocessor generated node count: 1600/1000000
+Post-expand include size: 11112/2097152 bytes
+Template argument size: 5760/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   53.099      1 - -total
- 61.32%   32.560      1 - Template:I18n
- 57.80%   30.690      1 - Template:I18n_box
- 50.80%   26.972      1 - Template:I18n_list
- 29.61%   15.725      7 - Template:I18n_link
- 17.39%    9.236      7 - Template:Autoglossonym
-  6.32%    3.358     13 - Template:Menu
-  3.69%    1.961      3 - Template:Note
-  3.68%    1.952      2 - Template:Tip
-  2.95%    1.567      1 - Template:Button
+100.00%   60.354      1 - -total
+ 61.80%   37.299      1 - Template:I18n
+ 58.01%   35.011      1 - Template:I18n_box
+ 50.85%   30.692      1 - Template:I18n_list
+ 28.13%   16.976      7 - Template:I18n_link
+ 16.52%    9.968      7 - Template:Autoglossonym
+  7.08%    4.274     13 - Template:Menu
+  3.92%    2.365      2 - Template:Tip
+  3.76%    2.271      3 - Template:Note
+  3.28%    1.980      1 - Template:Button
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2706-0!*!0!!en!5!* and timestamp 20200430165914 and revision id 67236
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2706-0!*!0!!en!5!* and timestamp 20200619125237 and revision id 67770
  -->
 </div>
 										<!-- end content -->
@@ -404,7 +401,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Opening_and_Saving_Files">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Opening_and_Saving_Files">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

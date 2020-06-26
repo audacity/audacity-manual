@@ -2,7 +2,7 @@
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Play - Audacity Manual</title>
+<title>Reset Configuration - Audacity Manual</title>
 
 
 
@@ -18,81 +18,117 @@
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Play rootpage-Play skin-monobook action-view"><div id="globalWrapper">
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Reset_Configuration rootpage-Reset_Configuration skin-monobook action-view"><div id="globalWrapper">
 		<div id="column-content">
 			<div id="content" class="mw-body" role="main">
 				<a id="top"></a>
 				
 				<div class="mw-indicators">
 </div>
-				<h1 id="firstHeading" class="firstHeading" lang="en">Play</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Reset Configuration</h1>
 				
 				<div id="bodyContent" class="mw-body-content">
 					<div id="siteSub">From Audacity Development Manual</div>
 					<div id="contentSub"></div>
-										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Play#searchInput">search</a></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Reset_Configuration#searchInput">search</a></div>
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This resets your Audacity configuration (preferences, export settings and toolbars) to default settings.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Be aware that this command acts <i><b>immediately</b></i> with no dialog and no choice of actions or chance to abort.  <p><b>Undo</b> is not available for this command.</p>
+</td></tr></table></div> </div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Tools &gt; Reset Configuration</span></dd>
+<dd><i>There is no dialog associated with this command</i></dd></dl>
 <p><br />
 </p>
-<h2><span class="mw-headline" id="Importing_audio_files:">Importing audio files:</span></h2>
-<p>Either drag the files into the current project window, or choose <span class="menu">File &gt; Import &gt;  <a href="file_menu_import.html#audio" title="File Menu: Import">Audio...</a></span>.
-</p><p>Files can be imported into a new project window with  <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a></span>.
-</p><p>The main formats Audacity plays as shipped are <b>AIFF, AU, FLAC, MP2, MP3, OGG Vorbis</b> and <b>WAV</b>. On Mac, Audacity as shipped can also import Apple formats like <b>M4A (AAC)</b> and <b>MOV</b>.
-</p><p>For most other cases (including audio from video files), you can install the optional FFmpeg library to import your file, as long as the file is not protected by Digital Rights Management (DRM). For details of how to obtain FFmpeg and workarounds to import DRM-protected files, click <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">here</a>.
+<div id="reset"></div>
+<h2><span class="mw-headline" id="Preferences_and_Export_settings_reset">Preferences and Export settings reset</span></h2>
+<div id="prefs"></div>
+<h3><span class="mw-headline" id="Preferences">Preferences</span></h3>
+<p>Using <b>Reset Configuration</b> will reset all your Audacity <a href="preferences.html" title="Preferences"><b>Preferences</b></a> settings to their default "factory settings".
 </p>
-<div id="importCD"></div>
-<h3><span class="mw-headline" id="To_import_a_CD:">To import a CD:</span></h3>
-<p>Extract it to WAV or AIFF using Apple Music/iTunes, Windows Media Player or similar.
-See <a href="faq_opening_and_saving_files.html#fromcd" title="FAQ:Opening and Saving Files">importing CDs</a>.
+<div id="modules"></div>
+<h4><span class="mw-headline" id="Modules">Modules</span></h4>
+<p>Any modules will no longer be listed on the modules preferences page, and will be searched for afresh next time you restart Audacity.
 </p>
-<div id="play"></div>
-<h3><span class="mw-headline" id="Playing_audio:">Playing audio:</span></h3>
-<ul><li>Press the <b>Play</b> button <img alt="Play button" src="../m/images/9/90/play.png" title="Play button" width="16" height="16" /> to start playback.</li>
-<li>Press the <b>Pause</b> button <img alt="Pause button" src="../m/images/4/47/pause.png" title="Pause button" width="16" height="16" /> once to pause playback, and again to resume.</li>
-<li>To stop, press the <b>Stop</b> button <img alt="Stop button" src="../m/images/f/f9/stop.png" title="Stop button" width="16" height="16" />. </li>
-<li><span class="kbrd" style="background-color: #d0d0f8">Space</span> can be used to either play or stop.</li>
-<li>After stopping, playback resumes from its last starting point. 
-<ul><li> Alternatively, use <span class="kbrd" style="background-color: #d0d0f8">X</span> or <span class="menu">Transport &gt; Playing &gt; <a href="transport_menu_playing.html#playstop_and_set_cursor" title="Transport Menu: Playing">Play/Stop and Set Cursor</a></span> to stop playback and set the cursor there. Playback will resume from the stop point on pressing Play. </li></ul></li>
-<li>To change the starting point to anywhere you like, click in the track at your desired starting point, then use <span class="kbrd" style="background-color: #d0d0f8">Space</span> to play from there.   
-<ul><li> Alternatively, click and drag a <a href="audacity_selection.html" title="Audacity Selection">selection region</a> in the waveform, then use <span class="kbrd" style="background-color: #d0d0f8">Space</span> to play from the start to the end of that selection.     </li></ul></li>
-<li> To <b>Loop-Play</b> a selection repeatedly until stopped (or if no selection, to play the entire track repeatedly, starting at the current cursor position, until stopped) hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and click the Play button, or use the keyboard shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + Space</span>. </li>
-<li> The <b>Skip to Start</b>  <img alt="Skip to Start button" src="../m/images/0/01/rewind.png" title="Skip to Start button" width="16" height="16" /> and <b>Skip to End</b> <img alt="Skip to End button" src="../m/images/0/07/ffwd.png" title="Skip to End button" width="16" height="16" /> buttons can be used to skip to the start or end of the track respectively.</li></ul>
-<div class="note">There are other ways to <a href="playing_and_recording.html#play" title="Playing and Recording">to play specific regions or drag the playback cursor</a> and <a href="playback.html#skip" title="Playback">special playback commands</a> that can make it easier to find and play the exact audio you need.</div> 
+<div id="Export"></div>
+<h3><span class="mw-headline" id="Export_settings">Export settings</span></h3>
+<p>Any export format settings from your last use of any export command will be reset to default by using Reset Configuration
+</p>
+<div id="toolbars"></div>
+<h2><span class="mw-headline" id="Toolbars_reset">Toolbars reset</span></h2>
+<p>Using this command will also reset all your toolbars to their default "factory settings": sizing, positioning and settings.  This is analogous to using <span class="menu">View &gt; Toolbars &gt; <a href="view_menu_toolbars.html" title="View Menu: Toolbars">Reset Toolbars</a></span>.
+</p>
+<ul><li> <span style="font-weight: bold; font-size:118%">Tools toolbar:</span> reset to "I-beam" <b>Selection</b> tool</li>
+<li> <span style="font-weight: bold; font-size:118%">Meter toolbars:</span> recording and playback meters are both reset to <b>Gradient</b> style, <b>dB</b> type and <b>Automatic</b> orientation</li>
+<li> <span style="font-weight: bold; font-size:118%">Device toolbar:</span> this is reset to the default Host with the default  Recording and Playback devices for your computer - and reset to 2-channel stereo</li>
+<li> <span style="font-weight: bold; font-size:118%">Selection toolbar:</span> reset to show <b>Start and End of Selection</b> and time format reset to <b>hh:mm:ss + milliseconds</b>, <b>Snap-To</b> is reset to be "<b>off</b>"
+<ul><li><b>Project Rate</b> is left unaltered <i>(but the default project rate in Preferences will have been reset to the default 44100 Hz, so will change to that on your next relaunch of Audacity)</i></li></ul></li>
+<li> <span style="font-weight: bold; font-size:118%">Time toolbar:</span> resets the time format to <b>hh:mm:ss</b></li></ul>
+<div class="note">The sliders for levels in Mixer toolbar and the speed in the Play-at-Speed toolbar are left untouched. </div>
 <p><br />
-<a href="../quick_help.html" title="Quick Help"><b>|&lt;</b> Back to: Getting Started</a>
 </p>
+<div id="untouched"></div>
+<h2><span class="mw-headline" id="What_is_not_reset">What is not reset</span></h2>
+<div id="ega"></div>
+<h3><span class="mw-headline" id="Settings_in_Effects_Generators_and_Analyzers">Settings in Effects Generators and Analyzers</span></h3>
+<ul><li><b><a href="manage_presets.html" title="Manage presets">User Presets</a></b> that you have saved for any Effect, Generator or Analyzer will not be removed by Reset Configuration.  </li></ul>
+<dl><dd>Importantly this includes equalization settings you may have made in <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a> and <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a>.</dd></dl>
+<ul><li><b>Last-used parameter settings</b> that you may have used in any Effect, Generator or Analyzer are not reset to default values.</li></ul>
+<dl><dd>If you need or want to reset these to Factory default values for any particular Effect, Generator or Analyzer please use the <span class="button">Manage</span> button and choose <b>Factory Presets</b>.</dd></dl>
+<div id="recent"></div>
+<h3><span class="mw-headline" id="Recent_Files">Recent Files</span></h3>
+<p>The recent files  available from <span class="menu">Files &gt; <a href="file_menu.html#recent_files" title="File Menu">Recent Files</a></span> is not cleared and remains intact.
+</p>
+
+<div id="plugins"></div>
+<h3><span class="mw-headline" id="Plug-ins">Plug-ins</span></h3>
+<p>Any <a href="customization.html#Customize_Plug-ins" title="Customization"><b>plug-ins</b></a> that you have added will not be removed.
+</p>
+<div id="macros"></div>
+<h3><span class="mw-headline" id="Macros">Macros</span></h3>
+<p>Macros that you have created will not be removed or altered by using this command.
+</p><p><br />
+</p>
+<div id="full"></div>
+<h2><span class="mw-headline" id="Full_reset">Full reset</span></h2>
+<p>If you require a full reset to make all Audacity settings the way the were when Audacity was installed then please see <a href="faq_installation_and_plug_ins.html#reset" title="FAQ:Installation and Plug-Ins"><b>this FAQ</b></a>.
+</p>
+<div class="note">Be aware that doing so will also remove all the items above in <a href="#untouched">What is not reset</a> as well as the items in <a href="#reset">Preferences and Export settings reset</a>. </div>
+
 <!-- 
 NewPP limit report
-Cached time: 20200619125610
+Cached time: 20200619125412
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.097 seconds
-Real time usage: 0.102 seconds
-Preprocessor visited node count: 349/1000000
-Preprocessor generated node count: 1191/1000000
-Post-expand include size: 4529/2097152 bytes
-Template argument size: 1131/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
+CPU time usage: 0.066 seconds
+Real time usage: 0.068 seconds
+Preprocessor visited node count: 154/1000000
+Preprocessor generated node count: 480/1000000
+Post-expand include size: 2286/2097152 bytes
+Template argument size: 1426/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   45.492      1 - -total
- 72.02%   32.764      1 - Template:I18n
- 67.77%   30.829      1 - Template:I18n_box
- 59.12%   26.896      1 - Template:I18n_list
- 32.80%   14.923      6 - Template:I18n_link
- 19.10%    8.690      6 - Template:Autoglossonym
- 11.08%    5.042      5 - Template:Shortcut
-  4.73%    2.152      3 - Template:Menu
-  3.84%    1.748      1 - Template:Key
-  3.18%    1.448      1 - Template:Note
+100.00%   15.477      1 - -total
+ 29.42%    4.554      1 - Template:Intro
+ 13.16%    2.036      5 - Template:Bh
+ 10.40%    1.609      3 - Template:Menu
+ 10.31%    1.596      1 - Template:Button
+  9.82%    1.519      2 - Template:Note
+  8.72%    1.350      1 - Template:Advice
+  7.62%    1.180      1 - Template:Ednote
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2635-0!*!0!!*!5!* and timestamp 20200619125610 and revision id 66722
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6759-0!*!0!!*!5!* and timestamp 20200619125412 and revision id 67753
  -->
 </div>
 										<!-- end content -->
@@ -166,7 +202,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Play">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Reset_Configuration">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

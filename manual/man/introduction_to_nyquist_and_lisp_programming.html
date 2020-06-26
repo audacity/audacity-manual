@@ -57,8 +57,8 @@
 <p>Nyquist allows you to use the Nyquist programming language to write your own plug-in effects for Audacity. Unlike VST and LADSPA plug-ins, Nyquist plug-ins are written in plain text and don’t need to be compiled.
 </p><p>Nyquist supports both a Lisp syntax and a more C-like syntax called SAL. Audacity versions prior to 1.3.8 only support Lisp, but the current Audacity 2.0 series supports both Lisp and SAL. To write plug-ins for use with Audacity, choose the appropriate Nyquist Manual for your version of Audacity and preferred syntax:
 </p>
-<ul><li> <a rel="nofollow" class="external text" href="http://www.audacity-forum.de/download/edgar/nyquist/nyquist-doc/manual/home.html">Nyquist version 2.37 Manual</a> – entirely using Lisp syntax </li>
-<li> <a rel="nofollow" class="external text" href="https://www.cs.cmu.edu/%7Erbd/doc/nyquist/">Nyquist 3.1x Reference Manual</a> – the latest Nyquist Manual (mostly using SAL syntax). </li></ul>
+<ul><li> <a rel="nofollow" class="external text" href="http://www.audacity-forum.de/download/edgar/nyquist/nyquist-doc/manual/home.html">Nyquist version 2.37 Manual</a> \xe2\x80\x93 entirely using Lisp syntax </li>
+<li> <a rel="nofollow" class="external text" href="https://www.cs.cmu.edu/%7Erbd/doc/nyquist/">Nyquist 3.1x Reference Manual</a> \xe2\x80\x93 the latest Nyquist Manual (mostly using SAL syntax). </li></ul>
 <p>Note that you don’t need to download Nyquist in order to write simple plug-ins to use with Audacity. All the basic instructions you need to work with Lisp and the 2.37 Manual are below. For the latest Nyquist features in Audacity, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Documentation">Nyquist Documentation</a> on the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/">Wiki</a>.
 </p>
 <h3><span class="mw-headline" id="Lisp">Lisp</span></h3>
@@ -68,12 +68,12 @@
 <pre>  (setf area (* 3.14159 (expt radius 2)))
 </pre>
 <p>Let’s break down this example. The outermost S-expression has three members. The first one, <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span>, is the name of the function (it stands for "set-field"). <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span> is used to assign a value to a variable. (There are other similar functions, like <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">set</span> and <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setq</span>, but <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span> is the most powerful, so it’s the one we’ll use in our examples.) After <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span> comes <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">area</span>, which is the name of the variable we’re going to set. Next comes the value to assign to this variable, which in this case is another S-expression.
-</p><p>Lisp doesn’t have any special operators for Math functions – they’re all functions like everything else, using <i>prefix</i> notation, where the name of the function (or operator) comes before its arguments. So instead of 3*7 for the product of 3 and 7, in Lisp you would write <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(* 3 7)</span>. In Nyquist, the <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">expt</span> (exponent) function raises its first argument to the power of the second argument. Therefore <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(* 3.14159 (expt radius 2))</span> means 3.14159 times the square of <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">radius</span>, or the formula for the area of a circle.
+</p><p>Lisp doesn’t have any special operators for Math functions \xe2\x80\x93 they’re all functions like everything else, using <i>prefix</i> notation, where the name of the function (or operator) comes before its arguments. So instead of 3*7 for the product of 3 and 7, in Lisp you would write <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(* 3 7)</span>. In Nyquist, the <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">expt</span> (exponent) function raises its first argument to the power of the second argument. Therefore <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(* 3.14159 (expt radius 2))</span> means 3.14159 times the square of <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">radius</span>, or the formula for the area of a circle.
 </p><p>Rather than typing in this full expression every time, let’s define a function for the area of the circle, that we can call every time we need it:
 </p>
 <pre>(defun circlearea (radius)
   (* 3.14159 (expt radius 2)))</pre>
-<p>The <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">defun</span> function is used to define a new function. The first argument is the name of the function, in this case <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">circlearea</span>. The second argument is a list of arguments to the function to be defined – this is one of the few cases where you have an S-expression that is not interpreted as a function call. Finally the last expression is the value of the function. Now if we want to compute the area of a circle of radius <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">r</span>, we just need to compute:
+<p>The <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">defun</span> function is used to define a new function. The first argument is the name of the function, in this case <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">circlearea</span>. The second argument is a list of arguments to the function to be defined \xe2\x80\x93 this is one of the few cases where you have an S-expression that is not interpreted as a function call. Finally the last expression is the value of the function. Now if we want to compute the area of a circle of radius <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">r</span>, we just need to compute:
 </p>
 <pre>  (setf area (circlearea r))
 </pre>
@@ -81,11 +81,11 @@
 </p>
 <pre>  (setf mylist (1 2 3 4 5))  &lt;--  error!
 </pre>
-<p>The reason this doesn’t work is that whenever Nyquist sees an S-expression, it tries to evaluate it as a function unless you tell it otherwise. Since there’s no function named “1” that takes arguments <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(2 3 4 5)</span>, this will generate an error. To tell Lisp that you want to treat an S-expression literally, and not to evaluate it as a function, you <i>quote</i> it. In Nyquist, you can quote a list by putting a single quotation mark before it, like this:
+<p>The reason this doesn’t work is that whenever Nyquist sees an S-expression, it tries to evaluate it as a function unless you tell it otherwise. Since there’s no function named \xe2\x80\x9c1\xe2\x80\x9d that takes arguments <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(2 3 4 5)</span>, this will generate an error. To tell Lisp that you want to treat an S-expression literally, and not to evaluate it as a function, you <i>quote</i> it. In Nyquist, you can quote a list by putting a single quotation mark before it, like this:
 </p>
 <pre>  (setf mylist '(1 2 3 4 5))
 </pre>
-<p>Nyquist also provides a <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">list</span> function that you can use to construct lists – this is useful if some of the elements of the list are functions:
+<p>Nyquist also provides a <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">list</span> function that you can use to construct lists \xe2\x80\x93 this is useful if some of the elements of the list are functions:
 </p>
 <pre>  (setf mylist (list 1 2 3 4 (sqrt 25)))
 </pre>
@@ -407,14 +407,14 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20200501032021
+Cached time: 20200619125811
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.093 seconds
-Real time usage: 0.095 seconds
+CPU time usage: 0.086 seconds
+Real time usage: 0.088 seconds
 Preprocessor visited node count: 285/1000000
 Preprocessor generated node count: 800/1000000
-Post‐expand include size: 5900/2097152 bytes
+Post-expand include size: 5900/2097152 bytes
 Template argument size: 1308/2097152 bytes
 Highest expansion depth: 3/40
 Expensive parser function count: 0/100
@@ -422,14 +422,14 @@ Expensive parser function count: 0/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   22.817      1 - -total
- 36.34%    8.292     26 - Template:InlineCode
- 13.31%    3.036      1 - Template:Intro
-  8.48%    1.935      1 - Template:Note
-  6.87%    1.567      1 - Template:Advice
+100.00%   19.345      1 - -total
+ 33.84%    6.547     26 - Template:InlineCode
+ 16.92%    3.273      1 - Template:Intro
+  6.37%    1.233      1 - Template:Note
+  5.79%    1.121      1 - Template:Advice
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6398-0!*!0!!en!5!* and timestamp 20200501032021 and revision id 62788
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6398-0!*!0!!en!5!* and timestamp 20200619125811 and revision id 62788
  -->
 </div>
 										<!-- end content -->
@@ -503,7 +503,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Introduction_to_Nyquist_and_Lisp_Programming">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Introduction_to_Nyquist_and_Lisp_Programming">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

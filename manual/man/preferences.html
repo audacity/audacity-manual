@@ -145,7 +145,7 @@
 <h2><span class="mw-headline" id="Where_the_Preferences_are_stored">Where the Preferences are stored</span></h2>
 <p>Audacity Preferences are stored in a configuration file called <i><b>audacity.cfg</b></i>. It is a text file which saves all your settings when you exit Audacity normally. The audacity.cfg file can be edited with any text editor and changes to it can be saved if Audacity is already closed. You can find audacity.cfg inside Audacity's folder for application data as follows:
 </p>
-<ul><li> <b>Windows:</b> Users\&lt;username&gt;\AppData\Roaming\audacity\</li>
+<ul><li> <b>Windows:</b> Users\\&lt;username&gt;\\AppData\\Roaming\\audacity\\</li>
 <li> <b>Mac:</b> ~/Library/Application Support/audacity/</li>
 <li> <b>Linux:</b> ~/.audacity-data/</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -155,7 +155,7 @@
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
 <td align="left" valign="top">In order to see audacity.cfg on Windows, macOS or GNU/Linux, you must show hidden files and folders or type the folder location into your file manager's address bar.<p>
-<ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, double-click the AppData or Application Data folder and navigate through that. If necessary, show hidden files and folders on <a rel="nofollow" class="external text" href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Windows</a> or type <b>%appdata%\audacity</b> or <b>shell:appdata\audacity</b> into the Explorer address bar then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on your keyboard.</p><p></li>
+<ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, double-click the AppData or Application Data folder and navigate through that. If necessary, show hidden files and folders on <a rel="nofollow" class="external text" href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Windows</a> or type <b>%appdata%\\audacity</b> or <b>shell:appdata\\audacity</b> into the Explorer address bar then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on your keyboard.</p><p></li>
 <li> <b>macOS:</b> Open Finder, use the <span class="menu">Go</span> menu, choose <span class="menu">Go to Folder</span> and type <b>~/Library/Application Support/audacity/</b>, or set Finder to <a rel="nofollow" class="external text" href="http://osxdaily.com/2011/07/22/access-user-library-folder-in-os-x-lion/">show your User Library folder</a>.</p></li></ul>
 </td></tr></table>
 </div>
@@ -163,7 +163,7 @@
 <h2><span class="mw-headline" id="Portable_Settings">Portable Settings</span></h2>
 <p>You can create a folder called <b>Portable Settings</b> in a special location relative to the directory you installed or extracted Audacity to, so that <b>audacity.cfg</b> and Audacity's other settings will be stored in that "Portable Settings" folder instead.  The permitted locations are:
 </p>
-<ul><li> <b>Windows:</b> in the folder Audacity is launched from (for example, in <b>Program Files (x86)\Audacity</b> on Windows 64-bit)</li>
+<ul><li> <b>Windows:</b> in the folder Audacity is launched from (for example, in <b>Program Files (x86)\\Audacity</b> on Windows 64-bit)</li>
 <li> <b>macOS:</b> in the "Contents" folder inside Audacity.app (for example in <b>/Applications/Audacity.app/Contents/</b> (to access the "Contents" folder, right-click or Ctrl-click over Audacity.app and choose "Show Package Contents")</li>
 <li> <b>GNU/Linux:</b> in the folder where the "audacity" binary is (for example, for Audacity installed by the package manager for your distribution, in <b>usr/bin/</b>).</li></ul>
 <p>The "Portable Settings" folder becomes active after restarting Audacity. 
@@ -203,14 +203,14 @@
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20200501031825
+Cached time: 20200619125043
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.122 seconds
-Real time usage: 0.127 seconds
+CPU time usage: 0.123 seconds
+Real time usage: 0.129 seconds
 Preprocessor visited node count: 416/1000000
 Preprocessor generated node count: 1332/1000000
-Post‐expand include size: 7704/2097152 bytes
+Post-expand include size: 7704/2097152 bytes
 Template argument size: 3622/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
@@ -218,19 +218,19 @@ Expensive parser function count: 11/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   52.639      1 - -total
- 65.04%   34.236      1 - Template:I18n
- 61.98%   32.626      1 - Template:I18n_box
- 54.81%   28.849      1 - Template:I18n_list
- 31.61%   16.638      7 - Template:I18n_link
- 18.53%    9.753      7 - Template:Autoglossonym
- 14.09%    7.418      1 - Template:Intro
-  6.04%    3.178      1 - Template:Tip
-  6.01%    3.165      3 - Template:Key
-  4.56%    2.398      4 - Template:Menu
+100.00%   52.013      1 - -total
+ 66.75%   34.721      1 - Template:I18n
+ 63.22%   32.882      1 - Template:I18n_box
+ 56.20%   29.234      1 - Template:I18n_list
+ 31.52%   16.393      7 - Template:I18n_link
+ 18.66%    9.705      7 - Template:Autoglossonym
+ 12.38%    6.437      1 - Template:Intro
+  5.67%    2.949      1 - Template:Tip
+  5.23%    2.720      3 - Template:Key
+  3.95%    2.056      4 - Template:Menu
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1970-0!*!0!!*!5!* and timestamp 20200501031825 and revision id 67238
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1970-0!*!0!!*!5!* and timestamp 20200619125042 and revision id 67238
  -->
 </div>
 										<!-- end content -->
@@ -304,7 +304,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Preferences">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Preferences">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

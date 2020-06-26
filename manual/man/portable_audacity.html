@@ -41,13 +41,17 @@
 </p><p>On launch, Audacity checks if there is a "Portable Settings" folder in the same directory as the executable (audacity.exe, Audacity.app or audacity). If "Portable Settings" exists, Audacity stores its settings there rather than in the user's home folder. Thus, a user can create a portable Audacity as follows:
 </p>
 <ol><li> Extract the Audacity .zip or .dmg download to a USB stick or similar</li>
-<li> Create a folder called "Portable Settings" on the USB stick. </li></ol>
-<p>When no "Portable Settings" folder is present, Audacity stores user settings in in a home location on the computer as follows: 
-</p>
-<ul><li> <b>Windows:</b> <span class="path">Users\&lt;username&gt;\AppData\Roaming\Audacity</span> </li>
-<li> <b>macOS / OS X:</b> <span class="path">~/Library/Application Support/audacity/</span></li>
-<li> <b>Linux:</b> <span class="path">~/.audacity-data/</span></li></ul>
+<li> Create a folder called "Portable Settings" on the USB stick. 
+<ul><li>On Windows this goes at the top level alongside the application and other folders</li>
+<li>On Mac it must go in the Contents folder for the application on the USB stick</li></ul></li></ol>
 <p>The settings are stored in an editable plain text file called <b>audacity.cfg</b> which contains your <a rel="nofollow" class="external text" href="https://manual.audacityteam.org/o/man/preferences.html">Preferences</a> and other settings such as settings for some effects and generators.
+</p><p><br />
+</p>
+<div class="example">When no "Portable Settings" folder is present, Audacity stores user settings in in a home location on the computer as follows: 
+<ul><li> <b>Windows:</b> <span class="path">Users\\&lt;username&gt;\\AppData\\Roaming\\Audacity</span> </li>
+<li> <b>macOS / OS X:</b> <span class="path">~/Library/Application Support/audacity/</span></li>
+<li> <b>Linux:</b> <span class="path">~/.audacity-data/</span></div></li></ul>
+<p><br />
 </p><p><br />
 </p>
 <div class="note"><span style="font-weight: bold; font-size:118%">Audacity Portable:</span>
@@ -59,7 +63,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">Audacity Portable is not maintained by Audacity Team and we can therefore not give technical support for it. For assistance, please contact <a rel="nofollow" class="external text" href="https://portableapps.com/support/audacity_portable">Audacity Portable Support</a>.
+<td align="left" valign="top">Audacity Portable is <i><b>not</b></i> maintained by Audacity Team and we can therefore not give technical support for it. For assistance, please contact <a rel="nofollow" class="external text" href="https://portableapps.com/support/audacity_portable">Audacity Portable Support</a>.
 </td></tr></table></div>
 <p>Once the application is installed to the portable medium such as a Flash Drive, simply launch the AudacityPortable.exe file. When you're done, exit Audacity and then wait for the activity light on your removable drive to stop flashing. Then select the "Safely remove device" option from the icon in the System Tray. If you remove the drive while it is writing, you may lose data. With Audacity Portable, Audacity's temporary directory is placed on the local computer within the&#160;%TEMP% directory. If there are no problems, this directory is removed when you exit Audacity Portable, leaving no unwanted traces of data on the computer that was used. 
 </p><p>Audacity Portable is not a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/U3">U3</a> compliant application. It can be installed on a U3 SmartDrive and launched from its location on the drive, but cannot be launched or shut down with the U3 Launchpad software.
@@ -68,30 +72,31 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20200501031841
+Cached time: 20200619125107
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.049 seconds
-Real time usage: 0.051 seconds
-Preprocessor visited node count: 41/1000000
-Preprocessor generated node count: 224/1000000
-Post‐expand include size: 2700/2097152 bytes
-Template argument size: 2176/2097152 bytes
+CPU time usage: 0.050 seconds
+Real time usage: 0.052 seconds
+Preprocessor visited node count: 47/1000000
+Preprocessor generated node count: 258/1000000
+Post-expand include size: 3108/2097152 bytes
+Template argument size: 2556/2097152 bytes
 Highest expansion depth: 3/40
 Expensive parser function count: 0/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   11.343      1 - -total
- 46.58%    5.284      1 - Template:Note
- 28.37%    3.218      1 - Template:Intro
- 16.74%    1.899      3 - Template:Path
- 14.41%    1.634      1 - Template:Advice
- 14.32%    1.624      1 - Template:Bh
+100.00%   12.092      1 - -total
+ 36.64%    4.431      1 - Template:Note
+ 32.70%    3.954      1 - Template:Example
+ 26.55%    3.211      1 - Template:Intro
+ 14.49%    1.752      3 - Template:Path
+ 10.81%    1.307      1 - Template:Advice
+ 10.59%    1.280      1 - Template:Bh
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6389-0!*!*!*!*!5!* and timestamp 20200501031841 and revision id 64219
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6389-0!*!*!*!*!5!* and timestamp 20200619125107 and revision id 67726
  -->
 </div>
 										<!-- end content -->
@@ -165,7 +170,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Portable_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Portable_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

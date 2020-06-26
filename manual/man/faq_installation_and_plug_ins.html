@@ -168,7 +168,7 @@
 </p><p>Sometimes it may not be obvious which effects to disable to solve a hang or crash. You might be able to identify offending effects from <b>Audacity.zip</b> if there is an Audacity <a href="help_menu.html#data" title="Help Menu">Debug report</a>. You can also try Windows Event Viewer (or more easily on Windows, type "Reliability" without quotes in the Search box to open Reliability Monitor). To view Mac reports, open /Applications/Utilities/Console.app then look at the System Diagnostic Reports.  
 </p><p>Should it remain unclear which effects are responsible, it may be useful to reset Audacity to load only the enabled effects that it had on first installation. To do this, go to Audacity's folder for application data as follows:
 </p>
-<ul><li> <b>Windows:</b> <span class="path">Users\&lt;username&gt;\AppData\Roaming\Audacity\</span> (or type <b>%appdata%</b> in Explorer)</li>
+<ul><li> <b>Windows:</b> <span class="path">Users\\&lt;username&gt;\\AppData\\Roaming\\Audacity\\</span> (or type <b>%appdata%</b> in Explorer)</li>
 <li> <b>OS X:</b> <span class="path">~/Library/Application Support/audacity/</span> (use Go &gt; Go to Folder in Finder)</li>
 <li> <b>Linux:</b> <span class="path">~/.audacity-data/</span> .</li></ul>
 <p>In that folder, delete the <b>pluginregistry.cfg</b> and <b>pluginsettings.cfg</b> files and restart Audacity.  Then you can use the Plug-in Manager dialog to selectively enable effects to find the possible culprit.     
@@ -199,7 +199,7 @@ If you discover a specific plug-in that misbehaves in Audacity, please email our
 
 <h2><span class="mw-headline" id="Windows:_How_can_I_make_Audacity_launch_when_I_double-click_a_WAV_or_other_audio_file.3F">Windows: How can I make Audacity launch when I double-click a WAV or other audio file?</span></h2>
 <p>For <b>Windows</b>, click the Windows Start button, then Control Panel, then "Programs". Under "Default Programs", click "Make a file type always open in a specific application".  Choose ".wav", ".mp3" or your chosen extension, then click "Change application..." and browse for Audacity to associate it with that file type. 
-</p><p>Another method is to use the Windows Start button, type "Run" (without quotes), press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, then type <b>%windir%\system32\control.exe /name Microsoft.DefaultPrograms /page pageFileAssoc</b> and press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. 
+</p><p>Another method is to use the Windows Start button, type "Run" (without quotes), press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, then type <b>%windir%\\system32\\control.exe /name Microsoft.DefaultPrograms /page pageFileAssoc</b> and press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. 
 </p><p>On Windows you can instead set the default association of a file type with Audacity by right-clicking over any file of that type, choosing "Open with" then "Choose default application...".      
 </p>
 <div class="note">If you have two different versions of Audacity, and you want to be able to choose which one, then you will need to rename one to give them different names, such as audacity.exe and audacity_old.exe.</div>
@@ -235,14 +235,19 @@ If you discover a specific plug-in that misbehaves in Audacity, please email our
 <h2><span class="mw-headline" id="How_do_I_reset_my_Audacity_configuration_settings.3F">How do I reset my Audacity configuration settings?</span></h2>
 <p><b>Uninstalling Audacity does not automatically repair or reset your configuration settings in Audacity <a href="preferences.html" title="Preferences">Preferences</a>.</b> If you are trying to fix a problem with Audacity, take one of the following actions.
 </p>
-<ul><li> Quit Audacity and <a href="preferences.html#stored" title="Preferences">reset Preferences</a> using the <i><b>audacity.cfg</b></i> settings file. There is then no need to uninstall and re-install. </li>
+<ul><li> In Audacity use <span class="menu">Tools &gt; <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a></span> to reset your Audacity configuration: preferences, export settings and toolbars to default settings. <i>(Macros, plug-ins and saved user settings in Effects, Generators and analyzers are not affected)</i>.</li></ul>
+<p><br />
+<b>If you cannot launch Audacity:</b>
+</p>
+<ul><li> <a href="preferences.html#stored" title="Preferences">Reset Preferences</a> by deleting the <i><b>audacity.cfg</b></i> settings file. There is then no need to uninstall and re-install. </li>
 <li> Alternatively, Windows users may run the installer and in the "Select Additional Tasks" screen, put a check in the "Reset Preferences" box. Complete the installation. On launching Audacity, a dialog will appear where you can confirm if you want to reset preferences just this once, or not. </li></ul>
 <p>For details of how to reset your Audacity settings on the three platforms please see:
 </p>
 <ul><li><a href="installing_and_updating_audacity_on_windows.html#purge" title="Installing and updating Audacity on Windows">Windows</a></li>
 <li><a href="installing_and_updating_audacity_on_mac_os_x.html#purge" title="Installing and updating Audacity on Mac OS X">Mac</a></li>
 <li><a href="installing_and_updating_audacity_on_linux.html#purge" title="Installing and updating Audacity on Linux">Linux</a></li></ul>
-<p>See also: 
+<p><br />
+See also: 
 </p>
 <ul><li> <a href="#win_uninstall">Windows: How do I uninstall Audacity?</a></li>
 <li> <a href="#launch">How can I solve Audacity not appearing or crashing on launch, or crashing after I add a plug-in?</a> </li></ul>
@@ -255,34 +260,34 @@ If you discover a specific plug-in that misbehaves in Audacity, please email our
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20200430095140
+Cached time: 20200618183231
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.174 seconds
-Real time usage: 0.181 seconds
-Preprocessor visited node count: 667/1000000
-Preprocessor generated node count: 1676/1000000
-Post‐expand include size: 15842/2097152 bytes
-Template argument size: 8564/2097152 bytes
+CPU time usage: 0.170 seconds
+Real time usage: 0.174 seconds
+Preprocessor visited node count: 672/1000000
+Preprocessor generated node count: 1696/1000000
+Post-expand include size: 15899/2097152 bytes
+Template argument size: 8595/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   66.655      1 - -total
- 60.52%   40.341      1 - Template:I18n
- 58.06%   38.699      1 - Template:I18n_box
- 53.00%   35.328      1 - Template:I18n_list
- 34.53%   23.017     10 - Template:I18n_link
- 20.70%   13.795     10 - Template:Autoglossonym
- 12.10%    8.065     10 - Template:Ednote
- 11.50%    7.666      2 - Template:No-anchor-rename
-  4.90%    3.265      7 - Template:Note
-  3.50%    2.330      2 - Template:Button
+100.00%   63.183      1 - -total
+ 60.35%   38.128      1 - Template:I18n
+ 57.32%   36.216      1 - Template:I18n_box
+ 51.25%   32.381      1 - Template:I18n_list
+ 34.26%   21.645     10 - Template:I18n_link
+ 20.54%   12.981     10 - Template:Autoglossonym
+ 11.60%    7.329     10 - Template:Ednote
+  9.83%    6.214      2 - Template:No-anchor-rename
+  4.23%    2.675      7 - Template:Note
+  3.18%    2.007      2 - Template:Key
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2578-0!*!0!!en!5!* and timestamp 20200430095139 and revision id 67248
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2578-0!*!0!!en!5!* and timestamp 20200618183231 and revision id 67764
  -->
 </div>
 										<!-- end content -->
@@ -356,7 +361,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Installation_and_Plug-Ins">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Installation_and_Plug-Ins">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

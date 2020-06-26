@@ -83,7 +83,7 @@
 </pre>
 <p>The following command in a Nyquist script would set the first label in a project to 'foo'
 </p>
-<pre>(AUD-DO "SetLabel: Text=\"Foo\"")
+<pre>(AUD-DO "SetLabel: Text=\\"Foo\\"")
 </pre>
 <p>The text string after AUD-DO is passed to the scripting engine to process.
 </p><p>A complete example of a Nyquist Script using AUD-DO that you can enter at the Tools Nyquist Prompt is given below:
@@ -147,7 +147,7 @@
 ;control end "End time" float-text "" 15 0 nil
 
 (AUD-DO (format nil "SelectTime: Start=~S End=~S" start end))
-(setf reply (AUD-DO (format nil "Message: Text=\"Start was set to ~S End to ~S\"" start end)))
+(setf reply (AUD-DO (format nil "Message: Text=\\"Start was set to ~S End to ~S\\"" start end)))
 
 ;; "reply" is a list in the form ("quoted message" . T)
 (first reply) ;returns the message
@@ -262,14 +262,14 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20200501032201
+Cached time: 20200619125146
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.068 seconds
-Real time usage: 0.070 seconds
+CPU time usage: 0.071 seconds
+Real time usage: 0.074 seconds
 Preprocessor visited node count: 112/1000000
 Preprocessor generated node count: 308/1000000
-Post‐expand include size: 2352/2097152 bytes
+Post-expand include size: 2352/2097152 bytes
 Template argument size: 660/2097152 bytes
 Highest expansion depth: 3/40
 Expensive parser function count: 0/100
@@ -277,14 +277,14 @@ Expensive parser function count: 0/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%    9.833      1 - -total
- 30.48%    2.997      1 - Template:Intro
- 17.75%    1.746      3 - Template:Tip
- 16.35%    1.608      2 - Template:InlineCode
- 13.58%    1.335      1 - Template:Advice
+100.00%   12.735      1 - -total
+ 32.30%    4.114      2 - Template:InlineCode
+ 24.53%    3.124      1 - Template:Intro
+ 13.99%    1.781      3 - Template:Tip
+ 11.51%    1.466      1 - Template:Advice
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6474-0!*!0!!en!5!* and timestamp 20200501032201 and revision id 66546
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6474-0!*!0!!en!5!* and timestamp 20200619125146 and revision id 66546
  -->
 </div>
 										<!-- end content -->
@@ -358,7 +358,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

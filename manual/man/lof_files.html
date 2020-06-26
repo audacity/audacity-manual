@@ -53,13 +53,13 @@
 <li> If the file to be imported is in the same folder as the LOF file, you need only give the file name inside double quotes.    </li></ul>
 </div>
 <h3><span class="mw-headline" id="Example">Example</span></h3>
-<p>Given an empty project window, the following LOF file located at C:\Desktop imports the audio file "sample1.wav" from the Desktop into that window, followed by "sample2.wav" and "sample3.wav" from other locations underneath. Then a new project window is created and the audio file "sample4.wav" from the Desktop is imported into it.
+<p>Given an empty project window, the following LOF file located at C:\\Desktop imports the audio file "sample1.wav" from the Desktop into that window, followed by "sample2.wav" and "sample3.wav" from other locations underneath. Then a new project window is created and the audio file "sample4.wav" from the Desktop is imported into it.
 </p>
 <pre># everything following the hash character is ignored
 window # an initial window command is implicit and optional
 file "sample1.wav"                   # sample1.wav is displayed
-file "C:\Ken\sample2.wav" offset 5   # sample2.wav is displayed with a 5s offset
-file "C:\Dave\sample3.wav"           # sample3.wav is displayed with no offset
+file "C:\\Ken\\sample2.wav" offset 5   # sample2.wav is displayed with a 5s offset
+file "C:\\Dave\\sample3.wav"           # sample3.wav is displayed with no offset
 window offset 5 duration 10          # open a new window, then zoom to display
 # 10 seconds of sample4.wav from 5 seconds to 15 seconds, offsetting it by 2.5 seconds
 file "sample4.wav" offset 2.5
@@ -68,14 +68,14 @@ file "sample4.wav" offset 2.5
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20200501032111
+Cached time: 20200619125358
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.038 seconds
-Real time usage: 0.040 seconds
+CPU time usage: 0.040 seconds
+Real time usage: 0.045 seconds
 Preprocessor visited node count: 163/1000000
 Preprocessor generated node count: 863/1000000
-Post‐expand include size: 2224/2097152 bytes
+Post-expand include size: 2224/2097152 bytes
 Template argument size: 454/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
@@ -83,15 +83,15 @@ Expensive parser function count: 11/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   23.917      1 - Template:I18n
-100.00%   23.917      1 - -total
- 91.85%   21.968      1 - Template:I18n_box
- 75.71%   18.108      1 - Template:I18n_list
- 35.89%    8.584      3 - Template:I18n_link
- 20.77%    4.968      3 - Template:Autoglossonym
+100.00%   27.145      1 - Template:I18n
+100.00%   27.145      1 - -total
+ 94.01%   25.519      1 - Template:I18n_box
+ 78.75%   21.377      1 - Template:I18n_list
+ 36.00%    9.772      3 - Template:I18n_link
+ 21.68%    5.884      3 - Template:Autoglossonym
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3465-0!*!0!!*!*!* and timestamp 20200501032111 and revision id 58078
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3465-0!*!0!!*!*!* and timestamp 20200619125358 and revision id 58078
  -->
 </div>
 										<!-- end content -->
@@ -165,7 +165,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/LOF_Files">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/LOF_Files">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

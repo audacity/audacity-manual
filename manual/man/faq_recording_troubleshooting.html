@@ -90,7 +90,7 @@
 </p>
 <ul><li> <b>Reduce screen redrawing:</b> <a href="zooming.html" title="Zooming">Zoom</a> out to at least the entire length you'll be recording, or in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>, uncheck <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Auto-scroll if head unpinned</span>. Turn off <span class="menu">View &gt; <a href="view_menu.html#showclippingonoff" title="View Menu">Show Clipping</a></span> while recording. Minimize the Audacity window whenever you have no need to see it.</li>
 <li> <b>Turn off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span></b> unless it is essential you hear what is being recorded.</li>
-<li> <b>Increase the default "Audio to buffer" setting</b> of 100 milliseconds in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>.</li></ul>
+<li> <b>Increase the default "Buffer length" setting</b> of 100 milliseconds in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>.</li></ul>
 <div class="note">
 <p>On Mac using Mavericks or later, it may be necessary to <i>reduce</i> audio to buffer, possibly to zero.
 </p>
@@ -136,7 +136,7 @@
 </p>
 <div id="mac_silence"></div>
 <h2><span class="mw-headline" id="Why_do_I_get_a_flat_line_and_no_sound_when_I_record_on_Mac.3F">Why do I get a flat line and no sound when I record on Mac?</span></h2>
-<p>A problem of no recording level in Audacity is occurring quite frequently on Mojave, due to Apple changing the <b>Privacy</b> settings for recording devices (making it more conservative, "safer"). Note that, although macOS refers to this setting as <b>Microphone</b>, it applies to all recording devices, including external USB / Thunderbolt interfaces.
+<p>A problem of no recording level in Audacity is occurring quite frequently on Mojave and Catalina, due to Apple changing the <b>Privacy</b> settings for recording devices (making it more conservative, "safer"). Note that, although macOS refers to this setting as <b>Microphone</b>, it applies to all recording devices, including external USB / Thunderbolt interfaces.
 </p><p>To fix this problem: 
 </p>
 <ol><li>On your Mac, choose <span class="menu">Apple menu &gt; System Preferences</span> then click <span class="menu">Security &amp; Privacy</span> in the left-hand menu and the click the <b>Privacy</b> tab.</li>
@@ -162,8 +162,12 @@
 <div id="new_device"></div>
 <h2><span class="mw-headline" id="Why_can.27t_Audacity_see_the_audio_device_I_just_connected.3F">Why can't Audacity see the audio device I just connected?</span></h2>
 <p><b>Built-in audio devices</b>
-</p><p>Generally, if you connect a cable to one of the inputs of the built-in audio device, Audacity will be able to record immediately from that device. If not, on Windows go to the <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">"Sound" control panel</a> and make sure the device is enabled. On Mac, you can configure devices in <span class="path">/Applications/Utilities/Audio MIDI Setup.app</span>. On Linux systems that use <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/PulseAudio">PulseAudio</a>, install and open PulseAudio Volume Control. Restart Audacity after making changes to system audio.
-</p><p>On systems with only one audio port for both input and output, you may need to change the output to an input. On Windows you can do that in the audio interface's own control panel. On Mac, use the Input tab of "Sound" in System Preferences and change the “Use audio port for:" menu to "Sound Input". 
+</p><p>Generally, if you connect a cable to one of the inputs of the built-in audio device, Audacity will be able to record immediately from that device. If not: 
+</p>
+<ul><li>On Windows go to the <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">"Sound" control panel</a> and make sure the device is enabled. </li>
+<li>On Mac, you can configure devices in <span class="path">/Applications/Utilities/Audio MIDI Setup.app</span>. </li>
+<li>On Linux systems that use <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/PulseAudio">PulseAudio</a>, install and open PulseAudio Volume Control. Restart Audacity after making changes to system audio.</li></ul>
+<p>On systems with only one audio port for both input and output, you may need to change the output to an input. On Windows you can do that in the audio interface's own control panel. On Mac, use the Input tab of "Sound" in System Preferences and change the \xe2\x80\x9cUse audio port for:" menu to "Sound Input". 
 </p>
 <div id="new_external"></div>
 <p><b>External audio devices</b>
@@ -187,7 +191,7 @@
 <div id="playthrough"></div>
 <h2><span class="mw-headline" id="Why_can.E2.80.99t_I_hear_what_I.E2.80.99m_recording.3F">Why can’t I hear what I’m recording?</span></h2>
 <p>To listen while Audacity is recording, enable what is known as software or hardware playthrough as explained below. If you use software playthrough and want to listen to the input without recording it, you must also left-click in the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter Toolbar</a> to turn on <a href="meter_toolbar.html#monitoring" title="Meter Toolbar">monitoring</a>.   
-</p><p>In the <a href="recording_preferences.html" title="Recording Preferences">Recording</a> section on the left, put a checkmark in the “Software Playthrough” box and click OK. You can also turn Software Playthrough on and off in the <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> menu. This type of playthrough has latency, so you will hear what you are recording a noticeable time afterwards. You could also experience audio breakup.
+</p><p>In the <a href="recording_preferences.html" title="Recording Preferences">Recording</a> section on the left, put a checkmark in the \xe2\x80\x9cSoftware Playthrough\xe2\x80\x9d box and click OK. You can also turn Software Playthrough on and off in the <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> menu. This type of playthrough has latency, so you will hear what you are recording a noticeable time afterwards. You could also experience audio breakup.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -240,7 +244,7 @@ see <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: 
 <div id="sync"></div>
 <h2><span class="mw-headline" id="Why_is_my_new_track_out_of_sync_with_the_previous_ones.2C_or_sounds_crackly_or_at_wrong_pitch.3F">Why is my new track out of sync with the previous ones, or sounds crackly or at wrong pitch?</span></h2>
 <p>When you make an <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdub recording</a> (listening to an existing track while recording a new one), computers cannot lay down what you record at the exact instant you sing or play in response to the beat. Therefore without intervention, the recording inevitably gets laid down after the beat. Audacity tries to correct for this "recording latency" automatically by pushing the recorded track backwards after recording stops, but further adjustment may be needed. 
-</p><p>If a new track is not synchronized with the others, you can zoom in and use <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a> ( shortcut <span class="kbrd" style="background-color: #e0e0f0">F5</span> ) to drag the track to the correct location. If you are doing a lot of overdubbing, try our <a href="latency_test.html" title="Latency Test">Latency Test</a> to set a custom value for Audacity's latency correction which can then be applied in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>.
+</p><p>If a new track is not synchronized with the others, you can zoom in and use <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a> ( shortcut <span class="kbrd" style="background-color: #e0e0f0">F5</span> ) to drag the track to the correct location. If you are doing a lot of overdubbing, try our <a href="latency_test.html" title="Latency Test">Latency Test</a> to set a custom value for Audacity's latency correction which can then be applied in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>.
 </p>
 <div class="note">
 <p><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Tutorial - Recording Multi-track Overdubs</a> gives a step-by-step 
@@ -252,7 +256,7 @@ guide for manually correcting for latency.
 </p>
 <ul><li> Use the same device for playback and recording. </li>
 <li> Ensure your sound device has <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">up-to-date drivers</a> specifically intended for your particular computer model and operating system, as provided by the motherboard or sound device manufacturer. Ensure USB or FireWire devices have the manufacturer's latest firmware.</li>
-<li> If you hear crackling while playing and recording at the same time, try increasing the "Audio to buffer" setting in <a href="recording_preferences.html#Latency" title="Recording Preferences">Recording Preferences</a>. On Mac you may need to <i>reduce</i> the Audio to buffer setting, even if only recording.  </li>
+<li> If you hear crackling while playing and recording at the same time, try increasing the "Buffer length" setting in <a href="devices_preferences.html#Latency" title="Devices Preferences">Devices Preferences</a>. On Mac you may need to <i>reduce</i> the Audio to buffer setting, even if only recording.  </li>
 <li> If crackling occurs while playing the tracks together, check if the <a href="meter_toolbar.html#playback" title="Meter Toolbar">Playback Meter's</a> red <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> warning is showing, which would indicate the combined volume of the tracks is too loud. To fix the clipping, use the <a href="audio_tracks.html#gain" title="Audio Tracks">gain sliders</a> on one or more tracks to reduce the overall level. </li>
 <li> Make sure the rate of the pre-existing tracks (as stated above the mute/solo buttons) is the same as the project rate. Select the tracks and click <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample...</a></span> to resample the track to the project rate. </li>
 <li> Set the <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> bottom left of the Audacity screen to 44100 Hz <i>(or if your audio interface only uses a particular rate such as 48000 Hz, set the project rate to that)</i>. Look at <span class="menu">Help &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info...</a></span> to see the rates the device claims to support.  </li>
@@ -293,7 +297,7 @@ guide for manually correcting for latency.
 <h2><span class="mw-headline" id="Why_do_I_get_crackles.2C_pops.2C_or_distortion_when_the_recording_is_loud.3F">Why do I get crackles, pops, or distortion when the recording is loud?</span></h2>
 <p>If you hear crackles, pops, or distortion when the recording is loud, or if the waveform is clearly touching the top and bottom edges of the track, you probably have <a href="audacity_waveform.html#clip" title="Audacity Waveform">clipping</a>, which means that the signal has exceeded the maximum allowed level.  
 </p><p>Try lowering the recording level using the Audacity <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a> or the slider in the operating system. You can also check to see if you can lower the volume on the input source itself (such as the <b>tape deck</b>,  <b>record player</b> or <b>microphone</b>). Many sound cards and USB turntables or USB tape decks have an independent volume control for the playback signal level.  See <a href="recording_with_usb_turntables.html" title="Recording with USB turntables">Recording with USB turntables or USB cassette decks</a> for more help with USB turntables or tape decks.    
-</p><p>When recording, try to aim for a maximum peak of around –6 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> in the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter</a> so as to prevent the meter's <a href="meter_toolbar.html#annotated" title="Meter Toolbar">red clipping warning</a> coming on. If the meters are set to <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i>, the equivalent level to aim for is 0.5. Clicking and dragging on the meter's right edge lets you expand the meter to gauge levels more easily. After recording, you can boost the level safely using the <a href="amplify.html" title="Amplify">Amplify</a> or <a href="normalize.html" title="Normalize">Normalize</a> effects.
+</p><p>When recording, try to aim for a maximum peak of around \xe2\x80\x936 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> in the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter</a> so as to prevent the meter's <a href="meter_toolbar.html#annotated" title="Meter Toolbar">red clipping warning</a> coming on. If the meters are set to <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i>, the equivalent level to aim for is 0.5. Clicking and dragging on the meter's right edge lets you expand the meter to gauge levels more easily. After recording, you can boost the level safely using the <a href="amplify.html" title="Amplify">Amplify</a> or <a href="normalize.html" title="Normalize">Normalize</a> effects.
 </p>
 <div class="note"><b>Help with repairing clipped recordings:</b>
 If there is only a small amount of <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> (just the tops of a few isolated peaks), <span class="menu">Effect &gt; <a href="clip_fix.html" title="Clip Fix">Clip Fix</a></span> can be applied to just the clipped sections.  This will attempt to reconstruct the missing peaks by <i><b><a href="glossary.html#interpolate" title="Glossary">interpolating</a></b></i>  the lost signal. In other cases where there is mild distortion throughout a recording, using  <span class="menu">Effect &gt; <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></span> or <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span> to reduce the higher frequencies can help to mitigate the damage.  Sometimes a bass cut will help also by making the result sound less "muddy". </div>
@@ -327,7 +331,7 @@ If there is only a small amount of <i><b><a href="glossary.html#clipping" title=
 </p><p>To make a Sound Activated recording commence, increase the recording level, or reduce the "Activation level" at <span class="menu">Transport &gt; Transport Otions &gt; Sound Activation Level...</span>.   
 </p><p><b>Out of resources</b>
 </p><p>If you have not activated <a href="transport_menu.html#sar" title="Transport Menu">Sound Activated Recording</a> and the red recording cursor will not move from the position where you start to record or stalls while recording, this usually means you are out of computer resources. Rebooting the computer may solve the problem. 
-</p><p><b>Note:</b> Windows 8 and later default to shut down performing a "hybrid boot" that retains the kernel session in memory, so producing a "Fast Startup". When you want to replenish resources you should do a traditional "cold boot" (full shutdown) instead, waiting a few seconds after shutting down before powering on the computer.
+</p><p><b>Note:</b> Windows defaults to shut down performing a "hybrid boot" that retains the kernel session in memory, so producing a "Fast Startup". When you want to replenish resources you should do a traditional "cold boot" (full shutdown) instead, waiting a few seconds after shutting down before powering on the computer.
 </p><p>Leaving Fast Startup enabled, you can cold boot by holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking the "Shut down" menu option from the Start Menu, Start Screen or Win + X menu (on Windows 8.1 only, unmodified click on "Shut Down" in the Win + X menu always performs a full shutdown). If preferred you can turn off Fast Startup at <span class="menu">Control Panel (icons view) &gt; Power Options &gt; Choose what the power button does</span> then any Shut Down menu item will cold boot.
 </p>
 <div class="note">
@@ -336,7 +340,7 @@ If there is only a small amount of <i><b><a href="glossary.html#clipping" title=
 </div>
 <p><b>Preferences</b>
 </p>
-<ul><li> Check the "Audio to buffer" setting by opening <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>. Buffer should normally be set to the default of 100 milliseconds. Very low settings will prevent recording starting.</li>
+<ul><li> Check the "Buffer length" setting by opening <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>. Buffer should normally be set to the default of 100 milliseconds. Very low settings will prevent recording starting.</li>
 <li> Other non-default settings such as excessive <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> could prevent recording starting. It can sometimes help to completely <a href="faq_installation_and_plug_ins.html#reset" title="FAQ:Installation and Plug-Ins">reset preferences</a>.   </li></ul>
 <p><b>USB turntables and tape decks</b>
 </p><p>Reports of recordings from USB turntables freezing or having dropouts are not that uncommon. Generally they are <b>not</b> caused by Audacity, but by poor quality equipment and cables, or lack of sufficient USB bandwidth.   
@@ -449,19 +453,19 @@ DC offset can also cause inaudible low level distortion which becomes audible af
 </p><p><a href="#top">back to top</a> 
 </p><p><br />
 </p><p><a href="faq_recording_how_to_s.html" title="FAQ:Recording - How To's"><b>&gt;</b>&#160; Forward To: FAQ:Recording - How To's</a> <br />
-</p><p><a href="faq_installation_and_plug_ins.html" title="FAQ:Installation and Plug-Ins"><b>&gt;</b>&#160; Back To: FAQ:Installation, Startup and Plug-Ins</a> <br /> 
+</p><p><a href="faq_installation_and_plug_ins.html" title="FAQ:Installation and Plug-Ins"><b>&lt;</b>&#160; Back To: FAQ:Installation, Startup and Plug-Ins</a> <br /> 
 </p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20200501031917
+Cached time: 20200618220721
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.238 seconds
-Real time usage: 0.248 seconds
+CPU time usage: 0.249 seconds
+Real time usage: 0.258 seconds
 Preprocessor visited node count: 776/1000000
 Preprocessor generated node count: 2271/1000000
-Post‐expand include size: 17745/2097152 bytes
+Post-expand include size: 17745/2097152 bytes
 Template argument size: 11751/2097152 bytes
 Highest expansion depth: 12/40
 Expensive parser function count: 11/100
@@ -469,19 +473,19 @@ Expensive parser function count: 11/100
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   69.061      1 - -total
- 46.28%   31.961      1 - Template:I18n
- 43.92%   30.335      1 - Template:I18n_box
- 39.27%   27.120      1 - Template:I18n_list
- 21.55%   14.882      6 - Template:I18n_link
- 12.76%    8.811      6 - Template:Autoglossonym
- 10.64%    7.346     31 - Template:Menu
-  8.22%    5.678     10 - Template:Note
-  5.62%    3.878      2 - Template:Tip
-  3.21%    2.217      3 - Template:Button
+100.00%   68.377      1 - -total
+ 47.07%   32.184      1 - Template:I18n
+ 44.22%   30.234      1 - Template:I18n_box
+ 38.83%   26.550      1 - Template:I18n_list
+ 21.89%   14.970      6 - Template:I18n_link
+ 13.07%    8.940      6 - Template:Autoglossonym
+ 10.77%    7.366     31 - Template:Menu
+  8.71%    5.952     10 - Template:Note
+  4.64%    3.173      2 - Template:Tip
+  3.25%    2.223      2 - Template:Hint
 -->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4053-0!*!0!!en!5!* and timestamp 20200501031916 and revision id 66000
+<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4053-0!*!0!!en!5!* and timestamp 20200618220721 and revision id 67768
  -->
 </div>
 										<!-- end content -->
@@ -555,7 +559,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-05-01 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_Troubleshooting">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_Troubleshooting">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
