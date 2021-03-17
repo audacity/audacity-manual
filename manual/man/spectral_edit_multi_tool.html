@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,12 +32,11 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Spectral_edit_multi_tool#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">The <b>Spectral edit multi tool</b> is used with a <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a> to apply either a <i><b><a href="glossary.html#notch" title="Glossary">notch filter</a></b></i>, <i><b><a href="glossary.html#hp" title="Glossary">high-pass filter</a></b></i> or <i><b><a href="glossary.html#lp" title="Glossary">low-pass filter</a></b></i> to the selection, depending on the type of selection made.
 </div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Spectral edit multi tool...</span></dd></dl>
-</li></ul></li></ul></li></ul>
 <p>Depending on how the track is displayed and what spectral selection has been made, this effect will do one of the following:
 </p>
 <ul><li> When the track is not in a <a href="spectrogram_view.html" title="Spectrogram View">Spectrogram View</a> with <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a> enabled, an error message will be displayed</li>
@@ -57,54 +56,28 @@
 <h2><span class="mw-headline" id="Examples">Examples</span></h2>
 <h3><span class="mw-headline" id="Notch_Filter">Notch Filter</span></h3>
 <p>If you make a spectral selection that has both an upper and lower boundary, selecting <span class="menu">Effect &gt; Spectral edit multi tool</span> will apply a notch filter.
-</p><p>In the following example the spectral selection had a center frequency of 2000 Hz and a bandwidth of 0.5 octave. 
+</p><p>In the following example the spectral selection had a center frequency of 2,000 Hz and a bandwidth of 0.5 octave. 
 </p>
-<dl><dd><span title="Spectrum plot of Spectral edit multi tool notch effect, 2000 Hz, 0.5 octave"><img alt="SpectralEditNotch.png" src="../m/images/d/dd/spectraleditnotch.png" width="574" height="367" /></span></dd></dl>
-<p>In the following example the spectral selection had a center frequency of 2000 Hz and a bandwidth of 2 octaves. 
+<dl><dd><span title="Spectrum plot of Spectral edit multi tool notch effect, 2,000 Hz, 0.5 octave"><img alt="SpectralEditNotch.png" src="../m/images/d/dd/spectraleditnotch.png" width="574" height="367" /></span></dd></dl>
+<p>In the following example the spectral selection had a center frequency of 2,000 Hz and a bandwidth of 2 octaves. 
 </p>
-<dl><dd><span title="Spectrum plot of Spectral edit multi tool notch effect, 2000 Hz, 2 octaves"><img alt="SpectralEditNotch02.png" src="../m/images/e/e3/spectraleditnotch02.png" width="574" height="367" /></span></dd></dl>
+<dl><dd><span title="Spectrum plot of Spectral edit multi tool notch effect, 2,000 Hz, 2 octaves"><img alt="SpectralEditNotch02.png" src="../m/images/e/e3/spectraleditnotch02.png" width="574" height="367" /></span></dd></dl>
 <h3><span class="mw-headline" id="High-pass_filter">High-pass filter</span></h3>
 <p>If you make a spectral selection that has the lower boundary at 0 Hz, selecting <span class="menu">Effect &gt; Spectral edit multi tool</span> will apply a high-pass filter.</p>
 <p>In the following example the spectral selection had a lower boundary of 0 Hz and an upper boundary of 500 Hz.</p> 
 <dl><dd><span title="Spectrum plot of Spectral edit multi tool high-pass effect"><img alt="SpectralEditMultiHP500.png" src="../m/images/8/83/spectraleditmultihp500.png" width="574" height="367" /></span></dd></dl>
 <h3><span class="mw-headline" id="Low-pass_filter">Low-pass filter</span></h3>
 <p>If you make a spectral selection that has the upper boundary at the Nyquist frequency of the track, selecting <span class="menu">Effect &gt; Spectral edit multi tool</span> will apply a low-pass filter.</p>
-<p>In the following example the spectral selection had a lower boundary of 0 Hz and an upper boundary of 2000 Hz.</p> 
+<p>In the following example the spectral selection had a lower boundary of 0 Hz and an upper boundary of 2,000 Hz.</p> 
 <dl><dd><span title="Spectrum plot of Spectral edit multi tool low-pass effect"><img alt="SpectralEditMultiLP2000.png" src="../m/images/f/f8/spectraleditmultilp2000.png" width="574" height="367" /></span></dd></dl>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125317
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.096 seconds
-Real time usage: 0.105 seconds
-Preprocessor visited node count: 201/1000000
-Preprocessor generated node count: 1156/1000000
-Post-expand include size: 4069/2097152 bytes
-Template argument size: 1999/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   39.573      1 - -total
- 67.48%   26.705      1 - Template:I18n
- 61.63%   24.389      1 - Template:I18n_box
- 50.76%   20.087      1 - Template:I18n_list
- 17.99%    7.121      2 - Template:I18n_link
- 10.90%    4.314      1 - Template:Tip
- 10.45%    4.134      2 - Template:Autoglossonym
-  6.30%    2.494      4 - Template:Menu
-  6.00%    2.375      1 - Template:Intro
-  5.98%    2.366      1 - Template:Shortcut
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5120-0!*!0!!*!5!* and timestamp 20200619125317 and revision id 60961
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -122,7 +95,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -132,9 +105,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -159,13 +132,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -175,7 +147,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Spectral_edit_multi_tool">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Spectral_edit_multi_tool">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

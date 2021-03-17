@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Multi-channel_Recording#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><i><b>Multi-channel recording</b></i> means recording more than two separate channels of audio at once on the same computer, synchronized to each other. Typically this does not work "out of the box" on Windows consumer systems, and always requires use of appropriate hardware and drivers, with recording software that can work with that hardware/drivers combination.</div> 
 <p><br />
 </p>
@@ -45,7 +45,7 @@
 <li class="toclevel-2 tocsection-4"><a href="#Recording_With_Audacity"><span class="tocnumber">2.2</span> <span class="toctext">Recording With Audacity</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-5"><a href="#Mac_OS_X_.2F_macOS"><span class="tocnumber">3</span> <span class="toctext">Mac OS X / macOS</span></a>
+<li class="toclevel-1 tocsection-5"><a href="#macOS"><span class="tocnumber">3</span> <span class="toctext">macOS</span></a>
 <ul>
 <li class="toclevel-2 tocsection-6"><a href="#Mac_Sound_interface"><span class="tocnumber">3.1</span> <span class="toctext">Mac Sound interface</span></a></li>
 <li class="toclevel-2 tocsection-7"><a href="#Recording_With_Audacity_2"><span class="tocnumber">3.2</span> <span class="toctext">Recording With Audacity</span></a></li>
@@ -60,11 +60,11 @@
 </div>
 
 <h2><span class="mw-headline" id="Requirements">Requirements</span></h2>
-<ul><li> <b>Hardware support:</b> you need a sound card or external audio interdace which has enough Analog to Digital Converters (ADC's) to do multi-channel recording. Most consumer cards only have one stereo pair of ADC's that is switched between various inputs such as Line-In and "Mic". You'll need at least a semi-professional device to find support for multi-channel recording. </li>
+<ul><li> <b>Hardware support:</b> you need a sound card or external audio interdace which has enough Analog to Digital Converters (ADC's) to do multi-channel recording. Most consumer cards only have one stereo pair of ADC's that is switched between various inputs such as Line-In and "Mic". You will need at least a semi-professional device to find support for multi-channel recording. </li>
 <li> <b>Driver support:</b> the drivers for the device must make it possible to record more than two channels at once. This is more problematic that it might seem because the standard sound interfaces for many operating systems were designed long before multi-channel recording was possible, and so only allow for up to two channels of recording. Also, consumer-level systems are not designed to achieve the low latencies and high throughputs needed for high quality multi-channel recordings.</li>
 <li> <b>Application support:</b> the application you are recording into must support working with multiple channels of audio. Audacity supports recording however many channels the device offers (for example, 24). The number of channels desired can be selected in the <a href="devices_preferences.html" title="Devices Preferences">Devices</a> tab of <a href="preferences.html" title="Preferences">Preferences</a>. There are two current limitations:
-<ul><li> <b>Channel selection:</b> You can't select exactly which channels are used - Audacity will simply use the first ones it finds. You may need to increase the number of recording channels in Audacity preferences (possibly to the maximum supported by the device, even though you are only recording a subset of them), until all you want are included. This may mean having to delete silent tracks after recording. Some audio interfaces however will display a "Multi" device. Selecting this as recording device in Audacity should let you record all the channels at once automatically.  </li>
-<li> <b>Channel to track allocation:</b> Particular channels of the sound device can't be recorded to particular tracks. After recording, multi-channel files can be exported using current Audacity, by choosing the appropriate mixdown option in Preferences (Import/Export tab). Playback support in Audacity is currently limited to stereo (2 channels), so all multi-channel recordings will be sent to your sound device in stereo. Your device can probably be configured as to whether the front left and front right speakers are used, or if output is duplicated to the surround channels. Offers from developers to help us add support for multi-channel playback are welcomed - to get in touch please <a rel="nofollow" class="external text" href="https://lists.sourceforge.net/lists/listinfo/audacity-devel">join our developers' mailing list</a>.</li></ul></li></ul>
+<ul><li> <b>Channel selection:</b> You cannot select exactly which channels are used - Audacity will simply use the first ones it finds. You may need to increase the number of recording channels in Audacity preferences (possibly to the maximum supported by the device, even though you are only recording a subset of them), until all you want are included. This may mean having to delete silent tracks after recording. Some audio interfaces however will display a "Multi" device. Selecting this as recording device in Audacity should let you record all the channels at once automatically.  </li>
+<li> <b>Channel to track allocation:</b> Particular channels of the sound device cannot be recorded to particular tracks. After recording, multi-channel files can be exported using current Audacity, by choosing the appropriate mixdown option in Preferences (Import/Export tab). Playback support in Audacity is currently limited to stereo (2 channels), so all multi-channel recordings will be sent to your sound device in stereo. Your device can probably be configured as to whether the front left and front right speakers are used, or if output is duplicated to the surround channels. Offers from developers to help us add support for multi-channel playback are welcomed - to get in touch please <a rel="nofollow" class="external text" href="http://lists.sourceforge.net/lists/listinfo/audacity-devel">join our developers' mailing list</a>.</li></ul></li></ul>
 <p>Crucially, available driver and application support for multi-channel audio (and whether you can use Audacity for multi-channel recording) depends on the operating system you are using. Please check the relevant section below for your particular system.   
 </p><p><br />
 </p>
@@ -77,26 +77,26 @@ The standard <b>Windows MME (Multi Media Extensions)</b> sound interface has bee
 </p><p><span style="font-weight: bold; font-size:118%">DirectSound:</span>
 It's also not very much use for writing games with, which is why after the release of Windows 95, it became necessary to offer the games manufacturers something better to persuade them off DOS. So <b>DirectSound</b> was born. This provided more flexible playback of audio, and later added multi-channel and surround sound playback for immersive game audio. Recording support was added later. DirectSound offers somewhat lower latencies than MME, and the possibility of multi-channel recording on some devices.  
 </p><p><span style="font-weight: bold; font-size:118%">ASIO:</span>
-So in the meantime, serious audio recording and playback was left out in the cold. Proprietary solutions stepped into the gap, and Steinberg created the <b><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Audio_Stream_Input/Output">ASIO</a></b> interface for bypassing the operating system entirely, and connecting audio applications direct to the audio interface. This gives very low latencies (because all the mixing and conversion involved in the MME interface is avoided), but means that only one application can use an audio interface at a time (no sharing between multiple applications, no system sounds).
-</p><p>Audacity supports ASIO but that support is not distributed in releases for <a href="asio_audio_interface.html" title="ASIO Audio Interface">licensing reasons</a>. Audacity can be <a rel="nofollow" class="external text" href="https://audacity.googlecode.com/svn/audacity-src/trunk/win/compile.txt">compiled</a> with ASIO support as long as that build is not distributed to others.  
+So in the meantime, serious audio recording and playback was left out in the cold. Proprietary solutions stepped into the gap, and Steinberg created the <b><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Audio_Stream_Input/Output">ASIO</a></b> interface for bypassing the operating system entirely, and connecting audio applications direct to the audio interface. This gives very low latencies (because all the mixing and conversion involved in the MME interface is avoided), but means that only one application can use an audio interface at a time (no sharing between multiple applications, no system sounds).
+</p><p>Audacity supports ASIO but that support is not distributed in releases for <a href="asio_audio_interface.html" title="ASIO Audio Interface">licensing reasons</a>. Audacity can be compiled with ASIO support as long as that build is not distributed to others.  
 </p>
 
 <p><span style="font-weight: bold; font-size:118%">WASAPI:</span>
-In 2005 the <b><a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd371455(v=vs.85).aspx">WASAPI</a></b> application programming interface (<a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Application_programming_interface">API</a>) was introduced starting with Windows Vista. WASAPI isolates audio more from the kernel so providing greater stability, allows a few further multi-channel devices to work without ASIO and provides lower latency than MME and Windows DirectSound.
-</p><p>On the other hand, direct hardware access under WASAPI is limited to a <a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/windows/hardware/ff538850%28v=vs.85%29.aspx">WaveRT driver</a> which only a few built-in devices support (also, Audacity and many other audio programs do not support it). Latencies under WASAPI are higher than under WDM-KS because MME and DirectSound are both emulated over WASAPI. To compensate for this, <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Windows_Store">Windows Store</a> applications on Windows 8 can support <a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/windows/hardware/br259116.aspx">offloading of audio processing to hardware</a> which was dropped with Vista. This is a necessary step for modern battery-dependent devices where software audio processing on the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Central_processing_unit">CPU</a> would rapidly deplete battery life.  
+In 2005 the <b><a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/windows/win32/coreaudio/wasapi?redirectedfrom=MSDN">WASAPI</a></b> application programming interface (<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Application_programming_interface">API</a>) was introduced starting with Windows Vista. WASAPI isolates audio more from the kernel so providing greater stability, allows a few further multi-channel devices to work without ASIO and provides lower latency than MME and Windows DirectSound.
+</p><p>On the other hand, direct hardware access under WASAPI is limited to a <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/audio/wavert-port-driver">WaveRT driver which only a few built-in devices support (also, Audacity and many other audio programs do not support it). Latencies under WASAPI are higher than under WDM-KS because MME and DirectSound are both emulated over WASAPI. To compensate for this, [http://en.wikipedia.org/wiki/Windows_Store Windows Store</a> applications on Windows 8 can support <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/audio/hardware-offloaded-audio-processing">offloading of audio processing to hardware</a> which was dropped with Vista. This is a necessary step for modern battery-dependent devices where software audio processing on the <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Central_processing_unit">CPU</a> would rapidly deplete battery life.  
 </p><p>WASAPI has two significant benefits for Audacity. 
 </p>
 <ul><li> 24-bit recording is supported (Windows DirectSound supports 24-bit recording, but the <a rel="nofollow" class="external text" href="http://www.portaudio.com">PortAudio </a> API Audacity uses does not support 24-bit input under DirectSound). </li>
-<li> From version 2.0.4 onwards, Audacity supports <a rel="nofollow" class="external text" href="https://manual.audacityteam.org/o/man/tutorial_recording_audio_playing_on_the_computer.html">recording computer playback</a> (even where sound devices don't support this) using <a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/dd316551(VS.85).aspx">Windows WASAPI loopback recording</a>. For the audio to be captured, the audio device playing the audio must be in shared mode ("Exclusive Mode" unchecked in the Windows "Sound" Control Panel).</li></ul>
+<li> From version 2.0.4 onwards, Audacity supports <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer">recording computer playback</a> (even where sound devices do not support this) using [<a rel="nofollow" class="external free" href="https://docs.microsoft.com/en-us/windows/win32/coreaudio/loopback-recording?redirectedfrom=MSDN">https://docs.microsoft.com/en-us/windows/win32/coreaudio/loopback-recording?redirectedfrom=MSDN</a> Windows WASAPI loopback recording. For the audio to be captured, the audio device playing the audio must be in shared mode ("Exclusive Mode" unchecked in the Windows "Sound" Control Panel).</li></ul>
 <div class="note"><span style="font-weight: bold; font-size:118%">External article about Windows API's:</span> For more on how Windows sound drivers work, and the different API's, see <a rel="nofollow" class="external text" href="http://www.staudio.de/kb/english/drivers/">this article</a> by Claus Riethm\xc3\xbcller. <b>Note:</b> after that page was written, DirectSound added recording support, as mentioned above. </div>
 <h3><span class="mw-headline" id="Recording_With_Audacity">Recording With Audacity</span></h3>
 <p>As distributed, Audacity comes with support for Windows MME and WDM drivers. MME drivers work fine for simple stereo recording and playback, and are available on all versions of Windows where Audacity will run. However, neither these nor most WDM drivers will provide multi-channel recording; if you try to send multiple inputs to Audacity with these, you will only be presented with a series of separate two-channel "recording devices" from which one can be chosen, instead of the number of input channels there actually are. 
 </p><p><br />
 </p>
 <div id="mac"></div>
-<h2><span class="mw-headline" id="Mac_OS_X_.2F_macOS">Mac OS X / macOS</span></h2>
+<h2><span class="mw-headline" id="macOS">macOS</span></h2>
 <h3><span class="mw-headline" id="Mac_Sound_interface">Mac Sound interface</span></h3>
-<p>Mac OS X / macOS is standardized on the <a rel="nofollow" class="external text" href="https://developer.apple.com/library/mac/#documentation/MusicAudio/Conceptual/CoreAudioOverview/Introduction/Introduction.html">Core Audio</a> interface. Audacity fully supports Core Audio.
+<p>macOS is standardized on the <a rel="nofollow" class="external text" href="http://developer.apple.com/library/mac/#documentation/MusicAudio/Conceptual/CoreAudioOverview/Introduction/Introduction.html">Core Audio</a> interface. Audacity fully supports Core Audio.
 </p>
 <h3><span class="mw-headline" id="Recording_With_Audacity_2">Recording With Audacity</span></h3>
 <p>Most hardware devices with ability to record multiple channels should work with Audacity on Mac, if  they provide multiple channels under Core Audio - some only provide multiple channels using <a href="asio_audio_interface.html" title="ASIO Audio Interface">ASIO</a> on Windows. A few devices are listed below which have been reported to record multi-channel into Audacity. Other devices than these may do so. If you have such a device, please <a rel="nofollow" class="external text" href="http://audacityteam.org/contact/#feedback">let us know</a> so we can consider adding it here.
@@ -110,34 +110,13 @@ In 2005 the <b><a rel="nofollow" class="external text" href="https://msdn.micros
 <p>The oldest sound driver interface in the Linux kernel is the <b>OSS</b> standard. This was the first serious attempt to provide a unified sound interface for *nix systems, and is also used on *BSD and some other Unix systems. It was designed in 1992 to provide an extended version of the card-specific SoundBlaster 16 interface. It made it into the Linux kernel, however in 1998 the creator handed over maintenance to the kernel maintainers, and a commercially licensed fork was produced by <a rel="nofollow" class="external text" href="http://www.opensound.com/">4Front Technologies</a>. This was closed-source and cost money to install, so attracted very little enthusiasm from the open-source community. The OSS drivers in the kernel source continued to be available, but few new drivers were being added, and many did not work very well.
 </p><p>A decision was made to start again from scratch, to address some of the limitations of the OSS interface (which although it was being developed commercially, was stuck in 1998 as far as open-source was concerned). Thus the <a rel="nofollow" class="external text" href="http://www.alsa-project.org/main/index.php/Main_Page">Advanced Linux Sound Architecture</a> or <b>ALSA</b> was born. This was designed to be able to provide all the functionality of OSS, whilst also making it easier to support the increasing number of high sample rate, high bit depth, multi-channel audio interfaces. Latency was also a concern, with increasing demands for low-latency full-duplex operation from users. The majority of new sound development for Linux now uses ALSA rather than OSS, although code for other Unixes often still uses OSS, and for some reason developers of binary-only software for Linux always seem to use OSS. ALSA has been included in the Linux kernel since version 2.5.0, as well as independent releases from the ALSA project.
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125108
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.043 seconds
-Real time usage: 0.045 seconds
-Preprocessor visited node count: 106/1000000
-Preprocessor generated node count: 318/1000000
-Post-expand include size: 2884/2097152 bytes
-Template argument size: 2436/2097152 bytes
-Highest expansion depth: 3/40
-Expensive parser function count: 0/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   10.684      1 - -total
- 29.37%    3.138      1 - Template:Intro
- 22.68%    2.424      6 - Template:Bh
- 18.41%    1.967      2 - Template:Ednote
- 17.93%    1.916      1 - Template:Note
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6427-0!*!0!!en!*!* and timestamp 20200619125108 and revision id 60988
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -155,7 +134,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -165,9 +144,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -192,13 +171,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -208,7 +186,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Multi-channel_Recording">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Multi-channel_Recording">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

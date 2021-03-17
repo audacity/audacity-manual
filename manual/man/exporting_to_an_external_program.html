@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,15 +32,15 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Exporting_to_an_External_Program#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 
 <div class="intro">This sends audio via a command-line to an external program, either for processing or for encoding as an audio file. 
 <ul><li>With this you can export using the installed <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoder or <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> encoder with additional parameters not supported in the <a href="file_export_dialog.html#options" title="File Export Dialog">options dialogs</a> in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a>.</li>
-<li>This can also be used to export using the very latest versions of <a rel="nofollow" class="external text" href="https://lame.sourceforge.io/"><b>LAME</b></a> or <a rel="nofollow" class="external text" href="https://ffmpeg.org/download.html"><b>FFmpeg</b></a> <i>(you would need to download those independently of Audacity)</i>.</li>
+<li>This can also be used to export using the very latest versions of <a rel="nofollow" class="external text" href="https://lame.sourceforge.io/"><b>LAME</b></a> or <a rel="nofollow" class="external text" href="http://ffmpeg.org/download.html"><b>FFmpeg</b></a> <i>(you would need to download those independently of Audacity)</i>.</li>
 <li>Or you could use it for exporting using an alternative MP3 encoder or to a specialized encoder in a format not otherwise supported by Audacity. </div></li></ul>
 <dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span>, then choose <b>(external program)</b> from the <b>Save as type</b> dropdown menu.</dd>
-<dd><span title="Export Audio dialog with command-line options"><img alt="Export to external program dialog.png" src="../m/images/1/17/export_to_external_program_dialog.png" width="637" height="613" /></span></dd>
+<dd><span title="Export Audio dialog with command-line options"><img alt="Export external program dialog 3-0-0.png" src="../m/images/a/a2/export_external_program_dialog_3_0_0.png" width="715" height="623" /></span></dd>
 <dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>(external program)</b>  from the <b>Save as type</b> dropdown menu.</dd></dl>
 <div id="encoder"></div>
 <h2><span class="mw-headline" id="Specify_Export_location">Specify Export location</span></h2>
@@ -87,7 +87,7 @@
 <h3><span class="mw-headline" id="Windows_and_Linux">Windows and Linux</span></h3>
 <p>Accessing the LAME or FFmpeg command-line program with just the "lame" or "ffmpeg" command <i>(as shipped with Audacity)</i> only works on Windows and Linux, assuming LAME or FFmpeg are installed on the system in the standard location. 
 </p><p>On Windows, this requires that you used the <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME</a> or <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> EXE installer and did not change the installation directory.
-</p><p>For using a downloaded version of <a rel="nofollow" class="external text" href="https://lame.sourceforge.io/">LAME</a> or <a rel="nofollow" class="external text" href="https://ffmpeg.org/download.html">FFmpeg</a>, the full path to the command-line program must be given. The path must be enclosed inside quotes if there are any spaces in the path. 
+</p><p>For using a downloaded version of <a rel="nofollow" class="external text" href="https://lame.sourceforge.io/">LAME</a> or <a rel="nofollow" class="external text" href="http://ffmpeg.org/download.html">FFmpeg</a>, the full path to the command-line program must be given. The path must be enclosed inside quotes if there are any spaces in the path. 
 </p><p>You can use the <span class="button">Browse...</span> button to find and open the executable application which will add the correct path to the command.
 </p>
 <div id="mac"></div>
@@ -100,7 +100,7 @@
 </td>
 <td align="left" valign="top">On Mac the shipped commands for "lame" and "ffmpeg" do <i><b>not</b></i> work, trying them will simply generate an error message.
 </td></tr></table></div>
-<p>Accordingly it is necessary to download a version of <a rel="nofollow" class="external text" href="https://lame.sourceforge.io/">LAME</a> or <a rel="nofollow" class="external text" href="https://ffmpeg.org/download.html">FFmpeg</a>.  
+<p>Accordingly it is necessary to download a version of <a rel="nofollow" class="external text" href="https://lame.sourceforge.io/">LAME</a> or <a rel="nofollow" class="external text" href="http://ffmpeg.org/download.html">FFmpeg</a>.  
 </p><p>As with Widows and Linux, the full path to the command-line program must be given. The path must be enclosed inside quotes if there are any spaces in the path. 
 </p><p>You can use the <span class="button">Browse...</span> button to find and open the executable application which will add the correct path to the command.   
 </p><p><br />
@@ -142,7 +142,7 @@
 </p>
 <div id="ffmpeg"></div>
 <h2><span class="mw-headline" id="FFmpeg_examples">FFmpeg examples</span></h2>
-<p>If exporting using <b>FFmpeg</b>, you can view the FFmpeg command-line usage in the <a rel="nofollow" class="external text" href="https://ffmpeg.org/ffmpeg.html#SEC1">FFmpeg documentation</a>. Guidance on valid metadata tags for various formats supported by FFmpeg can be found at <a rel="nofollow" class="external free" href="https://wiki.multimedia.cx/index.php?title=FFmpeg_Metadata">http://wiki.multimedia.cx/index.php?title=FFmpeg_Metadata</a>. For example this command exports to 256 kbps MP2 using FFmpeg:
+<p>If exporting using <b>FFmpeg</b>, you can view the FFmpeg command-line usage in the <a rel="nofollow" class="external text" href="http://ffmpeg.org/ffmpeg.html#SEC1">FFmpeg documentation</a>. Guidance on valid metadata tags for various formats supported by FFmpeg can be found at <a rel="nofollow" class="external free" href="http://wiki.multimedia.cx/index.php?title=FFmpeg_Metadata">http://wiki.multimedia.cx/index.php?title=FFmpeg_Metadata</a>. For example this command exports to 256 kbps MP2 using FFmpeg:
 </p>
 <table style="margin-left:10px;line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;font-family:monospace;font-size:1.1em;border:1px dashed black" cellpadding="5px">
 <tr>
@@ -192,39 +192,13 @@
 </td></tr></table>
 &#160;</div>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125223
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.122 seconds
-Real time usage: 0.130 seconds
-Preprocessor visited node count: 345/1000000
-Preprocessor generated node count: 1545/1000000
-Post-expand include size: 13431/2097152 bytes
-Template argument size: 8316/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   51.224      1 - -total
- 51.72%   26.494      1 - Template:I18n
- 48.10%   24.638      1 - Template:I18n_box
- 40.52%   20.758      1 - Template:I18n_list
- 16.86%    8.634      3 - Template:I18n_link
- 12.01%    6.152      1 - Template:Example
-  9.70%    4.967      3 - Template:Autoglossonym
-  8.85%    4.534     13 - Template:Code
-  5.22%    2.676      3 - Template:Button
-  4.23%    2.167      1 - Template:Intro
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2537-0!*!0!!*!5!* and timestamp 20200619125222 and revision id 66959
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -242,7 +216,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -252,9 +226,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -279,13 +253,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -295,7 +268,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Exporting_to_an_External_Program">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Exporting_to_an_External_Program">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

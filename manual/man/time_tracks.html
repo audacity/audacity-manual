@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Time_Tracks#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">A <i><b>Time Track</b></i> is used in conjunction with one or more <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a> to progressively increase or decrease playback speed (and pitch) over the length of the audio. Speed changes are controlled by manipulating the blue "time warp" line with the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> used for making gradual volume changes. If the blue line is dragged above the horizontal, the audio plays faster; if dragged below, it plays slower.</div>
 <dl><dd><span title="Time Track showing the vertical scale, warp line and control points"><img alt="Time Track example.png" src="../m/images/7/7f/time_track_example.png" width="794" height="106" /></span></dd></dl>
@@ -64,9 +64,15 @@
 <li> <b>Logarithmic Interpolation:</b> The curve between control points is by default calculated using <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> <i><b><a href="glossary.html#interpolate" title="Glossary">interpolation</a></b></i>. Uncheck this option to use <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> interpolation between control points, so drawing an exactly straight line between points (assuming the vertical scale is set to "Linear").</li></ul>
 <p>Label tracks can also be moved up or down by clicking between the controls in the track's Track Control Panel then dragging upwards or downwards.   
 </p>
-<div id="warp"></div>
+<h3><span class="mw-headline" id="Vertical_Scale">Vertical Scale</span></h3>
+<p>You can also set the scale of the Time Track by right-clicking in its Vertical Scale which will give you a dropdown context menu:
+</p>
+<dl><dd><span title="Time Track Vertical Scale Dropdown menu"><img alt="Time Track Vertical Scale context menu.png" src="../m/images/8/81/time_track_vertical_scale_context_menu.png" width="354" height="163" /></span></dd></dl>
+<p><br />
+</p><p><br />
+</p>
+<div class="example"><div id="warp"></div>
 <h2><span class="mw-headline" id="A_Tutorial_on_Time_Warping">A Tutorial on Time Warping</span></h2>
-    </li></ul>
 <dl><dd><span title="Time Track with Audio Track below"><img alt="TimeTrackExample.png" src="../m/images/1/12/timetrackexample.png" width="765" height="311" /></span></dd></dl>
 <p><b>Key points about the image above:</b>
 </p>
@@ -78,13 +84,11 @@
 <ul><li> we started playing twice as fast as normal
 <li> we slowed down fairly suddenly to a speed twice as slow as normal
 <li> then increased very gradually to a steady speed a little faster than the normal speed of 100%.</ul><p>After all the changes, the resultant audio ends up with only a few seconds shorter playing time than it had before (about 3 minutes 42 seconds, where the end of the audio lies against the Time Track horizontal ruler). </p></ul>
-
 <p><b>Important Steps:</b> 
 </p>
 <ol><li> You must first have at least one audio track to manipulate.
 <li> Choose <span class="menu">Tracks &gt; Add New &gt; New Time Track</span>.
 <li> If you want to warp the speed by more than plus or minus 10%, open the Time Track Dropdown Menu and choose <b>Set Range...</b>. The dialog will appear twice, the first time to choose the lower limit of the range and the second time to choose the upper limit of the range.
-
 <dl><dd></dd></dl>
 <div class="note">
 <ul><li>For example if you set a Lower Speed Limit of 50%, you can make the audio play up to twice as slowly (an envelope point at the bottom of the Time Track would make the playback twice as slow, just like a <a href="change_speed.html" title="Change Speed">Change Speed</a> effect of -50%). </li>
@@ -111,41 +115,15 @@
 </td>
 <td align="left" valign="top">Older computers may be incapable of playing audio in real-time that makes use of a Time Track. However you can always export the file as a <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and then play the WAV file later.
 </td></tr></table>
+</div></div>
+
+
+
+
+
+
 </div>
-
-<!-- 
-NewPP limit report
-Cached time: 20200619125106
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.131 seconds
-Real time usage: 0.140 seconds
-Preprocessor visited node count: 290/1000000
-Preprocessor generated node count: 1290/1000000
-Post-expand include size: 6677/2097152 bytes
-Template argument size: 3566/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
-
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   45.995      1 - -total
- 64.24%   29.546      1 - Template:I18n
- 59.08%   27.174      1 - Template:I18n_box
- 49.50%   22.769      1 - Template:I18n_list
- 23.00%   10.577      4 - Template:I18n_link
- 13.36%    6.144      4 - Template:Autoglossonym
-  4.97%    2.285      2 - Template:Key
-  4.91%    2.259      4 - Template:Menu
-  4.78%    2.197      1 - Template:Intro
-  4.75%    2.185      2 - Template:Note
--->
-
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1988-0!*!0!!*!5!* and timestamp 20200619125106 and revision id 63835
- -->
-</div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -163,7 +141,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -173,9 +151,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -200,13 +178,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -216,7 +193,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Time_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Time_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

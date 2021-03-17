@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Burning_music_files_to_a_CD#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 
 <div class="intro">This page provides an overview of how to burn an audio CD.<p>
@@ -47,10 +47,10 @@ Audacity does not burn CDs directly but audio files created with Audacity can be
 <ul><li>When buying blank CDs for burning, it is strongly recommended that you purchase good quality <b>CD-R</b>s (that can be burnt just once) and <i>not</i> the rewritable CD-RWs.</li></ul>
 <div id="setup"></div>
 <h2><span class="mw-headline" id="Audacity_setup">Audacity setup</span></h2>
-<p>Audio CDs always contain uncompressed PCM stereo audio at 44100 Hz <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>, 16-bit <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i>. So to burn an audio CD, export the file(s) you want to burn as a 44100 Hz 16-bit stereo <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> file.
+<p>Audio CDs always contain uncompressed PCM stereo audio at 44,100 Hz <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>, 16-bit <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i>. So to burn an audio CD, export the file(s) you want to burn as a 44,100 Hz 16-bit stereo <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> file.
 </p><p>To configure Audacity for this:
 </p>
-<ol><li> At the bottom left of the Audacity window, set the Project Rate to 44100 Hz.</li>
+<ol><li> At the bottom left of the Audacity window, set the Project Rate to 44,100 Hz.</li>
 <li> Some CD burning software require you to have a stereo track. If your Project does not already contain a stereo track, click <span class="menu">Tracks&#160;&gt;&#160;Add&#160;New&#160;&gt;&#160;<a href="tracks_menu_add_new.html#stereo_track" title="Tracks Menu: Add New">Stereo&#160;Track</a></span>. It does not matter that this track is empty, its purpose is just to make Audacity export your recording as a stereo file. This step is not needed if you are burning to CD with Apple Music/iTunes or Toast.</li>
 <li> Click <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaswav" title="File Menu: Export">Export as WAV</a></span>.</li></ol>
 <p>It may be possible to use other formats if your CD-burning software supports them, but they may not give the best quality or they may not be playable on all CD players. 
@@ -106,7 +106,7 @@ Audacity does not burn CDs directly but audio files created with Audacity can be
 </div> 
 <div id="other"></div>
 <h3><span class="mw-headline" id="Other_burning_software">Other burning software</span></h3>
-<p>You can also use a standalone Windows burning application like <a rel="nofollow" class="external text" href="https://cdburnerxp.se/en/home">CDBurnerXP</a>, <a rel="nofollow" class="external text" href="http://www.deepburner.com/">Deep Burner</a> or  <b>Nero</b> (or <a rel="nofollow" class="external text" href="http://burn-osx.sourceforge.net/Pages/English/home.html">Burn</a> or <b>Toast</b>  for Mac) to burn your exported files. Most Linux distributions include <b>Brasero</b> or <b>K3B</b> for CD burning.  When using standalone burning applications, open the files from within that software, do not drag and drop them from your file manager. Once again do not forget to select the setting to burn an "Audio CD" or "Music CD" as explained above.
+<p>You can also use a standalone Windows burning application like <a rel="nofollow" class="external text" href="http://cdburnerxp.se/en/home">CDBurnerXP</a>, <a rel="nofollow" class="external text" href="http://www.deepburner.com/">Deep Burner</a> or  <b>Nero</b> (or <a rel="nofollow" class="external text" href="http://burn-osx.sourceforge.net/Pages/English/home.html">Burn</a> or <b>Toast</b>  for Mac) to burn your exported files. Most Linux distributions include <b>Brasero</b> or <b>K3B</b> for CD burning.  When using standalone burning applications, open the files from within that software, do not drag and drop them from your file manager. Once again do not forget to select the setting to burn an "Audio CD" or "Music CD" as explained above.
 </p>
 <div class="note"><b>Common Pitfalls</b>
 <ul><li> <i>Wrong sample rate</i>:  Most CD burning software expects all files to be at 44100 Hz.</li>
@@ -114,14 +114,14 @@ Audacity does not burn CDs directly but audio files created with Audacity can be
 </div>
 <div id="cd-text"></div>
 <h3><span class="mw-headline" id="Metadata_and_CD-Text">Metadata and CD-Text</span></h3>
-<p>Even if you use Audacity's <a href="metadata_editor.html" title="Metadata Editor">Metadata Tags editor</a> to add metadata such as Title, Artist and Genre to your exported WAV files, that metadata does not get automatically burned to the CD. You can set Apple Music/iTunes and some other burning applications (but not Windows Media Player) to burn metadata to each track as separate <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/CD-Text">CD-Text</a>. Providing your CD burner supports CD-Text, a standalone CD player that supports CD-Text will then be able to display each track's metadata.
+<p>Even if you use Audacity's <a href="metadata_editor.html" title="Metadata Editor">Metadata Tags editor</a> to add metadata such as Title, Artist and Genre to your exported WAV files, that metadata does not get automatically burned to the CD. You can set Apple Music/iTunes and some other burning applications (but not Windows Media Player) to burn metadata to each track as separate <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/CD-Text">CD-Text</a>. Providing your CD burner supports CD-Text, a standalone CD player that supports CD-Text will then be able to display each track's metadata.
 </p><p>You can also use a <a href="#cuesheets">Cue Sheet</a> to add CD-Text in burning applications that support Cue Sheets.      
 </p>
 <div id="gapless"></div>
 <h2><span class="mw-headline" id="Gapless_burning">Gapless burning</span></h2>
 <p>By default, many CD burning applications add a two-second gap between CD tracks as part of the standard for audio CDs. So be aware of CD track gaps when placing <a href="label_tracks.html" title="Label Tracks">labels</a> between album tracks for <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> and consider deleting excess silences between tracks. 
-</p><p>However most CD burning applications have an option to burn the CD with no gaps between tracks. This is useful for recordings such as live concerts, allowing the CD to play continuously if the player supports gapless playback while still permitting skipping to individual CD tracks. If burning a gapless CD, you will need to place the Audacity labels exactly where you intend the burner to mark the track splits. Some CD burning applications (for example, older versions of Windows Media Player) have no option to burn without gaps. Gapless burning is also only available if the optical drive supports <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Optical_disc_recording_modes#CD_Disc-At-Once">Disc-At-Once (DAO)</a>.
-</p><p>Additionally, make sure you do not export MP3 files for burning to your gapless CD, even if you're burning a "data CD", because MP3s have inherent silence padding due to a restriction of the MP3 format.
+</p><p>However most CD burning applications have an option to burn the CD with no gaps between tracks. This is useful for recordings such as live concerts, allowing the CD to play continuously if the player supports gapless playback while still permitting skipping to individual CD tracks. If burning a gapless CD, you will need to place the Audacity labels exactly where you intend the burner to mark the track splits. Some CD burning applications (for example, older versions of Windows Media Player) have no option to burn without gaps. Gapless burning is also only available if the optical drive supports <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Optical_disc_recording_modes#CD_Disc-At-Once">Disc-At-Once (DAO)</a>.
+</p><p>Additionally, make sure you do not export MP3 files for burning to your gapless CD, even if you are burning a "data CD", because MP3s have inherent silence padding due to a restriction of the MP3 format.
 </p><p>Note you may still hear the most momentary gaps between tracks even on DAO burned CDs, unless the CD player supports true gapless playback. Many CD players do not support gapless playback properly because the hardware simply does not buffer the audio data properly. However quite a few computer-based media players can use DSP effects when playing back audio to give proper gapless playback, even of CDs not burned with DAO. An example of such a player is Apple's iTunes.
 </p>
 <div class="note"><div id="cuesheets"></div>
@@ -135,7 +135,7 @@ Audacity does not burn CDs directly but audio files created with Audacity can be
 <li> INDEX 01 (start time) in the format minutes:seconds:frames with the first track always being 00:00:00</li></ul>
 <p>Audacity cannot currently export Cue Sheets but it is possible to use the <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportlabels" title="File Menu: Export">Export Labels...</a></span> command to export a text file representing the label positions, then on Windows and Linux use <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Cue_sheets">label2cue</a> to convert the minutes and seconds data in the text file to minutes, seconds and frames data laid out in cue sheet format.
 </p>
-You can read more about cue sheets on Wikipedia <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Cue_sheet_%28computing%29">here</a>.</div>
+You can read more about cue sheets on Wikipedia <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Cue_sheet_%28computing%29">here</a>.</div>
 <div id="longer"></div>
 <h2><span class="mw-headline" id="Burning_longer_recordings_to_disc">Burning longer recordings to disc</span></h2>
 <p>As stated above audio CDs are generally limited to either 74 or 80 minutes, however it is sometimes possible to achive longer times by using <a href="#overburn">Overburning</a>.  Alternatively, for longer recordings, you may be able to use <a href="#datacd">data discs</a> provided your player will support and play these. <i>(A data CD will not normally play on older standalone CD players. It will play on computers, most DVD players and in MP3 CD players)</i>.
@@ -178,39 +178,13 @@ You can read more about cue sheets on Wikipedia <a rel="nofollow" class="externa
 <p><a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks"><b>&lt;</b>&#160; Back to: Splitting a recording into separate tracks</a> <br />
 </p><p><a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD"><b>|&lt;</b> Tutorial - Copying tapes, LPs or MiniDiscs to CD</a>
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125124
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.117 seconds
-Real time usage: 0.123 seconds
-Preprocessor visited node count: 317/1000000
-Preprocessor generated node count: 1386/1000000
-Post-expand include size: 8904/2097152 bytes
-Template argument size: 5786/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   44.113      1 - -total
- 56.29%   24.832      1 - Template:I18n
- 51.37%   22.660      1 - Template:I18n_box
- 42.28%   18.649      1 - Template:I18n_list
- 15.09%    6.655      2 - Template:I18n_link
-  8.85%    3.902      2 - Template:Autoglossonym
-  7.58%    3.346      4 - Template:Note
-  5.21%    2.300      2 - Template:Button
-  4.78%    2.109      3 - Template:Menu
-  4.32%    1.904      1 - Template:Intro
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3128-0!*!0!!*!5!* and timestamp 20200619125124 and revision id 66399
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -228,7 +202,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -238,9 +212,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -265,13 +239,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -281,7 +254,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Burning_music_files_to_a_CD">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Burning_music_files_to_a_CD">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Macros#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 </li></ul>
 <p><br />
@@ -47,6 +47,7 @@
 <li><a href="#howto">How to access Macros</a></li>
 <li><a href="#manage">Manage Macros</a></li>
 <li><a href="#shrink">Macros Palette dialog</a></li>
+<li><a href="#parameters">Macro Command Parameters</a></li>
 <li><a href="#store">Where Macros are stored</a></li>
 <li><a href="#share">Sharing a Macro</a></li>
 <li><a href="#examples">Macros Examples</a></li></ol>
@@ -65,7 +66,7 @@
 <h2><span class="mw-headline" id="How_to_access_Macros">How to access Macros</span></h2>
 <p>Macros are available from the <a href="tools_menu.html" title="Tools Menu">Tools Menu</a>:
 </p>
-<ul><li> <span class="menu">Tools &gt; Macros...</span> to manage Macros, i.e. <a href="manage_macros.html" title="Manage Macros">to create, edit and test</a> them</li>
+<ul><li> <span class="menu">Tools &gt; Macros...</span> to manage Macros, <a href="manage_macros.html" title="Manage Macros">to create, edit and test</a> them</li>
 <li> <span class="menu">Tools &gt; Apply Macro &gt; Palette...</span>  for a <a href="apply_macro.html" title="Apply Macro">toolbox of Macros</a></li>
 <li> <span class="menu">Tools &gt; Apply Macro &gt; <i>named Macro</i></span> to <a href="tools_menu_apply_macro.html" title="Tools Menu: Apply Macro">apply one named Macro</a></li></ul>
 <p>There are some <a href="macros_examples.html" title="Macros Examples"><b>examples of Macros</b></a> and tips on using them.
@@ -76,7 +77,7 @@
 <h2><span class="mw-headline" id="Manage_Macros"><a href="manage_macros.html" title="Manage Macros">Manage Macros</a></span></h2>
 <p>Use <span class="menu">Tools &gt; Macros...</span> if you need to create a new Macro or to edit an existing Macro. 
 </p>
-<dl><dd><span title="Manage Macros dialog showing Macro list (left) and command list for selected Macro (right)"><img alt="ManageMacros.png" src="../m/images/5/54/managemacros.png" width="786" height="393" /></span></dd></dl>
+<dl><dd><span title="Manage Macros dialog showing Macro list (left) and command list for selected Macro (right)"><img alt="Manage Macros 3-0-0.png" src="../m/images/a/a0/manage_macros_3_0_0.png" width="831" height="331" /></span></dd></dl>
 <p><br />
 </p>
 <div id="shrink"></div>
@@ -108,6 +109,13 @@
 
 <p><br />
 </p>
+<div id="parameters"></div>
+<h2><span class="mw-headline" id="Macro_Command_Parameters">Macro Command Parameters</span></h2>
+<p>Commands that call Effects, Generators, Analyzers or Tools, use the same familiar graphical interface (GUI) as appears when they are used from the normal top level menus.
+</p><p>Many of the other commands provide a simple GUI comprised of checkboxes and text entry boxes. Typical examples can be seen in the <a href="extra_menu_scriptables_i.html" title="Extra Menu: Scriptables I">Scriptables I</a> and <a href="extra_menu_scriptables_ii.html" title="Extra Menu: Scriptables II">Scriptables II</a> menus.
+</p><p>Please see <a href="manage_macros.html#parameters" title="Manage Macros">Manage Macros</a> for more details.
+</p><p><br />
+</p>
 <div id="store"></div>
 <h2><span class="mw-headline" id="Where_Macros_are_stored">Where Macros are stored</span></h2>
 <p>Each Macro is automatically saved as a separate text file with TXT <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> in the "<b>Macros</b>" folder in Audacity's folder for application data:
@@ -122,7 +130,7 @@
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
 <td align="left" valign="top">In order to see the <b>Macros</b> folder on Windows, macOS or GNU/Linux, you must show hidden files and folders or type the folder location into your file manager's address bar.<p>
-<ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, double-click the AppData or Application Data folder and navigate through that. If necessary, show hidden files and folders on <a rel="nofollow" class="external text" href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Windows</a> or type <b>%appdata%\\audacity\\Macros</b> or <b>shell:appdata\\audacity\\Macros</b> into the Explorer address bar then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on your keyboard.</p><p></li>
+<ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, double-click the AppData or Application Data folder and navigate through that. If necessary, show hidden files and folders on <a rel="nofollow" class="external text" href="http://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Windows</a> or type <b>%appdata%\\audacity\\Macros</b> or <b>shell:appdata\\audacity\\Macros</b> into the Explorer address bar then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on your keyboard.</p><p></li>
 <li> <b>macOS:</b> Open Finder, use the <span class="menu">Go</span> menu, choose <span class="menu">Go to Folder</span> and type <b>~/Library/Application Support/audacity/Macros</b>, or set Finder to <a rel="nofollow" class="external text" href="http://osxdaily.com/2011/07/22/access-user-library-folder-in-os-x-lion/">show your User Library folder</a>.</p></li></ul>
 </td></tr></table>
 </div>
@@ -140,39 +148,13 @@
 </p><p><br />
 <a href="tools_menu.html" title="Tools Menu"><b>&lt;</b>&#160; Back to: Tools Menu</a>
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125102
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.093 seconds
-Real time usage: 0.098 seconds
-Preprocessor visited node count: 227/1000000
-Preprocessor generated node count: 721/1000000
-Post-expand include size: 5991/2097152 bytes
-Template argument size: 4143/2097152 bytes
-Highest expansion depth: 4/40
-Expensive parser function count: 0/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   23.167      1 - -total
- 24.91%    5.770      1 - Template:Intro
- 17.76%    4.115      2 - Template:Tip
- 14.29%    3.310      3 - Template:Ednote
- 13.34%    3.090      4 - Template:Button
- 11.23%    2.602      7 - Template:Menu
-  8.18%    1.896      4 - Template:Bh
-  7.01%    1.623      1 - Template:Key
-  5.85%    1.355      1 - Template:Note
-  5.79%    1.342      1 - Template:Advice
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4315-0!*!0!!*!5!* and timestamp 20200619125102 and revision id 66695
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -190,7 +172,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -200,9 +182,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -227,13 +209,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -243,7 +224,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Macros">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Macros">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

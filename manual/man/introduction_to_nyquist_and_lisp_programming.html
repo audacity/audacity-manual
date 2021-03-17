@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,8 +32,8 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Introduction_to_Nyquist_and_Lisp_Programming#searchInput">search</a></div>
 
-					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Nyquist was written by <a rel="nofollow" class="external text" href="https://www-2.cs.cmu.edu/%7Erbd/">Roger B. Dannenberg</a> and was intended to be used as a complete programming language for audio synthesis and analysis, with support for MIDI, audio recording and playback, file I/O, object-oriented programming, profiling, debugging and more. Audacity uses a subset of Nyquist’s functionality, allowing you to use Nyquist functions in Audacity. Audacity also provides additional features and commands for Nyquist, including the ability to create plug-ins.<br /><i>There is also a standalone version of Nyquist available from the <a rel="nofollow" class="external text" href="https://www-2.cs.cmu.edu/%7Emusic/music.software.html">Carnegie Mellon University Computer Music Project</a>.</i></div>
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Nyquist was written by <a rel="nofollow" class="external text" href="http://www-2.cs.cmu.edu/%7Erbd/">Roger B. Dannenberg</a> and was intended to be used as a complete programming language for audio synthesis and analysis, with support for MIDI, audio recording and playback, file I/O, object-oriented programming, profiling, debugging and more. Audacity uses a subset of Nyquist's functionality, allowing you to use Nyquist functions in Audacity. Audacity also provides additional features and commands for Nyquist, including the ability to create plug-ins.<br /><i>There is also a standalone version of Nyquist available from the <a rel="nofollow" class="external text" href="http://www-2.cs.cmu.edu/%7Emusic/music.software.html">Carnegie Mellon University Computer Music Project</a>.</i></div>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Nyquist"><span class="tocnumber">1</span> <span class="toctext">Nyquist</span></a>
@@ -54,22 +54,22 @@
 </div>
 
 <h2><span class="mw-headline" id="Nyquist">Nyquist</span></h2>
-<p>Nyquist allows you to use the Nyquist programming language to write your own plug-in effects for Audacity. Unlike VST and LADSPA plug-ins, Nyquist plug-ins are written in plain text and don’t need to be compiled.
+<p>Nyquist allows you to use the Nyquist programming language to write your own plug-in effects for Audacity. Unlike VST and LADSPA plug-ins, Nyquist plug-ins are written in plain text and don't need to be compiled.
 </p><p>Nyquist supports both a Lisp syntax and a more C-like syntax called SAL. Audacity versions prior to 1.3.8 only support Lisp, but the current Audacity 2.0 series supports both Lisp and SAL. To write plug-ins for use with Audacity, choose the appropriate Nyquist Manual for your version of Audacity and preferred syntax:
 </p>
 <ul><li> <a rel="nofollow" class="external text" href="http://www.audacity-forum.de/download/edgar/nyquist/nyquist-doc/manual/home.html">Nyquist version 2.37 Manual</a> \xe2\x80\x93 entirely using Lisp syntax </li>
-<li> <a rel="nofollow" class="external text" href="https://www.cs.cmu.edu/%7Erbd/doc/nyquist/">Nyquist 3.1x Reference Manual</a> \xe2\x80\x93 the latest Nyquist Manual (mostly using SAL syntax). </li></ul>
-<p>Note that you don’t need to download Nyquist in order to write simple plug-ins to use with Audacity. All the basic instructions you need to work with Lisp and the 2.37 Manual are below. For the latest Nyquist features in Audacity, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Documentation">Nyquist Documentation</a> on the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/">Wiki</a>.
+<li> <a rel="nofollow" class="external text" href="http://www.cs.cmu.edu/%7Erbd/doc/nyquist/">Nyquist 3.1x Reference Manual</a> \xe2\x80\x93 the latest Nyquist Manual (mostly using SAL syntax). </li></ul>
+<p>Note that you don't need to download Nyquist in order to write simple plug-ins to use with Audacity. All the basic instructions you need to work with Lisp and the 2.37 Manual are below. For the latest Nyquist features in Audacity, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Documentation">Nyquist Documentation</a> on the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/">Wiki</a>.
 </p>
 <h3><span class="mw-headline" id="Lisp">Lisp</span></h3>
-<p>Nyquist is based on <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a>. If you have programmed in Lisp before, you can skim this section or go directly to the next page: <a href="programming_in_nyquist.html" title="Programming in Nyquist">Programming in Nyquist</a> . Otherwise, here’s an extremely brief introduction to Lisp:
-</p><p>In Lisp (and therefore Nyquist), everything is an S-Expression, which is just a list of tokens (words) separated by whitespace and enclosed in parentheses. The name of the function is always the first token in an S-Expression, and all of the other tokens are arguments to this function. Here’s a simple example:
+<p>Nyquist is based on <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a>. If you have programmed in Lisp before, you can skim this section or go directly to the next page: <a href="programming_in_nyquist.html" title="Programming in Nyquist">Programming in Nyquist</a> . Otherwise, here's an extremely brief introduction to Lisp:
+</p><p>In Lisp (and therefore Nyquist), everything is an S-Expression, which is just a list of tokens (words) separated by whitespace and enclosed in parentheses. The name of the function is always the first token in an S-Expression, and all of the other tokens are arguments to this function. Here's a simple example:
 </p>
 <pre>  (setf area (* 3.14159 (expt radius 2)))
 </pre>
-<p>Let’s break down this example. The outermost S-expression has three members. The first one, <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span>, is the name of the function (it stands for "set-field"). <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span> is used to assign a value to a variable. (There are other similar functions, like <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">set</span> and <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setq</span>, but <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span> is the most powerful, so it’s the one we’ll use in our examples.) After <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span> comes <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">area</span>, which is the name of the variable we’re going to set. Next comes the value to assign to this variable, which in this case is another S-expression.
-</p><p>Lisp doesn’t have any special operators for Math functions \xe2\x80\x93 they’re all functions like everything else, using <i>prefix</i> notation, where the name of the function (or operator) comes before its arguments. So instead of 3*7 for the product of 3 and 7, in Lisp you would write <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(* 3 7)</span>. In Nyquist, the <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">expt</span> (exponent) function raises its first argument to the power of the second argument. Therefore <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(* 3.14159 (expt radius 2))</span> means 3.14159 times the square of <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">radius</span>, or the formula for the area of a circle.
-</p><p>Rather than typing in this full expression every time, let’s define a function for the area of the circle, that we can call every time we need it:
+<p>Let's break down this example. The outermost S-expression has three members. The first one, <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span>, is the name of the function (it stands for "set-field"). <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span> is used to assign a value to a variable. (There are other similar functions, like <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">set</span> and <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setq</span>, but <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span> is the most powerful, so it's the one we'll use in our examples.) After <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">setf</span> comes <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">area</span>, which is the name of the variable we're going to set. Next comes the value to assign to this variable, which in this case is another S-expression.
+</p><p>Lisp doesn't have any special operators for Math functions \xe2\x80\x93 they're all functions like everything else, using <i>prefix</i> notation, where the name of the function (or operator) comes before its arguments. So instead of 3*7 for the product of 3 and 7, in Lisp you would write <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(* 3 7)</span>. In Nyquist, the <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">expt</span> (exponent) function raises its first argument to the power of the second argument. Therefore <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(* 3.14159 (expt radius 2))</span> means 3.14159 times the square of <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">radius</span>, or the formula for the area of a circle.
+</p><p>Rather than typing in this full expression every time, let's define a function for the area of the circle, that we can call every time we need it:
 </p>
 <pre>(defun circlearea (radius)
   (* 3.14159 (expt radius 2)))</pre>
@@ -77,11 +77,11 @@
 </p>
 <pre>  (setf area (circlearea r))
 </pre>
-<p>An S-expression is just a representation of a list. Lisp uses lists to represent just about everything (the name LISP comes from LISt Processing language), so it’s helpful to know how to manipulate lists. Let’s start by assigning a list of numbers to a variable. You can’t quite do this:
+<p>An S-expression is just a representation of a list. Lisp uses lists to represent just about everything (the name LISP comes from LISt Processing language), so it's helpful to know how to manipulate lists. Let's start by assigning a list of numbers to a variable. You can't quite do this:
 </p>
 <pre>  (setf mylist (1 2 3 4 5))  &lt;--  error!
 </pre>
-<p>The reason this doesn’t work is that whenever Nyquist sees an S-expression, it tries to evaluate it as a function unless you tell it otherwise. Since there’s no function named \xe2\x80\x9c1\xe2\x80\x9d that takes arguments <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(2 3 4 5)</span>, this will generate an error. To tell Lisp that you want to treat an S-expression literally, and not to evaluate it as a function, you <i>quote</i> it. In Nyquist, you can quote a list by putting a single quotation mark before it, like this:
+<p>The reason this doesn't work is that whenever Nyquist sees an S-expression, it tries to evaluate it as a function unless you tell it otherwise. Since there's no function named \xe2\x80\x9c1\xe2\x80\x9d that takes arguments <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(2 3 4 5)</span>, this will generate an error. To tell Lisp that you want to treat an S-expression literally, and not to evaluate it as a function, you <i>quote</i> it. In Nyquist, you can quote a list by putting a single quotation mark before it, like this:
 </p>
 <pre>  (setf mylist '(1 2 3 4 5))
 </pre>
@@ -92,7 +92,7 @@
 <p>To get things off of a list, you can use the <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">first</span> and <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">rest</span> functions. (Traditionally, these were called <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">car</span> and <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">cdr</span>, respectively, but<span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">first</span> and <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">rest</span> are much easier to remember. Both sets of names are supported in Nyquist.) The output of <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(first mylist)</span> is 1, and the output of <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(rest mylist)</span> is the list <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(2 3 4 5)</span>. So the second element of the list is <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(first (rest mylist))</span>.
 </p>
 <h3><span class="mw-headline" id="Some_common_Lisp_functions">Some common Lisp functions</span></h3>
-<div class="note">For a more comprehensive list of functions, refer to the <a rel="nofollow" class="external text" href="https://www.cs.cmu.edu/~rbd/doc/nyquist/indx.html">language reference</a> in the Nyquist manual.</div>
+<div class="note">For a more comprehensive list of functions, refer to the <a rel="nofollow" class="external text" href="http://www.cs.cmu.edu/~rbd/doc/nyquist/indx.html">language reference</a> in the Nyquist manual.</div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -405,34 +405,13 @@
 <p><a href="programming_in_nyquist.html" title="Programming in Nyquist"><b>&gt;</b>&#160; Programming in Nyquist</a> <br />
 </p><p><a href="nyquist.html" title="Nyquist"><b>|&lt;</b> Nyquist</a>
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125811
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.086 seconds
-Real time usage: 0.088 seconds
-Preprocessor visited node count: 285/1000000
-Preprocessor generated node count: 800/1000000
-Post-expand include size: 5900/2097152 bytes
-Template argument size: 1308/2097152 bytes
-Highest expansion depth: 3/40
-Expensive parser function count: 0/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   19.345      1 - -total
- 33.84%    6.547     26 - Template:InlineCode
- 16.92%    3.273      1 - Template:Intro
-  6.37%    1.233      1 - Template:Note
-  5.79%    1.121      1 - Template:Advice
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6398-0!*!0!!en!5!* and timestamp 20200619125811 and revision id 62788
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -450,7 +429,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -460,9 +439,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -487,13 +466,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -503,7 +481,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Introduction_to_Nyquist_and_Lisp_Programming">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Introduction_to_Nyquist_and_Lisp_Programming">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

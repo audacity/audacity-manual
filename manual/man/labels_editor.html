@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,26 +32,46 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Labels_Editor#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro"><i><b>Labels Editor</b></i> lets you add or remove <a href="label_tracks.html" title="Label Tracks">Label Tracks</a> and edit their labels entirely using the keyboard, so is particularly useful for visually impaired users. </div>
 <div id="editor"></div>
 <p><span class="menu">Edit &gt; Labels &gt; Edit Labels...</span> launches a keyboard-accessible Labels Editor. This shows all the labels at once in a tabular view, similar to a spreadsheet. Each row represents a single individual label:
 </p>
-<dl><dd><span title="Edit Labels dialog box with tabular view of labels"><img alt="EditLabelDialog - vertical buttons.png" src="../m/images/b/bd/editlabeldialog_vertical_buttons.png" width="703" height="355" /></span></dd></dl>
+<dl><dd><span title="Edit Labels dialog box with tabular view of labels"><img alt="Edit Labels dialog 3-0-0.png" src="../m/images/0/07/edit_labels_dialog_3_0_0.png" width="787" height="341" /></span></dd></dl>
 <ul><li> If you do not yet have a label track with labels, you can open Labels Editor where a row for a new label track will be available for editing. </li></ul>
 <ul><li> If you already have a label track with labels and the editing cursor is at one of those labels, Labels Editor opens with that label selected. Otherwise Labels Editor opens with the label to left of the editing cursor selected and moves the cursor to that label (or if the cursor is to left of the first label, it opens with the first label selected and moves the cursor to the first label). On closing Labels Editor, the cursor is placed at the label that was selected when closing the editor. </li></ul>
-<div class="note">Alternatively you can open a single label in Labels Editor by selecting and right-clicking the label (or use the Menu key) then choose "Edit...".</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Alternatively you can open a single label in Labels Editor by selecting and right-clicking the label (or use the Menu key) then choose "Edit...".
+</td></tr></table>
+</div>
 <div id="nav"></div>
 <h2><span class="mw-headline" id="Navigation">Navigation</span></h2>
 <p>Use the <span class="kbrd" style="background-color: #e0e0f0">Arrow</span> keys on your keyboard to navigate easily left, right, up or down between the table cells and rows. 
 </p>
-<ul><li>Closing the editor with a label row selected selects that label in the label track (without opening it for editing). Pressing <span class="kbrd" style="background-color: #e0e0f0">Space</span> will then move the view to the start of that label and play the audio from the start of that label.  </li></ul>
-<ul><li>To open a cell for editing, use <span class="kbrd" style="background-color: #e0e0f0">F2</span> or double-click. To confirm the edit, press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to move down into the same cell in the next label, or <span class="kbrd" style="background-color: #e0e0f0">Tab</span> to move into the following cell for the current label. </li></ul>
+<ul><li>To open a cell for editing, use <span class="kbrd" style="background-color: #e0e0f0">F2</span> or <b>double-click</b>. To confirm the edit:
+<ul><li>press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to move down into the same cell in the next label, or </li>
+<li><span class="kbrd" style="background-color: #e0e0f0">Tab</span> to move into the following cell for the current label. </li></ul></li></ul>
 <ul><li>Similarly, hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and press <span class="kbrd" style="background-color: #e0e0f0">Tab</span> to move back to the previous cell for that label. </li></ul>
 <ul><li>Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and pressing <span class="kbrd" style="background-color: #e0e0f0">Tab</span> moves directly out of the grid and cycles forward through the <a href="#buttons">buttons</a>, and holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and pressing <span class="kbrd" style="background-color: #e0e0f0">Tab</span> moves out of the grid and cycles backward through the buttons <i>(use <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> <b>not</b> <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> for these key presses on Mac)</i>. </li></ul>
 <ul><li>Opening the <i>Start Time</i> or <i>End Time</i> cell for editing lets you use <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> arrow keys to move between selected time digits, then <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> arrow keys to increment the digits. Alternatively you can type the number wanted for the selected digit. Labels Editor shows the <a href="selection_toolbar.html#formats" title="Selection Toolbar">selection format</a> currently chosen in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>. To change the format temporarily to some other unit of time or to <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i>, <i><b><a href="glossary.html#audio_cd" title="Glossary">audio CD</a></b></i> frames or film frames, use the context key on your keyboard or click the downward-pointing arrow to right of the digits.  </li></ul>
-<dl><dd><span title="Edit Labels dialog with time cell open for editing"><img alt="EditLabelsWithControl.png" src="../m/images/b/bf/editlabelswithcontrol.png" width="665" height="175" /></span></dd></dl>
+<dl><dd><span title="Edit Labels dialog with time cell open for editing"><img alt="Labels Editor dialog 3-0-0 time selected.png" src="../m/images/3/31/labels_editor_dialog_3_0_0_time_selected.png" width="787" height="341" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Closing the editor with a label row selected selects that label in the label track (without opening it for editing). <p>Pressing <span class="kbrd" style="background-color: #e0e0f0">Space</span> will then move the view to the start of that label and:</p>
+<ul><li>for a point label play the audio from the start of that label</li>
+<li>for a region label play the audio whose range is defined by that label</li></ul>
+</td></tr></table>
+</div>
 <p><br />
 </p>
 <div id="buttons"></div>
@@ -81,44 +101,18 @@
 </p><p>The Low and High Frequency can be edited just like the Start Time and End Time, by selecting the label and pressing <span class="kbrd" style="background-color: #e0e0f0">F2</span>, or by double-clicking the cell. When the cell is open for editing, click the downwards-pointing triangle to right of the digits (or use the Menu key) to change between values in Hz and kHz.
 </p><p>After modifying either frequency value for one or more labels, click <span class="button">OK</span> in Labels Editor then reselect the label to see the modified frequency range displayed in a Spectrogram track with Spectral Selection enabled.
 </p>
-<dl><dd><span title="Edit Labels dialog box with spectral selections. High Frequency of one label shown as active for editing."><img alt="Edit Label Spectral Selection.png" src="../m/images/6/65/edit_label_spectral_selection.png" width="820" height="279" /></span></dd></dl>
+<dl><dd><span title="Edit Labels dialog box with spectral selections. High Frequency of one label shown as active for editing."><img alt="Labels Editor dialog 3-0-0 frequency selected.png" src="../m/images/3/30/labels_editor_dialog_3_0_0_frequency_selected.png" width="790" height="289" /></span></dd></dl>
 <div class="note">An alternative way to display the frequency range of a label is to enable <a href="spectral_selection_toolbar.html" title="Spectral Selection Toolbar">Spectral Selection Toolbar</a> then select the label.
 <ul><li> <b>Note:</b> A frequency range already stored in a label cannot be further modified by Spectral Selection Toolbar or by clicking or dragging in the waveform. To change the stored frequency range, select and right-click the label (or use the Menu key) then choose "Edit..." to open the label in Labels Editor.</div> </li></ul>
 <p><a href="label_tracks.html#editor" title="Label Tracks"><b>|&lt;</b> Label Tracks</a>
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125150
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.130 seconds
-Real time usage: 0.137 seconds
-Preprocessor visited node count: 555/1000000
-Preprocessor generated node count: 1804/1000000
-Post-expand include size: 5500/2097152 bytes
-Template argument size: 1728/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   58.221      1 - -total
- 44.76%   26.062      1 - Template:I18n
- 40.41%   23.526      1 - Template:I18n_box
- 33.15%   19.300      1 - Template:I18n_list
- 22.59%   13.153     24 - Template:Key
- 11.99%    6.978      2 - Template:I18n_link
-  7.46%    4.341      8 - Template:Button
-  7.05%    4.106      2 - Template:Autoglossonym
-  3.44%    2.003      1 - Template:Intro
-  3.14%    1.828      3 - Template:Note
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4564-0!*!0!!*!5!* and timestamp 20200619125150 and revision id 64338
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -136,7 +130,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -146,9 +140,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -173,13 +167,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -189,7 +182,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Labels_Editor">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Labels_Editor">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

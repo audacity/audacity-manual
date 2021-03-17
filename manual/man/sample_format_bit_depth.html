@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Sample_Format_-_Bit_Depth#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Bit Depth is also known as Sample Format or resolution.  Sample Format is the terminology used in Audacity's <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>.<br /><i>See also <a href="sample_rates.html" title="Sample Rates">Sample Rates</a> for help on choosing the appropriate sample rate to work with.</i></div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li> <a href="#range">Dynamic Range</a></li>
@@ -56,10 +56,10 @@
 </p>
 <div id="defaults"></div>
 <h2><span class="mw-headline" id="Audacity_Defaults">Audacity Defaults</span></h2>
-<p>The Audacity default quality settings are Sample Format <b>32-bit float</b> <i>(and Sample Rate <b>44100 Hz</b>)</i>. It is strongly recommended that you use these settings unless you have good reasons to deviate from these.  32-bit float is chosen to give an extremely low noise floor and to provide good headroom to avoid sound distortion even when performing heavy editing and manipulation of the audio.
-</p><p>Audacity uses "float" format for 32-bit recording instead of fixed integer format as normalized floating point values are quicker and easier to process on computers than fixed integer values and allow greater dynamic range to be retained even after editing.  This is because intermediate signals during audio processing can have very variable values. If they all get truncated to a fixed integer format, you can't boost them back up to full scale without losing resolution (i.e. without the data becoming less representative of the original than it was before). With floating point, rounding errors during intermediate processing are negligible. 
+<p>The Audacity default quality settings are Sample Format <b>32-bit float</b> <i>(and Sample Rate <b>44,100 Hz</b>)</i>. It is strongly recommended that you use these settings unless you have good reasons to deviate from these.  32-bit float is chosen to give an extremely low noise floor and to provide good headroom to avoid sound distortion even when performing heavy editing and manipulation of the audio.
+</p><p>Audacity uses "float" format for 32-bit recording instead of fixed integer format as normalized floating point values are quicker and easier to process on computers than fixed integer values and allow greater dynamic range to be retained even after editing.  This is because intermediate signals during audio processing can have very variable values. If they all get truncated to a fixed integer format, you cannot boost them back up to full scale without losing resolution (that is, without the data becoming less representative of the original than it was before). With floating point, rounding errors during intermediate processing are negligible. 
 </p><p>The (theoretically audible) advantage of this is that 32-bit floating point format retains the original noise floor, and does not add noise. For example, with fixed integer data, applying a compressor effect to lower the peaks by 9 dB and separately amplifying back up would cost 9 dB (or more than 2 bits) of signal to noise ratio (SNR). If done with floating point data, the SNR of the peaks remains as good as before (except that the quiet passages are 9 dB louder and so 9 dB noisier due to the noise they had in the first place).
-</p><p>In many cases you will be exporting to a 16-bit format <i>(for example if you are burning to a standard audio CD, that format is by definition 16-bit 44100 Hz)</i>.  The advantage of using 32-bit float to work with holds even if you have to export to a 16-bit format. Using <a href="dither.html" title="Dither">Dither</a> on the <a href="quality_preferences.html" title="Quality Preferences">Quality</a> pane of Audacity Preferences will improve the sound quality of the exported file so there are only minimal (probably non-audible) effects of downsampling from 32-bit to 16-bit.
+</p><p>In many cases you will be exporting to a 16-bit format <i>(for example if you are burning to a standard audio CD, that format is by definition 16-bit 44,100 Hz)</i>.  The advantage of using 32-bit float to work with holds even if you have to export to a 16-bit format. Using <a href="dither.html" title="Dither">Dither</a> on the <a href="quality_preferences.html" title="Quality Preferences">Quality</a> pane of Audacity Preferences will improve the sound quality of the exported file so there are only minimal (probably non-audible) effects of downsampling from 32-bit to 16-bit.
 </p>
 <div id="size"></div>
 <h2><span class="mw-headline" id="Effects_on_file_size">Effects on file size</span></h2>
@@ -76,7 +76,7 @@
 </p>
 <h3><span class="mw-headline" id="24-Bit">24-Bit</span></h3>
 <p>24-bit recording may be used for signals that will be manipulated but still need to maintain the full 16-bit quality of CD audio. 24-bit is good for mastering.
-</p><p>If you're merely listening to thousands of pounds of expertly chosen high end audio kit, and not doing large amounts of editing, there may be no real reason to exceed 24-bit depth.
+</p><p>If you are merely listening to thousands of pounds of expertly chosen high end audio kit, and not doing large amounts of editing, there may be no real reason to exceed 24-bit depth.
 </p>
 <h3><span class="mw-headline" id="16-Bit">16-Bit</span></h3>
 <p>16-bit matches audio CDs, and is thus suited where the better dynamic range and S/N ratio of CD quality audio is required. 16-bit is a good general purpose high quality setting. 16-bit recording is suitable for vinyl records.
@@ -97,33 +97,13 @@ Audacity does not itself support 8-bit recording. 16-bit is the nearest option. 
 </p><p><b>8-bit:</b> Used in early PCs and video games. Similar dynamic range to analog telephone (landline), though note that telephone sound quality is also affected by a limited frequency range.
 </p><p><b>5-bit:</b> Similar dynamic range to a 78 RPM phonograph disc after it has been played a few times.
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125400
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.061 seconds
-Real time usage: 0.063 seconds
-Preprocessor visited node count: 78/1000000
-Preprocessor generated node count: 208/1000000
-Post-expand include size: 2166/2097152 bytes
-Template argument size: 1735/2097152 bytes
-Highest expansion depth: 3/40
-Expensive parser function count: 0/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%    8.174      1 - -total
- 42.76%    3.495      1 - Template:Intro
- 21.85%    1.786      1 - Template:Advice
- 21.63%    1.768      2 - Template:Note
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6393-0!*!0!!*!5!* and timestamp 20200619125400 and revision id 60029
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -141,7 +121,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -151,9 +131,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -178,13 +158,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -194,7 +173,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Sample_Format_-_Bit_Depth">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Sample_Format_-_Bit_Depth">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

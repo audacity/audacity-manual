@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Export_Formats_supported_by_Audacity#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">This page describes audio file formats which can be exported to using the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio / Export Selected Audio</a> and <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> dialogs. <p>To export to formats listed as "FFmpeg" you must install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.</p></div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -53,7 +53,7 @@
 <li><a href="#unlisted">Exporting to formats not listed in the Export Audio Dialog</a></li></ol>
 <div id="uncompressed"></div>
 <h2><span class="mw-headline" id="Uncompressed_format_types">Uncompressed format types</span></h2>
-<p>The following are all <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> audio formats in which every <i><b><a href="glossary.html#sample" title="Glossary">sample</a></b></i> of sound is represented by a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Binary_numeral_system">binary number</a>. The most common uncompressed formats are <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>.
+<p>The following are all <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> audio formats in which every <i><b><a href="glossary.html#sample" title="Glossary">sample</a></b></i> of sound is represented by a <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Binary_numeral_system">binary number</a>. The most common uncompressed formats are <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>.
 </p><p>There is no loss of quality compared to the original audio when playing uncompressed formats, except for some possible loss of low frequencies in the 4-bit (A)DPCM formats. Those 4-bit formats and the lossless 8-bit U-Law/A-Law formats save file size by reducing their <i><b><a href="glossary.html#sample_format" title="Glossary">bit depth</a></b></i>, in a similar way that any of the uncompressed formats can be made proportionately smaller by reducing their <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> (and thus reducing the high frequencies they can contain). GSM 6.10 WAV (mobile) will also exhibit considerable loss of quality as it was a format designed for mobile telephony.
 </p>
 <ul><li><b><a href="other_uncompressed_files_export_options.html" title="Other uncompressed files Export Options">Other uncompressed files</a>:</b> includes all the uncompressed audio formats that Audacity can export, including 4-bit (A)DPCM, 8-bit U-Law/A-Law, 24-bit, 32-bit and 64-bit options. Also <a href="glossary.html#gsm" title="Glossary">GSM 6.10 WAV (mobile)</a> which produces a mono WAV file encoded with the compressed, lossy GSM 6.10 <i><b><a href="glossary.html#codec" title="Glossary">codec</a></b></i> as used in mobile telephones. This menu item defaults to WAV (Microsoft) signed 16-bit PCM on Windows and Linux and to AIFF (Apple/SGI) signed 16-bit PCM on Mac. </li>
@@ -134,7 +134,7 @@
 
 <div id="compare"></div>
 <h2><span class="mw-headline" id="File_size_and_channel_comparisons_by_export_format">File size and channel comparisons by export format</span></h2>
-<p>The following table gives typical achieved mono and stereo file sizes with different formats at default Audacity settings (that is, 44100 Hz <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> and default <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> or quality settings in the case of compressed formats). Where VBR compression is employed, the achieved size will vary depending on the content. 
+<p>The following table gives typical achieved mono and stereo file sizes with different formats at default Audacity settings (that is, 44,100 Hz <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> and default <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> or quality settings in the case of compressed formats). Where VBR compression is employed, the achieved size will vary depending on the content. 
 </p><p>Some formats can be exported as multi-channel files containing more than two channels, if you enable this at "Use custom mix" in the <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>. The final column in the table shows the maximum number of channels Audacity can export for each format. Some formats may theoretically support more channels than Audacity can export. 
 </p>
 
@@ -338,39 +338,13 @@
 <p>If you install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library you can use the (FFmpeg) choices in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> to export <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i>. If you do not see a choice for one of those specific FFmpeg formats, then the build of FFmpeg you are linking to was not compiled to support encoding in that format.
 </p><p>The most flexible method to export to more formats is to choose (external program) in the Export Audio Dialog which opens the dialog for Audacity's <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">command-line encoder</a>. Point your command to an encoder that supports the format you want to write to, which could be FFmpeg or some other encoder (for example, an alternative AAC or MP3 encoder). On Windows, the recommended EXE installer of <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> includes an ffmpeg.exe which you can use for this purpose. On Mac, you can download a standalone "ffmpeg" binary if you search online.
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125549
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.114 seconds
-Real time usage: 0.120 seconds
-Preprocessor visited node count: 212/1000000
-Preprocessor generated node count: 1219/1000000
-Post-expand include size: 5948/2097152 bytes
-Template argument size: 3993/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   36.395      1 - -total
- 65.45%   23.819      1 - Template:I18n
- 58.16%   21.168      1 - Template:I18n_box
- 45.38%   16.516      1 - Template:I18n_list
- 12.69%    4.620      1 - Template:I18n_link
-  9.40%    3.422      1 - Template:Advice
-  6.73%    2.449      1 - Template:Autoglossonym
-  5.86%    2.131      3 - Template:Ednote
-  5.35%    1.949      3 - Template:Note
-  5.06%    1.840      1 - Template:Button
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5118-0!*!0!!*!5!* and timestamp 20200619125549 and revision id 67244
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -388,7 +362,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -398,9 +372,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -425,13 +399,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -441,7 +414,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Export_Formats_supported_by_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Export_Formats_supported_by_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

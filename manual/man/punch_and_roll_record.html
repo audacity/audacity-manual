@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Punch_and_Roll_Record#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>Accessed by:</b> <span class="menu">Transport &gt; Recording &gt; <a href="transport_menu_recording.html" title="Transport Menu: Recording">Punch and Roll Record</a></span> 
 <ul><li>This enables you to to correct errors easily during the course of a recording session.</li>
 <li>You can stop, back up over a mistake, and continue recording, resulting in one track that eliminates the errors and is properly timed, without the use of cutting, pasting, and clip-moving commands, or mixing of multiple tracks.  </li>
@@ -129,7 +129,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">If your microphone is close to the speaker, e.g. you're not using headphones, your microphone will pick up sound from the speaker during your recording.  This is fine if everything is set up correctly, as the speaker is silent during the recording phase of Punch and Roll!  However, there will be a problem if your microphone can pick up sound from the speaker and your <a href="latency_test.html" title="Latency Test">latency correction</a> setting is incorrect.  When that situation happens, record can record part of the pre-roll being played back, and in any case even if not picking up that unwanted sound, the positioning of your 'punched in' recording will be slightly out.  So you <b>do need to have set your <a href="latency_test.html" title="Latency Test">latency correction</a> setting carefully to get good results from Punch and Roll</b>.
+<td align="left" valign="top">If your microphone is close to the speaker, if for example you are not using headphones, your microphone will pick up sound from the speaker during your recording.  This is fine if everything is set up correctly, as the speaker is silent during the recording phase of Punch and Roll!  However, there will be a problem if your microphone can pick up sound from the speaker and your <a href="latency_test.html" title="Latency Test">latency correction</a> setting is incorrect.  When that situation happens, record can record part of the pre-roll being played back, and in any case even if not picking up that unwanted sound, the positioning of your 'punched in' recording will be slightly out.  So you <b>do need to have set your <a href="latency_test.html" title="Latency Test">latency correction</a> setting carefully to get good results from Punch and Roll</b>.
 </td></tr></table></div>
 <h3><span class="mw-headline" id="Still_not_satisfied.3F">Still not satisfied?</span></h3>
 <p>If you are not satisfied with your re-take, simply stop recording and use <img alt="The Undo tool" src="../m/images/8/8b/undo.png" title="The Undo tool" width="26" height="24" /> or <span class="menu">Edit &gt; <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo</a></span> or its shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Z</span> <i>(<span class="kbrd" style="background-color: #d0d0f8">&#8984; + Z</span> on Mac)</i>.  The track and selection will be restored as they were just before the Punch and Roll Record command began.
@@ -138,7 +138,7 @@
 </p>
 <div id="results"></div>
 <h2><span class="mw-headline" id="Final_results">Final results</span></h2>
-<ul><li>To avoid leaving an audible click at the splice point, Audacity applies a crossfade <i>(whose length in milliseconds is specified in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>)</i>.  This means the original bad take isn't completely deleted, but a tiny portion of it is blended with the new take, so that the waveform has no discontinuities.</li></ul>
+<ul><li>To avoid leaving an audible click at the splice point, Audacity applies a crossfade <i>(whose length in milliseconds is specified in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>)</i>.  This means the original bad take is not completely deleted, but a tiny portion of it is blended with the new take, so that the waveform has no discontinuities.</li></ul>
 <ul><li>A clip boundary is left behind at each splice point, so that you can easily find them again and listen to review your repairs.
 <ul><li>You can merge clips by clicking on the boundary.</li>
 <li>Or you can select the entire track and use <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#join" title="Edit Menu: Clip Boundaries">Join</a></span> to remove all clip boundaries at once.</li></ul></li></ul>
@@ -172,38 +172,13 @@ Once the pre-roll playback reaches the splice point Audacity switched to record 
 </p><p><a href="timer_record.html" title="Timer Record"><b>&gt;</b>&#160; Timer Recording</a> <br />
 </p><p><a href="playing_and_recording.html" title="Playing and Recording"><b>|&lt;</b> Playing and Recording</a>
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125050
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.110 seconds
-Real time usage: 0.113 seconds
-Preprocessor visited node count: 273/1000000
-Preprocessor generated node count: 687/1000000
-Post-expand include size: 7593/2097152 bytes
-Template argument size: 4644/2097152 bytes
-Highest expansion depth: 5/40
-Expensive parser function count: 0/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   24.582      1 - -total
- 28.12%    6.913      8 - Template:Shortcut
- 19.62%    4.823      1 - Template:Intro
-  9.72%    2.389      5 - Template:Menu
-  9.60%    2.359      1 - Template:Example
-  6.62%    1.628      2 - Template:Advice
-  6.57%    1.614      3 - Template:Tip
-  5.75%    1.414      1 - Template:Note
-  4.93%    1.212      1 - Template:Ednote
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6451-0!*!0!!*!5!* and timestamp 20200619125050 and revision id 66810
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -221,7 +196,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -231,9 +206,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -258,13 +233,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -274,7 +248,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Punch_and_Roll_Record">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Punch_and_Roll_Record">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

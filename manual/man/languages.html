@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Languages#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">Audacity can display in many non-English languages. By default, Audacity runs in the language the operating system uses (the language chosen in the Windows installer of Audacity only determines the interface language of the installer). <p>To change the language Audacity runs in, use the Interface Preferences, or exit Audacity and modify the <i><b>audacity.cfg</b></i> settings file. Reinstalling Audacity does not change the language setting in audacity.cfg, unless you run the Windows installer of Audacity and explicitly choose <a href="preferences.html#win_reset" title="Preferences">Reset Preferences</a>.</p></div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
@@ -82,9 +82,9 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">In order to see the Audacity settings folder on Windows, Linux and OS X 10.7 or later, you may need to show hidden files and folders. See instructions for <a rel="nofollow" class="external text" href="https://www.bleepingcomputer.com/tutorials/how-to-see-hidden-files-in-windows/">all versions of Windows</a> and <a rel="nofollow" class="external text" href="http://osxdaily.com/2011/07/22/access-user-library-folder-in-os-x-lion/">OS X 10.7 and later</a>.
+<td align="left" valign="top">In order to see the Audacity settings folder on Windows, Linux and macOS, you may need to show hidden files and folders. See instructions for <a rel="nofollow" class="external text" href="http://www.bleepingcomputer.com/tutorials/how-to-see-hidden-files-in-windows/">all versions of Windows</a> and <a rel="nofollow" class="external text" href="http://osxdaily.com/2011/07/22/access-user-library-folder-in-os-x-lion/">macOS</a>.
 </td></tr></table></div>
-<p>To change language, find the <b>[Locale]</b> line in the .cfg file and change the line underneath it to your preferred language using the <span style="white-space:nowrap"><a rel="nofollow" class="external text" href="https://www.loc.gov/standards/iso639-2/php/code_list.php">two-digit ISO 639-1 code</a></span>. For example, "Language=en" (without quotes) sets English or "Language=de" sets German. 
+<p>To change language, find the <b>[Locale]</b> line in the .cfg file and change the line underneath it to your preferred language using the <span style="white-space:nowrap"><a rel="nofollow" class="external text" href="http://www.loc.gov/standards/iso639-2/php/code_list.php">two-digit ISO 639-1 code</a></span>. For example, "Language=en" (without quotes) sets English or "Language=de" sets German. 
 </p><p>If the two lines for Locale do not exist in audacity.cfg (which will be the case if Audacity has only ever run in the system language) add the lines as in this example:
 </p>
 <table style="margin-left:10px;line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;font-family:monospace;font-size:1.1em;border:1px dashed black" cellpadding="5px">
@@ -96,7 +96,7 @@
 <div class="note">Deleting the [Locale] line and the line under that in audacity.cfg (or deleting audacity.cfg itself) is a quicker method if you only want to revert Audacity to use the language the operating system runs in.</div>   
 <div id="lang"></div>
 <h2><span class="mw-headline" id="Supported_non-English_languages">Supported non-English languages</span></h2>
-<p>As well as US English, the Audacity software supports a significant number of other languages. There are no localized versions of Audacity. Instead, single versions of Audacity for the various operating platforms are shipped with <a rel="nofollow" class="external text" href="https://www.gnu.org/software/gettext/">gettext</a> MO files. These files are then used to display the different languages. 
+<p>As well as US English, the Audacity software supports a significant number of other languages. There are no localized versions of Audacity. Instead, single versions of Audacity for the various operating platforms are shipped with <a rel="nofollow" class="external text" href="http://www.gnu.org/software/gettext/">gettext</a> MO files. These files are then used to display the different languages. 
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -107,7 +107,7 @@
 <td align="left" valign="top">All translations are provided by volunteers and may at times be incomplete. Any untranslated parts of the software will appear in US English. We are always looking for new <a rel="nofollow" class="external text" href="http://www.audacityteam.org/community/translators/">volunteers</a> to help translate Audacity.
 </td></tr></table></div>
 <h3><span class="mw-headline" id="Unicode_characters">Unicode characters</span></h3>
-<p>Audacity is <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> and thus should display non-English languages correctly on any localisation of the operating system if the system supports that language. 
+<p>Audacity is <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Unicode">Unicode</a> and thus should display non-English languages correctly on any localisation of the operating system if the system supports that language. 
 </p>
 <div id="list"></div>
 <h3><span class="mw-headline" id="Supported_non-English_languages_in_Audacity">Supported non-English languages in Audacity</span></h3>
@@ -124,6 +124,7 @@
 <li>ca Catalan</li>
 <li>zh Chinese (Simplified)</li>
 <li>zh_TW Chinese (Taiwan)</li>
+<li>co Corsican</li>
 <li>hr Croatian </li>
 <li>cy Cymraeg (Welsh)</li>
 <li>cs Czech</li>
@@ -147,6 +148,7 @@
 <li>ko Korean</li>
 <li>lt Lithuanian</li>
 <li>mk Macedonian</li>
+<li>mr Marathi</li>
 <li>nb Norwegian (Bokmal)</li>
 <li>oc Occitan</li>
 <li>pl Polish</li>
@@ -155,7 +157,7 @@
 <li>ro Romanian</li>
 <li>ru Russian</li>
 <li>sr_RS Serbian (Cyrillic)</li>
-<li><a href="https://alphamanual.audacityteam.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ffcfdd0dddccfe3eefbe6e1">[email&#160;protected]</a> Serbian (Latin)</li>
+<li><a href="https://alphamanual.audacityteam.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e5d5c717c7d6e424f5a4740">[email&#160;protected]</a> Serbian (Latin)</li>
 <li>sk Slovak</li>
 <li>sl Slovenian</li>
 <li>es Spanish</li>
@@ -164,42 +166,16 @@
 <li>ta Tamil </li>
 <li>tr Turkish</li>
 <li>uk Ukrainian</li>
-<li><a href="https://alphamanual.audacityteam.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcdfdde3f9effccaddd0d9d2dfd5dd">[email&#160;protected]</a> Valencian</li>
+<li><a href="https://alphamanual.audacityteam.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0261635d47514274636e676c616b63">[email&#160;protected]</a> Valencian</li>
 <li>vi Vietnamese</li></ul>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125040
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.105 seconds
-Real time usage: 0.112 seconds
-Preprocessor visited node count: 306/1000000
-Preprocessor generated node count: 1408/1000000
-Post-expand include size: 4899/2097152 bytes
-Template argument size: 2119/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   43.124      1 - -total
- 59.88%   25.822      1 - Template:I18n
- 54.65%   23.569      1 - Template:I18n_box
- 44.09%   19.013      1 - Template:I18n_list
- 15.79%    6.809      2 - Template:I18n_link
-  9.26%    3.995      2 - Template:Autoglossonym
-  6.68%    2.882     10 - Template:Path
-  5.05%    2.178      1 - Template:Intro
-  4.96%    2.139      1 - Template:Button
-  3.85%    1.662      1 - Template:Key
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4852-0!*!0!!*!5!* and timestamp 20200619125040 and revision id 62230
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -217,7 +193,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -227,9 +203,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -254,13 +230,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -270,7 +245,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Languages">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Languages">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,9 +32,9 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Fade_and_Crossfade#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Fade_%28audio_engineering%29">Fade</a> effects are among the most common effects used in audio production. They can be used to create a smooth lead in or a gradual end to a musical recording. Short fades can be useful for avoiding clicks at the beginning of an audio clip. They may be used to create a smooth transition from one piece of audio to another.
+<div class="intro"><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Fade_%28audio_engineering%29">Fade</a> effects are among the most common effects used in audio production. They can be used to create a smooth lead in or a gradual end to a musical recording. Short fades can be useful for avoiding clicks at the beginning of an audio clip. They may be used to create a smooth transition from one piece of audio to another.
 <p>Fade effects frequently produce a transition from silence (fade in) or a transition to silence (fade out) but may equally refer to a transition from one volume level to another quieter or louder level. A crossfade is when one section of audio fades out while another fades in.</p>
 <div class="note">The standard fade types described on this page may be produced quickly and easily using the presets in the <a href="adjustable_fade.html" title="Adjustable Fade">Adjustable Fade</a> effect.</div>
 </div>
@@ -89,7 +89,7 @@
 <h2><span class="mw-headline" id="Equal_Power_Fade">Equal Power Fade</span></h2>
 <div class="note">The "Cosine" presets in the <a href="adjustable_fade.html" title="Adjustable Fade">Adjustable Fade</a> effect produce this type of fade.<br /></div>
 <p>If one sound is fading out while another sound is fading in, this is called a <a href="#create">crossfade</a>. A common problem when crossfading two sounds using linear fade effects is that the volume level may drop a little midway through the transition. To mitigate this problem it is common to use a fade shape that, compared to a linear fade, bows up in the middle, so that the volume level stays a little higher in the middle of the transition. One of the most commonly used crossfade shapes is an "Equal Power Fade"; so called because the average power (and hence loudness) remains fairly constant during a crossfade transition for music and other uncorrelated sounds.
-The next image shows two tracks, one with <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/White_noise">white noise</a> and one with <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Pink_noise">pink noise</a> that are crossfading using Equal Power Fades.
+The next image shows two tracks, one with <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/White_noise">white noise</a> and one with <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Pink_noise">pink noise</a> that are crossfading using Equal Power Fades.
 </p>
 <dl><dd><span title="Crossfade white noise with pink noise with equal power fade"><img alt="Equal power cross-fade.png" src="../m/images/8/85/equal_power_cross_fade.png" width="529" height="323" /></span></dd></dl>
 <div id="sine"></div>
@@ -98,12 +98,12 @@ The next image shows two tracks, one with <a rel="nofollow" class="external text
 <p>The "S-Curve" presets in the <a href="adjustable_fade.html" title="Adjustable Fade">Adjustable Fade</a> effect produce this type of fade.
 </p>
 </div>
-<p>A <i>raised sine curve</i> (or cosine curve) is based on the shape of a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Sine_wave">sine wave</a>. This fade type is often used for fading out music as it produces a smoother, more <i>musical</i> sounding fade out than a linear fade. It is also sometimes used as an alternative to the <a href="#Equal_Power_Fade">Equal Power Fade</a> for crossfading as it avoids the possibility of the peak level increasing during the crossfade (Like linear fades, it produces an "Equal Gain" crossfade).
+<p>A <i>raised sine curve</i> (or cosine curve) is based on the shape of a <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Sine_wave">sine wave</a>. This fade type is often used for fading out music as it produces a smoother, more <i>musical</i> sounding fade out than a linear fade. It is also sometimes used as an alternative to the <a href="#Equal_Power_Fade">Equal Power Fade</a> for crossfading as it avoids the possibility of the peak level increasing during the crossfade (Like linear fades, it produces an "Equal Gain" crossfade).
 </p>
 <dl><dd><span title="Raised cosine fade"><img alt="Raised-cosine-fade.png" src="../m/images/4/40/raised_cosine_fade.png" width="544" height="152" /></span></dd></dl>
 <div id="dj"></div>
 <h2><span class="mw-headline" id="DJ_Crossfade_Curve">DJ Crossfade Curve</span></h2>
-<p>DJ Mixers have a crossfade slide control that is essentially two faders back to back in one unit. Moved in one direction it will fade in source A and fade out source B, and when moved to the other extreme it will fade out source A and fade in source B. Early DJ mixing desks crossfaders produced a (roughly) <a href="#Equal_Power_Fade">equal power</a> crossfade, but in response to demand from DJs, other fade shapes were developed that have a more pronounced curve, thus making the mix more pronounced during the transition. More information about the history of DJ crossfaders can be found on the <a rel="nofollow" class="external text" href="http://www.rane.com/note146.html">Rane website</a>.
+<p>DJ Mixers have a crossfade slide control that is essentially two faders back to back in one unit. Moved in one direction it will fade in source A and fade out source B, and when moved to the other extreme it will fade out source A and fade in source B. Early DJ mixing desks crossfaders produced a (roughly) <a href="#Equal_Power_Fade">equal power</a> crossfade, but in response to demand from DJs, other fade shapes were developed that have a more pronounced curve, thus making the mix more pronounced during the transition. 
 </p><p>Modern DJ mixers provide a <i><b>curve</b></i> control to provide adjustment of the fade taper contour. This works in a similar manner to the <b>Mid-fade adjust</b> control in Audacity's <a href="adjustable_fade.html" title="Adjustable Fade">Adjustable Fade</a> effect. The image below compares the shapes of an equal power fade with a high curve fade that is similar to what would be achieved by setting the curve control fairly high on a DJ mixer's crossfader.
 </p>
 <dl><dd><span title="Comparison of an equal power taper with a high curve taper"><img alt="High-curve.png" src="../m/images/f/f9/high_curve.png" width="566" height="297" /></span></dd></dl>
@@ -115,12 +115,12 @@ The next image shows two tracks, one with <a rel="nofollow" class="external text
 <dl><dd><span title="Fade Up from 20&#160;% to 100&#160;%, Mid Fade Boost +50. Fade Down from 100&#160;% to 20&#160;%. Mid Fade Cut -50"><img alt="Adjustable-Fades-Simple-Curves.png" src="../m/images/7/7a/adjustable_fades_simple_curves.png" width="502" height="213" /></span></dd></dl>
 <div id="envelope"></div>
 <h2><span class="mw-headline" id="Creating_Fades_with_the_Envelope_Tool"><a href="creating_fades_with_the_envelope_tool.html" title="Creating Fades with the Envelope Tool">Creating Fades with the Envelope Tool</a></span></h2>
-<p>The main advantage of creating fades with the Envelope Tool is that it is <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Non-destructive_editing">non-destructive</a>. The envelope may be changed or removed at any time with no loss to the audio data.
+<p>The main advantage of creating fades with the Envelope Tool is that it is <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Non-destructive_editing">non-destructive</a>. The envelope may be changed or removed at any time with no loss to the audio data.
 </p><p>See <a href="creating_fades_with_the_envelope_tool.html" title="Creating Fades with the Envelope Tool">this page</a> for details of how to use the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> to create a fade.
 </p>
 <div id="create"></div>
 <h2><span class="mw-headline" id="Creating_a_Crossfade"><a href="creating_a_crossfade.html" title="Creating a Crossfade">Creating a Crossfade</a></span></h2>
-<p>The purpose of a crossfade is to produce a smooth transition between two sections of audio. The two sections overlap and as one section fades out the other fades in. This technique is commonly used by DJ's, for "compilation" tracks and <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Mashup_%28music%29">mashups</a>. The use of crossfades is not limited to joining pieces of music, but can be used in many other situations where a smooth transition is required, including editing speech recordings, extending songs, creating loops for audio sequencers, repairing damaged recordings and much more.
+<p>The purpose of a crossfade is to produce a smooth transition between two sections of audio. The two sections overlap and as one section fades out the other fades in. This technique is commonly used by DJ's, for "compilation" tracks and <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Mashup_%28music%29">mashups</a>. The use of crossfades is not limited to joining pieces of music, but can be used in many other situations where a smooth transition is required, including editing speech recordings, extending songs, creating loops for audio sequencers, repairing damaged recordings and much more.
 </p><p>There are two crossfade effects available in Audacity
 </p>
 <ul><li> The first is a simple one which crossfades between two adjacent clips in the same track, see <a href="crossfade_clips.html" title="Crossfade Clips">Crossfade Clips</a></li>
@@ -154,39 +154,13 @@ See also: <a href="mixing.html" title="Mixing">Mixing</a></div>
 <li><a href="other_plug_ins_and_tools_for_fades.html#envelope" title="Other plug-ins and tools for fades">Text Envelope</a></li>
 <li><a href="other_plug_ins_and_tools_for_fades.html#make_fade" title="Other plug-ins and tools for fades">Creating Fades from the Nyquist Prompt</a>.</li></ul>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125612
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.150 seconds
-Real time usage: 0.162 seconds
-Preprocessor visited node count: 336/1000000
-Preprocessor generated node count: 1395/1000000
-Post-expand include size: 8427/2097152 bytes
-Template argument size: 6338/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   44.592      1 - -total
- 54.08%   24.114      1 - Template:I18n
- 49.28%   21.977      1 - Template:I18n_box
- 40.96%   18.264      1 - Template:I18n_list
- 17.19%    7.664      7 - Template:Hint
- 14.86%    6.627      2 - Template:I18n_link
- 14.24%    6.348      1 - Template:Intro
-  8.59%    3.831      2 - Template:Autoglossonym
-  8.43%    3.758      7 - Template:Note
-  5.57%    2.482      2 - Template:Example
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4933-0!*!0!!*!5!* and timestamp 20200619125612 and revision id 57326
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -204,7 +178,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -214,9 +188,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -241,13 +215,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -257,7 +230,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Fade_and_Crossfade">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Fade_and_Crossfade">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

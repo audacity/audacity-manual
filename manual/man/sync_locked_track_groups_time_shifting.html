@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,11 +32,44 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Sync-Locked_Track_Groups_-_Time_Shifting#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <h2><span class="mw-headline" id="Time_shifting_operations_on_Sync-Locked_Track_Groups">Time shifting operations on Sync-Locked Track Groups</span></h2>
-<ul><li> <b><span class="menu">Tracks &gt; <a href="tracks_menu_align_tracks.html" title="Tracks Menu: Align Tracks">Align Tracks</a></span>:</b> All of the "Align Tracks" commands (with the exception of the "Align Together" command) will move all tracks in a group by the same amount, even if this means pushing the start(s) of some track(s) before zero on the timeline. By its nature the <b>Align Tracks Together</b> command cannot respect sync-lock since its job is to align the selected tracks so they all start at the same point on the timeline.</li>
-<li><b><a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a>:</b> Using the Time Shift tool on any audio track in a Sync-Locked Track Group will move all <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clips</a> in all audio tracks, and will move any <a href="label_tracks.html" title="Label Tracks">Label Track</a> defining the Group, even if none of the tracks are selected. However a clip will not move unless it overlaps with at least one other clip above or below. If you want non-overlapping clips to move too, select over all clips you want to move then drag from inside the selection.</li></ul>
+<h3><span class="mw-headline" id="Align_Tracks"><a href="tracks_menu_align_tracks.html" title="Tracks Menu: Align Tracks">Align Tracks</a></span></h3>
+<p><b><span class="menu">Tracks &gt; <a href="tracks_menu_align_tracks.html" title="Tracks Menu: Align Tracks">Align Tracks</a></span>:</b> All of the "Align Tracks" commands (with the exception of the "Align Together" command) will move all tracks in a group by the same amount, even if this means pushing the start(s) of some track(s) before zero on the timeline. By its nature the <b>Align Tracks Together</b> command cannot respect sync-lock since its job is to align the selected tracks so they all start at the same point on the timeline.
+</p>
+<h3><span class="mw-headline" id="Time_Shift_Tool"><a href="time_shift_tool.html" title="Time Shift Tool">Time Shift Tool</a></span></h3>
+<p>When moving an <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">audio clip</a> left or right with the <a href="time_shift_tool.html" title="Time Shift Tool">Time Shift Tool</a>:
+</p>
+<ul><li> The audio clip under the mouse pointer is moved,</li>
+<li> Any audio clips within the track group that overlap time-wise with the clip being moved, are also moved,</li>
+<li> All labels within the track group are moved.</li></ul>
+<p>In addition, if there is a time selection, and the Time Shift Tool is used within the selection, then:
+</p>
+<ul><li> All selected audio clips are also moved.</li></ul>
+<div class="note">Note that:
+<ol><li> A clip will not move unless it overlaps with a track being moved, or is within a selection that is being moved.</li>
+<li> All labels in the track group move with the audio clip(s) being dragged.</li>
+<li> If you want non-overlapping clips to move too, select over all clips you want to move then drag from inside the selection.</div></li></ol>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">Using the Time Shift Tool you <i><b>must</b></i> click on an audio track and <i><b>not</b></i> on a label track.  <p>If you click on a label track and drag with the Time Shift tool the entire label track will move keeping its labels in sync with each other but <i><b>no</b></i> audio will move.</p>
+
+</li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><span style="font-weight: bold; font-size:118%">Top Tip:</span> If you want to ensure that all audio (tracks and clips) and label tracks remain aligned as you move a Sync-Locked Track Group, add an extra track of generated Silence for the entire length of the Sync-Locked Track Group <i>(this then "overlaps" all the audio in the project, this ensuring that all audio clips move in synch)</i>.
+</td></tr></table>
+</div>
 <h2><span class="mw-headline" id="Example-1:_Start_to_Cursor.2FSelection_Start">Example-1: <a href="tracks_menu_align_tracks.html#start_to_cursorselection_start" title="Tracks Menu: Align Tracks">Start to Cursor/Selection Start</a></span></h2>
 <div class="example"><b>Before <span class="menu">Tracks &gt; Align Tracks &gt; <a href="tracks_menu_align_tracks.html#start_to_cursorselection_start" title="Tracks Menu: Align Tracks">Start to Cursor/Selection Start</a></span></b>
 <dl><dd><span title="Before aligning tracks"><img alt="SLTG Time Shift 1.png" src="../m/images/9/9c/sltg_time_shift_1.png" width="617" height="232" /></span></dd></dl>
@@ -59,37 +92,13 @@
 </p><p><a href="sync_locked_track_groups_editing.html" title="Sync-Locked Track Groups - Editing"><b>&lt;</b>&#160; Back to: Sync-Locked Track Groups - Editing</a> <br />
 </p><p><a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups"><b>|&lt;</b>&#160; Sync-Locked Track Groups</a>
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125402
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.087 seconds
-Real time usage: 0.095 seconds
-Preprocessor visited node count: 174/1000000
-Preprocessor generated node count: 981/1000000
-Post-expand include size: 3486/2097152 bytes
-Template argument size: 2041/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   31.742      1 - -total
- 81.68%   25.927      1 - Template:I18n
- 76.52%   24.290      1 - Template:I18n_box
- 63.82%   20.258      1 - Template:I18n_list
- 22.35%    7.094      2 - Template:I18n_link
- 13.18%    4.184      2 - Template:Autoglossonym
-  9.32%    2.957      2 - Template:Example
-  6.78%    2.153      2 - Template:Menu
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4371-0!*!0!!*!5!* and timestamp 20200619125402 and revision id 57703
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -107,7 +116,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -117,9 +126,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -144,13 +153,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -160,7 +168,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Sync-Locked_Track_Groups_-_Time_Shifting">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Sync-Locked_Track_Groups_-_Time_Shifting">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

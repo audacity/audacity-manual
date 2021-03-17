@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Splitting_a_recording_into_separate_tracks#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">
 This tutorial shows how to divide a long recording in one Audacity <a href="audio_tracks.html" title="Audio Tracks">track</a> into separate songs for export as one audio file per song. You can then burn these files to an <a href="glossary.html#audio_cd" title="Glossary">audio CD</a> (enabling you to skip from track to track on the CD) or play the files directly on a portable music player. <p>We describe the basic concepts of removing unwanted audio, identifying and labeling boundaries between songs, maximizing volume then using <a href="export_multiple.html" title="Export Multiple">Export Multiple</a>.</p><p>If you already have each song in Audacity tracks one above the other, you can still follow this tutorial. Instead of labeling as described here, name each song using that track's <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">dropdown menu</a>. At the <a href="#export">Export Multiple</a> step, split files based on <b>Tracks</b> instead of <b>Labels</b>. </p> </div>
@@ -89,7 +89,7 @@ This tutorial shows how to divide a long recording in one Audacity <a href="audi
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
-<td align="left" valign="top">You can save time by using <span class="menu">Analyze &gt; <a href="silence_finder.html" title="Silence Finder">Silence Finder</a></span> to automatically add labels in the silences, or <span class="menu">Analyze &gt; <a href="sound_finder.html" title="Sound Finder">Sound Finder</a></span> to label the regions to be exported for the songs. The Sound Finder method thus lets you exclude some or all of the areas between songs.<p>Both these effects depend on correctly detecting the "silences" between tracks and this depends on setting their parameters appropriately for your track. See this example of adjusting  <a href="silence_finder_setting_parameters.html" title="Silence Finder - Setting Parameters">Silence Finder parameters</a> in order to place labels correctly between the songs.</p>
+<td align="left" valign="top">You can save time by using <span class="menu">Analyze &gt; <a href="label_sounds.html" title="Label Sounds">Label Sounds</a></span> to automatically label the regions to be exported for the songs. This method thus lets you exclude some or all of the areas between songs.<p>This tool depends on correctly detecting the "silences" between tracks and this depends on setting their parameters appropriately for your track. </p>
 </td></tr></table>
 </div>
 <div id="amplitude"></div>
@@ -108,7 +108,7 @@ Some consumer-level turntables, tape decks and/or amplifiers may well record ste
 </p>
 <ol><li>Click on <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span>.</li>
 <li>Choose the <b>Export Format</b> from the pop-up menu: 
-<ul><li>for CD burning choose 16-bit <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> if using Windows or Linux<i><b> or <a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> if you're using a Mac</li>
+<ul><li>for CD burning choose 16-bit <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> if using Windows or Linux<i><b> or <a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> if you are using a Mac</li>
 <li>for loading into an MP3 player, choose <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> </li>
 <li>for loading into Apple Music/iTunes/iPod you can export as WAV and use Apple Music/iTunes to convert the WAVs to <i><b><a href="glossary.html#aac" title="Glossary">AAC</a></b></i> or MP3.</li></ul></li>
 <li>Click the <span class="button">Choose...</span> button and pick the place where your exported tracks will be saved.</li>
@@ -124,7 +124,7 @@ Some consumer-level turntables, tape decks and/or amplifiers may well record ste
 <div class="note"><i><b><a href="glossary.html#metadata" title="Glossary">Metadata</a></b></i> in this context refers to information "tags" stored in the audio file such as Artist, Album and Song Title. 
 <ul><li> Often you may have an album where most tags (such as Artist Name) are common to all tracks. If you choose <span class="menu">Edit&#160;&gt;&#160;<a href="metadata_editor.html" title="Metadata Editor">Metatdata...</a></span> before exporting and add the common tags there, Audacity will pre-fill these when the metadata window for each song appears. </li>
 <li> If all your tags are common to each song (except of course for each song's Track Title and Track Number), you can enter the common tags before export as above but export silently without the metadata window appearing. To do this, choose  <a href="preferences.html" title="Preferences">Preferences</a>, then the <a href="import_export_preferences.html" title="Import - Export Preferences">Import&#160;/&#160;Export</a> tab, and uncheck <b>Show Metadata Editor prior to export step</b>. </li>
-<li> Hiding Metadata Editor at the export step can also be useful if you mainly export WAV files for which many audio players don't recognize tag information. Use AIFF (in Apple Music/iTunes or VLC) or <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> if you want full metadata in lossless files.  </li></ul>
+<li> Hiding Metadata Editor at the export step can also be useful if you mainly export WAV files for which many audio players do not recognize tag information. Use AIFF (in Apple Music/iTunes or VLC) or <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> if you want full metadata in lossless files.  </li></ul>
 </div>
 <p>A progress dialog might appear if the process takes more than a second or two. When the process is finished a confirmation dialog will appear listing the files that were created.
 </p><p>The tracks are now ready to import into the CD burning software of your choice.
@@ -133,7 +133,7 @@ Some consumer-level turntables, tape decks and/or amplifiers may well record ste
 <div class="note">If you burn a CD with a gap of zero seconds between tracks (if your burning software supports this), you will end up with an exact replica of the LP or cassette. If, when burning the CD, you add the standard 2-second gap between each track you will be adding an additional 2 seconds to the existing silence between tracks, and the vinyl surface noise or cassette hiss will suddenly disappear which some listeners may find annoying. See <b>Refinements</b>, below, for ways of dealing with this.</div>
 <div id="backup"></div>
 <h2><span class="mw-headline" id="Step_5:_Backup">Step 5: Backup</span></h2>
-<p>Backup your exported WAV or MP3 files - you don't want to lose all that valuable work and have to do it all over again, do you? Computer hard drives can fail, destroying all data. 
+<p>Backup your exported WAV or MP3 files - you do not want to lose all that valuable work and have to do it all over again, do you? Computer hard drives can fail, destroying all data. 
 </p><p>Ideally use a dedicated drive <i>(1+ TB external magnetic drives are convenient and economical)</i>, or upload to an online (cloud) storage service to store the WAVs or MP3s. Better still is to make two copies on different external devices and even better is to hold an online backup as well as the local copies. 
 </p><p>You may want to create a taxonomic file structure - for example each album can be stored in its own folder (named for the album) within a folder named for the artist (or, perhaps, composer for classical music) to make searching and retrieval easier.
 </p>
@@ -172,39 +172,13 @@ Some consumer-level turntables, tape decks and/or amplifiers may well record ste
 </p>
 <a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD"><b>|&lt;</b> Tutorial - Copying tapes, LPs or MiniDiscs to CD</a></p>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125123
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.150 seconds
-Real time usage: 0.155 seconds
-Preprocessor visited node count: 452/1000000
-Preprocessor generated node count: 1784/1000000
-Post-expand include size: 11836/2097152 bytes
-Template argument size: 7517/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   48.268      1 - -total
- 47.47%   22.915      1 - Template:I18n
- 43.20%   20.851      1 - Template:I18n_box
- 35.39%   17.081      1 - Template:I18n_list
- 13.86%    6.691      2 - Template:I18n_link
-  8.98%    4.334      5 - Template:Shortcut
-  8.29%    4.003      2 - Template:Autoglossonym
-  7.22%    3.484      3 - Template:Tip
-  7.15%    3.452     14 - Template:Menu
-  5.29%    2.555      4 - Template:Button
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3102-0!*!0!!*!5!* and timestamp 20200619125123 and revision id 66404
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -222,7 +196,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -232,9 +206,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -259,13 +233,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -275,7 +248,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Splitting_a_recording_into_separate_tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Splitting_a_recording_into_separate_tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

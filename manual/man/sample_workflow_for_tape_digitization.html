@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_tape_digitization#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This tutorial outlines a set of example steps using Audacity to digitize tapes (cassette tapes and reel-to-reel) to create files that are ready for CD creation, loading into a digital jukebox or portable music player. There is no fixed "<i><b>right</b></i>" way of working - there are many alternatives; like any recipe, it can be adapted to suit your personal needs.</div>
 <p>This workflow does not at any stage necessitate the saving of an <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a> (though you may wish to do that if you need to interrupt your work). Your final goal will be to <a href="export.html" title="Export">export</a> WAV files for CD creation or other file formats which might be more suitable for your needs.
 </p><p>While all of the processing in this tutorial is carried out using Audacity, some users may prefer to use <a href="#alternative">alternative software</a> for specific sub-tasks like noise removal and the removal of clicks and pops (Audacity's Click Removal may not give as good a result as other software).
@@ -69,7 +69,7 @@
 </p>
 <div id="set"></div>
 <h3><span class="mw-headline" id="1._Audacity_settings">1. Audacity settings</span></h3>
-<p>Work with Audacity set to a project rate of 44100 Hz and 32-bit sample format (these are the default <a href="quality_preferences.html" title="Quality Preferences">quality settings</a>). You may use 16-bit if you prefer; it will give smaller working file sizes but you may lose a little quality in some of the processes.  Export WAV files at 44100 Hz 16-bit PCM stereo, the standard required for <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD"> burning CDs</a>; this will also produce WAVs which are accepted for import by Apple Music/iTunes (and most other music player software).
+<p>Work with Audacity set to a project rate of 44,100 Hz and 32-bit sample format (these are the default <a href="quality_preferences.html" title="Quality Preferences">quality settings</a>). You may use 16-bit if you prefer; it will give smaller working file sizes but you may lose a little quality in some of the processes.  Export WAV files at 44,100 Hz 16-bit PCM stereo, the standard required for <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD"> burning CDs</a>; this will also produce WAVs which are accepted for import by Apple Music/iTunes (and most other music player software).
 </p>
 <div id="azimuth"></div>
 <h3><span class="mw-headline" id="2._Check.2Fadjust_the_azimuth_settings">2. Check/adjust the azimuth settings</span></h3>
@@ -82,7 +82,7 @@
 <h3><span class="mw-headline" id="3._Clean_the_heads_and_pinch_roller">3. Clean the heads and pinch roller</span></h3>
 <p>Most deposited oxide goes onto the pinch roller. The more oxide there is on this roller, the less able it is to remove and hold loose oxide from the tape, and thus the more oxide gets deposited on the head.
 </p><p>A dirty pinch roller has less friction, and can occasionally result in tape slip, degrading playback quality. This is especially true for 8 track tapes, where tape slip is a real issue.
-</p><p>All types of tape deck that use a pinch roller should have the roller cleaned occasionally. Microcassettes and picocassettes don't use pinch rollers.
+</p><p>All types of tape deck that use a pinch roller should have the roller cleaned occasionally. Microcassettes and picocassettes do not use pinch rollers.
 </p>
 <div id="tension"></div>
 <h3><span class="mw-headline" id="4._Retension_the_tape">4. Retension the tape</span></h3>
@@ -120,7 +120,7 @@
 <div id="hf"></div>
 <h3><span class="mw-headline" id="9._Reduce_tape_hiss_and_high_frequency_noise">9. Reduce tape hiss and high frequency noise</span></h3>
 <div class="note">Whether you need to use <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a> will depend on the quality of your tapes, your <a href="#azimuth">azimuth setting</a>, the cleanliness of the <a href="#clean">tape heads</a> and your Dolby settings.</div>
-<p>Use the <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a> effect's <b>Get Noise Profile</b> to obtain a noise sample from either the lead-in grooves immediately before the music starts, or from a lead-in between tracks. The length is not important but, typically, it will be less than a second; what is important is that you have a true representative sample of the noise without any audio signal at all (such as a very quiet fade lead in). Try amplifying the sample and audition it to ensure that no real audio signal is present.  If it's OK, undo the amplify, then re-apply the Noise Removal effect with these recommended settings:
+<p>Use the <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a> effect's <b>Get Noise Profile</b> to obtain a noise sample from either the lead-in grooves immediately before the music starts, or from a lead-in between tracks. The length is not important but, typically, it will be less than a second; what is important is that you have a true representative sample of the noise without any audio signal at all (such as a very quiet fade lead in). Try amplifying the sample and audition it to ensure that no real audio signal is present.  If it is OK, undo the amplify, then re-apply the Noise Removal effect with these recommended settings:
 </p>
 <ul><li>Noise reduction - no more than 12 dB (9 dB is a good guideline)</li>
 <li>Sensitivity - 6.00</li>
@@ -144,7 +144,7 @@
 </div>
 <div id="labels"></div>
 <h3><span class="mw-headline" id="10._Place_the_song_labels">10. Place the song labels</span></h3>
-<p>Mark the approximate <a href="label_tracks.html" title="Label Tracks">label</a> points - click in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> at the approximate point between the tracks on the album, press <span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span> then <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. Don't forget to insert a label at the beginning for the first track. Alternatively you can mark a label point while recording (or on playback) using <span class="kbrd" style="background-color: #d0d0f8">Ctrl + M</span> <i>(<span class="kbrd" style="background-color: #d0d0f8">&#8984; + .&#160;</span> on Mac)</i>.
+<p>Mark the approximate <a href="label_tracks.html" title="Label Tracks">label</a> points - click in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> at the approximate point between the tracks on the album, press <span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span> then <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. Do not forget to insert a label at the beginning for the first track. Alternatively you can mark a label point while recording (or on playback) using <span class="kbrd" style="background-color: #d0d0f8">Ctrl + M</span> <i>(<span class="kbrd" style="background-color: #d0d0f8">&#8984; + .&#160;</span> on Mac)</i>.
 </p>
 <div id="gaps"></div>
 <h3><span class="mw-headline" id="11._Silence_the_inter-track_gaps">11. Silence the inter-track gaps</span></h3>
@@ -200,7 +200,7 @@
 </p>
 <div id="wavs"></div>
 <h3><span class="mw-headline" id="17._Export_a_set_of_WAVs">17. Export a set of WAVs</span></h3>
-<p>Use <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> to produce a set of WAVs for each track on the LP at 44100 Hz 16-bit PCM stereo. Audacity will down-sample on export from 32-bit to 16-bit. Shaped <a href="dither.html" title="Dither">dither</a> noise will be applied by default to cover any defects (clicky noise) that may result from the conversion from 32-bit to 16-bit. Advanced users can change the type of dither, or turn it off, in <a href="quality_preferences.html#conversion" title="Quality Preferences">Quality Preferences</a>.
+<p>Use <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> to produce a set of WAVs for each track on the LP at 44,100 Hz 16-bit PCM stereo. Audacity will down-sample on export from 32-bit to 16-bit. Shaped <a href="dither.html" title="Dither">dither</a> noise will be applied by default to cover any defects (clicky noise) that may result from the conversion from 32-bit to 16-bit. Advanced users can change the type of dither, or turn it off, in <a href="quality_preferences.html#conversion" title="Quality Preferences">Quality Preferences</a>.
 </p><p>In order to facilitate later retrieval and use, place all the files for a particular album in a specifically named folder for that album.
 </p>
 <div id="labex"></div>
@@ -209,7 +209,7 @@
 </p>
 <div id="backup"></div>
 <h3><span class="mw-headline" id="19._Backup">19. Backup</span></h3>
-<p>Backup your exported WAV or MP3 files - you don't want to lose all that valuable work and have to do it all over again, do you? Computer hard drives can fail, destroying all data. 
+<p>Backup your exported WAV or MP3 files - you do not want to lose all that valuable work and have to do it all over again, do you? Computer hard drives can fail, destroying all data. 
 </p><p>Ideally use a dedicated drive <i>(1+ TB external magnetic drives are convenient and economical)</i>, or upload to an online (cloud) storage service to store the WAVs or MP3s. Better still is to make two copies on different external devices and even better is to hold an online backup as well as the local copies. 
 </p><p>You may want to create a taxonomic file structure - for example each album can be stored in its own folder (named for the album) within a folder named for the artist (or, perhaps, composer for classical music) to make searching and retrieval easier.
 </p>
@@ -228,39 +228,13 @@
 <p><a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD"><b>|&lt;</b> Tutorial - Copying tapes, LPs or MiniDiscs to CD</a><br />
 </p><p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Recording_from_Cassette"><b>&gt;</b>&#160; See also Recording from Cassette</a> - article in the Audacity Wiki
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125121
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.133 seconds
-Real time usage: 0.137 seconds
-Preprocessor visited node count: 415/1000000
-Preprocessor generated node count: 1015/1000000
-Post-expand include size: 8517/2097152 bytes
-Template argument size: 5468/2097152 bytes
-Highest expansion depth: 5/40
-Expensive parser function count: 0/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   33.079      1 - -total
- 22.57%    7.467      8 - Template:Shortcut
- 13.36%    4.420      3 - Template:Tip
- 11.26%    3.725      1 - Template:Hint
- 10.50%    3.474     11 - Template:Menu
-  9.98%    3.300      1 - Template:Intro
-  8.94%    2.957      5 - Template:Note
-  7.27%    2.405      2 - Template:Key
-  4.42%    1.463      1 - Template:Advice
-  4.15%    1.372      1 - Template:Button
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5275-0!*!0!!*!5!* and timestamp 20200619125121 and revision id 66407
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -278,7 +252,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -288,9 +262,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -315,13 +289,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -331,7 +304,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_tape_digitization">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_tape_digitization">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

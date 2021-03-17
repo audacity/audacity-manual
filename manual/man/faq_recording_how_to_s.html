@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_How_To%27s#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <p><a href="faq_playback.html" title="FAQ:Playback"><b>&gt;</b>&#160; Forward To: FAQ:Playback</a> <br />
 </p><p><a href="faq_recording_troubleshooting.html" title="FAQ:Recording - Troubleshooting"><b>&lt;</b>&#160; Back To: FAQ:Recording - Troubleshooting</a> <br />
@@ -45,7 +45,7 @@
 <li class="toclevel-1 tocsection-2"><a href="#What_is_an_optimal_recording_level_to_aim_for.3F"><span class="tocnumber">2</span> <span class="toctext">What is an optimal recording level to aim for?</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#How_do_I_record_from_vinyl_records.2C_cassette_tapes_or_MiniDiscs.3F"><span class="tocnumber">3</span> <span class="toctext">How do I record from vinyl records, cassette tapes or MiniDiscs?</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Can_I_play_a_track_while_recording_a_new_one_on_top_of_it.3F"><span class="tocnumber">4</span> <span class="toctext">Can I play a track while recording a new one on top of it?</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Can_Audacity_record_YouTube.2C_internet_radio_or_other_streaming_audio.3F"><span class="tocnumber">5</span> <span class="toctext">Can Audacity record YouTube, internet radio or other streaming audio?</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Can_Audacity_record_YouTube.2C_Internet_radio_or_other_streaming_audio.3F"><span class="tocnumber">5</span> <span class="toctext">Can Audacity record YouTube, Internet radio or other streaming audio?</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#What_is_the_maximum_recording_length.3F"><span class="tocnumber">6</span> <span class="toctext">What is the maximum recording length?</span></a></li>
 <li class="toclevel-1 tocsection-7"><a href="#Can_I_set_Audacity_to_record_at_a_certain_time.3F"><span class="tocnumber">7</span> <span class="toctext">Can I set Audacity to record at a certain time?</span></a></li>
 <li class="toclevel-1 tocsection-8"><a href="#Can_I_record_from_a_multi-channel_device_.28more_than_stereo.29.3F"><span class="tocnumber">8</span> <span class="toctext">Can I record from a multi-channel device (more than stereo)?</span></a></li>
@@ -56,10 +56,12 @@
 <div id="rinstereo"></div> 
 <h2><span class="mw-headline" id="How_can_I_record_in_stereo.3F">How can I record in stereo?</span></h2>
 <p>Audacity by default should already be set to record in stereo.  If this is not the case, use <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> to select the playback and recording devices and to set the channels to <b>"2 (stereo) Recording Channels"</b>.
-</p><p>Alternatively you can open the <a href="preferences.html" title="Preferences">Audacity Preferences</a>, choose the \xe2\x80\x9c<a href="devices_preferences.html" title="Devices Preferences">Devices</a>\xe2\x80\x9d section on the left, then in the "Recording" panel, change the number of recording channels to "2 (Stereo)".
-{{note|<b>Windows:</b> Many USB recording devices, even if stereo, are seen as "microphones" so set by Windows to record in mono. If Audacity is set to record in stereo this will cause both channels to have the same content as one of the channels. To set Windows to record the device in stereo:
+</p><p>Alternatively you can open the <a href="preferences.html" title="Preferences">Audacity Preferences</a>, choose the "<a href="devices_preferences.html" title="Devices Preferences">Devices</a>" section on the left, then in the "Recording" panel, change the number of recording channels to "2 (Stereo)".
 </p>
-<ul><li>By the system clock, right-click over the <span class="menu">Speaker icon</span> select <span class="menu">Sounds</span> then the <span class="menu">Recording</span> tab, and then click on the <b>USB device</b> in the list and click <span class="button">Properties</span>. Click the <span class="menu">Advanced</span> tab set your required bit rate and sample rate from the <b>Default Format</b> dropdown (normally <b>"2 channel 16-bit 44100 Hz"</b>).</li></ul>
+<div class="note"><b>Windows:</b> Many USB recording devices, even if stereo, are seen as "microphones" so set by Windows to record in mono. If Audacity is set to record in stereo this will cause both channels to have the same content as one of the channels.</div>
+<p>To set Windows to record the device in stereo:
+</p>
+<ul><li>By the system clock, right-click over the <span class="menu">Speaker icon</span> select <span class="menu">Sounds</span> then the <span class="menu">Recording</span> tab, and then click on the <b>USB device</b> in the list and click <span class="button">Properties</span>. Click the <span class="menu">Advanced</span> tab set your required bit rate and sample rate from the <b>Default Format</b> dropdown (normally <b>"2 channel 16-bit 44,100 Hz"</b>).</li></ul>
 <p>For a more detailed walk-through of the above steps for Windows <i>(or if that does not work for your version of Windows)</i>, see <b><a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows: accessing the Windows Sound controls</a>.</b>
 </p><p><br />
 <a href="#top">back to top</a>
@@ -74,7 +76,7 @@
 <div id="vinyltapes"></div>
 <h2><span class="mw-headline" id="How_do_I_record_from_vinyl_records.2C_cassette_tapes_or_MiniDiscs.3F">How do I record from vinyl records, cassette tapes or MiniDiscs?</span></h2>
 <ol><li>Set Audacity to <a href="#How_can_I_record_in_stereo.3F">record in stereo</a>.</li>
-<li>Plug one end of a stereo cable into the "Line Out" or "Headphone" connector on your tape deck, MiniDisc player, or stereo system. Plug the other end into your computer’s "Line In" port. If you do not have a suitable cable, you can find one at an electronics store.</li>
+<li>Plug one end of a stereo cable into the "Line Out" or "Headphone" connector on your tape deck, MiniDisc player, or stereo system. Plug the other end into your computer's "Line In" port. If you do not have a suitable cable, you can find one at an electronics store.</li>
 <li>Choose "Line In" as the recording source in Audacity's <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> or <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>. </li>
 <li>Press the red <b>Record</b> button. While Audacity is recording, start playing your tape or disc. When you have captured the audio you want to record, press the <b>Stop</b> button. You can also press the <b>Pause</b> button to pause recording, and Pause again to resume recording on the same track.</li></ol>
 <p>For a detailed tutorial, see <a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD">Copying tapes, LPs or MiniDiscs to CD</a>. This covers all the steps from recording your records, cassettes or MiniDiscs to exporting as an audio file and burning to an <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">audio CD</a>. 
@@ -83,8 +85,8 @@
 <div class="note">
 <p><b>Connection hints:</b>
 </p>
-<ul><li> <b>Do not connect a turntable directly to your computer.</b> The signal from a turntable must be passed through a phono pre-amplifier or a receiver with a \xe2\x80\x9cphono\xe2\x80\x9d input that provides phono amplification. Otherwise, it will be too quiet and will also sound "tinny" due to incorrect equalization.  </li></ul>
-<ul><li> <b>Do not plug stereo equipment into your computer’s \xe2\x80\x9cMicrophone\xe2\x80\x9d port.</b> This port is usually designed only for low level, mono microphone input. It will produce distortion if you connect phono amplified output. Use the \xe2\x80\x9cLine In\xe2\x80\x9d port if you have one (on some laptops or other portable computers, the "Mic" port can be switched to a line-level input). See <a href="how_to_connect_your_equipment.html#avoid_mic" title="How to connect your equipment">further help</a>.  </li></ul>
+<ul><li> <b>Do not connect a turntable directly to your computer.</b> The signal from a turntable must be passed through a phono pre-amplifier or a receiver with a "phono" input that provides phono amplification. Otherwise, it will be too quiet and will also sound "tinny" due to incorrect equalization.  </li></ul>
+<ul><li> <b>Do not plug stereo equipment into your computer's "Microphone" port.</b> This port is usually designed only for low level, mono microphone input. It will produce distortion if you connect phono amplified output. Use the "Line In" port if you have one (on some laptops or other portable computers, the "Mic" port can be switched to a line-level input). See <a href="how_to_connect_your_equipment.html#avoid_mic" title="How to connect your equipment">further help</a>.  </li></ul>
 </div>
 <p>See also: 
 </p>
@@ -100,20 +102,20 @@
 <ol><li>Select the recording device you are plugged into (probably microphone or line-in) in the Recording Device menu in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> 
 <ul><li> If you do not see your required recording device, enable it and make it default in the operating system's mixer. For Windows see <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows: accessing the Windows Sound controls</a>. To locate the system mixer for Mac and Linux see the help on our Wiki for <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mac_OS_X">Mac</a> or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Linux_System_Mixer">Linux</a>, then in Audacity, choose<span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span>     </li></ul></li>
 <li><a href="importing_audio.html" title="Importing Audio">Import</a> or record the first track </li>
-<li>Choose {<span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a></span></li>
+<li>Choose <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a></span></li>
 <li>Press the <b>Record</b> button <img alt="Record button image" src="../m/images/e/e8/record.png" title="Record button image" width="16" height="16" />&#160;.</li></ol>
-<div class="note">If you are recording from a microphone, make sure you use headphones so that the microphone picks up only what you are recording. Detailed, illustrated instructions on how to make overdub recordings are in <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Tutorial - Recording Multi-track Overdubs</a>. </div> 
+<div class="note">If you are recording from a microphone, make sure you use headphones so that the microphone picks up only what you are recording. Detailed, illustrated instructions on how to make overdub recordings are in <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Tutorial - Recording Multi-track Overdubs</a>. </div>
 <p>See also: 
 </p>
-<ul><li> <a href="faq_recording_troubleshooting.html#sync" title="FAQ:Recording - Troubleshooting">Why isn't my new track in sync with the previous ones?</a></li></ul>
-<ul><li> <a href="faq_recording_troubleshooting.html#playthrough" title="FAQ:Recording - Troubleshooting">Why can't I hear what I am recording?</a></li></ul>
+<ul><li> <a href="faq_recording_troubleshooting.html#sync" title="FAQ:Recording - Troubleshooting">Why is my new track not in sync with the previous ones?</a></li></ul>
+<ul><li> <a href="faq_recording_troubleshooting.html#playthrough" title="FAQ:Recording - Troubleshooting">Why can I not hear what I am recording?</a></li></ul>
 <ul><li> <a href="faq_recording_troubleshooting.html#vista_7" title="FAQ:Recording - Troubleshooting">Why can I not record in Windows?</a></li></ul>
 <p><br />
 <a href="#top">back to top</a>
 </p>
 <div id="streaming"></div>
-<h2><span class="mw-headline" id="Can_Audacity_record_YouTube.2C_internet_radio_or_other_streaming_audio.3F">Can Audacity record YouTube, internet radio or other streaming audio?</span></h2>
-<ul><li>With most Windows and Linux audio devices, it is possible to record whatever sound the computer is currently playing, including internet radio streams.</li>
+<h2><span class="mw-headline" id="Can_Audacity_record_YouTube.2C_Internet_radio_or_other_streaming_audio.3F">Can Audacity record YouTube, Internet radio or other streaming audio?</span></h2>
+<ul><li>With most Windows and Linux audio devices, it is possible to record whatever sound the computer is currently playing, including Internet radio streams.</li>
 <li>Mac users can capture streaming audio using third-party standalone applications or system extensions. </li></ul>
 <p>See the <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer">Recording audio playing on the computer</a> tutorial for details, following the link thereon for your particular operating platform.
 </p><p><br />
@@ -127,7 +129,7 @@
 <div class="note">After recording you will still need space to <a href="file_export_dialog.html" title="File Export Dialog">export</a> the recording as an audio file for your computer. Editing the recording before export takes extra space. Each edit of a region requires as much extra disk space as was required to originally record that section.</div>
 <p>To get more recording time:
 </p>
-<ul><li> Delete your old files and folders (especially your old <a href="audacity_projects.html" title="Audacity Projects">Audacity Project</a> files and _data folders when you have finished with them)</li>
+<ul><li> Delete your old files and folders (especially your old <a href="audacity_projects.html" title="Audacity Projects">Audacity Project</a> files when you have finished with them)</li>
 <li> Select an alternative drive that has more space in the <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a> (but do not record to an external USB or FireWire disk because recording needs disk access to be as fast as possible)</li>
 <li> Record in mono instead of stereo (settable at "Recording Channels" in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> or in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>)</li>
 <li> Set the "Default Sample Format" in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a> to 16-bit instead of 32-bit (this is a good choice for a "quick recording" which you export at once without editing).</li></ul>
@@ -153,70 +155,40 @@ See <a href="multi_channel_recording.html" title="Multi-channel Recording">Multi
 <h2><span class="mw-headline" id="Can_I_record_from_two_microphones_.28or_two_audio_interfaces.29_at_the_same_time.3F">Can I record from two microphones (or two audio interfaces) at the same time?</span></h2>
 <p>Audacity can only record from one sound device at a time, but here are some solutions.  
 </p>
-<ul>
-<li> If your sound device has separate left and right mic inputs, connect the separate microphones to those inputs.
-<li>Connect the separate microphones to a mixer and record from the mixer. 
-<li> If these are dynamic microphones that do not need extra power, buy an adaptor that has two inputs for the microphones with a single 1/8 inch TRS connector for the computer microphone port (this will usually only give you a combined mono input).  
-<li> Record each track to different computers.
+<ul><li> If your sound device has separate left and right mic inputs, connect the separate microphones to those inputs.</li>
+<li> Connect the separate microphones to a mixer and record from the mixer. </li>
+<li> If these are dynamic microphones that do not need extra power, buy an adaptor that has two inputs for the microphones with a single 1/8 inch TRS connector for the computer microphone port (this will usually only give you a combined mono input).  </li>
+<li> Record each track to different computers.</li>
 <li> If you have two USB microphones or any other separate sound devices you can aggregate them as a single device for recording in Audacity, or use other recording software to record the two devices to separate tracks.
 <ul><li>On <b>Windows</b> you can try the following.
-<ul><li>Some applications can route two devices to one stream. Use <a rel="nofollow" class="external text" href="http://vb-audio.pagesperso-orange.fr/Voicemeeter/index.htm">Voice Meeter</a> (donationware - see this <a rel="nofollow" class="external text" href="https://youtu.be/atobXq-iA-k">YouTube video tutorial</a>) or <a rel="nofollow" class="external text" href="http://software.muzychenko.net/eng/vac.htm">Virtual Audio Cable</a> (not free).
-<li> It may also be possible on Windows to use the "Listen" feature to route inputs to the output, though this is slightly lossy.
-<ol><li>Right-click over the speaker icon by the system clock, choose "Sound" then choose "Recording devices".
-<li>Right-click over the first device, choose "Properties" then the "Listen" tab (if available). 
-<li> Check "Listen to this device" and set it to play through the required audio interface. 
-<li> Repeat the steps for the other devices. 
-<li> Use the "stereo mix" feature on your audio interface (if it has such a feature) to <a href="tutorial_recording_computer_playback_on_windows.html" title="Tutorial - Recording Computer Playback on Windows">record the computer playback</a>.</ol>
-<li> <a rel="nofollow" class="external text" href="https://sourceforge.net/projects/alis/">Alis</a> can capture simultaneous recordings from different audio interfaces. 
-<li><b>Advanced:</b> Compiling Audacity with <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/ASIO_Audio_Interface">ASIO</a> support will allow you to aggregate two USB microphones, for example using the <a rel="nofollow" class="external text" href="http://www.asio4all.com/">ASIO4ALL</a> driver for WDM Audio. Aggregating two devices that use ASIO drivers is unlikely to work correctly.</ul>
-<li>On <b>Mac OS X</b> use Audio MIDI Setup to aggregate devices. See detailed instructions for  <a rel="nofollow" class="external text" href="https://support.apple.com/en-gb/HT202000">OS X 10.7 or later</a>.
-<li>On <b>Linux</b> you can use JACK to <a rel="nofollow" class="external text" href="http://jackaudio.org/faq/multiple_devices.html">route two devices to one stream</a> that Audacity can record from. See also these two Forum posts<br /><a rel="nofollow" class="external free" href="https://forum.audacityteam.org/viewtopic.php?f=27&amp;t=56492&amp;p=146769p142160#p142160">https://forum.audacityteam.org/viewtopic.php?f=27&amp;t=56492&amp;p=146769p142160#p142160</a><br /><a rel="nofollow" class="external free" href="https://forum.audacityteam.org/viewtopic.php?f=27&amp;t=56492&amp;p=146769p142160#p146769">https://forum.audacityteam.org/viewtopic.php?f=27&amp;t=56492&amp;p=146769p142160#p146769</a> .</ul>
-<div class="note">Separate audio devices such as two USB microphones or devices on different computers will have separate clock speeds (in the absence of a master clock to synchronize to). Therefore the two inputs may drift apart over time.</div> 
+<ul><li>Some applications can route two devices to one stream. Use <a rel="nofollow" class="external text" href="http://vb-audio.pagesperso-orange.fr/Voicemeeter/index.htm">Voice Meeter</a> (donationware - see this <a rel="nofollow" class="external text" href="http://youtu.be/atobXq-iA-k">YouTube video tutorial</a>) or <a rel="nofollow" class="external text" href="http://software.muzychenko.net/eng/vac.htm">Virtual Audio Cable</a> (not free).</li>
+<li>It may also be possible on Windows to use the "Listen" feature to route inputs to the output, though this is slightly lossy.
+<ol><li>Right-click over the speaker icon by the system clock, choose "Sound" then choose "Recording devices".</li>
+<li>Right-click over the first device, choose "Properties" then the "Listen" tab (if available). </li>
+<li>Check "Listen to this device" and set it to play through the required audio interface. </li>
+<li>Repeat the steps for the other devices. </li>
+<li>Use the "stereo mix" feature on your audio interface (if it has such a feature) to <a href="tutorial_recording_computer_playback_on_windows.html" title="Tutorial - Recording Computer Playback on Windows">record the computer playback</a>.&lt;/ol&gt;</li></ol></li>
+<li> <a rel="nofollow" class="external text" href="http://sourceforge.net/projects/alis/">Alis</a> can capture simultaneous recordings from different audio interfaces. </li>
+<li><b>Advanced:</b> Compiling Audacity with <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/ASIO_Audio_Interface">ASIO</a> support will allow you to aggregate two USB microphones, for example using the <a rel="nofollow" class="external text" href="http://www.asio4all.com/">ASIO4ALL</a> driver for WDM Audio. Aggregating two devices that use ASIO drivers is unlikely to work correctly.&lt;/ul&gt;</li></ul></li>
+<li>On <b>Mac</b> use Audio MIDI Setup to aggregate devices.</li>
+<li>On <b>Linux</b> you can use JACK to <a rel="nofollow" class="external text" href="http://jackaudio.org/faq/multiple_devices.html">route two devices to one stream</a> that Audacity can record from. See also these two Forum posts
+<ol><li><a rel="nofollow" class="external free" href="https://forum.audacityteam.org/viewtopic.php?f=27&amp;t=56492&amp;p=146769p142160#p142160">https://forum.audacityteam.org/viewtopic.php?f=27&amp;t=56492&amp;p=146769p142160#p142160</a></li>
+<li><a rel="nofollow" class="external free" href="https://forum.audacityteam.org/viewtopic.php?f=27&amp;t=56492&amp;p=146769p142160#p146769">https://forum.audacityteam.org/viewtopic.php?f=27&amp;t=56492&amp;p=146769p142160#p146769</a> .</li></ol></li></ul></li></ul>
+<div class="note">Separate audio devices such as two USB microphones or devices on different computers will have separate clock speeds (in the absence of a master clock to synchronize to). Therefore the two inputs may drift apart over time. </div>
 <p><br />
 <a href="#top">back to top</a>
 </p><p><br />
 <a href="faq_playback.html" title="FAQ:Playback"><b>&gt;</b>&#160; Forward To: FAQ:Playback</a> <br />
 </p><p><a href="faq_recording_troubleshooting.html" title="FAQ:Recording - Troubleshooting"><b>&lt;</b>&#160; Back To: FAQ:Recording - Troubleshooting</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
 </p>
-<a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a></li>
-</li>
-</li>
-</li>
-</li>
-</ul>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619120919
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.116 seconds
-Real time usage: 0.120 seconds
-Preprocessor visited node count: 407/1000000
-Preprocessor generated node count: 1179/1000000
-Post-expand include size: 5266/2097152 bytes
-Template argument size: 1964/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   46.361      1 - -total
- 72.82%   33.761      1 - Template:I18n
- 68.40%   31.712      1 - Template:I18n_box
- 58.94%   27.323      1 - Template:I18n_list
- 35.77%   16.583      7 - Template:I18n_link
- 21.15%    9.807      7 - Template:Autoglossonym
-  7.66%    3.551      8 - Template:Menu
-  7.64%    3.541      1 - Template:Button
-  4.39%    2.035      1 - Template:Note
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4054-0!*!0!!en!5!* and timestamp 20200619120919 and revision id 64295
- -->
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -234,7 +206,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -244,9 +216,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -271,13 +243,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -287,7 +258,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_How_To%27s">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_How_To%27s">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

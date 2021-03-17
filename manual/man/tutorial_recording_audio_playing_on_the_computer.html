@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,9 +32,9 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_audio_playing_on_the_computer#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">This tutorial outlines solutions for recording audio playing on the computer, (for example, audio being streamed from an internet website).  How or if you can do this depends on your computer operating system, your audio interface and its drivers.<p><div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<div class="intro">This tutorial outlines solutions for recording audio playing on the computer, (for example, audio being streamed from an Internet website).  How or if you can do this depends on your computer operating system, your audio interface and its drivers.<p><div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
@@ -102,7 +102,7 @@
 </p>
 <dl><dd><span title="Recording Meter Toolbar in use - default size"><img alt="Recording Toolbar in use.png" src="../m/images/7/7a/recording_toolbar_in_use.png" width="473" height="33" /></span> </dd></dl>
 <p>See <a href="meter_toolbar.html#annotated" title="Meter Toolbar">Meter Toolbars</a> for a detailed description of what the meter display shows.
-</p><p>Both the output level of the audio you are recording and the level it's being recorded at will determine the achieved input level of the recording. Thus to achieve the correct recording level you should use both the recording and playback level sliders on Mixer Toolbar:
+</p><p>Both the output level of the audio you are recording and the level it is being recorded at will determine the achieved input level of the recording. Thus to achieve the correct recording level you should use both the recording and playback level sliders on Mixer Toolbar:
 </p>
 <dl><dd><span title="Image of Mixer Toolbar"><img alt="MixerToolbarWithoutInputSelect.png" src="../m/images/2/2b/mixertoolbarwithoutinputselect.png" width="326" height="30" /></span></dd></dl>
 <p>and probably the volume control on the website or player software as well. It may be best to check that the Audacity playback slider and the website or player slider are turned up by about the same amount, rather than having one output slider way down and the other way up.   
@@ -122,20 +122,25 @@
 <h2><span class="mw-headline" id="Step_4:_Make_a_test_recording">Step 4: Make a test recording</span></h2>
 <p>Make a test recording to refine levels if necessary.
 </p><p>Start the audio playing on the computer then click the <b>Record</b> button <img alt="Image of Record button" src="../m/images/e/e8/record.png" title="Image of Record button" width="16" height="16" /> in <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a>. Record for long enough to find the loudest likely part, then click the <b>Stop</b> button <img alt="Image of Stop button" src="../m/images/f/f9/stop.png" title="Image of Stop button" width="16" height="16" />.
-</p><p>Have a look at the recorded <i><b><a href="glossary.html#waveform" title="Glossary">waveform</a></b></i> - there should be no clipping visible. Clipping is bad - this is when the volume of the source sent to Audacity is louder than Audacity can record. The result is that the tops and bottoms of the recorded wave are chopped off ("clipped"). The illustrations below show about 0.004 seconds of a properly recorded waveform then a clipped waveform. You'll need to <a href="zooming.html" title="Zooming">zoom in</a> to inspect the waveform as closely as this, but extended lengths of clipping will also be visible at lower zoom levels.  
+</p><p>Have a look at the recorded <i><b><a href="glossary.html#waveform" title="Glossary">waveform</a></b></i> - there should be no clipping visible. Clipping is bad - this is when the volume of the source sent to Audacity is louder than Audacity can record. The result is that the tops and bottoms of the recorded wave are chopped off ("clipped"). The illustrations below show about 0.004 seconds of a properly recorded waveform then a clipped waveform. You will need to <a href="zooming.html" title="Zooming">zoom in</a> to inspect the waveform as closely as this, but extended lengths of clipping will also be visible at lower zoom levels.  
 </p>
 <dl><dd><b>A properly recorded waveform</b></dd>
 <dd><span title="A zoomed-in and unclipped waveform"><img alt="Waveform.png" src="../m/images/9/9c/waveform.png" width="577" height="156" /></span></dd></dl>
 <dl><dd><b>A clipped waveform</b></dd>
 <dd><span title="A zoomed-in waveform showing clipping"><img alt="Waveform clipping.png" src="../m/images/4/4d/waveform_clipping.png" width="577" height="156" /></span></dd></dl>
-  </li></ul>
 <p>You can also check for clipping by choosing <span class="menu">View &gt; Show Clipping</span> from the menu. Audacity will display vertical red lines in the waveform wherever it detects any clipped <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i>.<br />
 </p>
 <dl><dd><span title="Waveform displaying vertical red Show Clipping lines"><img alt="ShowClipping02.png" src="../m/images/7/7d/showclipping02.png" width="515" height="105" /></span></dd></dl>
-<div class="note">
-<ul><li> Show Clipping may detect clipping when Meter Toolbar does not, because Meter Toolbar detects only runs of four or more clipped samples. Any clipping of three samples or less is unlikely to be audible in most recording circumstances, but it's still a good idea to turn the playback or recording level down if you can.</li>
-<li> On slower machines it's best to turn Show Clipping off when recording for real.</li></ul>
-</div> 
+<div class="note">Show Clipping may detect clipping when Meter Toolbar does not, because Meter Toolbar detects only runs of four or more clipped samples.<p>Any clipping of three samples or less is unlikely to be audible in most recording circumstances, but it is still a good idea to turn the playback or recording level down if you can.</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">On slower machines it is best to turn Show Clipping off when recording for real.
+</td></tr></table>
+</div> </div>
 <p>If clipping occurred, turn the recording or output level down a little and try again. 
 </p><p>If no clipping occurred you can now <span class="menu">Edit &gt; Undo Record</span> from the menu to remove the test recording(s) then make the real recording.
 </p>
@@ -147,46 +152,20 @@
 <div id="backup"></div>
 <h2><span class="mw-headline" id="Step_6:_Backup_the_capture">Step 6: Backup the capture</span></h2>
 <p>It is strongly recommended that you <span class="menu"><a href="file_export_dialog.html" title="File Export Dialog"> Export</a></span> a safety copy of the raw recording in uncompressed <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> format.  This is particularly important if the recording is a one-off and cannot be repeated. The backup can always be returned to should you make a mess of your subsequent editing. For extra safety or convenience you could also copy the backup to an external drive or a CD - either a data CD for playing on the computer or an audio or "music" CD for a CD player. Find out more at <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">Burning music files to a CD</a>. 
-</p><p>At this stage you will probably want to use <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> <i>(or <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_lossless_copy_of_project" title="File Menu: Save Project">Save Lossless Copy of Project...</a></span> for a staged safety copy)</i> before proceeding with any editing. This is useful if you want to come back to editing later on. 
+</p><p>At this stage you will probably want to use <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> <i>(or <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project...</a></span> for a staged safety copy)</i> before proceeding with any editing. This is useful if you want to come back to editing later on. 
 </p>
 <div id="edit"></div>
 <h2><span class="mw-headline" id="Step_7:_Editing">Step 7: Editing</span></h2>
-<p>For information on editing please refer to this tutorial <a href="tutorial_recording_and_editing.html" title="Tutorial - Recording and Editing"> Recording and Editing</a>
+<p>For information on editing please refer to <a href="basic_recording_editing_and_exporting.html" title="Basic Recording, Editing and Exporting">Basic Recording, Editing and Exporting</a>
 </p><p>If you have not been able to make a test recording and find that you have some clipping in the real recording then, provided that the clipping is not too severe, you may be able to repair the clipping with Audacity's <span class="menu">Effect &gt; <a href="clip_fix.html" title="Clip Fix">Clip Fix</a></span>.  You should use the Clip Fix effect to repair any clipping immediately after recording and prior to undertaking any further editing.
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619091821
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.150 seconds
-Real time usage: 0.161 seconds
-Preprocessor visited node count: 333/1000000
-Preprocessor generated node count: 1285/1000000
-Post-expand include size: 9386/2097152 bytes
-Template argument size: 5370/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   46.067      1 - -total
- 69.28%   31.914      1 - Template:I18n
- 64.90%   29.899      1 - Template:I18n_box
- 56.97%   26.246      1 - Template:I18n_list
- 26.20%   12.071      4 - Template:I18n_link
- 15.48%    7.130      4 - Template:Autoglossonym
-  9.17%    4.222      1 - Template:Intro
-  7.73%    3.561      3 - Template:Tip
-  6.39%    2.942      8 - Template:Menu
-  4.20%    1.933      2 - Template:Advice
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3507-0!*!0!!*!5!* and timestamp 20200619091821 and revision id 64459
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -204,7 +183,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -214,9 +193,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -241,13 +220,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -257,7 +235,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_audio_playing_on_the_computer">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_audio_playing_on_the_computer">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

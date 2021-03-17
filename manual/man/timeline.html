@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,9 +32,18 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Timeline#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">The <i><b>Timeline</b></i> displays a horizontal ruler above the tracks measuring time from zero (the start of the track).  Depending on <a href="zooming.html" title="Zooming">zooming</a> the ruler may span minutes of audio or give a "close up" view of a few seconds or fractions of a second. The Timeline is not merely an indicator of audio position but can also be used to effect <a href="#tqp">Quick-Play</a>.<p>A particularly powerful use of the Timeline is in the creation of seamless <a href="tutorial_looping.html#tqp" title="Tutorial - Looping">loops</a>.</p> </div> 
+<div class="intro">The <i><b>Timeline</b></i> displays a horizontal ruler above the tracks measuring time from zero (the start of the track).  Depending on <a href="zooming.html" title="Zooming">zooming</a> the ruler may span minutes of audio or give a "close up" view of a few seconds or fractions of a second. <p>The Timeline is not merely an indicator of audio position but can also be used to effect <a href="#tqp"><b>Quick-Play</b></a>. This functionality can be toggled on/off by <a href="#menu">right clicking</a> in the Timeline and enabling/disabling Quick-Play <i>(default setting is "on")</i>.</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">A particularly powerful use of the Timeline is in the creation of seamless <a href="tutorial_looping.html#tqp" title="Tutorial - Looping">loops</a>.
+</td></tr></table>
+</div> </div> 
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li> <a href="#ruler">The Timeline ruler</a></li>
 <li> <a href="#symbols">Symbols displayed on the Timeline ruler</a></li>
@@ -86,7 +95,6 @@
 <li>Play Region Lock or Unlock may be performed even when the track is playing or paused from playing.</li></ul></li></ul>
 <div id="usage"></div>
 <h2><span class="mw-headline" id="The_Timeline_in_use">The Timeline in use</span></h2>
-
 <dl><dd><b>Standard playback shows:</b></dd>
 <dd><span title="Timeline showing standard playback"><img alt="Timeline01.png" src="../m/images/0/0b/timeline01.png" width="377" height="30" /></span>
 <ul><li> The editing cursor (the black vertical bar)</li>
@@ -151,6 +159,8 @@
 </p><p>Timeline Quick-Play will work with the <a href="#pinned">pinned playhead</a> but clicking in the Timeline to indicate a new start point will cause that position to jump to the centered pinned head so you may find it better working with the unpinned playhead for Quick-Play.
 </p>
 <dl><dd><span title="Timeline Quick-Play white line on the waveform to aid precision location"><img alt="Timeline Quickplay white line.png" src="../m/images/4/4b/timeline_quickplay_white_line.png" width="698" height="203" /></span></dd></dl>
+<p>This functionality can be toggled on/off by <a href="#menu">right clicking</a> in the Timeline and enabling/disabling Quick-Play <i>(default setting is "on")</i>.
+</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -185,7 +195,7 @@
 <p><span class="kbrd" style="background-color: #d0d0f8">Right-click</span> on the Timeline gives access to options that are convenient when using Timeline Quick-Play, via a short context menu.
 </p>
 <dl><dd><span title="Timeline right-click context menu"><img alt="Timeline right click menu 2-4-0.png" src="../m/images/f/f5/timeline_right_click_menu_2_4_0.png" width="313" height="165" /></span></dd></dl>
-<p><b>Enable Quick-Play</b>: Turns the Timeline Quick-Play functionality on or off <i>(some users may find the white cursor line on the waveform distracting when navigating over the Timeline)</i>.  The default setting is "on".
+<p><b>Enable Quick-Play</b>: Turns the Timeline Quick-Play functionality on or off.  The default setting is "on".
 </p><p><b>Enable dragging selection</b>:  When disabled (default), left-click and dragging the Play Region adjusts the Play Region only, leaving the current selection or editing cursor unaffected.
 When enabled, left-click and dragging the Play Region adjusts both the Play Region and the waveform selection together. This is particularly useful when finding the right place for a <a href="tutorial_looping.html" title="Tutorial - Looping">seamless loop</a>. 
 </p><p><b>Update display while playing</b>: By default the waveform scrolls when playing. Disabling this option so as not to scroll can be useful when using Quick-Play to adjust the start and end of <a href="tutorial_looping.html" title="Tutorial - Looping">loops</a>. Not scrolling ensures that the edges of the looped selection do not move if zooming in moves the playback point outside the visible area. The alternative method of disabling scrolling is to use <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> and remove the checkmark from <i><b>Auto-scroll if head unpinned</b></i>.
@@ -194,39 +204,13 @@ When enabled, left-click and dragging the Play Region adjusts both the Play Regi
 
 <p><b>Pinned Play Head:</b> You can change Audacity to play and record with a <a href="#pinned">fixed head pinned</a> to a position in the Timeline. In this mode the head remains static and the waveforms will move as the audio is played or recorded. The default setting is "off"
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619121548
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.245 seconds
-Real time usage: 0.262 seconds
-Preprocessor visited node count: 631/1000000
-Preprocessor generated node count: 1665/1000000
-Post-expand include size: 9992/2097152 bytes
-Template argument size: 4120/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   72.968      1 - -total
- 60.23%   43.947      1 - Template:I18n
- 57.18%   41.724      1 - Template:I18n_box
- 51.43%   37.530      1 - Template:I18n_list
- 30.56%   22.297      8 - Template:I18n_link
- 16.72%   12.197      8 - Template:Autoglossonym
-  8.37%    6.107      7 - Template:Shortcut
-  5.74%    4.186      5 - Template:Key
-  4.61%    3.361      3 - Template:Ednote
-  3.21%    2.341      4 - Template:Menu
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2521-0!*!0!!*!5!* and timestamp 20200619121547 and revision id 66825
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -244,7 +228,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -254,9 +238,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -281,13 +265,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -297,7 +280,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Timeline">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Timeline">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

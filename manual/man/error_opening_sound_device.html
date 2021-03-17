@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This error message asks you to check the recording or playback device settings and the Audacity <a href="selection_toolbar.html" title="Selection Toolbar">project sample rate</a>. 
 <p>There are three forms of this message
 </p>
@@ -47,7 +47,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 <li><a href="#audsettings">Check Audacity settings</a></li>
 <li><a href="#ossettings">Check sound device drivers and firmware</a>
 <ul><li><a href="#winsettings">Windows</a></li>
-<li><a href="#macsettings">macOS / Mac OS X</a></li>
+<li><a href="#macsettings">macOS</a></li>
 <li><a href="#linuxsettings">Linux</a></li></ul></li>
 <li><a href="#drivers">Check sound device drivers and firmware</a></li>
 <li><a href="#device">Check PCI card or external sound device settings and connections</a></li>
@@ -58,7 +58,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 <div id="W10mic"></div>
 <h2><span class="mw-headline" id="Windows_10_April_2018_Update_resulting_microphone_problems">Windows 10 April 2018 Update resulting microphone problems</span></h2>
 <p>For some users Windows 10 is now blocking Audacity from using the microphone, on the basis of privacy settings.
-</p><p>After upgrading to version 1803, a small number of users have been reporting that the microphone is getting detected, but it doesn't pick up any sound.
+</p><p>After upgrading to version 1803, a small number of users have been reporting that the microphone is getting detected, but it does not pick up any sound.
 </p><p>In order to get around this issue, Microsoft recommends that you need to enable the microphone in your Privacy settings using these steps:
 </p>
 <ol><li>Open <b>Settings</b></li>
@@ -71,7 +71,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 <div id="audsettings"></div>
 <h2><span class="mw-headline" id="Check_Audacity_settings">Check Audacity settings</span></h2>
 <div class="note">It may be a good idea to try to play or record after checking or changing each of the following Audacity settings. Sometimes a project rate change is all that is needed.</div>
-<ul><li> Set the project rate bottom left of the Audacity window to the standard rate of 44100 Hz (or if your audio interface only supports a particular rate such as 48000 Hz, set the project rate to that). <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info...</a></span> should show the rates the device claims to support. </li></ul>
+<ul><li> Set the project rate bottom left of the Audacity window to the standard rate of 44,100 Hz (or if your audio interface only supports a particular rate such as 48,000 Hz, set the project rate to that). <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info...</a></span> should show the rates the device claims to support. </li></ul>
 <ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> (this should never be enabled if <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer">recording computer playback</a>). </li></ul>
 <ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a></span> because recording while playing could stress your sound device or computer. If this solves the problem, read the Wiki pages <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating Sound Device Drivers</a> and <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers">Managing Computer Resources and Drivers</a> for advice on how to make your sound device or computer more capable. </li></ul>
 <ul><li>Check in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> that the playback and recording devices are correctly and explicitly selected. 
@@ -127,46 +127,25 @@ The recording device message most commonly occurs on Windows when one of the sou
 </p>
 <div id="codes"></div>
 <h2><span class="mw-headline" id="Numeric_error_codes">Numeric error codes</span></h2>
-<ul><li><b>9996 Invalid device</b>: this means that the sound device is not valid, if it is an external sound device:
+<ul><li><b>-9996 Invalid device</b>: this means that the sound device is not valid, if it is an external sound device:
 <ol><li>it may have been unplugged</li>
 <li>you may have a faulty or loose connection </li>
 <li>you may have a bad lead</li>
 <li>the device itself may be faulty.</li></ol></li>
-<li><b>9997 Invalid sample rate</b>: make sure that you have matched the sample rate in Audacity with that set on your device - both for playback and recording.</li>
-<li><b>9999 Unanticipated host error</b>: this means means "something is wrong". And appears to most often be due to either:
+<li><b>-9997 Invalid sample rate</b>: make sure that you have matched the sample rate in Audacity with that set on your device - both for playback and recording.</li>
+<li><b>-9999 Unanticipated host error</b>: this means means "something is wrong". And appears to most often be due to either:
 <ol><li>A lost connection to a USB audio device.</li>
 <li>Recent <a href="#W10mic">Windows</a> / <a href="faq_recording_troubleshooting.html#mac_silence" title="FAQ:Recording - Troubleshooting">Mac</a> update requiring that user gives permission for Audacity to access the microphone.</li></ol></li></ul>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="faq_errors.html" title="FAQ:Errors"><b>|&lt;</b> FAQ:Errors</a>
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125220
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.056 seconds
-Real time usage: 0.059 seconds
-Preprocessor visited node count: 146/1000000
-Preprocessor generated node count: 397/1000000
-Post-expand include size: 3794/2097152 bytes
-Template argument size: 3411/2097152 bytes
-Highest expansion depth: 5/40
-Expensive parser function count: 0/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   14.849      1 - -total
- 32.76%    4.865      2 - Template:Hint
- 25.31%    3.758      1 - Template:Intro
- 23.83%    3.538      4 - Template:Note
- 21.88%    3.248      8 - Template:Menu
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5795-0!*!0!!*!*!* and timestamp 20200619125220 and revision id 64870
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -184,7 +163,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -194,9 +173,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -221,13 +200,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -237,7 +215,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Click_and_pop_removal_techniques#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">There are a number of ways you can use Audacity to remove clicks and pops from your recording. First, without zooming in too far, visually inspect your recording for clicks - they will show up as abnormally tall (sticking up or down), very narrow (one or two pixels wide) vertical lines protruding from the waveform. 
 <p>The primary tool in Audacity for dealing with clicks and pops is the <a href="click_removal.html" title="Click Removal">Click Removal</a> effect.
@@ -43,7 +43,6 @@
 <li> For somewhat longer regions of audio, try: 
 <ul><li> <a href="edit_menu_remove_special.html#silence" title="Edit Menu: Remove Special">Silence Audio</a> The silenced sections must be short enough so as to not be audible. </li>
 <li> <a href="tools_toolbar.html#draw" title="Tools Toolbar">Draw Tool</a> The principle is to put samples back into line with their neighbors to smooth out the contours of the samples and so attenuate the click or pop.</li></ul></li></ul>
- </li></ul></li></ul>
 </div>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
@@ -69,7 +68,7 @@
 </p><p>Very soft and rapid light ticks that sound like static electricity and which are typical of vinyl (even though the pressing is often the cause rather than a static charge) will not be effectively removed with Click Removal. For this type of noise, select an area of vinyl that contains only the noise (no music or speech) and use <span class="menu">Effect &gt; <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a></span>.
 </p><p>For details of how Audacity's Click Removal works see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_Effects_Work#Click_Removal">this page</a> in the Wiki.
 </p>
-<div class="note">Click Removal requires an audio selection of more than 4096 samples. This is about 93 milliseconds at 44100 Hz project rate as shown in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>.  </div>
+<div class="note">Click Removal requires an audio selection of more than 4,096 samples. This is about 93 milliseconds at 44,100 Hz project rate as shown in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>.  </div>
 <h2><span class="mw-headline" id="Repair_of_short_sections">Repair of short sections</span></h2>
 <p>Audacity has a <a href="repair.html" title="Repair">Repair</a> effect which can be used to repair a short length of up to 128 <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i> long <i>(for most audio, only a few thousandths of a second)</i> by <i><b><a href="glossary.html#interpolate" title="Glossary">interpolating</a></b></i> from the neighboring samples. You will need to <a href="edit_toolbar.html#zoomin" title="Edit Toolbar">zoom in</a> to see the individual <a href="zooming.html#samples" title="Zooming">samples</a> to use this effect.
 </p><p>Above this length, it becomes too hard to interpolate what should be going on in the section under repair. You will get an error message if you select too much audio to try and repair. In general, the shorter the section of audio you select to repair, the better the results will be.
@@ -83,13 +82,13 @@
 </p><p>Some patience may be needed with this tool, but the principle is to put samples back into line with their neighbors so that a smooth contour is presented.
 </p>
 <h2><span class="mw-headline" id="Use_Spectrogram_view_to_identify_clicks_more_easily">Use Spectrogram view to identify clicks more easily</span></h2>
-<p><a href="click_removal_using_the_spectrogram_view.html" title="Click removal using the Spectrogram view">Click removal using the Spectrogram view</a> is a workflow tutorial giving steps to remove hard-to-spot clicks using Audacity's <a rel="nofollow" class="external text" href="https://manual.audacityteam.org/o/man/track_drop_down_menu.html#spgram">Spectrogram</a> view. In the default <a rel="nofollow" class="external text" href="https://manual.audacityteam.org/o/man/track_drop_down_menu.html#wave">Waveform</a> view, loud clicks often show up as easily seen spikes, but smaller, lower amplitude clicks can be very hard to find without zooming in to near sample level then scrolling the waveform to identify the exact location of the clicks. Considerable time can be saved by first using Spectrogram view which identifies clicky regions more readily.
+<p><a href="click_removal_using_the_spectrogram_view.html" title="Click removal using the Spectrogram view">Click removal using the Spectrogram view</a> is a workflow tutorial giving steps to remove hard-to-spot clicks using Audacity's <a href="spectrogram_view.html" title="Spectrogram View">Spectrogram View</a> view. In the default <a href="audacity_waveform.html" title="Audacity Waveform">Waveform View</a>, loud clicks often show up as easily seen spikes, but smaller, lower amplitude clicks can be very hard to find without zooming in to near sample level then scrolling the waveform to identify the exact location of the clicks. Considerable time can be saved by first using Spectrogram view which identifies clicky regions more readily.
 </p>
 <h2><span class="mw-headline" id="Other_techniques">Other techniques</span></h2>
 <p>Silencing highly zoomed areas or redrawing samples can get tedious even over a relatively short stretch of audio. Here are a few other tricks you can try if Click Removal did not help as much as you hoped.  
 </p>
 <h3><span class="mw-headline" id="Spectrum_analysis">Spectrum analysis</span></h3>
-<p>Analyse the area with <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span> to see if any spikes are concentrated in particular frequencies and then use <span class="menu">Effect &gt; <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></span> or <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span> to reduce the volume of those frequencies. 
+<p>Analyze the area with <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span> to see if any spikes are concentrated in particular frequencies and then use <span class="menu">Effect &gt; <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></span> or <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span> to reduce the volume of those frequencies. 
 </p><p>You can do this more precisely with the <span class="menu">Effect &gt; <a href="notch_filter.html" title="Notch Filter">Notch Filter</a></span>.
 </p>
 <h3><span class="mw-headline" id="Subtraction">Subtraction</span></h3>
@@ -126,39 +125,13 @@
 <div class="note">The trial version limits you to a hundred or so commands per session, and a total number of several thousand commands before it expires, but if you export from Audacity as 32-bit WAV and just do Click Removal in it, you should be able to declick several hundred records for free. </div>
 <ul><li><b><a rel="nofollow" class="external text" href="http://gwc.sourceforge.net/">Gnome Wave Cleaner</a></b>: Only for Linux users.  Digital restoration of CD-quality audio files. Dehiss, declick and decrackle in a GUI environment. It can also automatically mark song boundaries if required.</li></ul>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125122
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.115 seconds
-Real time usage: 0.121 seconds
-Preprocessor visited node count: 363/1000000
-Preprocessor generated node count: 1553/1000000
-Post-expand include size: 7149/2097152 bytes
-Template argument size: 4340/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   49.141      1 - -total
- 50.86%   24.995      1 - Template:I18n
- 46.22%   22.712      1 - Template:I18n_box
- 37.57%   18.463      1 - Template:I18n_list
- 13.61%    6.687      2 - Template:I18n_link
- 10.35%    5.086      5 - Template:Shortcut
-  7.87%    3.866      2 - Template:Autoglossonym
-  7.65%    3.757      1 - Template:Intro
-  6.65%    3.269     10 - Template:Menu
-  3.95%    1.939      3 - Template:Note
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5210-0!*!0!!en!5!* and timestamp 20200619125122 and revision id 66002
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -176,7 +149,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -186,9 +159,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -213,13 +186,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -229,7 +201,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Click_and_pop_removal_techniques">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Click_and_pop_removal_techniques">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

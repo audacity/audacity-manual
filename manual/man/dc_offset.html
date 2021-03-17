@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,20 +32,19 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/DC_offset#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>DC offset</b></i>  is a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/DC_bias">mean amplitude displacement from zero</a>. In Audacity it can be seen as an offset of the recorded waveform away from the center zero point. DC offset  is a potential source of clicks, distortion and loss of audio volume.<br /><i>This page explains the causes and dangers of offset and how to remove it.  Ideally any DC offset that is present should be removed as the first editing step after recording audio or importing it, before any other editing is attempted. </i></div> 
+<div class="intro"><i><b>DC offset</b></i>  is a <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/DC_bias">mean amplitude displacement from zero</a>. In Audacity it can be seen as an offset of the recorded waveform away from the center zero point. DC offset  is a potential source of clicks, distortion and loss of audio volume.<br /><i>This page explains the causes and dangers of offset and how to remove it.  Ideally any DC offset that is present should be removed as the first editing step after recording audio or importing it, before any other editing is attempted. </i></div> 
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Background"><span class="tocnumber">1</span> <span class="toctext">Background</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Removing_DC_offset"><span class="tocnumber">2</span> <span class="toctext">Removing DC offset</span></a>
 <ul>
 <li class="toclevel-2 tocsection-3"><a href="#Audacity.27s_Normalize_Effect"><span class="tocnumber">2.1</span> <span class="toctext">Audacity's Normalize Effect</span></a></li>
-<li class="toclevel-2 tocsection-4"><a href="#LADSPA_dcRemove"><span class="tocnumber">2.2</span> <span class="toctext">LADSPA dcRemove</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Cancel_DC_offset_in_sound_devices_on_Windows"><span class="tocnumber">2.3</span> <span class="toctext">Cancel DC offset in sound devices on Windows</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Cancel_DC_offset_in_sound_devices_on_Windows"><span class="tocnumber">2.2</span> <span class="toctext">Cancel DC offset in sound devices on Windows</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-6"><a href="#Limitations_of_offset_removal"><span class="tocnumber">3</span> <span class="toctext">Limitations of offset removal</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Limitations_of_offset_removal"><span class="tocnumber">3</span> <span class="toctext">Limitations of offset removal</span></a></li>
 </ul>
 </div>
 
@@ -70,11 +69,6 @@
 <h2><span class="mw-headline" id="Removing_DC_offset">Removing DC offset</span></h2>
 <h3><span class="mw-headline" id="Audacity.27s_Normalize_Effect">Audacity's Normalize Effect</span></h3>
 <p>Audacity's DC removal method performs a calculation to make the average positive and negative sample values equal. To perform removal, choose <span class="menu">Effect &gt; Normalize...</span>,  with the option checked "<b>Remove any DC offset (center on 0 vertically)</b>". Uncheck the "Normalize maximum amplitude..." box unless you want to run Normalize as well (see <a href="amplify_and_normalize.html" title="Amplify and Normalize">Amplify and Normalize</a> for what Normalize does and when to use it).
-</p>
-</li></ul>
-<div id="dcremove"></div>
-<h3><span class="mw-headline" id="LADSPA_dcRemove">LADSPA dcRemove</span></h3>
-<p>An alternative method is to use the <i>dcRemove</i> plug-in in the <i>swh LADSPA plug-ins bundle</i>. Links to the bundle are on <b><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Ladspa_Plugins">this page on the Audacity wiki</a></b>. The plug-in <i>dcRemove</i> uses a <a href="high_pass_filter.html" title="High-Pass Filter">High-Pass Filter</a> to remove the DC (0 Hz) component from the audio. 
 </p>
 <div id="cancel"></div>
 <h3><span class="mw-headline" id="Cancel_DC_offset_in_sound_devices_on_Windows">Cancel DC offset in sound devices on Windows</span></h3>
@@ -101,42 +95,16 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top"><b>Note: Removing offset after the event does not reinstate the original loss of headroom.</b> Without offset it would have been possible to record louder, so with greater <a rel="nofollow" class="external text" href="https://manual.audacityteam.org/o/man/glossary.html#dynamic_range">dynamic range</a> and greater signal-to-noise ratio. It is always preferable to try to find and fix the source of the offset in the hardware. <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating your sound device drivers</a> might help, too.
+<td align="left" valign="top"><b>Note: Removing offset after the event does not reinstate the original loss of headroom.</b> Without offset it would have been possible to record louder, so with greater <a href="glossary.html#dynamic_range_dynamic_range" title="Glossary">Glossary#dynamic_range dynamic range</a> and greater signal-to-noise ratio. It is always preferable to try to find and fix the source of the offset in the hardware. <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating your sound device drivers</a> might help, too.
 </td></tr></table></div>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125206
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.092 seconds
-Real time usage: 0.097 seconds
-Preprocessor visited node count: 218/1000000
-Preprocessor generated node count: 1147/1000000
-Post-expand include size: 9534/2097152 bytes
-Template argument size: 7160/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   27.017      1 - -total
- 72.55%   19.600      1 - Template:I18n
- 66.59%   17.990      1 - Template:I18n_box
- 54.73%   14.786      1 - Template:I18n_list
- 21.25%    5.741      2 - Template:I18n_link
- 12.43%    3.357      2 - Template:Autoglossonym
-  6.25%    1.690      5 - Template:Menu
-  5.83%    1.576      1 - Template:Intro
-  4.84%    1.307      2 - Template:Advice
-  3.81%    1.028      1 - Template:Ednote
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4843-0!*!0!!en!5!* and timestamp 20200619125206 and revision id 63016
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -154,7 +122,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -164,9 +132,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -191,13 +159,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -207,7 +174,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/DC_offset">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/DC_offset">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Recording#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 
 <div class="intro">This page provides a detailed description of various ways of controlling recording in Audacity, including how to control where and which track you record in and keyboard shortcut commands. 
@@ -55,6 +55,7 @@
 <ul><li> <a href="#continue">Continuing recording in a new track</a></li>
 <li> <a href="#region">Recording a region in a new track</a></li></ul></li>
 <li> <a href="#duration">Recording for a specific length of time</a></li>
+<li> <a href="#remaining">Maximum recording length</a></li>
 <li> <a href="#punch">Punch and Roll recording <i>(for correcting errors)</i></a></li>
 <li> <a href="#arm">Arming Audacity for recording</a></li>
 <li> <a href="#dropouts">Dropouts (small skips) in your recording</a></li>
@@ -149,6 +150,22 @@
 </td></tr></table></div>
 <p><br />
 </p>
+<div id="remaining"></div>
+<h2><span class="mw-headline" id="Maximum_recording_length">Maximum recording length</span></h2>
+<p>Audacity does not restrict the maximum recording length beyond the practical limitation that recording takes space on your drive so you can only record while the drive still has space available. 
+</p><p>When you start to record, Audacity shows a "Disk space remains for recording" message in the <a href="status_bar.html" title="Status Bar">Status Bar</a> at bottom left of the Audacity window giving the current recording time available. 
+</p><p>With default Audacity settings, stereo recording takes 1.2 GB of space per hour. 
+</p>
+<div class="note">After recording you will still need space to <a href="file_export_dialog.html" title="File Export Dialog">export</a> the recording as an audio file for your computer. Editing the recording before export takes extra space. Each edit of a region requires as much extra disk space as was required to originally record that section.</div>
+<p>To get more recording time:
+</p>
+<ul><li> Delete your old files and folders (especially your old <a href="audacity_projects.html" title="Audacity Projects">Audacity Project</a> files when you have finished with them)</li>
+<li> Select an alternative drive that has more space in the <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a> (but do not record to an external USB or FireWire disk because recording needs disk access to be as fast as possible)</li>
+<li> Record in mono instead of stereo (settable at "Recording Channels" in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> or in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>)</li>
+<li> Set the "Default Sample Format" in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a> to 16-bit instead of 32-bit (this is a good choice for a "quick recording" which you export at once without editing).</li></ul>
+<p>See <a href="recording_length.html" title="Recording length">Recording length</a> for more details.
+</p><p><br />
+</p>
 <div id="punch"></div>
 <h2><span class="mw-headline" id="Punch_and_Roll_recording"><a href="punch_and_roll_record.html" title="Punch and Roll Record">Punch and Roll recording</a></span></h2>
 <ul><li>This enables you to to correct errors easily during the course of a recording session.</li>
@@ -198,39 +215,13 @@
 <h2><span class="mw-headline" id="Hardware_influence_on_Recording_Quality">Hardware influence on Recording Quality</span></h2>
 <p>The Audacity <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a> has some useful information on how your <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Hardware_influence_on_recording_quality"><b>hardware can affect your recording quality</b></a>.
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125048
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.150 seconds
-Real time usage: 0.155 seconds
-Preprocessor visited node count: 359/1000000
-Preprocessor generated node count: 902/1000000
-Post-expand include size: 8048/2097152 bytes
-Template argument size: 4552/2097152 bytes
-Highest expansion depth: 4/40
-Expensive parser function count: 0/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   31.158      1 - -total
- 23.12%    7.203      9 - Template:Shortcut
- 20.19%    6.291      4 - Template:Tip
- 18.67%    5.816      1 - Template:Intro
- 13.33%    4.154      6 - Template:Key
-  6.80%    2.120      2 - Template:Button
-  6.63%    2.066      2 - Template:Ednote
-  5.51%    1.717      3 - Template:Note
-  4.46%    1.391      2 - Template:Menu
-  4.30%    1.339      1 - Template:Advice
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:5251-0!*!0!!*!5!* and timestamp 20200619125048 and revision id 67613
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -248,7 +239,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -258,9 +249,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -285,13 +276,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -301,7 +291,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Recording">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Recording">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

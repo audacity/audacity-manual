@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,10 +32,10 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Overdubbing_using_your_computer%27s_on-board_sound_card#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">This tutorial is designed to help you record multi-track overdubs if your equipment does not have hardware playthrough of the live recording and software playthrough is not an option. Before starting this tutorial you can try the following playthrough possibilities. 
-<ul><li> On Windows or Linux, try unmuting your input in the playback side of the system mixer. This will give you low latency <i>hardware playthrough</i> of what you are recording. </li>
+<ul><li> On Windows or Linux, try un-muting your input in the playback side of the system mixer. This will give you low latency <i>hardware playthrough</i> of what you are recording. </li>
 <li> On all operating systems, try <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> in Audacity instead, but this will always mean you hear yourself late and could cause audio breakup. </li>
 <li>To achieve lower latency software playthrough on Windows you can:
 <ul><li> (Only gives somewhat lower latency): On Windows, right-click over the "Speaker icon" <i>(by the system clock)</i> choose  "Sounds" and then "Recording". Right-click over the input, choose <b>Properties</b> then on the "Listen" tab, enable "Listen to this device". </li>
@@ -44,7 +44,7 @@
 <p>This tutorial describes a known working method of creating a multiple sound track overdubbing session from scratch in Audacity; that is, you record one track and then play it back and add a second track against it -- drums, guitar, voice -- repeat as needed. 
 </p><p>This process uses your computer's built-in microphone and a pair of headphones. You must be happy with not hearing yourself -- your live performance -- in real-time in your headphones. You will hear all the previous tracks mixed as you wish, but your live voice or performance will not be in the mix until you finish recording and play the whole thing back.  Including your live voice in the electronic mix on a home computer can be very difficult.
 </p>
-<div class="note">You can leave one earphone off and cup your hand so it forms a tunnel between your lips and your ear. Some professional recording artists feel this is a more natural method.</div>
+<div class="note">You can leave one earphone off and cup your hand so it forms a tunnel between your lips and your ear. Some professional recording artists feel this is a more natural method. </div>
 <h2><span class="mw-headline" id="Hardware">Hardware</span></h2>
 <p>Almost any Windows\xc2\xae, Mac\xc2\xae or Linux\xc2\xae machine with a built-in microphone can be used.
 </p><p>Our example here uses Mac earbuds for listening, but nearly any good headphones or earbuds are OK. 
@@ -98,20 +98,20 @@
 <ul><li> (Only gives somewhat lower latency): On Windows, right-click over the "Speaker icon" by the system clock, choose <b>Recording</b>, right-click over the input device, choose <b>Properties</b> then on the "Listen" tab, enable "Listen to this device". </li>
 <li> (Advanced) Compile Audacity with <a href="asio_audio_interface.html" title="ASIO Audio Interface">ASIO\xc2\xae</a> true low latency support. Ask on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=19">Compiling Audacity</a> board of the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a> if you need help.</div></li></ul>
 <h2><span class="mw-headline" id="Performance">Performance</span></h2>
-<p>Click on the <b>[X]</b> in the <b>Track Control Panels</b> to delete all the test tracks. You're ready for the first proper recording session. The first recording can be whatever you're planning to use as a base, backing track, guide or rhythm track. It can be anything including <span class="menu">Generate &gt; <a href="rhythm_track.html" title="Rhythm Track">Rhythm Track</a></span> which can be adjusted with its control panel for rhythm and composition. You could use the music from a rhythm and chord machine playing to the mixer. You could use existing sound files.
+<p>Click on the <b>[X]</b> in the <b>Track Control Panels</b> to delete all the test tracks. You are ready for the first proper recording session. The first recording can be whatever you are planning to use as a base, backing track, guide or rhythm track. It can be anything including <span class="menu">Generate &gt; <a href="rhythm_track.html" title="Rhythm Track">Rhythm Track</a></span> which can be adjusted with its control panel for rhythm and composition. You could use the music from a rhythm and chord machine playing to the mixer. You could use existing sound files.
 </p><p>You should record a lead-in. That is, a non-musical rhythmical clue before the music starts so as to warn you of the imminent start. In a live band, this would be the drummer or lead guitar count-in. You could use the keyboard rhythm stops or you can perform several rim shots into the microphone to establish the rhythm before the first note; tapping on the table with a pencil also works.  You can sheer it off later in post production so nobody else will hear it. Tick, tick, tick, tick, music; adjust as appropriate for music type and rhythm.
 </p><p>Click "<b>Stop</b>", then "<b>Home</b>" and then "<b>Shift + Record</b>" to record track two using your live performance and track playback in your headphone mix as a guide. Repeat for as many tracks as required.
 </p><p>The "<b>Mute</b>" and "<b>Solo</b>" buttons to the left of each track are valuable in overdubbing. Solo causes only that track to play and Mute turns that track off. Solo has options that can be set in <a href="preferences.html" title="Preferences">Preferences</a>. The little volume control to the left of each timeline also controls the playback volume -- it affects the headphone mix.
 </p><p>When you get to a stopping point click the <b>Stop</b> button <img alt="Play button" src="../m/images/f/f9/stop.png" title="Play button" width="16" height="16" /> then choose <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> to save your project. 
-</p><p>As you progress, you should save a new Project periodically with a slightly different file name using <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_lossless_copy_of_project" title="File Menu: Save Project">Save Lossless Copy of Project...</a></span>. A good recommendation is to use ISO date and time for the file names or the start of the file names; refrain from using slash marks or other punctuation marks in a file name.
-</p><p>201110011500.aup    That's 3PM. 2011 October First, 1500hrs.
+</p><p>As you progress, you should save a new Project periodically with a slightly different file name using <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project...</a></span>. A good recommendation is to use ISO date and time for the file names or the start of the file names; refrain from using slash marks or other punctuation marks in a file name.
+</p><p>201110011500.aup3    That's 3PM. 2011 October First, 1500hrs.
 </p><p>Then save a new version of the song about every twenty minutes:<br />
-201110011520.aup<br />
-201110011545.aup<br />
-201110011602.aup}}
+201110011520.aup3<br />
+201110011545.aup3<br />
+201110011602.aup3
 </p><p>Do not go weeks with one Project and file name, and never cover up or record over existing work. If anything happened to that one Project, your project would be ruined and could nullify weeks of work. Think of what would happen if the lights went out right now, the computer ground to a halt and you were forced to use the last known good version of the show.
-</p><p>For extra safety it is good practice to periodically back up your project versions to a DVD-R or external hard drive for archive purposes. Remember that it is important to keep the AUP file and the _data folder together. One way to make sure of this is to create a zip archive of the AUP file and _data folder. In the unlikely event that the Audacity project is corrupted or your hard drive crashes you will be able to recover your work. 
-</p><p>Note that Audacity projects cannot be played in computer media players nor burned to audio CDs. Export your project as 16-bit WAV or AIF for burning to a CD, or to MP3 for email or internet delivery. See <a href="mixing.html" title="Mixing">Mixing</a> for advice on doing the final mix of your project.
+</p><p>For extra safety it is good practice to periodically back up your project versions to a DVD-R or external hard drive for archive purposes. In the unlikely event that the Audacity project is corrupted or your hard drive crashes you will be able to recover your work. 
+</p><p>Note that Audacity projects cannot be played in computer media players nor burned to audio CDs. Export your project as 16-bit WAV or AIF for burning to a CD, or to MP3 for email or Internet delivery. See <a href="mixing.html" title="Mixing">Mixing</a> for advice on doing the final mix of your project.
 </p>
 <h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
 <ul><li>How much hard disk space do you have available? If your only experience with computer files is with spreadsheets, email or Photoshop pictures, live audio (and video) production will stun you with the amount of disk space it consumes. With high quality overdubbing and UNDO, project files and folders get big in a hurry; with periodic saving, a project can get very seriously large.</li>
@@ -121,39 +121,13 @@
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs"><b>|&lt;</b> Recording Multi-track Overdubs</a><br />
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125757
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.129 seconds
-Real time usage: 0.137 seconds
-Preprocessor visited node count: 317/1000000
-Preprocessor generated node count: 1477/1000000
-Post-expand include size: 7333/2097152 bytes
-Template argument size: 4655/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   52.945      1 - -total
- 55.29%   29.272      1 - Template:I18n
- 50.71%   26.848      1 - Template:I18n_box
- 42.34%   22.416      1 - Template:I18n_list
- 16.69%    8.839      2 - Template:I18n_link
- 12.18%    6.450      1 - Template:Tip
-  8.43%    4.462      2 - Template:Autoglossonym
-  8.16%    4.319      1 - Template:Intro
-  6.02%    3.187      7 - Template:Menu
-  5.55%    2.937      3 - Template:Key
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4838-0!*!0!!*!5!* and timestamp 20200619125757 and revision id 63060
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -171,7 +145,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -181,9 +155,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -208,13 +182,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -224,7 +197,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Overdubbing_using_your_computer%27s_on-board_sound_card">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Overdubbing_using_your_computer%27s_on-board_sound_card">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

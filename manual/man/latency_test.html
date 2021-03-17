@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Latency_Test#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro"><a href="glossary.html#latency" title="Glossary"><b>Latency</b></a> refers to the delay between the time the audio enters the computer and the time Audacity is able to record it to a track. For example, if you are recording a keyboard track, latency is the delay between the time you strike a key and the time that note is recorded.</div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -57,7 +57,7 @@
 <div id="need"></div>
 <h2><span class="mw-headline" id="What_you_need">What you need</span></h2>
 <h3><span class="mw-headline" id="Using_a_microphone">Using a microphone</span></h3>
-<p>If you  are using a microphone to record overdubs then the loop-back cable method will not work for you. Instead you need to set up the microphone in front of a speaker or headphones! Don't worry, you will not get feedback because you've turned <i>Software Playthrough</i> off. 
+<p>If you  are using a microphone to record overdubs then the loop-back cable method will not work for you. Instead you need to set up the microphone in front of a speaker or headphones! Do not worry, you will not get feedback because you have turned <i>Software Playthrough</i> off. 
 </p>
 <dl><dd><table>
 <tr>
@@ -141,7 +141,7 @@
 <td align="left" valign="top">The Buffer length value will affect latency, but the effect will vary between systems. 100 milliseconds is a safe value that will not put too much load on the CPU. Too low a value may put too much load on the CPU causing dropouts in the recording. If you are feeling adventurous you can repeat this test with different values for Buffer length. But in the end you should settle on a value for both <i>Buffer length</i> and <i>Latency compensation</i> and leave them there.
 </td></tr></table></div>
 <h3><span class="mw-headline" id="Selection_toolbar">Selection toolbar</span></h3>
-<p>In <b><a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a></b> make sure that "<a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a>" is set to "Off". Above the second and thrid group of numbers, make sure that <span class="button">Beginning and Length of Selection &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> is selected. Click on one of the downward-pointing arrows in the digits boxes to the right of <b>Snap-To</b> and select <span class="button">hh:mm:ss + milliseconds &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span>.
+<p>In <b><a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a></b> make sure that "<a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a>" is set to "Off". Above the second and thrid group of numbers, make sure that <span class="button">Start and Length of Selection &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> is selected. Click on one of the downward-pointing arrows in the digits boxes to the right of <b>Snap-To</b> and select <span class="button">hh:mm:ss + milliseconds &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span>.
 </p><p><br />
 </p>
 <div id="test"></div>
@@ -178,17 +178,10 @@ You can now read the latency directly from the second panel of numbers. In this 
 <div id="check"></div>
 <h2><span class="mw-headline" id="Checking_the_result">Checking the result</span></h2>
 <p>Delete the second track by clicking the close box <span class="button">X</span> in its Track Control Panel. 
-</p><p>Click the <b>Fit to Width</b> <img alt="Image for the &quot;Fit to Width&quot; button" src="../m/images/4/4a/zoomfit.png" title="Image for the &quot;Fit to Width&quot; button" width="27" height="27" /> button to see the entire click track. Click in the Track Control Panel of the remaining track to select it, then click the <i>Record</i> button.  
+</p><p>Click the <b>Fit to Width</b> <img alt="Image for the &quot;Fit to Width&quot; button" src="../m/images/4/4a/zoomfit.png" title="Image for the &quot;Fit to Width&quot; button" width="27" height="27" /> button to see the entire click track. Click in the Track Control Panel of the remaining track to select it, then press <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and click the <b>Record new track</b> button <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" />.
 </p><p>After the recording is finished Audacity will apply the latency Correction by pushing the newly-recorded track back by the Latency Correction amount. 
 </p>
-<div class="note">Note the two arrows at the left end of the second track - they are warning you that latency correction has been applied and part of the recorded track has been pushed left so that it starts before 0 seconds. This is OK, it is what we wanted to happen. The arrows are there to remind you that latency correction has been applied, just in case that is not what you wanted.</div>
-<dl><dd><table>
-<tr>
-<td><span title="image of track showing arrows at left end"><img alt="LatencyCorrection 220 03.png" src="../m/images/4/43/latencycorrection_220_03.png" width="869" height="358" /></span>
-</td></tr>
-<tr>
-<td align="center"><b>Note the arrows at left end of recorded track: latency correction has been applied with the track moved backwards.</b>
-</td></tr></table></dd></dl>
+<dl><dd><span title="image of track showing synchronized tracks"><img alt="LatencyCorrection 220 03.png" src="../m/images/4/43/latencycorrection_220_03.png" width="869" height="358" /></span></dd></dl>
 <p><br />
 Zoom in on one of the clicks and verify that the clicks in the two tracks line up.
 </p>
@@ -211,39 +204,13 @@ Zoom in on one of the clicks and verify that the clicks in the two tracks line u
 <div id="zero"></div>
 
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125104
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.163 seconds
-Real time usage: 0.172 seconds
-Preprocessor visited node count: 439/1000000
-Preprocessor generated node count: 1635/1000000
-Post-expand include size: 9417/2097152 bytes
-Template argument size: 4845/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   59.480      1 - -total
- 51.60%   30.689      1 - Template:I18n
- 47.98%   28.538      1 - Template:I18n_box
- 40.90%   24.325      1 - Template:I18n_list
- 18.81%   11.189      4 - Template:I18n_link
- 15.10%    8.980      2 - Template:Tip
- 11.07%    6.586      4 - Template:Autoglossonym
-  5.43%    3.230      4 - Template:Button
-  4.79%    2.850      3 - Template:Key
-  3.89%    2.312      1 - Template:Intro
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2749-0!*!0!!*!5!* and timestamp 20200619125104 and revision id 65796
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -261,7 +228,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -271,9 +238,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -298,13 +265,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -314,7 +280,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Latency_Test">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Latency_Test">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

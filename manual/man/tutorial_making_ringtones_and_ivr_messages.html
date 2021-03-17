@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,13 +32,10 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Making_Ringtones_and_IVR_messages#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">
-<p>Most modern cell phones can be customized with the user's own ring and answer tones. This tutorial will help you to prepare suitable sound files. Many different kinds of file formats are used in cell phones, some of which cannot be created by Audacity. You need to research what file format(s) your phone accepts and how to upload it to the phone before you start to prepare the sound file. See our advice below and always consult your phone manual if in doubt.
-</p>
-<p><a href="glossary.html#ivr" title="Glossary">IVR</a> Interactive Voice Response systems usually support customized messages created by the user.</p>
-</div>
+<div class="intro">Most modern cell phones can be customized with the user's own ring and answer tones. This tutorial will help you to prepare suitable sound files. Many different kinds of file formats are used in cell phones, some of which cannot be created by Audacity. You need to research what file format(s) your phone accepts and how to upload it to the phone before you start to prepare the sound file. See our advice below and always consult your phone manual if in doubt.
+<p><a href="glossary.html#ivr" title="Glossary">IVR</a> Interactive Voice Response systems usually support customized messages created by the user.</p> </div>
 <h2><span class="mw-headline" id="Step_1:_What_type_of_file_does_your_phone_or_IVR_system_require.3F">Step 1: What type of file does your phone or IVR system require?</span></h2>
 <h3><span class="mw-headline" id="Ringtones">Ringtones</span></h3>
 <p>You need to check what type of file format your phone requires for its ringtones and whether the file needs to be mono or stereo. 
@@ -46,7 +43,7 @@
 </p>
 <ul><li> <b>Music ringtones</b> - digitally sampled audio files including MP3 and WAV formats supported by Audacity, plus other formats like AMR and QCP. </li>
 <li> <b>Polyphonic</b> -  multiple notes at the same time; some phones can play true MIDI files, others rely on sp-midi or .mmf formats.</li>
-<li> <b>Monophonic</b> - just one note at a time, usually RTTL format. If you want a ringtone in this format it's often easiest to simply use the phone's keypad to enter it if the phone supports that.    </li></ul>
+<li> <b>Monophonic</b> - just one note at a time, usually RTTL format. If you want a ringtone in this format it is often easiest to simply use the phone's keypad to enter it if the phone supports that.    </li></ul>
 <p>Most modern PDA phones <i>(computer phones)</i> will support music ringtones, older phones are likely to support polyphonic ringtones, really old phones will only support monophonic ringtones.
 </p>
 <h3><span class="mw-headline" id="IVR_messages">IVR messages</span></h3>
@@ -55,11 +52,11 @@
 <h2><span class="mw-headline" id="Step_2:_Choose_the_ringtone_or_IVR_message_source">Step 2: Choose the ringtone or IVR message source</span></h2>
 <h3><span class="mw-headline" id="Existing_audio_file">Existing audio file</span></h3>
 <p>The source for your ringtone or IVR message will most likely be an audio file on your computer. Click <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#audio" title="File Menu: Import">Audio...</a></span>, select the file you want and click <span class="button">Open</span>. Audacity can import MP3, MP2, WAV, AIFF, OGG and FLAC files (and MP4 files on Mac OS  X) without additional libraries. 
-</p><p>To import other file types (including MP4 on Windows and Linux) you can install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>. On Linux it may sometimes be more convenient to use the system FFmpeg or <a rel="nofollow" class="external text" href="http://www.mplayerhq.hu/design7/info.html">mplayer</a> at the command-line to convert other file types to 16-bit 44100 Hz WAV before importing the file into Audacity.
+</p><p>To import other file types (including MP4 on Windows and Linux) you can install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>. On Linux it may sometimes be more convenient to use the system FFmpeg or <a rel="nofollow" class="external text" href="http://www.mplayerhq.hu/design7/info.html">mplayer</a> at the command-line to convert other file types to 16-bit 44,100 Hz WAV before importing the file into Audacity.
 </p>
 <h3><span class="mw-headline" id="Recording_an_audio_file">Recording an audio file</span></h3>
 <ul><li>You may wish to record you cat/dog/partner or any other sound with a <a href="tutorial_your_first_recording.html" title="Tutorial - Your First Recording">microphone</a> for use as a ringtone.</li></ul>
-<ul><li>Alternatively, you can play any audio file on your computer (including purchased files), a CD, or any other sound on your computer including sounds playing over the internet, and <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer"> record the sound</a>. This is not the highest quality way to grab the sound from a CD or from a purchased file, but it is probably adequate for making a ringtone as quality often needs to be compromised in a ringtone to make the file size smaller. If you want to grab a perfect digital copy of the CD track, or you cannot record it easily, extract it digitally to WAV or .AIFF as described at <a href="faq_opening_and_saving_files.html#fromcd" title="FAQ:Opening and Saving Files">Importing data from CDs</a>. To make a perfect copy of a purchased file, burn it to an audio CD in the application licensed to play it, then extract the CD track in the same way.</li></ul>
+<ul><li>Alternatively, you can play any audio file on your computer (including purchased files), a CD, or any other sound on your computer including sounds playing over the Internet, and <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer"> record the sound</a>. This is not the highest quality way to grab the sound from a CD or from a purchased file, but it is probably adequate for making a ringtone as quality often needs to be compromised in a ringtone to make the file size smaller. If you want to grab a perfect digital copy of the CD track, or you cannot record it easily, extract it digitally to WAV or .AIFF as described at <a href="faq_opening_and_saving_files.html#fromcd" title="FAQ:Opening and Saving Files">Importing data from CDs</a>. To make a perfect copy of a purchased file, burn it to an audio CD in the application licensed to play it, then extract the CD track in the same way.</li></ul>
 <div id="edit"></div>
 <h2><span class="mw-headline" id="Step_3:_Edit_your_chosen_ringtone_or_IVR_message">Step 3: Edit your chosen ringtone or IVR message</span></h2>
 <ol><li>Click <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#audio" title="File Menu: Import">Audio...</a></span> and import your source file; this can be any audio file Audacity can open.</li>
@@ -68,15 +65,16 @@
 <li>Add any effects you may want to the ringtone by clicking in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> where the mute/solo buttons are to select all the track (you may also use the Edit menu or a keyboard shortcut), then choose from the <b>Effect</b> menu. Be sparing with effects, but some you may want to consider are:</li></ol>
 <h3><span class="mw-headline" id="Equalization"><a href="filter_curve_eq.html" title="Filter Curve EQ">Equalization</a></span></h3>
 <p>Many phone speakers cannot reproduce very low frequencies so consider attenuating them <i>(a gradual reduction in the amplitude of the sound level)</i>, especially if you are making a ringtone from an original high quality music file. On opening <span class="menu">Effect &gt; <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></span> you will notice a horizontal line at 0 dB, meaning that at that position, no changes are made to the volume of any frequencies. A curve can be created using the mouse, clicking at various points above or below the line. For ringtones, bring the line down to -24 dB on the vertical axis for the low frequencies from 30-300 Hz on the horizontal axis. You may want to increase the lower frequencies from 300 Hz to say 600 Hz by dragging them above 0 dB, then reduce the highest frequencies above say 10,000 Hz. This should make the sound somewhat richer and less "tinny" on a small cellphone speaker by emphasizing the frequency range it can reproduce best.
-</p><p>You can view the sound level in the different frequency bands in your ringtone by clicking <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span>. Here is an example spectrum plot from Audacity 2.x for the Nokia original ringtone Hummingbird.aac (47 kbps, 22050Hz, SBR+PS, Mono) converted to WAV (Mono, 22050Hz, 16-bit). This ringtone is quite acute so you can hear the phone from far, something that is essential for a well-made ringtone.
+</p><p>You can view the sound level in the different frequency bands in your ringtone by clicking <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span>. 
+</p><p>Here is an example spectrum plot from Audacity for the NOKIA 3310 - Classic Monophonic Ringtone. This ringtone is quite acute so you can hear the phone from far, something that is essential for a well-made ringtone.
 </p>
-
-<dl><dd><span title="Hummingbird wav nokia frecuency analysis"><img alt="Hummingbird wav nokia frecuency analysis.png" src="../m/images/1/1b/hummingbird_wav_nokia_frecuency_analysis.png" width="574" height="492" /></span></dd></dl>
+<dl><dd><span title="Frequency analysis for NOKIA 3310 - Classic Monophonic Ringtone"><img alt="Frequency Analysis - NOKIA 3310 - Classic Monophonic RINGTONE.png" src="../m/images/0/04/frequency_analysis_nokia_3310_classic_monophonic_ringtone.png" width="718" height="553" /></span></dd></dl>
 <h3><span class="mw-headline" id="Compressor"><a href="compressor.html" title="Compressor">Compressor</a></span></h3>
-<p>Using the <span class="menu"> Effect &gt; <a href="compressor.html" title="Compressor">Compressor</a></span> will reduce the difference between high and low volume which allows you to make the ringtone louder overall. This suits small cellphone speakers which may not be able to handle large changes in dynamic range. You'll probably want to move the <i>Ratio</i> slider to right of its default setting of 2:1 to give stronger compression.  
+<p>Using the <span class="menu"> Effect &gt; <a href="compressor.html" title="Compressor">Compressor</a></span> will reduce the difference between high and low volume which allows you to make the ringtone louder overall. This suits small cellphone speakers which may not be able to handle large changes in dynamic range. You will probably want to move the <i>Ratio</i> slider to right of its default setting of 2:1 to give stronger compression.  
 </p>
 <div class="note">If the <i>"Make-up gain"</i> box in Compressor is checked then after compression the audio will be set to the maximum possible level without distortion. This may be a bad idea on cellphone speakers which can give distortion before the maximum possible level is reached.  Instead, use <span class="menu">Effect &gt; <a href="amplify.html" title="Amplify">Amplify</a></span> after compression and choose a <i>"New Peak Amplitude (dB)"</i> of -3 dB or -2 dB.</div>
-
+<p><br />
+</p>
 <div id="mono"></div>
 <h3><span class="mw-headline" id="Convert_stereo_to_mono"><a href="tracks_menu.html#stereo_mono" title="Tracks Menu">Convert stereo to mono</a></span></h3>
 <p>Irrespective of the required file format many phones will want mono ringtone files, as my some IVR systems. If the track you are editing is stereo the next step is to convert it to mono. 
@@ -97,8 +95,8 @@
 <li> Choose the format in the "Save as type" dropdown</li>
 <li> If required, click <span class="button">Options</span> to set the AAC bit rate, then <span class="button">OK</span></li>
 <li> Click <span class="button">Save</span>.</li></ol>
-<div class="note">If your phone requires files in other than WAV or MP3 format the best course after editing the file is to export it as a <a href="#Convert_stereo_to_mono">mono</a>, 16-bit 44100 Hz PCM WAV file, then convert that WAV to the required format with an appropriate conversion application of your choice.</div>  
-<p>See <a href="examples_exporting_audio_for_ringtones_and_ivr_messages.html" title="Examples: Exporting audio for ringtones and IVR messages">Exporting audio for ringtones and IVR messages</a> for examples of exporting audio files in various formats, including low bit rate WAV <i>(<a href="examples_exporting_audio_for_ringtones_and_ivr_messages.html#wav8bit" title="Examples: Exporting audio for ringtones and IVR messages">8000 Hz 8-bit WAV</a>)</i>.
+<div class="note">If your phone requires files in other than WAV or MP3 format the best course after editing the file is to export it as a <a href="#Convert_stereo_to_mono">mono</a>, 16-bit 44,100 Hz PCM WAV file, then convert that WAV to the required format with an appropriate conversion application of your choice.</div>  
+<p>See <a href="examples_exporting_audio_for_ringtones_and_ivr_messages.html" title="Examples: Exporting audio for ringtones and IVR messages">Exporting audio for ringtones and IVR messages</a> for examples of exporting audio files in various formats, including low bit rate WAV <i>(<a href="examples_exporting_audio_for_ringtones_and_ivr_messages.html#wav8bit" title="Examples: Exporting audio for ringtones and IVR messages">8,000 Hz 8-bit WAV</a>)</i>.
 </p>
 <div id="upload"></div>
 <h2><span class="mw-headline" id="Step_5:_Upload_your_ringtone_to_your_phone">Step 5: Upload your ringtone to your phone</span></h2>
@@ -106,43 +104,17 @@
 </p>
 <ul><li> via a USB cable </li>
 <li> via a wireless Bluetooth connection</li>
-<li> connect a Card Reader (typically USB connected) to your computer then write the ringtone to flash memory storage, for example to a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Secure_Digital_card">Secure Digital</a> (SD) card which can be used in the phone</li>
-<li> upload it via the internet (e.g. to a website, from which you can then download it to your phone). </li></ul>
+<li> connect a Card Reader (typically USB connected) to your computer then write the ringtone to flash memory storage, for example to a <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Secure_Digital_card">Secure Digital</a> (SD) card which can be used in the phone</li>
+<li> upload it via the Internet (for example to a website, from which you can then download it to your phone). </li></ul>
 <p>Note that some cellphones and mobile service providers do not allow the user to download customized free ringtones to the phone. For older phones <a rel="nofollow" class="external free" href="http://cellphones.about.com/od/ringtoneshowto/l/blringcompi.htm">http://cellphones.about.com/od/ringtoneshowto/l/blringcompi.htm</a> may be useful in determining if the phone allows addition of free customized ringtones. If in doubt, always look at the manual for your phone for advice on downloading ringtones.
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125117
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.111 seconds
-Real time usage: 0.117 seconds
-Preprocessor visited node count: 374/1000000
-Preprocessor generated node count: 1581/1000000
-Post-expand include size: 5475/2097152 bytes
-Template argument size: 3232/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   37.756      1 - -total
- 52.15%   19.688      1 - Template:I18n
- 46.89%   17.703      1 - Template:I18n_box
- 36.33%   13.718      1 - Template:I18n_list
- 12.48%    4.712      1 - Template:I18n_link
-  8.77%    3.311      4 - Template:Shortcut
-  7.79%    2.940      5 - Template:Button
-  7.54%    2.847     11 - Template:Menu
-  7.07%    2.671      1 - Template:Autoglossonym
-  4.60%    1.738      2 - Template:Note
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3822-0!*!0!!*!5!* and timestamp 20200619125117 and revision id 67256
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -160,7 +132,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -170,9 +142,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -197,13 +169,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -213,7 +184,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Making_Ringtones_and_IVR_messages">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Making_Ringtones_and_IVR_messages">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

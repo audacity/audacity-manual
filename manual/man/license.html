@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/License#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
@@ -59,15 +59,15 @@
 </p><p>Source code to Audacity is always available; for more information visit our <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/source">download page</a>.
 </p>
 <h3><span class="mw-headline" id="Third-party_libraries">Third-party libraries</span></h3>
-<p>Audacity is built upon other free libraries. When compiling Audacity from source code, you must first download and compile <a rel="nofollow" class="external text" href="https://www.wxwidgets.org/">wxWidgets</a>. The minimal source code tarball of Audacity supplies some third-party libraries in the lib-src directory, but other libraries can be installed for extra capabilities. If you obtain the full source code tarball of Audacity, all essential and optional libraries are supplied in lib-src except wxWidgets. For more details, see the Wiki article <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Developing_On_Linux">Developing on Linux</a>. 
+<p>Audacity is built upon other free libraries. When compiling Audacity from source code, you must first download and compile <a rel="nofollow" class="external text" href="http://www.wxwidgets.org/">wxWidgets</a>. The minimal source code tarball of Audacity supplies some third-party libraries in the lib-src directory, but other libraries can be installed for extra capabilities. If you obtain the full source code tarball of Audacity, all essential and optional libraries are supplied in lib-src except wxWidgets. For more details, see the Wiki article <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Developing_On_Linux">Developing on Linux</a>. 
 </p><p>In Audacity releases for Windows and Mac, all libraries are built-in except <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg</a> (for import and export of additional audio formats like <i><b><a href="glossary.html#aac" title="Glossary">AAC</a></b></i> and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i>). 
 </p><p>Third-party libraries used by Audacity are under the GPL or a free, GPL-compatible license. In making this source code available, it can be used under the terms of the GPL in other GPL programs. Like nearly all organisations releasing GPL-licensed software, we retain in our Git code repository the more permissive licenses where available to us. So for example, if we make a change to our copy of expat, that change is available for use under the BSD-like license, as well as being available under GPL. 
 </p><p>Most third-party libraries used by Audacity are not distributed under the terms of the GPL, but rather under some other free, GPL-compatible license as follows. 
 </p>
-<ul><li> <b>expat:</b> <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/BSD_licenses">BSD</a>-like license.  Provides XML parsing.  </li></ul>
-<ul><li> <b>FFmpeg:</b> GPL or <a rel="nofollow" class="external text" href="https://www.gnu.org/licenses/lgpl.html">LGPL</a> (according to how you obtain/configure it). Provides decoding/encoding of additional formats. </li></ul>
+<ul><li> <b>expat:</b> <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/BSD_licenses">BSD</a>-like license.  Provides XML parsing.  </li></ul>
+<ul><li> <b>FFmpeg:</b> GPL or <a rel="nofollow" class="external text" href="http://www.gnu.org/licenses/lgpl.html">LGPL</a> (according to how you obtain/configure it). Provides decoding/encoding of additional formats. </li></ul>
 <ul><li> <b>iAVC:</b> LGPL. Part of the code to the AVC Compressor effect.  </li></ul>
-<ul><li> <b>libid3tag:</b> GPL. Reads/writes <a href="glossary.html#id3" title="Glossary">ID3</a> tags in <a href="https://alphamanual.audacityteam.org/m/index.php?title=Glossaty&amp;action=edit&amp;redlink=1" class="new" title="Glossaty (page does not exist)">MP3</a> files (part of libmad, see below).   </li></ul>
+<ul><li> <b>libid3tag:</b> GPL. Reads/writes <a href="glossary.html#id3" title="Glossary">ID3</a> tags in <a href="glossary.html#mp3" title="Glossary">MP3</a> files (part of libmad, see below).   </li></ul>
 <ul><li> <b>libflac:</b> Xiph.Org BSD-like licence (the parts we use). Decodes and Encodes <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> (Free Lossless Audio Codec) files. </li></ul>
 <ul><li> <b>libmad:</b> GPL. Decodes MP3 files. </li></ul>
 <ul><li> <b>libnyquist:</b> BSD-like license. Functional language for manipulating audio, used within Audacity for effects processing.</li></ul>
@@ -75,14 +75,14 @@
 <ul><li> <b>libsndfile:</b> LGPL. Reads and writes uncompressed <i><b><a href="glossary.html#pcm" title="Glossary">PCM</a></b></i> audio files. </li></ul>
 <ul><li> <b>libsoxr:</b>  LGPL.  The SoX Resampler library performs one-dimensional sample rate conversion.</li></ul>
 <ul><li> <b>libvamp:</b> new-style BSD. Plug-in interface and support library for audio analysis plug-ins. </li></ul>
-<ul><li> <b>lv2:</b> a merging of the lilv (<a rel="nofollow" class="external text" href="https://opensource.org/licenses/isc">ISC license</a>), lv2 (LGPL), msinttypes, serd (ISC), sord, sratom and suil libraries to support LV2 plug-ins.</li></ul>
-<ul><li> <b>portaudio:</b> <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/MIT_License">MIT license</a>. Cross-platform audio I/O library, version 19 in use. </li></ul>
-<ul><li> <b>portmidi:</b> <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/MIT_License">MIT license</a>. Cross-platform MIDI I/O library. </li></ul>
+<ul><li> <b>lv2:</b> a merging of the lilv (<a rel="nofollow" class="external text" href="http://opensource.org/licenses/isc">ISC license</a>), lv2 (LGPL), msinttypes, serd (ISC), sord, sratom and suil libraries to support LV2 plug-ins.</li></ul>
+<ul><li> <b>portaudio:</b> <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/MIT_License">MIT license</a>. Cross-platform audio I/O library, version 19 in use. </li></ul>
+<ul><li> <b>portmidi:</b> <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/MIT_License">MIT license</a>. Cross-platform MIDI I/O library. </li></ul>
 <ul><li> <b>portsmf:</b> BSD-like license. Library for reading and writing <i><b><a href="glossary.html#midi" title="Glossary">MIDI</a></b></i> files.  </li></ul>
 <ul><li> <b>sbsms:</b> GPL v2. Library for pitch and tempo changing. </li></ul>
 <ul><li> <b>SoundTouch:</b> LGPL. An older library that changes tempo without changing pitch and vice versa. </li></ul>
 <ul><li> <b>Twolame:</b> LGPL. Encodes <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> audio files (used in DVD discs and radio broadcasting).</li></ul>
-<ul><li> <b>wxWidgets:</b> <a rel="nofollow" class="external text" href="https://wxwidgets.org/about/newlicen.htm">wxWindows License</a>. Cross-platform GUI library. </li></ul>
+<ul><li> <b>wxWidgets:</b> <a rel="nofollow" class="external text" href="http://wxwidgets.org/about/newlicen.htm">wxWindows License</a>. Cross-platform GUI library. </li></ul>
 <p><br />
 The full text of the GNU GPL follows.
 </p>
@@ -381,35 +381,13 @@ consider it more useful to permit linking proprietary applications with the
 library.  If this is what you want to do, use the GNU Library General
 Public License instead of this License.
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125130
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.073 seconds
-Real time usage: 0.078 seconds
-Preprocessor visited node count: 192/1000000
-Preprocessor generated node count: 889/1000000
-Post-expand include size: 2195/2097152 bytes
-Template argument size: 413/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   27.864      1 - Template:I18n
-100.00%   27.864      1 - -total
- 91.45%   25.482      1 - Template:I18n_box
- 77.29%   21.535      1 - Template:I18n_list
- 33.15%    9.237      3 - Template:I18n_link
- 20.13%    5.610      3 - Template:Autoglossonym
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1961-0!*!0!!en!*!* and timestamp 20200619125130 and revision id 67251
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -427,7 +405,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -437,9 +415,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -464,13 +442,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -480,7 +457,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/License">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/License">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Troubleshooting:_Recording_with_USB_turntables_or_cassette_decks#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="notrecognized"></div>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
@@ -71,7 +71,7 @@
 </p>
 <div id="dc"></div>
 <h2><span class="mw-headline" id="Recorded_waveform_is_not_centered_on_the_horizontal_line_at_0.0">Recorded waveform is not centered on the horizontal line at 0.0</span></h2>
-<p>This is known as <a href="dc_offset.html" title="DC offset">DC offset</a>. It's less common with USB turntables or interfaces than with built-in sound cards. If offset is present, use <span class="menu">Effect &gt;  <a href="normalize.html" title="Normalize">Normalize</a></span> to remove any DC offset before editing or exporting the recording. To do this, put a check mark in "Remove any DC offset..." but leave "Normalize maximum amplitude..." unchecked.
+<p>This is known as <a href="dc_offset.html" title="DC offset">DC offset</a>. It is less common with USB turntables or interfaces than with built-in sound cards. If offset is present, use <span class="menu">Effect &gt;  <a href="normalize.html" title="Normalize">Normalize</a></span> to remove any DC offset before editing or exporting the recording. To do this, put a check mark in "Remove any DC offset..." but leave "Normalize maximum amplitude..." unchecked.
 </p><p><br />
 </p>
 <div id="noise"></div>
@@ -88,21 +88,21 @@
 <h2><span class="mw-headline" id="Recordings_freeze_up_or_have_dropouts">Recordings freeze up or have dropouts</span></h2>
 <p>Reports of recordings from USB turntables freezing or having dropouts are not that uncommon. Generally they are <b>not</b> caused by Audacity, but by poor quality equipment and cables, or lack of sufficient USB bandwidth.   
 </p>
-<ul><li> Check the Project Rate bottom left of the Audacity screen is set to either 44 100 or 48 000 Hz - setting a very high rate might overload the USB bandwidth and cause transmission problems </li>
+<ul><li> Check the Project Rate bottom left of the Audacity screen is set to either 44,100 or 48,000 Hz - setting a very high rate might overload the USB bandwidth and cause transmission problems </li>
 <li> Check the USB cable for tightness at both ends and try using a different cable instead</li>
 <li> Always use a spare USB port, not a hub</li>
-<li> Limit USB bandwidth whilst recording by using other USB devices sparingly e.g. simply disconnecting from the internet may help if you use a USB modem for internet access. </li>
-<li> Check for any system warnings (e.g. in Device Manager in Windows) about the Universal Serial Bus Controllers. </li>
+<li> Limit USB bandwidth whilst recording by using other USB devices sparingly, for example simply disconnecting from the Internet may help if you use a USB modem for Internet access. </li>
+<li> Check for any system warnings (for example in Device Manager in Windows) about the Universal Serial Bus Controllers. </li>
 <li> There have been isolated reports that recordings freeze up if they are attempted whilst the unit's RCA cables are connected to an external input such as a home stereo, although concurrent recording and playing through external equipment is implied as being possible.  </li></ul>
 <p>Generally, if you find you can record into Audacity without interruption from another source such as a microphone plugged into your computer's microphone port, this implicates the turntable or USB cable. To check if other sources record satisfactorily, change the <span class="menu">Recording Device</span> on the <a href="devices_preferences.html" title="Devices Preferences">Devices</a> tab of <a href="preferences.html" title="Preferences">Preferences</a> to your inbuilt sound. 
-</p><p>If recording from other sources works fine, try using the <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/">latest version of Audacity</a> if you are not already doing so: it's possible very recent turntables might work better with the most modern Audacity version. Otherwise, request <a href="#Further_support_from_the_turntable_manufacturer">support from the turntable manufacturer</a>.
-</p><p>If recordings from sources other than the turntable are also freezing or have dropouts, there could be problems with insufficient computer resources. Please see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers">Managing Computer Resources and Drivers</a> page in the Audacity Wiki for tips on correcting this. If you're using "<b>Software Playthrough</b>", it is also possible that  problems with your inbuilt sound device (used to play back your recording while you are making it) are disrupting the recording. Please look at our list of tips on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating Sound Device Drivers</a> in the Wiki for help.
+</p><p>If recording from other sources works fine, try using the <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/">latest version of Audacity</a> if you are not already doing so: it is possible very recent turntables might work better with the most modern Audacity version. Otherwise, request <a href="#Further_support_from_the_turntable_manufacturer">support from the turntable manufacturer</a>.
+</p><p>If recordings from sources other than the turntable are also freezing or have dropouts, there could be problems with insufficient computer resources. Please see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers">Managing Computer Resources and Drivers</a> page in the Audacity Wiki for tips on correcting this. If you are using "<b>Software Playthrough</b>", it is also possible that  problems with your inbuilt sound device (used to play back your recording while you are making it) are disrupting the recording. Please look at our list of tips on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating Sound Device Drivers</a> in the Wiki for help.
 </p><p><br />
 </p>
 <div id="pitch"></div>
 <h2><span class="mw-headline" id="Speed_too_fast_or_slow_or_erratic">Speed too fast or slow or erratic</span></h2>
 <p>Note that some models of USB turntable, for example Numark/ION, have a variable pitch slider which allows the pitch to be increased or decreased by up to 10%. In the Numark model the pitch is unchanged when the slider is at central position. When the slider is moved away from the center and towards the tone arm the pitch is decreased (the  platter is slowed down), and when the slider is moved away from the tone arm this increases the pitch (speeds up the platter.) 
-</p><p>If the problem is one of fast speed, this can be due to a belt that is improperly installed. If the belt slips out of the groove when the turntable is rotating and is able to ride up or down on the spindle, the platter will spin too fast. You'll need to adjust the position of the belt on the inner ring of the platter. The inner ring of the platter is quite a bit wider than the belt itself. The belt should wrap around the middle part of the inner ring. If it is wrapped too high or too low around the inner ring, it could cause the other half of the belt to ride up or down on the spindle. Follow these steps to check the belt for proper alignment: 
+</p><p>If the problem is one of fast speed, this can be due to a belt that is improperly installed. If the belt slips out of the groove when the turntable is rotating and is able to ride up or down on the spindle, the platter will spin too fast. You will need to adjust the position of the belt on the inner ring of the platter. The inner ring of the platter is quite a bit wider than the belt itself. The belt should wrap around the middle part of the inner ring. If it is wrapped too high or too low around the inner ring, it could cause the other half of the belt to ride up or down on the spindle. Follow these steps to check the belt for proper alignment: 
 </p>
 <ol><li>Remove both the record and the slip mat from the turntable.</li>
 <li>Rotate the platter so that you can see the brass motor spindle through one of the holes in the platter (it should be located in the bottom-left corner of the turntable).</li>
@@ -133,7 +133,7 @@
 <ol><li> In Audacity, go to <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>, select "USB Audio Codec" in the "Recording Device" dropdown, and choose "2 (Stereo)" in the channels dropdown.</li>
 <li> Right-click over the <span class="menu">Speaker icon</span> by the system clock, select <span class="menu">Sounds</span>, then the <span class="menu">Recording</span> tab.</li>
 <li> Right-click over USB Audio Codec and hit <span class="button">Properties</span></li>
-<li> On the "Advanced" tab, in the "Default Format" section, change the dropdown menu to "2 channel 16-bit 44100 Hz" </li>
+<li> On the "Advanced" tab, in the "Default Format" section, change the dropdown menu to "2 channel 16-bit 44,100 Hz" </li>
 <li> If the input into Audacity is too loud or distorts, even when using the Audacity Input Level Slider, also click the "Levels" tab in "Sound" for the USB Audio Codec and move the slider to the left.</li></ol>
 <p>For a more detailed walk-through of the above steps for Windows <i>(or if that does not work for your version of Windows)</i>, see <b><a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows: accessing the Windows Sound controls</a>.</b>
 </p>
@@ -145,34 +145,13 @@
 </p>
 Please see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating Sound Device Drivers</a> in the Audacity Wiki for help on updating your computer's sound device drivers.</div>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619130138
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.053 seconds
-Real time usage: 0.054 seconds
-Preprocessor visited node count: 217/1000000
-Preprocessor generated node count: 579/1000000
-Post-expand include size: 4176/2097152 bytes
-Template argument size: 3496/2097152 bytes
-Highest expansion depth: 5/40
-Expensive parser function count: 0/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   16.777      1 - -total
- 31.49%    5.283     18 - Template:Menu
- 25.62%    4.299      2 - Template:Hint
- 18.92%    3.174      2 - Template:Button
- 15.00%    2.517      2 - Template:Note
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:6421-0!*!0!!en!*!* and timestamp 20200619130138 and revision id 66005
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -190,7 +169,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -200,9 +179,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -227,13 +206,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -243,7 +221,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Troubleshooting:_Recording_with_USB_turntables_or_cassette_decks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Troubleshooting:_Recording_with_USB_turntables_or_cassette_decks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

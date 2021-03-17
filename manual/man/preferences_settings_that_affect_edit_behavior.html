@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Preferences settings that affect Edit behavior - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Preferences_settings_that_affect_Edit_behavior rootpage-Preferences_settings_that_affect_Edit_behavior skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Preferences settings that affect Edit behavior</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Preferences_settings_that_affect_Edit_behavior#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><br />
+</p>
+<div class="intro"><b>There are two settings in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a> that affect the operation of the <i>Cut, Paste,</i> and <i>Delete</i> editing commands:</b>
+<ul><li> <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable cut lines</span> (unchecked by default)
+<ul><li>When this setting is enabled, cutting a section of audio will leave a red vertical line at the left edge of the cut portion. You can click on this line at any time to restore the cut audio.</li></ul></li>
+<li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> (checked by default)
+<ul><li>If this setting is enabled any clips following to right of the edit point can always move as necessary in response to <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">pasting</a>, <a href="edit_menu.html#cut" title="Edit Menu">cutting</a>, <a href="edit_menu.html#delete" title="Edit Menu">deleting</a> or other change that adds or removes content.</li></ul></li></ul>
+<p>This page provides details and examples of how these preference settings affect editing operations.
+</p>
+</div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#move_clips">Editing a clip can move other clips</a>
+<ul><li><a href="#example_clips">Examples of the effect of changing "Editing a clip can move other clips"</a></li></ul></li>
+<li><a href="#cut_lines">Enable Cut lines</a>
+<ul><li><a href="#example_cuts">Examples of the use of Cut lines</a></li></ul></li></ol>
+<p><br />
+</p>
+<div id="move_clips"></div>
+<h2><span class="mw-headline" id="Editing_a_clip_can_move_other_clips">Editing a clip can move other clips</span></h2>
+<p>If this setting is <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">enabled</a> <i>(the default setting is "on")</i> and the track has been <a href="edit_menu_clip_boundaries.html#split" title="Edit Menu: Clip Boundaries">split</a> into more than one <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a>, any clips following to the right of the edit point can always move as necessary in response to <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">pasting</a>, <a href="edit_menu.html#cut" title="Edit Menu">cutting</a>, <a href="edit_menu.html#delete" title="Edit Menu">deleting</a> or other change that adds or removes content.
+</p><p>Unchecking this preferences "pins" clips so that they cannot move in response to an edit in another clip. When removing content, any following clips will not move back. When pasting, an error message will display if there is not enough room to paste without moving the following clips.
+</p>
+<div class="note"><a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups"><b>Sync-Lock</b></a> trumps (over-rides) this setting. If you have Sync-Lock enabled in the <a href="tracks_menu.html" title="Tracks Menu">Tracks Menu</a>, then clips can move even when this setting is turned "off".  This works well when disabling/enabling Sync-Lock, as your preference for clips-can-move is not forgotten when out of Sync-Lock mode. </div>
+<div id="example_clips"></div>
+<h2><span class="mw-headline" id="Examples_of_the_effect_of_changing_.22Editing_a_clip_can_move_other_clips.22">Examples of the effect of changing "Editing a clip can move other clips"</span></h2>
+<h3><span class="mw-headline" id="Removing_audio_.28Cut_or_Delete.29_shifts_the_audio_to_the_right_of_the_edit_to_close_up_the_space">Removing audio (Cut or Delete) shifts the audio to the right of the edit to close up the space</span></h3>
+<div class="example">Before the cut or delete
+<dl><dd><span title="Example 1a - Track before audio is cut or deleted"><img alt="Ex1a BeforeWithClips NoScroll.png" src="../m/images/f/f7/ex1a_beforewithclips_noscroll.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After the cut or delete with <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> turned "on" - clips to the right of the edit move left
+</p>
+<dl><dd><span title="Example 1a - Track after audio is cut or deleted"><img alt="Ex1a AfterWithClips NoScroll.png" src="../m/images/5/5e/ex1a_afterwithclips_noscroll.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After the cut or delete with <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> turned "off" - audio to the right of the edit <i>within the clip</i> moves left, clips to the right of edited clip do not move
+</p>
+<dl><dd><span title="Example 1a - Track after audio is cut or deleted"><img alt="Ex1a AfterWithClips NoMove.png" src="../m/images/f/f7/ex1a_afterwithclips_nomove.png" width="817" height="183" /></span></div></dd></dl>
+<p><br />
+</p>
+<div id="null_anchor"></div>
+<h3><span class="mw-headline" id="Pasting_into_a_region_selection_removes_the_region_and_inserts_the_clipboard_contents.2C_adjusting_the_position_of_the_following_audio_as_needed_and_if_allowed">Pasting into a region selection removes the region and inserts the clipboard contents, adjusting the position of the following audio as needed and if allowed</span></h3>
+<div class="example">Track with a region selected, before audio is pasted:
+<dl><dd><span title="Example 1b - Track before audio is pasted"><img alt="Ex1b Before.png" src="../m/images/e/e3/ex1b_before.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After the paste when the audio to be pasted is <i>shorter than the selection</i> with <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> - audio to the right of the edit moves left
+</p>
+<dl><dd><span title="Example 1b - Track after shorter audio is pasted"><img alt="Ex1b Short After.png" src="../m/images/3/3f/ex1b_short_after.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After the paste when the audio to be pasted is <i>shorter than the selection</i> with <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> - audio to the right of the edit <i>within the clip</i> moves left, clips to the right of the edited clip do not move
+</p>
+<dl><dd><span title="Example 1b - Track after shorter audio is pasted"><img alt="Ex1b Short After NoMove.png" src="../m/images/f/fd/ex1b_short_after_nomove.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After the paste when the audio to be pasted is <i>longer than the selection</i> with <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> - audio to the right of the edit moves right to make room for the longer region of audio
+</p>
+<dl><dd><span title="Example 1b - Track after longer audio is pasted"><img alt="Ex1b Long After.png" src="../m/images/1/15/ex1b_long_after.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After the paste when the audio to be pasted is <i>longer than the selection</i> with <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> - the clips to the right of edit cannot move, so the paste is not allowed
+</p>
+<dl><dd><span title="Example 1b - Track after longer audio is pasted"><img alt="Ex1b Long After NoMove.png" src="../m/images/6/67/ex1b_long_after_nomove.png" width="817" height="320" /></span></div></dd></dl>
+<p><br />
+</p>
+<div id="null_anchor"></div>
+<h3><span class="mw-headline" id="Pasting_into_a_point_selection_inserts_the_audio_at_that_point_and_adjusts_the_position_of_the_following_audio">Pasting into a point selection inserts the audio at that point and adjusts the position of the following audio</span></h3>
+<div class="example">Track with with a point selection, before audio is pasted
+<dl><dd><span title="Example 1c - Track before audio is pasted"><img alt="Ex1c Before.png" src="../m/images/4/44/ex1c_before.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After the paste into a point selection with <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> - audio to the right of the edit moves right to make room for the longer region of audio
+</p>
+<dl><dd><span title="Example 1c - Track after audio is pasted"><img alt="Ex1c After.png" src="../m/images/6/68/ex1c_after.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After the paste into a point selection with <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> - the clips to the right of edit cannot move, so the paste is not allowed
+</p>
+<dl><dd><span title="Example 1c - Track after audio is pasted"><img alt="Ex1c After NoMove.png" src="../m/images/4/45/ex1c_after_nomove.png" width="817" height="321" /></span></div></dd></dl>
+<p><br />
+</p><p><br />
+</p>
+<div id="cut_lines"></div>
+<h2><span class="mw-headline" id="Enable_Cut_Lines">Enable Cut Lines</span></h2>
+<p>When this setting is <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">enabled</a> <i>(the default setting is "off")</i>, cutting a section of audio will leave a red vertical line at the left edge of the cut portion. You can click on this line at any time to restore the cut audio. If you restore in error, use <span class="menu">Edit &gt; Undo Expand</span> to get the cut line back. To remove the line without restoring audio, right-click over it. <span class="menu">Edit &gt; Undo Remove</span> will restore the line if you make a mistake.
+</p><p>You can think of this as a kind of "persistent undo" in that clicking on the cut line undoes the cut, and the cut lines persist when you close and later re-open the project.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">
+<ul><li> You must use <span class="menuadvice">Edit &gt; Cut</span> or its shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + X</span> <i>(<span class="kbrd" style="background-color: #d0d0f8">&#8984; + X</span> on Mac)</i>. Any other Edit command that removes audio will not produce a cut line.</li>
+<li> Existing cut lines can be expanded even if the "Enable cut lines" setting is off.</li></ul>
+</td></tr></table></div>
+<div id="example_cuts"></div>
+<h2><span class="mw-headline" id="Examples_of_using_Cut_lines">Examples of using Cut lines</span></h2>
+<h3><span class="mw-headline" id="Creating_and_restoring_cut_lines">Creating and restoring cut lines</span></h3>
+<div class="example">The settings for this example are
+<ul><li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable cut lines</span></li>
+<li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span></li></ul>
+<p>Before cutting a region of audio from the first clip
+</p>
+<dl><dd><span title="Example 2a - Track before audio is cut"><img alt="Ex2a Before.png" src="../m/images/8/80/ex2a_before.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After cutting the region - note the red indication of the cut line
+</p>
+<dl><dd><span title="Example 2a - Track after audio is cut showing cut line"><img alt="Ex2a After.png" src="../m/images/8/8c/ex2a_after.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+Two more cuts are made
+</p>
+<dl><dd><span title="Example 2a - Track after two more cuts are made"><img alt="Ex2a After2More.png" src="../m/images/c/c3/ex2a_after2more.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+We can now expand the first cut - without the use of cut lines one would have to Undo three times to get the first cut back, then redo the second and third cuts
+</p>
+<dl><dd><span title="Example 2a - Track after first cut is expanded"><img alt="Ex2a CutExpanded.png" src="../m/images/0/0f/ex2a_cutexpanded.png" width="817" height="183" /></span></div></dd></dl>
+<p><br />
+</p>
+<div id="null_anchor"></div>
+<h3><span class="mw-headline" id="Cut_lines_cannot_be_expanded_if_doing_so_would_violate_the_.22Editing_a_clip_can_move_other_clips.22_setting">Cut lines cannot be expanded if doing so would violate the "Editing a clip can move other clips" setting</span></h3>
+<div class="example">The settings for this example are
+<ul><li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable cut lines</span></li>
+<li> <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span></li></ul>
+<p>Before cutting a region from the first clip
+</p>
+<dl><dd><span title="Example 2b - Track before audio is cut"><img alt="Ex2b Before.png" src="../m/images/a/ad/ex2b_before.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After cutting the region, then moving the second clip to the left so it touches the first clip
+</p>
+<dl><dd><span title="Example 2b - Track after audio is cut and second clip is moved"><img alt="Ex2b AfterCutAndMove.png" src="../m/images/1/16/ex2b_aftercutandmove.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After attempting to expand the cut line
+</p>
+<dl><dd><span title="Example 2b - Track after attempting to expand the clip"><img alt="Ex2b AfterExpand.png" src="../m/images/7/78/ex2b_afterexpand.png" width="815" height="322" /></span></div></dd></dl>
+<p><br />
+</p>
+<div id="null_anchor"></div>
+<h3><span class="mw-headline" id="Cut_lines_are_not_created_if_one_or_both_edges_of_the_region_coincide_with_a_clip_boundary">Cut lines are not created if one or both edges of the region coincide with a clip boundary</span></h3>
+<div class="example">The settings for this example are
+<ul><li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable cut lines</span></li>
+<li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span></li></ul>
+<p>Before cutting a region from the second clip - note that the left edge of the selection coincides with the left clip boundary
+</p>
+<dl><dd><span title="Example 2c - Track before audio is cut"><img alt="Ex2c Before.png" src="../m/images/d/d6/ex2c_before.png" width="817" height="183" /></span></dd></dl>
+<p><br />
+After cutting the region - note that there is no cut line
+</p>
+<dl><dd><span title="Example 2c - Track after audio is cut showing no cut line"><img alt="Ex2c After.png" src="../m/images/c/cf/ex2c_after.png" width="817" height="183" /></span></div></dd></dl>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Preferences_settings_that_affect_Edit_behavior">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

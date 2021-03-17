@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,13 +32,13 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Vocoder#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
 </p>
 
 
 <div class="intro"><i><b>Vocoder...</b></i> synthesizes a <i>modulator</i> (usually a voice) in the left channel of a stereo track with a <i>carrier wave</i> in the right channel to produce a modified version of the left channel. Vocoding a normal voice with white noise as provided in the effect will produce a robot-like voice for special effects. Other carriers can be used for subtly different voices, such as a sawtooth tone, a musical tone or a synthesized string chord. 
-<p>The Audacity Vocoder effect simulates a classical analog multiband vocoder, as described in the "History" section of the Wikipedia <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Vocoder">Vocoder</a> page.
+<p>The Audacity Vocoder effect simulates a classical analog multiband vocoder, as described in the "History" section of the Wikipedia <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Vocoder">Vocoder</a> page.
 </p>
 </div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Vocoder...</span></dd>
@@ -71,11 +71,9 @@
 </p>
 <div class="note">"Radar needles" are a series of very short pulses (clicks), also known as "pulse train" in speech synthesizers. They have a pulse width of only one sample and a spectrum ranging from the frequency specified by the Frequency slider (below) up to much greater than 20 kHz.</div>  
 <h2><span class="mw-headline" id="Frequency_of_Radar_Needles_.28Hz.29">Frequency of Radar Needles (Hz)</span></h2>
-<p>The number of "radar needles" per second where only one sample per period has a non-zero value. This is the most-broadband signal possible, even more broadband than white noise.   The default setting is 30.0 Hz.  <i>See also Wikipedia <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Dirac_comb">Dirac Comb</a> for a detailed description.</i>
+<p>The number of "radar needles" per second where only one sample per period has a non-zero value. This is the most-broadband signal possible, even more broadband than white noise.   The default setting is 30.0 Hz.  <i>See also Wikipedia <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Dirac_comb">Dirac Comb</a> for a detailed description.</i>
 </p><p>Best results may be obtained if you first mix the radar needles with another sound, then apply Vocoder.
 </p>
-
-
 <div id="buttons"></div>
 <h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
 <p>Clicking on the command buttons give the following results:
@@ -97,12 +95,9 @@
 </p>
 <ol><li> Add some white noise - the result will sound like an old tape recorder</li>
 <li> Add some low-frequency radar needles - this will sound like a tremolo.</div></li></ol>
-
 <p>This section uses the terms "modulator" and "carrier". In a vocoder, the modulator is the signal that modulates or controls the carrier signal. In audio context, the modulator is the sound you want to change (often a voice talking or singing), and the carrier you use to change that sound is often a steady musical tone or note, or sometimes a natural sound like some kind of noise.
 </p><p>So for the purposes of the steps in all the following examples, we assume the modulator to be a "voice" track and the carrier to be a "music" track.
-</p>
- 
-<p>The modulator and carrier will thus usually be two separate audio tracks. Self-made voice or speech recordings are usually mono, but voice or speech recordings from radio or CD often contain stereo reverb effects. Music signals can be either mono or stereo. There are thus four different practical cases:
+</p><p>The modulator and carrier will thus usually be two separate audio tracks. Self-made voice or speech recordings are usually mono, but voice or speech recordings from radio or CD often contain stereo reverb effects. Music signals can be either mono or stereo. There are thus four different practical cases:
 </p>
 <ul><li> <a href="#mm">Case 1: Applying a mono modulator to a mono carrier</a> - the simplest case</li>
 <li> <a href="#ms">Case 2: Applying a mono modulator to a stereo carrier</a> - the most common case</li>
@@ -170,39 +165,13 @@
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125527
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.136 seconds
-Real time usage: 0.143 seconds
-Preprocessor visited node count: 496/1000000
-Preprocessor generated node count: 2147/1000000
-Post-expand include size: 30977/2097152 bytes
-Template argument size: 14539/2097152 bytes
-Highest expansion depth: 14/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   63.443      1 - -total
- 35.07%   22.251      1 - Template:I18n
- 32.30%   20.490      1 - Template:I18n_box
- 28.17%   17.873      1 - Template:I18n_list
- 20.23%   12.837      1 - Template:Effectbuttons
- 15.21%    9.651      1 - Template:Buttonlist
- 12.74%    8.081      1 - Template:Example
- 12.25%    7.769      1 - Template:No-rename
- 11.01%    6.986     10 - Template:Button
- 10.83%    6.868      5 - Template:Ednote
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:4072-0!*!0!!*!5!* and timestamp 20200619125526 and revision id 65493
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -220,7 +189,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -230,9 +199,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -257,13 +226,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -273,7 +241,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Vocoder">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Vocoder">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Compressor#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
 </p>
 
@@ -49,7 +49,7 @@ One of the main purposes of reducing dynamic range is to permit the audio to be 
 </p>
 <div id="controls"></div>
 <h2><span class="mw-headline" id="Controls">Controls</span></h2>
-<div class="note">The principle of how each control works is described below. In practice the effect works internally in a rather more complex manner in that, as it processes the sound, it looks ahead to determine if there are high peaks coming up. This enables the "attack" stage of the effect to work in advance of increasing level as can be seen in the <a href="#Example">example</a> below. This feature is called <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Dynamic_range_compression#Look-ahead">look-ahead</a> and it is enabled within the effect with no user adjustment. The benefit of look-ahead is  that sudden peaks do not pass through the effect before the gain has had time to change.</div>
+<div class="note">The principle of how each control works is described below. In practice the effect works internally in a rather more complex manner in that, as it processes the sound, it looks ahead to determine if there are high peaks coming up. This enables the "attack" stage of the effect to work in advance of increasing level as can be seen in the <a href="#Example">example</a> below. This feature is called <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Dynamic_range_compression#Look-ahead">look-ahead</a> and it is enabled within the effect with no user adjustment. The benefit of look-ahead is  that sudden peaks do not pass through the effect before the gain has had time to change.</div>
 <ul><li> <b>Threshold:</b> The level above which compression is applied to the audio.</li></ul>
 <ul><li> <i><b><a href="glossary.html#noise_floor" title="Glossary">Noise Floor</a>:</b></i> The compressor adjusts the gain on audio below this background level so as to prevent it being unduly amplified in processing. This is mainly useful when compressing speech, to prevent the gain increasing during pauses and so over-amplifying the background noise. </li></ul>
 <ul><li> <b>Ratio:</b> The amount of compression applied to the audio once it passes the threshold level. The higher the Ratio the more the loud parts of the audio will be compressed. The Ratio sets the slope of the blue line on the graph above the threshold.</li></ul>
@@ -92,7 +92,7 @@ One of the main purposes of reducing dynamic range is to permit the audio to be 
 <p>There are some good (but not too technical) explanations of compression here:
 </p>
 <ul><li> <a rel="nofollow" class="external text" href="https://www.harmonycentral.com/articles/uncategorized/compressors-demystified-r50/">Compressors demystified</a>  (Harmony Central)</li>
-<li> <a rel="nofollow" class="external text" href="https://www.soundonsound.com/sos/sep09/articles/compressionmadeeasy.htm">Compression Made Easy</a> with <a rel="nofollow" class="external text" href="https://www.soundonsound.com/sos/sep09/articles/compressioneasyaudio.htm">audio files</a> (Sound On Sound)</li></ul>
+<li> <a rel="nofollow" class="external text" href="http://www.soundonsound.com/sos/sep09/articles/compressionmadeeasy.htm">Compression Made Easy</a> with <a rel="nofollow" class="external text" href="http://www.soundonsound.com/sos/sep09/articles/compressioneasyaudio.htm">audio files</a> (Sound On Sound)</li></ul>
 <p>More advanced:
 </p>
 <ul><li> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160319123650/http://www.soundonsound.com/sos/dec00/articles/adcompression.htm">Advanced Compression Techniques Part 1</a> and  <a rel="nofollow" class="external text" href="https://web.archive.org/web/20061125043028/http://www.soundonsound.com:80/sos/jan01/articles/advanced.asp">Part 2</a>  (Sound On Sound)</li></ul>
@@ -105,39 +105,13 @@ One of the main purposes of reducing dynamic range is to permit the audio to be 
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619113639
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.115 seconds
-Real time usage: 0.121 seconds
-Preprocessor visited node count: 495/1000000
-Preprocessor generated node count: 1761/1000000
-Post-expand include size: 18218/2097152 bytes
-Template argument size: 5608/2097152 bytes
-Highest expansion depth: 14/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   56.209      1 - -total
- 54.20%   30.463      1 - Template:I18n
- 50.92%   28.622      1 - Template:I18n_box
- 46.08%   25.900      1 - Template:I18n_list
- 24.54%   13.794      6 - Template:I18n_link
- 19.11%   10.739      1 - Template:Effectbuttons
- 14.19%    7.976      1 - Template:Buttonlist
- 13.81%    7.763      6 - Template:Autoglossonym
- 11.18%    6.282      1 - Template:No-rename
- 10.07%    5.661     10 - Template:Button
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2493-0!*!0!!*!5!* and timestamp 20200619113639 and revision id 65160
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -155,7 +129,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -165,9 +139,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -192,13 +166,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -208,7 +181,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Compressor">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Compressor">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

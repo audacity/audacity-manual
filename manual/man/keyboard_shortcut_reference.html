@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,8 +32,10 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference#searchInput">search</a></div>
 
-					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
 
 <div class="intro">This page lists all commands in the Audacity menus and all pre-defined keyboard shortcuts.  The default <b>Standard</b> set of shortcuts is a reduced set, compared to earlier versions of Audacity, to simplify the set of shortcuts somewhat and to provide greater flexibilty for users who wish to create their own shortcuts. There is also an extended <b>Full</b> set of keyboard shortcuts that can be selected from the <span class="button">Defaults</span> button on the <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> dialog.  This <b>Full</b> set is the set that was available in Audacity 2.1.3 and earlier.  You can use <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> to change or remove existing shortcuts or to assign a shortcut to commands that lack a default shortcut. 
 <ul><li> Standard shortcuts are shown like so: <span class="kbrd" style="background-color: #d0d0f8">Ctrl + A</span>.  </li>
@@ -130,6 +132,13 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <td>Various ways to save a project.
 </td></tr>
 <tr>
+<td><a href="file_menu.html#compact" title="File Menu">Compact Project</a>
+</td>
+<td><span class="kbrd" style="background-color: #d0d0f8">Shift+A</span>
+</td>
+<td>Compacts your project, saving disk space. Using this command will delete your <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo/Redo History</a> and your Audacity clipboard contents.
+</td></tr>
+<tr>
 <td><a href="file_menu.html#export" title="File Menu">Export</a>
 </td>
 <td><i>(unassigned)</i>
@@ -198,7 +207,7 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </td>
 <td><span class="kbrd" style="background-color: #d0d0f8">Ctrl+S</span>
 </td>
-<td>Saves the current Audacity project .AUP file.
+<td>Saves the current Audacity project .AUP3 file.
 </td></tr>
 <tr>
 <td><a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As...</a>
@@ -208,18 +217,11 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <td>Same as "Save Project" above, but allows you to save a copy of an open project to a different name or location
 </td></tr>
 <tr>
-<td><a href="file_menu_save_project.html#save_lossless_copy_of_project" title="File Menu: Save Project">Save Lossless Copy of Project...</a>
+<td><a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project...</a>
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Saves the current Audacity project .AUP file.
-</td></tr>
-<tr>
-<td><a href="file_menu_save_project.html#save_compressed_copy_of_project" title="File Menu: Save Project">Save Compressed Copy of Project...</a>
-</td>
-<td><i>(unassigned)</i>
-</td>
-<td>Saves in the audacity .aup project file format, but compressed (Suitable for mailing)
+<td>Saves a backup copy of your project in .AUP3 format to a different name or location
 </td></tr></table>
 <div id="file_export_submenu"></div>
 <h3><span class="mw-headline" id="File:_Export"><a href="file_menu_export.html" title="File Menu: Export">File: Export</a></span></h3>
@@ -535,7 +537,7 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <tr>
 <td><a href="edit_menu_labels.html#add_label_at_playback_position" title="Edit Menu: Labels">Add Label at Playback Position</a>
 </td>
-<td><span class="kbrd" style="background-color: #d0d0f8">Ctrl+M</span>
+<td><span class="kbrd" style="background-color: #d0d0f8">Ctrl+M</span> (<i><span class="kbrd" style="background-color: #d0d0f8">&#8984; + .</span> on Mac</i>)
 </td>
 <td>Creates a new, empty label at the current playback or recording position.
 </td></tr>
@@ -2110,7 +2112,7 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Automatically try to find and eliminate audible silences. Don't use with faded audio.
+<td>Automatically try to find and eliminate audible silences. Do not use this with faded audio.
 </td></tr>
 <tr>
 <td><a href="effect_menu_built_in.html#wahwah" title="Effect Menu: Built-in">Wahwah...</a>
@@ -2305,18 +2307,11 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <td>Attempts to place <a href="label_tracks.html" title="Label Tracks">labels</a> at beats which are much louder than the surrounding audio. It's a fairly rough and ready tool, and will not necessarily work well on a typical modern pop music track with compressed <i><b><a href="glossary.html#dynamic_range" title="Glossary">dynamic range</a></b></i>. If you do not get enough beats detected, try reducing the "Threshold Percentage" setting.
 </td></tr>
 <tr>
-<td><a href="analyze_menu.html#silence_finder" title="Analyze Menu">Silence Finder...</a>
+<td><a href="analyze_menu.html#label_sounds" title="Analyze Menu">Label Sounds...</a>
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Divides up a track by placing point <a href="label_tracks.html" title="Label Tracks">labels</a> inside areas of silence.
-</td></tr>
-<tr>
-<td><a href="analyze_menu.html#sound_finder" title="Analyze Menu">Sound Finder...</a>
-</td>
-<td><i>(unassigned)</i>
-</td>
-<td>Divides up a track by placing region <a href="label_tracks.html" title="Label Tracks">labels</a> for areas of sound that are separated by silence.
+<td>Label Sounds is a tool which can useful to label the different songs or sections (or silences) in a long recording.
 </td></tr></table>
 <div id="tools_menu"></div>
 <h2><span class="mw-headline" id="Tools_Menu"><a href="tools_menu.html" title="Tools Menu">Tools Menu</a></span></h2>
@@ -2454,7 +2449,7 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Extra commands to select the tool, e.g. time-shift, envelopes, multi-tool.
+<td>Extra commands to select the tool, for example time-shift, envelopes, multi-tool.
 </td></tr>
 <tr>
 <td><a href="extra_menu.html#mixer" title="Extra Menu">Mixer</a>
@@ -2630,7 +2625,7 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </td></tr></table>
 <div id="extra_tools_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Tools"><a href="extra_menu_tools.html" title="Extra Menu: Tools">Extra: Tools</a></span></h3>
-<div class="note">Extra commands to select the tool, e.g. time-shift, envelopes, multi-tool. </div>
+<div class="note">Extra commands to select the tool, for example time-shift, envelopes, multi-tool. </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Action
@@ -2772,6 +2767,20 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <td><span class="kbrd" style="background-color: #d0d0f8">Delete</span>
 </td>
 <td>Deletes the selection.
+</td></tr>
+<tr>
+<td><a href="extra_menu_edit.html#time_shift_left" title="Extra Menu: Edit">Time Shift Left</a>
+</td>
+<td><i>(unassigned)</i>
+</td>
+<td>Moves the <a href="audio_tracks.html#focus" title="Audio Tracks">currently focused</a> audio track (or a separate <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> in that track which contains the editing cursor or <a href="audacity_selection.html" title="Audacity Selection">selection region</a>) one screen pixel to left.
+</td></tr>
+<tr>
+<td><a href="extra_menu_edit.html#time_shift_right" title="Extra Menu: Edit">Time Shift Right</a>
+</td>
+<td><i>(unassigned)</i>
+</td>
+<td>Moves the <a href="audio_tracks.html#focus" title="Audio Tracks">currently focused</a> audio track (or a separate <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> in that track which contains the editing cursor or <a href="audacity_selection.html" title="Audacity Selection">selection region</a>) one screen pixel to right.
 </td></tr></table>
 <div id="extra_playatspeed_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Play-at-Speed"><a href="extra_menu_play_at_speed.html" title="Extra Menu: Play-at-Speed">Extra: Play-at-Speed</a></span></h3>
@@ -2983,14 +2992,14 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Extend selection left a little (is this a duplicate?)
+<td>Extend selection left a little. This command only works during Playback or Recording.
 </td></tr>
 <tr>
 <td><a href="extra_menu_selection.html#set_or_extend_right_selection" title="Extra Menu: Selection">Set (or Extend) Right Selection</a>
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Extend selection right a little (is this a duplicate?)
+<td>Extend selection right a little.  This command only works during Playback or Recording.
 </td></tr>
 <tr>
 <td><a href="extra_menu_selection.html#selection_contract_left" title="Extra Menu: Selection">Selection Contract Left</a>
@@ -3139,20 +3148,6 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <td><span class="kbrd" style="background-color: #d0d0f8">Shift+.</span>
 </td>
 <td>When not playing audio, moves the editing cursor 15 seconds right by default. When playing audio, moves the playback cursor 15 seconds right by default. The default value can be changed by adjusting the "Long Period" under "Seek Time when playing" in <a href="playback_preferences.html" title="Playback Preferences">Playback Preferences</a>.
-</td></tr>
-<tr>
-<td><a href="extra_menu_cursor.html#clip_left" title="Extra Menu: Cursor">Clip Left</a>
-</td>
-<td><i>(unassigned)</i>
-</td>
-<td>Moves the <a href="audio_tracks.html#focus" title="Audio Tracks">currently focused</a> audio track (or a separate <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> in that track which contains the editing cursor or <a href="audacity_selection.html" title="Audacity Selection">selection region</a>) one screen pixel to left.
-</td></tr>
-<tr>
-<td><a href="extra_menu_cursor.html#clip_right" title="Extra Menu: Cursor">Clip Right</a>
-</td>
-<td><i>(unassigned)</i>
-</td>
-<td>Moves the <a href="audio_tracks.html#focus" title="Audio Tracks">currently focused</a> audio track (or a separate <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> in that track which contains the editing cursor or <a href="audacity_selection.html" title="Audacity Selection">selection region</a>) one screen pixel to right.
 </td></tr></table>
 <div id="extra_track_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Track"><a href="extra_menu_track.html" title="Extra Menu: Track">Extra: Track</a></span></h3>
@@ -3279,7 +3274,7 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Modifies the temporal selection.  Start and End are time.  FromEnd allows selection from the end, which is handy e.g. to fade in and fade out a track.
+<td>Modifies the temporal selection.  Start and End are time.  FromEnd allows selection from the end, which is handy to fade in and fade out a track.
 </td></tr>
 <tr>
 <td><a href="extra_menu_scriptables_i.html#select_frequencies" title="Extra Menu: Scriptables I">Select Frequencies...</a>
@@ -3342,7 +3337,7 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Modify an envelope by specifying a track or channel and a time within it.  You can't yet delete individual envelope points, but can delete the whole envelope using Delete=1.
+<td>Modify an envelope by specifying a track or channel and a time within it.  You cannot yet delete individual envelope points, but can delete the whole envelope using Delete=1.
 </td></tr>
 <tr>
 <td><a href="extra_menu_scriptables_i.html#set_label" title="Extra Menu: Scriptables I">Set Label...</a>
@@ -3374,7 +3369,7 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Selects audio.  Start and End are time.  First and Last are track numbers.  High and Low are for spectral selection.  FromEnd allows selection from the end, which is handy e.g. to fade in and fade out a track.  The Mode parameter allows complex selections, e.g adding or removing tracks from the current selection.
+<td>Selects audio.  Start and End are time.  First and Last are track numbers.  High and Low are for spectral selection.  FromEnd allows selection from the end, which is handy to fade in and fade out a track.  The Mode parameter allows complex selections, e.g adding or removing tracks from the current selection.
 </td></tr>
 <tr>
 <td><a href="extra_menu_scriptables_ii.html#set_track" title="Extra Menu: Scriptables II">Set Track...</a>
@@ -3549,7 +3544,7 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 </p>
 <div id="no_menu"></div>
 <h2><span class="mw-headline" id="No_Menu">No Menu</span></h2>
-<div class="note"> These are commands which don't appear in any menu. </div>
+<div class="note"> These are commands which do not appear in any menu. </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Action
@@ -3573,39 +3568,13 @@ These same commands are also listed on the page <a href="scripting_reference.htm
 <td> Moves focus to next window.
 </td></tr></table>
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125110
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.796 seconds
-Real time usage: 0.804 seconds
-Preprocessor visited node count: 4199/1000000
-Preprocessor generated node count: 9809/1000000
-Post-expand include size: 37050/2097152 bytes
-Template argument size: 12814/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%  274.422      1 - -total
- 23.14%   63.509    106 - Template:Shortcut
-  9.17%   25.152      1 - Template:I18n
-  8.49%   23.299      1 - Template:I18n_box
-  7.08%   19.426      1 - Template:I18n_list
-  6.28%   17.237     57 - Template:Note
-  6.20%   17.018     61 - Template:Hoverext
-  5.29%   14.521    297 - Template:Unassigned
-  4.54%   12.448      1 - Template:Intro
-  3.89%   10.680     20 - Template:Key
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:1959-0!*!0!!*!5!* and timestamp 20200619125110 and revision id 67654
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -3623,7 +3592,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -3633,9 +3602,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="#" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="#" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -3660,13 +3629,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -3676,7 +3644,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

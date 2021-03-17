@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,9 +32,9 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Vocal_Removal_and_Isolation#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">This page describes techniques which, on <b>some</b> stereo tracks, <b>may</b> allow you to remove or isolate vocals (or other parts of a recording) from the rest. There is no universal, reliable way of doing this without having the original multi-track recordings. Different tracks will require different techniques to achieve maximum possible attenuation or isolation. This will depend on where the vocals are positioned in the stereo field, and on their <a href="glossary.html#frequency" title="Glossary">frequency</a> content compared to the rest of the audio.</div>
+<div class="intro">This page describes techniques which, on <b>some</b> stereo tracks, <b>may</b> allow you to remove or isolate vocals (or other parts of a recording) from the rest. There is no universal, reliable way of doing this without having the original multi-track recordings. Different tracks will require different techniques to achieve maximum possible attenuation or isolation. This will depend on where the vocals are positioned in the stereo field, and on their <a href="glossary.html#frequency" title="Glossary">frequency</a> content compared to the rest of the audio. </div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -44,7 +44,7 @@
 <td align="left" valign="top">
 <ul><li>It is <b>strongly</b> recommended that you make a backup copy of your original recording <b>before</b> attempting any of the editing described in this tutorial.</li>
 <li>If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended to <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> it immediately to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.</li>
-<li>For popular songs, consider downloading vocals-only tracks from the internet. Many studios release the instrumental tracks for use with things like karaoke and some singles even have them on the B side.</li></ul>
+<li>For popular songs, consider downloading vocals-only tracks from the Internet. Many studios release the instrumental tracks for use with things like karaoke and some singles even have them on the B side.</li></ul>
 </td></tr></table>
 </div>
 <p><br />
@@ -56,7 +56,7 @@
 <li> <a href="#3rdparty">Third-party plug-ins</a></li></ol>
 <div id="removal"></div>
 <h2><span class="mw-headline" id="Case_1:_Vocal_Removal_with_vocals_in_the_middle_and_instruments_spread_around_them">Case 1: Vocal Removal with vocals in the middle and instruments spread around them</span></h2>
-<p>If the vocals are panned in the center of a stereo track the so-called "vocal removal" technique can <i>sometimes</i> be effective by removing what is common to both tracks (i.e. the vocals), leaving behind what is different (i.e. the instrumentals).
+<p>If the vocals are panned in the center of a stereo track the so-called "vocal removal" technique can <i>sometimes</i> be effective by removing what is common to both tracks (that is, the vocals), leaving behind what is different (that is, the instrumentals).
 </p><p>The underlying technique in Audacity is to split the stereo track into its left and right channels, make both mono, invert all <i>(or a selected part)</i> of one of them then play back the result.  Note, this removes everything panned in the center, not just vocals, and returns a dual mono result (both channels have the same audio). In some music this could mean removing instrumental parts. Removal of the vocals can often be incomplete leaving artifacts behind; this is especially true where there are backing vocals or where reverb (echo) has been applied as this spreads sound sources and makes them very hard to extract from each other.
 </p>
 <h3><span class="mw-headline" id="Vocal_Reduction_and_Isolation"><a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation">Vocal Reduction and Isolation</a></span></h3>
@@ -101,7 +101,7 @@
 <ol><li>Open Audacity and <a href="importing_audio.html" title="Importing Audio">Import</a> both the regular and instrumental tracks. </li>
 <li>Select one of the tracks and use the <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift</a> tool to roughly align the two tracks.</li>
 <li><a href="tools_toolbar.html#zoom" title="Tools Toolbar">Zoom</a> in really close and then zoom in more. </li>
-<li><i><b>Exact alignment is critical</b></i>. Pick a peak or trough in the left channel of one track and match it precisely with the left channel of the other track. If the alignment isn’t right the process won’t work. </li>
+<li><i><b>Exact alignment is critical</b></i>. Pick a peak or trough in the left channel of one track and match it precisely with the left channel of the other track. If the alignment isn't right the process won't work. </li>
 <li>Select the instrumental track, and invert it using <span class="menu">Effect &gt; <a href="invert.html" title="Invert">Invert</a></span>.</li>
 <li>Use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + A</span> to select all of both tracks. </li>
 <li>Use <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span>. </li></ol>
@@ -115,39 +115,13 @@
 </p>
 
 
-<!-- 
-NewPP limit report
-Cached time: 20200619125116
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.105 seconds
-Real time usage: 0.109 seconds
-Preprocessor visited node count: 352/1000000
-Preprocessor generated node count: 1420/1000000
-Post-expand include size: 5969/2097152 bytes
-Template argument size: 3236/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   40.530      1 - -total
- 62.14%   25.184      1 - Template:I18n
- 57.65%   23.364      1 - Template:I18n_box
- 48.83%   19.792      1 - Template:I18n_list
- 22.25%    9.017      3 - Template:I18n_link
- 13.80%    5.593      3 - Template:Autoglossonym
- 10.45%    4.237     15 - Template:Menu
-  7.51%    3.045      1 - Template:Tip
-  5.25%    2.127      2 - Template:Button
-  4.29%    1.737      1 - Template:Shortcut
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:3835-0!*!0!!*!5!* and timestamp 20200619125116 and revision id 58594
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -165,7 +139,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -175,9 +149,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -202,13 +176,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -218,7 +191,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Vocal_Removal_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Vocal_Removal_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

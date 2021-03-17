@@ -7,14 +7,14 @@
 
 
 
-<!--[if IE 6]><link rel="stylesheet" href="../m/skins/monobook/ie60fixes.css/303.css" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../m/skins/monobook/ie70fixes.css/303.css" media="screen"/><![endif]-->
+
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 
 <meta name="generator" content="MediaWiki 1.28.2"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
-<link rel="copyright" href="https://creativecommons.org/licenses/by/3.0/" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
 
 <link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
 </head>
@@ -32,7 +32,7 @@
 					<div id="contentSub"></div>
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Playing_and_Recording#searchInput">search</a></div>
 
-					<!-- start content -->
+					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"></li></ul>
 
 <div class="intro">Audacity offers many tools which allow the user to play all or part of a sound. There are also many recording options. </div>
@@ -73,7 +73,7 @@
 </p>
 <div id="shortcuts"></div>
 <h3><span class="mw-headline" id="Using_keyboard_shortcuts">Using keyboard shortcuts</span></h3>
-<p>When you get more used to Audacity, it's often easier to use keyboard shortcuts for repetitive actions like playing, pausing and recording. Below is a list of the equivalent keyboard shortcut for each of the Transport Toolbar buttons, with a description of what each button and its shortcut does.
+<p>When you get more used to Audacity, it is often easier to use keyboard shortcuts for repetitive actions like playing, pausing and recording. Below is a list of the equivalent keyboard shortcut for each of the Transport Toolbar buttons, with a description of what each button and its shortcut does.
 </p>
 <dl><dd><table class="prettytablerows" id="Transport_shortcuts">
 
@@ -91,6 +91,21 @@
 <td> Play or Stop </td>
 <td>  <span class="kbrd" style="background-color: #d0d0f8">Space</span> </td>
 <td> Press once to start playback then once to stop. Starting playback again starts from its original starting position at the cursor.
+</td></tr>
+<tr>
+<td> Play/Stop and Set Cursor </td>
+<td>  <span class="kbrd" style="background-color: #d0d0f8">X</span> </td>
+<td> This acts exactly like <span class="kbrd" style="background-color: #d0d0f8">Space</span> when starting playback, but when used to stop, the cursor or start of the selection is set to the position where playback was stopped.
+</td></tr>
+<tr>
+<td> Play to Selection </td>
+<td>  <span class="kbrd" style="background-color: #d0d0f8">B</span> </td>
+<td> Plays to or from the current mouse pointer position to or from the start or end of the selection, depending on the pointer position.
+</td></tr>
+<tr>
+<td> Play Cut Preview</td>
+<td>  <span class="kbrd" style="background-color: #d0d0f8">C</span> </td>
+<td> Plays two seconds of audio before the selection and then one second of audio after the selection - thus simulating what playback would sound like if the selection was deleted.<br />The times are customizable in <a href="playback_preferences.html" title="Playback Preferences">Playback Preferences</a>.
 </td></tr>
 <tr>
 <td> Loop-Play </td>
@@ -127,9 +142,15 @@
 <td> <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span> </td>
 <td> Record in a new track starting from the cursor position or start of the selection.
 </td></tr></table></dd></dl>
-<p>There is an additional command <span class="menu">Transport &gt; Playing &gt; <a href="transport_menu_playing.html#playstop_and_set_cursor" title="Transport Menu: Playing">Play/Stop and Set Cursor</a></span> which has the shortcut <span class="kbrd" style="background-color: #e0e0f0">X</span>. This acts exactly like <span class="kbrd" style="background-color: #d0d0f8">Space</span> when starting playback, but when used to stop, the cursor or start of the selection is set to the position where playback was stopped. Using either <span class="kbrd" style="background-color: #e0e0f0">Space</span> or <span class="kbrd" style="background-color: #e0e0f0">X</span> will then start playback from that stop position. 
-</p><p>All the above shortcuts can be changed if desired in <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a>.
-</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">All the above shortcuts can be changed if desired in <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a>.
+</td></tr></table>
+</div>
 <div id="adjust"></div>
 <h3><span class="mw-headline" id="Adjusting_the_Playback_volume">Adjusting the Playback volume</span></h3>
 <p>You can adjust the playback volume using the output level slider in the <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a>.
@@ -219,8 +240,20 @@
 <div id="overdub"></div>
 <h3><span class="mw-headline" id="Overdubbing"><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Overdubbing</a></span></h3>
 <p>You can record a new track while listening to previously recorded tracks. This is called <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdubbing</a>. To set up for overdubbing, make sure that <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a></span> is enabled (on) which is its default setting.  See the tutorial set <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Recording Multi-track Overdubs</a> for more help with overdubbing.
-</p><p>If you hold the <span class="button">Shift</span> button down the Record button in <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> will temporarily change to <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" />. Then clicking on this modified Record button, or using the shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span> will cause Audacity to create a new track and begin recording on that track from the current cursor position (or from the left edge of a region on the <a href="timeline.html" title="Timeline">Timeline</a>). 
-</p><p>If there is a region in the Timeline, that region will be recorded in a new track. After stopping recording, Audacity will push the recorded track backwards by 130 milliseconds by default to attempt to align it with the previous tracks(s). Left-pointing arrows will appear at time zero when any of the recorded track is pushed behind zero (standard <a href="file_menu.html#export" title="File Menu">Export</a> ignores audio before zero but <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> based on multiple audio tracks includes it). It is recommended to perform a <a href="latency_test.html" title="Latency Test">latency test</a> to determine the optimum backwards correction then set that value at <a href="devices_preferences.html#latency" title="Devices Preferences">Latency correction</a> in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Before overdubbing it is recommended to perform a <a href="latency_test.html" title="Latency Test">latency test</a> to determine the optimum <a href="glossary.html#latency" title="Glossary">latency</a> correction, then set the value of <a href="devices_preferences.html#latency" title="Devices Preferences">Latency correction</a> in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>.
+<dl><dd><i>When recording to a new track begins, latency correction is applied to align the new track with the previous tracks(s).</i></dd></dl>
+</td></tr></table>
+</div>
+<p>If you hold the <span class="button">Shift</span> button down the Record button in <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> will temporarily change to <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" />. Then clicking on this modified Record button, or using the shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span> will cause Audacity to create a new track and begin recording on that track from the current cursor position (or from the left edge of a region on the <a href="timeline.html" title="Timeline">Timeline</a>). 
+</p><p>If there is a region in the Timeline, that region will be recorded in a new track. 
+</p><p><br />
 </p>
 <div id="timer"></div>
 <h3><span class="mw-headline" id="Timer_Recording"><a href="timer_record.html" title="Timer Record">Timer Recording</a></span></h3>
@@ -241,39 +274,13 @@
 </p><p><a href="timer_record.html" title="Timer Record"><b>&gt;</b>&#160; Timer Recording</a> <br />
 </p><p><a href="punch_and_roll_record.html" title="Punch and Roll Record"><b>&gt;</b>&#160; Punch and Roll Recording</a> <br />
 </p>
-<!-- 
-NewPP limit report
-Cached time: 20200619125047
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.220 seconds
-Real time usage: 0.224 seconds
-Preprocessor visited node count: 718/1000000
-Preprocessor generated node count: 2050/1000000
-Post-expand include size: 11114/2097152 bytes
-Template argument size: 5098/2097152 bytes
-Highest expansion depth: 12/40
-Expensive parser function count: 11/100
--->
 
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%   61.825      1 - -total
- 38.58%   23.853      1 - Template:I18n
- 36.04%   22.284      1 - Template:I18n_box
- 30.49%   18.848      1 - Template:I18n_list
- 17.73%   10.962     15 - Template:Shortcut
- 15.40%    9.521      4 - Template:I18n_link
-  8.91%    5.508      4 - Template:Autoglossonym
-  8.35%    5.165      9 - Template:Key
-  4.70%    2.906      9 - Template:Menu
-  3.82%    2.363      1 - Template:Hint
--->
 
-<!-- Saved in parser cache with key helpmediawiki:pcache:idhash:2052-0!*!0!!*!5!* and timestamp 20200619125046 and revision id 67628
- -->
+
+
+
 </div>
-										<!-- end content -->
+										
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -291,7 +298,7 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
-<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn’t tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
@@ -301,9 +308,9 @@ Transclusion expansion time report (%,ms,calls,template)
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change key-bindings, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
-<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Key-bindings</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
@@ -328,13 +335,12 @@ Transclusion expansion time report (%,ms,calls,template)
 		<div class='pBody'>
 			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
 <li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
-<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li>
-<li> <span title="Visual &#39;What Is That?&#39; guide to Audacity"><a rel="nofollow" class="external text" href="https://wit.audacityteam.org//">What is That?</a></span></li></ul>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
 		
 			
-			</div><!-- end of the left (by default at least) column -->
+			</div>
 		<div class="visualClear"></div>
 					<div id="footer" role="contentinfo">
 						<div id="f-copyrightico">
@@ -344,7 +350,7 @@ Transclusion expansion time report (%,ms,calls,template)
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2020-06-19 - <a href="https://alphamanual.audacityteam.org/man/Playing_and_Recording">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Playing_and_Recording">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
