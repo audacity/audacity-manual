@@ -83,7 +83,7 @@
 </pre>
 <p>The following command in a Nyquist script would set the first label in a project to 'foo'
 </p>
-<pre>(AUD-DO "SetLabel: Text=\\"Foo\\"")
+<pre>(AUD-DO "SetLabel: Text=\"Foo\"")
 </pre>
 <p>The text string after AUD-DO is passed to the scripting engine to process.
 </p><p>A complete example of a Nyquist Script using AUD-DO that you can enter at the Tools Nyquist Prompt is given below:
@@ -147,7 +147,7 @@
 ;control end "End time" float-text "" 15 0 nil
 
 (AUD-DO (format nil "SelectTime: Start=~S End=~S" start end))
-(setf reply (AUD-DO (format nil "Message: Text=\\"Start was set to ~S End to ~S\\"" start end)))
+(setf reply (AUD-DO (format nil "Message: Text=\"Start was set to ~S End to ~S\"" start end)))
 
 ;; "reply" is a list in the form ("quoted message" . T)
 (first reply) ;returns the message
@@ -336,7 +336,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

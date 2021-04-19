@@ -126,13 +126,22 @@
 <h2><span class="mw-headline" id="Step_4:_Adjusting_amplitude">Step 4: Adjusting amplitude</span></h2>
 <p>As a final step, since you were careful not to record too loud it is likely that your recording is not as loud as possible. To correct this you can use the <a href="normalize.html" title="Normalize">Normalize</a> effect. 
 </p>
-<ul><li>Choose <span class="menu">Select &gt; <a href="select_menu.html#all" title="Select Menu">All</a></span> to select all the track. 
-<ul><li>With default <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>, you may not need this step - all the audio in the project is selected if you choose an effect without first selecting any audio. </li></ul></li>
+<ul><li>Choose <span class="menu">Select &gt; <a href="select_menu.html#all" title="Select Menu">All</a></span> to select all the track. </li>
 <li>Choose <span class="menu">Effect &gt; <a href="normalize.html" title="Normalize">Normalize...</a></span>. 
-<ul><li>Accept (for now) the default choices in the Normalize dialog and click the <span class="button">OK</span> button</li>
-<li>The volume is normalized to -1 dB, so leaving a little <i><b><a href="glossary.html#headroom" title="Glossary">headroom</a></b></i> below the maximum possible 0 dB level. </li></ul></li></ul>
-<p>Note that Normalize defaults to retaining the existing balance between stereo channels. However basic consumer-level equipment can often record with channels unbalanced. To correct unwanted volume differences between left and right, uncheck "Normalize stereo channels independently".    
+<ul><li>Set the "Normalize peak amplitude to" in the Normalize dialog to be -2dB</li>
+<li>click the <span class="button">OK</span> button</li>
+<li>The volume is normalized to -2 dB, so leaving a little <i><b><a href="glossary.html#headroom" title="Glossary">headroom</a></b></i> below the maximum possible 0 dB level. </li></ul></li></ul>
+<p>Note that Normalize defaults to retaining the existing balance between stereo channels. However basic consumer-level equipment can often record with channels unbalanced. To correct unwanted volume differences between left and right, uncheck "Normalize stereo channels independently". 
 </p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Opinions vary: some users prefer to leave as much as 3dB headroom, while others prefer to maximize the signal level to 0 dB.
+</td></tr></table>
+</div>   
 <div class="note"> Extraneous noises in the recording can cause Normalize to create unwanted changes in the stereo balance, or prevent recordings being made as loud as they can be. Extraneous noises should be edited with <a href="click_removal.html" title="Click Removal">Click Removal</a>, <a href="repair.html" title="Repair">Repair</a> or <a href="amplify.html" title="Amplify">Amplify</a> before the Normalize step. Also see our tips for <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Reducing_noise">reducing noise</a> in the recording chain.</div>
 <p><br />
 </p>
@@ -240,7 +249,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Basic_Recording,_Editing_and_Exporting">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Basic_Recording,_Editing_and_Exporting">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

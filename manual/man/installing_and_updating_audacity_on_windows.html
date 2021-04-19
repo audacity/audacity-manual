@@ -46,16 +46,14 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">Note carefully that simply re-installing Audacity will <i><b>not</b></i> clear and reset your Audacity settings for preferences and plug-ins.  For instructions on how to achieve this please see <a href="#purge">Reset Audacity Settings</a>.
-</td></tr></table></div>
-</div>
+<td align="left" valign="top">Note carefully that simply re-installing Audacity will <i><b>not</b></i> clear and reset your Audacity settings for preferences and plug-ins.
+<ul><li>To do this simply use <span class="menu">Tools &gt; <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a></span> </li></ul>
+</td></tr></table></div> </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#install">Installing Audacity on Windows</a></li>
 <li><a href="#updating">Updating Audacity on Windows</a>
 <ul><li><a href="#updates">Check for Updates</a></li></ul></li>
-<li><a href="#libraries">Import-Export libraries</a>
-<ul><li><a href="#lamein">LAME for MP3 export</a></li>
-<li><a href="#winff">FFmpeg</a></li></ul></li>
+<li><a href="#libraries">FFmpeg Import-Export library</a></li>
 <li><a href="#winff">Installing the FFmpeg Import/Export Library on Windows</a></li>
 <li><a href="#purge">Reset Audacity Settings</a></li>
 <li><a href="#compatibility">Project compatibility</a></li></ol>
@@ -63,12 +61,12 @@
 </p>
 <div id="install"></div>
 <h2><span class="mw-headline" id="Installing_Audacity_on_Windows">Installing Audacity on Windows</span></h2>
-<p>Go to the <a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/windows/"><b>Windows Download page</b></a> of the Audacity site and follow th instructions there.
+<p>Go to the <a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/windows/"><b>Windows Download page</b></a> of the Audacity site and follow the instructions there.
 </p>
 <div class="note">If you prefer not to use the installer <i>(or security restrictions prevent installing applications)</i>, left-click the link for the "zip" file instead. Then click on the downloaded file to open it in Windows Explorer and choose the option <b>Compressed Folder Tools</b> and <b>Extract all</b> to extract the contents. You can also use <a rel="nofollow" class="external text" href="http://www.7-zip.org/download.html">7-Zip</a> or other extraction utilities.</div> 
 <div id="sysreq"></div>
 <h3><span class="mw-headline" id="System_Requirements">System Requirements</span></h3>
-<p>For detailed system requirements for a Windows installation see <a rel="nofollow" class="external text" href="http://www.audacityteam.org/download/windows/#sysreq">this page</a> on the <a rel="nofollow" class="external text" href="http://www.audacityteam.org/">Audacity Website</a>
+<p>For detailed system requirements for a Windows installation see <a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/windows/#sysreq"><b>this page</b></a> on the <a rel="nofollow" class="external text" href="http://www.audacityteam.org/">Audacity Website</a>
 </p><p><br />
 </p>
 <div id="updating"></div>
@@ -80,14 +78,14 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
-<td align="left" valign="top">No need to uninstall a previous version before updating, unless updating from Audacity 1.3.x
+<td align="left" valign="top">If you are updating from Audacity 2.x or earlier please read <b><a href="updating_from_audacity_2.x_to_audacity_3.html" title="Updating from Audacity 2.x to Audacity 3.x">Updating from Audacity 2.x to Audacity 3.x</a></b> as there was a major change to the project file structure when Audacity 3.0.0 was introduced.
 </td></tr></table>
 </div>
 <p>If you install a new Audacity version after installing a previous one, the installer will offer to install to the same directory as the previous installation. 
 </p>
-<ul><li>The installation directory is normally <span class="path">Program&#160;Files\\Audacity</span> (or <span class="path">Program Files(x86)\\Audacity</span> on 64-bit Windows). </li>
+<ul><li>The installation directory is normally <span class="path">Program Files(x86)\Audacity</span> on 64-bit Windows (or <span class="path">Program&#160;Files\Audacity</span> on 32-bit Windows). </li>
 <li>As long as you do not change the installation directory, Audacity will install over the previous version, and any extra plug-ins you added to the "Plug-Ins" folder will still be available.</li>
-<li>If the previous version was 1.3.x, please uninstall 1.3 before installing the current 2.x version. After uninstalling 1.3, any extra plug-ins you added to that version will remain, and you can move them to the "Plug-Ins" folder of the new installation.</li></ul>
+<li>There is no need to uninstall a previous version before updating, unless updating from Audacity 1.3.x or earlier. </li></ul>
 <div id="winlib"></div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -95,7 +93,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">If upgrading from Audacity 2.0.5 or earlier, you must upgrade to the latest <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library if you require import and export of <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i>.
+<td align="left" valign="top">If updating from Audacity 2.0.5 or earlier, you <i><b>must</b></i> update to the latest <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library if you require import and export of <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, <i><b><a href="glossary.html#opus" title="Glossary">Opus</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i>.
 </td></tr></table></div>
 <div id="updates"></div>
 <h3><span class="mw-headline" id="Check_for_Updates">Check for Updates</span></h3>
@@ -105,28 +103,43 @@
 </p><p><br />
 </p>
 <div id="libraries"></div>
-<h2><span class="mw-headline" id="Import-Export_libraries">Import-Export libraries</span></h2>
-<div id="lamein"></div>
-<h3><span class="mw-headline" id="LAME_for_MP3_export">LAME for MP3 export</span></h3>
-<p>The software patent on <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> encoding library has expired, so now the <b>LAME</b> library for <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> export is built-in with Audacity for Windows.
-</p>
 <div id="winff"></div>
-<h3><span class="mw-headline" id="Installing_the_FFmpeg_Import.2FExport_Library_on_Windows"><a href="installing_ffmpeg_for_windows.html" title="Installing FFmpeg for Windows">Installing the FFmpeg Import/Export Library on Windows</a></span></h3>
-<div class="note">The optional <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg library</a> allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files. 
-<ul><li> Because of software patents, Audacity cannot include the FFmpeg software or distribute it from its own websites. Instead, use the following instructions to download and install the free and recommended FFmpeg third-party library.</li>
-<li><b>Advanced usage:</b> If you already have Audacity-compatible FFmpeg 2.2.x or 2.3.x shared libraries in the system PATH, Audacity will use those as long as you do not install FFmpeg from the links below and as long as you do not specify the FFmpeg you want Audacity to use in <a href="libraries_preferences.html" title="Libraries Preferences">Libraries Preferences</a>.</div> </li></ul>
-<p>For full instructions please see <a href="installing_ffmpeg_for_windows.html" title="Installing FFmpeg for Windows">Installing FFmpeg for Windows</a>.
-</p><p><br />
+<h2><span class="mw-headline" id="Installing_the_FFmpeg_Import.2FExport_Library_on_Windows"><a href="installing_ffmpeg_for_windows.html" title="Installing FFmpeg for Windows">Installing the FFmpeg Import/Export Library on Windows</a></span></h2>
+<p>The optional <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg library</a> allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files. 
+</p><p>Because of software patents, Audacity cannot include the FFmpeg software or distribute it from its own websites. Instead, use the following instructions to download and install the free and recommended FFmpeg third-party library.
+</p><p>For full instructions please see <a href="installing_ffmpeg_for_windows.html" title="Installing FFmpeg for Windows">Installing FFmpeg for Windows</a>.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>Advanced usage:</b> If you already have Audacity-compatible FFmpeg 2.2.x or 2.3.x shared libraries in the system PATH, Audacity will use those as long as you do not install FFmpeg from the links above and as long as you do not specify the FFmpeg you want Audacity to use in <a href="libraries_preferences.html" title="Libraries Preferences">Libraries Preferences</a>.
+</td></tr></table>
+</div>
+<p><br />
 </p>
 <div id="purge"></div>
 <h2><span class="mw-headline" id="Reset_Audacity_Settings_on_Windows">Reset Audacity Settings on Windows</span></h2>
 <p>As stated in the introduction on this page, simply re-installing Audacity will not clear and reset your Audacity settings for preferences and plug-ins.
-</p><p>The data for these are stored in a folder called audacity in the &gt;Appdata&gt;Roaming folder in your user directory.  
-</p><p>On Windows the full pathname is:  <b>C:\\Users\\<i>&lt;your username&gt;</i>\\Appdata\\Roaming\\audacity</b>
-</p><p>First you will need to quit Audacity.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">The easiest way to do this is simply to use <span class="menu">Tools &gt; <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a></span>
+</td></tr></table>
+</div>
+<h3><span class="mw-headline" id="The_location_of_Audacity_settings">The location of Audacity settings</span></h3>
+<p>The data for these are stored in a folder called audacity in the &gt;Appdata&gt;Roaming folder in your user directory.  
+</p><p>On Windows the full pathname is:  <b>C:\Users\<i>&lt;your username&gt;</i>\Appdata\Roaming\audacity</b>
 </p>
 <h3><span class="mw-headline" id="To_completely_reset_your_Audacity_settings">To completely reset your Audacity settings</span></h3>
-<p>Navigate to that <b>audacity</b> folder with Windows Explorer and delete the entire contents.  Then restart Audacity.
+<p>First you will need to quit Audacity.
+</p><p>Navigate to that <b>audacity</b> folder with Windows Explorer and delete the entire contents.  Then restart Audacity.
 </p>
 <h3><span class="mw-headline" id="To_reset_just_your_Audacity_preferences">To reset just your Audacity preferences</span></h3>
 <p>Navigate to that <b>audacity</b> folder with Windows Explorer and delete the <b>audacity.cfg file</b>.  Then restart Audacity.
@@ -142,7 +155,8 @@
 </p>
 <div id="compatibility"></div>
 <h2><span class="mw-headline" id="Projects_saved_by_old_versions_of_Audacity">Projects saved by old versions of Audacity</span></h2>
-<p>Current Audacity is compatible with project files saved by versions of Audacity 1.3.x and later, including 2.x.x.
+<p>Current Audacity can open project files saved by versions of Audacity 1.2.x and later, including 2.x.x.  
+</p><p>These will be converted to the 3.x AUP3 single file format.  See <a href="audacity_projects.html#open" title="Audacity Projects">Managing Audacity Projects</a> for more details.
 </p><p><br />
 </p>
 <div id="links"></div>
@@ -225,7 +239,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Windows">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Windows">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

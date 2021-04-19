@@ -48,8 +48,8 @@
 <li><a href="#manage">Manage Macros</a></li>
 <li><a href="#shrink">Macros Palette dialog</a></li>
 <li><a href="#parameters">Macro Command Parameters</a></li>
-<li><a href="#store">Where Macros are stored</a></li>
 <li><a href="#share">Sharing a Macro</a></li>
+<li><a href="#store">Where Macros are stored</a>]</li>
 <li><a href="#examples">Macros Examples</a></li></ol>
 <p><br />
 </p>
@@ -77,7 +77,7 @@
 <h2><span class="mw-headline" id="Manage_Macros"><a href="manage_macros.html" title="Manage Macros">Manage Macros</a></span></h2>
 <p>Use <span class="menu">Tools &gt; Macros...</span> if you need to create a new Macro or to edit an existing Macro. 
 </p>
-<dl><dd><span title="Manage Macros dialog showing Macro list (left) and command list for selected Macro (right)"><img alt="Manage Macros 3-0-0.png" src="../m/images/a/a0/manage_macros_3_0_0.png" width="831" height="331" /></span></dd></dl>
+<dl><dd><span title="Manage Macros dialog showing Macro list (left) and command list for selected Macro (right)"><img alt="Manage Macros 3-0-1.png" src="../m/images/7/73/manage_macros_3_0_1.png" width="831" height="344" /></span></dd></dl>
 <p><br />
 </p>
 <div id="shrink"></div>
@@ -113,14 +113,43 @@
 <h2><span class="mw-headline" id="Macro_Command_Parameters">Macro Command Parameters</span></h2>
 <p>Commands that call Effects, Generators, Analyzers or Tools, use the same familiar graphical interface (GUI) as appears when they are used from the normal top level menus.
 </p><p>Many of the other commands provide a simple GUI comprised of checkboxes and text entry boxes. Typical examples can be seen in the <a href="extra_menu_scriptables_i.html" title="Extra Menu: Scriptables I">Scriptables I</a> and <a href="extra_menu_scriptables_ii.html" title="Extra Menu: Scriptables II">Scriptables II</a> menus.
-</p><p>Please see <a href="manage_macros.html#parameters" title="Manage Macros">Manage Macros</a> for more details.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">It is <i><b>strongly</b></i> recommended that you <a href="#parameters"><b>set parameters</b></a> for the commands that you use in a Macro.
+<p>Otherwise Audacity will use the last-used parameter setting(s) when you ran the effect(s) manually.</p>
+<p>Also note carefully that settings used in Macros will not affect or change the last-used parameter settings for any effect when next run manually. </p>
+<p>Basically to paraphrase: <i>"What happens in Macros stays in Macros"</i>. </p> 
+</td></tr></table>
+</div>
+<p>Please see <a href="manage_macros.html#parameters" title="Manage Macros">Manage Macros</a> for more details.
 </p><p><br />
+</p>
+<div id="share"></div>
+<h2><span class="mw-headline" id="Sharing_a_Macro">Sharing a Macro</span></h2>
+<p>You can export a Macro as a TXT file using the <span class="button">Export</span> button in <a href="manage_macros.html" title="Manage Macros">Macros Manager</a> and send it to another user, or copy it to another computer for use there
+</p><p>You can import another user's Macro, or a copied macro of your own, into your Macros folder by using the <span class="button">Import</span> button in the <a href="manage_macros.html" title="Manage Macros">Macros Manager</a>. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">You can also edit Exported Macros with a text editor and Import them back in if required.
+</td></tr></table>
+</div>
+<p><br />
 </p>
 <div id="store"></div>
 <h2><span class="mw-headline" id="Where_Macros_are_stored">Where Macros are stored</span></h2>
 <p>Each Macro is automatically saved as a separate text file with TXT <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> in the "<b>Macros</b>" folder in Audacity's folder for application data:
 </p>
-<ul><li> <b>Windows:</b> Users\\&lt;username&gt;\\AppData\\Roaming\\audacity\\Macros</li>
+<ul><li> <b>Windows:</b> Users\&lt;username&gt;\AppData\Roaming\audacity\Macros</li>
 <li> <b>Mac:</b> ~/Library/Application Support/audacity/Macros</li>
 <li> <b>Linux:</b> ~/.audacity-data/Macros</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -130,17 +159,11 @@
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
 <td align="left" valign="top">In order to see the <b>Macros</b> folder on Windows, macOS or GNU/Linux, you must show hidden files and folders or type the folder location into your file manager's address bar.<p>
-<ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, double-click the AppData or Application Data folder and navigate through that. If necessary, show hidden files and folders on <a rel="nofollow" class="external text" href="http://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Windows</a> or type <b>%appdata%\\audacity\\Macros</b> or <b>shell:appdata\\audacity\\Macros</b> into the Explorer address bar then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on your keyboard.</p><p></li>
+<ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, double-click the AppData or Application Data folder and navigate through that. If necessary, show hidden files and folders on <a rel="nofollow" class="external text" href="http://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Windows</a> or type <b>%appdata%\audacity\Macros</b> or <b>shell:appdata\audacity\Macros</b> into the Explorer address bar then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on your keyboard.</p><p></li>
 <li> <b>macOS:</b> Open Finder, use the <span class="menu">Go</span> menu, choose <span class="menu">Go to Folder</span> and type <b>~/Library/Application Support/audacity/Macros</b>, or set Finder to <a rel="nofollow" class="external text" href="http://osxdaily.com/2011/07/22/access-user-library-folder-in-os-x-lion/">show your User Library folder</a>.</p></li></ul>
 </td></tr></table>
 </div>
 <p><br />
-</p>
-<div id="share"></div>
-<h2><span class="mw-headline" id="Sharing_a_Macro">Sharing a Macro</span></h2>
-<p>You can copy a Macro from your <a href="#store">Macros folder</a> and send it to another user, or to copy another user's Macro into your Macros folder so as to add to your own list of Macros. An updated list of Macros will be available next time you open "Manage Macros" in Audacity.
-</p><p>You can also edit your Macros using copy and paste between them.
-</p><p><br />
 </p>
 <div id="examples"></div>
 <h2><span class="mw-headline" id="Macros_Examples"><a href="macros_examples.html" title="Macros Examples">Macros Examples</a></span></h2>
@@ -224,7 +247,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Macros">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Macros">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

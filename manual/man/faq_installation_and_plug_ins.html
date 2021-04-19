@@ -122,9 +122,9 @@
 
 <div class="note">The optional <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg library</a> allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files.<p>Because of software patents, Audacity cannot include the FFmpeg software or distribute it from its own websites. Instead, following the links below to instructions to download and install the free and recommended FFmpeg third-party library.</p> </div>
 <div id="winff"></div>
-<ul><li><b>Windows:</b> See the <a href="installing_and_updating_audacity_on_windows.html#winff" title="Installing and updating Audacity on Windows"><b>FFmpeg installation section</b></a> on <a href="installing_and_updating_audacity_on_windows.html" title="Installing and updating Audacity on Windows">Installing and updating Audacity on Windows</a>. </li></ul>
+<ul><li><b>Windows:</b> See <b><a href="installing_ffmpeg_for_windows.html" title="Installing FFmpeg for Windows">Installing FFmpeg for Windows</a></b>. </li></ul>
 <div id="macff"></div>
-<ul><li><b>Mac:</b> See the <a href="installing_and_updating_audacity_on_mac_os_x.html#macff" title="Installing and updating Audacity on Mac OS X"><b>FFmpeg installation section</b></a> on <a href="installing_and_updating_audacity_on_mac_os_x.html" title="Installing and updating Audacity on Mac OS X">Installing and updating Audacity on Mac</a>.</li></ul>
+<ul><li><b>Mac:</b> See  <b><a href="installing_ffmpeg_for_mac.html" title="Installing FFmpeg for Mac">Installing FFmpeg for Mac</a></b>.</li></ul>
 <div id="linff"></div>
 <ul><li><b>GNU/Linux:</b> See the <a href="installing_and_updating_audacity_on_linux.html#linff" title="Installing and updating Audacity on Linux"><b>FFmpeg installation section</b></a> on <a href="installing_and_updating_audacity_on_linux.html" title="Installing and updating Audacity on Linux">Installing and updating Audacity on Linux</a>.</li></ul>
 <p><a href="#top">back to top</a>
@@ -167,7 +167,7 @@
 </p><p>Sometimes it may not be obvious which effects to disable to solve a hang or crash. You might be able to identify offending effects from <b>Audacity.zip</b> if there is an Audacity <a href="help_menu.html#data" title="Help Menu">Debug report</a>. You can also try Windows Event Viewer (or more easily on Windows, type "Reliability" without quotes in the Search box to open Reliability Monitor). To view Mac reports, open /Applications/Utilities/Console.app then look at the System Diagnostic Reports.  
 </p><p>Should it remain unclear which effects are responsible, it may be useful to reset Audacity to load only the enabled effects that it had on first installation. To do this, go to Audacity's folder for application data as follows:
 </p>
-<ul><li> <b>Windows:</b> <span class="path">Users\\&lt;username&gt;\\AppData\\Roaming\\Audacity\\</span> (or type <b>%appdata%</b> in Explorer)</li>
+<ul><li> <b>Windows:</b> <span class="path">Users\&lt;username&gt;\AppData\Roaming\Audacity\</span> (or type <b>%appdata%</b> in Explorer)</li>
 <li> <b>macOS:</b> <span class="path">~/Library/Application Support/audacity/</span> (use Go &gt; Go to Folder in Finder)</li>
 <li> <b>Linux:</b> <span class="path">~/.audacity-data/</span> .</li></ul>
 <p>In that folder, delete the <b>pluginregistry.cfg</b> and <b>pluginsettings.cfg</b> files and restart Audacity.  Then you can use the Plug-in Manager dialog to selectively enable effects to find the possible culprit.     
@@ -209,7 +209,7 @@ If you discover a specific plug-in that misbehaves in Audacity, please email our
 
 <h2><span class="mw-headline" id="Windows:_How_can_I_make_Audacity_launch_when_I_double-click_a_WAV_or_other_audio_file.3F">Windows: How can I make Audacity launch when I double-click a WAV or other audio file?</span></h2>
 <p>For <b>Windows</b>, click the Windows Start button, then Control Panel, then "Programs". Under "Default Programs", click "Make a file type always open in a specific application".  Choose ".wav", ".mp3" or your chosen extension, then click "Change application..." and browse for Audacity to associate it with that file type. 
-</p><p>Another method is to use the Windows Start button, type "Run" (without quotes), press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, then type <b>%windir%\\system32\\control.exe /name Microsoft.DefaultPrograms /page pageFileAssoc</b> and press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. 
+</p><p>Another method is to use the Windows Start button, type "Run" (without quotes), press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, then type <b>%windir%\system32\control.exe /name Microsoft.DefaultPrograms /page pageFileAssoc</b> and press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. 
 </p><p>On Windows you can instead set the default association of a file type with Audacity by right-clicking over any file of that type, choosing "Open with" then "Choose default application...".      
 </p>
 <div class="note">If you have two different versions of Audacity, and you want to be able to choose which one, then you will need to rename one to give them different names, such as audacity.exe and audacity_old.exe.</div>
@@ -357,7 +357,7 @@ See also:
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Installation_and_Plug-Ins">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Installation_and_Plug-Ins">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

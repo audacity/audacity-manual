@@ -38,19 +38,30 @@
 <p>The <b>Mixer Board...</b> command is enabled whenever there is an audio track - it can even be brought up during playback. When there are no audio tracks it is grayed-out and unavailable.
 </p><p>The Mixer Board window will always remain on top of the Audacity Window if they are superimposed.
 </p>
-<dl><dd><span title="Mixer Board window with five tracks"><img alt="Mixer Board.png" src="../m/images/1/19/mixer_board.png" width="596" height="453" /></span></dd></dl>
+<dl><dd><span title="Mixer Board window with five tracks"><img alt="Mixer Board 3-0-0.png" src="../m/images/2/26/mixer_board_3_0_0.png" width="597" height="462" /></span></dd></dl>
 <div id="controls"></div>
 <h2><span class="mw-headline" id="Mixer_Board_controls">Mixer Board controls</span></h2>
-<p>All Mixer Board controls update the controls in their respective Track Control Panel and vice versa. For example, muting a track in the Mixer Board also mutes that track in the main tracks window. 
+<p>All Mixer Board controls update the controls in their respective Track Control Panels and vice versa. For example, muting a track in the Mixer Board also mutes that track in the main tracks window. 
 </p><p>As in the Track Control Panels, double-click in either Mixer Board slider to enter an exact gain or pan value in a text box.
 </p><p>The meters are <i>post-fade</i>, like the <a href="meter_toolbar.html" title="Meter Toolbar">Meter Toolbars</a>, such that they show the levels as modified by the track's gain/pan sliders and mute/solo buttons. Mono tracks show in both track meters, as in the Meter Toolbar. 
 </p>
 
-<p>You can select a Mixer Board track by clicking its Track Strip on the image near the top. Selection of a track in Mixer Board is indicated by the gray half-border that sits right and bottom of an un-selected track moves to left and top of a selected track; in the example above it is the "Horns" track that is selected.  Deselect all tracks by clicking in the dark gray between track strips or the dark gray at the bottom of the Mixer Board, note that the shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift +A</span> to deselect all tracks does <b>not</b> work in Mixer Board.
+<p>You can select a Mixer Board track by clicking its instrument image (or the Audacity logo if no instrument image is available). Selection of a track in Mixer Board is indicated by the blue background. In the example above it is the "Guitar Jimi" track that is selected.  
+</p><p>Deselect all tracks by clicking in the white strip at the bottom of the the Mixer Board, note that the shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift +A</span> to deselect all tracks does <b>not</b> work in Mixer Board.
 </p>
 <div class="note">Similar to <a href="audacity_selection.html#track_mouse" title="Audacity Selection">Audacity Selection</a> you can also add specific tracks to the selection and remove specific tracks from the selection:
-<ul><li> Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and clicking in a track's Track Strip<b>toggles the selectedness</b> of that track only. So if a  track is not selected, <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span>-clicking its Track Strip selects it, or deselects it if it is already selected. </li>
+<ul><li> Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and clicking in a track's Track Strip <b>toggles the selectedness</b> of that track only. So if a  track is not selected, <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span>-clicking its Track Strip selects it, or deselects it if it is already selected. </li>
 <li>If you select a track by clicking on its Track Strip and then use <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and click in another track's Track Strip, all tracks between and including those two tracks will be selected.</div></li></ul>
+<h3><span class="mw-headline" id="The_example_in_the_image">The example in the image</span></h3>
+<p>Note the following points in the image above:
+</p>
+<ol><li>Jimi's guitar track is both selected and center-panned</li>
+<li>Noel's bass track is panned left in the mix</li>
+<li>the horns are taken out of the mix with the gain slider minimum position</li>
+<li>the keyboards are panned right and have their volume reduced</li>
+<li>Mitch's drums are center-panned and lowered in volume</li></ol>
+<p><br />
+</p>
 <div id="trackid"></div>
 <h2><span class="mw-headline" id="Track_identification">Track identification</span></h2>
 <p>By default, the image at the top of each Track Strip is the Audacity logo, but if you <a href="audio_track_dropdown_menu.html#Name..." title="Audio Track Dropdown Menu">name</a> the track in the Track Control Panel with an instrument name or abbreviation thereof, Mixer Board automatically shows an appropriate image as listed below. A track name that contains any of the keywords (in bold) will display the image that is associated with those keywords. If the track name contains keywords for more than one instrument, the Mixer Board will display the best match.
@@ -59,27 +70,26 @@
 
 <tr>
 <td width="33%" valign="top">
-<ul><li> <b>acoustic, guitar, gtr</b> = acoustic guitar</li>
-<li> <b>acoustic, piano, pno</b> = acoustic piano</li>
-<li> <b>back, vocal, bg, vox</b> = backing vocal </li>
+<ul><li> <b>acoustic guitar, acoustic gtr</b> = acoustic guitar</li>
+<li> <b>acoustic piano, acoustic pno</b> = acoustic piano</li>
+<li> <b>back vocal, back vox, bg</b> = backing vocal </li>
 <li> <b>clap</b> = handclaps</li>
 <li> <b>drums, dr</b> = drum kit</li>
-<li> <b>electric, bass, guitar, bs, gtr</b> = electric bass guitar</li>
-<li> <b>electric, guitar, gtr</b> = (standard) electric guitar</li></ul>
+<li> <b>electric bass, bass, bs</b> = electric bass guitar</li>
+<li> <b>electric guitar, guitar, gtr</b> = (standard) electric guitar</li></ul>
 </td>
 <td width="33%" valign="top">
-<ul><li> <b>electric, piano, pno, key</b> = electronic keyboard</li>
+<ul><li> <b>electric piano, electric pno, key</b> = electronic keyboard</li>
 <li> <b>kick</b> = kick drum</li>
 <li> <b>loop</b> = loop track</li>
-<li> <b>organ, org</b> = organ</li>
 <li> <b>perc</b> = percussion</li>
 <li> <b>sax</b> = saxophone</li>
-<li> <b>snare</b> = snare drum</li></ul>
+<li> <b>snare</b> = snare drum</li>
+<li> <b>string, violin, cello</b> = generic stringed instrument</li></ul>
 </td>
 <td width="33%" valign="top">
-<ul><li> <b>string, violin, cello</b> = generic stringed instrument</li>
-<li> <b>synth</b> = synthesizer</li>
-<li> <b>tambo</b> = tambourine </li>
+<ul><li> <b>synth</b> = synthesizer</li>
+<li> <b>tambourine, tambo</b> = tambourine </li>
 <li> <b>trumpet, horn</b> = generic brass instrument</li>
 <li> <b>turntable</b> = record player</li>
 <li> <b>vibraphone, vibes</b> = vibraphone</li>
@@ -169,7 +179,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Mixer_Board">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Mixer_Board">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

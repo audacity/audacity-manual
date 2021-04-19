@@ -43,10 +43,10 @@
 <p>EBU R 128 loudness is measured in LUFS (Loudness Units Full Scale, or equivalently LKFS, Loudness k-weighted Full Scale) for absolute values or LU (Loudness Units) for relative values whereat 0 LUFS are equivalent to full scale. The loudness is defined as the k-weighted (see <b><a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></b> or <b><a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></b>) sum of the squared values of all channels in which the k-weighting approximates the characteristics of the human ear. Thus, LU are somewhat related to the mean square without root. Usually, the perceived loudness is calculated in blocks of 400 milliseconds every 100 milliseconds (so called momentary loudness).
 </p>
 <div id="multichannel"></div>
-<h2><span class="mw-headline" id="Multichannel_audio">Multichannel audio</span></h2>
-<p>In multichannel audio, the individual channels are weighted before adding them to the total loudness. In Audacity's case which supports only mono and stereo tracks at the time of writing, all channels have equal contribution.
-LU's are defined from a physical point of view that multiple audio sources add up within air and thus the loudness increases by adding another audio source. A consequence of the LU definition is that the amplitude of multichannel audio decreases if another channels is added while the loudness is kept constant.
-While this point of view is completely valid it causes problems together with all known PC audio drivers. Those drivers simply double mono signals that are played on stereo speakers without attenuating their value which results in the double playback loudness. To compensate this, Audacitiy's <b><a href="loudness_normalization.html" title="Loudness Normalization">Loudness Normalization</a></b> effect has an option to take this loudness doubling into account.
+<h2><span class="mw-headline" id="Multi-channel_audio">Multi-channel audio</span></h2>
+<p>In multi-channel audio, the individual channels are weighted before adding them to the total loudness. In Audacity's case which supports only mono and stereo tracks at the time of writing, all channels have equal contribution.
+LU's are defined from a physical point of view that multiple audio sources add up within air and thus the loudness increases by adding another audio source. A consequence of the LU definition is that the amplitude of multi-channel audio decreases if another channels is added while the loudness is kept constant.
+While this point of view is completely valid it causes problems together with all known PC audio drivers. Those drivers simply double mono signals that are played on stereo speakers without attenuating their value which results in the double playback loudness. To compensate this, Audacity's <b><a href="loudness_normalization.html" title="Loudness Normalization">Loudness Normalization</a></b> effect has an option to take this loudness doubling into account.
 </p>
 <div id="intLoudness"></div>
 <h2><span class="mw-headline" id="Integrative_loudness_and_loudness_gating">Integrative loudness and loudness gating</span></h2>
@@ -130,7 +130,7 @@ First, loudness gating as defined by EBU R 128 discards all measurement blocks t
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Perceived_Loudness_(EBU_R_128)">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Perceived_Loudness_(EBU_R_128)">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

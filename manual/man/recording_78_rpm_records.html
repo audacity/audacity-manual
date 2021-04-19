@@ -143,7 +143,7 @@ The safest way to swap between stylus types (if you are doing this often) is to 
 <p><b>Note on actual speeds:</b>  With the early clockwork turntable mechanisms the rotational speed was rather approximate and manufacturers produced records in the 70 to 90 rpm range with 78 being the most commonly accepted \xe2\x80\x9cstandard\xe2\x80\x9d.  Many discs had the speed stamped on the label and they depended on the early players which had a speed control.  With the introduction of the synchronous AC motor, for detailed technical reasons, the standard was changed to 78.26 rpm.  See this website for details: <a rel="nofollow" class="external free" href="http://www.videointerchange.com/vintage_78s.htm">http://www.videointerchange.com/vintage_78s.htm</a>.
 </p>
 <div class="note">Stanton T-series USB turntables still offer 78 rpm working, and helpfully they have a wide speed adjustment range. If you know exactly what speed your records should spin at you can find a strobe disc on the Internet and print one out with exactly the right spacing of bars. One example site is: <a rel="nofollow" class="external free" href="http://www.78rpm.com/rescat/strobe_info.htm">http://www.78rpm.com/rescat/strobe_info.htm</a>.</div>
-<p><b>Note on actual EQ used:</b> See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/78rpm_playback_curves">78 rpm playback curves</a> on our Wiki for an extensive list of 78 rpm playback equalization curves and a Nyquist plug-in that can generate XML files from these curves for use in Audacity's <a href="https://alphamanual.audacityteam.org/m/index.php?title=Filter_Curve&amp;action=edit&amp;redlink=1" class="new" title="Filter Curve (page does not exist)">Filter Curve</a> effect.  
+<p><b>Note on actual EQ used:</b> See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/78rpm_playback_curves">78 rpm playback curves</a> on our Wiki for an extensive list of 78 rpm playback equalization curves and a Nyquist plug-in that can generate XML files from these curves for use in Audacity's <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a> effect.  
 </p>
 <div id="filter"></div>
 <h3><span class="mw-headline" id="8._Filtering_and_noise_reduction">8. Filtering and noise reduction</span></h3>
@@ -179,8 +179,18 @@ Over the years your 78s will undoubtedly have received scratches and wear, which
 <h3><span class="mw-headline" id="11._Normalization_.26_Compression">11. Normalization &amp; Compression</span></h3>
 <p>As a final step you may wish to adjust the loudness of you recording.
 </p><p><span style="font-weight: bold; font-size:118%">Normalize:</span>
-You can use <span class="menu">Effect &gt; <a href="normalize.html" title="Normalize">Normalize</a></span>  to bring the maximum volume of your recording to a specified level - we would suggest to around -3.0 dB.  Audacity's <span class="menu">Effect &gt; <a href="amplify.html" title="Amplify">Amplify</a></span> can also be used for the same function.  Normalize has the advantage that it can be optionally set to adjust for channel imbalance.
-</p><p><span style="font-weight: bold; font-size:118%">Compression:</span>
+You can use <span class="menu">Effect &gt; <a href="normalize.html" title="Normalize">Normalize</a></span>  to bring the maximum volume of your recording to a specified level - we would suggest to around -2.0 dB.  Audacity's <span class="menu">Effect &gt; <a href="amplify.html" title="Amplify">Amplify</a></span> can also be used for the same function.  Normalize has the advantage that it can be optionally set to adjust for channel imbalance.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">Opinions vary: some users prefer to leave as much as 3dB headroom, while others prefer to maximize the signal level to 0 dB.
+</td></tr></table>
+</div>
+<p><span style="font-weight: bold; font-size:118%">Compression:</span>
 As a final step, to increase the perceived loudness and density of the recording,  more advanced users can perform compression on the recording.  You can use Audacity's <span class="menu">Effect &gt; <a href="compressor.html" title="Compressor">Compressor</a></span> to do this.
 </p><p>There are also some <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Compressor#alternative">alternative free compressors</a> available as separate downloads which work well with Audacity.
 </p>
@@ -275,7 +285,7 @@ As a final step, to increase the perceived loudness and density of the recording
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Recording_78_rpm_records">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Recording_78_rpm_records">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

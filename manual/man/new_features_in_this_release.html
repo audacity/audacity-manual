@@ -34,65 +34,36 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><center><a href="http://audacityteam.org/" title="size=50%" rel="nofollow"><img alt="size=50%" src="../m/images/8/88/audacity_logo_signika_512_transparent.png" width="512" height="138" /></a></center>
-<div class="intro"><span style="font-size:120%"><b>This page is an overview of prominent new functionality that has been introduced in Audacity 3.0.0 </b>
-<p><b>Version 3.0.0 is primarily a release for a unitary, single self-contained, project file. </b></span>
+<div class="intro"><span style="font-size:120%"><b>This page is an overview of prominent new functionality that has been introduced in Audacity 3.0.2 </b>
+<p><b>Version 3.0.2 is primarily a maintenance release. </b></span>
 </p>
-<ul><li> <span style="font-size:110%">Details of all the major changes since 2.4.2 can be found in <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.0.0">Audacity Release Notes 3.0.0</a>.</span></div></li></ul>
+<ul><li> <span style="font-size:110%">Details of all the major changes since 3.0.0 can be found in <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.0.2">Audacity Release Notes 3.0.2</a>.</span></div></li></ul>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<ol><li><a href="#aup3"><b>Unitary Project</b></a>
-<ul><li><a href="#size">Project Size</a></li>
-<li><a href="#performance">Performance</a></li>
-<li><a href="#recovery">Automatic Recovery</a></li>
-<li><a href="#temp">Temporary work files</a></li></ul></li>
-<li><a href="#backup"><b>Backing up your project</b></a></li>
-<li><a href="#languages">Two new Languages added</a></li>
-<li><a href="#sounds">Label Sounds replaces Sound Finder and Silence Finder</a></li>
-<li><a href="#directories">Enhanced Directories preferences</a></li>
-<li><a href="#macros">Improvements to Macros</a>
-<ul><li><a href="#io">Import and Export of Macros</a></li>
-<li><a href="#comments">Comments in Macros</a></li></ul></li>
-<li><a href="#gate">Noise Gate improved</a></li>
-<li><a href="#multi">Multi-view can be set as user-default view</a></li>
-<li><a href="#edits">Preferences settings that affect Edit behavior</a></li>
-<li><a href="#mixer">Mixer Board improvement</a></li>
-<li><a href="#repeat">Repeat last Generator, Analyzer or Tool</a></li>
-<li><a href="#nyquist">Nyquist Upgrade</a></li>
-<li><a href="#bugs">Bug Fixes</a></li></ol>
+<ol><li><a href="#overview"><b>Overview</b></a></li>
+<li><a href="#aup"><b>Updating from Audacity 2.x</b></a></li>
+<li><a href="#macros"><b>Manage Macros improvements</b></a></li>
+<li><a href="#output"><b>Changes in Macros working on files</b></a></li>
+<li><a href="#bugs"><b>36 Bug Fixes</b></a></li></ol>
 <p><br />
 </p>
-<div id="aup3"></div>
-<h2><span class="mw-headline" id="Unitary_Project">Unitary Project</span></h2>
-<p>Audacity 3.0.0 introduces the new AUP3 project format. Project files saved with this version will have an <b>aup3</b> extension, for example <b>My-Project.aup3</b>.  We believe that this new project format will make life easier for Audacity users, as it replaces the previous project storage format - which used an AUP file and its associated _data folder full of little audio clips - with a single project file that integrates those two parts.
-</p><p>The old structure caused too many users to lose or damage their projects by moving or deleting the project components.  The new single project file structure precludes that happening.
-</p><p><br />
+<div id="overview"></div>
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>Audacity 3.0.2 is about bugfixes for Audacity 3.0.0.  Some bugs which didn't show up in our testing of 3.0.0 became apparent once 3.0.0 was being used by more users.  We wanted to fix these and also to get more diagnostic information about what goes wrong when SQLite (the database we use) can't read or write a file.  So we added more informative diagnostics for when there is an error.
+</p><p>One cluster of bugs we fixed relate to Unicode.  Unicode is a system for representing many non-English letters and symbols.  We, Microsoft and Apple all have made mistakes with Unicode that affected Audacity 3.0.0.  One <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2715">problem we tracked</a> during 3.0.0 turned out to be a Windows update issue with Unicode input, which was resolved by a later Windows update.  Disappearing checkmarks in macOS Big Sur release turned out to be a Unicode issue, believed to be in Apple code, which we <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2709">now work around</a> in 3.0.2.  A <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2714">mistake we made</a> with Unicode prevented Audacity working in Korean and Japanese.
+</p><p>Some of our bug-fixes are small changes in areas where the previous Audacity behaviour was not as we wanted. 3.0.2 may only be a 'point' release, but we think it's one most people using 3.0.0 will want.
 </p>
-<div class="note">AUP projects from previous versions of Audacity can be opened or imported in Audacity 3.0.0 <i>(Audacity converts them to the new unified file format)</i>.
-<ul><li>Note that saving as AUP3 will leave behind the old <b>AUP</b> file and its associated <b>_data</b> folder which you will probably want to delete to recover disk space.</div></li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">Once you have saved the project in the new AUP3 format they can then <b>no longer be opened in previous versions of Audacity</b>.
-<ul><li>The workaround is to Export as WAV files, exporting individual tracks using <span class="menu"> File &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple</a>) and then Importing those into older Audacity versions. </li>
-<li>For details please see <a href="moving_aup3_projects_from_audacity_3.x_to_audacity_2.html" title="Moving AUP3 projects from Audacity 3.x to Audacity 2.x">Moving AUP3 projects from Audacity 3.x to Audacity 2.x</a> </span></li></ul>
-</td></tr></table></div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">Active projects <i><b>cannot</b></i> be saved to a FAT/FAT32 formatted drive as FAT is subject to a maximum file size of 4GB which can easily be temporarily exceeded when editing.
-</td></tr></table></div>
-<p>For more details please see <a href="audacity_projects.html" title="Audacity Projects">Managing Audacity Projects</a>
-</p><p><br />
+<h3><span class="mw-headline" id="Bugs_we.27ve_had_trouble_with">Bugs we've had trouble with</span></h3>
+<p>After 3.0.0 was launched a few users discovered a couple of mysterious bugs which we had not encountered in our extensive QA testing of alpha and Release Candidate builds. These two important bugs that 3.0.0 users saw were hard for us to track down as we could not replicate them.  We added extra diagnostic information to help us do that:
 </p>
-<div id="size"></div>
-<h3><span class="mw-headline" id="Project_size">Project size</span></h3>
-<p>Saved Projects with the new unified file structure should not be larger than similar projects with the old multiple files structure.
-</p><p>As you work on a project, Audacity will consume additional temporary disk space. This is normally released on closing the project.  <i>This is not new with Unitary Project File, previous versions of Audacity also used to do this.</i>
+<div style="margin-left:30px">
+<h4><span class="mw-headline" id="Error:_Failed_to_open_database_file">Error: Failed to open database file</span></h4>
+<p>There was an error which only occurred occasionally for a few users but had us mystified.  Usually this seemed to occur when trying to import an audio file, but there may have been other ways it could happen.  It did not appear to be causing users to experience data loss or damaged projects.  It was this bug:  <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2700"><b>Bug 2700 - "Failed to open the project database"</b></a>
+</p><p>We added a <b>Show Log</b> to this error message so we could gather more information about this to aid the developers in analyzing the issue.  This led to what's probably a solution, as Jack L, with this extra logging, was able to get the problem sufficiently often for us to get a handle on it.  This extra information told us that in some circumstances we were trying to access the disk before it was ready again, with back to back requests too quickly.  Paul then changed the logic of opening a database so that two important requests were always one after the after.  This should address the opening issue.  Leland added a retry, so that if SQLite can't yet read the database, it tries again, but fractionally later.  The retry timeout should benefit all code in Audacity that reads the database, not just at the time of opening.  Jack L then ran his <s>torture tests</s> workload and the problem he experienced was gone.
+</p><p>Even so, because the original error was only occasional, we can't know for sure that it, or similar issues, are gone!  We still have the extra logging in Audacity.  If you do encounter the dialog indicating a problem, please click on the <b>Show Log</b> chevron to generate the log and send us a copy of the screenshot to the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Audacity Forum</a>.  You may see a variant of the message, "<b>The project's database failed to reopen</b>"
+</p>
+<dl><dd><span title="Error dialog Failed to open database file"><img alt="Failed to open database file.png" src="../m/images/6/68/failed_to_open_database_file.png" width="463" height="207" /></span></dd>
+<dd>Clicking on the <b>Show Log</b> chevron will expand the message to show log data.</dd></dl>
+<p>Please see <a href="faq_errors_on_opening_or_recovering_an_audacity_project.html#cryptic-error" title="FAQ:Errors on opening or recovering an Audacity project"><b>this FAQ Error page</b></a> for more details
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -100,226 +71,100 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
 </td>
-<td align="left" valign="top">You can, if you wish, compress your project removing the temporary storage with:
-<ol><li> <span class="menu">File &gt; Save Project</span></li>
-<li> <span class="menu">File &gt; Exit</span></li>
-<li> Relaunch Audacity</li>
-<li> <span class="menu">File &gt; Open...</span></li></ol>
-<p>But note carefully that this will remove your <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo History</a> and the contents of your Audacity clipboard. 
-</p>
+<td align="left" valign="top">This can normally be resolved by simply exiting Audacity, relaunching and then making the required import of an audio file.
 </td></tr></table>
 </div>
-<p><br />
-</p>
-<div id="performance"></div>
-<h3><span class="mw-headline" id="Performance">Performance</span></h3>
-<p>Extensive speed testing has shown that for most work in Audacity the new project file can be a little faster than the old project structure.
-</p><p>This is especially true of using the Effects and Generators which run faster with the new project file.
-</p>
-<div class="note">Closing a project can now take a little longer as Audacity clears up the unused temporary disk space in the file.<p>You will get a progress dialog informing you about the Compaction progress.</p> </div>
-<p><br />
-</p>
-<div id="recovery"></div>
-<h3><span class="mw-headline" id="Automatic_Recovery"><a href="recovery.html" title="Recovery">Automatic Recovery</a></span></h3>
-<p>Automatic Recovery (following a crash) is different in Audacity 3.0.0. <i>It is simpler with no orphan block-files or missing block-files to worry about</i>
-</p>
-<ul><li>When Audacity is launched following a crash it will offer to recover the crashed projects.  </li>
-<li>You can choose to either accept the recovery or to discard the projects.</li>
-<li>You can select projects for either action by clicking on their checkbox, or you can select all by clicking on <b>Select</b>.  </li>
-<li>You can discard just some and then the recovery dialog will remain open enabling you to select others for recovery. </li></ul>
-<p>For more details please see <a href="recovery.html" title="Recovery">Automatic Crash Recovery</a>
-</p><p><br />
-</p>
-<div id="temp"></div>
-<h3><span class="mw-headline" id="Temporary_work_files">Temporary work files</span></h3>
-<p>In addition to the single database project file the database also creates two temporary work files <b>WAL</b> &amp; <b>SHM</b> files.  For example <b>My-Project.aup3-wal</b> and <b>My-Project.aup3-shm</b>.  On Mac there is only the <b>WAL</b> file.
-</p><p>These are deleted on closure of the project or on exit from Audacity.
-</p>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">Do <i><b>not</b></i> delete them or move these temporary files while the project is open as this will destroy the project.<p>Windows blocks you from doing this but macOS and Linux do not.</p>
-</td></tr></table></div>
-<p><br />
-</p>
-<div id="backup"></div>
-<h2><span class="mw-headline" id="Backing_up_your_project"><a href="audacity_projects.html#copies" title="Audacity Projects">Backing up your project</a></span></h2>
-<p>There is a new backup command for projects: <span class="menu">File &gt; Save Project &gt; <a href="audacity_projects.html#copies" title="Audacity Projects">Backup Project</a></span>.
-</p><p>This saves a copy of the current project as an AUP3 file, but with a new name. It is the safe and recommended way to make a safety backup copy of a project as you work on it. 
-</p>
-<ul><li>This could serve either as a single backup copy of the project, or as one of several incremental copies of the project in the state it had at a particular date and time. </li>
-<li>Unlike "Save Project As..." using this command will leave your current project open enabling you to continue working on it.</li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
-</td>
-<td align="left" valign="top">You are <b>strongly</b> advised to make backup versions of your project at key stages in your project so you can return to that stage if you mess up.
-</td></tr></table>
-</div>
-<div class="note">This new command replaces the two previous commands:
-<ul><li><span class="menu">File &gt; Save Project &gt; Save Lossless Copy of Project</span></li>
-<li><span class="menu">File &gt; Save Project &gt; Save Compressed Copy of Project</span></li></ul>
-<p>You can losslessly compress an AUP3 project with standard utilities such as ZIP, WinZip or 7-Zip.
+<h4><span class="mw-headline" id="False_recovery_offered_on_launch">False recovery offered on launch</span></h4>
+<p>This is another mysterious issue which only occurred very occasionally and was foxing us.
+</p><p>Sometimes after exiting Audacity without saving the project when offered, on the next relaunch a false recovery can be offered when there is really nothing to be recovered as no crash has occurred to cause this. We think this error had the same underlying cause, but we don't know for sure.
+</p><p>This bug is <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2732"><b>Bug 2732 Faux recovery offered on launch (very moonphase)</b></a>.  If you encounter this and accept this recovery it "recovers" an empty project and no damage is done.
+</p><p>If you do see this error, please let us know what you can of how it happened.
 </p>
 </div>
 <p><br />
 </p>
-<div id="languages"></div>
-<h2><span class="mw-headline" id="Two_new_Languages_added">Two new Languages added</span></h2>
-<ul><li> Corsican language has been added for 3.0.0, <i>thanks to Patriccollu.</i></li>
-<li> Marathi language has been added for 3.0.0, <i>thanks to Mukul Kulkarni.</i></li></ul>
-<p>Thanks also to all our regular translators who brought translations up to date for 3.0.0.
-</p><p><br />
-</p>
-<div id="sounds"></div>
-<h2><span class="mw-headline" id="Label_Sounds_replaces_Sound_Finder_and_Silence_Finder"><a href="label_sounds.html" title="Label Sounds">Label Sounds</a> replaces <b>Sound Finder</b> and <b>Silence Finder</b></span></h2>
-<p>A new analyzer has been introduced called <b><a href="label_sounds.html" title="Label Sounds">Label Sounds</a></b>.  It supersedes and replaces the old <a href="sound_finder.html" title="Sound Finder">Sound Finder</a> and <a href="silence_finder.html" title="Silence Finder">Silence Finder</a> analyzers.
-</p><p>Label Sounds is a tool which can useful to label the different songs or sections (or silences) in a long recording, such as the tracks from an LP or cassette. 
-</p><p>This analyzer is an upgrade of the old <b>Sound Finder</b> from previous versions of Audacity. It is more accurate, and more versatile than previous versions, supporting both region labels and point labels.
-</p>
-<dl><dd><b>Accessed by:</b> <span class="menu">Analyze &gt; Label Sounds...</span></dd>
-<dd><span title="Label Sounds effect dialog"><img alt="Label Sounds.png" src="../m/images/8/8a/label_sounds.png" width="571" height="360" /></span></dd></dl>
-It detects the audio level in the selected track(s). When the track level exceeds a specified threshold level, the audio is considered to be "sound", and when below the level it is considered to be "silence".<p> There are options to add point labels before or after each detected sound, region labels around each sound, or region labels between each sound (effectively labeling the silences). </p>
-<div class="note">You can still continue to use this Sound Finder if it is present in your Audacity app as a result of an earlier Audacity version download. </div>
-<p><br />
-</p>
-<div id="directories"></div>
-<h2><span class="mw-headline" id="Enhanced_Directories_preferences"><a href="directories_preferences.html" title="Directories Preferences">Enhanced Directories preferences</a></span></h2>
-<p>Default folder locations have been added enabling you to specify the folders to be used for each of the Audacity actions: Open, Save, Import and Export.
-</p>
-<dl><dd><span title="Directories preferences with I/O defaults"><img alt="Preferences Directories trimmed.png" src="../m/images/a/aa/preferences_directories_trimmed.png" width="638" height="305" /></span></dd></dl>
-<p>If you set a default folder for any of those actions Audacity will <i><b>always</b></i> offer that folder location when you invoke that action.
-</p><p>If a particular action's default folder is left blank <i>(default setting)</i> then Audacity will offer the last-used location for that action.
-</p><p>The default setting is for all to be blank.
-</p><p>See <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a> for more details.
+<div id="aup"></div>
+<h2><span class="mw-headline" id="Updating_from_Audacity_2.x"><a href="updating_from_audacity_2.x_to_audacity_3.html" title="Updating from Audacity 2.x to Audacity 3.x">Updating from Audacity 2.x</a></span></h2>
+<p>With the release of Audacity 3.0.0 the project file structure of Audacity was changed significantly with the entire project contained in a single unified database file.
+</p><p>If you have already updated to 3.0.0 you should already be aware of this.
+</p><p>But if you are updating from any earlier 2.x Audacity version please read <b><a href="updating_from_audacity_2.x_to_audacity_3.html" title="Updating from Audacity 2.x to Audacity 3.x">Updating from Audacity 2.x to Audacity 3.x</a></b>.
 </p><p><br />
 </p>
 <div id="macros"></div>
-<h2><span class="mw-headline" id="Improvements_to_Macros">Improvements to Macros</span></h2>
-<div id="io"></div>
-<h3><span class="mw-headline" id="Import_and_Export_of_Macros">Import and Export of Macros</span></h3>
-<p>Import and Export of Macros has been added to the <a href="manage_macros.html" title="Manage Macros">Manage Macros</a> dialog.
+<h2><span class="mw-headline" id="Manage_Macros_improvements">Manage Macros improvements</span></h2>
+<p>The <a href="manage_macros.html" title="Manage Macros">Manage Macros</a> dialog has been improved for this release:
 </p>
-<dl><dd><span title="Manage Macros dialog showing Macro list (left) and command list for selected Macro (right)"><img alt="Manage Macros 3-0-0.png" src="../m/images/a/a0/manage_macros_3_0_0.png" width="831" height="331" /></span></dd></dl>
-<p>Only one Macro can be imported or exported at a time.
+<ol><li>The <span class="button">Cancel</span> button has been removed</li>
+<li>It is replaced with a <span class="button">Close</span> button</li>
+<li>A new <span class="button">Save</span> button has been added to enable you to save the results of editing a Macro.</li></ol>
+<dl><dd><dl><dd>The <span class="button">Save</span> button is grayed-out until you edit a Macro.</dd></dl></dd>
+<dd><span title="Manage Macros dialog showing Macro list (left) and command list for selected Macro (right)"><img alt="Manage Macros 3-0-1 What&#39;s new.png" src="../m/images/9/99/manage_macros_3_0_1_what_s_new.png" width="802" height="317" /></span></dd></dl>
+<p>See <b><a href="manage_macros.html" title="Manage Macros">Manage Macros</a></b> for more details.
+</p><p><br />
 </p>
-<div id="comments"></div>
-<h3><span class="mw-headline" id="Comments_in_Macros">Comments in Macros</span></h3>
-<p>Comments can now be added to Macros to enable you to document what is happening in the Macro.
-</p><p>There is a new command "<b>Comment</b>" in the Macro command set. Editing its parameters enables you to type the text of your comment.
+<div id="output"></div>
+<h2><span class="mw-headline" id="Changes_in_Macros_working_on_files">Changes in Macros working on files</span></h2>
+<p>We have extended the options in <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a> to include a new entry for <b>Macro output</b>.
 </p>
-<dl><dd><span title="Adding a comment to a Macro"><img alt="Macros comments.png" src="../m/images/c/ce/macros_comments.png" width="679" height="387" /></span></dd></dl>
+<dl><dd><span title="Directories preferences 3.0.2 version with added Macros output setting"><img alt="Preferences Directories what new in 3-0-2.png" src="../m/images/0/02/preferences_directories_what_new_in_3_0_2.png" width="641" height="473" /></span></dd></dl>
+<p>If you leave the entry for <b>Macro output</b> blank then Audacity will default to creating a folder called "<b>macro-output</b>" in: 
+</p>
+<ul><li> <b>Windows:</b>  <span class="path">C:\Users\&lt;your username&gt;\Documents\Audacity </span></li>
+<li> <b>Mac:</b> <span class="path">/Users/&lt;your username&gt;/Documents </span></li>
+<li> <b>Linux:</b> <span class="path">/home/&lt;your username&gt;/Documents </span></li></ul>
+<div class="note">Note carefully that this diverges from previous behavior with 3.0.0 and earlier where a "macro-output" directory was created/used in the same directory as the files to be processed by the Macro.
+<p>We believe that a single rationalized folder for all Macro output from processing files with Macros is a more sensible approach.</p> </div> 
 <p><br />
-</p>
-<div id="gate"></div>
-<h2><span class="mw-headline" id="Noise_Gate_improved"><a href="noise_gate.html" title="Noise Gate">Noise Gate</a> improved</span></h2>
-<p>The <a href="noise_gate.html" title="Noise Gate">Noise Gate</a> effect has been improved for version 3.0.0 of Audacity. It now supports faster Attack times (down to 1ms), and provides separate controls for Attack, Hold and Decay.  The effect can also process much longer selections in one pass (up to 13.5 hours at a sample rate of 44,100 Hz.)
-</p>
-<dl><dd><span title="Audacity 3.0.0 Noise Gate dialog"><img alt="Noise Gate.png" src="../m/images/9/9e/noise_gate.png" width="465" height="360" /></span></dd></dl>
-<p><br />
-</p>
-<div id="multi"></div>
-<h2><span class="mw-headline" id="Multi-view_can_be_set_as_user-default_view">Multi-view can be set as user-default view</span></h2>
-<p>In <a href="tracks_preferences.html" title="Tracks Preferences">Tracks preferences</a> you can now set Multi-view as your preferred user-default view for tracks.
-</p>
-<dl><dd><span title="Multi-view user-default in Tracks preferences"><img alt="Multi-view user-default in Tracks preferences.png" src="../m/images/0/00/multi_view_user_default_in_tracks_preferences.png" width="512" height="259" /></span></dd></dl>
-<p><br />
-</p>
-<div id="edits"></div>
-<h2><span class="mw-headline" id="Preferences_settings_that_affect_Edit_behavior"><a href="preferences_settings_that_affect_edit_behavior.html" title="Preferences settings that affect Edit behavior">Preferences settings that affect Edit behavior</a></span></h2>
-<p>We realized that we had a couple of settings in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a> that affect the operation of the <i>Cut, Paste,</i> and <i>Delete</i> editing commands in perhaps unexpected ways:
-</p>
-<ul><li><a href="preferences_settings_that_affect_edit_behavior.html#move_clips" title="Preferences settings that affect Edit behavior">Editing a clip can move other clips</a></li>
-<li><a href="preferences_settings_that_affect_edit_behavior.html#cut_lines" title="Preferences settings that affect Edit behavior">Enable Cut lines</a></li></ul>
-<dl><dd><span title="Tracks Behaviors preferences with two items highlighted"><img alt="Tracks Behaviors tricksy settings.png" src="../m/images/5/51/tracks_behaviors_tricksy_settings.png" width="535" height="191" /></span></dd></dl>
-<p>So a new page was added to the Manual to explain the subtleties of these behaviors, please see <a href="preferences_settings_that_affect_edit_behavior.html" title="Preferences settings that affect Edit behavior">Preferences settings that affect Edit behavior</a>.
-</p><p><br />
-</p>
-<div id="mixer"></div>
-<h2><span class="mw-headline" id="Mixer_Board_improvement"><a href="mixer_board.html" title="Mixer Board">Mixer Board improvement</a></span></h2>
-<p>We have changed <a href="mixer_board.html" title="Mixer Board">Mixer Board</a> so that its window always remains on top when it is in use.
-</p><p>Many users have requested this and the original developer always wanted to do this but could not at the time because of issues with the libraries used for this feature.
-</p><p>These libraries have been updated by the provider and we can now make Mixer Board a top window on all three platforms.
-</p><p><br />
-</p><p><br />
-</p>
-<div id="repeat"></div>
-<h2><span class="mw-headline" id="Repeat_last_Generator.2C_Analyzer_or_Tool">Repeat last Generator, Analyzer or Tool</span></h2>
-<p>A <b>Repeat last used</b> command has been added for Generators, Analyzers and Tools.  These are not in the menus but are "ghost" commands that you can assign custom shortcuts to.
-</p><p>This enables you to simply repeat the last generator, analyzer or tool that you used, with the last settings that you used, using that custom shortcut.
-</p>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
-</td>
-<td align="left" valign="top">By default, <b>Macro'<i> commands cannot be applied either from a main menu or from a shortcut. They are not "Tool menu" items, and they do not respond to </i>Repeat Last Tool</b>.
-<p>However, if a Macro has a shortcut, then it becomes listed in <span class="menu">Preferences &gt; Keyboard: Tools menu &gt; Apply Macro</span> and it will now respond to "Repeat Last Tool",  but only if it has  been launched via the shortcut. The macro is still not a "Tool menu item", even though the shortcut effectively is. 
-</p>
-</td></tr></table>
-</div>
-<p><br />
-</p><p><br />
-</p>
-<div id="nyquist"></div>
-<h2><span class="mw-headline" id="Nyquist_Upgrade"><a href="nyquist.html" title="Nyquist">Nyquist Upgrade</a></span></h2>
-<p><a href="nyquist.html" title="Nyquist">Nyquist</a> has been updated to the latest Nyquist Version 3.16
-</p><p>This has enabled us to clear a lot of long-standing Nyquist-related Audacity bugs.
-</p><p><br />
 </p>
 <div id="bugs"></div>
 <h2><span class="mw-headline" id="Bug_Fixes">Bug Fixes</span></h2>
-<p>A large number of bugs were fixed for this release.
-</p><p>Here is a small selection of some of the most important.
-</p>
-<h3><span class="mw-headline" id="Key_P1_bugs_fixed">Key P1 bugs fixed</span></h3>
-<ul><li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=208">208</a> - Some effects (including equalization effects) delete Envelope Control Points, or do not move them when timeline changes</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2367">2367</a> - Change Pitch effect may create spurious clip at end</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2492">2492</a> - Linux: Crash when  applying or previewing Sliding Stretch effect on stereo track</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2544">2544</a> -  "Editing a clip can move other clips" turned off can cause corruption when copying and pasting audio</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2630">2630</a> - A project saved with an imported MP3 with Unicode metadata cannot be opened</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2656">2656</a> - Cannot horizontal scroll when paused in Play-at-Speed</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2669">2669</a> - Win: Save As can be used to overwrite the existing project without warning</li></ul>
-<h3><span class="mw-headline" id="Key_P2_bugs_fixed">Key P2 bugs fixed</span></h3>
-<ul><li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1300">1300</a> - Mac: COMMAND + V paste limitations in standard file save dialogs</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1579">1579</a> - Mac: Cut/Copy from file save dialogs using shortcuts does not work</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2187">2187</a> - No error/warning message when using a missing aliased audio file</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2296">2296</a> - There is no Import or Export for Macros</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2464">2464</a> - Cannot drag just the selected audio and label with Time Shift Tool</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2437">2437</a> - Mac: "Open with" fails when Audacity is running</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2473">2473</a> - Linux: Numbers on meters have opaque backgrounds</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2487">2487</a> - Playback meters do not respond during preview of non-real-time effects</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2491">2491</a> - Reset Configuration does not reset Extended Import preferences</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2509">2509</a> - Filter curve and Graphic EQ help links are broken in release version</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2527">2527</a> - Reset Configuration does not reset Project rate or selection timers</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2573">2573</a> - High / Low Pass filters limited to ~94 mins stereo at 44100 Hz</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2581">2581</a> - Inconsistent behavior when pasting and not enough room </li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2593">2593</a> - Play-at-Speed does not play unless you have used normal Play first</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2616">2616</a> - Labelled Audio Cut and Delete disabled by Sync-Lock</li></ul>
-<h3><span class="mw-headline" id="Key_P3_bugs_fixed">Key P3 bugs fixed</span></h3>
-<ul><li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=852">852</a> - Noise Reduction preview failure when track rate is different from project rate</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1592">1592</a> - Sound Activated Recording fails when recording meter disabled</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1686">1686</a> - Equalization effects ignore and remove any amplitude envelope</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2295">2295</a> - ENH: cannot add a comment in a Macro with Audacity</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2366">2366</a> - Macros: Run does "Select All" ignoring setting in Tracks Behaviors Preferences</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2460">2460</a> - Enh: Can't select "Multi-view" as default view mode in Tracks preferences</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2510">2510</a> - Mac: Drag&amp;Drop of a project file onto Audacity in Apps bar or Finder fails if Audacity is active in the Apps bar</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2534">2534</a> - Change Speed merges selected clip with adjacent clips - <i><b>residual fix to be tested</b></i></li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2564">2564</a> - Metadata: Artist and Year tags missing on M4A(AAC) exports</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2611">2611</a> - Mixer Board does not stay on top of main window</li></ul>
+ 
+<h3><span class="mw-headline" id="P1_Bugs_Fixed">P1 Bugs Fixed</span></h3>
+<ul><li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2708">2708</a> Nyquist effects fail silently with One hour plus stereo</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2706">2706</a> Win: Vocal Reduction and Isolation most options fail</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2698">2698</a> Noise Gate fails silently if "hold" is non-zero</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2720">2720</a> Cannot open project that's in a read only folder - error message vague</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2710">2710</a> Compressor with audio before T=0 crashes Audacity</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2703">2703</a> Mac: EGAT preview dialog is hidden behind the EGAT dialog</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2707">2707</a> Opened projects not being removed from "audacity.cfg"</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2697">2697</a> Linux: AUP3 projects use incorrect char size on "differently" configured wxWidgets</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2718">2718</a> Failed to execute a project file command (on server)</li></ul>
+<h3><span class="mw-headline" id="P2_Bugs_Fixed">P2 Bugs Fixed</span></h3>
+<ul><li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2701">2701</a> Progress dialog interferes with scripting</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2714">2714</a> (Japanese &amp; Korean) "Unable to parse project information"</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2722">2722</a> Noise Gate fails on a one hour stereo selection</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2716">2716</a> Cleared "Recent Files" are restored on next launch</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2709">2709</a> Mac: Missing sub-menu check marks in French</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2696">2696</a> Metadata Editor: changed size is not remembered/restored on next use</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2699">2699</a> Windows: Cannot edit labels with emoji in them correctly</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2704">2704</a> Mac: Stop button in EGATs with Preview does nor stop the preview</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2676">2676</a> Export: Incorrect handling over 0 dB</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2694">2694</a> Coloring of tracks in Mixer Board are awry</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2692">2692</a> Mac: VI users get trapped in radio buttons of Keyboard Preferences</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2734">2734</a> Apply macro may not create the macro-output folder in the source directory</li></ul>
+<h3><span class="mw-headline" id="P3_Bugs_Fixed">P3 Bugs Fixed</span></h3>
+<ul><li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2723">2723</a> VST_PATH environment variable fails for non-standard locations</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2209">2209</a> Nyquist: Audacity crashes when running seq-write-smf</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2522">2522</a> In Macros, Record New Track and Play with a selection do not wait for completion.</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2672">2672</a> Plug-ins listed in reverse alphabetic order in Plug-ins Manager</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2211">2211</a> Mac: keyboard navigation problem in Libraries preferences dialog</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2523">2523</a> Audacity may suggest installing FFmpeg even when FFmpeg is installed</li></ul>
+<h3><span class="mw-headline" id="P4_Bugs_Fixed">P4 Bugs Fixed</span></h3>
+<ul><li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2733">2733</a> Noise Gate 'Level Reduction' has a minimum of -60 dB</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2726">2726</a> Enh: Some preference changes are not written until Audacity exits</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2717">2717</a> Linux: Internal Error at DBConnection.cpp line 275</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2721">2721</a> Allegro (.gro files) cause crash with undo/redo</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2684">2684</a> Bitrot for Docimage script</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2690">2690</a> Move the actual build information to the top of the build information tab</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2124">2124</a> Import&gt;Audio failure error message is misleading</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2511">2511</a> Enh: Remove the "Variable Speed: Fast / Standard" option from MP3 dialog</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2736">2736</a> Recent files list can be replaced by ExportCL commands</li></ul>
 <p><br />
-</p><p><br />
 </p>
 <div id="appendix"></div>
 
 <h2><span class="mw-headline" id="Links">Links</span></h2>
-<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.0.0"><b>&gt;</b> Audacity Release Notes 3.0.0</a> <i>- detailed release notes for this release of Audacity</i>
+<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.0.2"><b>&gt;</b> Audacity Release Notes 3.0.2</a> <i>- detailed release notes for this release of Audacity</i>
 </p>
 
 
@@ -397,7 +242,7 @@ It detects the audio level in the selected track(s). When the track level exceed
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

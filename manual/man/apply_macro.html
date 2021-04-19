@@ -100,7 +100,6 @@
 <ul><li> If the project has been Saved, then the "macro-output" folder will be in the same directory location as the project and the audio file name will be the same as the project name but with the extension appropriate to the export type.</li>
 <li> If the audio in the project came from an imported file or files, the "macro-output" folder will be inside the directory from which the first file was imported. The original files are not altered.</li>
 <li> If the project has not been saved and no audio has been imported, the normal Export Audio dialog will appear enabling you to choose the name and location of the exported file.</li></ul>
-</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -114,6 +113,7 @@
 <h3><span class="mw-headline" id="Files...">Files...</span></h3>
 <p>Use the <span class="button">Files...</span> button to apply the selected Macro to selected external audio files that are in a single directory. If you already have audio in the current project window, you must save and close that project using <span class="menu">File &gt; <a href="file_menu.html#close" title="File Menu">Close</a></span> before applying a Macro to files.
 </p><p>The typical purpose of this option is <b>batch processing</b> - apply the Macro to multiple audio files so as to apply one or more effects to them, and/or convert them to another file format. You can convert from any file format <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">supported by Audacity</a> to WAV, MP3, OGG or FLAC.
+</p><p>Applying a Macro to multiple Audacity AUP3 project files cannot be done, instead you need to use Python scripting.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -121,14 +121,20 @@
 <tr>
 <td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
 </td>
-<td align="left" valign="top">The selected Macro <i><b>must</b></i> include an <b>Export</b> step, otherwise the processed audio will not be retained.  <p>The exported files will be saved in a folder named "<b>macro-output</b>" in the same folder that the original audio files came from. The original files are <i><b>not</b></i> altered.</p>
+<td align="left" valign="top">The selected Macro <i><b>must</b></i> include an <b>Export</b> step, otherwise the processed audio will not be retained.
 </td></tr></table></div>
 <p>You cannot process <a href="file_export_dialog.html#compare" title="File Export Dialog">multi-channel audio files</a> (for example, 5.1 surround sound files) using Macros, even if <a href="import_export_preferences.html#export" title="Import - Export Preferences">Import / Export Preferences</a> has been set to "Use custom mix". Any multi-channel files you import will be mixed down on export.  
 </p>
-<ul><li> A standard File Open dialog box will appear. Choose a directory then you can select one or any number of supported audio files in that directory, including Audacity AUP3 and older AUP project files. You cannot select files outside that directory, and files in folders inside that directory will not be processed. It is convenient therefore to first put all the audio files you want to process into one folder before applying the Macro.  </li>
+<ul><li> A standard File Open dialog box will appear. Choose a directory then you can select one or any number of supported audio files in that directory, including older AUP project files <i>(but <b>not</b> AUP3 project files)</i>. 
+<ul><li>You cannot select files outside that directory, and files in folders inside that directory will not be processed. </li>
+<li>It is convenient therefore to first put all the audio files you want to process into one folder before applying the Macro.  </li></ul></li>
 <li> After selecting the audio files you want to process, choose <span class="button">Open</span>. </li>
 <li> Each file will be imported into Audacity and processed, exported to the format you chose in the Macro, then the processed audio will be removed so as to clear the temporary disk space that had been used. </li>
-<li> The exported files will be saved in a folder named "<b>macro-output</b>" in the same folder that the original files came from.</li></ul>
+<li> The exported files will be saved in a folder named "<b>macro-output</b>" in the  folder specified in the <b>Macro output</b> field in <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a>. The original files are <i><b>not</b></i> altered.</li>
+<li>If you leave the entry for <b>Macro output</b> blank in Directories Preferences then Audacity will default to creating a folder called "<b>macro-output</b>" in:
+<ul><li> <b>Windows:</b>  <span class="path">C:\Users\&lt;your username&gt;\Documents\Audacity </span></li>
+<li> <b>Mac:</b> <span class="path">/Users/&lt;your username&gt;/Documents </span></li>
+<li> <b>Linux:</b> <span class="path">/home/&lt;your username&gt;/Documents </span></li></ul></li></ul>
 <div class="note">When a Macro is applied to files, the only option is to import and process the entire file. Thus the entire file will be exported unless an action or effect in the Macro (such as <a href="edit_toolbar.html#cut" title="Edit Toolbar">Cut</a> or <a href="truncate_silence.html" title="Truncate Silence">Truncate Silence</a>) removes some audio. 
 <ul><li> If modifying the audio before exporting, the <a href="extra_menu_scriptables_i.html#select_time" title="Extra Menu: Scriptables I">Select Time</a> function may be useful to select audio to remove or modify.</li>
 <li> Some optional <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins">Nyquist plug-ins</a> have parameters to  <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Download_Nyquist_Plug-ins#time">trim or extend audio by a specific length</a> and Nyquist can do calculations too, so it may be helpful to use Nyquist plug-ins from within a macro.</div></li></ul>
@@ -239,7 +245,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Apply_Macro">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Apply_Macro">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

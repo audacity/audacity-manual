@@ -36,15 +36,9 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">This page provides instructions for installing and updating Audacity on Linux computer platforms.
 <ul><li>In addition to basic Audacity you may wish to install the optional <a href="#linlame">LAME</a> <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding software</li>
-<li>Also the optional <a href="#linff">FFmpeg</a> library which allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files.  </li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">Note carefully that simply re-installing Audacity will <i><b>not</b></i> clear and reset your Audacity settings for preferences and plug-ins.  For instructions on how to achieve this please see <a href="#purge">Reset Audacity Settings</a>.
-</td></tr></table></div>
+<li>Also the optional <a href="#linff">FFmpeg</a> library which allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files.  </li>
+<li>Note carefully that simply re-installing Audacity will <i><b>not</b></i> clear and reset your Audacity settings for preferences and plug-ins.  For instructions on how to achieve this please see <a href="#purge">Reset Audacity Settings</a>.</li></ul>
+<div class="note">If you are updating from Audacity 2.x or earlier please read <b><a href="updating_from_audacity_2.x_to_audacity_3.html" title="Updating from Audacity 2.x to Audacity 3.x">Updating from Audacity 2.x to Audacity 3.x</a></b> as there was a major change to the project file structure when Audacity 3.0.0 was introduced. </div>
 </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#install">Installation instructions</a></li>
@@ -65,7 +59,8 @@
 </p>
 <div id="compatible_projects"></div>
 <h3><span class="mw-headline" id="Projects_saved_by_old_versions_of_Audacity">Projects saved by old versions of Audacity</span></h3>
-<p>Current Audacity is compatible with project files saved by versions of Audacity 1.3.x and later, including 2.x.x. 
+<p>Current Audacity can open project files saved by versions of Audacity 1.2.x and later, including 2.x.x.  
+</p><p>These will be converted to the 3.x AUP3 single file format.  See <a href="audacity_projects.html#open" title="Audacity Projects">Managing Audacity Projects</a> for more details.
 </p><p><br />
 </p>
 <div id="updates"></div>
@@ -183,7 +178,18 @@ As in the image above, the <b>FFmpeg Library Version</b> will say "not found". T
 <div id="purge"></div>
 <h2><span class="mw-headline" id="Reset_Audacity_Settings_on_Linux">Reset Audacity Settings on Linux</span></h2>
 <p>As stated in the introduction on this page, simply re-installing Audacity will not clear and reset your Audacity settings for preferences and plug-ins.
-</p><p>The data for these are stored in a folder called audacity-data in ... 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">The easiest way to do this is simply to use <span class="menu">Tools &gt; <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a></span>
+</td></tr></table>
+</div>
+<h3><span class="mw-headline" id="The_location_of_Audacity_settings">The location of Audacity settings</span></h3>
+<p>The data for these are stored in a folder called audacity-data:
 </p>
 <ol><li>Open the "home" folder (opens "/home/user-name" in the default file browser)</li>
 <li>Use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + H</span> to show hidden folders (works in most common file browsers, or "<b>View menu &gt; Show hidden files</b>")</li>
@@ -285,7 +291,7 @@ As in the image above, the <b>FFmpeg Library Version</b> will say "not found". T
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-03-09 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Linux">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Linux">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
