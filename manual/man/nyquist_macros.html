@@ -52,6 +52,7 @@
 </ul>
 </li>
 <li class="toclevel-1 tocsection-9"><a href="#AUD-GET-INFO"><span class="tocnumber">5</span> <span class="toctext">AUD-GET-INFO</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#AUD-DO-COMMAND"><span class="tocnumber">6</span> <span class="toctext">AUD-DO-COMMAND</span></a></li>
 </ul>
 </div>
 
@@ -113,7 +114,7 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top">The full list of commands available via AUD-DO is given in the <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>
 </td></tr></table>
@@ -171,7 +172,7 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">See also <a href="#AUD-GET-INFO">AUD-GET-INFO</a>.
 </td></tr></table></div>
@@ -181,7 +182,7 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top"> It is usually easiest, in Nyquist, to ask for the results of GetInfo commands as strings in LISP format
 </td></tr></table>
@@ -250,11 +251,75 @@
 </pre>
 <p><br />
 </p>
+<h2><span class="mw-headline" id="AUD-DO-COMMAND">AUD-DO-COMMAND</span></h2>
+<div class="intro">"AUD-DO-COMMAND" provides a higher level alternative to "AU-DO".<br /><i>The first time that AUD-DO-COMMAND runs it may be observed that there is a delay.This is caused by Nyquist building a cache of AUD-DO commands and parameters for fast look-up. Once the cache has been built, AUD-DO-COMMAND commands will be almost as fast as AUD-DO commands.</i></div>
+<p><b>Usage:</b>
+</p><p><i>(aud-do-command "command" [[:keyword&#160;:argument] ...])</i>
+Where "command" is the scripting command to be sent to Audacity.
+</p><p>Unlike AUD-DO the commands are not case sensitive <b>except for enum arguments</b>.
+</p><p><b>Example:</b>
+</p>
+<pre> (aud-do "Chirp: StartFreq=100 EndFreq=400 StartAmp=1.0 EndAmp=0.5 Waveform=Sawtooth") &#160;;AUD-DO syntax
+ (aud-do-command "chirp"&#160;:startfreq 100&#160;:endfreq 400&#160;:startamp 1.0&#160;:endamp 0.5&#160;:waveform "Sawtooth") &#160;;AUD-DO-COMMAND syntax
+</pre>
+<p>Note that in the AUD-DO-COMMAND version, "Sawtooth" is an <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Enumerated_type">enum</a> and so is case sensitive.
+</p><p><b>Advantages to using AUD-DO-COMMAND:</b>
+</p><p>The main advantage is that the syntax is more LISP-like, and this simplifies usage when passing parameters. For example, if we want to generate a <a href="chirp.html" title="Chirp">Chirp</a> and we want to pass variables for the parameter values:
+</p>
+<pre> (setq start-hz 100)
+ (setq end-hz 400)
+ (setq start-amp 1.0)
+ (setq end-amp 0.5)
+ 
+&#160;;; Using AUD-DO
+ (let (command)
+   (setf command
+       (format nil "Chirp: StartFreq=~s EndFreq=~s StartAmp=~s EndAmp=~s Waveform=~s"
+               start-hz
+               end-hz
+               start-amp
+               end-amp
+               "Sawtooth"))
+   (aud-do command))
+</pre>
+<p><br />
+</p>
+<pre> (setq start-hz 100)
+ (setq end-hz 400)
+ (setq start-amp 1.0)
+ (setq end-amp 0.5)
+ 
+&#160;;; Using AUD-DO-COMMAND
+ (aud-do-command "chirp"&#160;:startfreq start-hz&#160;:endfreq end-hz&#160;:startamp start-amp&#160;:endamp end-amp&#160;:waveform "Sawtooth")
+</pre>
+<p>Another benefit for Nyquist developers is that debug messages are much improved for all commands that are supported by <a href="#GetInfo_Example_GetInfo:">#GetInfo_Example GetInfo:</a>. 
+</p><p><b>Example:</b>
+</p><p>This (invalid) AUD-DO example ignores the invalid "start" parameter, making it difficult to find the error:
+</p>
+<pre> (aud-do "Chirp: start=100")
+</pre>
+<p>This (invalid) AUD-DO-COMMAND example returns helpful debug information:
+</p>
+<pre> (aud-do-command "Chirp"&#160;:start 100)
+</pre>
+<pre>&#160;;;Debug output:
+ Invalid key in "Chirp"&#160;:START
+ Valid keys for Chirp are:
+    StartFreq (double) 
+    EndFreq (double) 
+    StartAmp (double) 
+    EndAmp (double) 
+    Waveform [Sine Square Sawtooth Square, no alias]
+    Interpolation [Linear Logarithmic]
+ Too many arguments: "Chirp"&#160;:START
+</pre>
+<p><br />
+</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top">For more information about Nyquist and Nyquist-Macro commands, please refer to the documentation on the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Audacity wiki</a>
 </td></tr></table>
@@ -336,7 +401,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

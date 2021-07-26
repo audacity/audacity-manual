@@ -39,7 +39,7 @@
 <table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
 </td>
 <td align="left" valign="top">Audacity <a href="audacity_projects.html" title="Audacity Projects">projects</a> <i><b>cannot</b></i> be opened using the <span class="menu">File &gt; Import &gt; Audio...</span> command, you will get an error message.<p>If you have already saved your audio as an Audacity Project, use <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a></span> or <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> to open the <i><b>&lt;my_project_name&gt;.aup3</b></i>.</p>
 </td></tr></table>
@@ -61,14 +61,34 @@
 <p>For <a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a> audio: most <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> files including all <i><b><a href="glossary.html#pcm" title="Glossary">PCM</a></b></i> variants can be imported into Audacity
 </p>
 <h3><span class="mw-headline" id="Compressed_audio_formats">Compressed audio formats</span></h3>
-<p><a href="glossary.html#compressed_format" title="Glossary">Compressed</a> audio: <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i>, <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> and <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> can be imported into Audacity.
+<p><a href="glossary.html#compressed_format" title="Glossary">Compressed</a> audio: <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>, <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i>  can be imported into Audacity.
 </p>
 <h3><span class="mw-headline" id="FFmpeg_for_other_importable_audio_formats"><a href="faq_installing_the_ffmpeg_import_export_library.html" title="FAQ:Installing the FFmpeg-Import-Export Library">FFmpeg</a> for other importable audio formats</span></h3>
 You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>FFmpeg library</b></a> to import a much larger range of audio formats including <b>AC3, AMR(NB), M4A, MP4 and WMA</b> (if the files are not <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Digital_rights_management">DRM-protected</a> to work only in particular software). <p>FFmpeg will also import audio from most video files or DVDs that are not DRM-protected.</p>
 <div class="note">Older uncompressed file types such as WAV with U-Law or IMA ADPCM encoding are generally supported provided they contain correctly formatted header information. 
 <ul><li> If files do not have header information (such as RAW or <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Dialogic_ADPCM">VOX ADPCM</a>) or have non-standard header information, you can normally import them using <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#raw" title="File Menu: Import">Raw Data...</a></span>.</li>
 <li> WAV files from portable recorders may contain proprietary compressed audio. These should not be imported as Raw Data, but by installing the <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.   </li>
-<li> <a href="lof_files.html" title="LOF Files">LOF files</a> (lists of files) are also supported if the list is correctly formatted and contains supported files.</div> </li></ul>
+<li> <a href="lof_files.html" title="LOF Files">LOF files</a> (lists of files) are also supported if the list is correctly formatted and contains supported files.</div></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">When importing an MP3 audio file you may see the following error message:
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top"><b>Import Failed</b><p><b>This is likely to be caused by a malformed MP3.</b></p>
+</td></tr></table>
+</div>
+<p>Workarounds for this can be found at <b><a href="opening_malformed_mp3_files.html" title="Opening malformed MP3 files">Opening malformed MP3 files</a></b>.
+</p>
+</td></tr></table>
+</div> 
 <p><br />
 </p>
 <div id="ways"></div>
@@ -84,7 +104,7 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">Note that you cannot use drag and drop an AUP3 project into an open Audacity Project window. To <i><b>open</b></i> Audacity projects - use <span class="menu">File &gt; Open...</span> to open projects.
 </td></tr></table></div>
@@ -286,7 +306,7 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -36,7 +36,8 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">A LOF file can be used to Import or Open a set of audio files into Audacity.
 <ul><li>A LOF file is a plain text file ending with the extension "<b>.lof</b>" that contains a list of audio files to import into an Audacity project window. </li>
-<li>It can optionally contain commands to create new project windows into which to import the audio files. </div></li></ul>
+<li>It can optionally contain commands to create new project windows into which to import the audio files. </li></ul>
+</div>
 <div id="use"></div>
 <h2><span class="mw-headline" id="Use">Use</span></h2>
 <p>To use LOF files in Audacity use either of:
@@ -53,14 +54,14 @@
 <p>There are only two commands "<b>file</b>" and "<b>window</b>", each with associated options:
 </p>
 <h3><span class="mw-headline" id="file_.28required.29">file <i>(required)</i></span></h3>
-<p>Specifies the full path to the file which then imports as a new track in the current window (the path must always be in double quotes): 
+<p>Specifies the full path to the file which then imports as a new track in the current window (the path must always be in double quotes). There is one optional parameter: 
 </p>
-<ul><li> <b>offset</b>: an optional parameter to the <i>file</i> command, specifying the start time of the audio file in seconds</li></ul>
+<ul><li> <b>offset</b>: specifies the start time of the audio file in seconds</li></ul>
 <h3><span class="mw-headline" id="window_.28optional.29">window <i>(optional)</i></span></h3>
-<p>Creates a new Audacity project window for subsequent files in the list: 
+<p>Creates a new Audacity project window for subsequent files in the list, There are two optional parameters: 
 </p>
-<ul><li> <b>offset</b>: an optional parameter to the <i>window</i> command, specifying the left-most time displayed in the window</li>
-<li> <b>duration</b>: an optional parameter to the <i>window</i> command, specifying how much time should be displayed in the window </li></ul>
+<ul><li> <b>offset</b>: specifies the left-most time, in seconds, displayed in the window</li>
+<li> <b>duration</b>: specifies how much time, in seconds, should be displayed in the window</li></ul>
 <h3><span class="mw-headline" id="Comments">Comments</span></h3>
 <p>The hash character <b>#</b> can be used anywhere on a line to precede a comment - everything after <b>#</b> on that line is ignored by the importer.
 </p>
@@ -68,24 +69,12 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top"><b>Tips:</b>
 <ul><li> Each command must be placed on a separate line.</li>
 <li> Files are imported in the order shown in the LOF file. </li>
 <li> If the file to be imported is in the same folder as the LOF file, you need only give the file name inside double quotes.    </li></ul>
-</td></tr></table>
-</div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">There is a known issue <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2743">Bug 2743 - "window" command ignored in LOF files  (probably only the initial one)</a>
-<p>It appears that Audacity always ignores the first "window" command it encounters and then honors the succeeding ones.</p>
-<p>So to make the example below work as intended you would need to place two "window" commands at the beginning - the first will be ignored. </p>
-
 </td></tr></table>
 </div>
 <p><br />
@@ -181,7 +170,7 @@ file "sample4.wav" offset 2.5
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/LOF_Files">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/LOF_Files">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

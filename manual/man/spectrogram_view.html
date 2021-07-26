@@ -33,23 +33,23 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Spectrogram_View#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The <i><b>Spectrogram</b></i> View of an audio track provides a visual indication of how the energy in different frequency bands changes over time. The Spectrogram can show sudden onset of a sound, so it can often be easier to see clicks and other glitches or to line up beats in this view rather than in one of the <a href="audio_track_dropdown_menu.html#Waveform" title="Audio Track Dropdown Menu">waveform</a> views.
-<p>To select Spectrogram view, click on the track name (or the black triangle) in the <a href="audio_tracks.html#panel" title="Audio Tracks"> Track Control Panel</a> which opens the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Track Dropdown Menu</a>.</p> </div>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The <i><b>Spectrogram</b></i> View of an audio track provides a visual indication of how the energy in different frequency bands changes over time. The Spectrogram can show sudden onset of a sound, so it can often be easier to see clicks and other glitches or to line up beats in this view rather than in one of the <a href="audio_track_dropdown_menu.html#Waveform" title="Audio Track Dropdown Menu">waveform</a> views. 
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top"><a href="#spectral_selection"><b>Spectral selections</b></a>, made in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> view, are used to make selections that include a frequency range as well as a time range on tracks.
 <ul><li>They can be used with special spectral editing effects to make changes to the <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> content of the selected audio.</li>
 <li>Among other purposes, spectral selection and editing can be used for cleaning up unwanted sound, enhancing certain resonances, changing the quality of a voice or removing mouth sounds from voice work.</li>
 <li>For full details, see <a href="spectral_selection.html" title="Spectral Selection"><b>Spectral Selection and Editing</b></a>. </li></ul>
 </td></tr></table>
-</div>
+</div> </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<ol><li> <a href="#settings">Per Track Spectrogram Settings</a></li>
+<ol><li> <a href="#select">Selecting Spectrogram View</a></li>
 <li> <a href="#compare">Comparing Waveform View to Spectrogram View</a></li>
+<li> <a href="#settings">Per Track Spectrogram Settings</a></li>
 <li> <a href="#meaning">What the Colors Mean</a></li>
 <li> <a href="#smear">Time Smearing and Frequency Smearing</a></li>
 <li> <a href="#zoom">Vertical Zooming</a></li>
@@ -63,21 +63,28 @@
 <li> <a href="#job">Example of choosing the right settings for the job</a></li>
 <li> <a href="#spectral_selection">Spectral selection</a></li>
 <li> <a href="#multi">Multi-view - Spectrogram and Waveform</a></li></ol>
-<div id="settings"></div>
-<h2><span class="mw-headline" id="Per_track_Spectrogram_Settings">Per track <a href="spectrogram_settings.html" title="Spectrogram Settings">Spectrogram Settings</a></span></h2>
-<p>It is possible to temporarily change the Spectrogram settings for a particular Spectrogram track by opening the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> on the Spectrogram track you want to change, then choose <b>Spectrogram Settings...</b>.  This opens a dialog similar to <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a> with the same settings available.
+<p><br />
 </p>
-<dl><dd><span title="Audio track Spectrogram Settings dialog"><img alt="Spectrogram Track Settings.png" src="../m/images/b/b3/spectrogram_track_settings.png" width="426" height="383" /></span></dd></dl>
-<p>Changes you make when you press the <span class="button">OK</span> button only persist for that track while the project window is open. This is the case even if you save a project. Use Spectrograms Preferences instead to make permanent changes to the default Spectrogram settings with which a new Spectrogram track will open.
-</p><p>See <a href="spectrogram_settings.html" title="Spectrogram Settings">Spectrogram Settings</a> for more details.
+<div id="select"></div>
+<h2><span class="mw-headline" id="Selecting_Spectrogram_View">Selecting Spectrogram View</span></h2>
+<p>To select Spectrogram view, click on the track name (or the black triangle) in the <a href="audio_tracks.html#panel" title="Audio Tracks"> Track Control Panel</a> which opens the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Track Dropdown Menu</a>, where the required view can be selected..
 </p><p><br />
 </p>
 <div id="compare"></div>
 <h2><span class="mw-headline" id="Comparing_Waveform_View_to_Spectrogram_View">Comparing Waveform View to Spectrogram View</span></h2>
 <p>Here is a mono music recording in waveform view with the exact same audio reset to spectrogram view below:
 </p>
-<dl><dd><span title="Spectrogram example track in waveform view"><img alt="SpectrogramView Intro 00.png" src="../m/images/e/e1/spectrogramview_intro_00.png" width="669" height="191" /></span></dd></dl>
-<p>The waveform view can be switched to a <i><b>Spectrogram</b></i>   view <i>(and vice versa)</i> by clicking on the track name (or the black triangle) in the <a href="audio_tracks.html#panel" title="Audio Tracks"> Track Control Panel</a> which opens up the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Track Dropdown Menu</a> where the required view can be selected.
+<dl><dd><span title="Spectrogram example track in waveform view"><img alt="SpectrogramView Intro 00.png" src="../m/images/e/e1/spectrogramview_intro_00.png" width="707" height="262" /></span></dd></dl>
+<p>The Waveform view can be switched to a Spectrogram   view <i>(and vice versa)</i> or you can have both simultaneously with <a href="multi_view.html" title="Multi-view">Multi-view</a> selected from the Track Control Panel dropdown menu.
+</p><p><br />
+</p>
+<div id="settings"></div>
+<h2><span class="mw-headline" id="Per_track_Spectrogram_Settings">Per track <a href="spectrogram_settings.html" title="Spectrogram Settings">Spectrogram Settings</a></span></h2>
+<p>It is possible to temporarily change the Spectrogram settings for a particular Spectrogram track by opening the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> on the Spectrogram track you want to change, then choose <b>Spectrogram Settings...</b>.  This opens a dialog similar to <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a> with the same settings available.
+</p>
+<dl><dd><span title="Audio track Spectrogram Settings dialog"><img alt="Spectrogram Track Settings.png" src="../m/images/b/b3/spectrogram_track_settings.png" width="527" height="392" /></span></dd></dl>
+<p>Changes you make when you press the <span class="button">OK</span> button only persist for that track while the project window is open. This is the case even if you save a project. Use Spectrograms Preferences instead to make permanent changes to the default Spectrogram settings with which a new Spectrogram track will open.
+</p><p>See <a href="spectrogram_settings.html" title="Spectrogram Settings">Spectrogram Settings</a> for more details.
 </p><p><br />
 </p>
 <div id="meaning"></div>
@@ -85,10 +92,10 @@
 <p>To demonstrate how the various settings affect the appearance of an audio track in spectrogram view, we will start with this artificially constructed test track. It consists of 10 segments of a sine wave tone at 2000 Hz, each 2 seconds long. The level of each segment in dB is indicated by the labels below the audio track.
 </p><p>This is how the track appears in waveform dB view.
 </p>
-<dl><dd><span title="Spectrogram test track in waveform dB view"><img alt="SpectrogramView 01.png" src="../m/images/3/35/spectrogramview_01.png" width="602" height="196" /></span></dd></dl>
+<dl><dd><span title="Spectrogram test track in waveform dB view"><img alt="SpectrogramView 01.png" src="../m/images/3/35/spectrogramview_01.png" width="725" height="200" /></span></dd></dl>
 <p>This is how the track appears in spectrogram view, using the default settings.
 </p>
-<dl><dd><span title="Spectrogram test track in spectrogram view with default settings"><img alt="SpectrogramView 02.png" src="../m/images/f/f0/spectrogramview_02.png" width="618" height="224" /></span></dd></dl>
+<dl><dd><span title="Spectrogram test track in spectrogram view with default settings"><img alt="SpectrogramView 02.png" src="../m/images/f/f0/spectrogramview_02.png" width="725" height="200" /></span></dd></dl>
 <p>The default settings are can be viewed at <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a> or <a href="#settings">above</a> on this page.
 </p>
 <h3><span class="mw-headline" id="Frequency_settings">Frequency settings</span></h3>
@@ -98,32 +105,44 @@
 <p>Gain can be said to increase the "brightness" of the display. It does this by amplifying the signal by the indicated amount. With the default setting of 20 dB, any frequency band that originally had (before amplification) a level of -20 dB or greater (and now, after amplification has a level greater than 0 dB) will be displayed as white. Similarly the "lower" level bands will also "get brighter".
 </p>
 <h3><span class="mw-headline" id="Color_bands">Color bands</span></h3>
-<p>There are six color bands in spectrogram view: white, red, magenta, dark blue, light blue and gray. The Range setting determines the spacing between colors.
-</p><p>With the default settings of Gain = 20 dB and Range = 80 dB, the colors correspond to the following levels:
+<p>There are five color bands in the default spectrogram color scheme: white, orange, magenta, dark blue, and black. The Range setting determines the spacing between colors.
+</p><p>Here is the the previous image, zoomed in around the 2000 Hz mark to better show the spectrogram colors.
+</p>
+<dl><dd><span title="Spectrogram test track in spectrogram view with default settings zoomed in at 2000Hz"><img alt="SpectrogramView 02a.png" src="../m/images/e/ec/spectrogramview_02a.png" width="722" height="200" /></span></dd></dl>
+<p>With the default settings of Gain = 20 dB and Range = 80 dB, the colors correspond to the following levels:
 </p>
 <ul><li> anything above -20 dB is indistinguishably white <i>(the tone at -10 dB in the image above is white)</i></li>
-<li> levels from -40 dB to -20 dB transition from red to white <i>(the tone at -30 dB in the image above is light red)</i></li>
-<li> levels from -60 dB to -40 dB transition from magenta to red <i>(the tone at -50 dB in the image above is magenta)</i></li>
-<li> levels from -80 dB to -60 dB transition from dark blue to magenta <i>(the tone at -70 dB in the image above is bluish purple)</i></li>
-<li> levels from -100 dB to -80 dB transition from light blue to dark blue <i>(the tone at -90 dB in the image above is light blue)</i></li>
-<li> anything below -100 dB is gray.</li></ul>
-<p><br />
+<li> levels from -20 dB to -40 dB transition from white to orange <i>(the tone at -30 dB in the image above is light orange)</i></li>
+<li> levels from -40 dB to -60 dB transition from orange to magenta <i>(the tone at -60 dB in the image above is magenta)</i></li>
+<li> levels from -60 dB to -80 dB transition from magenta to blue <i>(the tone at -70 dB in the image above is purple)</i></li>
+<li> levels from -80 dB to -100 dB transition from blue to black <i>(the tone at -100 dB in the image above is black)</i></li>
+<li> anything below -100 dB is black.</li></ul>
+<h3><span class="mw-headline" id="Other_color_schemes">Other color schemes</span></h3>
+<p>Here is the classic color scheme.
 </p>
+<dl><dd><span title="Spectrogram test track in spectrogram view with classic settings zoomed in at 2000Hz"><img alt="SpectrogramView 02b.png" src="../m/images/3/34/spectrogramview_02b.png" width="719" height="200" /></span></dd></dl>
+<p>Here is the inverse greyscale color scheme.
+</p>
+<dl><dd><span title="Spectrogram test track in spectrogram view with inverse greyscale settings zoomed in at 2000Hz"><img alt="SpectrogramView 02c.png" src="../m/images/e/e9/spectrogramview_02c.png" width="719" height="200" /></span></dd></dl>
+<div id="smear"></div>
+<p>Here is the greyscale color scheme.
+</p>
+<dl><dd><span title="Spectrogram test track in spectrogram view with greyscale settings zoomed in at 2000Hz"><img alt="SpectrogramView 02d.png" src="../m/images/1/12/spectrogramview_02d.png" width="719" height="202" /></span></dd></dl>
 <div id="smear"></div>
 <h2><span class="mw-headline" id="Time_Smearing_and_Frequency_Smearing">Time Smearing and Frequency Smearing</span></h2>
 <p>Spectrogram view uses the Fast Fourier Transform (FFT) to display the frequency information versus time. There is an inherent trade-off between frequency resolution and time resolution.
 </p><p>The image below shows the spectrogram view of a pure 1000Hz tone with two clicks very close together. With a window size of 256 we can see the two clicks.
 </p>
-<dl><dd><span title="Spectrogram view showing two clicks close together with window size of 256"><img alt="SpectrogramView 03.png" src="../m/images/4/4e/spectrogramview_03.png" width="603" height="177" /></span></dd></dl>
+<dl><dd><span title="Spectrogram view showing two clicks close together with window size of 256"><img alt="SpectrogramView 03.png" src="../m/images/4/4e/spectrogramview_03.png" width="730" height="182" /></span></dd></dl>
 <p>Changing the Window Size to 2048 results in better frequency resolution (the white band is narrower). However the time resolution is worse. The two clicks have been smeared together into one.
 </p>
-<dl><dd><span title="Spectrogram view showing time smearing with window size of 2048"><img alt="SpectrogramView 05.png" src="../m/images/6/68/spectrogramview_05.png" width="601" height="182" /></span></dd></dl>
+<dl><dd><span title="Spectrogram view showing time smearing with window size of 2048"><img alt="SpectrogramView 05.png" src="../m/images/6/68/spectrogramview_05.png" width="730" height="180" /></span></dd></dl>
 <p>The image below shows the spectrogram view of a musical note with many overtones. With a window size of 256 the overtones are not clear.
 </p>
-<dl><dd><span title="Spectrogram view showing frequency smearing of a musical note with overtones with window size of 256"><img alt="SpectrogramView 03a.png" src="../m/images/9/9a/spectrogramview_03a.png" width="602" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram view showing frequency smearing of a musical note with overtones with window size of 256"><img alt="SpectrogramView 03a.png" src="../m/images/9/9a/spectrogramview_03a.png" width="724" height="154" /></span></dd></dl>
 <p>When we change the window size to 2048 we can see the overtones.
 </p>
-<dl><dd><span title="Spectrogram view showing more frequency resolution musical note with overtones with window size of 2048"><img alt="SpectrogramView 05a.png" src="../m/images/e/ef/spectrogramview_05a.png" width="601" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram view showing more frequency resolution musical note with overtones with window size of 2048"><img alt="SpectrogramView 05a.png" src="../m/images/e/ef/spectrogramview_05a.png" width="724" height="151" /></span></dd></dl>
 <p>When choosing which window size to use, the general rules are:
 </p>
 <ul><li> if you need good time resolution (for example to find clicks) use a smaller window size</li>
@@ -136,10 +155,10 @@
 <p>You can zoom in on the vertical (frequency) axis by <a href="vertical_zooming.html#advanced" title="Vertical Zooming">left-clicking in the Vertical Scale</a> and using the magnifiers <i>(when these are enabled in<a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a>)</i>.
 </p><p>In the image below we are about to zoom in on one overtone of the musical note.
 </p>
-<dl><dd><span title="Spectrogram test track in spectrogram view about to zoom in"><img alt="SpectrogramView 06.png" src="../m/images/4/47/spectrogramview_06.png" width="602" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram test track in spectrogram view about to zoom in"><img alt="SpectrogramView 06.png" src="../m/images/4/47/spectrogramview_06.png" width="730" height="154" /></span></dd></dl>
 <p>After zooming in, the vertical ruler changes to allow greater precision of the scale.
 </p>
-<dl><dd><span title="Spectrogram test track in spectrogram view after zooming in"><img alt="SpectrogramView 07.png" src="../m/images/e/ef/spectrogramview_07.png" width="601" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram test track in spectrogram view after zooming in"><img alt="SpectrogramView 07.png" src="../m/images/e/ef/spectrogramview_07.png" width="725" height="151" /></span></dd></dl>
 <h3><span class="mw-headline" id="Context_menu">Context menu</span></h3>
 <p>Alternatively you can right-click in the Vertical scale to bring up a dropdown context menu which has commands for <a href="vertical_zooming.html#simple" title="Vertical Zooming">vertical zooming</a>:
 </p>
@@ -151,10 +170,10 @@
 <p>The image above uses the <i>Hann</i> Window Type.
 </p><p>Changing to the <i>Blackman-Harris</i> Window Type gets rid of much of the spectral leakage at the expense of lower frequency resolution (note that the red band near the 2.0k mark is wider).
 </p>
-<dl><dd><span title="Spectrogram test track in spectrogram view with Blackman-Harris window"><img alt="SpectrogramView 08.png" src="../m/images/3/3a/spectrogramview_08.png" width="601" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram test track in spectrogram view with Blackman-Harris window"><img alt="SpectrogramView 08.png" src="../m/images/3/3a/spectrogramview_08.png" width="725" height="156" /></span></dd></dl>
 <p>Changing to a rectangular window causes the track to be redrawn a little faster at the expense of very bad spectral leakage. However, the frequency resolution is better (the red band near the 2.0k mark is narrower).
 </p>
-<dl><dd><span title="Spectrogram test track in spectrogram view with rectangular window"><img alt="SpectrogramView 09.png" src="../m/images/0/05/spectrogramview_09.png" width="601" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram test track in spectrogram view with rectangular window"><img alt="SpectrogramView 09.png" src="../m/images/0/05/spectrogramview_09.png" width="725" height="151" /></span></dd></dl>
 <p>There is no "right" window type. When you are using spectrogram view to analyze audio, or to track down certain elements in a recording, use whichever window type best highlights the information you are trying to find.
 </p><p><br />
 </p>
@@ -163,10 +182,10 @@
 <p>Larger values give finer interpolation of the colors along the vertical axis, at the expense of more computation time. This setting does not affect the time vs. frequency resolution tradeoff. In other words it does not give better frequency resolution.
 </p><p>Here is the musical note again, with a zero padding factor of 1:
 </p>
-<dl><dd><span title="Spectrogram view showing musical note with zero padding factor of 1"><img alt="SpectrogramView 07.png" src="../m/images/e/ef/spectrogramview_07.png" width="601" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram view showing musical note with zero padding factor of 1"><img alt="SpectrogramView 07.png" src="../m/images/e/ef/spectrogramview_07.png" width="725" height="151" /></span></dd></dl>
 <p>Here is the same note, with a zero padding factor of 8:
 </p>
-<dl><dd><span title="Spectrogram view showing musical note with zero padding factor of 8"><img alt="SpectrogramView 15.png" src="../m/images/b/bc/spectrogramview_15.png" width="605" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram view showing musical note with zero padding factor of 8"><img alt="SpectrogramView 15.png" src="../m/images/b/bc/spectrogramview_15.png" width="725" height="156" /></span></dd></dl>
 <p><br />
 </p>
 <div id="views"></div>
@@ -176,17 +195,17 @@
 <p>Choosing <i>Logarithmic</i> from the <a href="audio_track_dropdown_menu.html#spgramset" title="Audio Track Dropdown Menu">Spectrogram Settings</a> in the Track Control Panel dropdown menu will display a logarithmic vertical scale.
 </p><p>Here again is the musical note with overtones shown in Spectrogram view:
 </p>
-<dl><dd><span title="Spectrogram view showing musical note with overtones"><img alt="SpectrogramView 05a.png" src="../m/images/e/ef/spectrogramview_05a.png" width="601" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram view showing musical note with overtones"><img alt="SpectrogramView 05a.png" src="../m/images/e/ef/spectrogramview_05a.png" width="724" height="151" /></span></dd></dl>
 <p>Here is the same note, this time in Logarithmic Spectrogram view:
 </p>
-<dl><dd><span title="Logarithmic Spectrogram view of musical note with overtones"><img alt="SpectrogramView 12.png" src="../m/images/a/a0/spectrogramview_12.png" width="605" height="154" /></span></dd></dl>
+<dl><dd><span title="Logarithmic Spectrogram view of musical note with overtones"><img alt="SpectrogramView 12.png" src="../m/images/a/a0/spectrogramview_12.png" width="725" height="151" /></span></dd></dl>
 <p>Musical overtones form a linear sequence and are generally best viewed in Linear Spectrogram view.
 </p><p>Here is a chromatic scale shown in Spectrogram view:
 </p>
-<dl><dd><span title="Spectrogram view of a chromatic scale"><img alt="SpectrogramView 13.png" src="../m/images/f/f3/spectrogramview_13.png" width="605" height="154" /></span></dd></dl>
+<dl><dd><span title="Spectrogram view of a chromatic scale"><img alt="SpectrogramView 13.png" src="../m/images/f/f3/spectrogramview_13.png" width="725" height="152" /></span></dd></dl>
 <p>Here is the same scale, this time in Logarithmic Spectrogram view:
 </p>
-<dl><dd><span title="Logarithmic Spectrogram view of a chromatic scale"><img alt="SpectrogramView 14.png" src="../m/images/e/e7/spectrogramview_14.png" width="605" height="154" /></span></dd></dl>
+<dl><dd><span title="Logarithmic Spectrogram view of a chromatic scale"><img alt="SpectrogramView 14.png" src="../m/images/e/e7/spectrogramview_14.png" width="725" height="151" /></span></dd></dl>
 <p>A musical scale is an exponential sequence, and is generally best viewed in Logarithmic Spectrogram view.
 </p>
 <div id="others"></div>
@@ -200,7 +219,7 @@
 <div class="example"><span style="font-weight: bold; font-size:118%">Comparison of Mel, Logarithmic and Linear Spectrogram views:</span>
 <p>The image below shows the scaling differences in different Spectrogram views of the same audio:
 </p>
-<dl><dd><span title="Spectrogram of the same audio displayed in Mel, Logarithmic and Linear views"><img alt="Mel-Log-Linear Spectrogram annotated.png" src="../m/images/e/ed/mel_log_linear_spectrogram_annotated.png" width="592" height="343" /></span></div></dd></dl>
+<dl><dd><span title="Spectrogram of the same audio displayed in Mel, Logarithmic and Linear views"><img alt="Mel-Log-Linear Spectrogram annotated.png" src="../m/images/e/ed/mel_log_linear_spectrogram_annotated.png" width="710" height="447" /></span></div></dd></dl>
 <div id="period"></div>
 <h3><span class="mw-headline" id="Period_Spectrogram_view">Period Spectrogram view</span></h3>
 <ul><li><b>Period</b>: This scale is the reciprocal of frequency (1/frequency) and attempts to visualise Enhanced Autocorrelation. It is therefore best used with the "Pitch (EAC)" algorithm, which is the same as the "Pitch (EAC)" View Mode choice in previous Audacity versions. To aid comparison with other scales, small period values (high frequencies) are plotted at the top. This scale tends to give the most screen estate to plotted areas, but Logarithmic scale gives the more correct representation of pitch, because <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Equal_temperament">Equal Temperament</a> divides the octave into 12 parts, all of which are equal on a logarithmic scale. </li></ul>
@@ -222,11 +241,11 @@
 <h3><span class="mw-headline" id="Default_settings">Default settings</span></h3>
 <p>Here is a music track displayed in Spectrogram view with the default settings of: Window size of 256, Window type of Hann, Minimum Frequency 0 and Maximum frequency 8000. This is not very useful for identifying the different musical elements:
 </p>
-<dl><dd><span title="Music track shown in Spectrogram view and default settings"><img alt="SpectrogramView 10a.png" src="../m/images/6/68/spectrogramview_10a.png" width="601" height="247" /></span></dd></dl>
+<dl><dd><span title="Music track shown in Spectrogram view and default settings"><img alt="SpectrogramView 10a.png" src="../m/images/6/68/spectrogramview_10a.png" width="725" height="297" /></span></dd></dl>
 <h3><span class="mw-headline" id="Logarithmic">Logarithmic</span></h3>
 <p>Here is the same track displayed in Logarithmic Spectrogram view. This is still not very useful for identifying the different musical elements:
 </p>
-<dl><dd><span title="Music track shown in Logarithmic Spectrogram view and default settings"><img alt="SpectrogramView 10.png" src="../m/images/7/70/spectrogramview_10.png" width="601" height="247" /></span></dd></dl>
+<dl><dd><span title="Music track shown in Logarithmic Spectrogram view and default settings"><img alt="SpectrogramView 10.png" src="../m/images/7/70/spectrogramview_10.png" width="725" height="298" /></span></dd></dl>
 <h3><span class="mw-headline" id="Custom_settings">Custom settings</span></h3>
 <p>Different settings can improve the visibility of certain elements in the recording. In the image below the settings were:  
 </p>
@@ -235,7 +254,7 @@
 <li> Zero padding factor of 1 (no change from previous)</li>
 <li> Minimum Frequency 20 (remove display of sub-sonic frequencies)</li>
 <li> Maximum frequency 22000 (include display of higher frequencies).</li></ul>
-<dl><dd><span title="Music track shown in Logarithmic Spectrogram view with window size 2048, minimum frequency 20, and maximum frequency 22000"><img alt="SpectrogramView 11.png" src="../m/images/4/49/spectrogramview_11.png" width="601" height="247" /></span></dd></dl>
+<dl><dd><span title="Music track shown in Logarithmic Spectrogram view with window size 2048, minimum frequency 20, and maximum frequency 22000"><img alt="SpectrogramView 11.png" src="../m/images/4/49/spectrogramview_11.png" width="725" height="298" /></span></dd></dl>
 <p><br />
 </p>
 <div id="spectral_selection"></div>
@@ -245,14 +264,14 @@ For full details, see <a href="spectral_selection.html" title="Spectral Selectio
 <p>To define a time range combined with a spectral range, hover at a vertical position that you want to be the approximate center frequency to act on then click and drag a selection horizontally. A horizontal line appears beside the I-Beam mouse pointer that defines the center frequency. 
 </p><p>Drag vertically, with or without continuing to drag horizontally, to define the range of frequencies to be acted on. A "box" containing a combined frequency and time range is now drawn in a colored tint as shown below <i>(the exact color of the tint will depend on the version of Audacity and the settings of your monitor)</i>: 
 </p>
-<dl><dd><span title="Audio track in spectrogram view with annotated spectral selection"><img alt="Spectral 02.png" src="../m/images/1/11/spectral_02.png" width="559" height="194" /></span></dd></dl>
+<dl><dd><span title="Audio track in spectrogram view with annotated spectral selection"><img alt="SpectrogramView Edit.png" src="../m/images/5/5e/spectrogramview_edit.png" width="725" height="268" /></span></dd></dl>
 <p>The frequencies in the spectral selection can then be  <i><b><a href="glossary.html#filter" title="Glossary">filtered</a></b></i> in various ways, affecting their <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i>, using the special <a href="spectral_selection.html#edit" title="Spectral Selection">Spectral edit</a> effects in the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a>. This can be useful to remove unwanted extraneous noises from the audio or to apply very specific tone quality changes to it. 
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top">In order to define a <a href="spectral_selection.html" title="Spectral Selection"><b>spectral selection</b></a> you need to be in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu"><b>Spectrogram</b></a> view.
 <p>Also you must have checked "on" the <b>Enable Spectral Selection</b> in either <a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms Preferences</a>, or the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">dropdown menu</a> of the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> choosing <b>Spectrogram Settings...</b>. 
@@ -265,7 +284,7 @@ For full details, see <a href="spectral_selection.html" title="Spectral Selectio
 <h2><span class="mw-headline" id="Multi-view_-_Spectrogram_and_Waveform">Multi-view - Spectrogram and Waveform</span></h2>
 <p>It is also possible to work with a Spectrogram view and a Waveform view  in the same track:
 </p>
-<dl><dd><span title="A split waveform and spectrogram view of a mono track- 50:50 default proportions"><img alt="Multi-view mono default 50-50.png" src="../m/images/b/b7/multi_view_mono_default_50_50.png" width="726" height="178" /></span></dd>
+<dl><dd><span title="A split waveform and spectrogram view of a mono track- 50:50 default proportions"><img alt="Multi-view mono default 50-50.png" src="../m/images/b/b7/multi_view_mono_default_50_50.png" width="725" height="263" /></span></dd>
 <dd><b>Example of a mono audio track with a Multi-view split 50:50 Waveform/Spectrogram</b></dd></dl>
 <p>To get a split Multi-view for a track select <b>Multi-view</b> from the track's <a href="audio_tracks.html#panel" title="Audio Tracks"><b> Track Control Panel</b></a> dropdown menu.
 </p><p>For details see <b><a href="multi_view.html" title="Multi-view">Multi-view</a></b>.
@@ -346,7 +365,7 @@ For full details, see <a href="spectral_selection.html" title="Spectral Selectio
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Spectrogram_View">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Spectrogram_View">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

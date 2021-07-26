@@ -48,7 +48,7 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top"> This table shows the items in the menus that are scriptable.
 <ul><li> The Scripting Ids, parameters and defaults are all likely to change between versions.</li>
@@ -4199,8 +4199,12 @@
 <i>double <b>VZoomLow</b>, (default:unchanged)</i><br />
 <i>bool <b>SpecPrefs</b>, (default:unchanged)</i><br />
 <i>bool <b>SpectralSel</b>, (default:unchanged)</i><br />
-<i>bool <b>GrayScale</b>, (default:unchanged)</i><br />
+<i>enum <b>Scheme</b>, (default:unchanged)</i><br />
 </p>
+<ul><li> Color (default)</li>
+<li> Color (classic)</li>
+<li> Grayscale</li>
+<li> Inverse Grayscale</li></ul>
 </td>
 <td>Sets visual properties for a track or channel (or both).  SpectralPrefs=1 sets the track to use general preferences, SpectralPrefs=1 per track prefs. When using general preferences, SetPreferences can be used to change a preference and so affect display of the track.
 </td></tr>
@@ -4707,7 +4711,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

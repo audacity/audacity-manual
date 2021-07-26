@@ -39,7 +39,7 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top"><span style="font-weight: bold; font-size:118%">Effect presets:</span> since it is quite possible to have just a single command in a Macro you can use Macros to store your regularly used effects along with your favored settings.
 <ul><li>This Macros Palette is useful for presets for effects. It stays open after applying a Macro, and you can pick another and apply that. </li>
@@ -85,41 +85,34 @@
 <p>Use the <span class="button">Project</span> button to apply the selected Macro to the current project. 
 </p>
 <div class="note">The typical purpose of this option is <b>effect automation</b> - apply a sequence of effects to the project, using effect parameters and an order of applying the effects that you have found to work well for the type of audio you are processing. This saves time and provides consistency in your workflow. </div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
-</td>
-<td align="left" valign="top">If you already have audio in the current project window, you must save and close that project using <span class="menu">File &gt; <a href="file_menu.html#close" title="File Menu">Close</a></span> before applying a Macro to files.
-</td></tr></table></div>
-<p>The effects in the Macro are applied to the <a href="audacity_selection.html" title="Audacity Selection">selected</a> region of <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> in the selected <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a>. Usually the selected Macro would not include an <a href="exporting_audio.html" title="Exporting Audio">export</a> command so as to use the greater flexibility of the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a>. 
+<p>The effects in the Macro are applied to the <a href="audacity_selection.html" title="Audacity Selection">selected</a> region of <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> in the selected <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a>. Usually the selected Macro would <i><b>not</b></i> include an <a href="exporting_audio.html" title="Exporting Audio">export</a> command so as to use the greater flexibility of the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a>. 
 </p><p>If an export command is included in the Macro, the entire project audio is exported irrespective of track or region selection. Therefore if the project contains multiple audio tracks, they will be <a href="mixing.html" title="Mixing">mixed</a> together, unless any of the tracks are muted on the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>. 
-</p><p>The exported files will be saved in a folder named "<b>macro-output</b>". 
 </p>
-<ul><li> If the project has been Saved, then the "macro-output" folder will be in the same directory location as the project and the audio file name will be the same as the project name but with the extension appropriate to the export type.</li>
-<li> If the audio in the project came from an imported file or files, the "macro-output" folder will be inside the directory from which the first file was imported. The original files are not altered.</li>
-<li> If the project has not been saved and no audio has been imported, the normal Export Audio dialog will appear enabling you to choose the name and location of the exported file.</li></ul>
+
+<ul><li> If the project has been Saved, then the exported files will be saved in a folder named "<b>macro-output</b>". The "macro-output" folder will be in the location specified in <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a>.</li>
+<li> If the audio in the project came from an imported file as its initial step <i>(that is, it is a named project)</i>, the "<b>macro-output</b>" folder will also be will be in the location specified in <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a>.</li>
+<li> If the project has not been saved and is un-named, the normal <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> dialog will appear enabling you to choose the name and location of the exported file.</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top">Macros will work on pre-existing selections you make in your project prior to running the Macro.  But the selection can be over-ridden by your Macro itself as there are macro commands available to effect selections in the audio.  In particular <b>All(Select All)</b> will select the entire project and <b>Select</b> which is parameterizable <i>(see the provided <b>Fade Ends</b> Macro for an example where the first and last one seconds of the audio are selected for the fades)</i>.
 </td></tr></table>
 </div>
 <div id="files"></div>
 <h3><span class="mw-headline" id="Files...">Files...</span></h3>
-<p>Use the <span class="button">Files...</span> button to apply the selected Macro to selected external audio files that are in a single directory. If you already have audio in the current project window, you must save and close that project using <span class="menu">File &gt; <a href="file_menu.html#close" title="File Menu">Close</a></span> before applying a Macro to files.
-</p><p>The typical purpose of this option is <b>batch processing</b> - apply the Macro to multiple audio files so as to apply one or more effects to them, and/or convert them to another file format. You can convert from any file format <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">supported by Audacity</a> to WAV, MP3, OGG or FLAC.
-</p><p>Applying a Macro to multiple Audacity AUP3 project files cannot be done, instead you need to use Python scripting.
+<p>The typical purpose of this option is <b>batch processing</b> - apply the Macro to multiple audio files so as to apply one or more effects to them, and/or convert them to another file format. You can convert from any file format <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">supported by Audacity</a> to WAV, MP3, OGG or FLAC.
+</p><p>Use the <span class="button">Files...</span> button to apply the selected Macro to selected external audio files that are in a single directory. If you already have audio in the current project window, you must save and close that project using <span class="menu">File &gt; <a href="file_menu.html#close" title="File Menu">Close</a></span> before applying a Macro to files.
+</p><p>If you already have audio in the current project window, you must save and close that project using <span class="menu">File &gt; <a href="file_menu.html#close" title="File Menu">Close</a></span> before applying a Macro to files. 
 </p>
+<div class="note">Applying a Macro to multiple Audacity AUP3 project files cannot be done, instead you need to use Python scripting. </div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">The selected Macro <i><b>must</b></i> include an <b>Export</b> step, otherwise the processed audio will not be retained.
 </td></tr></table></div>
@@ -142,7 +135,7 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top">It is recommended not to process more than <b>500</b> files at a time.
 </td></tr></table>
@@ -245,7 +238,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Apply_Macro">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Apply_Macro">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

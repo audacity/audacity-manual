@@ -34,7 +34,6 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-</b>
 <div class="intro">Preferences let you change most of the default behaviors of Audacity.  The Preferences dialog can be accessed using the <span class="menu"><a href="edit_menu.html" title="Edit Menu">Edit Menu</a></span> (or by using the <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference">shortcut</a> <span class="kbrd" style="background-color: #e0e0f0">Ctrl + P</span>). On a <b>Mac</b>, Preferences is under the <span class="menu"><a href="audacity_menu.html" title="Audacity Menu">Audacity Menu</a></span> <span class="kbrd" style="background-color: #e0e0f0">&#8984; + ,</span>. </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ul><li> <a href="#dialog">The Preferences dialog</a></li>
@@ -140,6 +139,11 @@
 <td style="padding-left:10px"><a href="modules_preferences.html" title="Modules Preferences">Modules</a>
 </td>
 <td style="padding-left:10px">Loadable Modules for Audacity.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="application_preferences.html" title="Application Preferences">Application</a>
+</td>
+<td style="padding-left:10px">Controls settings for the application.
 </td></tr></table></dd></dl>
 <p><br />
 </p>
@@ -157,7 +161,7 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top">In order to see audacity.cfg on Windows, macOS or GNU/Linux, you must show hidden files and folders or type the folder location into your file manager's address bar.<p>
 <ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, double-click the AppData or Application Data folder and navigate through that. If necessary, show hidden files and folders on <a rel="nofollow" class="external text" href="http://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Windows</a> or type <b>%appdata%\audacity</b> or <b>shell:appdata\audacity</b> into the Explorer address bar then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on your keyboard.</p><p></li>
@@ -174,7 +178,7 @@
 <div id="reset"></div>
 <h2><span class="mw-headline" id="Resetting_Preferences">Resetting Preferences</span></h2>
 <p>Resetting Preferences can sometimes fix freezes, crashes or unexplained Audacity behavior. 
-</p><p>You can reset Preferences to factory defaults by using the <span class="menu">Tools &gt; <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a></span> command.
+</p><p>You can reset Preferences to factory defaults by using <span class="menu">Tools &gt; <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a></span>.
 </p>
 <div id="win_reset"></div>
 <p><br />
@@ -183,7 +187,7 @@
 <h2><span class="mw-headline" id="Portable_Settings">Portable Settings</span></h2>
 <p>You can create a folder called <b>Portable Settings</b> in a special location relative to the directory you installed or extracted Audacity to, so that <b>audacity.cfg</b> and Audacity's other settings will be stored in that "Portable Settings" folder instead.  The permitted locations are:
 </p>
-<ul><li> <b>Windows:</b> in the folder Audacity is launched from (for example, in <b>Program Files (x86)\Audacity</b> on Windows 64-bit)</li>
+<ul><li> <b>Windows:</b> in the folder Audacity is launched from (for example, in <b>Program Files\Audacity</b> on Windows 64-bit)</li>
 <li> <b>macOS:</b> in the "Contents" folder inside Audacity.app (for example in <b>/Applications/Audacity.app/Contents/</b> (to access the "Contents" folder, right-click or Ctrl-click over Audacity.app and choose "Show Package Contents")</li>
 <li> <b>GNU/Linux:</b> in the folder where the "audacity" binary is (for example, for Audacity installed by the package manager for your distribution, in <b>usr/bin/</b>).</li></ul>
 <p>The "Portable Settings" folder becomes active after restarting Audacity. 
@@ -194,7 +198,7 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">The Portable Settings folder must be given full permissions for everyone who wants to use it.
 <ul><li> On <b>Windows</b>, sufficient permission is normally granted if the administrator creates the folder. 
@@ -283,7 +287,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Preferences">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Preferences">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -37,28 +37,38 @@
 
 <div class="intro">The Audacity <b>Status Bar</b> is the gray horizontal bar to be found at the bottom of the Audacity window (normally, and by default, just below the <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>). It cannot be relocated or floated. Its function is to display messages about recording or playback, to indicate parts of Audacity that are being hovered over by the mouse, and to provide hints about how to use Audacity. 
 <div class="note">Note that the images on this page also show the <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> in addition to the <b>Status Bar</b>.</div> </div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#sections">Status Bar sections</a></li>
+<li><a href="#length">Recording length</a></li>
+<li><a href="#other">Other Status Bar center section displays</a></li>
+<li><a href="#rate">Actual Rate</a></li>
+<li><a href="#grab">Grab Handle</a></li></ol>
+<p><br />
+</p>
 <div id="sections"></div>
 <h2><span class="mw-headline" id="Status_Bar_sections">Status Bar sections</span></h2>
 <p>There are three sections in the Status bar:
 </p>
 <ul><li>the current status: <b>Playing</b>, <b>Playing Paused</b>, <b>Scrubbing</b>, <b>Recording</b>, <b>Recording Paused</b> or <b>Stopped</b></li>
 <li>the central information and hints section </li>
-<li>the <a href="#rate">Actual Rate</a> of the audio (the active <a href="sample_rates.html" title="Sample Rates">sample rate</a>, only shown when playing or recording).</li></ul>
+<li>the <a href="#rate"><b>Actual Rate</b></a> of the audio (the active <a href="sample_rates.html" title="Sample Rates">sample rate</a>, only shown when playing or recording).</li></ul>
 <p>When you hover over the audio area in any <a href="audio_tracks.html" title="Audio Tracks">audio track</a>, Status Bar displays <i><b>"Click and drag to select audio"</b></i>. Dragging horizontally always selects a region of time. When you release the drag or otherwise hover over the left or right edge of a selection, the Status Bar message changes to advise that you can click and drag to move that selection boundary.
 </p>
-<dl><dd><span title="Status Bar showing status messages when hovering over the audio area of any audio track"><img alt="Staus Bar - Click and drag to select audio.png" src="../m/images/3/34/staus_bar_click_and_drag_to_select_audio.png" width="717" height="82" /><span></dd></dl>
+<dl><dd><span title="Status Bar showing status messages when hovering over the audio area of any audio track"><img alt="Status Bar - Click and drag to select audio big timer.png" src="../m/images/d/d5/status_bar_click_and_drag_to_select_audio_big_timer.png" width="805" height="83" /><span></dd></dl>
+<p><br />
+</p>
 <div id="length"></div>
 <h2><span class="mw-headline" id="Recording_length"><a href="recording_length.html" title="Recording length">Recording length</a></span></h2>
 <p>When recording, the audio data is written to your hard disk. For example, if you record without having yet saved a Project, the data is written to Audacity's temporary folder specified in <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a>. Therefore, the amount of time you can record for is limited by the available disk space on the drive you are writing to. There are no other restrictions on recording length. As soon as you start your first recording in the current project window, the center section of the Status Bar gives a clear indication of how long you can record for, based on that remaining space:
 </p>
-<dl><dd><span title="Status Bar showing disk space remaining for recording"><img alt="Status Bar - Disk-space remaining for recording.png" src="../m/images/e/e7/status_bar_disk_space_remaining_for_recording.png" width="683" height="85" /><span></dd></dl>
+<dl><dd><span title="Status Bar showing disk space remaining for recording"><img alt="Status Bar - Disk-space remaining for recording big timer.png" src="../m/images/4/46/status_bar_disk_space_remaining_for_recording_big_timer.png" width="806" height="82" /><span></dd></dl>
 <p>The "Disk space remaining" message will continue to display thereafter as soon as you leave the mouse stationary for a couple of seconds. If you run out of disk space at any time after starting or completing a recording, the default Status Bar message will change to "Out of disk space".     
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">The time remaining will be less at higher project rates and higher bit depths because these will require more disk space. See <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a> for details.
 </td></tr></table></div>
@@ -66,23 +76,29 @@
 </p>
 <div id="other"></div>
 <h2><span class="mw-headline" id="Other_Status_Bar_center_section_displays">Other Status Bar center section displays</span></h2>
-<ul><li>When <a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing and Seeking</a> you will messages relating to those actions.</li>
+<ul><li>When <a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">Scrubbing and Seeking</a> you will see messages relating to those actions.</li>
 <li>When you hover over the sliders in Mixer Toolbar the Playback and Recording volumes are displayed in Status Bar.    </li>
 <li>Many other buttons and tools in the Audacity window will display the name of the button or tool in Status Bar when you hover over the button or tool. Buttons in <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> that display a Status Bar message include in parentheses the current <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference">keyboard shortcut</a> for that button.</li>
-<li>When making a <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a>, hovering over the edges or center line of a frequency selection also displays relevant help messages.</li></ul>
-</li></ul>
+<li>When making a <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a>, hovering over the edges or center line of a frequency selection also displays relevant help messages.</li>
+<li>Each time you launch Audacity Status Bar will show the version of Audacity that you are running. You can always check what the currently available version of Audacity is at <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/">our Website</a>.</li></ul>
+<p><br />
+</p>
 <div id="rate"></div>
 <h2><span class="mw-headline" id="Actual_Rate">Actual Rate</span></h2>
-<p>While <a href="play.html" title="Play">playback</a> or <a href="record.html" title="Record">recording</a> is taking place (or is <a href="transport_menu.html#pause" title="Transport Menu">paused</a>), or when <a href="meter_toolbar.html#Monitoring" title="Meter Toolbar">monitoring</a>, <b>Actual Rate</b> in the right-hand section of Status Bar shows the <i><b><a href="sample_rates.html" title="Sample Rates">sample rate</a></b></i> of that audio transport. "Actual Rate" when playing should be the rate communicated by Audacity to the audio interface. "Actual Rate" when recording is the rate communicated by the audio interface to Audacity. 
+<p>While <a href="play.html" title="Play">playback</a> or <a href="record.html" title="Record">recording</a> is taking place (or is <a href="transport_menu.html#pause" title="Transport Menu">paused</a>), or when <a href="meter_toolbar.html#Monitoring" title="Meter Toolbar">monitoring</a>, <b>Actual Rate</b> in the right-hand section of Status Bar shows the <i><b><a href="sample_rates.html" title="Sample Rates">sample rate</a></b></i> of that audio transport (audio device or sound card). 
 </p>
+<ul><li>"Actual Rate" when playing is the rate communicated by Audacity to the audio interface. </li>
+<li>"Actual Rate" when recording is the rate communicated to Audacity by the audio interface. </li></ul>
+<dl><dd><span title="Status Bar showing the Actual Rate in use"><img alt="Status Bar Actual Rate 44100.png" src="../m/images/f/fb/status_bar_actual_rate_44100.png" width="803" height="83" /></span></dd></dl>
 <div class="note">In general terms, the actual rate for playback will be the project rate chosen in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>. If the audio interface does not support the rate you choose, Audacity will try to <i><b><a href="glossary.html#resampling" title="Glossary">resample</a></b></i> the audio to the highest available (or next higher) rate supported by the card, and this rate will appear as "Actual Rate". 
 <p>When recording, the actual rate sent by the audio interface to Audacity can often differ from the chosen project rate, depending how the "Host" chosen in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> handles the card's settings in the operating system. For an explanation of how this works on Windows, see the <a href="sample_rates.html" title="Sample Rates">Sample Rates</a> page. If the "Actual Rate" is different from the project rate then Audacity will resample from "Actual Rate" to the project rate.</p> </div>
-<dl><dd><span title="Status Bar showing the Actual Rate in use"><img alt="Staus Bar Actual Rate 44100.png" src="../m/images/e/e2/staus_bar_actual_rate_44100.png" width="721" height="79" /></span></dd></dl>
+<p><br />
+</p>
 <div id="grab"></div>
 <h2><span class="mw-headline" id="Grab_Handle">Grab Handle</span></h2>
 <p>The small hatched triangular area at bottom right of the Status Bar indicates where you can drag with the mouse to resize the Audacity window up, down, left or right on any operating system.
 </p>
-<dl><dd><span title="Bottom right corner of Status Bar showing the Grab Handle"><img alt="Status Bar Grab Handle .png" src="../m/images/3/3b/status_bar_grab_handle.png" width="76" height="31" /></span></dd></dl>
+<dl><dd><span title="Bottom right corner of Status Bar showing the Grab Handle"><img alt="Status Bar Grab Handle - ringed .png" src="../m/images/8/8f/status_bar_grab_handle_ringed.png" width="325" height="103" /></span></dd></dl>
 <div class="note">The Grab Handle will not be available if you are using Audacity in a full screen window.</div></span>
 <p></span>
 </span>
@@ -164,7 +180,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Status_Bar">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Status_Bar">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

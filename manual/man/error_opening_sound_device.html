@@ -40,10 +40,11 @@
 <li><b>Error opening recording device - Error code -xxxx</b>  this means there is a problem with your playback settings, where xxxx is replaced by a <a href="#codes">numeric code</a>.</li>
 <li><b>Error opening sound device ...</b> this is a generic message that is usually associated with a failure to start the audio stream. </li></ul>
 <p>These messages can suggest a problem with the drivers of the sound device, or possibly that you are asking the device to do something it cannot do. For example you will see this error if you attempt to <a href="transport_menu.html#record" title="Transport Menu">Record</a> to more channels than your device supports, or if you try to <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdub</a> on a device that can either record or play back but not both.
+</p><p>See the <a href="#codes">Numeric error codes</a> section for details of the particular codes.
 </p>
 The recording device message most commonly occurs on Windows when one of the sound device inputs is not properly enabled or otherwise cannot respond to Audacity's request to start recording.  </div> 
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<ol><li><a href="#W10mic">Windows 10 April 2018 Update resulting microphone problems</a></li>
+<ol><li><a href="#mic">Microphone and input device problems</a></li>
 <li><a href="#audsettings">Check Audacity settings</a></li>
 <li><a href="#ossettings">Check sound device drivers and firmware</a>
 <ul><li><a href="#winsettings">Windows</a></li>
@@ -54,11 +55,14 @@ The recording device message most commonly occurs on Windows when one of the sou
 <li><a href="#wasapi">Windows WASAPI: Recording from a USB device</a></li>
 <li><a href="#codes">Numeric error codes</a></li></ol>
 <p><br />
+</p><p><br />
 </p>
 <div id="W10mic"></div>
-<h2><span class="mw-headline" id="Windows_10_April_2018_Update_resulting_microphone_problems">Windows 10 April 2018 Update resulting microphone problems</span></h2>
+<div id="mic"></div>
+<h2><span class="mw-headline" id="Microphone_and_input_device_problems">Microphone and input device problems</span></h2>
+<h3><span class="mw-headline" id="Windows">Windows</span></h3>
 <p>For some users Windows 10 is now blocking Audacity from using the microphone, on the basis of privacy settings.
-</p><p>After upgrading to version 1803, a small number of users have been reporting that the microphone is getting detected, but it does not pick up any sound.
+</p><p>After upgrading to version 1803 of Windows 10 (April 2018), a small number of users have been reporting that the microphone is getting detected, but it does not pick up any sound.
 </p><p>In order to get around this issue, Microsoft recommends that you need to enable the microphone in your Privacy settings using these steps:
 </p>
 <ol><li>Open <b>Settings</b></li>
@@ -66,7 +70,15 @@ The recording device message most commonly occurs on Windows when one of the sou
 <li>Click on <b>Microphone</b></li>
 <li>Turn on the <b>Allow apps to access your microphone</b> toggle switch.</li></ol>
 <p>See this <a rel="nofollow" class="external text" href="https://www.windowscentral.com/windows-10-april-2018-update-common-problems-and-fixes#fix_microphone_problem_windows10_1803">Microsoft website</a> for more details.
-</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Mac">Mac</span></h3>
+<p>A problem of no recording level in Audacity is occurring quite frequently on Mojave, Catalina and later, due to Apple changing the <b>Privacy</b> settings for recording devices (making it more conservative, "safer"). Note that, although macOS refers to this setting as <b>Microphone</b>, it applies to all recording devices, including external USB / Thunderbolt interfaces.
+</p><p>To fix this problem: 
+</p>
+<ol><li>On your Mac, choose <span class="menu">Apple menu &gt; System Preferences</span> then click <span class="menu">Security &amp; Privacy</span> in the left-hand menu and the click the <b>Privacy</b> tab.</li>
+<li>Click <span class="menu">Microphone</span> in the left-hand menu.</li>
+<li>Select the checkbox next to an application (Audacity) to allow it to access the microphone. </li></ol>
+<p><br />
 </p>
 <div id="audsettings"></div>
 <h2><span class="mw-headline" id="Check_Audacity_settings">Check Audacity settings</span></h2>
@@ -215,7 +227,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

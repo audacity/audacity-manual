@@ -36,6 +36,15 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro"><a href="label_tracks.html" title="Label Tracks">Label Tracks</a> can be exported to, and imported from plain text files (.txt extension). The structure of the file is a tab-delimited plain text format that can be opened by any text editor or spreadsheet application and edited there.</div>
 <div id="standard"></div>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Standard_.28default.29_format"><span class="tocnumber">1</span> <span class="toctext">Standard (default) format</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Extended_format_with_frequency_ranges"><span class="tocnumber">2</span> <span class="toctext">Extended format with frequency ranges</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Usage_of_label_files"><span class="tocnumber">3</span> <span class="toctext">Usage of label files</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Exporting_selected_label_tracks"><span class="tocnumber">4</span> <span class="toctext">Exporting selected label tracks</span></a></li>
+</ul>
+</div>
+
 <h2><span class="mw-headline" id="Standard_.28default.29_format">Standard (default) format</span></h2>
 <p>The standard structure to display a label denoting its <a href="timeline.html" title="Timeline">Timeline</a> position and any text it contains is as below.
 </p>
@@ -76,14 +85,25 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">If you import labels created by some application other than Audacity, make sure the application supports <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a> or use only <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/ASCII">ASCII</a> (Latin unaccented) characters and numbers. Otherwise, accented or any other non-Latin characters may cause the file to not import.
 <p>If you use a Windows application to create the file, you may have to use "Save As" and look for a specific option that saves with UTF-8 encoding.
 </p>
 </td></tr></table></div>
 <p><br />
-<a href="label_tracks.html#export" title="Label Tracks"><b>|&lt;</b> Label Tracks</a>
+</p>
+<div id="selected"></div>
+<h2><span class="mw-headline" id="Exporting_selected_label_tracks">Exporting selected label tracks</span></h2>
+<p>Export Labels cannot export selected label tracks or selections within label tracks.  
+</p><p>To export individual label tracks the workaround is to:
+</p>
+<ol><li>temporarily delete all but one label track and export that</li>
+<li>use Undo to restore the temporarily deleted label tracks </li>
+<li>repeat for each label track in turn</li></ol>
+
+<p><br />
+</p><p><a href="label_tracks.html#export" title="Label Tracks"><b>|&lt;</b> Label Tracks</a>
 </p>
 
 
@@ -161,7 +181,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Importing_and_Exporting_Labels">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Importing_and_Exporting_Labels">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

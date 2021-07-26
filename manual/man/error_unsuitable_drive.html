@@ -44,7 +44,7 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top">You are <i><b>strongly</b></i> advised <i><b>NOT</b></i> to save your active project to an external USB stick/disk, whatever the format, as it is unlikely to be fast enough for satisfactory recording and editing.
 </td></tr></table>
@@ -73,6 +73,8 @@
 <ul><li>Disks or drives that are formatted as FAT/FAT32 are subject to a maximum file size limit of 4GB, this is about 3 hours 22 minutes of stereo at default settings.</li>
 <li>But a much shorter project can readily approach or exceed the 4GB with temporary filespace usage as you edit.</li>
 <li>Therefore to ensure the security of data, avoiding project loss or damage, Audacity prevents you from having live projects on a FAT/FAT32 formatted drive.</li></ul>
+<p><br />
+</p>
 <div id="temp"></div>
 <h3><span class="mw-headline" id="Temporary_files_directory">Temporary files directory</span></h3>
 <p>Audacity also prevents you from setting the Temporary files directory, in <a href="directories_preferences.html" title="Directories Preferences">Directories preferences</a>, on such a drive.
@@ -92,21 +94,26 @@
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top">If your project file is greater than 4GB you will need to reformat your USB drive as exFAT format which will accommodate much larger files.
 </td></tr></table>
 </div>
 <div id="openaup"></div>
 <h3><span class="mw-headline" id="Opening_an_older_AUP_project_that_was_saved_to_a_FAT.2FFAT32_formatted_drive">Opening an older AUP project that was saved to a FAT/FAT32 formatted drive</span></h3>
+
 <p>Older AUP projects (created in Audacity 2.4.2 or earlier) will easily fit on a FAT/FAT32 drive as the old file structure was based on lots of little files.
 </p><p>Projects will not open from a FAT/FAT32 formatted dive, instead you must copy your project (<b>AUP</b> and its associated <b>_Data folder</b>) to an NTFS formatted drive (APFS on macOS), normally your system drive, and open the project from there.
 </p><p>Note carefully that you will not be able to save the project back to the FAT/FAT32 formatted drive.
+</p><p><br />
 </p>
 <div id="openaup3"></div>
 <h3><span class="mw-headline" id="Opening_an_AUP3_project_that_was_stored_on_a_FAT.2FFAT32_formatted_drive">Opening an AUP3 project that was stored on a FAT/FAT32 formatted drive</span></h3>
 <p>You cannot save AUP3 projects on a FAT/FAT32 formatted drive - but you may have copied one there (provided it was less than the 4GB limit) for archive, backup or transfer.
-</p><p>As with AUP projects, Unitary AUP3 Projects will not open from a FAT/FAT32 formatted dive, instead you must copy your project (<b>AUP</b> and its associated <b>_Data folder</b>) to an NTFS formatted drive (APFS on macOS), normally your system drive, and open the project from there.
+</p><p>If you attempt to you will see this error message:
+</p>
+<dl><dd><span title="Unsuitable drive error message: Project resides on a FAT formatted drive"><img alt="Unsuitable FAT drive for open.png" src="../m/images/9/9c/unsuitable_fat_drive_for_open.png" width="362" height="177" /></span></dd></dl>
+<p>As with AUP projects, Unitary AUP3 Projects will not open from a FAT/FAT32 formatted dive, instead you must copy your AUP3 project to an NTFS formatted drive (APFS on macOS), normally your system drive, and open the project from there.
 </p><p><br />
 </p>
 <div id="export"></div>
@@ -207,7 +214,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Error:_Unsuitable_drive">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Error:_Unsuitable_drive">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -45,10 +45,19 @@ If your problem is mains hum or a high-pitched whistle, the use of a <a href="no
 <h2><span class="mw-headline" id="Step_1_-_Get_Noise_Profile">Step 1 - Get Noise Profile</span></h2>
 <p>This first step teaches Audacity about the noise you want to remove by identifying the <i><b><a href="glossary.html#noise_floor" title="Glossary">noise floor</a></b></i> of the different <i><b><a href="glossary.html#frequency" title="Glossary">frequencies</a></b></i> that make up the noise.  
 </p>
-<ol><li>Select a region of the <i><a href="audacity_waveform.html" title="Audacity Waveform">waveform</a></i> which <b>contains only noise</b>. A minimum of 2048 samples (0.05 sec. at 44,100 Hz <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>) is needed, below which an error will be shown. A longer Profile is better. If there are very different types of noise in different places in the track, they are best dealt with by grabbing the Profile for the first type, reducing the noise for it, then grabbing the Profile of the next type of noise and reducing that. </li>
+<ol><li>Select a region of the <i><a href="audacity_waveform.html" title="Audacity Waveform">waveform</a></i> which <b>contains only noise</b>. A minimum of 2048 samples (0.05 sec. at 44,100 Hz <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>) is needed, below which an error will be shown. A longer Noise Profile is better. If there are very different types of noise in different places in the track, they are best dealt with by identifying the Noise Profile for the first type, reducing the noise for it, then identifing the Noise Profile of the next type of noise and reducing that. </li>
 <li>Click <span class="menu">Effect &gt; Noise Reduction...</span>.</li>
 <li>Click <b>Get Noise Profile</b>.</li></ol>
 <div class="note">Duplicating a very short sample of noise in order to get a long enough sample for the Noise Profile will not help. Noise Reduction calculates the statistics of the noise. Examining repeated blocks of the same noise will not change the statistics. </div> 
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">The Noise Profile is not retained when you close Audacity. The next time you launch Audacity and use Noise Reduction, you have to make a new Noise Profile.
+</td></tr></table>
+</div>
 <div id="remove"></div>
 <h2><span class="mw-headline" id="Step_2_-_Reduce_the_Noise">Step 2 - Reduce the Noise</span></h2>
 <ol><li> <a href="audacity_selection.html" title="Audacity Selection">Select</a> the entire region of <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> <b>from which you want to reduce the noise</b>, then set the Noise Reduction parameters. This is often best done by trial and error, adjusting the sliders and using the Preview button to listen to a few seconds of audio after noise reduction. Listening to the <i>Residue</i> (the sound that will be filtered out when you apply "Reduce") can also be useful in determining how much damage is being done to the desired (non-noise) sound.</li>
@@ -59,6 +68,20 @@ If your problem is mains hum or a high-pitched whistle, the use of a <a href="no
 <li><b>Noise:</b>
 <ul><li><b>Reduce:</b> Select this option to filter out the noise from the selection.</li>
 <li><b>Residue:</b> Select this option to hear the sound that would be filtered out if you chose "Reduce". This is useful for finding the optimum settings that do not damage the audio. If you can hear recognizable bits of the desired sound in the residue, it is likely that you have set Noise Reduction too high or Sensitivity too high.</li></ul></li></ul></li></ol>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You may find that, for spoken word, changing from the default settings to:
+<ul><li>Noise reduction(dB) = 6</li>
+<li>Sensitivity = 6.0 <i>(default)</i></li>
+<li>Frequency smoothing (bands) = 6</li></ul>
+<p>may give a more satisfactory result.  There are many recommendations for this setting on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Audacity Forum</a>, but you will need to experiment.
+</p>
+</td></tr></table>
+</div>
 <div id="buttons"></div>
 <h2><span class="mw-headline" id="The_buttons">The buttons</span></h2>
 <p>Clicking on the command buttons give the following results:
@@ -67,7 +90,7 @@ If your problem is mains hum or a high-pitched whistle, the use of a <a href="no
 <li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
 <li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li></ul>
 <div id="artifacts"></div>
-<div class="note"><b><a href="glossary.html#artifact" title="Glossary">Artifacts</a>:</b> These typically consist of random bursts of very short tones at random frequencies, sometimes called "musical noise", "bird song" or "tinkly-bells". These may be visible in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">Spectrogram</a> view.<p> Artifacts can happen if the noise floor is higher than was estimated, either because <i>Sensitivity</i> was set too low, or because the noise Profile was not representative of the noise throughout the track.  Although most of the noise will be suppressed most of the time, random artifacts may occur, which can be even more objectionable than the original noise. For a more technical explanation of artifacts, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_Audacity_Noise_Reduction_Works#artifacts">How Audacity Noise Reduction Works</a> in the Wiki.</p>
+<div class="note"><b><a href="glossary.html#artifact" title="Glossary">Artifacts</a>:</b> These typically consist of random bursts of very short tones at random frequencies, sometimes called "musical noise", "bird song" or "tinkly-bells". These may be visible in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">Spectrogram</a> view.<p> Artifacts can happen if the noise floor is higher than was estimated, either because <i>Sensitivity</i> was set too low, or because the Noise Profile was not representative of the noise throughout the track.  Although most of the noise will be suppressed most of the time, random artifacts may occur, which can be even more objectionable than the original noise. For a more technical explanation of artifacts, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_Audacity_Noise_Reduction_Works#artifacts">How Audacity Noise Reduction Works</a> in the Wiki.</p>
 </div>
 <div id="tips"></div>
 <h2><span class="mw-headline" id="Tips">Tips</span></h2>
@@ -88,9 +111,9 @@ If your problem is mains hum or a high-pitched whistle, the use of a <a href="no
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top"><b>When using Noise Reduction in <a href="macros.html" title="Macros">Macros</a></b> the profile is captured as below.
+<td align="left" valign="top"><b>When using Noise Reduction in <a href="macros.html" title="Macros">Macros</a></b> the Noise Profile is captured as below.
 <ul><li> If a Noise Profile exists, that Noise Profile will be used. It is often best to capture a suitable Noise Profile before running a Macro.</li>
 <li> If a Noise Profile does not exist:
 <ul><li>If the Macro is applied to the current project, the current selection is used to create the Noise Profile. Therefore, other effect commands in the Macro will also only apply to that selection. If an export command is added, the entire file will be exported. </li>
@@ -101,9 +124,9 @@ If your problem is mains hum or a high-pitched whistle, the use of a <a href="no
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top"><b>Noise Reduction with cassette tapes:</b> Cassettes are slightly different from other sources in that its not uncommon for the noise profile to change through the course of the tape, due to accumulation of dirt on the tape heads, either during play or during record, or both.
+<td align="left" valign="top"><b>Noise Reduction with cassette tapes:</b> Cassettes are slightly different from other sources in that its not uncommon for the Noise Profile to change through the course of the tape, due to accumulation of dirt on the tape heads, either during play or during record, or both.
 <p>To optimise the performance of Audacity's Noise Reduction it is best to use a noise sample near the beginning of the tape rather than the end. Using a sample late in the tape will sometimes cause poorer discrimination between noise and signal, as some of the higher frequency noise will be missing or reduced in amplitude. 
 </p>
 </td></tr></table>
@@ -114,17 +137,22 @@ If your problem is mains hum or a high-pitched whistle, the use of a <a href="no
 <ul><li>For a more technical explanation of the <i><b><a href="glossary.html#algorithm" title="Glossary">algorithm</a></b></i> used in Noise Reduction, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_Audacity_Noise_Reduction_Works#algorithm">Noise Reduction algorithm</a> in the Wiki. </li>
 <li>Also see <a href="sample_workflow_for_lp_digitization.html" title="Sample workflow for LP digitization">Sample workflow for LP digitization</a> which lists some <a href="sample_workflow_for_lp_digitization.html#alternative" title="Sample workflow for LP digitization">alternative noise reduction software</a> that you can use as part of your audio restoration routine.</li></ul>
 </div>
-<h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
-<ul><li> Taking a Noise Profile in a track at one sample rate then removing noise in another track at a different rate will produce poor results and is therefore prohibited with an error "Sample rate of the noise Profile must match that of the sound to be processed".</li>
-<li> Taking a Noise Profile over two or more tracks at different sample rates is prohibited with an error "All Noise Profile data must have the same sample rate".  </li></ul>
 <p><br />
 </p>
+<div id="limitations"></div>
+<h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
+<ul><li> Taking a Noise Profile in a track at one sample rate then removing noise in another track at a different rate will produce poor results and is therefore prohibited with an error "Sample rate of the Noise Profile must match that of the sound to be processed".</li>
+<li> Taking a Noise Profile over two or more tracks at different sample rates is prohibited with an error "All Noise Profile data must have the same sample rate".</li></ul>
+<p><br />
+</p>
+<div id="alternatives"></div>
 <h2><span class="mw-headline" id="Alternative_Noise_Reduction_Techniques"><a href="alternative_noise_reduction_techniques.html" title="Alternative Noise Reduction Techniques">Alternative Noise Reduction Techniques</a></span></h2>
 <p>Please see <a href="alternative_noise_reduction_techniques.html" title="Alternative Noise Reduction Techniques">this page</a> for some additional noise reduction techniques.
 </p><p><br />
 </p>
+<div id="links"></div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
-<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a>
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
 </p>
 
@@ -203,7 +231,7 @@ If your problem is mains hum or a high-pitched whistle, the use of a <a href="no
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-04-13 - <a href="https://alphamanual.audacityteam.org/man/Noise_Reduction">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/Noise_Reduction">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
