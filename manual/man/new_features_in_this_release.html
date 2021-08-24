@@ -34,149 +34,21 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><center><a href="http://audacityteam.org/" title="size=50%" rel="nofollow"><img alt="size=50%" src="../m/images/8/88/audacity_logo_signika_512_transparent.png" width="512" height="138" /></a></center>
-<div class="intro"><span style="font-size:120%"><b>This page is an overview of prominent new functionality that has been introduced in Audacity 3.0.3 </b>
-<p><b>Version 3.0.3 is primarily a maintenance release to fix bugs and increase the stability of the Unitary Project database structure. </b></span>
+<div class="intro"><p style="font-size:120%"><b>This page is an overview of prominent new functionality that has been introduced in Audacity 3.0.4</b></p>
+<p><br />
 </p>
-<ul><li> <span style="font-size:110%">Details of all the major changes since 3.0.2 can be found in <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.0.3">Audacity Release Notes 3.0.3</a>.</span></div></li></ul>
+<p style="font-size:120%"><b>Version 3.0.4 is a hotfix release.</b></p></div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<ol><li><a href="#64bit"><b>The Windows version of Audacity is now 64-bit</b></a></li>
-<li><a href="#spectrograms"><b>New colorways for Spectrograms</b></a></li>
-<li><a href="#name"><b>Display of Track Name</b></a></li>
-<li><a href="#updates"><b>Update checking</b></a></li>
-<li><a href="#crash"><b>Automated crash and error reporting</b></a></li>
-<li><a href="#linux"><b>New official binary for Linux</b></a></li>
-<li><a href="#privacy"><b>Privacy Notice</b></a></li>
-<li><a href="#bugs"><b>Bug fixes</b></a></li>
-<li><a href="#aup"><b>Updating from Audacity 2.x to 3.x</b></a></li></ol>
-<p><br />
+<p>Fixed a bug with envelope points, which could multiply uncontrollably and cause Audacity to crash. In particular:
 </p>
-<div id="64bit"></div>
-<h2><span class="mw-headline" id="The_Windows_version_of_Audacity_is_now_64-bit">The Windows version of Audacity is now 64-bit</span></h2>
-<p>For the first time, Audacity will now install as a 64-bit application on Windows devices. Due to this change, some processes and effects (e.g. certain sound generation processes &amp; sliding stretch) will run much faster.
+<ul><li> <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/1476">#1476</a>: Envelope points are multiplied when using Filter Curve EQ or Graphic EQ</li>
+<li> <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/1477">#1477</a>: Filter Curve EQ will crash if there is an envelope point outside of the selection</li></ul>
+<div class="thumb tleft"><div class="thumbinner" style="width:928px;"><img alt="" src="../m/images/e/e9/3.0.4_hotfix.png" width="926" height="707" class="thumbimage" />  <div class="thumbcaption">Example of the bug. It now is fixed.</div></div></div>
+<p><br style="clear:both;" />
 </p>
-<div class="note"><span style="font-weight: bold; font-size:118%">64-bit FFmpeg library:</span><p>
-If you are a user of previous Audacity versions on Windows and had installed the optional FFmpeg library then you <i><b>must</b></i> now install the 64-bit versions of the FFmpeg library, otherwise your imports and exports that depend upon FFmpeg will no longer work.  See <b><a href="installing_ffmpeg_for_windows.html" title="Installing FFmpeg for Windows">Installing FFmpeg for Windows</a></b> for installation details.</p><p>Installing the 64-bit FFmpeg library will not overwrite or delete your 32-bit FFmpeg library if you have one installed.</p>  </div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
-</td>
-<td align="left" valign="top">As Audacity is now a 64-bit application, 32-bit plug-ins will <i><b>not work</b></i> on Audacity 3.0.3 or later.
-</td></tr></table></div>
-<p><br />
-</p>
-<div id="spectrograms"></div>
-<h2><span class="mw-headline" id="New_colorways_for_Spectrograms">New colorways for Spectrograms</span></h2>
-<p>A new colorway has been introduced on Audacity 3.0.3 for Spectrograms.
-</p><p>The image below shows a sample track in Spectrogram view with a spectral selection:
-</p>
-<dl><dd><span title="Sample Spectrogram view in the new default colorway including a spectral selection"><img alt="Sample spectrogram view for what&#39;s new in 3-0-3.png" src="../m/images/2/27/sample_spectrogram_view_for_what_s_new_in_3_0_3.png" width="744" height="278" /></span></dd></dl>
-<p>This is now the new default colorway for Spectrograms in Audacity.  
-</p>
-<h3><span class="mw-headline" id="Classic_colorway">Classic colorway</span></h3>
-<p>If you wish to revert to the former colorway just go to <span class="menu">Edit &gt; Preferences</span> and choose the <b>Spectrograms</b> tab and from there in the <b>Scheme</b> dropdown menu select <b>Color (classic)</b>.
-</p>
-<dl><dd><span title="Spectrogram settings with Scheme dropdown with Classic selected"><img alt="Spectrogram settings with Scheme dropdown.png" src="../m/images/6/62/spectrogram_settings_with_scheme_dropdown.png" width="670" height="338" /></span></dd></dl>
-<h3><span class="mw-headline" id="Additional_grayscale">Additional grayscale</span></h3>
-<p>In addition to the <b>Grayscale</b> which was available as a choice for Spectrogram displays in earlier versions of Audacity there is now also an <b>Inverse grayscale</b>.  
-</p><p>This too can be selected from the <b>Scheme</b> field in Spectrograms Preferences.
-</p><p><br />
-</p>
-<div id="name"></div>
-<h2><span class="mw-headline" id="Display_of_Track_Name">Display of Track Name</span></h2>
-<p>A new command has been added to the <a href="view_menu.html" title="View Menu">View</a> menu, <span class="menu">View &gt; Track Name (on / off)</span>.
-</p><p>When this is enabled the audio track name is displayed superimposed translucently at top left of all audio tracks. 
-</p><p>Note that the track name is always shown in the Track Control Panel but will be truncated if the name is too long to fit. 
-</p>
-<dl><dd><span title="Tracks with extended track names overlaid on the tracks"><img alt="View Menu Show Track Name.png" src="../m/images/d/d0/view_menu_show_track_name.png" width="624" height="188" /></span></dd></dl>
-<p>This has the same effect as the setting for <b>Show track name as overlay</b> in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>.
-</p><p><br />
-</p>
-<div id="updates"></div>
-<h2><span class="mw-headline" id="Update_checking">Update checking</span></h2>
-<p>Audacity will now check for updates to see if a new update of Audacity is available.  This is done on launch and then after every 12 hours while Audacity remains open.
-</p><p>The first time that you launch Audacity 3.0.3 you will see this dialog:
-</p>
-<dl><dd><span title="App update checking dialog"><img alt="Update checking dialog.png" src="../m/images/5/5b/update_checking_dialog.png" width="566" height="277" /></span></dd></dl>
-<p>The dialog has a direct link to <b>Application Preferences</b> enabling you to turn update checking "<b>off</b>" in order to <a href="#optout">opt-out</a> of update checking.
-</p><p>This is <i><b>not</b></i> an automatic update, update does not happen without you choosing to do so from the update checking dialog that appears when a new update is available.
-</p><p>This has long been one of the most-requested feature requests submitted by users to Audacity and it has finally been implemented.
-</p><p><br />
-</p>
-<div id="optout"></div>
-<h3><span class="mw-headline" id="Opt-out">Opt-out</span></h3>
-<p>You can opt-out of update checking by using a new preference in <b><a href="application_preferences.html" title="Application Preferences">Application Preferences</a></b> where you can turn this "<b>off</b>" or "<b>on</b>" at any time, the default setting is "<b>on</b>".
-</p>
-<dl><dd><span title="Application preferences with default on setting for Update checking"><img alt="Preferences Application - trimmed.png" src="../m/images/0/0c/preferences_application_trimmed.png" width="669" height="136" /></span></dd></dl>
-<p><br />
-</p>
-<div class="note">The setting you make in <a href="application_preferences.html" title="Application Preferences">Application Preferences</a> for update checking is <i><b>not</b></i> changed  by <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a>.
-<ul><li>But if you manually reset by deleting the audacity.cfg file in your Audacity settings folder this will get reset to "on" on next launch of Audacity.</li>
-<li>You will also get shown the update checking dialog again. </div> </li></ul>
-<p><br />
-</p>
-<div id="crash"></div>
-<h2><span class="mw-headline" id="Automated_crash_and_error_reporting">Automated crash and error reporting</span></h2>
-<p>Now if and when Audacity crashes, or produces an  error, there will be a dialog to enable you to optionally send error and crash reports back to the developers and Quality Assurance.
-</p>
-<dl><dd><span title="Sample error message dialog with the Send and Don&#39;t send buttons"><img alt="Phone-home error message.png" src="../m/images/1/13/phone_home_error_message.png" width="584" height="551" /></span></dd></dl>
-<div class="note">Not all error messages have the ability to automatically send back information to the developers and Quality Assurance. </div>
-<p><br />
-</p>
-<div id="linux"></div>
-<h2><span class="mw-headline" id="New_official_binary_for_Linux">New official binary for Linux</span></h2>
-<p>We now provide an official binary for Linux in the form of an AppImage.
-</p><p><br />
-</p>
-<div id="privacy"></div>
-<h2><span class="mw-headline" id="Privacy_Notice"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/about/desktop-privacy-notice/">Privacy Notice</a></span></h2>
-<p>With the release of 3.0.3 Audacity has released the following <a rel="nofollow" class="external text" href="https://www.audacityteam.org/about/desktop-privacy-notice/"><span title="This Privacy Notice explains how we collect and use any information that, alone or in combination with other information, relates to you."><b>Privacy Notice</b></span></a>.
-</p>
-<ul><li>The Privacy Notice explains how Audacity collects and uses any information that, alone or in combination with other information, relates to you when you use the desktop application Audacity. We collect very limited Personal Data about you.</li>
-<li>The Notice also sets out the rights that you have in relation to the Personal Data that we process about you and how you can exercise them.</li></ul>
-<p><br />
-</p>
-<div id="bugs"></div>
-<h2><span class="mw-headline" id="Bug_fixes">Bug fixes</span></h2>
-<p>In addition to the fixed bugs shown here, several changes have been made to increase the stability of the Unitary Project database structure.
-</p>
-<h3><span class="mw-headline" id="P1_Bugs">P1 Bugs</span></h3>
-<ul><li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2754">2754</a> - Change Tempo &amp; Pitch and Sliding Stretch with selected audio in negative time crash Audacity on windows (error on Mac)</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2772">2772</a> - Audacity crashes after failing to open corrupt project</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2793">2793</a> - AUP3 projects fail to compact if project's path contains a single-quote</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2803">2803</a> - Audacity unresponsive after 'Fit to Height'</li>
-<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2805">2805</a> - Audacity fails to export metadata with MP3 files</li></ul>
-<h3><span class="mw-headline" id="P2_Bugs">P2 Bugs</span></h3>
-<ul><li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2339">2339</a> - On second run of Audacity "Filter Curve EQ" gets changed to "Filter Curve..." in the Effect menu</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2700">2700</a> - "Failed to open the project database"</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2732">2732</a> - Faux recovery offered on launch (very moonphase)</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2738">2738</a> - Audacity crashes with Macros on files when the macro-output folder is in an unwriteable location</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2739">2739</a> - If Temporary files directory is set to be unwritable then Audacity has a catalog of cryptic unhelpful errors</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2758">2758</a> - Linux: No support for Jack Audio System</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2741">2741</a> - Msgctxt feature of translation not working</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2743">2743</a> - The first use of the "window" command in LOF files is ignored by Audacity</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2747">2747</a> - The Macros output directory is in the top section in audacity.cfg</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2764">2764</a> - Open Project... under ScriptablesII can corrupt a project</li>
-<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2800">2800</a> - Audio and MIDI files cannot be opened from FAT/FAT32 drives</li></ul>
-<h3><span class="mw-headline" id="P3_Bugs">P3 Bugs</span></h3>
-<ul><li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2671">2671</a> - ENH: "Show track name as overlay" cannot be turned on from main menus</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2778">2778</a> - In German in the Erzeugen menu (Generator menu) "Silence..." is untranslated</li>
-<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2807">2807</a> - Error message for a failed import of malforned MP3 lacks a "?" help button</li></ul>
-<h3><span class="mw-headline" id="P4_Bugs">P4 Bugs</span></h3>
-<ul><li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1309">1309</a> - Paste with sync-lock can give error message but still do something</li>
-<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1406">1406</a> - Undoing envelope points by shortcut with mouse down creates spurious undo entries</li>
-<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2466">2466</a> - Linux: Filter Curve EQ GUI far too wide</li>
-<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2759">2759</a> - Failed Macro command leaves empty undo item in history</li>
-<li>P4 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2809">2809</a> - Label Sounds fails when track sample rate is 22050 Hz</li></ul>
-<h3><span class="mw-headline" id="P5_Bugs">P5 Bugs</span></h3>
-<ul><li>P5 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1091">1091</a> -  Spectral Edit effects may have unpredictable results</li></ul>
-<p><br />
-</p>
-<div id="aup"></div>
 <h2><span class="mw-headline" id="Updating_from_Audacity_2.x_to_Audacity_3.x"><a href="updating_from_audacity_2.x_to_audacity_3.html" title="Updating from Audacity 2.x to Audacity 3.x">Updating from Audacity 2.x to Audacity 3.x</a></span></h2>
 <p>With the release of Audacity 3.0.0 the project file structure of Audacity was changed significantly with the entire project contained in a single unified database file.
-</p><p>If you have already updated to 3.0.0 or 3.0.2 you should already be aware of this.
+</p><p>If you have already updated to any 3.x version you should already be aware of this.
 </p><p>But if you are updating from any earlier 2.x Audacity version please read <b><a href="updating_from_audacity_2.x_to_audacity_3.html" title="Updating from Audacity 2.x to Audacity 3.x">Updating from Audacity 2.x to Audacity 3.x</a></b>.
 </p>
 <div class="note"><span style="font-weight: bold; font-size:118%"><a href="audacity_2.html" title="Audacity 2.x AUP Projects">Older Projects</a>:</span>
@@ -184,13 +56,7 @@ If you are a user of previous Audacity versions on Windows and had installed the
 </p>
 <ul><li>Note that this will leave behind the old <b>AUP</b> file and its associated <b>_data</b> folder which you will probably want to delete to recover disk space.</li>
 <li>Audacity version 3.x should be able to open projects from Audacity 1.1 onwards - but not from 1.0</div></li></ul>
-<p><br />
-</p>
-<div id="appendix"></div>
 
-<h2><span class="mw-headline" id="Links">Links</span></h2>
-<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.0.3"><b>&gt;</b> Audacity Release Notes 3.0.3</a> <i>- detailed release notes for this release of Audacity</i>
-</p>
 
 
 
@@ -267,7 +133,7 @@ If you are a user of previous Audacity versions on Windows and had installed the
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-07-23 - <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-08-24 - <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
