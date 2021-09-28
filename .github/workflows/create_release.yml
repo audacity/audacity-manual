@@ -1,0 +1,30 @@
+name: Create Audacity Manual Release
+
+on:
+   workflow_dispatch:
+      inputs:
+         version:
+            description: 'Version'
+            required: true
+            default: 3.0.5
+
+jobs:
+   build:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Package
+        run: |
+         echo "Building audacity-manual-${{ inputs.version }}.tar.gz"
+         mkdir -p help
+         cp -R manual help/
+         tar czf audacity-manual-${{ inputs.version }}.tar.gz help
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+            body: 'Audacity manual for version ${{ inputs.version }}'
+            tag_name: v${{ inputs.version }}
+            files: *.tar.gz
