@@ -1,0 +1,36 @@
+name: Update Audacity Manual
+
+on:
+   workflow_dispatch:
+
+jobs:
+   update:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Donwload
+        run: |
+         pushd scripts/mw2html_audacity
+
+         python3 mw2html.py -s https://alphamanual.audacityteam.org/man ./
+
+         popd
+
+         rm -R manual
+         mkdir manual
+
+         cp -R scripts/mw2html_audacity/alphamanual.audacityteam.org/* manual/
+
+         rm -R scripts/mw2html_audacity/alphamanual.audacityteam.org
+      - name: Push
+        run: |
+         git config --global user.name 'Github Worflow'
+         git config --global user.email 'audacity-manual@users.noreply.github.com'
+
+         git status
+         git add *
+
+         git commit -m "Manual update $(date +%Y-%m-%d-%H-%M-%S)"
+         git push
