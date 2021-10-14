@@ -62,17 +62,21 @@
 </p>
 <div id="asio_support"></div>
 <h2><span class="mw-headline" id="Non-distributable_ASIO_support_in_Audacity">Non-distributable ASIO support in Audacity</span></h2>
+
 <p>Audacity provides ASIO support on Windows for individuals who are prepared to compile Audacity from source code using the optional Steinberg ASIO SDK. 
-</p><p>ASIO support is provided strictly on the basis that it is <b>NON-DISTRIBUTABLE</b>, that is, you may <b>NOT</b> copy or distribute builds including ASIO support to anyone else. The build is strictly for your own personal (private or commercial) use. For the same reasons, Audacity can <b>NOT</b> distribute builds of Audacity including ASIO support, so please do <i><b>not</b></i> ask!   
-</p><p>The following is an overview of compiling Audacity from source code including ASIO support.
+</p><p>ASIO support is provided strictly on the basis that it is <b>NON-DISTRIBUTABLE</b>, that is, you may <b>NOT</b> copy or distribute builds including ASIO support to anyone else. The build is strictly for your own personal (private or commercial) use. For the same reasons, <b>the Audacity team cannot distribute builds of Audacity including ASIO support</b>.   
+</p><p>The following is an overview of compiling Audacity from source code including ASIO support. Follow the instructions in the <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/blob/master/BUILDING.md">BUILDING.md</a> for more detailled steps.
 </p>
-<ol><li> Install the free Microsoft Visual Studio Community Edition <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Integrated_development_environment">Integrated Development Environment</a> (IDE). </li>
+<ol><li> Download and install the free <a rel="nofollow" class="external text" href="https://visualstudio.microsoft.com/vs/">Microsoft Visual Studio Community Edition</a>.</li>
+<li> Download and install <a rel="nofollow" class="external text" href="https://cmake.org/download/">CMake</a> and <a rel="nofollow" class="external text" href="https://www.python.org/downloads/windows/">Python</a>.</li>
+<li> Install conan via <code>py -m pip install conan</code>.</li>
 <li> Download and install the <a rel="nofollow" class="external text" href="https://www.steinberg.net/en/company/developers.html">ASIO SDK</a> from Steinberg.</li>
-<li> Download the source code of the latest Audacity release from <a rel="nofollow" class="external free" href="https://github.com/audacity/audacity/releases">https://github.com/audacity/audacity/releases</a>. Follow the steps in win/compile.txt in the source code to:
-<ol><li> Download and install the wxWidgets GUI toolkit then build wxWidgets using Visual Studio.</li>
-<li> Set the WXWIN <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Environment_variable">environment variable</a> to the directory where you installed Widgets and set the ASIOSDK_DIR environment variable to the directory where you installed the ASIO SDK. Reboot the computer.</li>
-<li> Build Audacity using Visual Studio.   </li></ol></li></ol>
-<p><b>Follow the instructions and download links on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Developing_On_Windows">Developing On Windows</a> in the Audacity Wiki for full details.</b> 
+<li> Download the source code of the latest Audacity release from <a rel="nofollow" class="external free" href="https://github.com/audacity/audacity/releases">https://github.com/audacity/audacity/releases</a>. </li>
+<li> In CMake,
+<ol><li> Set the ASIOSDK_DIR <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Environment_variable">environment variable</a> to the directory where you installed the ASIO SDK. Reboot the computer.</li>
+<li> Configure, then Generate, then Open Project</li></ol></li>
+<li> Build Audacity using Visual Studio.   </li></ol>
+<p><br />
 </p>
 <div class="note">If you need help, please ask on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=19">Compiling Audacity</a> board on the Audacity <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a>.</div>
 
@@ -152,7 +156,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-08-24 - <a href="https://alphamanual.audacityteam.org/man/ASIO_Audio_Interface">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-10-14 - <a href="https://alphamanual.audacityteam.org/man/ASIO_Audio_Interface">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

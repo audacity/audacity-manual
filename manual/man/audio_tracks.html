@@ -44,24 +44,25 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <ol><li><a href="#about">About Tracks</a></li>
 <li><a href="#stereo">Stereo Audio Track</a></li>
 <li><a href="#single">Single Audio Track (Mono, Left or Right)</a></li>
+<li><a href="#clips">Clips</a></li>
 <li><a href="#panel">Track Control Panel</a></li>
 <li><a href="#scale">Vertical Scale</a></li>
 <li><a href="#name">Show audio track name as overlay</a></li>
-<li><a href="#colors">Waveform colorways</a></li>
 <li><a href="#split">Splitting and Joining Tracks</a></li>
 <li><a href="#display">Changing the track display</a></li>
 <li><a href="#focus">Track focus</a></li>
 <li><a href="#working">Working with Audio Tracks</a></li></ol>
 <div id="about"></div>
 <h2><span class="mw-headline" id="About_Tracks">About Tracks</span></h2>
-<p>A track is like one instrument in your symphony, or one voice in your podcast. You can add more tracks, and all of them will be <a href="mixing.html" title="Mixing">mixed</a> together to create your final output, but during editing you can manipulate each track independently. If you have an interview recorded with two microphones, each one can go in a separate track. If you have background music, that could go in a third track. You can move the whole track along the <a href="timeline.html" title="Timeline">Timeline</a> so that it plays at a different point in time in the mix, but until it is <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">split into clips</a> you cannot move individual parts of it around. 
+<p>A <b>track</b> is like one instrument in your symphony, or one voice in your podcast. You can add more tracks, and all of them will be <a href="mixing.html" title="Mixing">mixed</a> together to create your final output, but during editing you can manipulate each track independently. If you have an interview recorded with two microphones, each one can go in a separate track. If you have background music, that could go in a third track. 
+</p><p>On each track, you can have several <b>clips</b>. A clip is a piece of continuous audio, for example a recording or a background song. Clips can be moved along the <a href="timeline.html" title="Timeline">Timeline</a> so that they play at a different point in time in the mix, as well dragged between tracks. 
 </p><p><br />
 </p>
 <div id="stereo"></div>
 <h2><span class="mw-headline" id="Stereo_Audio_Track">Stereo Audio Track</span></h2>
 <p>The image below shows the separate components of an Audacity stereo track: the Track Control Panel with <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>, the Vertical Scale and the Waveform Display itself, typical of a finally edited recording. As per convention, the upper waveform and vertical scale represent the left channel and the lower waveform and vertical scale represent the right channel. The dark blue part of the waveform displays the tallest peak and the light blue part of the waveform displays the average <i><b><a href="glossary.html#rms" title="Glossary">RMS</a></b></i> (Root Mean Square) value of the audio, see <a href="audacity_waveform.html#colors" title="Audacity Waveform">The waveform colors</a> for more detail.
 </p>
-<dl><dd><span title="Stereo track with Track Control Panel, vertical scale and left channel above right channel"><img alt="Stereo waveform annotated.png" src="../m/images/c/c1/stereo_waveform_annotated.png" width="600" height="311" /></span></dd></dl>
+<dl><dd><span title="Stereo track with Track Control Panel, vertical scale and left channel above right channel"><img alt="Stereo waveform annotated.png" src="../m/images/c/c1/stereo_waveform_annotated.png" width="600" height="349" /></span></dd></dl>
 <div class="note">See <a href="audacity_waveform.html" title="Audacity Waveform">Audacity Waveform</a> for further details of the Waveform and alternative <a href="audacity_waveform.html#db" title="Audacity Waveform">Waveform (dB)</a> View Mode (chosen using the Track Dropdown Menu). <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">Spectrogram</a> views can be chosen from the same menu.
 <ul><li> To change the default View Mode that all tracks show when created, use <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>.</div> </li></ul>
 <p>In a stereo track, all editing actions on the track are applied identically to both channels, though some <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers">effects</a> may treat each channel differently. For exaample, <span class="menu">Effect &gt; <a href="effect_menu.html#amplify" title="Effect Menu">Amplify...</a></span> and by default <span class="menu">Effect&#160;&gt;&#160;<a href="effect_menu.html#normalize" title="Effect Menu">Normalize...</a></span> set the peak <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> of only the loudest channel then apply the same <i>change</i> in amplitude to the other channel, preserving the balance between channels. Normalize has an option to normalize left and right channels independently to the same amplitude if this is required. See <a href="amplify_and_normalize.html" title="Amplify and Normalize">Amplify and Normalize</a> for more details.
@@ -71,7 +72,18 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <h2><span class="mw-headline" id="Single_Audio_Track_.28Mono.2C_Left_or_Right.29">Single Audio Track (Mono, Left or Right)</span></h2>
 <p>A single audio track has the same components as a stereo track with a single waveform and one vertical scale rather than two. This can be easily seen if using "Split Stereo Track" in the Track Dropdown Menu to split the stereo track into two single tracks. The same menu can make single tracks mono, left or right. Each single track can be separately <a href="audacity_selection.html" title="Audacity Selection">selected</a> and thus edited independently from other tracks.
 </p>
-<dl><dd><span title="Mono Track"><img alt="Mono track example.png" src="../m/images/f/f9/mono_track_example.png" width="698" height="189" /></span></dd></dl>
+<dl><dd><span title="Mono Track"><img alt="Mono track example.png" src="../m/images/f/f9/mono_track_example.png" width="848" height="207" /></span></dd></dl>
+<p><br />
+</p>
+<div id="clips"></div>
+<h2><span class="mw-headline" id="Clips">Clips</span></h2>
+<dl><dd><table>
+
+<tr valign="top">
+<td><span title="Clip details"><img alt="Clip handle detail.png" src="../m/images/b/b8/clip_handle_detail.png" width="168" height="97" /></span>
+</td>
+<td>Clips live within tracks. You can recognize where a clip starts and ends by the rounded top corners. The clip handle bar includes the clip name, the clip body includes the waveform. You can move the clip around by its handle, and right-click it to access more options. More detailled information on clips can be found in the <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips"><b>Audio Tracks and Clips</b></a> page.
+</td></tr></table></dd></dl>
 <p><br />
 </p>
 <div id="panel"></div>
@@ -87,6 +99,8 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <ul><li> <b>keyboard:</b> use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to give the track <a href="#focus">focus</a>, then <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to select it; hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> then use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to extend selection into another track. Read <a href="audacity_selection.html#keyboard" title="Audacity Selection">keyboard selection</a> for more.    </li></ul></li>
 <li> Click-and-drag moves this track up or down when there are other tracks (<b>keyboard:</b> choose one of the "Move Track" commands in <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>, opened by <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> on the currently focused track ).</div></li></ul>
 </td></tr></table></dd></dl>
+<p><br />
+</p>
 <div id="controls"></div>
 <h3><span class="mw-headline" id="Controls">Controls</span></h3>
 <div id="close"></div>
@@ -96,7 +110,7 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <div id="track_menu"></div>
 <p><span style="font-weight: bold; font-size:118%">Audio Track Dropdown Menu:</span>
 </p>
-<dl><dd><span title="Track Name"><img alt="Track dropdown.png" src="../m/images/2/2e/track_dropdown.png" width="77" height="18" /></span> Clicking the track name or using <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> on the currently <a href="#focus">focused track</a> opens the <b><a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a></b> giving options that affect this track only.  Newly created tracks are named "Audio Track".  Options in the dropdown menu include changing the name or <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>, how the track is displayed, splitting a stereo track to single left, right or mono tracks and swapping stereo channels.</dd></dl>
+<dl><dd><span title="Track Name"><img alt="Track dropdown.png" src="../m/images/2/2e/track_dropdown.png" width="77" height="18" /></span> Clicking the track name or using <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> on the currently <a href="#focus">focused track</a> opens the <b><a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a></b> giving options that affect this track only.  Newly created tracks are named "Audio Track".  Options in the dropdown menu include changing the name or <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>, how the track is displayed, splitting a stereo track to single left, right or mono tracks, swapping stereo channels and <a href="audacity_tracks_and_clips.html#color" title="Audacity Tracks and Clips">changing track color</a>.</dd></dl>
 <div id="mute"></div>
 <p><span style="font-weight: bold; font-size:118%">Mute Button:</span>
 </p>
@@ -169,15 +183,7 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 </p><p>When this is enabled the audio track name is displayed superimposed translucently <i>(thus enabling the waveform to also be visible)</i> at top left of all audio tracks. 
 </p><p>The track name is always shown in the <a href="#panel" title="Audio Tracks">Track Control Panel</a> but will be truncated if the name is too long to fit. 
 </p>
-<dl><dd><span title="Waveform with superimposed track name"><img alt="Audio Track with track name superimposed translucent.png" src="../m/images/0/09/audio_track_with_track_name_superimposed_translucent.png" width="814" height="215" /></span></dd></dl>
-<p><br />
-</p>
-<div id="colors"></div>
-<h2><span class="mw-headline" id="Waveform_colorways">Waveform colorways</span></h2>
-<p>You can optionally change the colorway of the waveforms displayed in your project.  The setting is per track and not per project so you can have multiple colorways in the same project as in the image below. 
-</p><p>Four colorways are available with the color selection made from the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">dropdown menu</a> in the track's <a href="track_control_panel_and_vertical_scale.html" title="Track Control Panel and Vertical Scale">Track Control Panel</a>.
-</p>
-<dl><dd><span title="The four colorways available for Waveform displays"><img alt="Waveform colorways 2-3-2 translucent.png" src="../m/images/8/8b/waveform_colorways_2_3_2_translucent.png" width="763" height="341" /></span></dd></dl>
+<dl><dd><span title="Waveform with superimposed track name"><img alt="Audio Track with track name superimposed translucent.png" src="../m/images/0/09/audio_track_with_track_name_superimposed_translucent.png" width="907" height="154" /></span></dd></dl>
 <p><br />
 </p>
 <div id="split"></div>
@@ -226,13 +232,13 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <h3><span class="mw-headline" id="Waveform_.28dB.29_view">Waveform (dB) view</span></h3>
 <p>The waveform view can be switched to a <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i>   view by right-clicking on the track's <a href="#scale" title="Audio Tracks"><b>Vertical Scale</b></a> and selecting "<b>dB</b>" from the dropdown context menu.
 </p>
-<dl><dd><span title="Image of a waveform displayed in dB"><img alt="TrackExampleDB.png" src="../m/images/1/1f/trackexampledb.png" width="479" height="200" /></span></dd></dl>
+<dl><dd><span title="Image of a waveform displayed in dB"><img alt="TrackExampleDB.png" src="../m/images/1/1f/trackexampledb.png" width="553" height="297" /></span></dd></dl>
 <p>This view shows, more clearly than simple waveform view, that the recording has been made loud enough and fills the display nicely.
 </p>
 <h3><span class="mw-headline" id="Multi-view_-_Waveform_and_Spectrogram">Multi-view - Waveform and Spectrogram</span></h3>
 <p>It is also possible to work with a Waveform view and a <a href="spectrogram_view.html" title="Spectrogram View"><b>Spectrogram view</b></a> in the same track.
 </p>
-<dl><dd><span title="A split waveform and spectrogram view of a mono track- 50:50 default proportions"><img alt="Multi-view mono default 50-50.png" src="../m/images/b/b7/multi_view_mono_default_50_50.png" width="725" height="263" /></span></dd>
+<dl><dd><span title="A split waveform and spectrogram view of a mono track- 50:50 default proportions"><img alt="Multi-view mono default 50-50.png" src="../m/images/b/b7/multi_view_mono_default_50_50.png" width="510" height="211" /></span></dd>
 <dd><b>Example of a mono audio track with a Multi-view split 50:50 Waveform/Spectrogram</b></dd></dl>
 <p>To get a split Multi-view for a track select <b>Multi-view</b> from the track's <a href="#panel" title="Audio Tracks"><b> Track Control Panel</b></a> dropdown menu.
 </p><p>For details see <b><a href="multi_view.html" title="Multi-view">Multi-view</a></b>
@@ -259,8 +265,8 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <h2><span class="mw-headline" id="Working_with_Audio_Tracks">Working with Audio Tracks</span></h2>
 <p>For more information on working with audio tracks, see:
 </p>
-<ul><li> <a href="audacity_selection.html" title="Audacity Selection">Selecting Audio</a>: the special characteristics of audio selection and the tools Audacity provides to help you make exactly the selection you need</li>
-<li> <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audacity Tracks and Clips</a>: all about <b>clips</b> - separate, movable regions of audio within a track</li>
+<ul><li> <b><a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audacity Tracks and Clips</a></b>: More detailled information on clips, tracks, and their interactions.</li>
+<li> <a href="audacity_selection.html" title="Audacity Selection">Selecting Audio</a>: the special characteristics of audio selection and the tools Audacity provides to help you make exactly the selection you need</li>
 <li> <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Locked Track Groups</a>: keeping a group of tracks synchronized</li>
 <li> <a href="zooming.html" title="Zooming">Zooming</a>: seeing what you need to see</li></ul>
 <p><br />
@@ -347,7 +353,7 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-08-24 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-10-14 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
