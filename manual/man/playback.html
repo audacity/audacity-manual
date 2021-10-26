@@ -50,12 +50,10 @@
 </p>
 <div id="play"></div>
 <h2><span class="mw-headline" id="Play_button">Play button</span></h2>
-
 <p>The easiest way to control Audacity playback is with <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a>: 
 </p>
-<dl><dd><span title="Transport Toolbar button layout"><img alt="Annotated Transport Toolbar.png" src="../m/images/2/2c/annotated_transport_toolbar.png" width="329" height="85" /></span></dd></dl>
+<dl><dd><span title="Transport Toolbar button layout"><img alt="Annotated Transport Toolbar.png" src="../m/images/2/2c/annotated_transport_toolbar.png" width="386" height="89" /></span></dd></dl>
 <dl><dd><img alt="The Play button" src="../m/images/9/90/play.png" title="The Play button" width="16" height="16" /> Clicking <b>Play</b> plays from the cursor point to the end of the project, or from the start of the <a href="audacity_selection.html" title="Audacity Selection">selection region</a> to the end of that region. </dd></dl>
-<dl><dd><dl><dd><img alt="The Loop Play button" src="../m/images/7/7e/loop_play.png" title="The Loop Play button" width="16" height="16" /> The alternative <b> Loop Play</b> action for the Play button is activated by holding  <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking Play. The button changes to display two circular green arrows to indicate <b>Loop Play</b>. </dd></dl></dd></dl>
 <dl><dd><dl><dd><img alt="The Play Cut Preview button" src="../m/images/5/55/play_cut_preview.png" title="The Play Cut Preview button" width="15" height="15" /> <b>Play Cut Preview</b> will play audio either side of a selection to preview what deleting the selection will sound like. Hold down <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> <i>(<span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> while clicking <b>Play</b>. </dd>
 <dd>Alternatively you can use the <span class="kbrd" style="background-color: #d0d0f8">C</span> shortcut to preview the cut. This also causes the Play button image to change to Play Cut Preview.</dd></dl></dd></dl>
 <div class="note">Clicking <b>Play</b> when the track is already playing or paused is a quick way to restart playback without first pressing <b>Stop</b>.</div> 
@@ -64,26 +62,16 @@
 <dl><dd>The shortcut <span class="kbrd" style="background-color: #d0d0f8">Space</span> can be used to either play or stop. After stopping, playback resumes from its last starting point. </dd>
 <dd>Alternatively, use <span class="kbrd" style="background-color: #d0d0f8">X</span> or <span class="menu">Transport &gt; Playing &gt; <a href="transport_menu_playing.html#playstop_and_set_cursor" title="Transport Menu: Playing">Play/Stop and Set Cursor</a></span> to stop playback and set the cursor there. Playback will resume from the stop point on pressing <b>Play</b>. </dd></dl></dd></dl>
 <div class="note">To change the starting point to anywhere you like, click in the track at your desired starting point, then use <span class="kbrd" style="background-color: #d0d0f8">Space</span> to play from there. </div>
+<dl><dd><dl><dd>Click <b>Loop</b> to toggle playback looping on. While it's turned on, the looping region will be played over and over when you press play.</dd></dl></dd></dl>
 <div id="regions"></div>
-<h2><span class="mw-headline" id="Playback_Regions.2C_Quick-Play_Regions_and_Play_Regions">Playback Regions, Quick-Play Regions and Play Regions</span></h2>
-
-<p>The standard <i>playback region</i> associated with a shaded <a href="audacity_selection.html" title="Audacity Selection">selection region</a> in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> is indicated in the <a href="timeline.html" title="Timeline">Timeline</a> by a thin horizontal gray bar with arrowheads on each end. For example in the image below, a region from 9 to 31 seconds.has been drawn in the waveform, and the matching arrowed region in the Timeline also extends from 9 to 31 seconds. This region will always play once when you press <span class="kbrd" style="background-color: #d0d0f8">Space</span> or a Play button. 
-</p>
-<dl><dd><span title="Timeline with a region of audio selected, matching the playback region (Mac image)"><img alt="Timeline05.png" src="../m/images/9/93/timeline05.png" width="377" height="28" /></span></dd></dl>
+<h2><span class="mw-headline" id="Playback_Regions_and_Looping_Regions">Playback Regions and Looping Regions</span></h2>
 <p>If there is only an editing cursor in the waveform, playback always starts from that cursor position and continues until the end of the project (unless you stop playback).
 </p><p>Whenever audio is played, a green downward-pointing triangle shows the current audio playback position. In the image below, playback starts at 9 seconds at the position of the editing cursor (represented in the Timeline by a black vertical line with left-pointing arrowhead). Playback had reached 14 seconds when the image was taken.
 </p>
 <dl><dd><span title="Timeline showing standard playback from the editing cursor (Mac image"><img alt="Timeline01.png" src="../m/images/0/0b/timeline01.png" width="377" height="30" /></span></dd></dl>
-<p>There may be times when you want to move around to hear arbitrary parts of the audio while still retaining the position of the editing cursor or region in the waveform. <a href="timeline.html#quick-play-region" title="Timeline">Quick-Play</a> lets you drag in the Timeline to play that region immediately (or lets you click to start playback at that point immediately), <b>without moving the waveform region or cursor</b> and <b>without having to stop and restart playback</b>. 
+<p>There may be times when you want to move around to hear arbitrary parts of the audio while still retaining the position of the editing cursor or region in the waveform. Click and drag in the timeline to set a loop region <b>without moving the waveform region or cursor</b> and <b>without having to stop and restart playback</b>. 
 </p>
-<div class="note">Quick-Play does <i><b>not</b></i> operate when Audacity is recording. </div>
-<p>In the image below we dragged a Quick-Play region to play from 13 to 37 seconds. That region is indicated in the Timeline by a thick horizontal gray bar with arrowheads on each end, and playback was at 19 seconds when the image was taken.  
-</p>
-<dl><dd><span title="Timeline during Quick-Play after a click and drag in the Timeline (Mac image)"><img alt="Timeline04.png" src="../m/images/2/2e/timeline04.png" width="376" height="29" /></span></dd></dl>
-<p>If you hear some important audio during Quick-Play you can move the waveform region or cursor to that point without affecting Quick-Play playback, but this still allows you to restart standard playback from the important spot. 
-</p><p>On occasion you may <i>always</i> want to play the exact same region, even if the region or cursor in the waveform is elsewhere. You can use <span class="menu">Transport &gt; Play Region &gt; <a href="transport_menu_play_region.html#lock" title="Transport Menu: Play Region">Lock</a></span> to lock playback to the current playback region (or to the current position of the Quick-Play region). The locked region is indicated in the Timeline by a  thick horizontal red bar with arrowheads on each end. In the image below, playback will always occur from 13 to 28 seconds until <span class="menu">Transport &gt; Play Region &gt; <a href="transport_menu_play_region.html#unlock" title="Transport Menu: Play Region">Unlock</a></span> is used to release the Play Region.
-</p>
-<dl><dd><span title="Timeline showing a locked Play Region (Mac image)"><img alt="Timeline06.png" src="../m/images/7/79/timeline06.png" width="382" height="29" /></span></dd></dl>
+<dl><dd><img alt="A looping region" src="../m/images/9/93/timeline05.png" title="A looping region" width="317" height="30" /></dd></dl>
 <div id="skip"></div>
 <h2><span class="mw-headline" id="Keyboard_commands_to_skip_playback_position_by_specified_short_and_long_periods">Keyboard commands to skip playback position by specified short and long periods</span></h2>
 <p>These commands skip the playback cursor backwards (left) or forwards (right) by a short or long period of time. The default short period skipped is one second and the default long period skipped is 15 seconds. You can change the length of the default short or long period to be skipped at "Seek Time when playing" in the <a href="playback_preferences.html" title="Playback Preferences">Playback Preferences</a>.
@@ -340,7 +328,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-10-14 - <a href="https://alphamanual.audacityteam.org/man/Playback">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-10-26 - <a href="https://alphamanual.audacityteam.org/man/Playback">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
