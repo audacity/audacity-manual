@@ -35,15 +35,7 @@
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">The <i><b>Timeline</b></i> displays a horizontal ruler above the tracks measuring time from zero (the start of the track).  Depending on <a href="zooming.html" title="Zooming">zooming</a> the ruler may span minutes of audio or give a "close up" view of a few seconds or fractions of a second. <p>The Timeline is not merely an indicator of audio position but can also be used to effect <a href="#tqp"><b>Quick-Play</b></a>. This functionality can be toggled on/off by <a href="#menu">right clicking</a> in the Timeline and enabling/disabling Quick-Play <i>(default setting is "on")</i>.</p>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
-</td>
-<td align="left" valign="top">A particularly powerful use of the Timeline is in the creation of seamless <a href="tutorial_looping.html#tqp" title="Tutorial - Looping">loops</a>.
-</td></tr></table>
-</div> </div> 
+</div> 
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li> <a href="#ruler">The Timeline ruler</a></li>
 <li> <a href="#symbols">Symbols displayed on the Timeline ruler</a></li>
@@ -66,33 +58,14 @@
 <h2><span class="mw-headline" id="Symbols_displayed_on_the_Timeline_ruler">Symbols displayed on the Timeline ruler</span></h2>
 <ul><li> <img alt="Unpinned playhead button.png" src="../m/images/1/1a/unpinned_playhead_button.png" width="29" height="28" />  <b>The Play/Record Head button</b> at the far left of the Timeline (shown in its default unpinned state) controls the record and play heads enabling you to toggle between <a href="#pinned">unpinnned and pinned</a>.  
 <ul><li>Clicking on this button will pop up a context menu enabling you to change to <img alt="Pinned playhead button.png" src="../m/images/e/ef/pinned_playhead_button.png" width="28" height="29" /> pinned (fixed and centered) Play/Record heads.</li></ul></li></ul>
-<ul><li> <img alt="SelectionRangeCursor.png" src="../m/images/9/94/selectionrangecursor.png" width="84" height="18" /> <b>The <a href="audacity_selection.html" title="Audacity Selection">selected region</a>:</b> <i>(when present)</i> is shown as a shaded region on the ruler. By default, pressing Play or Record on <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> plays or records from the left edge of this region. 
-<ul><li> In the shaded region, the <b>playback region</b> is shown by thin left-pointing and right-pointing arrowheads connected by a line. This region will be played whenever the Play button <img alt="Play button" src="../m/images/9/90/play.png" title="Play button" width="16" height="16" /> is clicked (see also: <a href="#play-region">Play Region Lock</a>). </li></ul></li></ul>
 <ul><li> <a href="https://alphamanual.audacityteam.org/man/File:PlayStartCursor.png" class="image" title="image of the playback start position cursor"><img alt="image of the playback start position cursor" src="../m/images/5/57/playstartcursor.png" width="7" height="13" /></a> <b>The playback start position cursor</b>. Pressing the Play button <img alt="Play button" src="../m/images/9/90/play.png" title="Play button" width="16" height="16" /> plays from this cursor position. </li></ul>
 <ul><li> <img alt="EditCursor.png" src="../m/images/e/ec/editcursor.png" width="23" height="25" /> <b>The editing cursor:</b> <i>(always present when there is no selected region)</i> is shown as a black vertical line.<p>When "Quick-Play" is not active, the <b>playback start position cursor</b> <a href="https://alphamanual.audacityteam.org/man/File:PlayStartCursor.png" class="image" title="image of the playback start position cursor"><img alt="image of the playback start position cursor" src="../m/images/5/57/playstartcursor.png" width="7" height="13" /></a> is attached to it <a href="https://alphamanual.audacityteam.org/man/File:StandardCursor.png" class="image" title="image of the editing cursor with attached playback start cursor"><img alt="image of the editing cursor with attached playback start cursor" src="../m/images/c/ce/standardcursor.png" width="8" height="25" /></a>.</p></li></ul>
 <ul><li> <img alt="PlaybackCursor.png" src="../m/images/d/d0/playbackcursor.png" width="13" height="10" /> <b>The unpinned-head playback cursor:</b> <i>(when playing or paused during play)</i> is shown as a large green triangle. </li></ul>
 <ul><li> <img alt="Pinned playhead icon.png" src="../m/images/b/be/pinned_playhead_icon.png" width="27" height="27" /> <b>The pinned-head playback cursor:</b> <i>(when playing or paused during play)</i> is shown as a large green drawing-pin in the center of the Timeline.</li></ul>
 <ul><li> <img alt="RecordingCursor.png" src="../m/images/b/bf/recordingcursor.png" width="13" height="10" /> <b>The unpinned-head record cursor:</b> <i>(when recording or paused during record)</i> is shown as a large red triangle.</li></ul>
 <ul><li> <img alt="Pinned record-head icon.png" src="../m/images/e/e5/pinned_record_head_icon.png" width="27" height="27" /> <b>The pinned-head record cursor:</b> <i>(when recording or paused during record)</i> is shown as a large red drawing-pin in the center of the Timeline.</li></ul>
-<div id="quick-play-region"></div>
-<ul><li><img alt="QuickPlayRegionCursor.png" src="../m/images/c/c5/quickplayregioncursor.png" width="88" height="13" /> <b>Quick-Play region:</b> A region in the Timeline that plays immediately when dragged with the mouse, even if audio is already playing elsewhere. It is shown by thick left-pointing and right-pointing arrowheads connected by a line. By default, Quick-Play does not modify the position of the editing cursor or region in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> (this behavior may be changed in the <a href="#menu">Timeline context menu</a>). To start "Quick-Play" of a region (even if the track is already playing or paused from playing), hover over the Timeline until the mouse pointer changes to a hand, then drag in either direction and release. Playback will continue to the end of the Quick-Play region. 
-
-<ul>
-
-<li> If you just want to play from a particular point to the end of the project, click in the Timeline at the point from which you want playback to start or restart. The Quick-Play cursor is then shown only by a left-pointing arrowhead. Playback will continue to the end of the project. 
-
-<li> To make the dragged Quick-Play region loop (play repeatedly until stopped), press and hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span>, drag in the Timeline then release the drag. Loop play will be indicated by the Play button in <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> changing to Loop Play <span title="Loop Play button"><img alt="Loop Play.png" src="../m/images/7/7e/loop_play.png" width="16" height="16" /></span>. 
-
-<li> You can also play two seconds before the Quick-Play region and one second after it (as if that region had been deleted) just like <a href="playing_and_recording.html#play_cut" title="Playing and Recording">Play&#160;Cut&#160;Preview</a> of a region in the waveform. To preview cutting the Quick-Play region, press and hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> then drag and release in the Timeline. The duration that is played before and after the region can be changed in the Cut Preview section of <a href="playback_preferences.html" title="Playback Preferences">Playback Preferences</a>.
-
-<li> As with standard playback, you can press <span class="kbrd" style="background-color: #e0e0f0">Space</span> or click the Stop button <img alt="Stop button" src="../m/images/f/f9/stop.png" title="Stop button" width="16" height="16" /> to stop Quick-Play before the end of the region or project is reached. </ul></ul>
-<div id="play-region"></div>
-<ul><li> <img alt="PlayRegionCursor.png" src="../m/images/8/86/playregioncursor.png" width="88" height="14" /> <b>Play Region Lock:</b> The position of the playback region (or the current position of the Quick-Play region) can be <i>locked</i> in the Timeline for use in all further standard playback. To do this, choose <span class="menu">Transport &gt; Play Region &gt; Lock</span> or right-click in the Timeline and choose <b>Lock Play Region</b> from the <a href="#menu">context menu</a>. 
-<ul><li>When "Locked", the region displays in red in the Timeline. A locked region is <i>always</i> used for standard playback (including <a href="play_at_speed_toolbar.html" title="Play-at-Speed Toolbar">Play-at-Speed</a>) even if the editing cursor or region in the waveform is at a different position. </li>
-<li>The position of the locked region cannot be expanded or contracted by dragging either red arrowhead. However, you can still click in the Timeline so the project Quick-Plays from there (or drag some other region in the Timeline so that region Quick-Plays), preserving the locked region. </li>
-<li> You can also extend or contract Quick-Play with respect to the locked region without having to drag the entire region you want to Quick-Play. To do this, drag in either direction from the left-pointing red arrowhead of the locked region then release to play from the release point to the end of the locked region. Drag in either direction from the right-pointing red arrowhead then release to play from the start of the locked region to the release point. </li>
-<li>To unlock the region so that all further playback respects the editing cursor or region in the waveform, choose <span class="menu">Transport &gt; Play Region &gt; Unlock</span>, or right-click in the Timeline and choose <b>Unlock Play Region</b> from the <a href="#menu">context menu</a>. </li>
-<li>Play Region Lock or Unlock may be performed even when the track is playing or paused from playing.</li></ul></li></ul>
+<p><br />
+</p>
 <div id="usage"></div>
 <h2><span class="mw-headline" id="The_Timeline_in_use">The Timeline in use</span></h2>
 <dl><dd><b>Standard playback shows:</b></dd>
@@ -109,20 +82,10 @@
 <ul><li> The editing cursor position is unchanged</li>
 <li> The playback start position cursor moves to the point clicked</li>
 <li> The green playback cursor shows the current playback position.</li></ul></dd></dl>
-<dl><dd><b>After clicking and dragging in the Timeline to initiate <a href="#tqp">Quick-Play</a> of a region:</b></dd>
-<dd><span title="Timeline during quick-play after a click and drag in the Timeline"><img alt="Timeline04.png" src="../m/images/2/2e/timeline04.png" width="376" height="29" /></span>
-<ul><li> The editing cursor position is unchanged</li>
-<li> The green playback cursor shows the current playback position</li>
-<li> The "Quick-Play" region is indicated by the thick horizontal gray bar with arrowheads on each end.</li></ul></dd></dl>
-<dl><dd><b>After clicking and dragging in the waveform:</b></dd>
-<dd><span title="Timeline with a region of audio selected"><img alt="Timeline05.png" src="../m/images/9/93/timeline05.png" width="377" height="28" /></span>
-<ul><li> Instead of the editing cursor, a shaded region shows the time range of the selected audio.</li>
-<li> No audio plays, but the potential playback region is indicated by the thin horizontal gray bar with arrowheads on each end.</li>
-<li> The potential playback region is identical to the selection region in the waveform.</li></ul></dd></dl>
-<dl><dd><b>After locking a Play Region</b></dd>
-<dd><span title="Timeline showing a locked Play Region"><img alt="Timeline06.png" src="../m/images/7/79/timeline06.png" width="382" height="29" /></span>
-<ul><li> The thick horizontal red bar with arrowheads on each end show the region that will always be played, even if the editing cursor or region in the waveform is at a different position. </li></ul></dd></dl>
-<div class="note">For other methods of navigating to playback points or areas, see <a href="playing_and_recording.html" title="Playing and Recording">Playing and Recording</a>. </div>
+<dl><dd><b>After clicking and dragging in the timeline:</b></dd>
+<dd><span title="Timeline with a region of audio selected"><img alt="Timeline05.png" src="../m/images/9/93/timeline05.png" width="317" height="30" /></span>
+<ul><li> A looping region is created. Pressing Play will now loop this section over and over. </li>
+<li> You can drag the in point, out point, as well as the entire looping region to different points in the timeline.</li></ul></dd></dl>
 <div id="pinned"></div>
 <h2><span class="mw-headline" id="Pinned_Play.2FRecord_Head">Pinned Play/Record Head</span></h2>
 
@@ -154,12 +117,7 @@
 </div>
 <div id="tqp"></div>
 <h2><span class="mw-headline" id="Using_Timeline_Quick-Play">Using Timeline Quick-Play</span></h2>
-<p>Timeline Quick-Play provides a quick and convenient means to either start playback from any point within the current project or to playback a region of audio. 
-</p><p>As you hover the mouse pointer over the Timeline a small green triangle appears in the Timeline indicating that Quick-Play is enabled, and a white vertical line is drawn through the waveform(s) below to aid finding a precise Quick-Play location.  Note that if <a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a> is enabled in the <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> then the vertical line will be yellow and Quick-Play will honor the snapping.
-</p><p>Timeline Quick-Play will work with the <a href="#pinned">pinned playhead</a> but clicking in the Timeline to indicate a new start point will cause that position to jump to the centered pinned head so you may find it better working with the unpinned playhead for Quick-Play.
-</p>
-<dl><dd><span title="Timeline Quick-Play white line on the waveform to aid precision location"><img alt="Timeline Quickplay white line.png" src="../m/images/4/4b/timeline_quickplay_white_line.png" width="698" height="203" /></span></dd></dl>
-<p>This functionality can be toggled on/off by <a href="#menu">right clicking</a> in the Timeline and enabling/disabling Quick-Play <i>(default setting is "on")</i>.
+<p>Timeline Quick-Play provides a quick and convenient means to either start playback from any point within the current project. Simply click into the timeline to play from that point. 
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -172,37 +130,21 @@
 <h3><span class="mw-headline" id="Clicking_on_the_Timeline">Clicking on the Timeline</span></h3>
 <ul><li> <span class="kbrd" style="background-color: #d0d0f8">Left-Click</span>: Play from the time position of the mouse pointer when clicked.</li>
 <li><span class="kbrd" style="background-color: #d0d0f8">Shift + Left-Click</span> 
-<ul><li>within a selected region: Loop play the selected region, starting from the position of the mouse pointer.</li>
-<li>not in a selected region: Loop play the project, starting from the position of the mouse pointer.</li></ul></li>
+<ul><li> When playback looping is enabled, this plays the looping region only once.</li></ul></li>
 <li><span class="kbrd" style="background-color: #d0d0f8">Right-Click</span>: Opens the <a href="#menu">Timeline Right-Click menu</a>.</li></ul>
-<h3><span class="mw-headline" id="Click_and_drag">Click and drag</span></h3>
-<ul><li><span class="kbrd" style="background-color: #d0d0f8">Left-Click and drag</span>: Creates a temporary play region. Playback begins when the left mouse button is released.</li>
-<li><span class="kbrd" style="background-color: #d0d0f8">Shift + Left-Click and drag</span>: Creates a temporary play region. Playback begins when the left mouse button is released. Playback of the temporary play region repeats (loops) until the play region is changed or playback is stopped (for example by pressing <span class="kbrd" style="background-color: #e0e0f0">Space</span>).</li>
-<li><span class="kbrd" style="background-color: #d0d0f8">Ctrl + Left-Click and drag</span>: This is similar to waveform <a href="playing_and_recording.html#play_cut" title="Playing and Recording">Play Cut Preview</a>. A temporary "Quick-Play region" is created, though in this case playback starts a few seconds before the start of the region, then skips over the "Quick-Play region" and plays a few seconds after that region. The duration of playback before / after the "Quick-Play region" is set in <span class="menu">Edit &gt; Preferences &gt; <a href="playback_preferences.html" title="Playback Preferences">Playback</a></span> Cut Previewsection.</li></ul>
-<h3><span class="mw-headline" id="Adjusting_the_Quick-Play_region">Adjusting the Quick-Play region</span></h3>
-<p>While Timeline Quick-Play is playing, the <a href="#quick-play-region">Quick-Play region</a> may be adjusted by clicking and dragging one or other end of the Quick-Play region. Playback then restarts from the original or new start of the Quick-Play region. If the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key is held down while adjusting the Quick-Play region, loop playback will restart from the original or new start of the Quick-Play region.
-</p>
-<h3><span class="mw-headline" id="The_selection">The selection</span></h3>
-<p>By default, the audio selection or cursor position in the waveform is not affected by dragging the Quick-Play region. 
-</p><p>This default behavior may be changed by choosing <b>Enable dragging selection</b> in the Timeline <a href="#menu">right-click menu</a>. When dragging the selection is enabled, the Quick-Play region will create or adjust the waveform selection. The selection persists after Quick-Play has stopped. To revert to the default behavior, select <b>Disable dragging selection</b> in the Timeline right-click menu.
-</p><p>Note that dragging the selection cannot be enabled if the play region is locked (see below).
-</p>
-<h3><span class="mw-headline" id="Locked_Play_Region">Locked Play Region</span></h3>
-<p>Audacity allows the Play Region or Quick-Play Region to be <a href="#play-region">locked</a>. While a region is locked, Timeline Quick-Play will temporarily over-ride the lock, replacing the red locked Play Region with the standard gray Quick-Play region, so allowing Quick-Play to be used. Immediately the left mouse button is released, the red locked Play Region is restored. A locked play region cannot be adjusted.
+<ul><li> <span class="kbrd" style="background-color: #d0d0f8">Left-click + drag</span> creates a new looping region, or moves the current looping region around. </li></ul>
+<p><br />
 </p>
 <div id="menu"></div>
 <h2><span class="mw-headline" id="Timeline_right-click_context_menu">Timeline right-click context menu</span></h2>
-<p><span class="kbrd" style="background-color: #d0d0f8">Right-click</span> on the Timeline gives access to options that are convenient when using Timeline Quick-Play, via a short context menu.
-</p>
-<dl><dd><span title="Timeline right-click context menu"><img alt="Timeline right click menu 2-4-0.png" src="../m/images/f/f5/timeline_right_click_menu_2_4_0.png" width="313" height="165" /></span></dd></dl>
-<p><b>Enable Quick-Play</b>: Turns the Timeline Quick-Play functionality on or off.  The default setting is "on".
+<p><span class="kbrd" style="background-color: #d0d0f8">Right-click</span> on the Timeline gives a short context menu.
 </p><p><b>Enable dragging selection</b>:  When disabled (default), left-click and dragging the Play Region adjusts the Play Region only, leaving the current selection or editing cursor unaffected.
 When enabled, left-click and dragging the Play Region adjusts both the Play Region and the waveform selection together. This is particularly useful when finding the right place for a <a href="tutorial_looping.html" title="Tutorial - Looping">seamless loop</a>. 
 </p><p><b>Update display while playing</b>: By default the waveform scrolls when playing. Disabling this option so as not to scroll can be useful when using Quick-Play to adjust the start and end of <a href="tutorial_looping.html" title="Tutorial - Looping">loops</a>. Not scrolling ensures that the edges of the looped selection do not move if zooming in moves the playback point outside the visible area. The alternative method of disabling scrolling is to use <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> and remove the checkmark from <i><b>Auto-scroll if head unpinned</b></i>.
-</p><p><b>Lock Play Region</b>: The current position of the Play Region or Quick-Play region can be locked in the Timeline for use in all further standard playback, while still allowing Quick-Play of other regions or from other points.  
-</p>
-
-<p><b>Pinned Play Head:</b> You can change Audacity to play and record with a <a href="#pinned">fixed head pinned</a> to a position in the Timeline. In this mode the head remains static and the waveforms will move as the audio is played or recorded. The default setting is "off"
+</p><p><b>Loop on/off</b>: Toggles looping on and off. 
+</p><p><b>Clear looping region</b>: Clears any looping region
+</p><p><b>Set Loop to Selection</b>: Sets the looping playback region to the current selection.
+</p><p><b>Pinned Play Head:</b> You can change Audacity to play and record with a <a href="#pinned">fixed head pinned</a> to a position in the Timeline. In this mode the head remains static and the waveforms will move as the audio is played or recorded. The default setting is "off"
 </p>
 
 
@@ -280,7 +222,7 @@ When enabled, left-click and dragging the Play Region adjusts both the Play Regi
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-08-24 - <a href="https://alphamanual.audacityteam.org/man/Timeline">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-10-26 - <a href="https://alphamanual.audacityteam.org/man/Timeline">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
