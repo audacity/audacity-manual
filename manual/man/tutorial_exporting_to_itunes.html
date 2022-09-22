@@ -35,14 +35,23 @@
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 
-<div class="intro">Before exporting audio for use in Apple Music/iTunes it is important to consider which audio file <a href="#format">format</a> you want to use.  <a href="#wavaiff">WAV</a> and <a href="#wavaiff">AIFF</a> files produce high quality lossless audio files but consume a lot of disk space.  <a href="#mp3">MP3</a> and <a href="#aac">AAC</a> files are compressed so they occupy less disk space, but audio damage may result as a result of the compression especially when using low bitrates.</div>
+<div class="intro">Before exporting audio for use in Apple Music/iTunes it is important to consider which audio file <a href="#format">format</a> you want to use.  <a href="#wavaiff">WAV</a> and <a href="#wavaiff">AIFF</a> files produce high quality lossless audio files but consume a lot of disk space.  <a href="#mp3">MP3</a> and <a href="#aac">AAC</a> files are compressed so they occupy less disk space, but audio damage may result as a result of the compression especially when using low bit rates.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Please be aware that there is a bug in Audacity whereby the bit rate setting that you make in an AAC export is <i><b>not</b></i> honored by Audacity.  See <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/1818"><b>this logged bug</b></a>.<p>The workaround is to export as uncompressed WAV or AIFF and use iTunes to make the AAC conversion, see <a href="#conversion">below</a> on this page. Or this workflow tutorial for more details <a href="sample_workflow_for_exporting_to_itunes.html" title="Sample workflow for exporting to iTunes"><b>Sample workflow for exporting to Apple Music/iTunes</b></a>. </p>
+ 
+</td></tr></table></div> </div>
 <div class="note">Submitting a <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Podcast">podcast</a> to the <b>Apple Store</b> is a different process than exporting an Audacity file to an Apple Music/iTunes library. See our Tutorial on <a href="tutorial_mixing_a_narration_with_background_music.html" title="Tutorial - Mixing a Narration With Background Music">Tutorial - Mixing a Narration With Background Music</a> and our Wiki page on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_to_publish_a_Podcast">How to publish a Podcast</a> for more help with creating and publishing a podcast.</div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#iTunes">Exporting audio for loading into Apple Music/iTunes - <i>a quick overview</i></a></li>
 <li><a href="#location">Set export location</a></li>
 <li><a href="#conversion">Export to other Formats using Apple Music/iTunes</a></li>
 <li><a href="#format">What format should I export to?</a>
-<ol><li><a href="#wavaiff">WAV or AIFF - <i>universal support, lossless, large files, best for CD burning</i></a></li>
+<ol><li><a href="#wavaiff">WAV or AIFF - <i>universal support, lossless, large files, best for CD burning, <b>not</b> ideal for iTunes</i></a></li>
 <li><a href="#mp3">MP3 - <i>universal support, small files, lossy</i></a></li>
 <li><a href="#aac">AAC - <i>Apple's proprietary format, small files, lossy</i></a></li>
 <li><a href="#alac">Apple Lossless - <i>Apple's proprietary format, lossless, size compressed</i></a></li></ol></li></ol>
@@ -59,7 +68,16 @@
 <li> in Apple Music use the  <span class="menu">File &gt; Import...</span> command.</li>
 <li> in either you can drag&amp;drop an audio file into Apple Music/iTunes</li></ul></li>
 <li> Or you can set the file location on export from Audacity to <a href="#auto">auto-import</a> into Apple Music/iTunes</li></ol>
-<div class="note">You may also want to read this workflow tutorial <a href="sample_workflow_for_exporting_to_itunes.html" title="Sample workflow for exporting to iTunes">Sample workflow for exporting to Apple Music/iTunes</a>. </div>
+<div class="note">You may also want to read this workflow tutorial <a href="sample_workflow_for_exporting_to_itunes.html" title="Sample workflow for exporting to iTunes"><b>Sample workflow for exporting to Apple Music/iTunes</b></a>. </div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">there is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/1818"><b>bug</b></a> in Audacity whereby the bit rate setting that you make in an AAC export is <i><b>not</b></i> honored by Audacity.  <p>You may wish to export as uncompressed WAV or AIFF and use iTunes to make the AAC conversion, see <a href="#conversion">below</a> on this page. Or the workflow tutorial for more details <a href="sample_workflow_for_exporting_to_itunes.html" title="Sample workflow for exporting to iTunes"><b>Sample workflow for exporting to Apple Music/iTunes</b></a>. </p>
+ 
+</td></tr></table></div>
 <p><br />
 </p>
 <div id="location"></div>
@@ -70,7 +88,7 @@
 <ul><li> Use the <span class="menu">File &gt; Add File to Library...</span> or <span class="menu">File &gt; Add Folder to Library...</span> command from within iTunes, or <span class="menu">File &gt; Import...</span> in Apple Music, to add a single audio file or a folder of audio files.</li>
 <li> Select <span class="menu">Songs</span> in Apple Music/iTunes and drag the file from the location you exported it to, into the Apple Music/iTunes window. </li></ul>
 <div id="auto"></div>
-<p>You can export files from Audacity directly to your Apple Music/iTunes library.  Exporting a file to the following locations will cause Apple Music/iTunes to automatically place it in the Music section of your library. You can then play the audio on your computer with iTunes or add it to your iPod, iPhone or iPad.
+<p>You can export files from Audacity directly to your Apple Music/iTunes library.  Exporting a file to the following locations will cause Apple Music/iTunes to automatically place it in the Music section of your library. You can then play the audio on your computer with iTunes or add it to your iPhone, iPad or iPod
 </p><p>Set the destination folder as:
 </p>
 <ul><li><b>Windows:</b> <span class="path">C:\Users\&lt;user name&gt;\Music\iTunes\iTunes Media\Automatically Add to iTunes</span></li>
@@ -84,6 +102,8 @@
 </td>
 <td align="left" valign="top">By default Apple Music/iTunes is a "virtual" Library containing no actual files but only links to them. <p>To avoid losing your files, do <b>*not*</b> delete the exported files from the location you exported them to, unless you have already gone to <span class="menu">Edit &gt; Preferences &gt; Advanced</span> in iTunes, or <span class="menu">Preferences &gt; Files</span> in Apple Music. and enabled the "<b>Copy files to iTunes/Music Media folder when adding to library</b>" option.</p> <p>It is <i><b>strongly</b></i> recommended that you make this setting in Apple Music/iTunes.</p>
 </td></tr></table></div>
+<p><br />
+</p>
 <div id="conversion"></div>
 <h2><span class="mw-headline" id="Export_to_other_Formats_using_Apple_Music.2FiTunes">Export to other Formats using Apple Music/iTunes</span></h2>
 <p>Alternatively you can export to WAV or AIFF and convert to MP3, AAC or Apple Lossless <b>in Apple Music/iTunes</b>:
@@ -95,13 +115,13 @@
 <li>Click OK and OK</li>
 <li> Select the file to be converted, then use <span class="menu">File &gt; Convert</span> and choose "Create MP3 Version", "Create AAC Version" or "Create Apple Lossless Version" as appropriate.  </li></ol>
 <p>After creating the MP3, AAC or Apple Lossless version you should delete the original WAV or AIFF files to save disk space, as Apple Music/iTunes does not do this for you automatically.
-</p><p>Some export formats are described below.
+</p><p><br />
 </p>
 <div id="format"></div>
 <h2><span class="mw-headline" id="What_format_should_I_export_to.3F">What format should I export to?</span></h2>
 <p>AAC is the default format set in Apple Music/iTunes and the format Apple uses for audio files sold from the Apple Music/iTunes Store, so is the most obvious choice if you solely use Apple products. MP3 should be considered if you think that in the future you may wish to switch to an alternative portable music player or phone.  If you have plenty of storage space on your device or a relatively small music library you may wish to consider the larger lossless WAV or AIFF formats.
 </p><p>There are several advantages to using a compressed format on iPods and iPhones. The two main benefits are that you can fit many more songs into the device (for 256 kbps files you can fit about 10 times as many songs) and compressed files improve battery life, because disk reads are relatively heavy on battery power.  
-</p><p>If you choose lossy formats (MP3 or AAC) the minimum bitrate setting you should use for music is 160 kbps, though 256 kbps is probably to be preferred - and in use on an iPod is unlikely to be distinguishable from WAV or AIFF (or Apple Lossless).  For speech 128 kbps or even 64 kbps can be used as the bitrate if preferred.
+</p><p>If you choose lossy formats (MP3 or AAC) the minimum bit rate setting you should use for music is 160 kbps, though 256 kbps is probably to be preferred - and in use on an iPod is unlikely to be distinguishable from WAV or AIFF (or Apple Lossless).  For speech 128 kbps or even 64 kbps can be used as the bit rate if preferred.
 </p>
 <div class="note">Apple does not officially support <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i> (a lossy, compressed format similar to MP3/compressed AAC) and has no support at all for  <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> (a lossless, compressed format smaller than WAV but larger than MP3/compressed AAC). If you really want to export to OGG for Apple Music/iTunes, see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/OGG#qt">OGG usage in Apple Music/iTunes and QuickTime</a>. iPods, iPads and iPhones cannot play OGG files.</div>
 <div id="wavaiff"></div>
@@ -123,9 +143,18 @@ you should choose <b>WAV</b> or <b>AIFF</b>. It is strongly recommended you expo
 <div id="aac"></div>
 <h3><span class="mw-headline" id="AAC_.28Apple_proprietary.2C_small_files.2C_lossy.29"><a href="glossary.html#aac" title="Glossary">AAC</a> (Apple proprietary, small files, lossy)</span></h3>
 <p>Apple's proprietary format produces lossy, small, files similar to MP3, they are approximately the same quality as MP3 for a slightly smaller file size. The files are created with the .m4a extension.
-</p><p>AAC is useful for iPod or storage in iTunes due to its small file size and reduced disk occupancy, particularly if you have an iPod with a small disk.  The minimum bitrate setting you should use for music is 160 kpbs though 256 kbps is probably to Apple Music/be preferred and in use on an iPod is unlikely to be distinguishable from WAV or AIFF (or Apple Lossless). 
-</p><p>Audacity can export directly to AAC if you install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>. To export to AAC choose <i><b>M4A (AAC) Files (FFmpeg)</b></i> in the Export Audio window then type the file name. If you are exporting an AAC file for mobile devices, you can add the M4R (ringtone) or 3GP <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> after the file name and dot as required by the device.
+</p><p>AAC is useful for iPhone/iPod or storage in Apple Music/iTunes due to its small file size and reduced disk occupancy, particularly if you have an iPhone or iPod with a small disk.  The minimum bit rate setting you should use for music is 160 kpbs though 256 kbps is probably to be preferred and in use on an iPhone or iPod is unlikely to be distinguishable from WAV or AIFF (or Apple Lossless). 
+</p><p>Audacity can export directly to AAC if you install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>. To export to AAC choose <i><b>M4A (AAC) Files (FFmpeg)</b></i> in the Export Audio window then type the file name. 
 </p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">If you are exporting an AAC file for mobile devices, you can add the M4R (ringtone) or 3GP <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> after the file name and dot as required by the device.
+</td></tr></table>
+</div>
 <div id="alac"></div>
 <h3><span class="mw-headline" id="Apple_Lossless_.28Apple_proprietary.2C_lossless.2C_smaller_than_WAV.2FAIFF.29"><a href="glossary.html#alac" title="Glossary">Apple Lossless</a> (Apple proprietary, lossless, smaller than WAV/AIFF)</span></h3>
 <p>Apple Lossless Encoding (sometimes referred to as <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Apple_lossless">ALAC</a> - Apple Lossless Audio Codec) is also an Apple proprietary format. Apple Lossless is, as the name suggests, Apple's size-compressed lossless codec. Like AAC it also uses files with the M4A extension.  
@@ -137,7 +166,7 @@ you should choose <b>WAV</b> or <b>AIFF</b>. It is strongly recommended you expo
 <td>ffmpeg -i - -acodec alac "%f"
 </td></tr></table>
 <p>On Mac, you must give the full path to ffmpeg enclosed in quotes, instead of just "ffmpeg". 
-</p><p>Finally in the Export Audio dialog, add the M4A extension after the file name and dot. See [[Exporting to an External Program]|Exporting using an External Program] for more help.
+</p><p>Finally in the Export Audio dialog, add the M4A extension after the file name and dot. See <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">Exporting using an external encoder program</a> for more help.
 </p>
 
 
@@ -173,10 +202,10 @@ you should choose <b>WAV</b> or <b>AIFF</b>. It is strongly recommended you expo
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -215,7 +244,7 @@ you should choose <b>WAV</b> or <b>AIFF</b>. It is strongly recommended you expo
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Exporting_to_iTunes">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Exporting_to_iTunes">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

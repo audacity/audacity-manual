@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Audio Setup Toolbar - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Audio_Setup_Toolbar rootpage-Audio_Setup_Toolbar skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Audio Setup Toolbar</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Audio_Setup_Toolbar#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>Audio Setup Toolbar</b> enables you to manage the setup of your audio input and output devices and adjust the latency of your computer.  </div>
+<dl><dd><span title="The Audio Setup Toolbar"><img alt="Audio Setup Toolbar.png" src="../m/images/b/b3/audio_setup_toolbar.png" width="246" height="178" /></span></dd></dl>
+<div id="host"></div>
+<h2><span class="mw-headline" id="Host">Host</span></h2>
+<p>Selects the particular host interface with which Audacity communicates with your chosen playback and recording devices. 
+</p><p><span style="font-weight: bold; font-size:118%">Windows:</span> on Windows the choice is between the following host audio interfaces: 
+</p>
+<ul><li> <i><b><a href="glossary.html#mme" title="Glossary">MME</a>:</b></i> This is the Audacity default and the most compatible with all audio devices.</li>
+<li> <i><b><a href="glossary.html#wds" title="Glossary">Windows DirectSound</a>:</b></i> This is more recent than MME with potentially less <i><b><a href="glossary.html#latency" title="Glossary">latency</a></b></i>.</li>
+<li> <i><b><a href="glossary.html#wasapi" title="Glossary">Windows WASAPI</a>:</b></i> This host is the most recent Windows interface between applications (such as Audacity) and the audio interface driver. WASAPI was first officially released in 2007. WASAPI is particularly useful for "loopback" <a href="tutorial_recording_computer_playback_on_windows.html" title="Tutorial - Recording Computer Playback on Windows">recording of computer playback</a>. 24-bit recording devices are supported using this host. Playback is usually <i>emulated</i>. As a result, the playback slider in <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a> will only scale the system playback slider's current level up or down rather than directly manipulating that system slider. </li></ul>
+<div class="note">On <b>Windows</b>:
+<ul><li>Windows DirectSound may by default have only slightly lower latency than MME.  </li>
+<li>Selecting Windows DirectSound or Windows WASAPI and enabling both "Exclusive Mode" boxes in <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows&#160;Sound</a> allows Audacity to request audio direct from the device without <i><b><a href="glossary.html#resampling" title="Glossary">resampling</a></b></i>.</div> </li></ul>
+<p><span style="font-weight: bold; font-size:118%">Mac:</span> On Mac the only choice is Core Audio.  
+</p><p><span style="font-weight: bold; font-size:118%">Linux:</span> On Linux there is often only one option: <i><b><a href="glossary.html#ALSA" title="Glossary">ALSA</a></b></i>. Other options could be OSS and/or Jack Audio Connection Kit (also known as "Jack" or "Jackd")<i>.</i>
+</p><p><br />
+</p>
+<div id="playback"></div>
+<h2><span class="mw-headline" id="Playback_Device">Playback Device</span></h2>
+<p>Selects the device to be used for playback.  What is available will depend upon your computer and any other connected hardware.
+</p>
+<dl><dd><span title="Audio Setup Playback Device"><img alt="Audio Setup Playback Device.png" src="../m/images/b/b9/audio_setup_playback_device.png" width="460" height="142" /></span></dd></dl>
+<p><br />
+</p>
+<div id="recording"></div>
+<h2><span class="mw-headline" id="Recording_Device">Recording Device</span></h2>
+<p>Selects the device used for recording. What is available will depend upon your computer and any other connected hardware. You may get different devices available when you change Host.
+</p>
+<dl><dd><span title="Audio Setup Recording Device"><img alt="Audio Setup Recording Device.png" src="../m/images/1/12/audio_setup_recording_device.png" width="452" height="144" /></span></dd></dl>
+<div class="note">On <b>Windows</b>, each entry for recording device consists of the input type (such as microphone), followed by the name of the audio device the input belongs to. If you have multiple audio devices, the list will be grouped so that inputs of each device are grouped together. The input level of the selected device can be adjusted in <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a>, but device selection is no longer made there.</div>
+<p><br />
+</p>
+<div id="channels"></div>
+<h2><span class="mw-headline" id="Recording_Channels">Recording Channels</span></h2>
+<p>The number of channels to be recorded. On most inbuilt sound devices, especially on Windows, only 1 (Mono) or 2 (Stereo) will be available. 
+</p>
+<dl><dd><span title="Audio Setup Recording Channels"><img alt="Audio Setup Recording Channels.png" src="../m/images/7/73/audio_setup_recording_channels.png" width="438" height="143" /></span></dd></dl>
+<ul><li>For some devices on Windows, choosing Windows DirectSound in <b>"Host"</b> above may be more likely to reveal options for recording more than two channels. </li>
+<li>On some devices capable of recording more than two channels, an explicit "multi" device may appear in the <b>"Device"</b> dropdown for recording all the channels simultaneously.</li></ul>
+<p><br />
+</p>
+<div id="settings"></div>
+<h2><span class="mw-headline" id="Audio_Settings">Audio Settings</span></h2>
+<p>Brings up a dialog that enables you to make all the above settings plus the ability to manage the <a href="glossary.html#latency" title="Glossary">latency</a> on your computer:
+</p>
+<dl><dd><span title="The Audio Settings dialog"><img alt="Audio Settings dialog.png" src="../m/images/5/5d/audio_settings_dialog.png" width="586" height="413" /></span></dd></dl>
+<p><br />
+</p>
+<div id="latency"></div>
+<h3><span class="mw-headline" id="Latency"><a href="glossary.html#latency" title="Glossary">Latency</a></span></h3>
+<ul><li> <span style="font-weight: bold; font-size:118%">Buffer length:</span> A "buffer" is a chunk of audio waiting for the computer to process it. At the default 100 milliseconds (ms) setting, the audio will take 0.1 seconds to travel through the audio interface when recording or playing. Decreasing this value means recordings will be laid down on disk with less latency, and playback may respond faster. However, the computer will have to work faster so that it is ready to process the shorter chunks as soon as required. Setting this value too low (for example to 1 ms) will mean the computer will not be able to keep up, and neither recording or playback will work. 100 ms is a safe setting for most computers.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Settings below 20ms, or 30 ms if you are using the Audacity default MME host, may cause you to get clicky playback.
+</td></tr></table></div>
+<ul><li> <span style="font-weight: bold; font-size:118%">Latency compensation:</span> When recording, it takes a small amount of time for the sound to be converted to digital data and written to the track. This time delay is the \xe2\x80\x9c<b>recording latency</b>\xe2\x80\x9d and is typically around 130 ms (0.13 seconds) for consumer level equipment. By compensating for this delay, sounds are written to the track at the correct time relative to the Timeline, and other tracks in the project. The actual amount of delay depends on the hardware and audio settings, so for accurate synchronization in multi-track recording, this setting should be calibrated as described in the <a href="latency_test.html" title="Latency Test">Latency Test</a> page.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">See <a href="latency_test.html" title="Latency Test"><b>Latency Test</b></a> for details on how to adjust latency on you computer set-up.
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="alternatives"></div>
+<h2><span class="mw-headline" id="Alternatives">Alternatives</span></h2>
+<div id="preferences"></div>
+<h3><span class="mw-headline" id="Devices_Preferences"><a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a></span></h3>
+<p>As an alternative to using Audio Setup, you can make and change all the same settings with <a href="devices_preferences.html" title="Devices Preferences"><b>Devices Preferences</b></a>.
+</p>
+<div id="toolbar"></div>
+<h3><span class="mw-headline" id="Device_Toolbar"><a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a></span></h3>
+<p>With <a href="device_toolbar.html" title="Device Toolbar"><b>Device Toolbar</b></a> you can make and change most of the same settings with the exception of the latency settings.
+</p><p>Note that he <b>Device Toolbar</b> is <i><b>NOT</b></i> displayed by default in  Audacity. To enable it, click on <span class="menu">View &gt; Toolbars</span> and check on <b>Device Toolbar</b>.
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">New Features</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Audio_Setup_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

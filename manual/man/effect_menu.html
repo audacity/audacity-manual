@@ -34,7 +34,7 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><b>Audacity includes many built-in effects and also lets you use a wide range of plug-in effects.</b> <p>You can download many free plug-ins for Audacity from <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/plugins">our website</a>. Plug-ins always appear underneath the divider in the Effect menu. Released builds of Audacity include sample Nyquist effects.</p>
+<div class="intro"><b>Audacity includes many built-in effects and also lets you use a wide range of plugin effects.</b> <p>You can download many free plugins for Audacity from <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/plugins">our website</a>. Plugins always appear underneath the divider in the Effect menu. Released builds of Audacity include sample Nyquist effects.</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -44,23 +44,28 @@
 <td align="left" valign="top">To apply an effect, select part or all of the track(s) you want to modify, and select the effect from the menu.
 </td></tr></table>
 </div> </div>
-<dl><dd><div class="noresize"><map name="ImageMap_1_523907820"><area href="#" shape="rect" coords="25,5,68,27" alt="Audacity includes many built-in effects and also lets you use a wide range of plug-in effects" title="Audacity includes many built-in effects and also lets you use a wide range of plug-in effects"/><area href="analyze_menu.html" shape="rect" coords="68,5,123,27" alt="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature" title="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature"/><area href="tools_menu.html" shape="rect" coords="123,5,164,27" alt="The Tools Menu contains customisable tools" title="The Tools Menu contains customisable tools"/><area href="extra_menu.html" shape="rect" coords="164,5,205,27" alt="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus" title="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus"/><area href="help_menu.html" shape="rect" coords="205,5,242,27" alt="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools." title="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools."/><area href="#add_remove_plugins" shape="rect" coords="25,27,262,49" alt="Enable or disable particular Effects, Generators and Analyzers" title="Enable or disable particular Effects, Generators and Analyzers"/><area href="#repeat_last_effect" shape="rect" coords="25,56,262,78" alt="Repeats the last used effect at its last used settings and without displaying any dialog" title="Repeats the last used effect at its last used settings and without displaying any dialog"/><area href="effect_menu_built_in.html" shape="rect" coords="25,85,262,107" alt="Shows the list of available Audacity built-in effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences" title="Shows the list of available Audacity built-in effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences"/><area href="effect_menu_ladspa.html" shape="rect" coords="25,114,262,136" alt="Shows the list of available LADSPA effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences" title="Shows the list of available LADSPA effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences"/><area href="effect_menu_nyquist.html" shape="rect" coords="25,136,262,158" alt="Shows the list of available Nyquist effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences" title="Shows the list of available Nyquist effects but only if the user has effects &quot;Grouped by Type&quot; in Effects Preferences"/><area href="menu_reference.html" shape="rect" coords="0,0,1000,1000" alt="The Menus" title="The Menus"/></map><img alt="EffectMenu.png" src="../m/images/b/b9/effectmenu.png" width="267" height="168" usemap="#ImageMap_1_523907820"/></div></dd></dl>
-<div style="position:relative;">
-<div class="note" style="width:150px;position:absolute;left:212px;top:-15px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
-</div>
+<dl><dd><span title="The Effect menu"><img alt="Effect Menu 3-2-0.png" src="../m/images/e/e1/effect_menu_3_2_0.png" width="293" height="336" /></span></dd></dl>
 <p><br />
-&#160;
-</p><p><br />
+</p>
+<div id="layout"></div>
+<h2><span class="mw-headline" id="Menu_layout">Menu layout</span></h2>
+<p>The default layout for the Effect menu is to group the effects by their functionalty.
+</p><p>Other options are available:
+</p>
+<ul><li> <b>Sorted by Effect Name:</b> Effects are listed in one long menu sorted by effect name, built-in effects above the divider then plugins below the divider. </li>
+<li> <b>Sorted by Publisher and Effect Name:</b> Effects are listed in one long menu, built-in effects sorted by name above the divider then plugins sorted by publisher then name below the divider.</li>
+<li> <b>Sorted by Type and Effect Name:</b> Effects are listed in one long menu, built-in effects sorted by name above the divider then plugins sorted by type then name below the divider.</li>
+<li> <b>Grouped by Publisher:</b> Effects are grouped by effect publisher, with effects in each group in a submenu. The Audacity built-in effects group is above the divider and groups for plugins are below the divider.</li>
+<li> <b>Grouped by Type:</b>  Effects are grouped by effect type, with effects in each group in a submenu. The Audacity built-in effects group is above the plugins groups..</li></ul>
+<p>These can be set in <a href="effects_preferences.html" title="Effects Preferences">Effects Preferences</a>.
 </p><p><br />
 </p>
 <div id="using_effects"></div>
 <h2><span class="mw-headline" id="Using_Effects">Using Effects</span></h2>
 <p>Titles which end in an ellipsis (...) will bring up a dialog asking you for more parameters.
-</p><p>All effects that have a dialog let you hear the audio as modified by the effect before you apply the effect to the waveform. 
+</p><p>All effects that have a dialog let you hear a preview of the audio as modified by the effect before you apply the effect to the waveform. 
 </p>
-<ul><li> <a href="#built-in">Built-in effects</a> and <a href="#nyquist">Nyquist plug-ins</a> have a <i>Preview</i> button - press this to listen if the current effect settings produce what you want, and if not, change the settings then Preview again. Press <span class="button">OK</span> to apply the effect to the waveform. </li>
-<li> All other effect types supported in Audacity (<a href="#LADSPA_effects">LADSPA</a>, <a href="#LV2_effects">LV2</a>, <a href="#vst" title="Effect Menu">VST</a> and <a href="#Audio_Unit_effects">Audio Units</a> for Mac) support <b><a href="real_time_preview_of_effects.html" title="Real-time preview of effects">real-time preview</a></b> - you can change the effect settings while listening then press <span class="button">Apply</span> to apply the effect to the waveform. </li>
-<li>Effects in the Effect menu <i>that do not support real-time preview</i> will appear grayed out when playing or recording.</li></ul>
+<ul><li> Effects have a <i>Preview</i> button - press this to listen if the current effect settings produce what you want, and if not, change the settings then Preview again. Press <span class="button">OK</span> to apply the effect to the waveform. </li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -83,12 +88,12 @@
 <p><br />
 </p>
 <div id="add_remove_plugins"></div>
-<h2><span class="mw-headline" id="Add_.2F_Remove_Plug-ins..."><a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Add / Remove Plug-ins...</a></span></h2>
-<p>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog which enables you to load and unload Effects (and Generators and Analyzers) from Audacity.  This enables you to customize your Effect Menu making it shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Add / Remove Effects, Generators and Analyzers</a>.
-</p><p>By default all the Built-in effects, with the exception of Classic Filters, are loaded in Audacity.
+<h2><span class="mw-headline" id="Plugin_Manager"><a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a></span></h2>
+<p>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog which enables you to load and unload Effects (and Generators and Analyzers) from Audacity.  This enables you to customize your Effect Menu making it shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a>.
+</p><p>By default all the Built-in effects are loaded in Audacity.
 </p>
-<div class="note"><b>Additional plug-ins can also be loaded into Audacity.  For details see the following FAQs for: <a href="installing_effect_generator_and_analyzer_plug_ins_on_windows.html" title="Installing Effect, Generator and Analyzer plug-ins on Windows">Windows</a>, <a href="installing_effect_generator_and_analyzer_plug_ins_on_mac_os_x.html" title="Installing Effect, Generator and Analyzer plug-ins on MAC OS X">Mac</a> and <a href="installing_effect_generator_and_analyzer_plug_ins_on_linux.html" title="Installing Effect, Generator and Analyzer plug-ins on Linux">Linux</a></b>
-<p>See also this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Download_Nyquist_Plug-ins#effect">list of available Nyquist effect plug-ins</a> on the Audacity Wiki, that you can easily download and add to Audacity.
+<div class="note"><b>Additional plugins can also be loaded into Audacity.  For details see the following FAQs for: <a href="installing_effect_generator_and_analyzer_plug_ins_on_windows.html" title="Installing Effect, Generator and Analyzer plug-ins on Windows">Windows</a>, <a href="installing_effect_generator_and_analyzer_plug_ins_on_mac_os_x.html" title="Installing Effect, Generator and Analyzer plug-ins on MAC OS X">Mac</a> and <a href="installing_effect_generator_and_analyzer_plug_ins_on_linux.html" title="Installing Effect, Generator and Analyzer plug-ins on Linux">Linux</a></b>
+<p>See also this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Download_Nyquist_Plug-ins#effect">list of available Nyquist effect plugins</a> on the Audacity Wiki, that you can easily download and add to Audacity.
 </p>
 </div>
 <p><br />
@@ -102,51 +107,16 @@
 <h2><span class="mw-headline" id="Repeat_Last_Effect_.C2.A0Ctrl_.2BR">Repeat Last Effect &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl +R</span></font></span></h2>
 <p>Using this command from the Effect menu will repeat the last effect that you used at the same settings. For quick access to the last used effect, you can use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + R</span> to repeat it the same settings.
 </p>
-<div class="note">For effects that you use often you can use <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> to set up keyboard shortcuts for those effects.</div> 
-<p><br />
-</p>
-<div id="built-in"></div>
-<h2><span class="mw-headline" id="Audacity_Built-in_effects.C2.A0"><a href="effect_menu_built_in.html" title="Effect Menu: Built-in">Audacity Built-in effects</a>&#160;<font size="-1"></font></span></h2>
-<p>Audacity's built-in effects (those that appear in the application irrespective of the contents of your Audacity and other "Plug-Ins" folders) are above the divider in the Effect menu.
-</p><p>Built-in effects support saving of user presets but do not yet support <a href="real_time_preview_of_effects.html" title="Real-time preview of effects">real-time preview</a> or import/export of presets from/to other machines.
-</p><p>Find out more about the 'Audacity' submenu for built-in effects on the <a href="effect_menu_built_in.html" title="Effect Menu: Built-in">Effect Menu: Built-in</a> page.
-</p>
-<div id="nyquist"></div>
-<div id="nyquist_effects_prompt"></div>
-<h2><span class="mw-headline" id="Nyquist_effects.C2.A0"><a href="effect_menu_nyquist.html" title="Effect Menu: Nyquist">Nyquist effects</a>&#160;<font size="-1"></font></span></h2>
-<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist">Nyquist</a> plug-ins provide most of the optional effects underneath the divider in the Effect menu. They are also used to provide some of Audacity's built-in audio <a href="generate_menu.html" title="Generate Menu">generators</a> and <a href="analyze_menu.html" title="Analyze Menu">analysis tools</a>. A wide range of additional Nyquist effect, generation and analysis plug-ins can be obtained from <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Download_Nyquist_Plug-ins">Download Nyquist Plug-ins</a> on our Wiki.
-</p><p>Nyquist effects support saving of user presets but do not yet support <a href="real_time_preview_of_effects.html" title="Real-time preview of effects">real-time preview</a> or import/export of presets from/to other machines.
-</p><p>Find out more about the 'Nyquist' submenu for plug-in effects  <a href="effect_menu_nyquist.html" title="Effect Menu: Nyquist">here</a>.
-</p>
-<div id="ladspa"></div>
-<h2><span class="mw-headline" id="LADSPA_effects.C2.A0"><a href="effect_menu_ladspa.html" title="Effect Menu: LADSPA">LADSPA effects</a>&#160;<font size="-1"></font></span></h2>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">LADSPA has been superseded by LV2 and most if not all LADSPA plug-ins are ancient and are no longer maintained.
-</td></tr></table></div>
-<p><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/LADSPA">LADSPA</a> (Linux Audio Developer's Simple Plug-in API) plug-ins were originally developed for the Linux platform, but ports of some plug-ins are available for Windows and Mac as well. Most LADSPA plug-ins are effects, but they are also used to provide some of Audacity's built-in  audio <a href="generate_menu.html" title="Generate Menu">generators</a> and can be used for audio <a href="analyze_menu.html" title="Analyze Menu">analysis</a>. 
-</p><p>Additional LADSPA plug-ins can be downloaded for Windows, Mac and Linux. Please see the <a rel="nofollow" class="external text" href="http://www.audacityteam.org/download/plug-ins/#ladspa">LADSPA section</a> of the Download page on the <a rel="nofollow" class="external text" href="http://www.audacityteam.org/">Audacity Website</a> for more details and links.
-</p><p>LADSPA effects support <b><a href="real_time_preview_of_effects.html" title="Real-time preview of effects">real-time preview</a></b>. They do not support import/export of presets but do support saving presets for use in Audacity only. A few LADSPA plug-ins have an "Effect Output" section which is populated after the effect is applied.
-</p><p>Find out more about the 'LADSPA' submenu for plug-in effects <a href="effect_menu_ladspa.html" title="Effect Menu: LADSPA">here</a>.  
-</p><p><br />
-</p>
-<div class="note">The following effect classes: LV2 and VST  are always third-party plug-ins added by the user.<p>Audio Units <i>(Mac only)</i>, are added by the operating system, macOS, on Apple Mac computers.</p></div>   
-<div id="lv2"></div>
-<h2><span class="mw-headline" id="LV2_effects"><a href="effect_menu_lv2.html" title="Effect Menu: LV2">LV2 effects</a></span></h2>
-<p><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/LV2">LV2</a> is a more advanced evolution of the LADSPA plug-in architecture. Note that not all LV2 effects display a full graphical interface.
-</p>
-<div id="vst"></div>
-<h2><span class="mw-headline" id="VST_effects"><a href="effect_menu_vst.html" title="Effect Menu: VST">VST effects</a></span></h2>
-<p><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Virtual_Studio_Technology">Virtual Studio Technology (VST)</a> is a software interface that integrates software audio synthesizer and effect plug-ins with audio editors and recording systems, such as Audacity. 
-</p>
-<div id="audio_unit"></div>
-<h2><span class="mw-headline" id="Audio_Unit_effects_.28Mac_only.29"><a href="effect_menu_audiounit.html" title="Effect Menu: AudioUnit">Audio Unit effects</a> <i>(Mac only)</i></span></h2>
-<p><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Audio_Units">Audio Unit</a> (AU) is a system-level plug-in architecture provided only on Mac computers.
-</p>
+<td align="left" valign="top">For effects that you use often you can use <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> to set up keyboard shortcuts for those effects.
+</td></tr></table>
+</div>
+
 
 
 
@@ -181,10 +151,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -223,7 +193,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Effect_Menu">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Effect_Menu">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

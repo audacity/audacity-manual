@@ -2,7 +2,7 @@
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Creating Nyquist Plug-ins - Audacity Manual</title>
+<title>Creating Nyquist Plugins - Audacity Manual</title>
 
 
 
@@ -25,7 +25,7 @@
 				
 				<div class="mw-indicators">
 </div>
-				<h1 id="firstHeading" class="firstHeading" lang="en">Creating Nyquist Plug-ins</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Creating Nyquist Plugins</h1>
 				
 				<div id="bodyContent" class="mw-body-content">
 					<div id="siteSub">From Audacity Development Manual</div>
@@ -33,9 +33,10 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Creating_Nyquist_Plug-ins#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Creating_Nyquist_Plug-ins"><span class="tocnumber">1</span> <span class="toctext">Creating Nyquist Plug-ins</span></a>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_Nyquist_Plugins"><span class="tocnumber">1</span> <span class="toctext">Creating Nyquist Plugins</span></a>
 <ul>
 <li class="toclevel-2 tocsection-2"><a href="#Parameter_dialogs"><span class="tocnumber">1.1</span> <span class="toctext">Parameter dialogs</span></a></li>
 <li class="toclevel-2 tocsection-3"><a href="#Returning_labels"><span class="tocnumber">1.2</span> <span class="toctext">Returning labels</span></a></li>
@@ -47,7 +48,7 @@
 </ul>
 </div>
 
-<h2><span class="mw-headline" id="Creating_Nyquist_Plug-ins">Creating Nyquist Plug-ins</span></h2>
+<h2><span class="mw-headline" id="Creating_Nyquist_Plugins">Creating Nyquist Plugins</span></h2>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -56,7 +57,7 @@
 </td>
 <td align="left" valign="top">Do not attempt to use Windows NotePad or wordpad or any word processor for writing or editing Nyquist code. For Windows, <a rel="nofollow" class="external text" href="https://notepad-plus-plus.org/">Notepad++</a> is a good, free, plain text editor.
 </td></tr></table></div>
-<p>Creating a plug-in for Audacity using Nyquist is as simple as creating a text file with the extension \xe2\x80\x9c.ny\xe2\x80\x9d with some Nyquist code, adding a few comments to indicate the type of plug-in, and placing the file in Audacity's <b>plug-ins</b> directory. Here's a very simple plug-in as an example:
+<p>Creating a plugin for Audacity using Nyquist is as simple as creating a text file with the extension \xe2\x80\x9c.ny\xe2\x80\x9d with some Nyquist code, adding a few comments to indicate the type of plugin, and placing the file in Audacity's <b>Plug-Ins</b> directory. Here's a very simple plugin as an example:
 </p>
 <pre>  ;nyquist plug-in
   ;version 4
@@ -64,19 +65,19 @@
   ;name "Fade In"
   (mult (ramp) *track*)
 </pre>
-<p>The first line of a Nyquist plug-in must be exactly as in the example above, and the second line must indicate a version number. Version 4 is the current version and should be used for all new code. The next line is the type of plug-in, which is discussed below. Then comes the name of the plug-in, which is what is displayed in the menu bar. There are other optional lines that may follow. Any line that does not begin with a semicolon (;) or a dollar sign ($) are assumed to contain Nyquist code and will be executed.
-</p><p>Audacity has support for four types of plug-ins that can be written in Nyquist:
+<p>The first line of a Nyquist plugin must be exactly as in the example above, and the second line must indicate a version number. Version 4 is the current version and should be used for all new code. The next line is the type of plugin, which is discussed below. Then comes the name of the plugin, which is what is displayed in the menu bar. There are other optional lines that may follow. Any line that does not begin with a semicolon (;) or a dollar sign ($) are assumed to contain Nyquist code and will be executed.
+</p><p>Audacity has support for four types of plugins that can be written in Nyquist:
 </p>
 <pre>  ;type generate
   ;type process
   ;type analyze
   ;type tool
 </pre>
-<p>These correspond to the four menus that can contain plug-ins: Generate, Effect, Analyze and Tools. Generate plug-ins are expected to generate new audio from scratch, Effect plug-ins (\xe2\x80\x9cprocess\xe2\x80\x9d) modify existing audio in-place, and Analyze plug-ins process audio but do not modify it (though they are allowed to add labels). Tools are a special type for plug-ins that do not fall into any of the other three types (more information in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Audacity wiki</a>).
-</p><p>For Effect and Analyze plug-ins, Audacity sets up the Nyquist environment so that the audio the user has selected is in the variable <b>*track*</b> (in Nyquist before version 4, the variable <b>S</b> was used). All of the expressions in the plug-in file are executed in order, and the return value of the last expression is substituted for the selection in Audacity. If the last expression does not return audio, Audacity returns an error.
+<p>These correspond to the four menus that can contain plugins: Generate, Effect, Analyze and Tools. Generate plugins are expected to generate new audio from scratch, Effect plugins (\xe2\x80\x9cprocess\xe2\x80\x9d) modify existing audio in-place, and Analyze plugins process audio but do not modify it (though they are allowed to add labels). Tools are a special type for plugins that do not fall into any of the other three types (more information in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Audacity wiki</a>).
+</p><p>For Effect and Analyze plugins, Audacity sets up the Nyquist environment so that the audio the user has selected is in the variable <b>*track*</b> (in Nyquist before version 4, the variable <b>S</b> was used). All of the expressions in the plugin file are executed in order, and the return value of the last expression is substituted for the selection in Audacity. If the last expression does not return audio, Audacity returns an error.
 </p>
 <h3><span class="mw-headline" id="Parameter_dialogs">Parameter dialogs</span></h3>
-<p>Audacity has limited support for plug-ins showing a dialog to get parameters from the user. Here is an example of a plug-in that opens a dialog:
+<p>Audacity has limited support for plugins showing a dialog to get parameters from the user. Here is an example of a plugin that opens a dialog:
 </p>
 <pre>  ;nyquist plug-in
   ;version 4
@@ -94,20 +95,20 @@
   
   (stretch-abs 1 (delays *track* (- 0 decay) delay count))
 </pre>
-<p>If Audacity finds at least one correctly formed \xe2\x80\x9ccontrol\xe2\x80\x9d line, it will open a dialog to prompt the user for certain parameters to the plug-in. Each control "widget" provides a variable (a symbol) that will store the value entered by the user. Here's what the dialog for the Delay effect shown above looks like (Windows 10):
+<p>If Audacity finds at least one correctly formed \xe2\x80\x9ccontrol\xe2\x80\x9d line, it will open a dialog to prompt the user for certain parameters to the plugin. Each control "widget" provides a variable (a symbol) that will store the value entered by the user. Here's what the dialog for the Delay effect shown above looks like (Windows 10):
 </p>
 <dl><dd><a href="https://alphamanual.audacityteam.org/man/File:Delay-demo-plug-in.png" class="image"><img alt="Delay-demo-plug-in.png" src="../m/images/b/b5/delay_demo_plug_in.png" width="533" height="191" /></a></dd></dl>
 <p>Additional information about available widgets may be found in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference#widgets">Audacity wiki</a>.
 </p><p><br />
 </p>
 <h3><span class="mw-headline" id="Returning_labels">Returning labels</span></h3>
-<p>Instead of returning audio, a Nyquist plug-in can instead return a list of labels. A list of labels is simply a list of time/label pairs, for example:
+<p>Instead of returning audio, a Nyquist plugin can instead return a list of labels. A list of labels is simply a list of time/label pairs, for example:
 </p>
 <pre>  (list (list 0.0 "start")
         (list 30.0 "middle")
         (list 60.0 "end"))
 </pre>
-<p>When a plug-in returns a list of exactly this form, Audacity will create a new label track and add the labels at those positions. The time value is in seconds. This style of plug-in is usually of type \xe2\x80\x9canalyze\xe2\x80\x9d.
+<p>When a plugin returns a list of exactly this form, Audacity will create a new label track and add the labels at those positions. The time value is in seconds. This style of plugin is usually of type \xe2\x80\x9canalyze\xe2\x80\x9d.
 </p><p>To create <a href="label_tracks.html#type" title="Label Tracks">region labels</a> there needs to be two time values:
 </p>
 <pre>  (list (list 0.0 25.0 "start")
@@ -152,10 +153,10 @@
 </td>
 <td style="border-top:none;border-bottom:0.05pt solid #000000;border-left:none;border-right:0.05pt solid #000000;padding:0.049cm;"> makes <b>right</b> the second element of array <b>my-array</b>
 </td></tr></table>
-<p>As a convenience, if the input to your Nyquist plug-in is stereo, but you only output a single (mono) sound, Audacity will automatically copy it to both the left and right channels.
+<p>As a convenience, if the input to your Nyquist plugin is stereo, but you only output a single (mono) sound, Audacity will automatically copy it to both the left and right channels.
 </p>
 <h3><span class="mw-headline" id="Where_to_go_from_here">Where to go from here</span></h3>
-<p>Audacity comes with some sample plug-ins that you can examine or modify as a starting point. The best way to learn Nyquist is to try it. Technical support is provided on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=39"><b>Nyquist board of the Audacity Forum</b></a> (email registration required for posting).
+<p>Audacity comes with some sample plugins that you can examine or modify as a starting point. The best way to learn Nyquist is to try it. Technical support is provided on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=39"><b>Nyquist board of the Audacity Forum</b></a> (email registration required for posting).
 </p><p>Don't forget to consult the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Documentation">documentation</a> for more details of Lisp and Nyquist.
 </p>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
@@ -196,10 +197,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -238,7 +239,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Creating_Nyquist_Plug-ins">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Creating_Nyquist_Plug-ins">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

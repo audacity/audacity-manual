@@ -37,7 +37,7 @@
 <div class="intro">This page provides a detailed description of various ways of controlling playback in Audacity, including keyboard shortcut commands and how to play short periods around selections. </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li> <a href="#play">Play button</a></li>
-<li> <a href="#regions">Playback Regions, Quick-Play Regions and Play Regions</a></li>
+<li> <a href="#regions">Playback Regions and Looping Regions</a></li>
 <li> <a href="#skip">Keyboard commands to skip playback position by specified short and long periods</a></li>
 <li> <a href="#mouse">Play relative to mouse pointer or selection</a>
 <ul><li> <a href="#play_1s">Play One Second</a></li>
@@ -56,22 +56,40 @@
 <dl><dd><img alt="The Play button" src="../m/images/9/90/play.png" title="The Play button" width="16" height="16" /> Clicking <b>Play</b> plays from the cursor point to the end of the project, or from the start of the <a href="audacity_selection.html" title="Audacity Selection">selection region</a> to the end of that region. </dd></dl>
 <dl><dd><dl><dd><img alt="The Play Cut Preview button" src="../m/images/5/55/play_cut_preview.png" title="The Play Cut Preview button" width="15" height="15" /> <b>Play Cut Preview</b> will play audio either side of a selection to preview what deleting the selection will sound like. Hold down <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> <i>(<span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> while clicking <b>Play</b>. </dd>
 <dd>Alternatively you can use the <span class="kbrd" style="background-color: #d0d0f8">C</span> shortcut to preview the cut. This also causes the Play button image to change to Play Cut Preview.</dd></dl></dd></dl>
-<div class="note">Clicking <b>Play</b> when the track is already playing or paused is a quick way to restart playback without first pressing <b>Stop</b>.</div> 
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">
+<ul><li>Clicking <b>Play</b> when the track is already playing or paused is a quick way to restart playback <i>(from the cursor position or start of selection)</i> without first pressing <b>Stop</b>.</li>
+<li>To change the starting point to anywhere you like, click in the track at your desired starting point, then use <span class="kbrd" style="background-color: #d0d0f8">Space</span> to play from there.</li></ul>
+</td></tr></table>
+</div> 
 <dl><dd><img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> Click <b>Pause</b>, or its shortcut <span class="kbrd" style="background-color: #d0d0f8">P</span>, to temporarily pause playing or recording without losing your place. Click <b>Pause</b> a second time to resume.</dd></dl>
 <dl><dd><img alt="The Stop button" src="../m/images/f/f9/stop.png" title="The Stop button" width="16" height="16" />  Clicking <b>Stop</b> stops playing or recording immediately, and releases <b>Pause</b> if depressed. You must stop playback or recording before you can use the <b>Skip</b> buttons in the Transport Toolbar. 
-<dl><dd>The shortcut <span class="kbrd" style="background-color: #d0d0f8">Space</span> can be used to either play or stop. After stopping, playback resumes from its last starting point. </dd>
-<dd>Alternatively, use <span class="kbrd" style="background-color: #d0d0f8">X</span> or <span class="menu">Transport &gt; Playing &gt; <a href="transport_menu_playing.html#playstop_and_set_cursor" title="Transport Menu: Playing">Play/Stop and Set Cursor</a></span> to stop playback and set the cursor there. Playback will resume from the stop point on pressing <b>Play</b>. </dd></dl></dd></dl>
-<div class="note">To change the starting point to anywhere you like, click in the track at your desired starting point, then use <span class="kbrd" style="background-color: #d0d0f8">Space</span> to play from there. </div>
-<dl><dd><dl><dd>Click <b>Loop</b> to toggle playback looping on. While it's turned on, the looping region will be played over and over when you press play.</dd></dl></dd></dl>
+<dl><dd>The shortcut <span class="kbrd" style="background-color: #d0d0f8">Space</span> can be used to either play or stop. After stopping, playback resumes from its last starting point. </dd></dl></dd>
+<dd><span style="font-weight: bold; font-size:118%">Stop and Set Cursor:</span>
+<dl><dd>There is no button for this, but a shortcut <span class="kbrd" style="background-color: #d0d0f8">X</span> is provided.</dd>
+<dd>Use shortcut <span class="kbrd" style="background-color: #d0d0f8">X</span> or <span class="menu">Transport &gt; Playing &gt; <a href="transport_menu_playing.html#playstop_and_set_cursor" title="Transport Menu: Playing">Play/Stop and Set Cursor</a></span> to stop playback and set the cursor there. Playback will resume from the stop point on pressing <b>Play</b>, or re-pressing <span class="kbrd" style="background-color: #d0d0f8">X</span>. </dd></dl></dd></dl>
+<dl><dd><img alt="The Loop button" src="../m/images/d/d5/loop_button.png" title="The Loop button" width="18" height="19" /> Click the <b>Loop</b> button to toggle playback looping on/off. While it's turned on, the looping region will be played over and over when you press play.</dd></dl>
+<p><br />
+</p>
 <div id="regions"></div>
 <h2><span class="mw-headline" id="Playback_Regions_and_Looping_Regions">Playback Regions and Looping Regions</span></h2>
 <p>If there is only an editing cursor in the waveform, playback always starts from that cursor position and continues until the end of the project (unless you stop playback).
-</p><p>Whenever audio is played, a green downward-pointing triangle shows the current audio playback position. In the image below, playback starts at 9 seconds at the position of the editing cursor (represented in the Timeline by a black vertical line with left-pointing arrowhead). Playback had reached 14 seconds when the image was taken.
+</p><p>Whenever audio is played, a green downward-pointing triangle shows the current audio playback position. In the image below, playback starts at 13 seconds at the position of the editing cursor (represented in the Timeline by a black vertical line with left-pointing arrowhead). Playback had reached 15 seconds when the image was taken.
 </p>
-<dl><dd><span title="Timeline showing standard playback from the editing cursor (Mac image"><img alt="Timeline01.png" src="../m/images/0/0b/timeline01.png" width="377" height="30" /></span></dd></dl>
-<p>There may be times when you want to move around to hear arbitrary parts of the audio while still retaining the position of the editing cursor or region in the waveform. Click and drag in the timeline to set a loop region <b>without moving the waveform region or cursor</b> and <b>without having to stop and restart playback</b>. 
+<dl><dd><span title="Timeline showing standard playback from the editing cursor (Mac image"><img alt="Timeline01.png" src="../m/images/0/0b/timeline01.png" width="400" height="30" /></span></dd></dl>
+<h3><span class="mw-headline" id="Loop_region"><a href="tutorial_looping.html" title="Tutorial - Looping">Loop region</a></span></h3>
+<p>Click and drag in the timeline to set a loop region <b>without moving the waveform region or cursor</b> and <b>without having to stop and restart playback</b>. 
 </p>
 <dl><dd><img alt="A looping region" src="../m/images/9/93/timeline05.png" title="A looping region" width="317" height="30" /></dd></dl>
+<p>Doing this will automatically turn looping on (the Loop button will be shown down) - but it will <i><b>not</b></i> start loop play.
+</p><p>For more details on Looping please see <b><a href="tutorial_looping.html" title="Tutorial - Looping">Tutorial - Looping</a></b>
+</p><p><br />
+</p>
 <div id="skip"></div>
 <h2><span class="mw-headline" id="Keyboard_commands_to_skip_playback_position_by_specified_short_and_long_periods">Keyboard commands to skip playback position by specified short and long periods</span></h2>
 <p>These commands skip the playback cursor backwards (left) or forwards (right) by a short or long period of time. The default short period skipped is one second and the default long period skipped is 15 seconds. You can change the length of the default short or long period to be skipped at "Seek Time when playing" in the <a href="playback_preferences.html" title="Playback Preferences">Playback Preferences</a>.
@@ -108,6 +126,8 @@
 <p>You cannot seek backwards to left of the current position of the playback cursor.
 </p>
 </td></tr></table></div>
+<p><br />
+</p>
 <div id="mouse"></div>
 <h2><span class="mw-headline" id="Play_relative_to_mouse_pointer_or_selection">Play relative to mouse pointer or selection</span></h2>
 <p>These are three keyboard commands that let you play a few seconds of audio without changing the selection.  They can be really useful during editing, such as when you are trying to find the exact spot to cut and paste.
@@ -177,6 +197,8 @@
 <td align="left" valign="top">You may customize almost all keyboard shortcuts. Change them using the <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard tab</a> of <a href="preferences.html" title="Preferences">Preferences</a>.
 </td></tr></table>
 </div>
+<p><br />
+</p>
 <div id="play_short"></div>
 <h2><span class="mw-headline" id="Play_short_periods_around_selections">Play short periods around selections</span></h2>
 <p>The following commands play short periods of audio.  They were primarily introduced for VI (Visually Impaired) users but will be of benefit to sighted users too:
@@ -246,7 +268,6 @@
 </td></tr></table>
 </div>
 <p><br />
-</p><p><br />
 </p>
 <div id="tips"></div>
 <h2><span class="mw-headline" id="Additional_Playback_Tips"><a href="playback_tips.html" title="Playback Tips">Additional Playback Tips</a></span></h2>
@@ -286,10 +307,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -328,7 +349,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Playback">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Playback">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

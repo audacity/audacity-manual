@@ -46,14 +46,13 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">Note carefully that simply re-installing Audacity will <i><b>not</b></i> clear and reset your Audacity settings for preferences and plug-ins.
+<td align="left" valign="top">Note carefully that simply re-installing Audacity will <i><b>not</b></i> clear and reset your Audacity settings for preferences and plugins.
 <ul><li>To do this simply use <span class="menu">Tools &gt; <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a></span> </li></ul>
 </td></tr></table></div> </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#install">Installing Audacity on Windows</a></li>
 <li><a href="#updating">Updating Audacity on Windows</a>
 <ul><li><a href="#updates">Check for Updates</a></li></ul></li>
-<li><a href="#libraries">FFmpeg Import-Export library</a></li>
 <li><a href="#winff">Installing the FFmpeg Import/Export Library on Windows</a></li>
 <li><a href="#purge">Reset Audacity Settings</a></li>
 <li><a href="#compatibility">Project compatibility</a></li></ol>
@@ -64,6 +63,18 @@
 <p>Go to the <a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/windows/"><b>Windows Download page</b></a> of the Audacity site and follow the instructions there.
 </p>
 <div class="note">If you prefer not to use the installer <i>(or security restrictions prevent installing applications)</i>, left-click the link for the "zip" file instead. Then click on the downloaded file to open it in Windows Explorer and choose the option <b>Compressed Folder Tools</b> and <b>Extract all</b> to extract the contents. You can also use <a rel="nofollow" class="external text" href="http://www.7-zip.org/download.html">7-Zip</a> or other extraction utilities.</div> 
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Audacity for Windows is built as both a 64-bit and a 32-bit application.
+<ul><li>Most users will want the 64-bit build for modern 64-bit PCs.</li>
+<li>Older (and some newer budget) 32-bit PCs will require the 32-bit build of Audacity.</li>
+<li>You may want the 32-bit build of Audacity for a 64-bit PC if you have 32-bit plugins and you want to continue using them. </li></ul>
+</td></tr></table>
+</div>
 <div id="sysreq"></div>
 <h3><span class="mw-headline" id="System_Requirements">System Requirements</span></h3>
 <p>For detailed system requirements for a Windows installation see <a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/windows/#sysreq"><b>this page</b></a> on the <a rel="nofollow" class="external text" href="http://www.audacityteam.org/">Audacity Website</a>
@@ -83,8 +94,8 @@
 </div>
 <p>If you install a new Audacity version after installing a previous one, the installer will offer to install to the same directory as the previous installation. 
 </p>
-<ul><li>The installation directory is normally <span class="path">Program File\Audacity</span> on 64-bit Windows. </li>
-<li>As long as you do not change the installation directory, Audacity will install over the previous version, and any extra plug-ins you added to the "Plug-Ins" folder will still be available.</li>
+<ul><li>The installation directory is normally <span class="path">C:\Program Files\Audacity</span> on 64-bit Windows. </li>
+<li>As long as you do not change the installation directory, Audacity will install over the previous version, and any extra plugins you added to the "Plug-Ins" folder will still be available.</li>
 <li>There is no need to uninstall a previous version before updating, unless updating from Audacity 1.3.x or earlier. </li></ul>
 <div id="winlib"></div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -98,8 +109,6 @@
 <div id="updates"></div>
 <h3><span class="mw-headline" id="Check_for_Updates">Check for Updates</span></h3>
 <p>You can check to see if you have the latest version of Audacity by using <span class="menu">Help &gt; Check for Updates...</span>.
-</p><p>This takes you to the <a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/windows/">Windows Download page</a> of the Audacity website where you can check what the latest release version of Audacity is. 
-</p><p>You can then compare the latest release with the version you have now as shown by using <span class="menu">Help &gt; About Audacity...</span>. 
 </p><p><br />
 </p>
 <div id="libraries"></div>
@@ -122,7 +131,7 @@
 </p>
 <div id="purge"></div>
 <h2><span class="mw-headline" id="Reset_Audacity_Settings_on_Windows">Reset Audacity Settings on Windows</span></h2>
-<p>As stated in the introduction on this page, simply re-installing Audacity will not clear and reset your Audacity settings for preferences and plug-ins.
+<p>As stated in the introduction on this page, simply re-installing Audacity will not clear and reset your Audacity settings for preferences and plugins.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -144,7 +153,7 @@
 <h3><span class="mw-headline" id="To_reset_just_your_Audacity_preferences">To reset just your Audacity preferences</span></h3>
 <p>Navigate to that <b>audacity</b> folder with Windows Explorer and delete the <b>audacity.cfg file</b>.  Then restart Audacity.
 </p>
-<h3><span class="mw-headline" id="To_reset_just_your_plug-ins">To reset just your plug-ins</span></h3>
+<h3><span class="mw-headline" id="To_reset_just_your_plugins">To reset just your plugins</span></h3>
 <p>Navigate to that <b>audacity</b> folder with Windows Explorer and delete the:
 </p>
 <ul><li><b>pluginregistry.cfg</b> file</li>
@@ -161,7 +170,7 @@
 </p>
 <div id="links"></div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
-<p><a href="installing_effect_generator_and_analyzer_plug_ins_on_windows.html" title="Installing Effect, Generator and Analyzer plug-ins on Windows"><b>&gt;</b>&#160; Installing Effect, Generator and Analyzer plug-ins on Windows</a> <br />
+<p><a href="installing_effect_generator_and_analyzer_plug_ins_on_windows.html" title="Installing Effect, Generator and Analyzer plug-ins on Windows"><b>&gt;</b>&#160; Installing Effect, Generator and Analyzer plugins on Windows</a> <br />
 </p>
 
 
@@ -197,10 +206,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -239,7 +248,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Windows">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Windows">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

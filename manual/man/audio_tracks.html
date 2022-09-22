@@ -38,7 +38,16 @@
 <ul><li> a <a href="#panel">Track Control Panel</a> with <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> for changing View Mode and audio properties of that individual track </li>
 <li> a <a href="#scale">Vertical Scale</a> with units </li>
 <li> a visual representation of the audio <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>. </li></ul>
-New tracks are created whenever you <a href="file_menu.html#Import_Audio" title="File Menu">import</a> an audio file,  <a href="record.html" title="Record">record</a> (except for <a href="generate_menu.html" title="Generate Menu">generate</a> audio when there is no <a href="audacity_selection.html" title="Audacity Selection">selection</a>. <span class="menu">Tracks &gt; <a href="tracks_menu.html#add_new" title="Tracks Menu">Add New</a></span> lets you explicitly add a new, empty mono or stereo audio track.</div>
+<p>New tracks are created whenever you <a href="file_menu.html#Import_Audio" title="File Menu">import</a> an audio file,  <a href="record.html" title="Record">record</a> (except for <a href="generate_menu.html" title="Generate Menu">generate</a> audio when there is no <a href="audacity_selection.html" title="Audacity Selection">selection</a>. <span class="menu">Tracks &gt; <a href="tracks_menu.html#add_new" title="Tracks Menu">Add New</a></span> lets you explicitly add a new, empty mono or stereo audio track.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Not all the images in this page have been updated with the new <span class="button">Effects</span> button that was introduced in 3.2.0 for access to the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects"><b>Real-time Effects Stack</b></a>.
+</td></tr></table></div></div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#about">About Tracks</a></li>
 <li><a href="#stereo">Stereo Audio Track</a></li>
@@ -50,7 +59,10 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <li><a href="#split">Splitting and Joining Tracks</a></li>
 <li><a href="#display">Changing the track display</a></li>
 <li><a href="#focus">Track focus</a></li>
-<li><a href="#working">Working with Audio Tracks</a></li></ol>
+<li><a href="#working">Working with Audio Tracks</a></li>
+<li><a href="#rteffects">Real-time effects stack</a></li></ol>
+<p><br />
+</p>
 <div id="about"></div>
 <h2><span class="mw-headline" id="About_Tracks">About Tracks</span></h2>
 <p>A <b>track</b> is like one instrument in your symphony, or one voice in your podcast. You can add more tracks, and all of them will be <a href="mixing.html" title="Mixing">mixed</a> together to create your final output, but during editing you can manipulate each track independently. If you have an interview recorded with two microphones, each one can go in a separate track. If you have background music, that could go in a third track. 
@@ -79,9 +91,15 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <dl><dd><table>
 
 <tr valign="top">
-<td><span title="Clip details"><img alt="Clip handle detail.png" src="../m/images/b/b8/clip_handle_detail.png" width="168" height="97" /></span>
+<td><span title="Clip details"><img alt="A pair of clips.png" src="../m/images/9/98/a_pair_of_clips.png" width="326" height="187" /></span>
 </td>
-<td>Clips live within tracks. You can recognize where a clip starts and ends by the rounded top corners. The clip handle bar includes the clip name, the clip body includes the waveform. You can move the clip around by its handle, and right-click it to access more options. More detailled information on clips can be found in the <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips"><b>Audio Tracks and Clips</b></a> page.
+<td>Clips live within tracks. You can recognize where a clip starts and ends by the rounded top corners.
+<ul><li>The clip-handle drag-bar includes the clip name, the clip body includes the waveform. </li>
+<li>You can <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips"><b>move</b></a> the clip around by its clip-handle.</li>
+<li>You can <a href="audacity_tracks_and_clips.html#trim" title="Audacity Tracks and Clips"><b>trim</b></a> a clip by dragging near the upper corner of its left and right edges. Doing so will hide the waveform that goes beyond it (as opposed to fully deleting it).</li>
+<li>You can rename the track by double clicking in it and then editing the name.</li>
+<li>You can right-click the clip <i>(<b>not</b> the clip-handle)</i> to access more options in a context menu. </li>
+<li>More detailed information on clips can be found in the <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips"><b>Audio Tracks and Clips</b></a> page.</li></ul>
 </td></tr></table></dd></dl>
 <p><br />
 </p>
@@ -90,13 +108,14 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <dl><dd><table>
 
 <tr valign="top">
-<td> <span title="Track Control Panel"><img alt="TrackPanelNew.png" src="../m/images/d/dd/trackpanelnew.png" width="97" height="145" /></span>
+<td> <span title="Track Control Panel"><img alt="TCP Track with Select button.png" src="../m/images/c/cf/tcp_track_with_select_button.png" width="99" height="181" /></span>
 </td>
-<td><div class="note" style="position:relative;top:-0.9em">The <b>Track Control Panel</b> at the left of the audio track has controls and status indicators for this track. Left-clicking other than on a control performs track selection and move as follows.
+<td>The <b>Track Control Panel</b> at the left of the audio track has controls and status indicators for this track. Left-clicking other than on a control performs track selection and move as follows.
 <ul><li> Clicking the <span class="button">Select</span> button <a href="audacity_selection.html" title="Audacity Selection">selects</a> all this track's audio, <i>deselecting all other tracks</i>. </li>
 <li> Holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking the <span class="button">Select</span> button selects all this track's audio, <i>keeping already selected tracks selected</i>.
 <ul><li> <b>keyboard:</b> use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to give the track <a href="#focus">focus</a>, then <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to select it; hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> then use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to extend selection into another track. Read <a href="audacity_selection.html#keyboard" title="Audacity Selection">keyboard selection</a> for more.    </li></ul></li>
-<li> Click-and-drag moves this track up or down when there are other tracks (<b>keyboard:</b> choose one of the "Move Track" commands in <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>, opened by <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> on the currently focused track ).</div></li></ul>
+<li> Click-and-drag moves this track up or down when there are other tracks (<b>keyboard:</b> choose one of the "Move Track" commands in <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>, opened by <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> on the currently focused track ).</li>
+<li> <span class="button" style="background-color: #cdd9f1">Effects</span> Reveals the real-time effects stack. For details see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects">Using Realtime Effects</a> on the Audacity Support GitBook.</li></ul>
 </td></tr></table></dd></dl>
 <p><br />
 </p>
@@ -270,6 +289,14 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <li> <a href="zooming.html" title="Zooming">Zooming</a>: seeing what you need to see</li></ul>
 <p><br />
 </p>
+<div id="rteffects"></div>
+<h2><span class="mw-headline" id="Real-time_effects_stack">Real-time effects stack</span></h2>
+<p>Clicking on the <span class="button">Effects</span> button in an audio track's Track Control Panel will open a real-time stackable effects pane to the left of the audio track.
+</p>
+<dl><dd><img alt="Effects stack.png" src="../m/images/d/de/effects_stack.png" width="744" height="556" /></dd></dl>
+<p>Please see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects">Using realtime effects</a> in the Audacity support GitBook.
+</p><p><br />
+</p>
 <div id="links"></div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="track_control_panel_and_vertical_scale.html" title="Track Control Panel and Vertical Scale"><b>&gt;</b>&#160; Track Control Panel and Vertical Scale</a> <br />
@@ -310,10 +337,10 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -352,7 +379,7 @@ New tracks are created whenever you <a href="file_menu.html#Import_Audio" title=
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

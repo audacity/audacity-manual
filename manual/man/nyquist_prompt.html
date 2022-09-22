@@ -33,37 +33,30 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Nyquist_Prompt#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
-</p>
-
-<p><br />
-</p>
-
-<div class="intro"><i><b>Nyquist Prompt</b></i> lets you run and debug code snippets for your own plug-ins created using the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Nyquist_(programming_language)">Nyquist</a> programming language. See the <b><a href="nyquist.html" title="Nyquist">Manual's Nyquist page</a></b> for more information about writing Nyquist code.  See also the Audacity wiki page on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist">Nyquist</a></div>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro"><i><b>Nyquist Prompt</b></i> lets you run and debug code snippets for your own plugins created using the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Nyquist_(programming_language)">Nyquist</a> programming language. See the <b><a href="nyquist.html" title="Nyquist">Manual's Nyquist page</a></b> for more information about writing Nyquist code.  See also the Audacity wiki page on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist">Nyquist</a></div>
 <div class="note">To process audio with Nyquist commands, first <a href="audacity_selection.html" title="Audacity Selection">select</a> some audio.</div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Tools &gt; Nyquist Prompt...</span></dd>
-<dd><span title="Nyquist Prompt effect dialog"><img alt="Nyquist Prompt.png" src="../m/images/1/1b/nyquist_prompt.png" width="512" height="351" /></span></dd></dl>
+<dd><span title="Nyquist Prompt dialog"><img alt="Nyquist Prompt 3-2-0.png" src="../m/images/c/cc/nyquist_prompt_3_2_0.png" width="512" height="334" /></span></dd></dl>
 <p><br />
 </p>
 <div id="command"></div>   
 <h2><span class="mw-headline" id="Enter_Nyquist_Command">Enter Nyquist Command</span></h2>
 <p>Type the command as required. <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on the keyboard moves the cursor to a new line. The last entered code is stored in the pluginsettings.cfg file in Audacity's <a href="preferences.html#stored" title="Preferences">folder for application data</a> so is retained after exiting Audacity. 
-</p><p>Plugin GUI can be tested if you include complete <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plugins_Reference#Nyquist_Plug-in_Header">Nyquist Plug-in Headers</a>. The Nyquist Prompt interprets header comments to produce a plug-in of the defined type on the fly. By  default the plug-in is a <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference#type_process">process type</a>, though other type may be created by including the appropriate <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference#Required_plug-in_headers">header</a>.
+</p><p>Plugin GUI can be tested if you include complete <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plugins_Reference#Nyquist_Plug-in_Header">Nyquist Plug-in Headers</a>. The Nyquist Prompt interprets header comments to produce a plugin of the defined type on the fly. By  default the plugin is a <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference#type_process">process type</a>, though other type may be created by including the appropriate <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference#Required_plug-in_headers">header</a>.
 </p><p><br />
 </p>
 <div id="buttons"></div>
 <h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
-<h3><span class="mw-headline" id="Editing_or_making_Nyquist_plug-ins">Editing or making Nyquist plug-ins</span></h3>
-<ul><li> <span class="button">Load</span> Load a Nyquist plugin or script file saved with .ny extension.</li>
-<li> <span class="button">Save</span> Save the current contents of the editor window as an .ny file. </li></ul>
-<h3><span class="mw-headline" id="Presets">Presets</span></h3>
-<ul><li> <span class="button">Manage</span> Opens a dropdown menu where you can save the window contents as a preset then reload those contents  by selecting the preset. You can also see some descriptive text about the plugin. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a>.</li></ul>
-<h3><span class="mw-headline" id="Others">Others</span></h3>
-<ul><li> <span class="button">Debug</span> Clicking this button redirects error messages from Audacity's <a href="help_menu_diagnostics.html#show_log" title="Help Menu: Diagnostics">error log</a> to a non-editable "Debug" window. An empty debug windows indicates that no errors were detected. Click <span class="button">OK</span> to close the debug window, or using the keyboard; hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> on Windows <i>(or <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. </li>
-<li> <span class="button">OK</span> Applies the code to the waveform selection without debug output. Your entered code will be retained next time you open Nyquist Prompt in the Audacity session. Using the keyboard hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> on Windows <i>(or <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. Using the keyboard on Linux, hold down <span class="kbrd" style="background-color: #e0e0f0">Alt</span> and press <span class="kbrd" style="background-color: #e0e0f0">o</span>.</li>
-<li> <span class="button">Cancel</span>  No code is processed or debugged. Any code you entered after opening the window this time will be discarded.</li></ul>
+<h3><span class="mw-headline" id="Action_buttons">Action buttons</span></h3>
+<ul><li> <span class="button">Presets and settings</span> Opens a dropdown menu where you can save the window contents as a preset then reload those contents  by selecting the preset. You can also see some descriptive text about the plugin. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a>.</li>
+<li> <span class="button">Apply</span> Applies the code to the waveform selection without debug output. Your entered code will be retained next time you open Nyquist Prompt in the Audacity session. Using the keyboard hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> on Windows <i>(or <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. Using the keyboard on Linux, hold down <span class="kbrd" style="background-color: #e0e0f0">Alt</span> and press <span class="kbrd" style="background-color: #e0e0f0">o</span>.</li>
+<li> <span class="button">Debug</span> Clicking this button redirects error messages from Audacity's <a href="help_menu_diagnostics.html#show_log" title="Help Menu: Diagnostics">error log</a> to a non-editable "Debug" window. An empty debug windows indicates that no errors were detected. Click <span class="button">OK</span> to close the debug window, or using the keyboard; hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> on Windows <i>(or <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> on Mac)</i> then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. </li></ul>
 <div class="note">The Nyquist prompt supports both LISP syntax and SAL syntax. If the code you enter cannot be recognized as valid Nyquist code in either LISP or SAL syntax, an error message will appear with a hint about making a correction.</div>
 
+<h3><span class="mw-headline" id="Editing_or_making_Nyquist_plugins">Editing or making Nyquist plugins</span></h3>
+<ul><li> <span class="button">Load</span> Load a Nyquist plugin or script file saved with .ny extension.</li>
+<li> <span class="button">Save</span> Save the current contents of the editor window as an .ny file. </li></ul>
 <p><br />
 </p>
 <div id="links"></div>
@@ -105,10 +98,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -147,7 +140,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Nyquist_Prompt">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Nyquist_Prompt">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

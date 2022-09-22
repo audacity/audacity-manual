@@ -34,7 +34,7 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><b>AAC</b> is a <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>, <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i> audio format. It is the default audio format for Apple Music/iTunes\xc2\xae, iPod\xc2\xae, iPad\xc2\xae and iPhone\xc2\xae.
+<div class="intro"><b>AAC</b> is a <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>, <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i> audio format. It is the default audio format for Apple Music/iTunes\xc2\xae, iPhone\xc2\xae, iPad\xc2\xae and iPod\xc2\xae
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -50,7 +50,7 @@
 </p>
 <div id="setup"></div>
 <h2><span class="mw-headline" id="Format_Options">Format Options</span></h2>
-<ul><li><b>Quality:</b> This slider controls the quality (bitrate in kbps) of the output AAC file. The Maximum bitrate (best quality) is 320 kbps (stereo) 160 kbps (mono) and the minimum is 98 kbps (mono). The current quality setting is displayed in the center of the slider scale.<p>The default quality setting of 160 typically produces a similar sized, but slightly higher quality file compared to an <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> at Audacity's default 128 kbps constant <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i>. A stereo file is always produced, but a file exported from a mono track will have about half the bit rate <i>(and hence half the file size)</i> of one exported from a stereo track.</p></li></ul>
+<ul><li><b>Quality:</b> This slider controls the quality (bit rate in kbps) of the output AAC file. The Maximum bit rate (best quality) is 320 kbps (stereo) 160 kbps (mono) and the minimum is 98 kbps (mono). The current quality setting is displayed in the center of the slider scale.<p>The default quality setting of 160 typically produces a similar sized, but slightly higher quality file compared to an <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> at Audacity's default 128 kbps constant <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i>. A stereo file is always produced, but a file exported from a mono track will have about half the bit rate <i>(and hence half the file size)</i> of one exported from a stereo track.</p></li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -60,6 +60,15 @@
 <td align="left" valign="top">You can use the keyboard left and right arrow-heads to move or fine-tune your slider position.
 </td></tr></table>
 </div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Please be aware that there is a bug in Audacity whereby the bit rate setting that you make in an AAC export is <i><b>not</b></i> honored by Audacity.  See <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/1818"><b>this logged bug</b></a>.<p>The workaround is to export as uncompressed WAV or AIFF and use iTunes to make the AAC conversion, see <a href="tutorial_exporting_to_itunes.html#conversion" title="Tutorial - Exporting to iTunes"> this page</a> for information regarding this. </p>
+ 
+</td></tr></table></div>
 <div class="note">Like <i><b><a href="glossary.html#ogg" title="Glossary">OGG</a></b></i>, AAC encoding is a form of <i><b><a href="glossary.html#vbr" title="Glossary">VBR</a></b></i> or variable bit rate encoding, as opposed to the <i><b><a href="glossary.html#cbr" title="Glossary">CBR</a></b></i> or constant bit rate encoding used by default when exporting MP3 files. <p>This means that in order to maintain consistent quality throughout a track, a higher bit rate will be used when encoding a complex piece of audio (such as a full orchestral passage) than when encoding a solo voice or instrument.  A recording which has more  complex audio will produce a larger file. Increasing the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>  in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> will increase the bit rate and so the file size (and vice versa). </p></div>
 
 
@@ -96,10 +105,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -138,7 +147,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/AAC_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/AAC_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

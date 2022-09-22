@@ -2,7 +2,7 @@
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Nyquist Plug-in Installer - Audacity Manual</title>
+<title>Nyquist Plugin Installer - Audacity Manual</title>
 
 
 
@@ -25,7 +25,7 @@
 				
 				<div class="mw-indicators">
 </div>
-				<h1 id="firstHeading" class="firstHeading" lang="en">Nyquist Plug-in Installer</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Nyquist Plugin Installer</h1>
 				
 				<div id="bodyContent" class="mw-body-content">
 					<div id="siteSub">From Audacity Development Manual</div>
@@ -33,21 +33,29 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Nyquist_Plug-in_Installer#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">The <span class="npi">Nyquist Plugin Installer</span> is itself a Nyquist plugin that simplifies the installation of other Nyquist plugins.
+<p>All Nyquist plugins are plain text files that have the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Filename_extension">filename extension</a> '.NY'. This plugin installer provides a file browser for selecting the plugin '.NY' file, and then copies the file to the correct location. Once the plugin has been installed, it may be enabled in the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><b>Plugin Manager</b></a>.
 </p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
-<div class="intro">The <span class="npi">Nyquist Plug-in Installer</span> is itself a Nyquist plug-in that simplifies the installation of other Nyquist plug-ins.
-All Nyquist plug-ins are plain text files that have the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Filename_extension">filename extension</a> '.NY'. This plug-in installer provides a file browser for selecting the plug-in '.NY' file, and then copies the file to the correct location. Once the plug-in has been installed, it may be enabled in the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><b>Plug-in Manager</b></a>.</div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Tools &gt; Nyquist Plug-in Installer...</span></dd>
-<dd><span title="Nyquist Plug-in Installer dialog"><img alt="Nyquist Plug-in Installer.png" src="../m/images/1/13/nyquist_plug_in_installer.png" width="458" height="178" /></span></dd></dl>
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Any new Nyquist plugins that you add to the Nyquist plugins folder will be automatically enabled, ready for use, the next time you launch Audacity.
+</td></tr></table>
+</div></div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Tools &gt; Nyquist Plugin Installer...</span></dd>
+<dd><span title="Nyquist Plugin Installer dialog"><img alt="Nyquist Plugin Installer 3-2-0.png" src="../m/images/6/66/nyquist_plugin_installer_3_2_0.png" width="485" height="165" /></span></dd></dl>
 <p><br />
 </p>
-<div class="note">The <b>Nyquist Plug-in Installer</b> installs one or more selected plug-ins for the current user, by copying the file(s) to the appropriate plug-ins folder.
-<dl><dd> After installation, plug-ins must be enabled in the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><b>Plug-in Manager</b></a>.</div></dd></dl>
+<div class="note">The <b>Nyquist Plugin Installer</b> installs one or more selected plugins for the current user, by copying the file(s) to the appropriate plugins folder.
+<dl><dd> After installation, plugins must be enabled in the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><b>Plugin Manager</b></a>.</div></dd></dl>
 <div id="install"></div>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#To_install_a_Nyquist_plug-in:"><span class="tocnumber">1</span> <span class="toctext">To install a Nyquist plug-in:</span></a>
+<li class="toclevel-1 tocsection-1"><a href="#To_install_a_Nyquist_plugin:"><span class="tocnumber">1</span> <span class="toctext">To install a Nyquist plugin:</span></a>
 <ul>
 <li class="toclevel-2 tocsection-2"><a href="#Allow_overwriting"><span class="tocnumber">1.1</span> <span class="toctext">Allow overwriting</span></a></li>
 </ul>
@@ -58,49 +66,51 @@ All Nyquist plug-ins are plain text files that have the <a rel="nofollow" class=
 </ul>
 </div>
 
-<h2><span class="mw-headline" id="To_install_a_Nyquist_plug-in:">To install a Nyquist plug-in:</span></h2>
-<ol><li> Click the 'File Browser' button and select the plug-in file.</li>
-<li> Click the 'OK' button to install, or 'Cancel'.</li>
+<h2><span class="mw-headline" id="To_install_a_Nyquist_plugin:">To install a Nyquist plugin:</span></h2>
+<ol><li> Click the 'File Browser' button and select the plugin file.</li>
+<li> Click the 'Apply' button to install.</li>
 <li> Carefully review the output message.</li>
-<li> Use the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><b>Plug-in Manager</b></a> to enable the installed plug-in.</li></ol>
+<li> Close and relaunch Audacity to automatically enable the new effects so they are available in the Audacity menu.</li></ol>
+<p><br />
+</p>
 <h3><span class="mw-headline" id="Allow_overwriting">Allow overwriting</span></h3>
-<p>This is off by default, preventing you from accidentally overwriting an existing Nyquist plug-in of the same name.
-</p><p>If you do wish to overwrite an existing Nyquist plug-in, change that to "<b>Allow</b>".
+<p>This is off by default, preventing you from accidentally overwriting an existing Nyquist plugin of the same name.
+</p><p>If you do wish to overwrite an existing Nyquist plugin, change that to "<b>Allow</b>".
 </p><p><br />
 </p>
 <div id="tips"></div>
 <h2><span class="mw-headline" id="Tips:">Tips:</span></h2>
-<p><b>Windows / Linux:</b> If you are unable to locate a plug-in that you have downloaded, this may be due to your web browser adding '.TXT' to the file name. In this case, you can change the file type filter in the file browser to show text files, or to show all files. The <span class="npi">Nyquist Plug-in Installer</span> is able to automatically correct the file name if '.TXT' has been erroneously added.
-</p><p><b>macOS:</b> When downloading a Nyquist plug-in from the Internet, the web browser <i>may</i> add '.TXT' to the file name. <span class="npi">Nyquist Plug-in Installer</span> can correct this error automatically. If the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Filename_extension">filename extension</a> is anything other than '.NY' or '.NY.TXT', then it is not a valid Nyquist plug-in and installation will fail.
-</p><p><b><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Zip_(file_format)">.ZIP files:</a></b> If the plug-in file name ends with '.ZIP', then it is an <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Archive_file">archive file</a>. The plug-in file(s) inside the '.ZIP' files must be extracted first before they can be installed.
-</p><p><b>On successful installation</b>: The <span class="npi">Nyquist Plug-in Installer</span> will display the name of the installed plug-in, and the full location of where it has been installed. Note that the installed plug-in will <b>not</b> be available in the Audacity menus until it has been enabled in the '<a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plug-in Manager</a>'.
+<p><b>Windows / Linux:</b> If you are unable to locate a plugin that you have downloaded, this may be due to your web browser adding '.TXT' to the file name. In this case, you can change the file type filter in the file browser to show text files, or to show all files. The <span class="npi">Nyquist Plugin Installer</span> is able to automatically correct the file name if '.TXT' has been erroneously added.
+</p><p><b>macOS:</b> When downloading a Nyquist plugin from the Internet, the web browser <i>may</i> add '.TXT' to the file name. <span class="npi">Nyquist Plugin Installer</span> can correct this error automatically. If the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Filename_extension">filename extension</a> is anything other than '.NY' or '.NY.TXT', then it is not a valid Nyquist plugin and installation will fail.
+</p><p><b><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Zip_(file_format)">.ZIP files:</a></b> If the plugin file name ends with '.ZIP', then it is an <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Archive_file">archive file</a>. The plugin file(s) inside the '.ZIP' files must be extracted first before they can be installed.
+</p><p><b>On successful installation</b>: The <span class="npi">Nyquist Plugin Installer</span> will display the name of the installed plugin, and the full location of where it has been installed. Note that the installed plugin will <b>not</b> be available in the Audacity menus until it has been enabled in the '<a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a>'.
 </p><p><br />
 </p>
 <div id="errors"></div>
 <h2><span class="mw-headline" id="Error_messages:">Error messages:</span></h2>
 <dl><dt> <i>&lt;file name&gt;</i> not found or cannot be read.</dt>
-<dd> The plug-in file selected does not exist, or is not readable. Check that you have selected the correct file.</dd>
-<dt> <i>&lt;file name&gt;</i> is not a supported plug-in.</dt>
-<dd> The selected file is not a Nyquist plug-in, or is malformed. (It may be a <i>valid</i> plug-in, but is not fully compliant with Nyquist plug-in standards.)</dd>
-<dt> <i>&lt;file name&gt;</i> is not a valid Nyquist plug-in.</dt>
-<dd> Nyquist plug-ins <b>must</b> have the filename extension '.NY'. This error occurs if the file does not have the correct file extension and the <span class="npi">Nyquist Plug-in Installer</span> is unable to correct it.</dd>
+<dd> The plugin file selected does not exist, or is not readable. Check that you have selected the correct file.</dd>
+<dt> <i>&lt;file name&gt;</i> is not a supported plugin.</dt>
+<dd> The selected file is not a Nyquist plugin, or is malformed. (It may be a <i>valid</i> plugin, but is not fully compliant with Nyquist plugin standards.)</dd>
+<dt> <i>&lt;file name&gt;</i> is not a valid Nyquist plugin.</dt>
+<dd> Nyquist plugins <b>must</b> have the filename extension '.NY'. This error occurs if the file does not have the correct file extension and the <span class="npi">Nyquist Plugin Installer</span> is unable to correct it.</dd>
 <dt> <i>&lt;file name&gt;</i> cannot be written.</dt>
-<dd> The plug-in cannot be written to the default installation location. Ensure that you are logged in with a full user account (not a 'guest' account).</dd>
+<dd> The plugin cannot be written to the default installation location. Ensure that you are logged in with a full user account (not a 'guest' account).</dd>
 <dt> <i>&lt;file name&gt;</i> is already installed.</dt>
-<dd> To avoid accidentally overwriting other plug-ins, if a plug-in with the same file name exists, the <span class="npi">Nyquist Plug-in Installer</span> will not overwrite it.</dd></dl>
-<div class="note">If you want to update an older version of the plug-in, you will need to enable the <a href="#Allow_overwriting" title="Nyquist Plug-in Installer">Allow overwriting</a> option.
-<ul><li> If you are sure that the conflicting plug-in is a totally different plug-in that happens to have the same file name, then you could try renaming the new plug-in. In this case you must ensure that the new name retains the '.NY' filename extension.</li>
+<dd> To avoid accidentally overwriting other plugins, if a plugin with the same file name exists, the <span class="npi">Nyquist Plugin Installer</span> will not overwrite it.</dd></dl>
+<div class="note">If you want to update an older version of the plugin, you will need to enable the <a href="#Allow_overwriting" title="Nyquist Plug-in Installer">Allow overwriting</a> option.
+<ul><li> If you are sure that the conflicting plugin is a totally different plugin that happens to have the same file name, then you could try renaming the new plugin. In this case you must ensure that the new name retains the '.NY' filename extension.</li>
 <li> Manual installation is still supported. See the <a href="installing_plug_ins.html" title="Installing Plug-ins">instructions</a> for your operating system.</div></li></ul>
 <p><br />
 </p>
 <div id="advanced"></div>
 <h2><span class="mw-headline" id="Advanced_Usage">Advanced Usage</span></h2>
-<div class="note">Although currently rare, some plug-ins may include additional files in TXT, HTML or LSP formats.
-<ul><li> TXT / HTML files may be used by plug-ins to display a user manual for the plug-in.</li></ul>
-<dl><dd><dl><dd> Plug-ins developers that wish to include help files should refer to this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-in_Headers#helpfile">documentation in the Audacity  wiki</a>.</dd></dl></dd></dl>
-<ul><li> LSP files may be used by a plug-in to provide additional code that is, or can be used by multiple plug-ins.</div></li></ul>
+<div class="note">Although currently rare, some plugins may include additional files in TXT, HTML or LSP formats.
+<ul><li> TXT / HTML files may be used by plugins to display a user manual for the plugin.</li></ul>
+<dl><dd><dl><dd> Plugins developers that wish to include help files should refer to this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-in_Headers#helpfile">documentation in the Audacity  wiki</a>.</dd></dl></dd></dl>
+<ul><li> LSP files may be used by a plugin to provide additional code that is, or can be used by multiple plugins.</div></li></ul>
 <p>To install other supported file types (TXT, HTML, LSP), select the appropriate file type filter in the file browser.
-</p><p>Note that the <b>only</b> file type for a Nyquist plug-in is <b>.NY</b>. The other supported file types are copied to the user's plug-in folder so that the associated plug-in can access them, but do not need to be enabled in the Plug-In Manager, and do not appear in the Plug-In Manager.
+</p><p>Note that the <b>only</b> file type for a Nyquist plugin is <b>.NY</b>. The other supported file types are copied to the user's plugin folder so that the associated plugin can access them, but do not need to be enabled in the Plugin Manager, and do not appear in the Plugin Manager.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -108,8 +118,8 @@ All Nyquist plug-ins are plain text files that have the <a rel="nofollow" class=
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top"><b>Plug-in Developer Note:</b>
-<dl><dd> If a help file is included with a plug-in, it should be named in a manner to clearly show that it belongs with the plug-in. For example, if the plug-in is named "my-plug-in.ny", then the associated help file may be called "my-plug-in.html" or "my-plug-in-help.html".</dd></dl>
+<td align="left" valign="top"><b>Plugin Developer Note:</b>
+<dl><dd> If a help file is included with a plugin, it should be named in a manner to clearly show that it belongs with the plugin. For example, if the plugin is named "my-plugin.ny", then the associated help file may be called "my-plugin.html" or "my-plugin-help.html".</dd></dl>
 </td></tr></table></div>
 
 
@@ -146,10 +156,10 @@ All Nyquist plug-ins are plain text files that have the <a rel="nofollow" class=
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -188,7 +198,7 @@ All Nyquist plug-ins are plain text files that have the <a rel="nofollow" class=
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Nyquist_Plug-in_Installer">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Nyquist_Plug-in_Installer">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

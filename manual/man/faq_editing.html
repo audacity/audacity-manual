@@ -201,8 +201,8 @@
 </p>
 <div id="real_time"></div>
 <h3><span class="mw-headline" id="Can_Audacity_preview_or_apply_effects_live.2C_in_real-time.3F">Can Audacity preview or apply effects live, in real-time?</span></h3>
-<p><a href="effect_menu_ladspa.html" title="Effect Menu: LADSPA">LADSPA</a>, <a href="effect_menu_lv2.html" title="Effect Menu: LV2">LV2</a>, <a href="effect_menu_vst.html" title="Effect Menu: VST">VST</a> and <a href="effect_menu_audiounit.html" title="Effect Menu: AudioUnit">Audio Unit</a> (Mac only) effects support <a href="real_time_preview_of_effects.html" title="Real-time preview of effects">real-time preview of effects</a>. Only a few shipped effects support real-time preview but we hope to extend this to more effects in due course. 
-</p><p>Audacity cannot yet apply effects in real-time while recording or while otherwise writing data to the project.    
+<p>Yes for some Real-time enabled effects.  Version 3.2.0 onwards introduced a new real-time effects stack, accesses via the <span class="button">Effects</span> button is a track's Track Control Panel.
+</p><p>For details see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects"><b>Using realtime effects</b></a> on the Audacity Support website.    
 </p><p>Advanced users can apply effects to recordings in real-time by applying the effects in a VST host and routing the effect output to be recorded by Audacity. See <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewtopic.php?f=26&amp;t=5033">this Forum topic</a> and ask on the Forum if you need any help. 
 </p><p><a href="#top">back to top</a>
 </p><p><br />
@@ -212,7 +212,7 @@
 <h3><span class="mw-headline" id="How_do_I_convert_a_stereo_track_to_mono.2C_or_mono_to_stereo.3F">How do I convert a stereo track to mono, or mono to stereo?</span></h3>
 <p>Use <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_stereo_down_to_mono" title="Tracks Menu: Mix">Mix Stereo down to Mono</a></span>. This converts the <a href="audacity_selection.html" title="Audacity Selection">selected</a> stereo track(s) into the same number of mono tracks, combining left and right channels equally. This command is not available for stereo tracks split into left and right channels. Stereo Track to Mono mixes the two channels together then reduces the volume of the mix by -6 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> (halves the volume) to produce an average of the two channels. Therefore if one channel of the stereo track is louder than the other, the peak volume of the resulting mono track will be reduced. The resulting track will never <i><b><a href="glossary.html#clipping" title="Glossary">clip</a></b></i> if the original stereo track does not.
 </p><p>Alternatively you can use <span class="menu"><a href="audio_track_dropdown_menu.html#split" title="Audio Track Dropdown Menu">Split Stereo to Mono</a></span> from the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> to create separate mono tracks for each channel. If you want to discard one faulty or noisy channel entirely, use the <span class="button">X</span> button top left of the track, or select the track then choose <span class="menu">Tracks &gt; <a href="tracks_menu.html#remove_tracks" title="Tracks Menu">Remove Tracks</a></span>. Split Stereo to Mono can also be useful if you are making a <a href="mixing.html" title="Mixing">mix</a> of multiple tracks. You have more control using the <a href="audio_tracks.html#pan" title="Audio Tracks">Pan Sliders</a> on mono tracks than if you use the Track Dropdown Menu to Split Stereo Track to left and right channels.      
-</p><p>There is no general audio benefit in converting a mono track to stereo. A mono track will already play on both speakers of a stereo player. If you want to add an illusion of stereo space and depth, try this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Effect_Plugins#Pseudo-Stereo">Pseudo-Stereo plug-in</a>.
+</p><p>There is no general audio benefit in converting a mono track to stereo. A mono track will already play on both speakers of a stereo player. If you want to add an illusion of stereo space and depth, try this <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Effect_Plugins#Pseudo-Stereo">Pseudo-Stereo plugin</a>.
 </p><p><br />
 <a href="#top">back to top</a>
 </p><p><br />
@@ -255,10 +255,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -297,7 +297,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Editing">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Editing">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -37,21 +37,38 @@
 </p>
 
 </li></ul>
-<div class="intro">These two errors are shown when there is insufficient space in a track to paste audio or restore cut audio due to succeeding audio clips.<p>They <i><b>only</b></i> occur if you have made some non-deafult settings in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences"><b>Tracks Behaviors</b></a> preferences.</p> </div>
+<div class="intro">These two errors are shown when there is insufficient space in a track to: 
+<ul><li>paste audio</li>
+<li>restore cut audio due to succeeding audio clips. </div></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#paste">There is not enough room available to paste the selection</a></li>
+<li><a href="#expand">There is not enough room available to expand the cut line</a></li></ol>
 <p><br />
 </p>
 <div id="space"></div>
-<h2><span class="mw-headline" id="Insufficient_space_in_track_-_for_pasting_audio_or_restoring_cut_audio">Insufficient space in track - for pasting audio or restoring cut audio</span></h2>
-<p>These two errors only occur if you make non-default settings in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences"><b>Tracks Behaviors</b></a> preferences. 
-</p><p>Both of them require you to have turned "<b>off</b>" the setting for "<b><a href="tracks_behaviors_preferences.html#move" title="Tracks Behaviors Preferences">Editing a clip can move other clips</a></b>" by un-checking it.
-</p><p>The default setting for this is "<b>on</b>" and in that case any following clips are moved to provide room
-</p><p><br />
-</p>
 <div id="paste"></div>
 <h2><span class="mw-headline" id="There_is_not_enough_room_available_to_paste_the_selection">There is not enough room available to paste the selection</span></h2>
 <dl><dd><span title="Warning Dialog - There is not enough room to paste the selection"><img alt="Warning Dialog - There is not enough room to paste the selection.png" src="../m/images/8/8c/warning_dialog_there_is_not_enough_room_to_paste_the_selection.png" width="415" height="134" /></span></dd></dl>
-<p>If there is sufficient room to paste the selection that you placed on the Audacity clipboard with Cut or Copy without moving the succeeding clips then the Paste will take place.
-</p><p>If there is insufficient space then this error message will be shown and the clipboard contents will not be pasted.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">If you want succeeding clips to move you may want to turn "<b>on</b>" the setting for "<b>Editing a clip can move other clips</b>" in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences"><b>Tracks Behaviors</b></a> preferences.
+</td></tr></table>
+</div>
+<p>If there is sufficient room to paste the selection that you placed on the Audacity clipboard with Cut or Copy without moving the succeeding clips then the Paste <i><b>will</b></i> take place.
+</p><p>If there is insufficient space then this error message will be shown and the clipboard contents will <i><b>not</b></i> be pasted.
+</p>
+<div class="note"><span style="font-weight: bold; font-size:118%">Preferences setting in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors</a> preference that controls this behavior:</span>
+<ul><li>When <b>Editing a clip can move other clips</b> is checked "<b>off</b>" (<i>default setting)</i> "Editing a clip can move..." pins clips so that they cannot move in response to an edit in another clip. 
+<ul><li>When removing content, any following clips will not be allowed to move back. </li>
+<li>When pasting, an error message will display if there is not enough room to paste without moving the following clips.</li></ul></li></ul>
+<ul><li>When this is checked "<b>on</b>" in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences"><b>Tracks Behaviors</b></a> preferences <i>(non-default setting)</i> any clips following to right of the edit point can always move as necessary in response to <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">pasting</a>, <a href="edit_menu.html#cut" title="Edit Menu">cutting</a>, <a href="edit_menu.html#delete" title="Edit Menu">deleting</a> or other change that adds or removes content.</li></ul>
+<p>See <a href="preferences_settings_that_affect_edit_behavior.html#move_clips" title="Preferences settings that affect Edit behavior">Preferences settings that affect Edit behavior</a> for details of what this setting does.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -59,19 +76,28 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">You may want to turn back "<b>on</b>" the setting for "<b>Editing a clip can move other clips</b>" by re-checking it in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks behaviors</a> preferences.
+<td align="left" valign="top"><b><a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Lock</a> trumps (over-rides) this setting.</b><p> If you have Sync-Lock enabled in the <a href="tracks_menu.html" title="Tracks Menu">Tracks Menu</a>, then clips can move even when this setting is turned "<b>off</b>".</p>
 </td></tr></table>
-</div>
+</div></div>
 <p><br />
 </p>
 <div id="expand"></div>
 <h2><span class="mw-headline" id="There_is_not_enough_room_available_to_expand_the_cut_line">There is not enough room available to expand the cut line</span></h2>
-<dl><dd><span title="Warning Dialog - There is not enough room available to expand the cut line"><img alt="Warning Dialog - There is not enough room available to expand the cut line.png" src="../m/images/c/c9/warning_dialog_there_is_not_enough_room_available_to_expand_the_cut_line.png" width="418" height="134" /></span></dd></dl>
-<p>If you have turned "on" "<b>Enable cut lines</b>" in <a href="tracks_behaviors_preferences.html#cut" title="Tracks Behaviors Preferences">Tracks behaviors</a> preferences you can then click on the cut line at any time to restore the cut audio.
-</p><p>If there is insufficient room to restore the cut audio without moving succeeding clips the this error will be shown and the cut audio will not be restored.
-</p><p><br />
+<p>This error only occurs if you have made a non-default setting in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences"><b>Tracks Behaviors</b></a> preferences.
 </p>
+<dl><dd><span title="Warning Dialog - There is not enough room available to expand the cut line"><img alt="Warning Dialog - There is not enough room available to expand the cut line.png" src="../m/images/c/c9/warning_dialog_there_is_not_enough_room_available_to_expand_the_cut_line.png" width="418" height="134" /></span></dd></dl>
+<p>If you have turned "on" "<b>Enable cut lines</b>" in <a href="tracks_behaviors_preferences.html#cut" title="Tracks Behaviors Preferences">Tracks behaviors</a> preferences <i>(non-default)</i> you can then click on the cut line at any time to restore the cut audio.
+</p><p>If there is insufficient room to restore the cut audio without moving succeeding clips the this error will be shown and the cut audio will not be restored.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">If you want to restore the cut audio with succeeding clips moving you may want to turn "<b>on</b>" the setting for "<b>Editing a clip can move other clips</b>" by checking it in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences"><b>Tracks Behaviors</b></a> preferences.
+</td></tr></table>
+</div>
 
 
 
@@ -107,10 +133,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -149,7 +175,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Error:_Insufficient_space_in_track">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Error:_Insufficient_space_in_track">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

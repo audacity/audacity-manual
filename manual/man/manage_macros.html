@@ -34,7 +34,7 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>Manage Macros</b></i> allows you to edit, remove or rename existing Macros or add a new Macro and to apply Macros to you project or a set of files. Any <a href="effect_menu.html#built-in" title="Effect Menu">built-in</a>, <a href="effect_menu_ladspa.html" title="Effect Menu: LADSPA">LADSPA</a>, <a href="effect_menu_lv2.html" title="Effect Menu: LV2">LV2</a>, <a href="effect_menu_nyquist.html" title="Effect Menu: Nyquist">Nyquist</a>, <a href="effect_menu_vst.html" title="Effect Menu: VST">VST</a> or <a href="effect_menu_audiounit.html" title="Effect Menu: AudioUnit">Audio Unit</a> (Mac) effect shown in the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a> can be added to a Macro. You can also add plug-ins in any format that are shown in the <a href="generate_menu.html" title="Generate Menu">Generate</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze</a> Menus (including <a href="analyze_menu.html#vamp" title="Analyze Menu">Vamp</a> analysis effects), the built-in <a href="find_clipping.html" title="Find Clipping">Find Clipping</a> analyzer and a number of export commands.<p>Macros may be applied to either the entirety of the current project or to a selection of files using the <span class="menu">Tools &gt; <a href="macros.html" title="Macros">Macros...</a></span> command.</p><p>It is possible to use <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a> in Macros but see <a href="noise_reduction.html#macros" title="Noise Reduction">Noise Reduction Tips</a> for how the Noise Profile is captured.</p>
+<div class="intro"><i><b>Manage Macros</b></i> allows you to edit, remove or rename existing Macros or add a new Macro and to apply Macros to you project or a set of files. Any <a href="effect_menu_built_in.html" title="Effect Menu: Built-in">Audacity</a>, <a href="effect_menu_ladspa.html" title="Effect Menu: LADSPA">LADSPA</a>, <a href="effect_menu_lv2.html" title="Effect Menu: LV2">LV2</a>, <a href="effect_menu_nyquist.html" title="Effect Menu: Nyquist">Nyquist</a>, <a href="effect_menu_vst.html" title="Effect Menu: VST">VST</a> or <a href="effect_menu_audiounit.html" title="Effect Menu: AudioUnit">Audio Unit</a> (Mac) effect shown in the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a> can be added to a Macro. You can also add plugins in any format that are shown in the <a href="generate_menu.html" title="Generate Menu">Generate</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze</a> Menus (including <a href="analyze_menu.html#vamp" title="Analyze Menu">Vamp</a> analysis effects), the built-in <a href="find_clipping.html" title="Find Clipping">Find Clipping</a> analyzer and a number of export commands.<p>Macros may be applied to either the entirety of the current project or to a selection of files using the <span class="menu">Tools &gt; <a href="macros.html" title="Macros">Macros...</a></span> command.</p><p>It is possible to use <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a> in Macros but see <a href="noise_reduction.html#macros" title="Noise Reduction">Noise Reduction Tips</a> for how the Noise Profile is captured.</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -53,7 +53,6 @@
 <li><a href="#parameters">Macro Command Parameters</a></li>
 <li><a href="#selection">Selections in Macros</a></li>
 <li><a href="#export">Commands for Exporting audio files</a></li>
-<li><a href="#deprecated">Deprecated Export commands</a></li>
 <li><a href="#comments">Comments in Macros</a></li></ul></li>
 <li><a href="#buttons">The buttons</a>
 <ul><li><a href="#shrink">Shrink - reduced Macros Palette dialog</a></li>
@@ -220,12 +219,6 @@
 <b>C:\Users\&lt;username&gt;\Desktop\my file.flac</b>
 </p>
 </div>
-<div id="deprecated"></div>
-<h3><span class="mw-headline" id="Deprecated_Export_commands">Deprecated Export commands</span></h3>
-<p>The following two commands are now deprecated and may well be removed in future versions of Audacity.  They were  part of "<b>CleanSpeech</b>" <i>(which has long been removed from Audacity)</i>.
-</p>
-<ul><li> The <b>Export as MP3 56k before</b> and <b>Export as MP3 56k after</b> commands can be used respectively to export "before" and "after" <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> files at 56 kbps <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i>  at any point in the Macro processing. This allows you to compare the result of one or more effects, or provide files for different purposes with and without a particular effect. 
-<ul><li> The name of the MP3 exported by the "Export as MP3 56k before" command is prefixed by "MasterBefore_" followed by the date and time. The name of the MP3 exported by the "Export as MP3 56k after" command is prefixed by "MasterAfter_" followed by the date and time. </li></ul></li></ul>
 <div id="comments"></div>
 <h3><span class="mw-headline" id="Comments_in_Macros">Comments in Macros</span></h3>
 <p>Comments be added to Macros to enable you to document what is happening in the Macro.
@@ -271,10 +264,10 @@
 </p>
 <div id="error"></div>
 <h2><span class="mw-headline" id="Error:_Batch_command_not_recognized">Error: Batch command not recognized</span></h2>
-<div class="note">This error may sometimes occur for one or more commands in a Macro when updating from a previous Audacity version. The error may also occur if users sharing Macro have different Audacity versions or different versions of the plug-ins used in the Macro. The error will occur if:
+<div class="note">This error may sometimes occur for one or more commands in a Macro when updating from a previous Audacity version. The error may also occur if users sharing Macro have different Audacity versions or different versions of the plugins used in the Macro. The error will occur if:
 <ul><li> any command in the Macro uses a different text format than that recognized by the version of Audacity in use </li>
-<li> any plug-ins listed in the Macro are missing, in an incorrect location or are incompatible with the version of Audacity in use. </li></ul>
-To resolve these errors, ensure you have compatible versions of all required plug-ins and that the plug-ins are <a href="faq_installation_and_plug_ins.html#plug-ins" title="FAQ:Installation and Plug-Ins">installed correctly</a>. If necessary, use the "Manage Macros" dialog to delete the command that fails then insert a replacement command for the same effect from the "Select Command" dialog.</div>
+<li> any plugins listed in the Macro are missing, in an incorrect location or are incompatible with the version of Audacity in use. </li></ul>
+To resolve these errors, ensure you have compatible versions of all required plugins and that the plugins are <a href="faq_installation_and_plug_ins.html#plug-ins" title="FAQ:Installation and Plug-Ins">installed correctly</a>. If necessary, use the "Manage Macros" dialog to delete the command that fails then insert a replacement command for the same effect from the "Select Command" dialog.</div>
 <p><br />
 </p><p><a href="apply_macro.html" title="Apply Macro"><b>&lt;</b> Apply Macro</a>
 </p><p><a href="macros.html" title="Macros"><b>|&lt;</b> Back to: Macros</a>
@@ -313,10 +306,10 @@ To resolve these errors, ensure you have compatible versions of all required plu
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -355,7 +348,7 @@ To resolve these errors, ensure you have compatible versions of all required plu
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Manage_Macros">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Manage_Macros">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

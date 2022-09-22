@@ -1300,15 +1300,7 @@
 </td>
 <td>Starts playback like "Play/Stop", but stopping playback sets the restart position to the stop point. When stopped, this command is the same as "Play/Stop". When playing, this command stops playback and moves the cursor (or the start of the selection) to the position where playback stopped.
 </td></tr>
-<tr>
-<td><b>PlayLooped:</b>
-</td>
-<td><a href="transport_menu_playing.html#loop_play" title="Transport Menu: Playing">Loop Play</a>
-</td>
-<td><i>none</i>
-</td>
-<td>Plays the selection over and over again.
-</td></tr>
+
 <tr>
 <td><b>Pause:</b>
 </td>
@@ -1320,7 +1312,7 @@
 </td></tr></table>
 <div id="transport_recording_submenu"></div>
 <h3><span class="mw-headline" id="Transport:_Recording"><a href="transport_menu_recording.html" title="Transport Menu: Recording">Transport: Recording</a></span></h3>
-<div class="note">These commands control recording in Audacity. You can Start, Stop or Pause recording in your project. You can either start a recording on your existing track or an a new track. </div>
+<div class="note">These commands control recording in Audacity. You can Start, Stop or Pause recording in your project. You can either start a recording on your existing track or on a new track. </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Scripting Id
@@ -1501,37 +1493,8 @@
 </td>
 <td>Moves the cursor to the end of the project.
 </td></tr></table>
-<div id="transport_play_region_submenu"></div>
-<h3><span class="mw-headline" id="Transport:_Play_Region"><a href="transport_menu_play_region.html" title="Transport Menu: Play Region">Transport: Play Region</a></span></h3>
-<div class="note">These commands enable you to lock a play region and unlock it </div>
-<table class="prettytablerows" rules="rows" border="2" width="100%">
-<tr>
-<th width="15%">Scripting Id
-</th>
-<th width="15%">Action
-</th>
-<th width="30%">Parameters
-</th>
-<th width="55%">Description
-</th></tr>
-<tr>
-<td><b>LockPlayRegion:</b>
-</td>
-<td><a href="transport_menu_play_region.html#lock" title="Transport Menu: Play Region">Lock</a>
-</td>
-<td><i>none</i>
-</td>
-<td>Locks standard playback to the current position of the playback region, or to the current position of the Quick-Play region).
-</td></tr>
-<tr>
-<td><b>UnlockPlayRegion:</b>
-</td>
-<td><a href="transport_menu_play_region.html#unlock" title="Transport Menu: Play Region">Unlock</a>
-</td>
-<td><i>none</i>
-</td>
-<td>Removes the Play Region Lock.
-</td></tr></table>
+<p><br />
+</p>
 <div id="transport_transport_options_submenu"></div>
 <h3><span class="mw-headline" id="Transport:_Transport_Options"><a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport: Transport Options</a></span></h3>
 <div class="note">This submenu lets you manage and set various options for transport (playing and recording) in Audacity </div>
@@ -1659,7 +1622,7 @@
 </td>
 <td><i>none</i>
 </td>
-<td>Adds an empty stero track to the project
+<td>Adds an empty stereo track to the project
 </td></tr>
 <tr>
 <td><b>NewLabelTrack:</b>
@@ -1940,11 +1903,11 @@
 <tr>
 <td><b>ManageGenerators:</b>
 </td>
-<td><a href="generate_menu.html#add_remove_plugins" title="Generate Menu">Add / Remove Plug-ins...</a>
+<td><a href="generate_menu.html#add_remove_plugins" title="Generate Menu">Plugin Manager</a>
 </td>
 <td><i>none</i>
 </td>
-<td>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog where you can enable or disable particular Effects, Generators and Analyzers in Audacity. Even if you do not add any third-party plug-ins, you can use this to make the Effect menu shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Add / Remove Effects, Generators and Analyzers</a>.
+<td>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog where you can enable or disable particular Effects, Generators and Analyzers in Audacity. Even if you do not add any third-party plugins, you can use this to make the Effect menu shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a>.
 </td></tr>
 <tr>
 <td><b>Built-in:</b>
@@ -2117,7 +2080,7 @@
 </td></tr></table>
 <div id="effect_menu"></div>
 <h2><span class="mw-headline" id="Effect_Menu"><a href="effect_menu.html" title="Effect Menu">Effect Menu</a></span></h2>
-<div class="note">Audacity includes many built-in effects and also lets you use a wide range of plug-in effects. </div>
+<div class="note">Audacity includes many built-in effects and also lets you use a wide range of plugin effects. </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Scripting Id
@@ -2131,11 +2094,11 @@
 <tr>
 <td><b>ManageEffects:</b>
 </td>
-<td><a href="effect_menu.html#add_remove_plugins" title="Effect Menu">Add / Remove Plug-ins...</a>
+<td><a href="effect_menu.html#add_remove_plugins" title="Effect Menu">Plugin Manager</a>
 </td>
 <td><i>none</i>
 </td>
-<td>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog where you can enable or disable particular Effects, Generators and Analyzers in Audacity. Even if you do not add any third-party plug-ins, you can use this to make the Effect menu shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Add / Remove Effects, Generators and Analyzers</a>.
+<td>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog where you can enable or disable particular Effects, Generators and Analyzers in Audacity. Even if you do not add any third-party plugins, you can use this to make the Effect menu shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a>.
 </td></tr>
 <tr>
 <td><b>RepeatLastEffect:</b>
@@ -2810,11 +2773,11 @@
 <tr>
 <td><b>ManageAnalyzers:</b>
 </td>
-<td><a href="analyze_menu.html#add_remove_plugins" title="Analyze Menu">Add / Remove Plug-ins...</a>
+<td><a href="analyze_menu.html#add_remove_plugins" title="Analyze Menu">Plugin Manager</a>
 </td>
 <td><i>none</i>
 </td>
-<td>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog where you can enable or disable particular Effects, Generators and Analyzers in Audacity. Even if you do not add any third-party plug-ins, you can use this to make the Effect menu shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Add / Remove Effects, Generators and Analyzers</a>.
+<td>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog where you can enable or disable particular Effects, Generators and Analyzers in Audacity. Even if you do not add any third-party plugins, you can use this to make the Effect menu shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a>.
 </td></tr>
 <tr>
 <td><b>ContrastAnalyser:</b>
@@ -2909,11 +2872,11 @@
 <tr>
 <td><b>ManageTools:</b>
 </td>
-<td><a href="tools_menu.html#add_remove_plugins" title="Tools Menu">Add / Remove Plug-ins...</a>
+<td><a href="tools_menu.html#add_remove_plugins" title="Tools Menu">Plugin Manager</a>
 </td>
 <td><i>none</i>
 </td>
-<td>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog where you can enable or disable particular Effects, Generators and Analyzers in Audacity. Even if you do not add any third-party plug-ins, you can use this to make the Effect menu shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Add / Remove Effects, Generators and Analyzers</a>.
+<td>Selecting this option from the Effect Menu (or the <a href="generate_menu.html" title="Generate Menu">Generate Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog where you can enable or disable particular Effects, Generators and Analyzers in Audacity. Even if you do not add any third-party plugins, you can use this to make the Effect menu shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a>.
 </td></tr>
 <tr>
 <td><b>ManageMacros:</b>
@@ -3002,7 +2965,7 @@
 <p><i>int <b>Version</b>, (default:3)</i><br />
 </p>
 </td>
-<td>Brings up a dialog where you can enter Nyquist commands. Nyquist is a programming language for generating, processing and analyzing audio. For more information see <a rel="nofollow" class="external text" href="http://wiki.audacityteam.org/wiki/Nyquist_Plugins_Reference">Nyquist Plug-ins Reference</a>.
+<td>Brings up a dialog where you can enter Nyquist commands. Nyquist is a programming language for generating, processing and analyzing audio. For more information see <a rel="nofollow" class="external text" href="http://wiki.audacityteam.org/wiki/Nyquist_Plugins_Reference">Nyquist Plugins Reference</a>.
 </td></tr>
 <tr>
 <td><b>NyquistPlug-inInstaller:</b>
@@ -3015,7 +2978,7 @@
 <ul><li> Disallow</li>
 <li> Allow</li></ul>
 </td>
-<td>A  Nyquist plug-in that simplifies the installation of other Nyquist plug-ins.
+<td>A  Nyquist plugin that simplifies the installation of other Nyquist plugins.
 </td></tr>
 <tr>
 <td><b>RegularIntervalLabels:</b>
@@ -3460,7 +3423,6 @@
 </td></tr></table>
 <div id="extra_playatspeed_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Play-at-Speed"><a href="extra_menu_play_at_speed.html" title="Extra Menu: Play-at-Speed">Extra: Play-at-Speed</a></span></h3>
-
 <div class="note">Extra commands related to play at speed </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
@@ -4172,7 +4134,8 @@
 <p><i>enum <b>Display</b>, (default:unchanged)</i><br />
 </p>
 <ul><li> Waveform</li>
-<li> Spectrogram</li></ul>
+<li> Spectrogram</li>
+<li> Multi-view</li></ul>
 <p><i>enum <b>Scale</b>, (default:unchanged)</i><br />
 </p>
 <ul><li> Linear</li>
@@ -4424,7 +4387,7 @@
 <p><i>int <b>NumChannels</b>, (default:1)</i><br />
 </p>
 </td>
-<td>Exports to a named file.  This version of export has the full set of export options.  However, a current limitation is that the detailed option settings are always stored to and taken from saved preferences.  The net effect is that for a given format, the most recently used options for that format will be used. In the current implementation, <b>NumChannels</b> should be 1 (mono) or 2 (stereo).
+<td>Exports selected audio to a named file.  This version of export has the full set of export options.  However, a current limitation is that the detailed option settings are always stored to and taken from saved preferences.  The net effect is that for a given format, the most recently used options for that format will be used. In the current implementation, <b>NumChannels</b> should be 1 (mono) or 2 (stereo).
 </td></tr>
 <tr>
 <td><b>OpenProject2:</b>
@@ -4583,7 +4546,7 @@
 </td>
 <td><i>none</i>
 </td>
-<td>Selecting this will generate a Debug report which could be useful in aiding the developers to identify bugs in Audacity or in third-party plug-ins
+<td>Selecting this will generate a Debug report which could be useful in aiding the developers to identify bugs in Audacity or in third-party plugins
 </td></tr>
 <tr>
 <td><b>CheckDeps:</b>
@@ -4662,10 +4625,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -4704,7 +4667,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

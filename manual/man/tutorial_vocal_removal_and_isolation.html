@@ -52,15 +52,14 @@
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li> <a href="#removal">Vocal Removal with vocals in the middle and instruments spread around them</a></li>
 <li> <a href="#split">Vocal Removal with vocals in one channel and everything else in the other</a></li>
-<li> <a href="#isolate">Vocal Isolation</a></li>
-<li> <a href="#3rdparty">Third-party plug-ins</a></li></ol>
+<li> <a href="#isolate">Vocal Isolation</a></li></ol>
 <div id="removal"></div>
 <h2><span class="mw-headline" id="Case_1:_Vocal_Removal_with_vocals_in_the_middle_and_instruments_spread_around_them">Case 1: Vocal Removal with vocals in the middle and instruments spread around them</span></h2>
 <p>If the vocals are panned in the center of a stereo track the so-called "vocal removal" technique can <i>sometimes</i> be effective by removing what is common to both tracks (that is, the vocals), leaving behind what is different (that is, the instrumentals).
 </p><p>The underlying technique in Audacity is to split the stereo track into its left and right channels, make both mono, invert all <i>(or a selected part)</i> of one of them then play back the result.  Note, this removes everything panned in the center, not just vocals, and returns a dual mono result (both channels have the same audio). In some music this could mean removing instrumental parts. Removal of the vocals can often be incomplete leaving artifacts behind; this is especially true where there are backing vocals or where reverb (echo) has been applied as this spreads sound sources and makes them very hard to extract from each other.
 </p>
 <h3><span class="mw-headline" id="Vocal_Reduction_and_Isolation"><a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation">Vocal Reduction and Isolation</a></span></h3>
-<p>Audacity includes a Nyquist plug-in effect to automate the steps involved in Case&#160;1, at <span class="menu">Effect &gt; <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"> Vocal Reduction and Isolation...</a></span>. If you only wanted to automate Case 1 in the Vocal Reduction and Isolation effect, you would choose the option "Remove Center Classic (Mono)". As in Case 1 above, this removes the whole frequency spectrum of center-panned audio and returns a dual mono track.  
+<p>Audacity includes a Nyquist plugin effect to automate the steps involved in Case&#160;1, at <span class="menu">Effect &gt; <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"> Vocal Reduction and Isolation...</a></span>. If you only wanted to automate Case 1 in the Vocal Reduction and Isolation effect, you would choose the option "Remove Center Classic (Mono)". As in Case 1 above, this removes the whole frequency spectrum of center-panned audio and returns a dual mono track.  
 </p><p>However the default option for Vocal Reduction and Isolation "Remove Vocals" is to be preferred in most cases because this returns stereo output. 
 </p><p>Vocal Reduction and Isolation also lets you specify frequencies above which or below which audio is not removed or isolated. This can help cure the common problem where center-panned bass or Hi-hat is also removed when removing vocals.      
 </p>
@@ -90,7 +89,7 @@
 <li>Delete the copied track (click in the <span class="menu"><a href="audio_tracks.html#panel" title="Audio Tracks">[X]</a></span> at the top left of its Track Control Panel)</li></ol>
 <div class="note">The following may let you remove drums which are not centered but keep the vocals:
 <ol><li>Use the steps above to create a track with isolated vocals.</li>
-<li>Import the original song into Audacity again. Download the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Effect_Plug-ins#Bass_to_Center">Bass to Center</a> Nyquist plug-in and <a href="effect_menu.html#nyquist_effects" title="Effect Menu">install it</a>. Use this plug-in to move the bass frequencies to center.</li>
+<li>Import the original song into Audacity again. Download the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Effect_Plug-ins#Bass_to_Center">Bass to Center</a> Nyquist plugin and <a href="effect_menu.html#nyquist_effects" title="Effect Menu">install it</a>. Use this plugin to move the bass frequencies to center.</li>
 <li> Remove the drums (and the vocals) from the center using <span class="menu">Effect &gt; <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"> Vocal Reduction and Isolation...</a></span>.</li>
 <li>Finally mix the isolated vocals back in.</li></ol>
 </div>
@@ -106,15 +105,7 @@
 <li>Use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + A</span> to select all of both tracks. </li>
 <li>Use <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span>. </li></ol>
 <p>You should now have one combined track that should have a more diminished amplitude where the vocals were kept and the instrumentation removed.
-</p><p><br />
 </p>
-<div id="3rdparty"></div>
-<h2><span class="mw-headline" id="Third-party_plug-ins">Third-party plug-ins</span></h2>
-<p>As well as the above methods supported by Audacity itself there are various third-party plug-ins that can be used to try and remove or isolate vocals.
-</p><p>Please see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Vocal_Removal_Plug-ins">Vocal Removal Plug-ins</a> in the Audacity Wiki for details.
-</p>
-
-
 
 
 
@@ -149,10 +140,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -191,7 +182,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Vocal_Removal_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Vocal_Removal_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

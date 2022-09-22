@@ -2,7 +2,7 @@
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Add / Remove Effects, Generators and Analyzers - Audacity Manual</title>
+<title>Plugin Manager - Add / Remove Effects, Generators and Analyzers - Audacity Manual</title>
 
 
 
@@ -25,7 +25,7 @@
 				
 				<div class="mw-indicators">
 </div>
-				<h1 id="firstHeading" class="firstHeading" lang="en">Add / Remove Effects, Generators and Analyzers</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Plugin Manager - Add / Remove Effects, Generators and Analyzers</h1>
 				
 				<div id="bodyContent" class="mw-body-content">
 					<div id="siteSub">From Audacity Development Manual</div>
@@ -33,33 +33,45 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Manage_Effects,_Generators_and_Analyzers#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-
-<div class="intro">Use the <i><b>Effects, Generators and Analyzers</b></i> Plug-in Manager to add or remove <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers">shipped effects and plug-ins</a> and third-party plug-ins of <a href="effect_menu.html#plugin_types" title="Effect Menu">supported types</a>, without the need to restart Audacity.</div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Tools &gt; Add/Remove Plug-ins...</span>,  <span class="menu">Effect &gt; Add / Remove Plug-ins...</span>,  <span class="menu">Generate &gt; Add / Remove Plug-ins...</span> or <span class="menu">Analyze &gt; Add / Remove Plug-ins...</span></dd></dl>
-<dl><dd><span title="Manage Plug-ins dialog"><img alt="Manage Plug-ins dialog.png" src="../m/images/5/55/manage_plug_ins_dialog.png" width="720" height="346" /></span></dd></dl>
-<div class="note">By default all the Built-in effects, with the exception of <a href="classic_filters.html" title="Classic Filters">Classic Filters</a>, are loaded and enabled in Audacity.  </div>
-<h2><span class="mw-headline" id="Radio_buttons">Radio buttons</span></h2>
-<p>Every time you open the dialog, Audacity scans for all detected plug-ins and lists these together with the built-in effects it ships with.  
-</p><p>Select the <b>All</b> button to see all those built-in effects and plug-ins and their current disabled, enabled or "new" state (see below). 
-</p><p>The buttons <b>Disabled</b>, <b>Enabled</b> and <b>New</b> enable you to list only those effects, generators and analyzers in that respective state.  
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
 </p>
+
+
+<div class="intro">Use the <i><b>Effects, Generators and Analyzers</b></i> Plugin Manager to add or remove <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers">shipped effects and plugins</a> and third-party plugins of <a href="effect_menu.html#plugin_types" title="Effect Menu">supported types</a>, without the need to restart Audacity.</div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Plugin Manager</span>,  <span class="menu">Generate &gt; Plugin Manager</span>, <span class="menu">Analyze &gt; Plugin Manager</span> or <span class="menu">Tools &gt; Plugin Manager</span></dd></dl>
+<dl><dd><span title="Manage Plugins dialog"><img alt="Manage Plugins dialog with added Rescan 3-2-0.png" src="../m/images/d/d2/manage_plugins_dialog_with_added_rescan_3_2_0.png" width="1119" height="341" /></span></dd></dl>
+<div class="note">By default all the Built-in effects, with the exception of <a href="classic_filters.html" title="Classic Filters">Classic Filters</a>, are loaded and enabled in Audacity.  </div>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Radio_buttons">Radio buttons</span></h2>
+<p>Every time you open the dialog, Audacity scans for all detected plugins and lists these together with the built-in effects it ships with.  
+</p><p>Select the <b>All</b> button to see all those built-in effects and plugins and their current disabled, enabled or "new" state (see below). 
+</p><p>The buttons <b>Disabled</b> and <b>Enabled</b> enable you to list only those effects, generators and analyzers in that respective state.
+</p><p><br />
+</p>
+<div id="abling"></div>
 <h2><span class="mw-headline" id="Enabling_and_disabling">Enabling and disabling</span></h2>
 <p>All effects shown in the dialog as <b>Enabled</b> will be visible in the appropriate menu: Effect, Generate or Analyze.
-</p><p><b>New</b> relates to those effects that have never been registered as <b>Enabled</b> in your installation of Audacity. Use this <b>New</b> view to quickly locate an effect that you have just added to your system and wish to enable.
 </p><p>To change the state of any effect, generator or analyzer select it by clicking on it in the list in the dialog, then use either the <span class="button">Enable</span> or <span class="button">Disable</span> button and click the <span class="button">OK</span> button. Note that escaping, clicking Cancel or the window close button will discard your changes. Alternatively you can use  <span class="kbrd" style="background-color: #e0e0f0">Space</span> to toggle the state of the effect from <b>New</b> to <b>Enabled</b> and thence between <b>Enabled</b> and <b>Disabled</b>. 
 </p>
 <ul><li> Press <span class="button">Select All</span> to select all items in the view you are in. The items will now appear with light gray background. The <span class="button">Clear All</span> button deselects all items and can be used to change your mind and quickly enable only one or two individual effects.   </li>
 <li> Multiple individual items from the list can be selected using <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Click</span> to select each additional item or <span class="kbrd" style="background-color: #e0e0f0">Shift + Click</span> to select a range of items. </li></ul>
-<p>Once enabled, an effect can only be disabled (which removes it from the menu) or re-enabled. Unless you are in the "All" view, changing the state of an effect always removes it from the view you are in. The effect can then be seen in the appropriate view for its current state.  
+<p>Unless you are in the "All" view, changing the state of an effect always removes it from the view you are in. The effect can then be seen in the appropriate view for its current state.  
 </p>
 <div class="note">
 <p>Disabling an effect only disables it in Audacity, and does not uninstall it from your system.
 </p>
 </div>
+<p><br />
+</p>
+<div id="rescan"></div>
+<h2><span class="mw-headline" id="Rescan_button">Rescan button</span></h2>
+<p>Clicking on the <span class="button">Rescan</span> button will cause Audacity to rescan your various plugin locations and make available any new plugins you have added since Audacity was launched.
+</p><p><br />
+</p>
+<div id="reset"></div>
 <h2><span class="mw-headline" id="Resetting_effects">Resetting effects</span></h2>
 <p><a href="faq_installation_and_plug_ins.html#reset" title="FAQ:Installation and Plug-Ins">Resetting your Audacity settings</a> (for example, by reinstalling Audacity using the Windows installer with "Reset Preferences" enabled) does not change the enabled or disabled state of your effects. 
-</p><p>If you want to go back to the enabled effects, generators and analyzers that Audacity was installed with (Classic Filters and all shipped or third-party plug-ins are "New" and not in the menus), exit Audacity, open Audacity's <a href="preferences.html#stored" title="Preferences">folder for application data</a> and delete the file "pluginregistry.cfg".
+</p><p>If you want to go back to the enabled effects, generators and analyzers that Audacity was installed with (Classic Filters and all shipped or third-party plugins are "New" and not in the menus), exit Audacity, open Audacity's <a href="preferences.html#stored" title="Preferences">folder for application data</a> and delete the file "pluginregistry.cfg".
 </p>
 
 
@@ -95,10 +107,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -137,7 +149,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Manage_Effects,_Generators_and_Analyzers">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Manage_Effects,_Generators_and_Analyzers">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

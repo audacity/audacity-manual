@@ -35,33 +35,64 @@
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <p><br />
-Now that you know you are getting sound into the computer and you have made your Audacity settings, it is time to set up your recording device.
 </p>
-<h2><span class="mw-headline" id="Setting_up_the_audio_host_and_playback_device">Setting up the audio host and playback device</span></h2>
-<div class="note">
-<p><b>Device Toolbar</b>
-</p><p>On the device toolbar, if you are unsure what settings to use, use MME if it is available, ALSA if on Linux and Core Audio if on Mac.
+<div class="intro">Now that you know you are getting sound into the computer and you have made your Audacity settings, it is time to set up your recording device.<p>There are many other settings that can be made in your <a href="preferences.html" title="Preferences">Preferences</a> do take some time to explore and understand these.</p></div>
+<div id="preferences"></div>
+<div id="audiosetup"></div>
+<h2><span class="mw-headline" id="Audio_Setup"><a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">Audio Setup</a></span></h2>
+<p>Click on the <span class="button">Audio Setup</span> button in the the top tooldock, for details please see <a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">Audio Setup Toolbar</a>.
 </p>
-The choice of recording and play back devices may take some detective work (or trial and error).  The items earlier in the list are generally built-in devices, for example a speaker actually in the laptop, and the later items devices that are plugged in, for example headphones.</div>
-<p><br />
-The <b>Device Toolbar</b>, shown below, is displayed by default in a new installation of Audacity. If Device Toolbar is not visible, click on <span class="menu">View &gt; Toolbars &gt; <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a></span>.
+<dl><dd><span title="The Audio Setup Toolbar"><img alt="Audio Setup Toolbar.png" src="../m/images/b/b3/audio_setup_toolbar.png" width="246" height="178" /></span></dd></dl>
+<div class="note">Instead of using the <span class="button">Audio Setup</span> button you can use <a href="devices_preferences.html" title="Devices Preferences"><b>Devices Preferences</b></a> if you prefer. </div>
+Choose your preferred <b>Audio Host</b>, <b>Recording Device</b> and <b>Playback Device</b> from the dropdown menus. <p>This selects the particular interface with which Audacity communicates with your chosen recording and playback devices.</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">
+<p>The number of different settings for recording is somewhat daunting, reflecting the many options for recording.  Basically you can leave the settings at the default, and record just fine.  However you might want to check this <a href="tutorial_audacity_settings_for_recording.html" title="Tutorial - Audacity Settings for Recording">Tutorial on recording settings</a> to find out more.
 </p>
-<dl><dd><span title="Image of device toolbar with annotations"><img alt="Annotated Device Toolbar.png" src="../m/images/2/27/annotated_device_toolbar.png" width="707" height="76" /></span></dd></dl>
-<p>You may want to expand the size of the Device toolbar by dragging right on the drag handle / drag bar <b>Resizer</b>.
-</p><p>Choose your preferred <b>Audio Host</b>, <b>Recording Device</b> and <b>Playback Device</b> from the dropdown menus. 
-This selects the particular interface with which Audacity communicates with your chosen recording and playback devices. 
-</p><p>The "Audio Host" is the interface between Audacity and the sound device. On <b>Windows</b>, the choice is between the following audio interfaces. 
+<ul><li>If you are unsure what settings to use, use MME if it is available, ALSA if on Linux and Core Audio if on Mac.</li>
+<li>The choice of recording and play back devices may take some detective work (or trial and error).  The items earlier in the list are generally built-in devices, for example a speaker actually in the laptop, and the later items devices that are plugged in, for example headphones.</li>
+<li>If you prefer, you can make the above settings in the Audacity's <a href="#device"><b>Device Toolbar</b></a>.  Se <a href="#device">below</a> for details. </li></ul>
+</td></tr></table>
+</div>
+<p><br /> 
+</p>
+<div id="host"></div>
+<h2><span class="mw-headline" id="Audio_Host">Audio Host</span></h2>
+<p>The "Audio Host" is the interface between Audacity and the sound device. On <b>Windows</b>, the choice is between the following audio interfaces. 
 </p>
 <ul><li> <i><b><a href="glossary.html#mme" title="Glossary">MME</a>:</b></i> This is the Audacity default and the most compatible with all audio devices.</li>
 <li> <i><b><a href="glossary.html#wds" title="Glossary">Windows DirectSound</a>:</b></i> This is more recent than MME with potentially less <i><b><a href="glossary.html#latency" title="Glossary">latency</a></b></i>.</li>
-<li> <i><b><a href="glossary.html#wasapi" title="Glossary">Windows WASAPI</a>:</b></i> This host is the most recent Windows interface that Audacity supports. WASAPI was first officially released in 2007. WASAPI is particularly useful for "loopback" devices for <a href="tutorial_recording_computer_playback_on_windows.html" title="Tutorial - Recording Computer Playback on Windows">recording computer playback</a>. 24-bit recording devices are supported. Playback is <i>emulated</i> using this host. As a result, the playback slider in <a href="mixer_toolbar.html" title="Mixer Toolbar">Mixer Toolbar</a> will only scale the system playback slider's current level up or down rather than directly manipulating that system slider.  </li></ul>
+<li> <i><b><a href="glossary.html#wasapi" title="Glossary">Windows WASAPI</a>:</b></i> This host is the most recent Windows interface that Audacity supports. WASAPI was first officially released in 2007. WASAPI is particularly useful for "loopback" devices for <a href="tutorial_recording_computer_playback_on_windows.html" title="Tutorial - Recording Computer Playback on Windows">recording computer playback</a>. 24-bit recording devices are supported. Playback is <i>emulated</i> using this host. As a result, the playback slider in the Playback Meter will only scale the system playback slider's current level up or down rather than directly manipulating that system slider.  </li></ul>
 <p>On <b>Mac</b> the only choice is Core Audio.  
 </p><p>On <b>Linux</b> there is often only one option: <i><b><a href="glossary.html#ALSA" title="Glossary">ALSA</a></b></i>. Other options could be OSS and/or Jack Audio Connection Kit (also known as "Jack" or "Jackd")<i>.</i>
 </p>
 <div class="note">On <b>Windows</b>:
 <ul><li>Windows DirectSound may by default have only slightly lower latency than MME.  </li>
 <li>Selecting Windows DirectSound or Windows WASAPI and enabling both "Exclusive Mode" boxes in <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows&#160;Sound</a> allows Audacity to request audio direct from the device without <i><b><a href="glossary.html#resampling" title="Glossary">resampling</a></b></i>.</div> </li></ul>
-<ul><li> For <i>output device</i>, choose the named sound device your headphones or speakers are connected to (not a device like Microsoft Sound Mapper that uses the system default device). If you are using a USB-connected guitar, microphone or keyboard on Windows, you may also need to <a href="faq_playback.html#usb" title="FAQ:Playback">reset the default system playback device to your computer sound device</a> in order to hear audio in other applications. </ul>
+<p><br />
+</p>
+<div id="playback"></div>
+<h3><span class="mw-headline" id="Playback_device">Playback device</span></h3>
+<p>For <b>Playback</b> device, choose the named sound device your headphones or speakers are connected to (not a device like Microsoft Sound Mapper that uses the system default device). If you are using a USB-connected guitar, microphone or keyboard on Windows, you may also need to <a href="faq_playback.html#usb" title="FAQ:Playback">reset the default system playback device to your computer sound device</a> in order to hear audio in other applications. 
+</p><p>Set the volume level of your recording input, click in the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter</a>, or click on the microphone icon and click "Start Monitoring". 
+</p>
+<dl><dd><span title="Recording Meter Toolbar in use, default size"><img alt="Recording Toolbar in use.png" src="../m/images/7/7a/recording_toolbar_in_use.png" width="432" height="30" /></span></dd></dl>
+<ul><li>If the Recording Meter is not visible, click <span class="menu">View &gt; Toolbars</span> and check <b>Recording Meter Toolbar</b>. </li>
+<li>While playing a loud part of your tape or record, adjust the Recording Slider on the Recording Meter Toolbar so the Recording Meters are almost reaching the right-hand end of the scale. </li>
+<li>Do not let the meter bars actually reach the right edge, or the red hold lights to right of the meter will come on, indicating you will have distortion in the recording. </li>
+<li>Try to aim for a maximum peak of around \xe2\x80\x936.0 dB (or 0.5 if you have your meters set to linear rather than dB). </li>
+<li><a href="meter_toolbar.html#resizing" title="Meter Toolbar">Enlarging</a> the Recording Meter Toolbar by clicking and dragging helps with this task, see <a href="meter_toolbar.html#resizing" title="Meter Toolbar">this page</a> in the manual for details.</li></ul>
+<div id="recording"></div>
+<h3><span class="mw-headline" id="Recording_device">Recording device</span></h3>
+<p>Now that you know that you can hear what Audacity is playing you can continue setting up for recording.
+</p><p>Choose your preferred <i>recording device</i> from the <i>Recording Device</i> dropdown menu in the Devices preferences.
+</p><p>In the <i>Recording Channels</i> dropdown menu choose whether you want to record in mono (1 channel) or stereo (2 channels). In general if you are recording a microphone or guitar you will want to record in mono. If you are recording a keyboard and the keyboard has stereo outputs you will want to record in stereo.
+</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -70,29 +101,31 @@ This selects the particular interface with which Audacity communicates with your
 </td>
 <td align="left" valign="top"><b>Windows computers almost always only have microphone inputs enabled by default.</b>  Earlier Windows systems may also need some inputs to be made visible before Audacity can use them.<p> If your line-in or other inputs are not shown in Device Toolbar, go to the system mixer for <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows</a>, show and enable the missing inputs, then use <span class="menuadvice">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> or restart Audacity.</p>
 </td></tr></table></div>
-<p>Click on <span class="menu">Generate &gt; <a href="generate_menu.html#tone" title="Generate Menu">Tone</a></span>, accept the default values in the dialog then click OK: a 30-second tone will be generated into a new track. Press <span class="kbrd" style="background-color: #d0d0f8">Space</span> to begin playback - you should hear a loud tone coming from your computer speakers. You can use the output slider on the Mixer Toolbar to control the volume at which you listen to your Audacity project. 
-</p>
-<dl><dd><span title="Picture of the mixer toolbar"><img alt="Mixer Toolbar 101.png" src="../m/images/2/27/mixer_toolbar_101.png" width="323" height="27" /></span></dd></dl>
-<p>Note that the <a href="meter_toolbar.html#playback" title="Meter Toolbar">Playback Meter</a> does not change as you adjust the output slider: this meter always indicate the volume of the mix of your Audacity project.
-</p>
-<dl><dd><span title="Playback Meter Toolbar in use, default size"><img alt="Playback Toolbar in use - clipped signal.png" src="../m/images/7/7c/playback_toolbar_in_use_clipped_signal.png" width="473" height="34" /></span></dd></dl>
-<h2><span class="mw-headline" id="Setting_up_the_recording_device">Setting up the recording device</span></h2>
-<p>Now that you know that you can hear what Audacity is playing you can continue setting up for recording.
-</p><p>Choose your preferred <i>recording device</i> from the <i>Recording Device</i> dropdown menu in the <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>.
-</p><p>In the <i>Recording Channels</i> dropdown menu choose whether you want to record in mono (1 channel) or stereo (2 channels). In general if you are recording a microphone or guitar you will want to record in mono. If you are recording a keyboard and the keyboard has stereo outputs you will want to record in stereo.
-</p>
-<h2><span class="mw-headline" id="Audacity_Preferences">Audacity Preferences</span></h2>
-<p>If you prefer, you can make the above settings in the Audacity's <a href="preferences.html" title="Preferences">Preferences</a>.  To access this, use <span class="menu">Edit &gt; <a href="preferences.html" title="Preferences">Preferences</a></span>
-</p><p>The image below shows the Devices section of Preferences: 
-</p>
-<dl><dd><span title="Devices section of Preferences"><img alt="Preferences Devices.png" src="../m/images/c/c1/preferences_devices.png" width="671" height="473" /></span></dd></dl>
-<p>There are many other settings that can be made in your <a href="preferences.html" title="Preferences">Preferences</a> do take some time to explore and understand these.
+<p><br />
 </p><p><br />
 </p>
-<div class="note">
-<p><b>Settings</b>
+<div id="toolbar"></div>
+<h2><span class="mw-headline" id="Device_Toolbar">Device Toolbar</span></h2>
+<p>If you prefer, you can make the above settings in Audacity's <a href="device_toolbar.html" title="Device Toolbar"><b>Device Toolbar</b></a>.  
+</p><p>The <b>Device Toolbar</b>, shown below, is <i><b>not</b></i> displayed by default in  Audacity. To enable it, click on <span class="menu">View &gt; Toolbars</span> and check on <b>Device Toolbar</b>.
 </p>
-The number of different settings for recording is somewhat daunting, reflecting the many options for recording.  Basically you can leave the settings at the default, and record just fine.  However you might want to check this <a href="tutorial_audacity_settings_for_recording.html" title="Tutorial - Audacity Settings for Recording">Tutorial on recording settings</a> to find out more.</div>
+<dl><dd><span title="Image of Device Toolbar with annotations"><img alt="Annotated Device Toolbar.png" src="../m/images/2/27/annotated_device_toolbar.png" width="707" height="76" /></span></dd></dl>
+<p>You may want to expand the size of the Device Toolbar by dragging right on the drag-handle / drag-bar <b>Resizer</b>.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">If you need to change you devices often you may wish to keep the Device Toolbar on-screen.
+<ul><li> The disadvantage of enabling the Device Toolbar is that it occupies additional screen real estate, thus reducing the window area available for tracks.</li>
+<li> The advantage is that you can readily see at all times what your devices settings are. </li></ul>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="links"></div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="tutorial_making_a_test_recording.html" title="Tutorial - Making a Test Recording"><b>&gt;</b>&#160; Forward to: Tutorial - Making a Test Recording</a> <br />
 </p><p><a href="tutorial_audacity_settings_for_recording.html" title="Tutorial - Audacity Settings for Recording"><b>&lt;</b>&#160; Back to: Tutorial - Audacity Settings for Recording</a> <br />
@@ -132,10 +165,10 @@ The number of different settings for recording is somewhat daunting, reflecting 
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -174,7 +207,7 @@ The number of different settings for recording is somewhat daunting, reflecting 
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Selecting_Your_Recording_Device">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Selecting_Your_Recording_Device">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

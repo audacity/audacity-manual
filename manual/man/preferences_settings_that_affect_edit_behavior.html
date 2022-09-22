@@ -34,12 +34,13 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+
 <p><br />
 </p>
 <div class="intro"><b>There are two settings in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a> that affect the operation of the <i>Cut, Paste,</i> and <i>Delete</i> editing commands:</b>
 <ul><li> <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable cut lines</span> (unchecked by default)
 <ul><li>When this setting is enabled, cutting a section of audio will leave a red vertical line at the left edge of the cut portion. You can click on this line at any time to restore the cut audio.</li></ul></li>
-<li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> (checked by default)
+<li> <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Editing a clip can move other clips</span> (unchecked by default)
 <ul><li>If this setting is enabled any clips following to right of the edit point can always move as necessary in response to <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">pasting</a>, <a href="edit_menu.html#cut" title="Edit Menu">cutting</a>, <a href="edit_menu.html#delete" title="Edit Menu">deleting</a> or other change that adds or removes content.</li></ul></li></ul>
 <p>This page provides details and examples of how these preference settings affect editing operations.
 </p>
@@ -53,10 +54,10 @@
 </p>
 <div id="move_clips"></div>
 <h2><span class="mw-headline" id="Editing_a_clip_can_move_other_clips">Editing a clip can move other clips</span></h2>
-<p>If this setting is <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">enabled</a> <i>(the default setting is "on")</i> and the track has been <a href="edit_menu_clip_boundaries.html#split" title="Edit Menu: Clip Boundaries">split</a> into more than one <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a>, any clips following to the right of the edit point can always move as necessary in response to <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">pasting</a>, <a href="edit_menu.html#cut" title="Edit Menu">cutting</a>, <a href="edit_menu.html#delete" title="Edit Menu">deleting</a> or other change that adds or removes content.
+<p>If this setting is <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">enabled</a> <i>(the default setting is "<b>off</b>")</i> and the track has been <a href="edit_menu_clip_boundaries.html#split" title="Edit Menu: Clip Boundaries">split</a> into more than one <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a>, any clips following to the right of the edit point can always move as necessary in response to <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">pasting</a>, <a href="edit_menu.html#cut" title="Edit Menu">cutting</a>, <a href="edit_menu.html#delete" title="Edit Menu">deleting</a> or other change that adds or removes content.
 </p><p>Unchecking this preferences "pins" clips so that they cannot move in response to an edit in another clip. When removing content, any following clips will not move back. When pasting, an error message will display if there is not enough room to paste without moving the following clips.
 </p>
-<div class="note"><a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups"><b>Sync-Lock</b></a> trumps (over-rides) this setting. If you have Sync-Lock enabled in the <a href="tracks_menu.html" title="Tracks Menu">Tracks Menu</a>, then clips can move even when this setting is turned "off".  This works well when disabling/enabling Sync-Lock, as your preference for clips-can-move is not forgotten when out of Sync-Lock mode. </div>
+<div class="note"><b>Note carefully that <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Lock</a> trumps (over-rides) this setting:</b> <p>If you have Sync-Lock enabled in the <a href="tracks_menu.html" title="Tracks Menu">Tracks Menu</a>, then clips can move even when this setting is turned "off".</p> </div>
 <div id="example_clips"></div>
 <h2><span class="mw-headline" id="Examples_of_the_effect_of_changing_.22Editing_a_clip_can_move_other_clips.22">Examples of the effect of changing "Editing a clip can move other clips"</span></h2>
 <h3><span class="mw-headline" id="Removing_audio_.28Cut_or_Delete.29_shifts_the_audio_to_the_right_of_the_edit_to_close_up_the_space">Removing audio (Cut or Delete) shifts the audio to the right of the edit to close up the space</span></h3>
@@ -111,7 +112,7 @@ After the paste into a point selection with <span class="button"><img alt="unche
 </p>
 <div id="cut_lines"></div>
 <h2><span class="mw-headline" id="Enable_Cut_Lines">Enable Cut Lines</span></h2>
-<p>When this setting is <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">enabled</a> <i>(the default setting is "off")</i>, cutting a section of audio will leave a red vertical line at the left edge of the cut portion. You can click on this line at any time to restore the cut audio. If you restore in error, use <span class="menu">Edit &gt; Undo Expand</span> to get the cut line back. To remove the line without restoring audio, right-click over it. <span class="menu">Edit &gt; Undo Remove</span> will restore the line if you make a mistake.
+<p>When this setting is <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">enabled</a> <i>(the default setting is "<b>off</b>")</i>, cutting a section of audio will leave a red vertical line at the left edge of the cut portion. You can click on this line at any time to restore the cut audio. If you restore in error, use <span class="menu">Edit &gt; Undo Expand</span> to get the cut line back. To remove the line without restoring audio, right-click over it. <span class="menu">Edit &gt; Undo Remove</span> will restore the line if you make a mistake.
 </p><p>You can think of this as a kind of "persistent undo" in that clicking on the cut line undoes the cut, and the cut lines persist when you close and later re-open the project.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -212,10 +213,10 @@ After cutting the region - note that there is no cut line
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -254,7 +255,7 @@ After cutting the region - note that there is no cut line
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Preferences_settings_that_affect_Edit_behavior">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Preferences_settings_that_affect_Edit_behavior">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

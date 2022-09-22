@@ -33,16 +33,11 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Distortion#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
-</p>
-
-<p><br />
-</p>
-<div class="intro"><p>Use the <i><b>Distortion</b></i> effect to make the audio sound distorted. By distorting the waveform the frequency content is changed, which will often make the sound 'crunchy' or 'abrasive'.</p>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><p>Use the <i><b>Distortion</b></i> effect to make the audio sound distorted. By distorting the waveform the frequency content is changed, which will often make the sound 'crunchy' or 'abrasive'.</p>
 <p>Technically this effect is a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Waveshaper">waveshaper</a>. The result of waveshaping is equivalent to applying non-linear amplification to the audio waveform. Preset <i>shaping functions</i> are provided, each of which produces a different type of distortion.  </p>
 <p>Presets are provided in the <span class="button">Manage</span> menu, which suggest typical settings for a wide range of uses.</p></div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Distortion...</span></dd>
-<dd><span title="Distortion effect dialog"><img alt="Distortion.png" src="../m/images/2/22/distortion.png" width="731" height="361" /></span></dd></dl>
+<dd><span title="The Distortion dialog"><img alt="Distortion 3-2-0.png" src="../m/images/7/70/distortion_3_2_0.png" width="472" height="342" /></span></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -104,7 +99,6 @@ Equalization may also be applied, before or after applying the distortion effect
 <div class="note">These types of distortion create a series of odd or even harmonics. "Odd" harmonics have frequencies that are an odd number of times higher than the fundamental frequency, whereas even harmonics are an even number of times higher than the fundamental frequency. For example, the second harmonic of a 440 Hz sine wave is a sine wave with a frequency  of 880 Hz. Note that because real world sounds contain many frequencies, these distortion effects are unlikely to create recognizable "harmony" type sounds, but rather will produce distortion with a unique tonal character.</div>
 <div id="cubic"></div>
 <h4><span class="mw-headline" id="Cubic_Curve_.28odd_harmonics.29">Cubic Curve (odd harmonics)</span></h4>
-
 <p>This shaping function is often used in electric guitar distortion effects as it is possible to avoid <a href="glossary.html#aliasing" title="Glossary">aliasing distortion</a> with only a modest amount of <a href="glossary.html#oversampling" title="Glossary">oversampling</a>. This implementation does not use oversampling, though oversampling can be applied manually by <a href="tracks_menu.html#resample" title="Tracks Menu">resampling the track</a> to a higher rate prior to applying this distortion effect.
 </p><p>One limitation of this type of distortion is that even when applied fully, the effect is still quite mild. Stronger effects can be achieved by applying the algorithm multiple times, which can be achieved by setting the "Repeat processing" control greater than 0.
 </p><p>When applied once only, each frequency component of the sound gains one harmonic overtone that is 3 times the original frequency. When the effect is applied multiple times, additional odd numbered harmonics are created.
@@ -150,27 +144,14 @@ Equalization may also be applied, before or after applying the distortion effect
 <li><b>Distortion amount (0 to 100):</b> The amount / strength of the distortion. From 0 to 50&#160;% the lower half of the waveform is progressively clipped (hard clipping) until at 50&#160;% only the upper half of the waveform remains (equivalent to <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Rectifier#Half-wave_rectification">half wave rectification</a>.. From 50 to 100&#160;%, the lower half of the input waveform is progressively reproduced on the positive side (upper half) of the audio channel, until at 100% the waveform comprises of the upper half plus the inverted lower half of the original waveform (equivalent to <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Rectifier#Full-wave_rectification">full wave rectification</a>)</li></ul>
 <div id="limiter"></div>
 <h4><span class="mw-headline" id="Hard_Limiter_1413">Hard Limiter 1413</span></h4>
-<p>This type of distortion is modeled on the "<a rel="nofollow" class="external text" href="http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.53">Hard Limiter</a>" LADSPA plug-in that was included in older versions of Audacity. The default settings are different from the original effect (the original defaults would produce no effect).
+<p>This type of distortion is modeled on the "<a rel="nofollow" class="external text" href="http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.53">Hard Limiter</a>" LADSPA plugin that was included in older versions of Audacity. The default settings are different from the original effect (the original defaults would produce no effect).
 </p>
 <ul><li><b>dB limit (-100 to 0dB):</b> [default = -6] This is the amplitude level above which the input signal is processed. If the Wet level is 100% and Residue level 0%, the peak level of the result will be clipped down to this level. </li></ul>
 <ul><li><b>Wet level (-100 to 0dB):</b> [default = 50] This is the percentage of the clipped signal that is fed to the output. It thus acts as a volume control for audio below the dB limit. When set to 100%, all sounds below the dB limit are fed to the output. At lower settings, the volume of the result will be reduced.</li></ul>
 <ul><li><b>Residue level (-100 to 0dB):</b> [default = 50] This allows a proportion of the signal that has been removed by clipping to be added back to the output and so <i>soften</i> the effect. When set to 0%, all of the clipped signal is discarded. At higher settings, some of the clipped signal will be restored, making the limit softer. More peaks and troughs of the original waveform will be retained, and the resultant volume level will be higher than that set in the dB limit. </li></ul>
 <p><br />
 </p>
-<div id="buttons"></div>
-<h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
-<p>Clicking on the command buttons give the following results:
-</p>
-<ul><li><span class="button">Manage</span> gives a dropdown menu enabling you to manage presets for the tool and to see some detail about the tool. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a></li>
-<li> <span class="button"> Start Playback</span> starts playback of the effect preview</li>
-<li> <span class="button"> Skip Backward</span> skips backward through the effect preview</li>
-<li> <span class="button"> Skip Forward</span> skips forward through the effect preview</li>
-<li> <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable</span> listen to the preview with or without the effect applied</li>
-<li><span class="button">Apply</span> applies the effect to the selected audio with the current effect settings</li>
-<li><span class="button">Close</span> closes the dialog</li>
-<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> brings you to the appropriate page in the Manual, this page</li></ul>
-<div class="note">The <span class="button">Apply</span> button ignores the setting for <b>Enable</b> and applies the effect to the selected audio regardless of the Enable setting.</div>
-<h3><span class="mw-headline" id="Factory_presets">Factory presets</span></h3>
+<h2><span class="mw-headline" id="Factory_presets">Factory presets</span></h2>
 <p>The included factory presets are:
 </p>
 <ul><li><b>Defaults</b> The factory default setting (Hard Clipping).</li>
@@ -232,10 +213,10 @@ Equalization may also be applied, before or after applying the distortion effect
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -274,7 +255,7 @@ Equalization may also be applied, before or after applying the distortion effect
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Distortion">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Distortion">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

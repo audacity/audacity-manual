@@ -37,10 +37,10 @@
 </p>
 
 
-<div class="intro">Most effects, generators and analyzers in Audacity have a <i><b>Manage</b></i> button in their dialog.  Clicking this button opens a dropdown menu enabling you to manage presets for the tool and to see some details about the tool. </div>
-<dl><dd><b>Accessed by:</b> The <span title="Manage button as displayed in effects running in textual mode" style="vertical-align:text-bottom"><span class="button">Manage</span></span> or <span title="Manage button as displayed in real-time preview effects running in graphical mode"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> button at the bottom left of effects, generators and analyzers dialogs:</dd>
-<dd><span title="Normalize effect showing the &quot;Manage&quot; dropdown menu"><img alt="Manage effects W10.png" src="../m/images/1/15/manage_effects_w10.png" width="440" height="380" /></span></dd>
-<dd><b>Example of the Normalize effect showing the "Manage" dropdown menu</b></dd></dl>
+<div class="intro">Most effects, generators and analyzers in Audacity have a <i><b>Presets &amp; settings</b></i> button in their dialog.  Clicking this button opens a dropdown menu enabling you to manage presets for the tool and to see some details about the tool. </div>
+<dl><dd><b>Accessed by:</b> The <span title="Presets &amp; settings button as displayed in effects running in textual mode" style="vertical-align:text-bottom"><span class="button">Presets &amp; settings</span></span> or <span title="Presets &amp; settings button as displayed in real-time preview effects running in graphical mode"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> button at the top left of effects, generators and analyzers dialogs:</dd>
+<dd><span title="Normalize effect showing the &quot;Presets &amp; settings&quot; dropdown menu"><img alt="Presets &amp; settings.png" src="../m/images/3/32/presets_settings.png" width="352" height="283" /></span></dd>
+<dd><b>Example of the Normalize effect showing the "Presets &amp; settings" dropdown menu</b></dd></dl>
 <div id="presets"></div>
 <h2><span class="mw-headline" id="User_Presets">User Presets</span></h2>
 <p>Lets you choose from presets that you have already saved in Audacity (<a href="#save">see below</a>).  In the image above, this option is grayed out because no user presets have yet been saved.
@@ -49,14 +49,14 @@
 <h2><span class="mw-headline" id="Save_Preset...">Save Preset...</span></h2>
 <p>After you have made adjustments to the settings for the tool, you can use this option to save these settings for later use.  When you name the preset you may choose the name of an existing preset and thus update it.
 </p>
-<div class="note">Note carefully that generators do not save the 'Duration' setting.</div>
+<div class="note">Note carefully that Generators do not save the 'Duration' setting.</div>
 <div id="delete"></div>
 <h2><span class="mw-headline" id="Delete_Preset">Delete Preset</span></h2>
 <p>Deletes any user preset that you may previously have saved. In the image above this option is grayed out because no user presets have yet been saved.
 </p>
 <div id="factory"></div>
 <h2><span class="mw-headline" id="Factory_Presets">Factory Presets</span></h2>
-<p>The "Defaults" Factory Preset lets you reset the effect to default settings. For most <a href="effect_menu.html#built-in" title="Effect Menu">built-in effects</a> and all plugins shipped with Audacity, "Defaults" is the only available Factory Preset. Third-party plug-ins may offer multiple named factory presets which you can choose from.  
+<p>The "Defaults" Factory Preset lets you reset the effect to default settings. For most <a href="effect_menu.html#built-in" title="Effect Menu">built-in effects</a> and all plugins shipped with Audacity, "Defaults" is the only available Factory Preset. Third-party plugins may offer multiple named factory presets which you can choose from.  
 </p>
 <div id="import"></div>
 <h2><span class="mw-headline" id="Import...">Import...</span></h2>
@@ -74,18 +74,17 @@
 </td>
 <td align="left" valign="top">Please note the following:
 <ul><li>The settings Export creates a single exported text file with just the current settings in the effect.  It does <i><b>NOT</b></i> export your entire set of <a href="#presets">User Presets</a>.</li>
-<li>VST effects export to and imports from <b>.xml</b> files rather than text files.</li>
-<li>With Apple's AU (Audio Unit) effects the Export and Import of effect settings does not work.  We have this logged as <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2334">Bug #2334</a>.</li></ul>
+<li>VST effects export to and imports from <b>.xml</b> files rather than text files.</li></ul>
 </td></tr></table></div>
 <div id="options"></div>
 <h2><span class="mw-headline" id="Options...">Options...</span></h2>
-<p>All plug-ins (except <a href="effect_menu.html#nyquist_effects" title="Effect Menu">Nyquist</a>) have per-effect options accessed by this menu for one or more of Latency Compensation, Graphical Mode or Buffer Size.  If there are no options available (as in the Normalize image above) then this menu item will be grayed out.
+<p>All plugins (except <a href="effect_menu.html#nyquist_effects" title="Effect Menu">Nyquist</a>) have per-effect options accessed by this menu for one or more of Latency Compensation, Graphical Mode or Buffer Size.  If there are no options available (as in the Normalize image above) then this menu item will be grayed out.
 </p>
 <div id="about"></div>
 <h2><span class="mw-headline" id="About">About</span></h2>
-<p>Selecting "<b>About</b>" from the <span class="button">Manage</span> button displays an information dialog for the tool. 
+<p>Selecting "<b>About</b>" from the <span class="button">Presets &amp; settings</span> button displays an information dialog for the tool. 
 </p>
-<ul><li><b>Type:</b> Indicates whether this is a built-in Audacity tool (as the Normalize example is) otherwise indicates the type of plug-in it is, for example,  Nyquist, LADSPA or VST.</li>
+<ul><li><b>Type:</b> Indicates whether this is a built-in Audacity tool (as the Normalize example is) otherwise indicates the type of plugin it is, for example,  Nyquist, LADSPA or VST.</li>
 <li><b>Name:</b>  The name of the effect, generator or analyzer.</li>
 <li><b>Version:</b> Where available, shows the version number of the tool.</li>
 <li><b>Vendor:</b> Shows who has provided the tool.</li>
@@ -126,10 +125,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -168,7 +167,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Manage_presets">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Manage_presets">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

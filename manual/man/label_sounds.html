@@ -37,7 +37,7 @@
 <div class="note">This analyzer is an upgrade of the old "Sound Finder" from previous versions of Audacity. It is more accurate, and more versatile than previous versions, supporting both region labels and point labels.<p>It replaces <a href="sound_finder.html" title="Sound Finder">Sound Finder</a> and <a href="silence_finder.html" title="Silence Finder">Silence Finder</a></p></div> </div>
 <div id="sound"></div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Analyze &gt; Label Sounds...</span></dd>
-<dd><span title="Label Sounds effect dialog"><img alt="Label Sounds.png" src="../m/images/8/8a/label_sounds.png" width="571" height="360" /></span></dd></dl>
+<dd><span title="Label Sounds dialog"><img alt="Label Sounds 3-2-0.png" src="../m/images/f/f7/label_sounds_3_2_0.png" width="571" height="343" /></span></dd></dl>
 <p><br />
 <b>Label Sounds</b> detects the audio level in the selected track(s). When the track level exceeds a specified threshold level, the audio is considered to be "sound", and when below the level it is considered to be "silence". 
 </p><p>There are options to add point labels before or after each detected sound, region labels around each sound, or region labels between each sound (effectively labeling the silences).
@@ -61,7 +61,7 @@
 <dl><dd> When audio is below this level, it is considered to be 'silence'. The lower (more negative) this setting, the quieter the background level must be to be recognized as "silent". If set below the track's noise floor level, the entire track will be seen as one continuous sound.</dd></dl>
 <ul><li><b>Threshold measurement:</b> (default "Peak level")
 <ul><li> <b>Peak level:</b> The threshold measurement is based on the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Amplitude#Peak_amplitude">peak amplitude</a> in each 10ms period.</li>
-<li><b>Average level:</b> The threshold is measured as the absolute average level for each 10 ms. This setting may help avoid labeling clicks in vinyl recording. Note that the peak level will usually be lower than the peak level.</li>
+<li><b>Average level:</b> The threshold is measured as the absolute average level for each 10 ms. This setting may help avoid labeling clicks in vinyl recording. Note that the average level will usually be lower than the peak level.</li>
 <li><b>RMS level:</b> The threshold is measured as RMS level. Like the 'Average level' measurement, this is less likely to label clicks. RMS level may be measured with the 'Measure RMS' or 'Contrast' effects.</li></ul></li></ul>
 <ul><li><b>Minimum silence duration:</b> (default 1 second)</li></ul>
 <dl><dd> When 'silence'  of this duration (or longer) is found, preceding sound and following sound are considered to be separate sounds, provided that the previous sound is at least the 'Minimum sound duration'. Valid values are between 0.01 seconds to 1 hour. See <a href="#Minimum_Silence_Duration">examples below</a>.</dd></dl>
@@ -82,16 +82,6 @@
 <ul><li><b>Label text:</b> (default "Sound ##1")</li></ul>
 <dl><dd> This is the text that will be entered in each label. 
 <ul><li> The '#' symbol is a special 'placeholder' character for adding a counter. The number of successive '#' symbols determines the minimum number of digits to be displayed. The '#' symbols must be followed by an integer (whole) number, which sets the starting number. Example: ###3 will add a three digit counter that counts up: 003, 004, 005... for consecutive labels. A counter may be placed before, after or withing the label text, but only one counter may be used in a label.</li></ul></dd></dl>
-<p><br />
-</p>
-<div id="buttons"></div>
-<h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
-<p>Clicking on the command buttons give the following results:
-</p>
-<ul><li><span class="button">Manage</span> gives a dropdown menu enabling you to manage presets for the tool and to see some detail about the tool. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a></li>
-<li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
-<li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li>
-<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> brings you to the appropriate page in the Manual, this page</li></ul>
 <p><br />
 </p>
 <div id="tips"></div>
@@ -200,10 +190,10 @@
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
 <li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
-<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">Customizing</span></a>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
-<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">Plug-ins</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
 <li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
 		</div>
@@ -242,7 +232,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Label_Sounds">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-09-22 - <a href="https://alphamanual.audacityteam.org/man/Label_Sounds">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
