@@ -50,10 +50,12 @@
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">Before you start a Timer Record session it is very important that you make all necessary settings in Audacity as while a Timer Record session is in progress, including in the period while Audacity is waiting to start the recording, the Audacity controls and menus will be inoperable until the recording finishes, or is Stopped/Cancelled.
-<p>In particular you need to pay close attention to setting the input signal level as Audacity's sliders cannot be used during a Timer Record session <i>(you may though have a hardware gain control on your input device which would allow you to adjust the signal level during a Timer record session)</i>. 
-</p><p>Note that you cannot initiate a Timer Record of you have any <a href="#clean">unsaved data in your project</a>, nor if you have more that one Audacity project open. 
+<p>In particular you need to <b>pay close attention to setting the input signal level</b> as Audacity's sliders cannot be used during a Timer Record session <i>(you may though have a hardware gain control on your input device which would allow you to adjust the signal level during a Timer record session)</i>. 
+</p><p>Note that you cannot initiate a Timer Record of you have any <a href="#clean">unsaved data in your project</a>, nor if you have more than one Audacity project open. 
 </p>
 </td></tr></table></div>
+<p><br />
+</p>
 <div id="timers"></div>
 <h2><span class="mw-headline" id="Setting_the_timer_controls">Setting the timer controls</span></h2>
 <h3><span class="mw-headline" id="Recording_start_time">Recording start time</span></h3>
@@ -67,9 +69,11 @@
 <ul><li> If you need to change a date forwards, incrementing either hour digit in the time controls with keyboard <span class="kbrd" style="background-color: #e0e0f0">up arrow</span> will always increment the date automatically. </li>
 <li> If you want to start an immediate recording, changing only the Duration is often the simplest method because this changes the End Date if necessary as well as the End Time.     </li></ul>
 </div>
+<p><br />
+</p>
 <div id="completion"></div>
 <h2><span class="mw-headline" id="Completion_actions">Completion actions</span></h2>
-<p>There are a number of things you can request Audacity to do on succesful completion of a Timer Recording.
+<p>There are a number of things you can request Audacity to do on successful completion of a Timer Recording.
 </p>
 <div id="save"></div>
 <h3><span class="mw-headline" id="Automatic_Save">Automatic Save</span></h3>
@@ -92,6 +96,8 @@
 <p>The latter three options will give you a one minute period of grace to abort the exit, shutdown or restart if you change your mind later.  A dialog will be shown for that minute enabling you to abort the previously selected action by using the <span class="button">Cancel</span> button, <a href="#abort">see below</a>.
 </p>
 <div class="note">Audacity will remember your completion action settings and restore them the next time you use Timer Record. </div>
+<p><br />
+</p>
 <div id="start"></div>
 <h2><span class="mw-headline" id="Starting_the_Timer_Record">Starting the Timer Record</span></h2>
 <p>When you have made all your required settings simply press the <span class="button">OK</span> button to start the Timer Record which will then either wait to start to record later or start immediately depending on your settings in the timer contols, the "<b>Start Date and Time</b>". Alternatively you can abort the Timer Record by pressing the <span class="button">Cancel</span> button.
@@ -104,6 +110,8 @@
 </td>
 <td align="left" valign="top">It is not currently possible to undertake any other activities in Audacity while recordings are running or waiting to start. To work in other applications while Timer Record is running, use the Task Switcher utility on your system, usually <span class="kbrd" style="background-color: #d0d0f8">Alt + Tab</span>.
 </td></tr></table></div>
+<p><br />
+</p>
 <div id="waiting"></div>
 <h2><span class="mw-headline" id="Waiting_for_Start_dialog">Waiting for Start dialog</span></h2>
 <p>If you had set the recording's Start Date and Time in advance of the current time, pressing <span class="button">OK</span> in the setup dialog will cause the <i>Waiting for Start</i> dialog to appear: 
@@ -112,6 +120,7 @@
 <p>This shows the timing details of your requested Timer Record along with a summary of the requested completion options. 
 </p><p>If you want to abort this recording before it starts, press the <span class="button">Cancel</span> button.  You will then be presented with a confirmation dialog
 asking you to confirm the cancellation (similar to the <i><b>Stop</b></i> cancellation dialog shown below in the progress section).
+</p><p><br />
 </p>
 <div id="progress"></div>
 <h2><span class="mw-headline" id="Timer_Record_Progress_dialog">Timer Record Progress dialog</span></h2>
@@ -123,18 +132,22 @@ asking you to confirm the cancellation (similar to the <i><b>Stop</b></i> cancel
 </p>
 <dl><dd><span title="Timer Record - Stop Confirm dialog"><img alt="Timer Record Progress - Stop Confirm W10.png" src="../m/images/1/16/timer_record_progress_stop_confirm_w10.png" width="389" height="316" /></span></dd></dl>
 <p>If you wish to stop the recording without performing any pre-requested Automatic Save and/or Export, then  click the window Close button <span class="button">X</span> (usually colored red when you hover the cursor over it).  This will just stop the recording but leave the recorded track in place
+</p><p><br />
 </p>
 <div id="completed"></div>
 <h2><span class="mw-headline" id="Timer_Recording_completed_dialog">Timer Recording completed dialog</span></h2>
 <p>When the recording finishes, any automatic  Save or Export actions that you specified are peformed and the <i>Timer Record Completion</i> dialog appears showing what has been done: 
 </p>
 <dl><dd><span title="Timer Record Completion dialog"><img alt="Timer Record Completion W10.png" src="../m/images/4/48/timer_record_completion_w10.png" width="558" height="204" /></span></dd></dl>
+<p><br />
+</p>
 <div id="abort"></div>
 <h2><span class="mw-headline" id="Completion_Action_abort">Completion Action abort</span></h2>
 <p>If you have requested Exit Audacity, Shutdown system or Restart system, then after any Automatic Save and/or Export that you also requested has been effected, the following confirmation dialog will appear. In this example Shutdown system was selected along with both an Automatic Save and an Automatic Export.
 </p>
 <dl><dd><span title="Timer Record error message for project with unsaved changes"><img alt="Timer Record Waiting - Cancel Shutdown W10.png" src="../m/images/1/18/timer_record_waiting_cancel_shutdown_w10.png" width="320" height="210" /></span></dd></dl>
 <p>This gives you a one minute period of grace to change your mind and abort the pre-selected action by clicking the <span class="button">Cancel</span> button.
+</p><p><br />
 </p>
 <div id="clean"></div>
 <h2><span class="mw-headline" id="Timer_Record_needs_a_clean_project">Timer Record needs a clean project</span></h2>
@@ -142,6 +155,7 @@ asking you to confirm the cancellation (similar to the <i><b>Stop</b></i> cancel
 </p>
 <dl><dd><span title="Timer Record warning message regarding unsaved changes"><img alt="Timer Record needs a clean project dialog.png" src="../m/images/2/29/timer_record_needs_a_clean_project_dialog.png" width="362" height="165" /></span></dd></dl>
 <p>This is done to protect against the potential loss of any currently unsaved changes if you select Exit, Shutdown or Restart and have not also selected an Automatic Save.
+</p><p><br />
 </p>
 <div id="diskspace"></div>
 <h2><span class="mw-headline" id="Insufficient_disk_space">Insufficient disk space</span></h2>
@@ -177,7 +191,8 @@ asking you to confirm the cancellation (similar to the <i><b>Stop</b></i> cancel
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
 <ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
-<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
 <li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
@@ -226,7 +241,7 @@ asking you to confirm the cancellation (similar to the <i><b>Stop</b></i> cancel
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-10-05 - <a href="https://alphamanual.audacityteam.org/man/Timer_Record">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Timer_Record">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

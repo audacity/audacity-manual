@@ -33,8 +33,7 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Installing_FFmpeg_for_Windows#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">The optional <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg library</a> allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files. 
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The optional <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg library</a> allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files. 
 <ul><li> Because of software patents, Audacity cannot include the FFmpeg software or distribute it from its own websites. Instead, use the following instructions to download and install the free and recommended FFmpeg third-party library.</li>
 <li><b>Advanced usage:</b> If you already have Audacity-compatible FFmpeg 2.2.x or 2.3.x shared libraries in the system PATH, Audacity will use those as long as you do not install FFmpeg from the links below and as long as you do not specify the FFmpeg you want Audacity to use in <a href="libraries_preferences.html" title="Libraries Preferences">Libraries Preferences</a>.</div> </li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -45,37 +44,9 @@
 </td>
 <td align="left" valign="top">Audacity on Windows is now a 64-bit application. <p>This means that if you are a user of previous Audacity versions on Windows and had installed the optional FFmpeg library then you <i><b>must</b></i> now install the 64-bit versions of the FFmpeg library, otherwise your imports and exports that depend upon FFmpeg will no longer work.</p><p>Installing the 64-bit FFmpeg library will <i><b>not</b></i> overwrite or delete your 32-bit FFmpeg library if you have one installed.</p>
 </td></tr></table></div>
-<h2><span class="mw-headline" id="Recommended_Installer">Recommended Installer</span></h2>
-<div class="note">It is recommended that you exit Audacity before installing FFmpeg.</div>
-<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org/ffmpeg64audacity.php"><b>FFmpeg download page</b></a>.</li>
-<li> Left-click the link <b>FFmpeg v2.2.2 INSTALLER (.EXE)</b> for 64-bit FFmpeg and save the file anywhere on your computer. </li>
-<li> Left-click <b>FFmpeg_v2.2.2_for_Audacity_on_Windows_64bit.exe</b> to launch the installer (you can safely ignore any warnings that the "publisher could not be verified").</li>
-<li> Read the License and accept it in order for the installation to proceed</li>
-<li> The installer will install the required files to <b>C:\Program Files\FFmpeg for Audacity</b> </li>
-<li> If Audacity was running when you installed FFmpeg, either restart Audacity or follow the steps to <a href="#locate">manually locate FFmpeg</a>.</li></ol>
-<div id="winff_zip"></div>
-<h3><span class="mw-headline" id="Alternative_zip_download_for_64-bit_for_expert_users_who_want_to_choose_their_own_library_location">Alternative zip download for 64-bit for expert users who want to choose their own library location</span></h3>
-<ol><li> Go to the external <a rel="nofollow" class="external text" href="https://lame.buanzo.org/ffmpeg64audacity.php"><b>FFmpeg download page</b></a>.</li>
-<li> Left click the link <b>FFmpeg v2.2.2 COMPRESSED PACKAGE (.ZIP)</b> for 64-bit FFmpeg</li>
-<li> Extract the entire contents of the downloaded ZIP file to a folder called "<b>FFmpeg v2.2.2 for Audacity</b>" <i>(or a folder name of your choice)</i> anywhere on your computer</li>
-<li> Then follow the <a href="#locate"><b>instructions below</b></a> to locate the file "<b>avformat-55.dll</b>" using <b><a href="libraries_preferences.html" title="Libraries Preferences">Libraries Preferences</a></b>. </li></ol>
-<p><br />
-</p>
-<div id="locate"></div>
-<h2><span class="mw-headline" id="Locating_the_FFmpeg_library_manually">Locating the FFmpeg library manually</span></h2>
-<p>If you installed FFmpeg while Audacity was running, or if you installed FFmpeg to a non-default location, Audacity will ask you to configure Preferences to locate the FFmpeg library. To do this, access <a href="preferences.html" title="Preferences">Preferences</a> then the "Libraries" tab on the left: 
-</p>
-<dl><dd><span title="Libraries Preferences showing the FFmpeg Locate... and Download... buttons, with the FFmpeg libray not found"><img alt="Preferences Libraries NOT Found W10 LAME built-in.png" src="../m/images/b/b3/preferences_libraries_not_found_w10_lame_built_in.png" width="630" height="473" /></span></dd></dl>
-<p>As seen in the image above, the "FFmpeg Library Version" will say "not found". To correct this:
-</p>
-<ol><li> Click the <span class="button">Locate...</span> button to right of "<b>FFmpeg Library:</b>"</li>
-<li> If a "<b>Success</b>" message indicates Audacity has now automatically detected valid FFmpeg libraries and asks if you want to detect them manually, click <span class="button">No</span>, then <span class="button">OK</span> to close Preferences </li>
-<li> If the "<b>Locate FFmpeg</b>" dialog appears, click <span class="button">Browse...</span></li>
-<li> Navigate to the folder that contains FFmpeg, and select the file <b>avformat-55.dll</b></li>
-<li> Click <span class="button">Open</span> then <span class="button">OK</span> and <span class="button">OK</span> again to close Preferences.</li></ol>
-<dl><dd><b>FFmpeg Library Version</b> should now show a set of three version numbers for the sub-libraries of FFmpeg ("F" for libavformat version, "C" for libavcodec version and "U" for libavutil version). <p>If you still see "not found", you may have installed the wrong libraries. Click the <span class="button">Download...</span> button to obtain the correct library for your operating system. You can also choose <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#show_log" title="Help Menu: Diagnostics">Show Log...</a></span> to see diagnostic information about FFmpeg detection.</p></dd></dl>
-<p><br />
-<a href="installing_and_updating_audacity_on_windows.html" title="Installing and updating Audacity on Windows"><b>|&lt;</b> Installing and updating Audacity on Windows</a>
+<h2><span class="mw-headline" id="Installing_FFmpeg">Installing FFmpeg</span></h2>
+<p>Please see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/basics/downloading-and-installing-audacity/installing-ffmpeg"><b>Installing FFmpeg</b></a> on the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/"><b>Audacity Support</b></a> site for FFmpeg installation details.
+</p><p>You will need to use the <b>Windows</b> tab on that page
 </p>
 
 
@@ -103,7 +74,8 @@
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
 <ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
-<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
 <li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
@@ -152,7 +124,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-10-05 - <a href="https://alphamanual.audacityteam.org/man/Installing_FFmpeg_for_Windows">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Installing_FFmpeg_for_Windows">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

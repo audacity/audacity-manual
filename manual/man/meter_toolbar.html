@@ -47,7 +47,7 @@
 <li><a href="#menu">Dropdown Menu</a></li>
 <li><a href="#annotated">What the bars and lines mean</a></li>
 <li><a href="#channels">Meter channels</a></li>
-<li><a href="#recordinglevel">Adjusting and monitoring recording level</a></li>
+<li><a href="#recordinglevel">Monitoring and adjusting recording level</a></li>
 <li><a href="#playbacklevel">Adjusting playback level</a></li>
 <li><a href="#resizing">Resizing and Undocking</a></li>
 <li><a href="#choice">Choice of meter style</a></li></ol>
@@ -75,6 +75,7 @@
 <p>The Playback Meter will activate when you start playback, or if you start Recording with <b>Software Playthrough</b> turned on in the <a href="transport_menu.html#playthrough" title="Transport Menu">Transport</a> menu.
 </p><p>The orange color displayed here warns that the signal was too "hot" or becoming too "hot" (approaching 0 dB).  The red bar at the right of both channels indicates that <a href="glossary.html#clipping" title="Glossary">clipping</a> has occurred at some stage while playing.  
 </p><p>Moving the slider will control the volume delivered to your speakers but will not affect the amplitude of the audio.
+</p><p><br />
 </p>
 <div id="menu"></div>
 <h2><span class="mw-headline" id="Dropdown_Menu">Dropdown Menu</span></h2>
@@ -85,8 +86,6 @@
 <h3><span class="mw-headline" id="Monitoring">Monitoring</span></h3>
 <ul><li> <b>Start Monitoring/Stop Monitoring</b> (Recording Meter only): Starts/stops visual monitoring of the recording level without recording a track. </li>
 <li>If you want to also hear the input without recording it, turn on <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough</a></span>.</li></ul>
-<p><br />
-</p>
 <div id="options"></div>
 <h3><span class="mw-headline" id="Options">Options</span></h3>
 <p>Selecting <b>Options...</b> from the menu opens the Meter Options dialog which lets you change that meter's style, visual orientation, the scale format and more:
@@ -101,6 +100,8 @@
 <ul><li><b>Automatic:</b> Displays the meter in either horizontal or vertical orientation, depending upon the aspect ratio of the meter.</li>
 <li><b>Horizontal:</b> Displays the meter at its default horizontal orientation, with the bars extending from left to right.</li>
 <li><b>Vertical:</b> Displays the meter vertically, with the bars extending from bottom to top.</li></ul></li></ul>
+<p><br />
+</p>
 <div id="annotated"></div>
 <h2><span class="mw-headline" id="What_the_bars_and_lines_mean">What the bars and lines mean</span></h2>
 <dl><dd><span title="Recording Meter (default Gradient Style) with annotations for current peak, recent peak, maximum peak and clipping"><img alt="RecordingMeterInActionClippingAnnotated.png" src="../m/images/6/65/recordingmeterinactionclippingannotated.png" width="495" height="81" /></span></dd></dl>
@@ -110,35 +111,44 @@
 <li> <b>MP: Maximum Peak Level.</b> The blue bar indicates the maximum peak level attained in that channel during the current playback or recording session. These bars remain visible after playback, recording or monitoring is stopped, and are reset when a new playback, recording or monitoring session is started. You can also left-click inside the meter bars while they are active to manually reset the Maximum Peak bars for that meter.</li>
 <li> <b>Clip: <i><a href="glossary.html#clipping" title="Glossary">Clipping</a></i> indicator.</b> The red bar to right of the maximum value of the scale appears as soon as there are four or more consecutive <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i> in that channel of audio exceeding that maximum. Once they have appeared, the clipping bars remain visible throughout that playback or recording/monitoring session. They are thus not an indication of current clipping, but an absolute indication that clipping occurred somewhere in the track. The clipping bars remain visible after playback, recording or monitoring is stopped, and are reset when a new playback, recording or monitoring session is started. You can also left-click inside the meter bars while they are active to manually reset the Clipping bars for that meter.</li></ul>
 <div class="note">To find the exact points where clipping exists in a track, enable <span class="menu">View &gt; <a href="view_menu.html#showclippingonoff" title="View Menu">Show Clipping</a></span> or run <span class="menu">Analyze &gt; <a href="analyze_menu.html#Find_Clipping..." title="Analyze Menu">Find Clipping...</a></span>.</div>
+<p><br />
+</p>
 <div id="channels"></div>
 <h2><span class="mw-headline" id="Meter_channels">Meter channels</span></h2>
 <ul><li> When playing a mono track, Audacity sends the output to both left and right speakers. Therefore if you leave the pan slider on the <a href="audio_tracks.html#Track_Panel" title="Audio Tracks">Track Panel</a> untouched, both channels of the playback meter will show an identical level. If you pan towards one channel, then the opposite channel will have its level reduced until a complete pan away from it will remove it.  </li>
 <li> If you <a href="devices_preferences.html#Recording" title="Devices Preferences">set Audacity to record in mono</a> (for example, from a microphone), only the left channel recording meter will be active.</li></ul>
+<p><br />
+</p>
 <div id="recordinglevel"></div>
-<h2><span class="mw-headline" id="Adjusting_and_monitoring_recording_level">Adjusting and monitoring recording level</span></h2>
+<h2><span class="mw-headline" id="Monitoring_and_adjusting_recording_level">Monitoring and adjusting recording level</span></h2>
 <p>Having chosen the correct recording device in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>, use the recording volume slider on the Recording Meter Toolbar to adjust the level of audio being recorded. In the image above, note that the blue lines in the recording meter (indicating the <a href="#annotated">maximum peak level</a> attained) are at about -6 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>. This is a sensible level to aim for when recording, because it gives you <i><b><a href="glossary.html#headroom" title="Glossary">headroom</a></b></i> to make edits affecting volume afterwards.
 </p>
 <div class="note">In some cases the recording volume slider may not be visible.. In that case you will need to use your audio interface's or operating system's recording/input volume control to set the recording level in Audacity.</div>
 <div id="monitor"></div>
 <h3><span class="mw-headline" id="Monitoring_2">Monitoring</span></h3>
-<p>It is good practice to <a href="tutorial_making_a_test_recording.html" title="Tutorial - Making a Test Recording">test the correct recording level</a> before recording for real. <i>Monitoring</i> lets you do this without actually having to record and then delete a test track. It also verifies that you are recording the input source you expect. There are two ways to turn monitoring on and off:
+<p>It is good practice to <a href="tutorial_making_a_test_recording.html" title="Tutorial - Making a Test Recording">test the correct recording level</a> before recording for real. <i>Monitoring</i> lets you do this without actually having to record and then delete a test track. It also verifies that you are recording the input source you expect. 
+</p><p>To turn monitoring on and off:
 </p>
-<ul><li>Right-click on the recording meter and select <b>Start Monitoring</b> to turn monitoring on. Right-click again and select <b>Stop Monitoring</b> to turn it off.</li>
-<li>Right-click on the recording meter and select <b>Options</b> to access the <a href="#options">Recording Meter Options</a>.</li></ul>
+<ul><li>Left-click on the microphone icon or right-click on the recording meter and select <b>Start Monitoring</b> to turn monitoring on. </li>
+<li>Click again and select <b>Stop Monitoring</b> to turn it off.</li></ul>
+<dl><dd><span title="Recording Meter dropdown menu"><img alt="Recording meter dropdown menu.png" src="../m/images/5/5f/recording_meter_dropdown_menu.png" width="228" height="89" /></span></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">You will probably want to hear the monitored audio as well as see it. To do this, enable "Software Playthrough" in the <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> menu.
+<td align="left" valign="top">You will probably want to hear the monitored audio as well as see it. To do this, enable "<b>Software Playthrough</b>" in the <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> menu.
 </td></tr></table>
 </div> 
+<p><br />
+</p>
 <div id="playbacklevel"></div>
 <h2><span class="mw-headline" id="Adjusting_playback_level">Adjusting playback level</span></h2>
 <p>The playback level displayed in Meter Toolbar reflects the combined amplitude of all the <a href="audio_tracks.html" title="Audio Tracks">tracks</a> in your project, in other words, the level of the <a href="mixing.html" title="Mixing">mix</a> as determined by the <a href="audio_tracks.html#gain" title="Audio Tracks">gain sliders</a> on each track. 
 </p><p>The playback volume slider on The Playback Meter toolbar affects only the volume delivered to your speaker, it does <i><b>not</b></i> affect the amplitude of the project's audio. 
 </p><p>The levels shown on the meter indicate what the loudness of the project audio would be were you to <a href="file_menu.html#Export..." title="File Menu">export</a> it as an audio file.
+</p><p><br />
 </p>
 <div id="resizing"></div>
 <h2><span class="mw-headline" id="Resizing_and_Undocking">Resizing and Undocking</span></h2>
@@ -147,6 +157,9 @@
 <ul><li> If a meter is docked, you can resize it horizontally by clicking and dragging the <b>Resizer</b> on the right edge.</li>
 <li> To undock a meter, click the <b>Grabber</b> on the left edge and drag. You can drag outside the Audacity project window, too. 
 <ul><li> To resize when undocked, click on the <b>Resizer</b> handle that appears at the bottom right of the toolbar and drag horizontally or vertically. The meters display in vertical orientation when their toolbar height exceeds their width.</li></ul></li></ul>
+<p>See <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout">Customizing Toolbar Layout</a> for more details
+</p><p><br />
+</p>
 <div id="choice"></div>
 <h2><span class="mw-headline" id="Choice_of_meter_style">Choice of meter style</span></h2>
 <p>Audacity offers two choices of style for metering. You can switch between the two meter styles in the Meter Options dialog which is accessed by the <a href="#menu">Meter dropdown menu</a>. For both styles, L shows the left channel and R the right channel.
@@ -199,7 +212,8 @@
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
 <ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
-<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
 <li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
@@ -248,7 +262,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-10-05 - <a href="https://alphamanual.audacityteam.org/man/Meter_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Meter_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

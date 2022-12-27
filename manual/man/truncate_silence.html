@@ -38,9 +38,19 @@
 <ul><li> Silences are detected if they remain below the specified threshold for at least the specified time duration.</li>
 <li> Detected silences (defined as above) are then made shorter by deleting a section from the middle of the silent region.</li>
 <li> White space between or preceding <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">audio clips</a> will be regarded as absolute silence and will always be removed if at least as long as the specified time duration. </li>
-<li> <a href="label_tracks.html" title="Label Tracks">Labels</a> in <a href="audacity_selection.html" title="Audacity Selection">selected</a> or <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Lock-selected</a> label tracks will be truncated, deleted or moved back by silence truncation.</div></li></ul>
+<li> <a href="label_tracks.html" title="Label Tracks">Labels</a> in <a href="audacity_selection.html" title="Audacity Selection">selected</a> or <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Lock-selected</a> label tracks will be truncated, deleted or moved back by silence truncation.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Truncate Silence will <i><b>fail</b></i> to work on any gaps between Clips unless you change the default setting for <b>Editing a clip can move other clips"</b> in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences"><b>Tracks Behaviors</b></a> preferences and turn this to be "<b>on</b>" rather then the default "off" setting.
+ 
+</td></tr></table></div>
+</div>
 <div class="note">
-For the purposes of this effect, the words "silence" and "silent" mean sounds that are below the detection threshold level.</div>
+For the purposes of this effect, the words "silence" and "silent" mean sounds that are below the detection threshold level. </div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Truncate Silence...</span></dd>
 <dd><span title="Truncate Silence dialog"><img alt="Truncate Silence 3-2-0.png" src="../m/images/2/2c/truncate_silence_3_2_0.png" width="290" height="324" /></span></dd></dl>
 <div id="detection"></div>
@@ -171,7 +181,8 @@ The 8&#160;second silence will therefore be reduced to 2 seconds plus 50% of 6 s
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
 <ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
-<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
 <li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
@@ -220,7 +231,7 @@ The 8&#160;second silence will therefore be reduced to 2 seconds plus 50% of 6 s
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-10-05 - <a href="https://alphamanual.audacityteam.org/man/Truncate_Silence">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Truncate_Silence">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

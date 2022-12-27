@@ -41,7 +41,8 @@
 <ul><li>Each track is normally in one unbroken section, something like a single film clip. </li>
 <li>However, Audacity can <a href="#split"><b>split</b></a> a track so as to create multiple <b>clips</b> within that track.</li>
 <li>Each clip in a track can then be moved around independently, but they all share several properties of the parent track such as its overall volume, panning, <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> and <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i>.</li>
-<li>Clip names can be edited to make them more meaningful.  </div></li></ul>
+<li>Clip names can be edited to make them more meaningful.</li>
+<li>Clips can be trimmed non-destructively, that is without losing audio. The audio is just hidden and can be restored.  See <a href="#smart">Smart Clips</a> for details.   </div></li></ul>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#overview">Channels, Tracks and Clips</a></li>
 <li><a href="#rename">Renaming Clips</a></li>
@@ -52,7 +53,8 @@
 <li><a href="#move">Moving Clips</a></li>
 <li><a href="#betweentracks">Moving a Clip Between Tracks</a></li>
 <li><a href="#colors">Track colors</a></li>
-<li><a href="#movecolors">Moving colored Clips</a></li></ol>
+<li><a href="#movecolors">Moving colored Clips</a></li>
+<li><a href="#smart">Smart Clips</a></li></ol>
 <p><br />
 </p>
 <div id="overview"></div>
@@ -75,14 +77,14 @@
 <h2><span class="mw-headline" id="Splitting_a_track_into_Clips">Splitting a track into Clips</span></h2>
 <p>When you record some audio or import audio from a file, you get a single track.  In many cases, there are natural gaps in the audio - silence between sentences or pauses between phrases in music.  Those are good candidates for splitting the track into multiple clips, allowing you to move or otherwise manipulate those clips independently. There are several ways to create multiple clips in a track.
 </p>
-<ul><li> <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#split" title="Edit Menu: Clip Boundaries">Split</a></span> to split the clip at the current cursor position or selection region.
+<ul><li> <span class="menu">Edit &gt; Audio Clips &gt; <a href="edit_menu_clip_boundaries.html#split" title="Edit Menu: Clip Boundaries">Split</a></span> to split the clip at the current cursor position or selection region.
 <ul><li> <span class="button">Right-click</span> &gt; <b>Split clip</b> context menu to split the clip at the current cursor position or selection region. </li></ul></li></ul>
 <p>The following commands only work on a selection region in an existing track or clip:    
 </p>
-<ul><li> <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#split_new" title="Edit Menu: Clip Boundaries">Split New</a></span> moves the selected audio to the same position in a new track at the bottom of the project.   </li>
+<ul><li> <span class="menu">Edit &gt; Audio Clips &gt; <a href="edit_menu_clip_boundaries.html#split_new" title="Edit Menu: Clip Boundaries">Split New</a></span> moves the selected audio to the same position in a new track at the bottom of the project.   </li>
 <li> <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#split_delete" title="Edit Menu: Remove Special">Split Delete</a></span> removes the selected audio without shifting the following audio.</li>
 <li> <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#split_cut" title="Edit Menu: Remove Special">Split Cut</a></span> removes the selected audio to the Audacity clipboard without shifting the following audio.</li>
-<li> <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#detach_at_silences" title="Edit Menu: Clip Boundaries">Detach at Silences</a></span> creates clips either side of absolute silences.  </li></ul>
+<li> <span class="menu">Edit &gt; Audio Clips &gt; <a href="edit_menu_clip_boundaries.html#detach_at_silences" title="Edit Menu: Clip Boundaries">Detach at Silences</a></span> creates clips either side of absolute silences.  </li></ul>
 <p><br />
 </p>
 <div class="example">As an example, the "before Split " and "after Split" images below show that after selecting <span class="menu">Edit &gt; Clip Boundaries &gt; Split</span>, the two boundaries of the gray selection region are overlaid with a solid black <i>split line</i>, marking the boundaries of the three resulting clips. 
@@ -135,7 +137,7 @@
 <p>To move a clip, simply drag and drop it using the Clip-handle drag-bar <i>(the light area with the rounded corners)</i> at the top of the clip.
 </p>
 <dl><dd><span title="Moving a clip"><img alt="MoveClip.png" src="../m/images/c/c7/moveclip.png" width="933" height="215" /></span></dd></dl>
-<p>To move multiple clips at once, select all of the clips you want to move using the <a href="tools_toolbar.html#selection" title="Tools Toolbar">Selection Tool</a><img alt="Selection Tool" src="../m/images/1/1f/ibeam.png" title="Selection Tool" width="27" height="27" />, then drag a Clip-handle within the selected region to move all selected clips. This will also move the selection area with it. 
+<p>To move multiple clips at once, select all of the clips you want to move using the <a href="tools_toolbar.html#selection" title="Tools Toolbar">Selection Tool</a><img alt="Selection Tool" src="../m/images/1/1f/ibeam.png" title="Selection Tool" width="28" height="27" />, then drag a Clip-handle within the selected region to move all selected clips. This will also move the selection area with it. 
 </p><p>If you click a Clip-handle drag-bar outside of the selected area, the selected area will stay where it is and you'll only move one clip.
 </p><p><br />
 </p>
@@ -178,9 +180,9 @@
 <p>A Clip takes on the selected color of the waveform that it originates in.  
 </p><p>When a clip is moved into a different colored track, the clip retains its original color.
 </p>
-<dl><dd><span title="Moving a blue colored clip - before the move.png"><img alt="Moving a colored clip - before.png" src="../m/images/8/82/moving_a_colored_clip_before.png" width="410" height="259" /></span></dd>
+<dl><dd><span title="Moving a blue colored clip - before the move.png"><img alt="Moving a colored clip - before.png" src="../m/images/8/82/moving_a_colored_clip_before.png" width="769" height="270" /></span></dd>
 <dd><b>Blue clip in the top track with sufficient space in the bottom, red track</b></dd></dl>
-<dl><dd><span title="Moving a colored clip - after the move the blue clip remains blue in the red track.png"><img alt="Moving a colored clip - after.png" src="../m/images/d/d0/moving_a_colored_clip_after.png" width="409" height="264" /></span></dd>
+<dl><dd><span title="Moving a colored clip - after the move the blue clip remains blue in the red track.png"><img alt="Moving a colored clip - after.png" src="../m/images/d/d0/moving_a_colored_clip_after.png" width="766" height="271" /></span></dd>
 <dd><b>The blue clip has been moved into the red track and retains its blue color</b></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -197,6 +199,17 @@
 <dl><dd>You will need to move the <font color="red">red clip</font> temporarily to a new track while they change the <font color="blue">blue clips</font> to <font color="green">green clips</font>.</dd></dl>
 </td></tr></table>
 </div>
+<p><br />
+</p>
+<div id="smart"></div>
+<h2><span class="mw-headline" id="Smart_Clips_-_Resizing_and_trimming_clips">Smart Clips - Resizing and trimming clips</span></h2>
+<p>Clips can be trimmed non-destructively, that is without losing audio. The audio is just hidden and can be restored.
+</p>
+To trim or expand a clip, hover with your cursor around the upper third of the left or right edge of a clip. <p>Then click and drag the edge to trim the clip to its desired length:</p> 
+<dl><dd><span title="Resizing a smart clip"><img alt="Smart Clip resizing.png" src="../m/images/1/18/smart_clip_resizing.png" width="92" height="184" /></span></dd></dl>
+<div class="note">Trimming a clip is a non-destructive operation the trimmed audio data is retained but hidden. 
+<ul><li>You can un-trim a clip at any time by dragging out the hidden audio data.</li>
+<li>If you have created your clip by <a href="#split">splitting up  a larger clip</a>, you can even un-trim the current clip until it's at the length of the old clip.  </div></li></ul>
 
 
 
@@ -224,7 +237,8 @@
 <li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
 <ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
-<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
 <li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
@@ -273,7 +287,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-10-05 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Tracks_and_Clips">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Tracks_and_Clips">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
