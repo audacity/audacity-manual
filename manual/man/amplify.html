@@ -34,30 +34,48 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">Use the <i><b>Amplify</b></i> effect to change the volume of the <a href="audacity_selection.html" title="Audacity Selection">selected</a> audio <a href="audio_tracks.html" title="Audio Tracks">track(s)</a>. Amplify always preserves the relative volumes of the tracks and/or <a href="audio_tracks.html#stereo" title="Audio Tracks">channels</a>.
-<p>You can also use the "Amplification (dB)" box in Amplify as a quick check of the current peak level of the selection.</p></div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Amplify...</span></dd>
-<dd><span title="Amplify dialog"><img alt="Amplify 3-2-0.png" src="../m/images/7/7e/amplify_3_2_0.png" width="290" height="200" /></span></dd></dl>
+<div class="intro">Use the <i><b>Amplify</b></i> effect to change the volume of the <a href="audacity_selection.html" title="Audacity Selection">selected</a> audio <a href="audio_tracks.html" title="Audio Tracks">track(s)</a> or selections:
+<ul><li><b>Amplify</b> always preserves the relative volumes of the tracks and/or <a href="audio_tracks.html#stereo" title="Audio Tracks">channels</a></li>
+<li>all selected tracks are amplified by the same amount, they are <i><b>not</b></i> amplified to the same level as is the case with <a href="normalize.html" title="Normalize"><b>Normalize</b></a>.</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">When the Amplify dialog first appears it shows in the <i><b>Amplification (dB)</b></i> box the amplification amount needed to create a <b>New Peak Amplitude</b> of 0 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>, thus maximizing the volume of the selected track. If this is your goal you can just click the <span class="button">Apply</span> button. <p>Note that when applied to a single stereo track or to multiple tracks, Amplify shows the amplification needed to maximize the volume of the <b>loudest</b> track or channel and will apply that amount of  amplification to all selected tracks and/or channels. In this way, Amplify preserves the relative volumes of the selected tracks and/or channels. This is different from the <a href="normalize.html" title="Normalize">Normalize</a> effect which can be optionally set to maximize the volume of each track or channel independently.</p><p>For a full discussion of the differences, see <a href="amplify_and_normalize.html" title="Amplify and Normalize">Amplify and Normalize</a>.</p>
+<td align="left" valign="top">You can also use the "Amplification (dB)" box in Amplify as a quick check of the current peak level of the selection.
 </td></tr></table>
 </div>
+</div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Volume and Compression &gt; Amplify...</span></dd>
+<dd><span title="Amplify dialog"><img alt="Amplify 3-2-0.png" src="../m/images/7/7e/amplify_3_2_0.png" width="290" height="200" /></span></dd></dl>
+<p><br />
+When applied to a single stereo track or to multiple tracks, Amplify shows the amplification needed to maximize the volume of the <b>loudest</b> track or channel and will apply that amount of  amplification to <b>all</b> selected tracks and/or channels. In this way, Amplify preserves the relative volumes of the selected tracks and/or channels. 
+</p><p>This is different from the <a href="normalize.html" title="Normalize"><b>Normalize</b></a> effect which maximizes the volume of <b>each</b> track independently <i>and can be optionally set to maximize the volume of each channel independently</i>. For a full discussion of the differences, see <a href="amplify_and_normalize.html" title="Amplify and Normalize"><b>Amplify and Normalize</b></a>.
+</p><p><br />
+</p>
+<div id="amplification"></div>
 <h2><span class="mw-headline" id="Amplification_.28dB.29">Amplification (dB)</span></h2>
+<p>When the Amplify dialog first appears it shows in the <i><b>Amplification (dB)</b></i> box the amplification amount needed to create a <b>New Peak Amplitude</b> of 0 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>, thus maximizing the volume of the selected track. If this is your goal you can just click the <span class="button">Apply</span> button. 
+</p>
 <ul><li><b>Input Box:</b> Type a value for the amount of amplification you would like to apply. Positive values make the sound louder, negative values make it quieter. As you type, the <b>New Peak Amplitude</b> input box will be updated.</li></ul>
 <div class="note">If you take the <i><b>negative</b></i> of the value shown in the <i><b>Amplification (dB)</b></i> box, this will give you the current peak <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> of the selection. For example, in the image above, the audio selection had a peak amplitude of -3 dB.</div>  
 <ul><li><b>Slider:</b> Drag the slider right to make the sound louder, or to the left to make it quieter. As you drag, your selected value will be updated in the input box, and the <b>New Peak Amplitude</b> input box will be updated.</li></ul>
-<h2><span class="mw-headline" id="New_Peak_Amplitude_.28dB.29">New Peak Amplitude (dB)</span></h2>
-<p>Type in the value you would like for the new peak amplitude of your track. As you type, the <b>Amplification</b> input box will be updated.
+<p><br />
 </p>
+<div id="peak"></div>
+<h2><span class="mw-headline" id="New_Peak_Amplitude_.28dB.29">New Peak Amplitude (dB)</span></h2>
+<p>Type in the value you would like for the new peak amplitude of your selected tracks. As you type, the <b>Amplification</b> input box will be updated.
+</p><p><br />
+</p>
+<div id="clipping"></div>
 <h2><span class="mw-headline" id="Allow_Clipping">Allow Clipping</span></h2>
 <p>If this box is not checked, and you attempt to enter an <b>Amplification</b> value that will result in a <b>New Peak Amplitude</b> of greater than 0 dB, the <b>OK</b> button will become inactive. This will prevent you from applying too much amplification.
 If this box is checked <i>(default setting)</i> you can apply as much amplification as you want, possibly creating a horribly distorted sound.
+</p><p><br />
+</p><p><br />
 </p>
+<div id="links"></div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
@@ -138,7 +156,7 @@ If this box is checked <i>(default setting)</i> you can apply as much amplificat
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Amplify">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Amplify">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

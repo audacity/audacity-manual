@@ -1235,7 +1235,7 @@
 </td>
 <td><i>none</i>
 </td>
-<td>Controls the sample rate of the project, snapping to the selection format and adjusts cursor and region position by keyboard input
+<td>Adjusts cursor and region position by keyboard input
 </td></tr>
 <tr>
 <td><b>ShowSpectralSelectionTB:</b>
@@ -3246,6 +3246,24 @@
 <td><i>none</i>
 </td>
 <td>Plays audio excluding the selection
+</td></tr>
+<tr>
+<td><b>ScrubBackwards:</b>
+</td>
+<td><a href="extra_menu_transport.html#scrubbers" title="Extra Menu: Transport">Scrub Backwards</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Does nothing, is there so that users can know what the default shortcut key is, and so they can change it in keyboard preferences if they want to.
+</td></tr>
+<tr>
+<td><b>ScrubForwards:</b>
+</td>
+<td><a href="extra_menu_transport.html#scrubbers" title="Extra Menu: Transport">Scrub Forwards</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Does nothing, is there so that users can know what the default shortcut key is, and so they can change it in keyboard preferences if they want to.
 </td></tr></table>
 <div id="extra_tools_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Tools"><a href="extra_menu_tools.html" title="Extra Menu: Tools">Extra: Tools</a></span></h3>
@@ -3286,15 +3304,6 @@
 <td><i>none</i>
 </td>
 <td>Chooses Draw tool.
-</td></tr>
-<tr>
-<td><b>ZoomTool:</b>
-</td>
-<td><a href="extra_menu_tools.html#zoom_tool" title="Extra Menu: Tools">Zoom Tool</a>
-</td>
-<td><i>none</i>
-</td>
-<td>Chooses Zoom tool.
 </td></tr>
 <tr>
 <td><b>MultiTool:</b>
@@ -3420,6 +3429,24 @@
 <td><i>none</i>
 </td>
 <td>Deletes the selection.
+</td></tr>
+<tr>
+<td><b>TimeShiftLeft:</b>
+</td>
+<td><a href="extra_menu_edit.html#time_shift_left" title="Extra Menu: Edit">Time Shift Left</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Moves the <a href="audio_tracks.html#focus" title="Audio Tracks">currently focused</a> audio track (or a separate <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> in that track which contains the editing cursor or <a href="audacity_selection.html" title="Audacity Selection">selection region</a>) one screen pixel to left.
+</td></tr>
+<tr>
+<td><b>TimeShiftRight:</b>
+</td>
+<td><a href="extra_menu_edit.html#time_shift_right" title="Extra Menu: Edit">Time Shift Right</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Moves the <a href="audio_tracks.html#focus" title="Audio Tracks">currently focused</a> audio track (or a separate <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> in that track which contains the editing cursor or <a href="audacity_selection.html" title="Audacity Selection">selection region</a>) one screen pixel to right.
 </td></tr></table>
 <div id="extra_playatspeed_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Play-at-Speed"><a href="extra_menu_play_at_speed.html" title="Extra Menu: Play-at-Speed">Extra: Play-at-Speed</a></span></h3>
@@ -3487,24 +3514,6 @@
 <td><i>none</i>
 </td>
 <td>Each key press will decrease the playback speed by 0.1.
-</td></tr>
-<tr>
-<td><b>MoveToPrevLabel:</b>
-</td>
-<td><a href="extra_menu_play_at_speed.html#move_to_previous_label" title="Extra Menu: Play-at-Speed">Move to Previous Label</a>
-</td>
-<td><i>none</i>
-</td>
-<td>Moves selection to the previous label
-</td></tr>
-<tr>
-<td><b>MoveToNextLabel:</b>
-</td>
-<td><a href="extra_menu_play_at_speed.html#move_to_next_label" title="Extra Menu: Play-at-Speed">Move to Next Label</a>
-</td>
-<td><i>none</i>
-</td>
-<td>Moves selection to the next label
 </td></tr></table>
 <div id="extra_seek_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Seek"><a href="extra_menu_seek.html" title="Extra Menu: Seek">Extra: Seek</a></span></h3>
@@ -3606,7 +3615,6 @@
 </td></tr></table>
 <div id="extra_selection_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Selection"><a href="extra_menu_selection.html" title="Extra Menu: Selection">Extra: Selection</a></span></h3>
-<div class="note">Extra commands related to selecting. </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Scripting Id
@@ -3715,6 +3723,55 @@
 <td><i>none</i>
 </td>
 <td>Decreases the size of the selection by contracting it from the left. The amount of decrease is dependent on the zoom level. If there is no selection no action is taken.
+</td></tr>
+<tr>
+<td><b>MoveToPrevLabel:</b>
+</td>
+<td><a href="extra_menu_play_at_speed.html#move_to_previous_label" title="Extra Menu: Play-at-Speed">Move to Previous Label</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Moves selection to the previous label
+</td></tr>
+<tr>
+<td><b>MoveToNextLabel:</b>
+</td>
+<td><a href="extra_menu_play_at_speed.html#move_to_next_label" title="Extra Menu: Play-at-Speed">Move to Next Label</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Moves selection to the next label
+</td></tr></table>
+<div id="extra_timeline_submenu"></div>
+<h3><span class="mw-headline" id="Extra:_Timeline"><a href="extra_menu_timeline.html" title="Extra Menu: Timeline">Extra: Timeline</a></span></h3>
+<div class="note">Extra commands related to changing the format of the Timeline </div>
+<table class="prettytablerows" rules="rows" border="2" width="100%">
+<tr>
+<th width="15%">Scripting Id
+</th>
+<th width="15%">Action
+</th>
+<th width="30%">Parameters
+</th>
+<th width="55%">Description
+</th></tr>
+<tr>
+<td><b>MinutesandSeconds:</b>
+</td>
+<td><a href="extra_menu_timeline.html" title="Extra Menu: Timeline">Minutes and Seconds</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Changes the <a href="timeline.html" title="Timeline"><b>Timeline</b></a> display format to <b>Minutes and Seconds</b> <i>(default setting)</i>.
+</td></tr>
+<tr>
+<td><b>BeatsandMeasures:</b>
+</td>
+<td><a href="extra_menu_timeline.html" title="Extra Menu: Timeline">Beats and Measures</a>
+</td>
+<td><i>none</i>
+</td>
+<td>Changes the <a href="timeline.html" title="Timeline"><b>Timeline</b></a> display format to <b>Beats and Measures</b>.
 </td></tr></table>
 <div id="extra_focus_submenu"></div>
 <h3><span class="mw-headline" id="Extra:_Focus"><a href="extra_menu_focus.html" title="Extra Menu: Focus">Extra: Focus</a></span></h3>
@@ -3839,7 +3896,7 @@
 </td>
 <td><i>none</i>
 </td>
-<td>When not playing audio, moves the editing cursor one screen pixel to left. When a <a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap To</a> option is chosen, moves the cursor to the preceding unit of time as determined by the current <a href="audacity_selection.html#selection_formats" title="Audacity Selection">selection format</a>. If the key is held down, the cursor speed depends on the length of the tracks. When playing audio, moves the playback cursor as described at "Cursor Short Jump Left"
+<td>When not playing audio, moves the editing cursor one screen pixel to left. When a <a href="snapping_toolbar.html" title="Snapping Toolbar">Snap</a> option is chosen, moves the cursor to the preceding unit of time as determined by the current <a href="audacity_selection.html#selection_formats" title="Audacity Selection">selection format</a>. If the key is held down, the cursor speed depends on the length of the tracks. When playing audio, moves the playback cursor as described at "Cursor Short Jump Left"
 </td></tr>
 <tr>
 <td><b>CursorRight:</b>
@@ -3848,7 +3905,7 @@
 </td>
 <td><i>none</i>
 </td>
-<td>When not playing audio, moves the editing cursor one screen pixel to right. When a <a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap To</a> option is chosen, moves the cursor to the following unit of time as determined by the current <a href="audacity_selection.html#selection_formats" title="Audacity Selection">selection format</a>. If the key is held down, the cursor speed depends on the length of the tracks. When playing audio, moves the playback cursor as described at "Cursor Short Jump Right"
+<td>When not playing audio, moves the editing cursor one screen pixel to right. When a <a href="snapping_toolbar.html" title="Snapping Toolbar">Snap</a> option is chosen, moves the cursor to the following unit of time as determined by the current <a href="audacity_selection.html#selection_formats" title="Audacity Selection">selection format</a>. If the key is held down, the cursor speed depends on the length of the tracks. When playing audio, moves the playback cursor as described at "Cursor Short Jump Right"
 </td></tr>
 <tr>
 <td><b>CursorShortJumpLeft:</b>
@@ -4667,7 +4724,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Scripting_Reference">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

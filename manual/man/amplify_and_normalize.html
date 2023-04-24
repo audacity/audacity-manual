@@ -34,76 +34,60 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">Amplify and Normalize are very similar effects, but have some subtle differences. Normalize has its own option for correcting <a href="dc_offset.html" title="DC offset">DC offset</a>. Amplify has its own option to enter the volume change to be applied and to allow "clipping" by amplifying to above 0.0 dB. The two effects behave differently if used on multiple tracks or channels. </div>  
-<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Applying_level_changes"><span class="tocnumber">1</span> <span class="toctext">Applying level changes</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Using_Normalize_with_DC_offset_correction"><span class="tocnumber">2</span> <span class="toctext">Using Normalize with DC offset correction</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Differences_between_Amplify_and_Normalize_on_multiple_tracks_or_channels"><span class="tocnumber">3</span> <span class="toctext">Differences between Amplify and Normalize on multiple tracks or channels</span></a>
-<ul>
-<li class="toclevel-2 tocsection-4"><a href="#Amplify_multiple_audio_tracks"><span class="tocnumber">3.1</span> <span class="toctext">Amplify multiple audio tracks</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Normalize_multiple_audio_tracks_or_channels"><span class="tocnumber">3.2</span> <span class="toctext">Normalize multiple audio tracks or channels</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#Visual_comparison"><span class="tocnumber">3.3</span> <span class="toctext">Visual comparison</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-7"><a href="#Advantages_and_Disadvantages"><span class="tocnumber">4</span> <span class="toctext">Advantages and Disadvantages</span></a>
-<ul>
-<li class="toclevel-2 tocsection-8"><a href="#Advantages_of_Amplify"><span class="tocnumber">4.1</span> <span class="toctext">Advantages of Amplify</span></a></li>
-<li class="toclevel-2 tocsection-9"><a href="#Advantages_of_Normalize"><span class="tocnumber">4.2</span> <span class="toctext">Advantages of Normalize</span></a></li>
-<li class="toclevel-2 tocsection-10"><a href="#When_not_to_use_Amplify"><span class="tocnumber">4.3</span> <span class="toctext">When not to use Amplify</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#When_not_to_use_Normalize"><span class="tocnumber">4.4</span> <span class="toctext">When not to use Normalize</span></a></li>
-</ul>
-</li>
-</ul>
-</div>
-
-<h3><span class="mw-headline" id="Applying_level_changes">Applying level changes</span></h3>
-<p>The Normalize effect offers the option to "Normalize maximum amplitude to" a chosen level.
-</p><p>The Amplify effect offers two interdependent options (meaning that changing one changes the other):  "Amplification (dB)", and "New Peak Amplitude (dB)". The slider can also be used to choose the amplification level without entering any text input. 
-</p><p>For a single mono track, these are essentially different ways of saying the same thing. If we have a track whose peak amplitude is -6 dB (+0.5 to -0.5 on the vertical scale), there are three ways to bring the peak up to 0 dB (+1.0 to -1.0 on the vertical scale).
+<div class="intro"><a href="amplify.html" title="Amplify"><b>Amplify</b></a> and <a href="normalize.html" title="Normalize"><b>Normalize</b></a> are very similar effects, but have some subtle differences:
+<ul><li>the two effects behave differently if used on multiple tracks or channels</li>
+<li>Normalize has its own option for correcting <a href="dc_offset.html" title="DC offset">DC offset</a></li>
+<li>Amplify has its own option to enter the volume change to be applied and to allow "clipping" by amplifying to above 0.0 dB</li>
+<li>By default: Amplify amplifies to 0db <i>(maximum volume)</i>, Normalize raises volume to -1dB <i>(to provide a little headroom)</i></li></ul>
+</div>  
+<p><br />
 </p>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#levels">Applying level changes</a></li>
+<li><a href="#multiple">Differences between Amplify and Normalize on multiple tracks or channels</a></li>
+<li><a href="#which">Advantages/Disadvantages and which to use</a></li>
+<li><a href="#dcoffset">Using Normalize with DC offset correction</a></li></ol>
+<p><br />
+</p>
+<div id="levels"></div>
+<h2><span class="mw-headline" id="Applying_level_changes">Applying level changes</span></h2>
+<p>The Normalize effect normalizes maximum amplitude <b>to a chosen level</b>.
+</p><p>The Amplify effect amplifies <b>by a certain amount</b>. It offers two interdependent options (meaning that changing one changes the other):  "Amplification (dB)", and "New Peak Amplitude (dB)". The slider can also be used to choose the amplification level without entering any text input. 
+</p>
+<div class="note">For a single mono track, these are essentially different ways of saying the same thing. If we have a track whose peak amplitude is -6 dB (+0.5 to -0.5 on the vertical scale), there are three ways to bring the peak up to 0 dB (+1.0 to -1.0 on the vertical scale).
 <ol><li> "Normalize the maximum amplitude" to -0.0 dB </li>
 <li> Set "Amplification (dB)" to 6 dB </li>
 <li> Set "New Peak Amplitude (dB)" to -0.0 dB</li></ol>
-<p>With a -6 dB track, Amplify will always default to the above "Amplification (dB)" and "New Peak Amplitude (dB)" values, because it always defaults to amplifying to 0.0 dB.  
-</p><p>If the DC offset correction in Normalize is not applied, each of these methods will do exactly the same thing and the resulting audio will be identical.
+If the DC offset correction in Normalize is not applied, each of these methods will do exactly the same thing and the resulting audio will be identical. </div>
+<p><br />
 </p>
-<h3><span class="mw-headline" id="Using_Normalize_with_DC_offset_correction">Using Normalize with DC offset correction</span></h3>
-<p>If DC offset is present, you should always use <a href="dc_offset.html" title="DC offset">DC offset correction</a>. A minimal amount of offset is very common, but large amounts (such as in Figure 1 below) should not normally happen. 
-</p>
-<dl><dd><span title="DC offset in the upper of two tracks"><img alt="DC-offset.png" src="../m/images/d/df/dc_offset.png" width="373" height="200" /></span></dd>
-<dd><b>Figure 1</b></dd></dl>
-<p>In Figure 1 you can see that the upper track is not centerd on the horizontal line, but above it. It is "off-set". We can correct this fault by using the Normalize effect with "Remove any DC offset" selected. Using Normalize with this selected (but with "Normalize maximum amplitude to" not selected) will correct this offset without making any other changes to the amplitude - the result will look like the lower track.
-</p>
-<dl><dd><span title="Amplified track with DC offset before and after correction"><img alt="Amplify-normalize with DC offset.png" src="../m/images/1/1b/amplify_normalize_with_dc_offset.png" width="393" height="200" /></span></dd>
-<dd><b>Figure 2</b></dd></dl>
-<p>In the upper track in Figure 2 we show the offset upper track from Figure 1 after applying Amplify. In the lower track we see that amplified waveform after applying Normalize with DC offset correction.
-</p><p>In both cases the maximum peak amplitude was set to 0.0 dB, but note that in the upper (amplified) track, the resulting waveform is noticeably smaller than in the lower (normalized) track. Note also that the DC offset has become worse after amplifying than it was in Figure 1 - the offset has also been amplified.
-</p><p>The reason that the Amplified waveform is smaller is that the positive peaks above the horizontal line have been shifted up vertically by the DC offset, so although the positive peak is at 0.0 dB (+1.0 on the vertical scale), the negative peak below the horizontal is far away from -1.0.
-</p>
-<div class="note">If your recordings regularly produce noticeable <a href="dc_offset.html" title="DC offset">DC offset</a>, this indicates a fault in your system, usually with either the audio interface or its drivers. Connecting faulty sound sources can also cause this problem. These issues should be corrected as necessary by <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">updating the drivers</a> or fixing the hardware.
-<ul><li> Newer Windows PCs may have a DC offset cancellation feature when recording from the built-in sound inputs; see the <a href="dc_offset.html" title="DC offset">DC offset</a> page.</div>  </li></ul>
 <div id="multiple"></div>
 <h2><span class="mw-headline" id="Differences_between_Amplify_and_Normalize_on_multiple_tracks_or_channels">Differences between Amplify and Normalize on multiple tracks or channels</span></h2>
+<div id="multiamp"></div>
 <h3><span class="mw-headline" id="Amplify_multiple_audio_tracks">Amplify multiple audio tracks</span></h3>
 <p>If you select multiple tracks and apply the Amplify effect, then <b>all audio tracks will be amplified by the same amount</b>. 
 </p><p>For example, if you enter 3 dB in "Amplification (dB)", all audio tracks will be amplified by 3 dB, irrespective of their original level. Whatever peak volume differences there were between the tracks (or channels within a track) will be preserved.  In particular Amplify will always preserve the left-right balance of a stereo pair within a track.
 </p>
+<div id="multinorm"></div>
 <h3><span class="mw-headline" id="Normalize_multiple_audio_tracks_or_channels">Normalize multiple audio tracks or channels</span></h3>
-<p>The Normalize effect can optionally operate evenly on the channels of a stereo pair <i>(as Amplify does)</i> thus retaining the Left-Right balance all stereo channel pairs within the selected tracks.  A new checkbox has been added: "Normalize stereo channels independently" which is set by default to "off".  If this checkbox is unchecked then <b>all selected audio tracks will be normalized to the same peak level.</b>  If this checkbox is checked then all audio channels within the selected tracks will be independently normalized to the same peak level.
+<p>The Normalize effect can optionally operate evenly on the channels of a stereo pair <i>(as Amplify does)</i> thus retaining the Left-Right balance all stereo channel pairs within the selected tracks.  There is a checkbox  "Normalize stereo channels independently" which is set by default to "off", of this checkbox is unchecked then <b>all selected audio tracks will be normalized to the same peak level.</b>  If this checkbox is checked then all audio channels within the selected tracks will be independently normalized to the same peak level.
 </p>
+<div id="example"></div>
 <h3><span class="mw-headline" id="Visual_comparison">Visual comparison</span></h3>
-<p>Let us see this comparison on a stereo track. In Figure 3 below there are two stereo tracks - they each have two audio channels, Left and Right. Note that the peak amplitude of the Left (upper) channel of each stereo pair is quite a bit greater than the peak amplitude of the Right (lower) channel.
+<p>Let us see this comparison on a stereo track. 
+</p><p>In Figure 3 below there are two stereo tracks - they each have two audio channels, Left and Right. Note that the peak amplitude of the Left (upper) channel of each stereo pair is quite a bit greater than the peak amplitude of the Right (lower) channel.
 </p>
 <dl><dd><span title="Stereo tracks showing lower Right channel amplitude"><img alt="Stereo tracks.png" src="../m/images/5/56/stereo_tracks.png" width="498" height="300" /></span></dd>
 <dd><b>Figure 3</b></dd></dl>
-<p>In Figure 4 below we can see the clear difference between the processed tracks after <b>Amplifying the upper track</b> to 0.0 dB, and <b>Normalizing the lower track</b> to 0.0 dB (with stereo channels normalized independently; you can choose to "Normalize stereo channels independently" or not.  
+<p>In Figure 4 below we can see the clear difference between the processed tracks after <b>Amplifying the upper track</b> to 0.0 dB, and <b>Normalizing the lower track</b> to 0.0 dB (with stereo channels normalized independently) you can choose to "Normalize stereo channels independently" or not.  
 </p>
-<dl><dd><span title="Contrast between amplifying and normalising stereo tracks having lower Right channel amplitude"><img alt="Amplify-vs-Normalize.png" src="../m/images/e/ea/amplify_vs_normalize.png" width="544" height="398" /></span></dd>
+<dl><dd><span title="Contrast between amplifying and normalizing stereo tracks having lower Right channel amplitude"><img alt="Amplify-vs-Normalize.png" src="../m/images/e/ea/amplify_vs_normalize.png" width="544" height="398" /></span></dd>
 <dd><b>Figure 4</b></dd></dl>
 <p>Note that in the upper stereo track, both Left and Right channels have been amplified by the same amount (about 1.0 dB). Only the Left channel has a resultant peak value of 0.0 dB, because the Right channel was of lower amplitude. In the lower track, Normalize has processed each channel independently to give <i>both</i> channels a resultant peak value of 0.0 dB.
+</p><p><br />
 </p>
-<h2><span class="mw-headline" id="Advantages_and_Disadvantages">Advantages and Disadvantages</span></h2>
+<div id="which"></div>
+<h2><span class="mw-headline" id="Advantages.2FDisadvantages_and_which_to_use">Advantages/Disadvantages and which to use</span></h2>
 <h3><span class="mw-headline" id="Advantages_of_Amplify">Advantages of Amplify</span></h3>
 <ul><li> <b>Change the level of one or more tracks or channels by the same amount</b>, preserving the balance between them </li>
 <li> <b>Slider for quick amplification adjustment</b> </li>
@@ -124,9 +108,29 @@
 </p>
 <h3><span class="mw-headline" id="When_not_to_use_Normalize">When not to use Normalize</span></h3>
 <p>If multiple tracks contain <b>intentional</b> differences in peak levels, you should never normalize any of them. The <b>only</b> way to preserve the relative balance between them is to select them all as a group and amplify them, so they are all scaled up by the same amount. 
-</p><p>You *can* normalize stereo tracks without changing their channel balance, but only if a) the stereo track is not split into Left and Right and b) "Normalize stereo channels independently" is <b>unchecked</b>.      
+</p><p>You <i><b>can</b></i> normalize stereo tracks without changing their channel balance, but only if a) the stereo track is not split into Left and Right and b) "Normalize stereo channels independently" is <b>unchecked</b>.      
 </p><p>If tracks with intentional peak differences have DC offset that needs correction, then you can and should use Normalize, but with "Normalize maximum amplitude to" <b>unchecked</b>.
+</p><p><br />
 </p>
+<div id="dcoffset"></div>
+<h2><span class="mw-headline" id="Using_Normalize_with_DC_offset_correction">Using Normalize with DC offset correction</span></h2>
+<p>If DC offset is present, you should always use <a href="dc_offset.html" title="DC offset">DC offset correction</a>. A minimal amount of offset is very common, but large amounts (such as in Figure 1 below) should not normally happen. 
+</p>
+<dl><dd><span title="DC offset in the upper of two tracks"><img alt="DC-offset.png" src="../m/images/d/df/dc_offset.png" width="373" height="200" /></span></dd>
+<dd><b>Figure 1</b></dd></dl>
+<p>In Figure 1 you can see that the upper track is not centered on the horizontal line, but above it. It is "off-set". 
+</p><p>We can correct this fault by using the Normalize effect with "Remove any DC offset" selected. Using Normalize with this selected (but with "Normalize maximum amplitude to" <b>not</b> selected) will correct this offset without making any other changes to the amplitude - the result will look like the lower track.
+</p>
+<h3><span class="mw-headline" id="In_contrast_using_Amplify">In contrast using Amplify</span></h3>
+<dl><dd><span title="Amplified track with DC offset before and after correction"><img alt="Amplify-normalize with DC offset.png" src="../m/images/1/1b/amplify_normalize_with_dc_offset.png" width="393" height="200" /></span></dd>
+<dd><b>Figure 2</b></dd></dl>
+<p>In the upper track in Figure 2 we show the offset upper track from Figure 1 after applying Amplify. In the lower track we see that amplified waveform after applying Normalize with DC offset correction.
+</p><p>In both cases the maximum peak amplitude was set to 0.0 dB, but note that in the upper (amplified) track, the resulting waveform is noticeably smaller than in the lower (normalized) track. Note also that the DC offset has become worse after amplifying than it was in Figure 1 - the offset has also been amplified.
+</p><p>The reason that the Amplified waveform is smaller is that the positive peaks above the horizontal line have been shifted up vertically by the DC offset, so although the positive peak is at 0.0 dB (+1.0 on the vertical scale), the negative peak below the horizontal is far away from -1.0.
+</p>
+<div class="note">If your recordings regularly produce noticeable <a href="dc_offset.html" title="DC offset">DC offset</a>, this indicates a fault in your system, usually with either the audio interface or its drivers. Connecting faulty sound sources can also cause this problem. These issues should be corrected as necessary by <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">updating the drivers</a> or fixing the hardware.
+<ul><li> Newer Windows PCs may have a DC offset cancellation feature when recording from the built-in sound inputs; see the <a href="dc_offset.html" title="DC offset">DC offset</a> page.</div></li></ul>
+
 
 
 
@@ -203,7 +207,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Amplify_and_Normalize">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Amplify_and_Normalize">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

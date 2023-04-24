@@ -33,7 +33,7 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This error message asks you to check the recording or playback device settings and the Audacity <a href="selection_toolbar.html" title="Selection Toolbar">project sample rate</a>. 
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This error message asks you to check the recording or playback device settings and the Audacity <a href="audio_settings_preferences.html" title="Audio Settings Preferences">project sample rate</a>. 
 <p>There are three forms of this message
 </p>
 <ul><li><b>Error opening recording device - Error code -xxxx</b>  this means there is a problem with your Audacity, operating system or sound device recording settings, where xxxx is replaced by a <a href="#codes">numeric code</a>.</li>
@@ -82,8 +82,8 @@ The recording device message most commonly occurs on Windows when one of the sou
 </p>
 <div id="audsettings"></div>
 <h2><span class="mw-headline" id="Check_Audacity_settings">Check Audacity settings</span></h2>
-<div class="note">It may be a good idea to try to play or record after checking or changing each of the following Audacity settings. Sometimes a project rate change is all that is needed.</div>
-<ul><li> Set the project rate bottom left of the Audacity window to the standard rate of 44,100 Hz (or if your audio interface only supports a particular rate such as 48,000 Hz, set the project rate to that). <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info...</a></span> should show the rates the device claims to support. </li></ul>
+<div class="note">It may be a good idea to try to play or record after checking or changing each of the following Audacity settings. Sometimes a <a href="audio_settings_preferences.html" title="Audio Settings Preferences">project rate</a> change is all that is needed.</div>
+<ul><li> Set the project rate in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> to the standard rate of 44100 Hz (or if your audio interface only supports a particular rate such as 48000 Hz, set the project rate to that). <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info...</a></span> should show the rates the device claims to support. </li></ul>
 <ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> (this should never be enabled if <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer">recording computer playback</a>). </li></ul>
 <ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a></span> because recording while playing could stress your sound device or computer. If this solves the problem, read the Wiki pages <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">Updating Sound Device Drivers</a> and <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers">Managing Computer Resources and Drivers</a> for advice on how to make your sound device or computer more capable. </li></ul>
 <ul><li>Check in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> that the playback and recording devices are correctly and explicitly selected. 
@@ -95,11 +95,11 @@ The recording device message most commonly occurs on Windows when one of the sou
 <h2><span class="mw-headline" id="Check_operating_system_settings">Check operating system settings</span></h2>
 <ul><li> <b>Windows:</b> Follow the instructions for <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows</a> to access and configure the Windows Sound settings. The key points are:
 <ul><li> <b>Ensure all available inputs are listed and enabled in the Windows Sound dialog.</b> </li>
-<li> <b>Additionally for Windows:</b> Ensure Default Format for the playback and recording devices contains the same <a href="selection_toolbar.html" title="Selection Toolbar">sample rate</a> and number of <a href="device_toolbar.html" title="Device Toolbar">recording channels</a> as in Audacity. 
+<li> <b>Additionally for Windows:</b> Ensure Default Format for the playback and recording devices contains the same <a href="audio_settings_preferences.html" title="Audio Settings Preferences">sample rate</a> and number of <a href="device_toolbar.html" title="Device Toolbar">recording channels</a> as in Audacity. 
 <ul><li> Very rarely, it can help to use 16-bit or 24-bit Default Format then change the Audacity <a href="quality_preferences.html#Sampling" title="Quality Preferences">Quality Preferences</a> to that sample format.</li>
-<li> If necessary, put a checkmark in both Exclusive Mode boxes then set the "Host" in Audacity's Device Toolbar to "Windows DirectSound" and choose a <a href="selection_toolbar.html" title="Selection Toolbar">project rate</a> that your playback and recording devices support. Audacity can then request that rate directly from the sound device. </li></ul></li></ul></li></ul>
+<li> If necessary, put a checkmark in both Exclusive Mode boxes then set the "Host" in Audacity's Device Toolbar to "Windows DirectSound" and choose a <a href="audio_settings_preferences.html" title="Audio Settings Preferences">project rate</a> that your playback and recording devices support. Audacity can then request that rate directly from the sound device. </li></ul></li></ul></li></ul>
 <div id="macsettings"></div>
-<ul><li> <b>Mac:</b> In Finder, choose <span class="menu">Go &gt; Utilities &gt; Audio MIDI Setup.app</span>. In "Audio Devices", select in turn the required Recording and Playback devices. Set "Format" to the same <a href="selection_toolbar.html" title="Selection Toolbar">sample rate</a>, <a href="quality_preferences.html#Sampling" title="Quality Preferences">bit-depth</a> and number of <a href="device_toolbar.html" title="Device Toolbar">recording channels</a> as in Audacity.</li></ul>
+<ul><li> <b>Mac:</b> In Finder, choose <span class="menu">Go &gt; Utilities &gt; Audio MIDI Setup.app</span>. In "Audio Devices", select in turn the required Recording and Playback devices. Set "Format" to the same <a href="audio_settings_preferences.html" title="Audio Settings Preferences">sample rate</a>, <a href="quality_preferences.html#Sampling" title="Quality Preferences">bit-depth</a> and number of <a href="device_toolbar.html" title="Device Toolbar">recording channels</a> as in Audacity.</li></ul>
 <div id="linuxsettings"></div>
 <ul><li> <b>Linux:</b> </li></ul>
 <div class="note">While troubleshooting, ensure that <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> is off. Only enable this option if you really need it, after you have established that Audacity is recording correctly.</div>
@@ -227,7 +227,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -50,7 +50,7 @@
 <h2><span class="mw-headline" id="When_latency_adjustment_is_important">When latency adjustment is important</span></h2>
 <p>Latency is only important when you are using:
 </p>
-<ul><li><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs"><b>overdubbing</b></a>, that is, recording a new track while listening to previously-recorded track(s). You want what you play to be synchronized with the tracks you are listening to. Audacity can correct for latency, but you have to tell it what the correction amount is. You enter this correction amount in the <a href="devices_preferences.html" title="Devices Preferences">Devices tab</a> of the Preferences dialog</li>
+<ul><li><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs"><b>overdubbing</b></a>, that is, recording a new track while listening to previously-recorded track(s). You want what you play to be synchronized with the tracks you are listening to. Audacity can correct for latency, but you have to tell it what the correction amount is. You enter this correction amount in the <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Aufio Settings tab</a> of the Preferences dialog</li>
 <li><b><a href="punch_and_roll_record.html" title="Punch and Roll Record">Punch and Roll Record</a></b> to quick-fix recording errors.</li></ul>
 <p><br />
 </p>
@@ -126,8 +126,8 @@
 <li>You can change this in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a> by checking "<b>on</b>" the "<b>Record on a new track</b>", doing this will make Audacity record on a new track with just the Record button and <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and <img alt="The Record on same Track button" src="../m/images/d/d9/recordbeside.png" title="The Record on same Track button" width="16" height="16" /> will append record onto your existing track.  </li></ul>
 </td></tr></table>
 </div>
-<h3><span class="mw-headline" id="Devices_preferences">Devices preferences</span></h3>
-<p>On the <a href="devices_preferences.html" title="Devices Preferences">Devices tab</a>, in the Latency section, set the following settings:
+<h3><span class="mw-headline" id="Audio_Settings_preferences">Audio Settings preferences</span></h3>
+<p>On the <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings tab</a>, in the Latency section, set the following settings:
 </p>
 <ul><li> Set the <b>Latency compensation</b> to <b>0</b> (zero), so that you get an absolute reading.</li>
 <li> Leave the <b>Buffer length</b> value at its default value. </li>
@@ -141,7 +141,7 @@
 <td align="left" valign="top">The Buffer length value will affect latency, but the effect will vary between systems. 100 milliseconds is a safe value that will not put too much load on the CPU. Too low a value may put too much load on the CPU causing dropouts in the recording. If you are feeling adventurous you can repeat this test with different values for Buffer length. But in the end you should settle on a value for both <i>Buffer length</i> and <i>Latency compensation</i> and leave them there.
 </td></tr></table></div>
 <h3><span class="mw-headline" id="Selection_toolbar">Selection toolbar</span></h3>
-<p>In <b><a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a></b> make sure that "<a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a>" is set to "Off". Above the second and thrid group of numbers, make sure that <span class="button">Start and Length of Selection &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> is selected. Click on one of the downward-pointing arrows in the digits boxes to the right of <b>Snap-To</b> and select <span class="button">hh:mm:ss + milliseconds &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span>.
+<p>In <b><a href="snapping_toolbar.html" title="Snapping Toolbar">Snapping Toolbar</a></b> make sure that <b>Snap</b> is set to "Off". Above the second and third group of numbers, make sure that <span class="button">Start and Length of Selection &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> is selected. Click on one of the downward-pointing arrows in the digits boxes and select <span class="button">hh:mm:ss + milliseconds &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span>.
 </p><p><br />
 </p>
 <div id="test"></div>
@@ -172,7 +172,7 @@ Zoom in so you can see one of the clicks in the top track and its delayed versio
 </td></tr></table></dd></dl>
 <p><br />
 You can now read the latency directly from the second panel of numbers. In this case it is 0.096 seconds, or 96 milliseconds. 
-</p><p>Click on <span class="menu">Edit &gt; Preferences</span>, click on the <a href="devices_preferences.html" title="Devices Preferences">Devices tab</a>, and enter the negative of this number in the <b>Latency compensation</b> box - in this case it would be <b>-96</b>.
+</p><p>Click on <span class="menu">Edit &gt; Preferences</span>, click on the <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings tab</a>, and enter the negative of this number in the <b>Latency compensation</b> box - in this case it would be <b>-96</b>.
 </p><p><br />
 </p>
 <div id="check"></div>
@@ -280,7 +280,7 @@ Zoom in on one of the clicks and verify that the clicks in the two tracks line u
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Latency_Test">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Latency_Test">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

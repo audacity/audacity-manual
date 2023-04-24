@@ -52,7 +52,7 @@
 <li><a href="#mouse">Selecting regions using the mouse - <i>quick and easy</i></a>
 <ul><li> <a href="#cues">Visual cues indicating selection</a></li>
 <li> <a href="#mouse-selection-tips">Mouse selection tips</a></li></ul></li>
-<li><a href="#snapto">Snap-To</a> - <i>to force-snap the cursor or selection edges to the closest or previous position of the current selection format</i></li>
+<li><a href="#snapto">Snapping</a> - <i>to force-snap the cursor or selection edges to the closest or previous position of the current selection format</i></li>
 <li><a href="#boundary-snap-guides">Boundary Snap Guides</a> - <i>facilitates making a selection that starts or ends at a physical boundary</i></li>
 <li><a href="#track_mouse">Selecting tracks using the mouse</a>
 <ul><li><a href="#add">Adding tracks to the selection</a></li></ul></li>
@@ -130,11 +130,10 @@
 <p><br />
 </p>
 <div id="snapto"></div>
-<h2><span class="mw-headline" id="Snap-To">Snap-To</span></h2>
-<p>The <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> has an <a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a> option which force-snaps the cursor or selection edges to the <i>closest</i> position of the current <a href="#formats">selection format</a>. 
+<h2><span class="mw-headline" id="Snapping">Snapping</span></h2>
+<p>The <a href="snapping_toolbar.html" title="Snapping Toolbar">Snapping Toolbar</a> enables you to snap the cursor or selection to the nearest whole second (or other whole time formats) which can be useful for exporting a selection that needs to be a whole number of seconds (or other time unit), without entering values in the Selection Toolbar boxes (which would be another way of ensuring accuracy). Snapping is "off" by default.
 </p>
-<ul><li> Selecting <span class="button">Nearest &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> from the Snap-To dropdown menu will force-snap the cursor or selection edges to the <i>closest</i>. </li>
-<li> Selecting <span class="button">Prior &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> from the same menu will force-snap the cursor or selection edges to the <i>immediately preceding</i> position. </li></ul>
+<dl><dd><div class="noresize"><map name="ImageMap_1_733094886"><area href="snapping_toolbar.html" shape="rect" coords="0,0,177,62" alt="Image of the Snapping Toolbar, Click to learn more." title="Image of the Snapping Toolbar, Click to learn more."/></map><img alt="Snapping Toolbar 3-3-0.png" src="../m/images/2/23/snapping_toolbar_3_3_0.png" width="177" height="62" usemap="#ImageMap_1_733094886"/></div></dd></dl>
 <p><br />
 </p>
 <div id="boundary-snap-guides"></div>
@@ -147,7 +146,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">This is distinct from the "<a href="selection_toolbar.html#snap" title="Selection Toolbar">Snap-To</a>" options in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> which snap selection edges (or the cursor) to <a href="selection_toolbar.html#formats" title="Selection Toolbar">time units, samples or media frames</a>.
+<td align="left" valign="top">This is distinct from the <b>snapping</b> options in <a href="snapping_toolbar.html" title="Snapping Toolbar">Snapping Toolbar</a> which snap selection edges (or the cursor) to time units, samples or media frames.
 </td></tr></table></div>
 <p><br />
 </p>
@@ -218,7 +217,7 @@
 </p>
 <div id="selbar"></div>
 <h2><span class="mw-headline" id="Selection_Toolbar">Selection Toolbar</span></h2>
-<dl><dd><span title="Selection Toolbar"><img alt="Selection Toolbar zeroed 2-4-0.png" src="../m/images/f/fb/selection_toolbar_zeroed_2_4_0.png" width="509" height="57" /></span></dd></dl>
+<dl><dd><div class="noresize"><map name="ImageMap_2_1371881539"><area href="selection_toolbar.html" shape="rect" coords="0,0,236,65" alt="Image of the Selection Toolbar, Click to learn more." title="Image of the Selection Toolbar, Click to learn more."/></map><img alt="Selection toolbar 3-3-0.png" src="../m/images/9/94/selection_toolbar_3_3_0.png" width="243" height="67" usemap="#ImageMap_2_1371881539"/></div></dd></dl>
 <p>One handy way to keep track of what you have selected and to make very precise modifications is to use the <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>. For our purposes here, let's concentrate on its main purpose, the Selection boxes. By changing the <a href="selection_toolbar.html#position" title="Selection Toolbar">dropdown menu selection</a> from "<b>Start and End of Selection</b>" to "<b>Start and Length of Selection</b>", you can display and control the length of the selection instead of the endpoint.  Which one is useful for you depends on the circumstances: if you need a clip from a song that is exactly 30 seconds long, you may want to set the length to 30, and then modify the start until you have just what you want.  Other times you may know the exact end time but need to figure out where to start, independent of the resulting length. 
 </p><p>Selection Toolbar also displays and can move the cursor position without there being a region selected. To move the cursor to an exact position using Selection Toolbar, set the "Selection Start" and "End" boxes to the same value.   
 </p><p>You can set the values displayed in the Selection Toolbar boxes using the mouse and/or keyboard.  To change a particular digit in a box, click on it, or you can navigate to it using only the keyboard: 
@@ -290,8 +289,9 @@
 <li>Scroll until the other edge is in view</li>
 <li>Shift-click to set the other edge of the selection.</li></ol>
 <ul><li> Hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while pressing <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> to extend the selection from the left or right edge respectively. </li>
-<li> Hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Shift</span> while pressing <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> to contract the selection from the right or left edge respectively.</li>
-<li> Use <a href="#selbar">Selection Toolbar</a> to precisely place the selection boundaries by entering their positions. </li></ul>
+<li> Hold <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Shift</span> while pressing <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> to contract the selection from the right or left edge respectively.</li></ul>
+<div class="note">If you press the <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> on their own the cursor will move to the start or end of the selection and remove the selection.</div>
+<ul><li> Use <a href="#selbar">Selection Toolbar</a> to precisely place the selection boundaries by entering their positions. </li></ul>
 <div id="set_boundary"></div>
 <ul><li> Use the <span class="kbrd" style="background-color: #e0e0f0">[</span> &#160;or <span class="kbrd" style="background-color: #e0e0f0">]</span> &#160;shortcut when the track is not playing, recording or paused to open the "Set Left Selection Boundary" or "Set Right Selection Boundary" dialog respectively. Then adjust the position of the left- or right-hand selection boundary. As in Selection Toolbar, to change the <a href="#formats">Selection Format</a> of the time units or frame boundaries, right-click (or use the keyboard Context Key) or left-click the downward-pointing triangle to right of the time digits.  </li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -472,7 +472,7 @@ You can also change which tracks are selected independently of the range, so tha
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Selection">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Selection">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

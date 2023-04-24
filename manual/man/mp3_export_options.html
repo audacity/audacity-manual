@@ -36,7 +36,10 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro"><i><b>MP3 Export Options</b></i> let you choose the quality of files exported to the popular <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> format. You can choose between variable, average or constant <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i>, or from one of four common presets. Encoding speed can be specified, and Joint Stereo encoding chosen as an option.<p> As with all <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>, <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed formats</a></b></i>, there is a trade-off between the size of the file and the quality of the encoded file, higher quality requiring larger files.</p>
 <p>Note that MP3 files have a short silence at the beginning due to encoder delay. This is a <a rel="nofollow" class="external text" href="http://lame.sourceforge.net/tech-FAQ.txt">limitation of the MP3 format</a>. Audacity uses <a rel="nofollow" class="external text" href="http://gabriel.mp3-tech.org/mp3infotag.html">LAME Mp3 info tag</a> to store the exact length of added silence. Applications that support this tag, (including Audacity), are then able to automatically strip off the added silence. Many apps still do not support this feature, and will therefore show a small amount of added silence at the beginning of the file. If you need to synchronize files or are making <a href="tutorial_looping.html" title="Tutorial - Looping">Audio Loops</a>, it is highly recommended to use a format that does not have this limitation, such as WAV, FLAC or Ogg Vorbis.</p>
-<p>Audacity uses <b><a rel="nofollow" class="external text" href="http://lame.sourceforge.net/">LAME</a></b> for encoding MP3s, which is generally considered to be the best MP3 encoding library, and is the only MP3 encoding library that is still being actively developed.</p>  </div> 
+<p>Audacity uses <b><a rel="nofollow" class="external text" href="http://lame.sourceforge.net/">LAME</a></b> for encoding MP3s, which is generally considered to be the best MP3 encoding library, and is the only MP3 encoding library that is still being actively developed.</p>  
+<div class="note">What you hear by previewing with playback prior to export is what you will get in the Exported audio file.
+<ul><li>When using <b>Export</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. </li>
+<li>Also note that any hidden parts of audio clips are <i><b>not</b></i> exported, see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>. </div> </div></li></ul>
 <p><br />
 </p>
 <dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html" title="File Menu: Export">Export as MP3</a></span> </dd></dl>
@@ -192,7 +195,7 @@ See <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/MP3_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/MP3_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

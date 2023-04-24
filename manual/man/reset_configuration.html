@@ -33,7 +33,7 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Reset_Configuration#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This resets your Audacity configuration (preferences, export settings and toolbars) to default settings.
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This resets your Audacity configuration: <b>toolbars</b>, <b>preferences</b> and <b>export settings</b> to default settings.
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -47,8 +47,15 @@
 <p><br />
 </p>
 <div id="reset"></div>
-<h2><span class="mw-headline" id="Preferences_and_Export_settings_reset">Preferences and Export settings reset</span></h2>
+<div id="toolbars"></div>
+<h2><span class="mw-headline" id="Toolbars">Toolbars</span></h2>
+<p>All toolbars are reset to their default position and size.
+</p><p>All toolbars, with the exception of <a href="time_signature_toolbar.html" title="Time Signature Toolbar">Time Signature</a> toolbar, are reset to their default parameter settings.
+</p><p><br />
+</p>
 <div id="prefs"></div>
+<h2><span class="mw-headline" id="Preferences_and_Export_settings_reset">Preferences and Export settings reset</span></h2>
+<div id="preferences"></div>
 <h3><span class="mw-headline" id="Preferences">Preferences</span></h3>
 <p>Using <b>Reset Configuration</b> will reset all your Audacity <a href="preferences.html" title="Preferences"><b>Preferences</b></a> settings to their default "factory settings".
 </p><p>The exception is the setting for "<b>Check for updates</b>" in <a href="application_preferences.html" title="Application Preferences">Application Preferences</a>, which remains unaltered with the use of this command.
@@ -57,25 +64,11 @@
 <h4><span class="mw-headline" id="Modules">Modules</span></h4>
 <p>Any modules will no longer be listed on the modules preferences page, and will be searched for afresh next time you restart Audacity.
 </p>
-<div id="Export"></div>
+<div id="export"></div>
 <h3><span class="mw-headline" id="Export_settings">Export settings</span></h3>
 <p>Any export format settings from your last use of any export command will be reset to default by using Reset Configuration
 </p><p><br />
 </p>
-<div id="toolbars"></div>
-<h2><span class="mw-headline" id="Toolbars_reset">Toolbars reset</span></h2>
-<p>Using this command will also reset all your toolbars to their default "factory settings": sizing, positioning and settings.  This is analogous to using <span class="menu">View &gt; Toolbars &gt; <a href="view_menu_toolbars.html" title="View Menu: Toolbars">Reset Toolbars</a></span>.
-</p>
-<ul><li> <span style="font-weight: bold; font-size:118%">Tools toolbar:</span> reset to "I-beam" <b>Selection</b> tool</li>
-<li> <span style="font-weight: bold; font-size:118%">Meter toolbars:</span> recording and playback meters are both reset to <b>Gradient</b> style, <b>dB</b> type and <b>Automatic</b> orientation</li>
-<li> <span style="font-weight: bold; font-size:118%">Device toolbar:</span> this is reset to the default Host with the default  Recording and Playback devices for your computer - and reset to 2-channel stereo</li>
-<li> <span style="font-weight: bold; font-size:118%">Selection toolbar:</span> reset to show:
-<ul><li><b>Start and End of Selection</b> </li>
-<li>Time format reset to <b>hh:mm:ss + milliseconds</b></li>
-<li><b>Snap-To</b> is reset to be "<b>off</b>"</li>
-<li><b>Project Rate</b> reset to the default 44,100 Hz</li></ul></li>
-<li> <span style="font-weight: bold; font-size:118%">Time toolbar:</span> resets the time format to <b>hh:mm:ss</b></li></ul>
-<div class="note">The sliders for levels in Mixer toolbar and the speed in the Play-at-Speed toolbar are left untouched. </div>
 <div id="window"></div>
 <h2><span class="mw-headline" id="Window_size">Window size</span></h2>
 <p>The size of your Audacity window will be reset to its default size with this command.
@@ -87,7 +80,10 @@
 <div id="update"></div>
 <div id="preferences"></div>
 <h3><span class="mw-headline" id="Settings_in_Preferences">Settings in Preferences</span></h3>
-<ul><li><b>Update Checking:</b> the setting you make in <a href="application_preferences.html" title="Application Preferences">Application Preferences</a> for update checking is not changed  by Reset Configuration.</li></ul>
+<ul><li><b>Update Checking:</b> the setting you make in <a href="application_preferences.html" title="Application Preferences">Application Preferences</a> for update checking is not changed by Reset Configuration.</li></ul>
+<div id="toolbars"></div>
+<h3><span class="mw-headline" id="Settings_in_Toolbars">Settings in Toolbars</span></h3>
+<ul><li><b><a href="time_signature_toolbar.html" title="Time Signature Toolbar">Time Signature</a> toolbar</b> the settings in this <i>(off by default)</i>  toolbar are not changed.  This is because the time signature is part of your project and is stored with the project.</li></ul>
 <div id="ega"></div>
 <h3><span class="mw-headline" id="Settings_in_Effects_Generators_and_Analyzers">Settings in Effects Generators and Analyzers</span></h3>
 <ul><li><b><a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a>:</b> the Enabled / Disabled settings that you have made for Effects, Generators and Analyzers will not be changed.</li></ul>
@@ -95,6 +91,7 @@
 <dl><dd>Importantly this includes equalization settings you may have made in <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a> and <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a>.</dd></dl>
 <ul><li><b>Last-used parameter settings</b> that you may have used in any Effect, Generator or Analyzer are not reset to default values.</li></ul>
 <dl><dd>If you need or want to reset these to Factory default values for any particular Effect, Generator or Analyzer please use the <span class="button">Manage</span> button and choose <b>Factory Presets</b>.</dd></dl>
+<div id="font"></div>
 <h3><span class="mw-headline" id="Font_setting_for_Label_tracks">Font setting for Label tracks</span></h3>
 <ul><li>The global <a href="label_tracks.html#menu" title="Label Tracks">Font setting</a> made in any label track's drop-down menu is not changed by Reset Configuration.</li></ul>
 <div id="recent"></div>
@@ -193,7 +190,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Reset_Configuration">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Reset_Configuration">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

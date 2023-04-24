@@ -52,22 +52,22 @@
 
 <div id="hang"></div>
 <h2><span class="mw-headline" id="Why_does_Audacity_crash_or_use_excessive_processing_time_on_MP3_export.3F">Why does Audacity crash or use excessive processing time on MP3 export?</span></h2>
-<p>If Audacity crashes or hangs when exporting MP3s, or the export takes a long time to process, the usual reason is that your chosen Project Rate (the sample rate bottom left of the Audacity screen) is very different from the sample rate of the audio track on the screen (as shown in Hz on the Track Control Panel above the mute/solo buttons). As a result, resampling has to be done while exporting, which can create problems on long tracks. Try resampling the track to your chosen Project Rate before exporting as MP3. To do this, select all the track by clicking in the Track Control Panel, then <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span>. If there is any silence added to the end of the track as a result of the resampling, you can select and delete it. Now when you export the MP3, the process should go smoothly and quickly. If it does not, there could be a number of reasons, for example if you have a virus scanner set to scan all created files, this will slow the process of writing the exported file considerably. The higher the bit rate you export at, the larger the file will be, so giving a greater time penalty if you enable virus scanning.
+<p>If Audacity crashes or hangs when exporting MP3s, or the export takes a long time to process, the usual reason is that your chosen Project Rate in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> is very different from the sample rate of the audio track on the screen (as shown in Hz on the Track Control Panel above the mute/solo buttons). As a result, resampling has to be done while exporting, which can create problems on long tracks. Try resampling the track to your chosen Project Rate before exporting as MP3. To do this, select all the track by clicking in the Track Control Panel, then <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span>. If there is any silence added to the end of the track as a result of the resampling, you can select and delete it. Now when you export the MP3, the process should go smoothly and quickly. If it does not, there could be a number of reasons, for example if you have a virus scanner set to scan all created files, this will slow the process of writing the exported file considerably. The higher the bit rate you export at, the larger the file will be, so giving a greater time penalty if you enable virus scanning.
 </p><p><br />
 </p>
 <div id="invalid"></div>
 <h2><span class="mw-headline" id="Why_is_my_exported_MP3_invalid_.2F_will_not_play.3F">Why is my exported MP3 invalid / will not play?</span></h2>
 <p>Sometimes the exported MP3 may be invalid and only a few bytes in size; as a result, it will not play and give an error. 
-</p><p>The safest solution is to <b>always set your Project Rate to 44,100 Hz</b>. Make a rule to check this before you export, because importing a file of some other sample rate may change the Project Rate to that rate.
-</p><p>Do this from the <a href="quality_preferences.html" title="Quality Preferences">Quality pane</a> of <a href="preferences.html" title="Preferences">Preferences</a> using the <b>Default Sample Rate</b> setting. 
-</p><p>LAME will automatically downsample from 44,100 Hz to a lower sample rate at 56 kbps or lower, because low bit rates may give poor quality with higher sample rates. If especially desired, any valid sample rate/bit rate combination can be enforced by using the command line exporter in the current version of Audacity (choose "external program" in "Save as type" in the Export File dialog). Or export as WAV from Audacity, then use LAME.exe at the command line to convert to MP3.       
+</p><p>The safest solution is to <b>always set your Project Rate to 44100 Hz</b>. Make a rule to check this before you export, because importing a file of some other sample rate may change the Project Rate to that rate.
+</p><p>Do this from <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> using the <b>Project Sample Rate</b> setting. 
+</p><p>LAME will automatically downsample from 44100 Hz to a lower sample rate at 56 kbps or lower, because low bit rates may give poor quality with higher sample rates. If especially desired, any valid sample rate/bit rate combination can be enforced by using the command line exporter in the current version of Audacity (choose "external program" in "Save as type" in the Export File dialog). Or export as WAV from Audacity, then use LAME.exe at the command line to convert to MP3.       
 </p><p><br />
 </p>
 <div id="fast"></div>
 <h2><span class="mw-headline" id="Why_does_my_exported_MP3_play_too_fast.3F">Why does my exported MP3 play too fast?</span></h2>
-<p>If the MP3 plays at the wrong speed (usually too fast), then the sample rate you exported it at is unsuitable for your player application. Once again, the safe solution is to <b>always set your Project Rate to 44,100 Hz.</b> 
-</p><p>Do this from the <a href="quality_preferences.html" title="Quality Preferences">Quality pane</a> of <a href="preferences.html" title="Preferences">Preferences</a> using the <b>Default Sample Rate</b> setting.
-</p><p>This was a known problem with Adobe Flash Player until some way into version 9: for the file to play properly, the sample rate had to be 11,025 Hz or a multiple thereof, such as 22,050 Hz or 44,100 Hz. This is fixed in the current <a rel="nofollow" class="external text" href="http://www.adobe.com/products/flashplayer/">Adobe Flash Player</a>. 
+<p>If the MP3 plays at the wrong speed (usually too fast), then the sample rate you exported it at is unsuitable for your player application. Once again, the safe solution is to <b>always set your Project Rate to 44100 Hz.</b> 
+</p><p>Do this from <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>  using the <b>Project Sample Rate</b> setting.
+</p><p>This was a known problem with Adobe Flash Player until some way into version 9: for the file to play properly, the sample rate had to be 1,025 Hz or a multiple thereof, such as 22050 Hz or 44100 Hz. This is fixed in the current <a rel="nofollow" class="external text" href="http://www.adobe.com/products/flashplayer/">Adobe Flash Player</a>. 
 </p><p><br />
 </p>
 <div id="volume"></div>
@@ -166,7 +166,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/FAQ:MP3_export_problems">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/FAQ:MP3_export_problems">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

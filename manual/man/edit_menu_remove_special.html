@@ -34,7 +34,10 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">Items in the <i><b>Remove Special</b></i> &#160;cascading <a href="edit_menu.html" title="Edit Menu">Edit</a> menu remove audio or <a href="label_tracks.html" title="Label Tracks">labels</a> (or audio <i>with</i> labels if both are <a href="audacity_selection.html" title="Audacity Selection">selected</a>) by Split Cut and Split Delete. These removal methods do not affect the audio or labels to right of the selection. <p> You can also silence or trim audio only, not affecting labels.</p></div>
+<div class="intro">Items in the <i><b>Remove Special</b></i> &#160;cascading <a href="edit_menu.html" title="Edit Menu">Edit</a> menu remove audio or <a href="label_tracks.html" title="Label Tracks">labels</a> (or audio <i>with</i> labels if both are <a href="audacity_selection.html" title="Audacity Selection">selected</a>) by Split Cut and Split Delete. These removal methods do not affect the audio or labels to right of the selection. <p> You can also silence or trim audio only, not affecting labels.</p>
+<p>Note that when you split (or trim) a clip each of the new sub-clips contains all of the audio that the parent clip had but with hidden audio data that you can expand out if required.
+</p>
+For more details on the use and management of clips please see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips"><b>Audacity Tracks and Clips</b></a></div>
 <dl><dd><span title="The Edit - Remove Special menu"><img alt="Edit-Remove Special 3-2-0.png" src="../m/images/9/99/edit_remove_special_3_2_0.png" width="455" height="360" /></span></dd></dl>
 <div class="note"><b>Mac users:</b> <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> and <span class="kbrd" style="background-color: #e0e0f0">Alt</span> = <span class="kbrd" style="background-color: #e0e0f0">Option</span>. So, for example, <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Alt + K</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984; + Option + K</span></div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -43,43 +46,89 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">You may hear a click at the edit points when you remove or <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">paste</a> audio. This can be caused by <a href="glossary.html#dc_offset" title="Glossary">DC offset</a> in the waveform or by poor selection of the edit points. See this <a href="faq_editing.html#clicks" title="FAQ:Editing">Editing Frequently Asked Question</a> for how to deal with this.
+<td align="left" valign="top">You may hear a click at the edit points when you remove audio. This can be caused by <a href="glossary.html#dc_offset" title="Glossary">DC offset</a> in the waveform or by poor selection of the edit points. See this <a href="faq_editing.html#clicks" title="FAQ:Editing">Editing Frequently Asked Question</a> for how to deal with this.
 </td></tr></table>
 </div>
+<p><br />
+</p>
 <div id="split_cut"></div>
 <h2><span class="mw-headline" id="Split_Cut_.C2.A0Ctrl_.2B_Alt_.2B_X">Split Cut &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + Alt + X</span></font></span></h2>
 <p>Same as <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span>, but none of the audio data or labels to right of the selection are shifted. 
 A gap is thus left behind in the audio track which splits the existing audio <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> into two clips that can be moved independently using the <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bars</a>.
 </p>
 <dl><dd><b>Split Cut with audio selected:</b></dd>
-<dd><span title="Before Split Cut"><img alt="EditMenuRemoveSpecial InitialSelection.png" src="../m/images/6/61/editmenuremovespecial_initialselection.png" width="423" height="115" /></span></dd>
-<dd><span title="After Split Cut"><img alt="EditMenuRemoveSpecial SplitCut 2.png" src="../m/images/c/c3/editmenuremovespecial_splitcut_2.png" width="423" height="115" /></span></dd></dl>
+<dd><span title="Before Split Cut"><img alt="Split Cut audio - before the split.png" src="../m/images/2/21/split_cut_audio_before_the_split.png" width="630" height="149" /></span></dd>
+<dd><b>After the Split Cut:</b></dd>
+<dd><span title="After Split Cut"><img alt="Split Cut audio - after.png" src="../m/images/4/4e/split_cut_audio_after.png" width="627" height="147" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Note that this operation is non-destructive. The resulting clips can be expanded to recover the audio that was cut.  See <a href="audacity_tracks_and_clips.html#trim" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>.
+</td></tr></table>
+</div>
 <p>This is also a useful command to remove one label of a group of labels without affecting the other labels (be sure to select only in the label track unless you want to cut the audio as well as the label). The labels following the deleted section do not move to the left. The labels still correspond to the same audio regions. This is a quick way to delete a label without affecting any other labels on the Label Track.
 </p>
 <dl><dd><b>Split Cut with label selected:</b></dd>
-<dd><span title="Before Split Delete"><img alt="EditMenuRemoveSpecial SplitDelete 1.png" src="../m/images/3/30/editmenuremovespecial_splitdelete_1.png" width="423" height="188" /></span></dd>
-<dd><span title="After Split Delete"><img alt="EditMenuRemoveSpecial SplitDelete 2.png" src="../m/images/b/bd/editmenuremovespecial_splitdelete_2.png" width="423" height="188" /></span></dd></dl>
+<dd><span title="Before Split Delete"><img alt="Split Cut label - before.png" src="../m/images/4/4b/split_cut_label_before.png" width="628" height="219" /></span></dd>
+<dd><b>After the Split Cut:</b></dd>
+<dd><span title="After Split Delete"><img alt="Split Cut label - after.png" src="../m/images/c/c8/split_cut_label_after.png" width="630" height="215" /></span></dd></dl>
+<p><br />
+</p>
 <div id="split_delete"></div>
 <h2><span class="mw-headline" id="Split_Delete_.C2.A0Ctrl_.2B_Alt_.2B_K">Split Delete &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + Alt + K</span></font></span></h2>
 <p>Same as <span class="menu">Edit &gt; Split Cut</span> but the audio and/or labels are not put on the clipboard.
+</p><p><br />
 </p>
-<div class="note">
-<p>The following two commands affect the audio in the selection but do not affect any labels that are in the selection.
-</p>
-</div>
 <div id="silence_audio"></div>
 <h2><span class="mw-headline" id="Silence_Audio_.C2.A0Ctrl_.2B_L"><img alt="Tool edit silence.png" src="../m/images/1/16/tool_edit_silence.png" width="20" height="19" /> Silence Audio &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + L</span></font></span></h2>
 <p>Replaces the selected audio with silence. 
 </p>
-<dl><dd><span title="Before Silence Audio"><img alt="EditMenuRemoveSpecial InitialSelection.png" src="../m/images/6/61/editmenuremovespecial_initialselection.png" width="423" height="115" /></span></dd>
-<dd><span title="After Silence Audio"><img alt="EditMenuRemoveSpecial Silence 2.png" src="../m/images/4/40/editmenuremovespecial_silence_2.png" width="423" height="115" /></span></dd></dl>
+<dl><dd><span title="Before Silence Audio"><img alt="Silence Audio - before.png" src="../m/images/1/13/silence_audio_before.png" width="629" height="149" /></span></dd>
+<dd><b>After the Silence Audio:</b></dd>
+<dd><span title="After Silence Audio"><img alt="Silence Audio - after.png" src="../m/images/5/5e/silence_audio_after.png" width="629" height="149" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note that this operation is <i>destructive</i>. The audio is permanently removed from the project.
+</td></tr></table>
+</div>
+<p><br />
+</p>
 <div id="trim_audio"></div>
 <h2><span class="mw-headline" id="Trim_Audio_.C2.A0Ctrl_.2B_T"><img alt="Trim.png" src="../m/images/c/c9/trim.png" width="26" height="24" /> Trim Audio &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + T</span></font></span></h2>
-<p>Removes all audio from the current <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> except the selected part, creating its own clip from the remaining audio. If there are other separate clips in the same track these are not removed or shifted.</p>
-<dl><dd><span title="Before Trim Audio"><img alt="EditMenuRemoveSpecial InitialSelection.png" src="../m/images/6/61/editmenuremovespecial_initialselection.png" width="423" height="115" /></span></dd>
-<dd><span title="After Trim Audio"><img alt="EditMenuRemoveSpecial Trim 2.png" src="../m/images/2/2c/editmenuremovespecial_trim_2.png" width="423" height="114" /></span></dd>
+<p>Removes all audio from the current <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> except the selected part, creating its own clip from the remaining audio. If there are other separate clips in the same track these are not removed or shifted.
+</p>
+<div class="note">This command affects the audio in the selection but does not affect any labels that may be in the selection.</div>
+<dl><dd><span title="Before Trim Audio"><img alt="Trim Audio - before.png" src="../m/images/5/5d/trim_audio_before.png" width="632" height="149" /></span></dd>
+<dd><b>After the Trim Audio:</b></dd>
+<dd><span title="After Trim Audio"><img alt="Trim Audio - after.png" src="../m/images/a/aa/trim_audio_after.png" width="629" height="150" /></span></dd>
 <dd>Result: the audio in the clip to the right is unaffected.</dd></dl>
- <p>If an entire clip (or clips) is selected then all other clips on the track will be deleted.</p> 
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Note that this operation is non-destructive. The resulting clips can be expanded to recover the audio that was cut.  See <a href="audacity_tracks_and_clips.html#trim" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>.
+</td></tr></table>
+</div>
+ <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">If a selection is made in a clip that touches or overlaps the left <i>(or right)</i> boundary of the clip then <b>erroneously all clips to the left <i>(or right)</i> in the track are removed by the Trim Audio command</b>.
+<ul><li>In particular, if an entire clip (or clips) is selected then all other clips on the track will be deleted.</li></ul>
+</li></ul>
+</td></tr></table>
+</div>
 <p><a href="edit_menu.html" title="Edit Menu"><b>&lt;</b>&#160; Back to: Edit Menu</a>
 </p>
 
@@ -158,7 +207,7 @@ A gap is thus left behind in the audio track which splits the existing audio <a 
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Edit_Menu:_Remove_Special">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Edit_Menu:_Remove_Special">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

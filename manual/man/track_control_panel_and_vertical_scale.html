@@ -33,19 +33,17 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Track_Control_Panel_and_Vertical_Scale#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This page documents the Track Control Panels and Vertical Scale rulers that are present with each type of Audacity track.</div>
-<dl><dd><span title="Track Control Panel and Vertical Scale"><img alt="Track Control Panel and Vertical Scale 3-2-0.png" src="../m/images/2/2c/track_control_panel_and_vertical_scale_3_2_0.png" width="129" height="245" /></dd></dl>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This page documents the Track Control Panel and Vertical Scale ruler that are present with each type of Audacity track.</div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<ol><li><a href="#stereo">Audio (stereo) Track</a></li>
-<li><a href="#mono">Mono Track</a></li>
+<ol><li><a href="#audio">Audio Track</a></li>
 <li><a href="#label">Label Track</a></li>
 <li><a href="#time">Time Track</a></li>
-<li><a href="#note">Note Track</a></li>
-<li><a href="#menu">Dropdown Menu</a></li></ol>
+<li><a href="#note">Note Track</a></li></ol>
 <p><br />
 </p>
+<div id="audio"></div>
 <div id="stereo"></div>
-<h2><span class="mw-headline" id="Audio_.28stereo.29_Track"><a href="audio_tracks.html" title="Audio Tracks">Audio (stereo) Track</a></span></h2>
+<h2><span class="mw-headline" id="Audio_Track_.28stereo_or_mono.29"><a href="audio_tracks.html" title="Audio Tracks">Audio Track (stereo or mono) </a></span></h2>
 <dl><dd><span title="Track Control Panel and Vertical Scale with a stereo track"><img alt="TCP VS and Stereo track.png" src="../m/images/9/98/tcp_vs_and_stereo_track.png" width="470" height="181" /></dd></dl>
 <div id="key"></div>
 <dl><dd><table>
@@ -64,8 +62,8 @@
 <li> status indicators to show the  <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b> in </i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b><i> and the </i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b><i> or bit depth</i></li>
 <li> a <img alt="TrackCollapse.png" src="../m/images/5/5d/trackcollapse.png" width="17" height="19" /> button to collapse or restore the height of the track</li>
 <li> a <span class="button" style="background-color: #cdd9f1">&#160; Select  &#160;</span> button to select the whole track</li></ul>
-For details please see <a href="audio_tracks.html#panel" title="Audio Tracks">this section</a> of the <a href="audio_tracks.html" title="Audio Tracks">Audio Tracks</a> page.</div>
-</td></tr></table></dd></dl>
+<p>For details please see <a href="audio_tracks.html#panel" title="Audio Tracks">this section</a> of the <a href="audio_tracks.html" title="Audio Tracks">Audio Tracks</a> page.
+</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -74,35 +72,41 @@ For details please see <a href="audio_tracks.html#panel" title="Audio Tracks">th
 </td>
 <td align="left" valign="top">How the <span class="button" style="background-color: #cdd9f1">&#160;  Mute  &#160;</span> buttons affect other tracks depends on your <a href="tracks_preferences.html#Behaviors" title="Tracks Preferences">Solo button preference setting</a>
 </td></tr></table>
-</div>
+</div></div>
+</td></tr></table>
 <div id="controls"></div>
 <div id="vscale"></div>
 <h3><span class="mw-headline" id="Vertical_Scale">Vertical Scale</span></h3>
 <dl><dd><table>
 
 <tr>
-<td valign="top"><span title="Vertical Scale (default linear)"><img alt="Vertical Scale ruler.png" src="../m/images/0/0a/vertical_scale_ruler.png" width="40" height="192" /></span>
+<td valign="top"><span title="Vertical Scale (default linear)"><img alt="Vertical Scale ruler 3-3-0.png" src="../m/images/7/72/vertical_scale_ruler_3_3_0.png" width="33" height="250" /></span>
 </td>
 <td valign="top" style="padding-left:10px">The <a href="audio_tracks.html#scale" title="Audio Tracks">Vertical Scale</a> displays <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> when showing the  <i><b><a href="glossary.html#waveform" title="Glossary">waveform</a></b></i>, or <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> when showing the <i><b><a href="glossary.html#spectrum" title="Glossary">spectrum</a></b></i>  or <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i>.
 <ul><li> The amplitude scale shown to left is the default <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> scale, with 1.0 being the maximum value of positive signals and -1.0 the maximum of negative signals. </li>
-<li>Right-click in the Vertical Scale will bring up a dropdown context menu facilitating swapping between <a href="audacity_waveform.html" title="Audacity Waveform">Linear Waveform</a> and <a href="audacity_waveform.html#db" title="Audacity Waveform">Waveform dB</a> view.</li></ul>
+<li>Right-click in the Vertical Scale will bring up a dropdown context menu facilitating swapping between  the following views:
+<ul><li><a href="audacity_waveform.html" title="Audacity Waveform">Linear (amp)</a> - linear display with amplitude values (scaled 0 to 1.0)</li>
+<li><a href="audacity_waveform.html#db" title="Audacity Waveform">Waveform dB</a> - logarithmic display</li>
+<li><a href="audacity_waveform.html" title="Audacity Waveform">Linear (dB)</a> - linear display with dB values </li></ul></li></ul>
 <p><br />
-The Vertical Scale can be used to control <a href="vertical_zooming.html" title="Vertical Zooming">Vertical Zooming</a>
+</p><p>The Vertical Scale can be used to control <a href="vertical_zooming.html" title="Vertical Zooming">Vertical Zooming</a>.
 </p>
 <ul><li>Right-click in the Vertical Scale will bring up the dropdown context menu.  For details see <a href="vertical_zooming.html#simple" title="Vertical Zooming">Simple mode vertical zooming</a>.</li>
 <li> If <a href="vertical_zooming.html#advanced" title="Vertical Zooming">Advanced mode vertical zooming</a> is enabled in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Preferences</a>, when the mouse pointer is over the scale it changes to a magnify icon <img alt="MagnifyPointer.png" src="../m/images/2/2f/magnifypointer.png" width="17" height="17" /> enabling you to zoom vertically using the mouse controls.  </li></ul>
 </td></tr>
 </table></dd></dl>
+<p><br />
+</p>
+<div id="context"></div>
 <h3><span class="mw-headline" id="Vertical_Scale_context_menu">Vertical Scale context menu</span></h3>
-<dl><dd><span title="Vertical Scale Waveform context menu"><img alt="Vertical Scale Waveform context menu.png" src="../m/images/b/b5/vertical_scale_waveform_context_menu.png" width="191" height="269" /></span></dd></dl>
+<p>Right-click in the Vertical Scale to get the context menu:
+</p>
+<dl><dd><span title="Vertical Scale Waveform context menu"><img alt="Vertical Scale Waveform context menu 3-3-0.png" src="../m/images/d/d2/vertical_scale_waveform_context_menu_3_3_0.png" width="262" height="282" /></span></dd></dl>
 <p>If the display is changed to <a href="audio_track_dropdown_menu.html#wavedb" title="Audio Track Dropdown Menu">Waveform dB</a>, the scale shows <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> values for positive signals only 
 </p>
 <div class="note">These dB values range from maximum 0 dB to the minimum dB level set in <a href="interface_preferences.html" title="Interface Preferences">Interface Preferences</a>, or can be varied using the <a href="zooming.html#vscale" title="Zooming">mouse wheel</a>. </div>
-<div id="mono"></div>
-<h2><span class="mw-headline" id="Mono_Track">Mono Track</span></h2>
-<p>A mono track has the same set of controls as a <a href="#stereo">stereo track</a>
+<p><br />
 </p>
-<dl><dd><span title="Track Control Panel and Vertical Scale with a mono track"><img alt="TCP and VS - Mono Track Track 3-2-0.png" src="../m/images/6/61/tcp_and_vs_mono_track_track_3_2_0.png" width="545" height="188" /></dd></dl>
 <div id="label"></div>
 <h2><span class="mw-headline" id="Label_Track"><a href="label_tracks.html" title="Label Tracks">Label Track</a></span></h2>
 <dl><dd><span title="Track Control Panel and Vertical Scale with a label track"><img alt="TCP and VS - Label Track Track with Select button.png" src="../m/images/6/63/tcp_and_vs_label_track_track_with_select_button.png" width="394" height="73" /></dd></dl>
@@ -128,35 +132,13 @@ The Vertical Scale can be used to control <a href="vertical_zooming.html" title=
 <li>The Track Control panel shows the channels, color coded to tie in with the channels displayed, that are to be played and allows you to toggle individual channels by left-clicking or toggle all other channels off by right-clicking.</li></ul>
 <p>For more details please see <a href="note_tracks.html" title="Note Tracks">Note Tracks</a>.
 </p><p><br />
-</p>
-<div id="menu"></div>
-<h2><span class="mw-headline" id="Audio_Track_Dropdown_Menu"><a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a></span></h2>
-<p>The <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> is accessed by clicking in the Track Name, by the downward-pointing triangle <span style="position:relative;bottom:-4px"><span title="Track Name"><img alt="TrackDropDown.png" src="../m/images/a/a9/trackdropdown.png" width="80" height="17" /></span></span>  in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>. 
-</p><p>Alternatively, you can access the Track Dropdown Menu on the currently focused audio track by pressing <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span>.
-</p>
-<dl><dd><span title="Audio track dropdown menu"><img alt="Audio track dropdown menu.png" src="../m/images/d/da/audio_track_dropdown_menu.png" width="274" height="403" /></dd></dl>
-<p>You can use the Audio Track dropdown menu to manipulate individual mono or stereo tracks:
-</p>
-<ul><li>Rename a track</li>
-<li>Move a track up or down in the project window</li>
-<li>Set the current type of view for the track</li>
-<li>Select the colorway to be used for a waveform display</li>
-<li>Swap the channels of a stereo track</li>
-<li>Make or split stereo tracks</li>
-<li>Set the current <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> and <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i> for the track.</li></ul>
-<p>There is no need to <a href="audacity_selection.html" title="Audacity Selection">select</a> the track before accessing the dropdown menu.
-</p>
-<div class="note">Note Tracks and Label Tracks also have similar dropdown menus, but their scope is more limited. </div>
-<p><br />
+</p><p><br />
 </p>
 <div id="links"></div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="label_tracks.html" title="Label Tracks"><b>&gt;</b>&#160; Label Tracks</a> <br />
 </p><p><a href="note_tracks.html" title="Note Tracks"><b>&gt;</b>&#160; Note Tracks (MIDI)</a> <br />
 </p><p><a href="audio_tracks.html" title="Audio Tracks"><b>|&lt;</b> Audio Tracks</a></span>
-</span>
-</span>
-</span>
 </span>
 </span>
 </span>
@@ -237,7 +219,7 @@ The Vertical Scale can be used to control <a href="vertical_zooming.html" title=
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Track_Control_Panel_and_Vertical_Scale">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Track_Control_Panel_and_Vertical_Scale">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

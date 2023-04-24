@@ -135,7 +135,6 @@
 </p>
 <ul><li><b><a href="aac_export_options.html" title="AAC Export Options">M4A (AAC) Files (FFmpeg)</a>:</b> Advanced Audio Coding is a compressed, lossy format  used in Apple applications, generally achieving slightly better quality than MP3 for the same file size. By default, the exported file will be given an "m4a" extension. Optional permitted extensions:  .mp4, .m4r (ringtone) and .3gp (mobile).</li>
 <li><b><a href="ac3_export_options.html" title="AC3 Export Options">AC3 Files (FFmpeg)</a>:</b> the common name used for the compressed, lossy format used in Dolby Digital.</li>
-<li><b><a href="amr_export_options.html" title="AMR Export Options">AMR (narrow band) Files (FFmpeg)</a>:</b> the Adaptive Multi-Rate codec is a patented compression scheme optimized for speech, but also used for mobile telephone ringtones. The wide band variant uses higher bandwidth for higher quality. </li>
 <li><b><a href="wma_export_options.html" title="WMA Export Options">WMA (version 2) Files (FFmpeg)</a>:</b> Windows Media Audio v2 is a compressed, lossy format developed by Microsoft. Optional permitted extensions: .asf or .wmv.</li></ul>
 <div id="custom"></div>
 <h3><span class="mw-headline" id="Custom_FFmpeg_Export">Custom FFmpeg Export</span></h3>
@@ -307,20 +306,6 @@
 <td>
 </td>
 <td>&#160;1
-</td></tr>
-<tr>
-<td>AMR (NB)
-</td>
-<td>Yes
-</td>
-<td>CBR
-</td>
-<td> 0.1 </td>
-<td>&#160; -
-</td>
-<td>
-</td>
-<td>&#160;1
 </td></tr></table></dd></dl>
 <dl><dd><table width="82%">
 
@@ -345,7 +330,7 @@
 </td></tr></table></dd></dl>
 <div id="unlisted"></div>
 <h2><span class="mw-headline" id="Exporting_to_formats_not_listed_in_the_Export_Audio_Dialog">Exporting to formats not listed in the Export Audio Dialog</span></h2>
-<p>If you install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library you can use the (FFmpeg) choices in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> to export <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (narrow band) and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i>. If you do not see a choice for one of those specific FFmpeg formats, then the build of FFmpeg you are linking to was not compiled to support encoding in that format.
+<p>If you install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library you can use the (FFmpeg) choices in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> to export <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3 and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i>. If you do not see a choice for one of those specific FFmpeg formats, then the build of FFmpeg you are linking to was not compiled to support encoding in that format.
 </p><p>The most flexible method to export to more formats is to choose (external program) in the Export Audio Dialog which opens the dialog for Audacity's <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">command-line encoder</a>. Point your command to an encoder that supports the format you want to write to, which could be FFmpeg or some other encoder (for example, an alternative AAC or MP3 encoder). On Windows, the recommended EXE installer of <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> includes an ffmpeg.exe which you can use for this purpose. On Mac, you can download a standalone "ffmpeg" binary if you search online.
 </p>
 
@@ -424,7 +409,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Export_Formats_supported_by_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Export_Formats_supported_by_Audacity">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

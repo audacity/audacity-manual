@@ -89,7 +89,7 @@
 </p>
 <ul><li> <b>Reduce screen redrawing:</b> <a href="zooming.html" title="Zooming">Zoom</a> out to at least the entire length you will be recording, or in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>, uncheck <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Auto-scroll if head unpinned</span>. Turn off <span class="menu">View &gt; <a href="view_menu.html#showclippingonoff" title="View Menu">Show Clipping</a></span> while recording. Minimize the Audacity window whenever you have no need to see it.</li>
 <li> <b>Turn off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span></b> unless it is essential you hear what is being recorded.</li>
-<li> <b>Increase the default "Buffer length" setting</b> of 100 milliseconds in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>.</li></ul>
+<li> <b>Increase the default "Buffer length" setting</b> of 100 milliseconds in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>.</li></ul>
 <div class="note">
 <p>On Mac using Mavericks or later, it may be necessary to <i>reduce</i> audio to buffer, possibly to zero.
 </p>
@@ -150,7 +150,7 @@
 <h2><span class="mw-headline" id="How_can_I_prevent_clicky_recordings_on_Mac.3F">How can I prevent clicky recordings on Mac?</span></h2>
 <p>There are several possible fixes. 
 </p>
-<ul><li> Open <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a> and adjust the "Buffer Length" setting. Reduce the setting to 0 milliseconds. If recording breaks up or does not start, increase "Buffer Length" in increments of 10 milliseconds until recording is smooth.   </li>
+<ul><li> Open <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> and adjust the "Buffer Length" setting. Reduce the setting to 0 milliseconds. If recording breaks up or does not start, increase "Buffer Length" in increments of 10 milliseconds until recording is smooth.   </li>
 <li> If you are recording from an external USB or FireWire interface, open /Applications/Utilities/Audio MIDI Setup and select the device. On the Input tab, make sure that the sample rate and number of channels matches with those chosen in Audacity. </li>
 <li> Turn off WiFi.</li>
 <li> Mitigate power saving features in Mavericks or later that can interfere with recordings.  
@@ -240,7 +240,7 @@ see <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: 
 <div id="sync"></div>
 <h2><span class="mw-headline" id="Why_is_my_new_track_out_of_sync_with_the_previous_ones.2C_or_sounds_crackly_or_at_wrong_pitch.3F">Why is my new track out of sync with the previous ones, or sounds crackly or at wrong pitch?</span></h2>
 <p>When you make an <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdub recording</a> (listening to an existing track while recording a new one), computers cannot lay down what you record at the exact instant you sing or play in response to the beat. Therefore without intervention, the recording inevitably gets laid down after the beat. Audacity tries to correct for this "recording latency" automatically by pushing the recorded track backwards after recording stops, but further adjustment may be needed. 
-</p><p>If a new track is not synchronized with the others, you can zoom in and use its <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bar</a>. to drag the track to the correct location. If you are doing a lot of overdubbing, try our <a href="latency_test.html" title="Latency Test">Latency Test</a> to set a custom value for Audacity's latency correction which can then be applied in <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>.
+</p><p>If a new track is not synchronized with the others, you can zoom in and use its <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bar</a>. to drag the track to the correct location. If you are doing a lot of overdubbing, try our <a href="latency_test.html" title="Latency Test">Latency Test</a> to set a custom value for Audacity's latency correction which can then be applied in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>.
 </p>
 <div class="note"><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Tutorial - Recording Multi-track Overdubs</a> gives a step-by-step 
 guide for manually correcting for latency. </div>
@@ -249,10 +249,10 @@ guide for manually correcting for latency. </div>
 </p>
 <ul><li> Use the same device for playback and recording. </li>
 <li> Ensure your sound device has <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">up-to-date drivers</a> specifically intended for your particular computer model and operating system, as provided by the motherboard or sound device manufacturer. Ensure USB or FireWire devices have the manufacturer's latest firmware.</li>
-<li> If you hear crackling while playing and recording at the same time, try increasing the "Buffer length" setting in <a href="devices_preferences.html#Latency" title="Devices Preferences">Devices Preferences</a>. On Mac you may need to <i>reduce</i> the Audio to buffer setting, even if only recording.  </li>
+<li> If you hear crackling while playing and recording at the same time, try increasing the "Buffer length" setting in <a href="audio_settings_preferences.html#Latency" title="Audio Settings Preferences">Audio Settings Preferences</a>. On Mac you may need to <i>reduce</i> the Audio to buffer setting, even if only recording.  </li>
 <li> If crackling occurs while playing the tracks together, check if the <a href="meter_toolbar.html#playback" title="Meter Toolbar">Playback Meter's</a> red <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> warning is showing, which would indicate the combined volume of the tracks is too loud. To fix the clipping, use the <a href="audio_tracks.html#gain" title="Audio Tracks">gain sliders</a> on one or more tracks to reduce the overall level. </li>
 <li> Make sure the rate of the pre-existing tracks (as stated above the mute/solo buttons) is the same as the project rate. Select the tracks and click <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample...</a></span> to resample the track to the project rate. </li>
-<li> Set the <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> bottom left of the Audacity screen to 44,100 Hz <i>(or if your audio interface only uses a particular rate such as 48,000 Hz, set the project rate to that)</i>. Look at <span class="menu">Help &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info...</a></span> to see the rates the device claims to support.  </li>
+<li> Set the <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> bottom left of the Audacity screen to 44100 Hz <i>(or if your audio interface only uses a particular rate such as 48,000 Hz, set the project rate to that)</i>. Look at <span class="menu">Help &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info...</a></span> to see the rates the device claims to support.  </li>
 <li> If you are recording with a USB or FireWire interface, sample rates and number of recording channels <b>must</b> be the same everywhere. Match the Audacity project rate and the number of recording channels set in the Audacity preferences with those specified:  
 <ul><li> in the Windows <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows Sound controls</a> or <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Mac_OS_X">Apple Audio MIDI Setup</a></li>
 <li> in any software control panel the device has </li>
@@ -323,7 +323,7 @@ If there is only a small amount of <i><b><a href="glossary.html#clipping" title=
 </div>
 <p><b>Preferences</b>
 </p>
-<ul><li> Check the "Buffer length" setting by opening <a href="devices_preferences.html" title="Devices Preferences">Devices Preferences</a>. Buffer should normally be set to the default of 100 milliseconds. Very low settings will prevent recording starting.</li>
+<ul><li> Check the "Buffer length" setting by opening <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>. Buffer should normally be set to the default of 100 milliseconds. Very low settings will prevent recording starting.</li>
 <li> Other non-default settings such as excessive <a href="selection_toolbar.html" title="Selection Toolbar">Project Rate</a> could prevent recording starting. It can sometimes help to completely <a href="faq_installation_and_plug_ins.html#reset" title="FAQ:Installation and Plug-Ins">reset preferences</a>.   </li></ul>
 <p><b>USB turntables and tape decks</b>
 </p><p>Reports of recordings from USB turntables freezing or having dropouts are not that uncommon. Generally they are <b>not</b> caused by Audacity, but by poor quality equipment and cables, or lack of sufficient USB bandwidth.   
@@ -515,7 +515,7 @@ DC offset can also cause inaudible low level distortion which becomes audible af
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_Troubleshooting">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_Troubleshooting">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

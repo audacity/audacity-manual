@@ -34,93 +34,18 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>Selection Toolbar</b></i> The primary function of the selection toolbar is to show you the precise timing of any current selection that you may have.<p>It also includes controls for <a href="#rate">Project Rate</a>, <a href="#snap">Snap-To</a> and for manipulating units of time or other <a href="#formats">selection formats</a>.</p> <p>If you change the <a href="#snap">Snap-To</a> option or <a href="#formats">Selection Format</a>, all subsequent project windows you open will respect that change.</p>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
-</td>
-<td align="left" valign="top"><a href="#values"><b>Precise cursor or selection positioning</b></a><p>Using the <a href="#values">"Start" and "End/Length" boxes</a>, you can precisely place the cursor position or <a href="audacity_selection.html" title="Audacity Selection">selection region</a> without using a mouse to click or drag in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>, and without zooming in first to find the exact spot.</p>
-</td></tr></table>
-</div> </div>
-<p><br />
-</p>
-<dl><dd><div class="noresize"><map name="ImageMap_1_1905322684"><area href="customizing_toolbar_layout.html#grabber" shape="rect" coords="4,73,13,127" alt="Grabber for moving this toolbar" title="Grabber for moving this toolbar"/><area href="customizing_toolbar_layout.html#grabber" shape="rect" coords="3,3,95,33" alt="For moving this toolbar" title="For moving this toolbar"/><area href="#rate" shape="rect" coords="14,75,114,124" alt="Project Rate for setting number of samples per second" title="Project Rate for setting number of samples per second"/><area href="#rate" shape="rect" coords="95,3,221,33" alt="For setting number of samples per second" title="For setting number of samples per second"/><area href="#snap" shape="rect" coords="122,75,200,124" alt="Snap-To for making selections only at certain intervals" title="Snap-To for making selections only at certain intervals"/><area href="#snap" shape="rect" coords="221,3,313,33" alt="For making selections only at certain intervals" title="For making selections only at certain intervals"/><area href="#selectionposition" shape="rect" coords="208,104,361,125" alt="Start for start of selection" title="Start for start of selection"/><area href="#selectionposition" shape="rect" coords="313,3,382,33" alt="For start of selection" title="For start of selection"/><area href="#selectionposition" shape="rect" coords="361,104,511,125" alt="End for end of selection" title="End for end of selection"/><area href="#selectionposition" shape="rect" coords="382,3,441,33" alt="For end of selection" title="For end of selection"/><area href="#selectionposition" shape="rect" coords="208,78,511,100" alt="Selection Type Chooser for selecting by start/end middle/length etc" title="Selection Type Chooser for selecting by start/end middle/length etc"/><area href="#selectionposition" shape="rect" coords="441,3,653,33" alt="For selecting by start/end middle/length etc" title="For selecting by start/end middle/length etc"/><area href="toolbars_overview.html#lower_tooldock" shape="rect" coords="3,506,510,560" alt="Selection Toolbar - click on the image to see this toolbar displayed in the default context of the lower tooldock layout" title="Selection Toolbar - click on the image to see this toolbar displayed in the default context of the lower tooldock layout"/></map><img alt="SelectionToolbarAnnotated.png" src="../m/images/9/9e/selectiontoolbarannotated.png" width="655" height="132" usemap="#ImageMap_1_1905322684"/></div></dd></dl>
-<div style="position:relative;">
-<div class="note" style="width:150px;position:absolute;left:461px;top:--5px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+<div class="intro"><i><b>Selection Toolbar</b></i> The primary function of the selection toolbar is to show you the precise timing of any current selection that you may have. 
+<ul><li>If you change the <a href="#formats">Selection Format</a>, all subsequent project windows you open will respect that change.</li>
+<li>You can make precise cursor or selection positioning by editing the <a href="#values">Selection Toolbar digits</a>.</li>
+<li>Selection Toolbar is normally at the bottom of the Audacity window, but like any of the <a href="toolbars_overview.html" title="Toolbars Overview">Toolbars</a>, it can be moved as desired by dragging the serrated edge on its left side. </li></ul>
 </div>
-<p><br />
-&#160;
-</p><p><br />
-Selection Toolbar (above) is normally at the bottom of the Audacity window, but like any of the <a href="toolbars_overview.html" title="Toolbars Overview">Toolbars</a>, it can be moved as desired by dragging the serrated edge on its left side. 
-</p>
-<div id="rate"></div>
-<h2><span class="mw-headline" id="Project_Rate_.28Hz.29">Project Rate (Hz)</span></h2>
-<p>The <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> for the project, by default this is set to <b>44,100</b> <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i>. To change the default rate that is used each time Audacity is launched (or each time a new, empty project window is opened), use <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>.
-</p><p>Changing the project rate in Selection Toolbar immediately changes the sample rate at which new tracks will be recorded or generated in the current project, and at which existing tracks will be played, <a href="tracks_menu.html#mix" title="Tracks Menu">rendered</a> or exported. If the rate you require is not in the dropdown list, you may type the rate you want directly over the currently selected rate.
-</p><p>Changing this in any project will only affect the current project, it will <i><b>not</b></i> affect any subsequent projects that you open <i>or already have open</i>.
-</p>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
-</td>
-<td align="left" valign="top">Audacity supports multiple tracks with different sample rates.
-<p>The "<b>Project Rate</b>" is the rate that the project is working in. If you have a project with two tracks, one with a sample rate of 8,000 Hz and one with a sample rate of 48,000 Hz, and the "Project Rate" is set to 44,100 Hz, then:
-</p>
-<ul><li> playback will be 44,100 Hz,</li>
-<li> any new tracks created by "Tracks menu &gt; Add track" will be 44,100 Hz,</li>
-<li> new track created by recording to a new track will be 44,100 Hz,</li>
-<li> when the audio is exported, it will be exported as a 44,100 Hz file,</li>
-<li> mixing down tracks will mix to 44,100 Hz.</li></ul>
-</td></tr></table>
-</div>
-<div id="snap"></div>
-<h2><span class="mw-headline" id="Snap-To">Snap-To</span></h2>
-<div class="note">Snapping to whole seconds can be useful for <a href="exporting_audio.html" title="Exporting Audio">exporting</a> a selection that needs to be a whole number of seconds, without entering values in the Selection Toolbar boxes (which would be another way of ensuring accuracy).<p>Various types of file frame can be snapped to, including NTSC and PAL. Snapping to film frames can be useful to maintain video and audio synchronization when editing <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">audio from video files</a>.</p></div>
-<ul><li> Select <span class="button">Nearest &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> from the <b>Snap-To</b> dropdown menu to force-snap the cursor or selection edges to the <i>closest</i> position of the current <a href="#formats">selection format</a>. 
-<ul><li> A mouse click will move the cursor unless the click is less than half way to the next nearest snap position.</li>
-<li> Any selection drag moves the selection once you drag the mouse pointer more than half way to the next snap position in the direction of drag.    </li></ul></li></ul>
-<ul><li> Select <span class="button">Prior &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> from the same menu to force-snap the cursor or selection edges to the <i>immediately preceding</i> position of the current selection format. 
-<ul><li> If a mouse click moves the cursor, it will always move it backwards relative to the click point. </li>
-<li> A leftwards selection drag immediately moves the selection to the next snap position in the direction of drag. A rightwards drag does not move the selection until the mouse pointer goes beyond the next snap position.  </li></ul></li></ul>
-<p>The format can be various Selection Formats, <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i>, <i><b><a href="glossary.html#audio_cd" title="Glossary">audio CD</a></b></i> frames or film frames. The default format is hours, minutes, seconds and milliseconds (seconds accurate to three decimal places, as in the above image).
-</p>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
-</td>
-<td align="left" valign="top">Even if <b>Snap-To</b> is enabled, a track or clip can still be time-shifted using its <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bar</a> to any position and the <span class="menuadvice">Tracks &gt; <a href="tracks_menu.html#align" title="Tracks Menu">Align Tracks</a></span> command will still align to positions outside snap positions for the current format.
-</td></tr></table></div>
-<h3><span class="mw-headline" id="Nearest">Nearest</span></h3>
-<p>With <b>Snap-To</b> set to "Nearest" and the format set to hours, minutes, seconds and milliseconds, clicking in-between 6.500 seconds and 6.501 seconds as displayed on the  <a href="timeline.html" title="Timeline">Timeline</a> snaps the cursor to the nearest millisecond unit, unless the cursor is already exactly at the nearest millisecond unit relative to the click point. 
-</p><p>Now suppose we want to snap the cursor to whole seconds. To do this, <a href="#formats">change the format</a> to one where the smallest unit is seconds, for example, hours, minutes and seconds (hh:mm:ss).
-</p>
-<ul><li> Assuming the cursor is currently at other than exactly 2.0 whole seconds, clicking at 2.4 seconds will now snap the cursor to 2.0 seconds, while clicking at 2.8 seconds will snap the cursor to 3.0 seconds.</li>
-<li> Dragging a selection always snaps both selection edges to the nearest whole second. For example, when dragging rightwards on the right edge of a selection from 2.3 seconds to 2.6 seconds, the left edge of the selection will jump back at once to 2.0 seconds and the right edge of the selection will jump forwards at once to 3.0 seconds.</li>
-<li> If you continue to drag the mouse pointer, the right edge of the selection will not extend at once, but will snap to 4.0 seconds once the mouse pointer is dragged beyond 3.5 seconds. Similarly, if you then drag leftwards on the left edge of the selection it will extend to start from 1.0 seconds when the pointer is dragged before 1.5 seconds. </li></ul>
-<h3><span class="mw-headline" id="Prior">Prior</span></h3>
-<p>With <b>Snap-To</b> set to "Prior" and the format set to hours, minutes, seconds and milliseconds, clicking anywhere in-between 6.500 seconds and 6.501 seconds always snaps the cursor to the immediately preceding unit, in this case 6.500 seconds.
-</p><p>Now let's set the format to one where the smallest unit is seconds, for example, hours, minutes and seconds.
-</p>
-<ul><li> Clicking at either 2.4 seconds or 2.8 seconds will both snap the cursor to 2.0 seconds</li>
-<li> Dragging a short way on either edge of a selection from  2.3 seconds to 2.6 seconds will remove the selection and set the cursor at  2.0 seconds because the snap is to the previous whole second unit and there can not be a selection shorter than a whole second.  </li>
-<li> Dragging rightwards on the right edge of a selection from 2.0 seconds to 4.0 seconds will not extend the selection until the mouse pointer reaches exactly 5.0 seconds. Dragging rightwards on the left edge will not contract the selection until the pointer reaches exactly 3.0 seconds. </li>
-<li> Dragging leftwards on the left edge of a selection from 2.0 seconds to 4.0 seconds extends the selection immediately to start from 1.0 seconds. Dragging leftwards on the right edge contracts the selection immediately to end at 3.0 seconds.  </li></ul>
-<div class="note"><b>Keyboard use:</b>
-<ul><li> When either "Nearest" or "Prior" <b>Snap-To</b> is enabled you can always move the cursor to the preceding or following <b>Snap-To</b> position by using keyboard <span class="kbrd" style="background-color: #e0e0f0">Left</span> arrow or <span class="kbrd" style="background-color: #e0e0f0">Right</span> arrow respectively. </li>
-<li> Similarly you can always expand a selection edge to the nearest <b>Snap-To</b> position by holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and pressing <span class="kbrd" style="background-color: #e0e0f0">Left</span> arrow to move the left edge or <span class="kbrd" style="background-color: #e0e0f0">Right</span> arrow to move the right edge.</li>
-<li> Contract a selection edge to the nearest <b>Snap-To</b> position by holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and <span class="kbrd" style="background-color: #e0e0f0">Shift</span> then pressing <span class="kbrd" style="background-color: #e0e0f0">Left</span> arrow to contract from the right edge or <span class="kbrd" style="background-color: #e0e0f0">Right</span> arrow to contract from the left edge.</div></li></ul>
+<dl><dd><span title="The Selection Toolbar"><img alt="Selection toolbar 3-3-0.png" src="../m/images/9/94/selection_toolbar_3_3_0.png" width="243" height="67" /></span></dd></dl>
 <p><br />
 </p>
 <div id="position"></div>
 <div id="selectionposition"></div>
-<h2><span class="mw-headline" id="Selection_Position_Boxes">Selection  Position Boxes</span></h2>
-<p>There are four available settings in the Selection Position Boxes in <strong class="selflink">Selection Toolbar</strong> for the manner in which the details of your selection are displayed:
+<h2><span class="mw-headline" id="Changing_the_display_format_with_the_cog-wheel">Changing the display format with the cog-wheel</span></h2>
+<p>Clicking on the cog-wheel will bring up a menu that enables you to change the manner in which the details of your selection are displayed:
 </p>
 <ul><li><b>Start and End of selection</b>: the start time and the end time of your selection <i>(default setting)</i></li>
 <li><b>Start and Length of selection</b>: the start time and the length of your selection</li>
@@ -130,7 +55,8 @@ Selection Toolbar (above) is normally at the bottom of the Audacity window, but 
 </p>
 <div id="values"></div>
 <h2><span class="mw-headline" id="Precise_cursor_or_selection_positioning_by_editing_the_Selection_Toolbar_digits">Precise cursor or selection positioning by editing the Selection Toolbar digits</span></h2>
-<p>You can edit the individual digits representing time or other formats in the time boxes so as to change the cursor position or selection region on the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>. Using a mouse, click on a digit in one of the boxes then use the mouse wheel or up and down arrow on the keyboard to increment the value, or type the required value. Use left and right arrow to navigate quickly to adjoining digits, and <span class="kbrd" style="background-color: #e0e0f0">Tab</span> or <span class="kbrd" style="background-color: #d0d0f8">Shift + Tab</span> to navigate to adjoining boxes. 
+<p>Using the <a href="#values">"Start" and "End/Length"</a>, you can precisely place the cursor position or <a href="audacity_selection.html" title="Audacity Selection">selection region</a> without using a mouse to click or drag in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>, and without zooming in first to find the exact spot.
+</p><p>You can edit the individual digits representing time or other formats in the time boxes so as to change the cursor position or selection region on the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>. Using a mouse, click on a digit in one of the boxes then use the mouse wheel or up and down arrow on the keyboard to increment the value, or type the required value. Use left and right arrow to navigate quickly to adjoining digits, and <span class="kbrd" style="background-color: #e0e0f0">Tab</span> or <span class="kbrd" style="background-color: #d0d0f8">Shift + Tab</span> to navigate to adjoining boxes. 
 </p><p>Selection Toolbar is also fully accessible using only the keyboard. See <a href="audacity_selection.html#Selection_Toolbar" title="Audacity Selection">Audacity Selection</a> for how to use Selection Toolbar with the keyboard. 
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -140,12 +66,14 @@ Selection Toolbar (above) is normally at the bottom of the Audacity window, but 
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">
-<p>Selections made by modifying the Selection Toolbar time digits with either keyboard or mouse will always snap to the current selection format, even if the <b><a href="#snap">Snap-To</a></b> checkbox is unchecked.</p>
-<p>Note particularly that changing the<i>Length</i> of a selection by modifying the Selection Toolbar time digits <i>may</i> alter the start of the selection, if the start of the selection is not currently at an exact multiple of the selection format. That is, by editing the <i>Length</i>, the entire selection, including the start, will snap to the current selection format.</p>
+<p>Selections made by modifying the Selection Toolbar time digits with either keyboard or mouse will always snap to the current selection format, even if the <a href="snapping_toolbar.html" title="Snapping Toolbar"><b>Snap</b></a> checkbox is unchecked.</p>
+<p>Note particularly that changing the <i>Length</i> of a selection by modifying the Selection Toolbar time digits <i>may</i> alter the start of the selection, if the start of the selection is not currently at an exact multiple of the selection format. That is, by editing the <i>Length</i>, the entire selection, including the start, will snap to the current selection format.</p>
 </td></tr></table></div>
+<p><br />
+</p>
 <div id="formats"></div>
 <h2><span class="mw-headline" id="Selection_Formats">Selection Formats</span></h2>
-<p>To access the context menu listing the selection formats, click the triangle to right of any box. You can also select in or right-click over any digit in a box (or use a keyboard equivalent). The following table lists the 16 available formats.
+<p>To access the context menu listing the selection formats, click the triangle to right of either box. You can also select in or right-click over any digit in a box (or use a keyboard equivalent). The following table lists the 16 available formats.
 </p><p>Changing this in any project will affect the current project and any subsequent projects that you open.  It will <i><b>not</b></i> affect any projects that you already have open<i>.</i>
 </p>
 <dl><dd><table class="prettytablerows" id="selection_formats">
@@ -157,6 +85,11 @@ Selection Toolbar (above) is normally at the bottom of the Audacity window, but 
 <tr>
 <td> seconds </td>
 <td> 005,408 seconds </td>
+<td>
+</td></tr>
+<tr>
+<td> seconds + milliseconds </td>
+<td> 005,408.276 seconds </td>
 <td>
 </td></tr>
 <tr>
@@ -233,6 +166,16 @@ Selection Toolbar (above) is normally at the bottom of the Audacity window, but 
 <td> CDDA frames (75 fps) </td>
 <td> 405,637 frames </td>
 <td> <i><b><a href="glossary.html#audio_cd" title="Glossary">Audio CD</a></b></i> frames
+</td></tr>
+<tr>
+<td> bar:beat </td>
+<td> 107 bar 03 beat  </td>
+<td>
+</td></tr>
+<tr>
+<td> bar:beat:tick </td>
+<td> 107 bar 03 beat 02 </td>
+<td>
 </td></tr></table></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -244,14 +187,6 @@ Selection Toolbar (above) is normally at the bottom of the Audacity window, but 
 <ul><li>The <a href="timeline.html" title="Timeline">Timeline</a> is always displayed in hours, minutes, seconds and parts of seconds, varying according to the current <a href="zooming.html" title="Zooming">zoom</a> level.  </li>
 <li>The <a href="time_toolbar.html" title="Time Toolbar">Time Toolbar</a> format can be changed independently of the Selection Toolbar format.</li></ul>
 </td></tr></table></div>
-<p><br />
-</p>
-<div id="values"></div>
-<h2><span class="mw-headline" id="Example">Example</span></h2>
-<div class="example">In the following example we changed&#160;:
-<ul><li>the format to <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i>, which is the most finely detailed format available,</li>
-<li>the selection position was changed to <b>Start and Length of Selection.    </b></li></ul>
-<dl><dd><span title="Selection Toolbar showing selection format set to Samples"><img alt="Selection Toolbar - samples and length.png" src="../m/images/1/13/selection_toolbar_samples_and_length.png" width="581" height="81" /></span></div></dd></dl>
 
 
 
@@ -329,7 +264,7 @@ Selection Toolbar (above) is normally at the bottom of the Audacity window, but 
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Selection_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Selection_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -64,7 +64,7 @@
 <p><a href="glossary.html#compressed_format" title="Glossary">Compressed</a> audio: <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>, <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i>  can be imported into Audacity.
 </p>
 <h3><span class="mw-headline" id="FFmpeg_for_other_importable_audio_formats"><a href="faq_installing_the_ffmpeg_import_export_library.html" title="FAQ:Installing the FFmpeg-Import-Export Library">FFmpeg</a> for other importable audio formats</span></h3>
-You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>FFmpeg library</b></a> to import a much larger range of audio formats including <b>AC3, AMR(NB), M4A, MP4 and WMA</b> (if the files are not <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Digital_rights_management">DRM-protected</a> to work only in particular software). <p>FFmpeg will also import audio from most video files or DVDs that are not DRM-protected.</p>
+You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>FFmpeg library</b></a> to import a much larger range of audio formats including <b>AC3, M4A, MP4 and WMA</b> (if the files are not <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Digital_rights_management">DRM-protected</a> to work only in particular software). <p>FFmpeg will also import audio from most video files or DVDs that are not DRM-protected.</p>
 <div class="note">Older uncompressed file types such as WAV with U-Law or IMA ADPCM encoding are generally supported provided they contain correctly formatted header information. 
 <ul><li> If files do not have header information (such as RAW or <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Dialogic_ADPCM">VOX ADPCM</a>) or have non-standard header information, you can normally import them using <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#raw" title="File Menu: Import">Raw Data...</a></span>.</li>
 <li> WAV files from portable recorders may contain proprietary compressed audio. These should not be imported as Raw Data, but by installing the <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.   </li>
@@ -145,8 +145,22 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 <div id="rate_and_depth"></div>
 <h2><span class="mw-headline" id="Sample_Rate_and_Sample_Format_of_imported_files">Sample Rate and Sample Format of imported files</span></h2>
 <p>Audacity always imports files at their original <i><b><a href="sample_rates.html" title="Sample Rates">sample rate</a></b></i>, as displayed in the <a href="audio_tracks.html#info" title="Audio Tracks">Track Information Area</a> of the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>. 
-</p><p>When importing a file into an empty project window (as always happens when using <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a></span> as described below), the <i>Project Rate</i> control in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> changes if necessary to reflect the rate of the file. The Project Rate determines the sample rate a file will be <a href="exporting_audio.html" title="Exporting Audio">exported</a> at, so no further adjustment is needed to export that file at its original rate. However, once there is already an audio track of any origin in the project (either an imported file, a <a href="record.html" title="Record">recording</a> or <a href="generate_menu.html" title="Generate Menu">generated audio</a>), importing an audio file will never change the project rate.
-</p><p>Generally, Audacity imports files at the <i><b><a href="sample_format_bit_depth.html" title="Sample Format - Bit Depth">sample format</a></b></i> (bit depth) specified at <i>Default Sample Format</i> in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>. This setting defaults to 32-bit float. Therefore by default an imported file will show in the Track Control Panel as 32-bit float, even if its original bit depth is lower. This is best for high-quality editing. Even if you choose a lower Default Sample Format than 32-bit float, Audacity will never downconvert a file that has a higher bit depth, as shown in the following table for WAV and AIFF imports using the standard uncompressed files importer.   
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top"><span style="font-weight: bold; font-size:118%">Project Rate may change when importing initial audio file:</span>
+<ul><li>When importing a file into an empty project window or when using <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a> to "open" an audio file</span>), the <i>Project Rate</i> control in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> changes if necessary to reflect the rate of the file. 
+<ul><li>The Project Rate determines the sample rate a file will be <a href="exporting_audio.html" title="Exporting Audio">exported</a> at, so no further adjustment is needed to export that file at its original rate. </li>
+<li>There is <i><b>no</b></i> warning given that this rate change occurs.</li></ul></li>
+<li>However, once there is already an audio track in the project (either an imported file, a <a href="record.html" title="Record">recording</a> or <a href="generate_menu.html" title="Generate Menu">generated audio</a>), importing an audio file will <i><b>not</b></i> change the project rate.</li></ul>
+
+
+</td></tr></table></div>
+<p>Generally, Audacity imports files at the <i><b><a href="sample_format_bit_depth.html" title="Sample Format - Bit Depth">sample format</a></b></i> (bit depth) specified at <i>Default Sample Format</i> in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>. This setting defaults to 32-bit float. Therefore by default an imported file will show in the Track Control Panel as 32-bit float, even if its original bit depth is lower. This is best for high-quality editing. Even if you choose a lower Default Sample Format than 32-bit float, Audacity will never downsample a file that has a higher bit depth, as shown in the following table for WAV and AIFF imports using the standard uncompressed files importer.   
 </p>
 <dl><dd><table class="prettytablerows" width="40%" rules="rows">
 <caption> Resolution of imported WAV and AIFF files using standard importer
@@ -221,7 +235,8 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 </td>
 <td>32
 </td></tr></table></dd></dl>
-<p><a href="glossary.html#ogg" title="Glossary">OGG</a> is unusual in that it will always import at 16-bit resolution using the standard OGG Vorbis importer, irrespective of Default Sample Format. This is due to the design of the OGG codec. However OGG can be imported at 32-bit resolution using <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a>, as described at <a href="#filetypes">Using the file type dropdown menu</a>.
+<p><a href="glossary.html#ogg" title="Glossary">OGG</a> is unusual in that it will always import at 16-bit resolution using the standard OGG Vorbis importer, irrespective of Default Sample Format. This is due to the design of the OGG codec. 
+</p><p>However OGG can be imported at 32-bit resolution using <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a>, as described at <a href="#filetypes">Using the file type dropdown menu</a>.
 </p><p><br />
 </p>
 <div id="links"></div>
@@ -306,7 +321,7 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

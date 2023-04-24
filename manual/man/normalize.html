@@ -34,26 +34,46 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">Use the Normalize effect to set the peak <b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b> of a single track, make multiple tracks have the same peak amplitude and equalize the balance of left and right channels of stereo tracks.<p> Optionally you can remove any <b><a href="dc_offset.html" title="DC offset">DC offset</a></b> from the tracks.</p></div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Normalize...</span></dd>
+<div class="intro">Use the <b>Normalize</b> effect to:
+<ul><li>set the peak <b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b> of a single track (or selection)</li>
+<li>make multiple tracks (or a selection within multiple tracks) have the <b>same</b> peak amplitude</li>
+<li>equalize the balance of left and right channels of stereo tracks.</li>
+<li>remove any <b><a href="dc_offset.html" title="DC offset">DC offset</a></b> from the tracks.</li></ul>
+<div class="note"><b>All</b> selected tracks (or selections) are amplified to the same level, they are <i><b>not</b></i> amplified by the same amount as is the case with <a href="amplify.html" title="Amplify"><b>Amplify</b></a>.</div>
+</div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Volume and Compression &gt; Normalize...</span></dd>
 <dd><span title="Normalize dialog"><img alt="Normalize 3-2-0.png" src="../m/images/2/27/normalize_3_2_0.png" width="290" height="165" /></span></dd></dl>
+<p><br />
+</p>
+<div id="dc"></div>
 <h2><span class="mw-headline" id="Remove_DC_offset">Remove DC offset</span></h2>
-<p>When this box is checked Normalize attempts to remove any DC offset in the selection by centering the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> on the 0.0 amplitude level. Technically, it does this by finding the average of all the sample values in the selection, then subtracting that average value from all the samples. 
+<p>When this box is checked (default setting is "on") Normalize attempts to remove any DC offset in the selection by centering the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> on the 0.0 amplitude level. Technically, it does this by finding the average of all the sample values in the selection, then subtracting that average value from all the samples. 
 </p><p>Removing any DC offset (and preventing it occurring in your hardware in the first place) is important. DC offset can cause clicks or distortion and limits the <i><b><a href="glossary.html#headroom" title="Glossary">headroom</a></b></i> available for normalization, thus restricting the loudness that can be achieved. See our the <a href="dc_offset.html" title="DC offset">DC offset</a> page for more help.
 </p><p>If you are sure your tracks have no offset, unchecking this option will speed up Normalize to some extent.  
 </p>
-<div class="note">Newer Windows PCs may have a DC offset cancellation feature when recording from the built-in sound inputs. To check or enable:
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Newer Windows PCs may have a DC offset cancellation feature when recording from the built-in sound inputs. To check or enable:
 <ol><li>By the system clock, right-click over the <span class="menu">Speaker icon</span> select <span class="menu">Sounds</span> then the <span class="menu">Recording</span> tab, and then click on the <b>USB device</b> in the list and click <span class="button">Properties</span>. Click the <span class="menu">Advanced</span> tab set your required bit rate and sample rate from the <b>Default Format</b> dropdown (normally <b>"2 channel 16-bit 44,100 Hz"</b>).</li>
 <li>Right-click over empty space, show disabled and disconnected devices, then right-click over each device and enable it</li>
 <li>Right-click or select each device, choose "Properties" then look in the "Enhancements" tab </li>
 <li>If there is no "Enhancements" tab, look in the sound device's own control panel in "Hardware and Sound".</li></ol>
 <p>For a more detailed walk-through of the above steps for Windows <i>(or if that does not work for your version of Windows)</i>, see <b><a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows: accessing the Windows Sound controls</a>.</b>
 </p>
+</td></tr></table>
 </div>
+<p><br />
+</p>
 <div id="max"></div>
 <h2><span class="mw-headline" id="Normalize_Maximum_Amplitude_to">Normalize Maximum Amplitude to</span></h2>
-<p>Enter the value for the maximum amplitude you would like the processed selection to have. The initial default setting is -1 dB, but you can change this.  Your choice of settings will be remembered for next use of Normalize any time you change it. A level of -1 dB is just below the maximum amplitude (0 dB) possible without <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>, but gives a little headroom for effects and distortion-free playback on all equipment. Enter a more negative value (for example, -3 dB) to normalize to lower amplitudes.
+<p>Enter the value for the maximum amplitude you would like the processed selection to have. The initial default setting is -1 dB, but you can change this.  Your choice of settings will be remembered for next use of Normalize any time you change it. 
+</p><p>A level of -1 dB is just below the maximum amplitude (0 dB) possible without <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>, but gives a little headroom for effects and distortion-free playback on all equipment. Enter a more negative value (for example, -3 dB) to normalize to lower amplitudes.
 </p><p>Entering a positive value is disallowed and causes the "Apply" and "Preview" buttons to be disabled. Use <span class="menu">Effect &gt; <a href="amplify.html" title="Amplify">Amplify...</a></span> if you need to increase amplitude above the 0 dB clipping level.
+</p><p><br />
 </p>
 <div id="indep"></div>
 <h2><span class="mw-headline" id="Normalize_stereo_channels_independently">Normalize stereo channels independently</span></h2>
@@ -71,7 +91,7 @@
 <td align="left" valign="top">
 <h3><span class="mw-headline" id="Tips">Tips</span></h3>
 <h4><span class="mw-headline" id="Workflow_order">Workflow order</span></h4>
-<ul><li>Immediately after recording capture (or import) of your audio this effect should be used solely to remove any DC offset that may be present with no amplitude adjustment applied at this stage.</li>
+<ul><li>Immediately after recording capture (or import) of your audio this effect should be used <i><b>only</b></i> to remove any DC offset that may be present with <i><b>no</b></i> amplitude adjustment applied at this stage.</li>
 <li>Adjusting the audio's maximum amplitude with this effect is normally best performed as a final editing step prior to export of the production audio. </li></ul>
 <h4><span class="mw-headline" id="Normalizing_multiple_audio_tracks">Normalizing multiple audio tracks</span></h4>
 <p>If you select multiple tracks and apply the Normalize effect, then <b>all audio tracks will be independently normalized to the same peak level</b>.
@@ -164,7 +184,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Normalize">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Normalize">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

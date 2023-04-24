@@ -38,7 +38,7 @@
 <ul><li> a <a href="#panel">Track Control Panel</a> with <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> for changing View Mode and audio properties of that individual track </li>
 <li> a <a href="#scale">Vertical Scale</a> with units </li>
 <li> a visual representation of the audio <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>. </li></ul>
-<p>New tracks are created whenever you <a href="file_menu.html#Import_Audio" title="File Menu">import</a> an audio file,  <a href="record.html" title="Record">record</a> (except for <a href="generate_menu.html" title="Generate Menu">generate</a> audio when there is no <a href="audacity_selection.html" title="Audacity Selection">selection</a>. <span class="menu">Tracks &gt; <a href="tracks_menu.html#add_new" title="Tracks Menu">Add New</a></span> lets you explicitly add a new, empty mono or stereo audio track.
+<p>New tracks are created whenever you <a href="file_menu.html#Import_Audio" title="File Menu">import</a> an audio file. The menu command <span class="menu"><a href="tracks_menu.html#add_new" title="Tracks Menu">Tracks &gt; Add New</a></span> lets you explicitly add a new, empty mono or stereo audio track.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -52,21 +52,20 @@
 <ol><li><a href="#about">About Tracks</a></li>
 <li><a href="#stereo">Stereo Audio Track</a></li>
 <li><a href="#single">Single Audio Track (Mono, Left or Right)</a></li>
+<li><a href="#panel">Track Control Panel and Vertical Scale</a></li>
+<li><a href="#menu">Audio Track Dropdown Menu</a></li>
 <li><a href="#clips">Clips</a></li>
-<li><a href="#panel">Track Control Panel</a></li>
-<li><a href="#scale">Vertical Scale</a></li>
 <li><a href="#name">Show audio track name as overlay</a></li>
 <li><a href="#split">Splitting and Joining Tracks</a></li>
 <li><a href="#display">Changing the track display</a></li>
 <li><a href="#focus">Track focus</a></li>
-<li><a href="#working">Working with Audio Tracks</a></li>
-<li><a href="#rteffects">Real-time effects stack</a></li></ol>
+<li><a href="#working">Working with Audio Tracks</a></li></ol>
 <p><br />
 </p>
 <div id="about"></div>
 <h2><span class="mw-headline" id="About_Tracks">About Tracks</span></h2>
 <p>A <b>track</b> is like one instrument in your symphony, or one voice in your podcast. You can add more tracks, and all of them will be <a href="mixing.html" title="Mixing">mixed</a> together to create your final output, but during editing you can manipulate each track independently. If you have an interview recorded with two microphones, each one can go in a separate track. If you have background music, that could go in a third track. 
-</p><p>On each track, you can have several <b>clips</b>. A clip is a piece of continuous audio, for example a recording or a background song. Clips can be moved along the <a href="timeline.html" title="Timeline">Timeline</a> so that they play at a different point in time in the mix, as well dragged between tracks. 
+</p><p>A non-empty track contains at least one <b>clip</b>. A clip is a piece of continuous audio, for example a recording or a background song. Clips can be moved along the <a href="timeline.html" title="Timeline">Timeline</a> so that they play at a different point in time in the mix, as well dragged between tracks. See <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audacity Tracks and Clips</a> for details of how clips work within tracks.
 </p><p><br />
 </p>
 <div id="stereo"></div>
@@ -86,6 +85,60 @@
 <dl><dd><span title="Mono Track"><img alt="Mono track example.png" src="../m/images/f/f9/mono_track_example.png" width="848" height="207" /></span></dd></dl>
 <p><br />
 </p>
+<div id="panel"></div>
+<h2><span class="mw-headline" id="Track_Control_Panel_and_Vertical_Scale">Track Control Panel and Vertical Scale</span></h2>
+<h3><span class="mw-headline" id="Track_Control_Panel">Track Control Panel</span></h3>
+<dl><dd><table>
+
+<tr valign="top">
+<td> <span title="Track Control Panel"><img alt="TCP Track with Select button.png" src="../m/images/c/cf/tcp_track_with_select_button.png" width="99" height="181" /></span>
+</td>
+<td>The <b>Track Control Panel</b> at the left of the audio track has controls and status indicators for this track. Left-clicking other than on a control performs track selection and move as follows.
+<ul><li> Clicking the <span class="button">Select</span> button <a href="audacity_selection.html" title="Audacity Selection">selects</a> all this track's audio, <i>deselecting all other tracks</i>. </li>
+<li> Holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking the <span class="button">Select</span> button selects all this track's audio, <i>keeping already selected tracks selected</i>.
+<ul><li> <b>keyboard:</b> use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to give the track <a href="#focus">focus</a>, then <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to select it; hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> then use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to extend selection into another track. Read <a href="audacity_selection.html#keyboard" title="Audacity Selection">keyboard selection</a> for more.    </li></ul></li>
+<li> Click-and-drag moves this track up or down when there are other tracks
+<ul><li><b>keyboard:</b> choose one of the <b>Move Track</b> commands in <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>, opened by <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> on the currently focused track.</li></ul></li>
+<li> <span class="button" style="background-color: #cdd9f1">Effects</span> Reveals the real-time effects stack. For details see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects"><b>Using Realtime Effects</b></a> on the Audacity Support GitBook.</li></ul>
+</td></tr></table></dd></dl>
+<p>For details please see <a href="track_control_panel_and_vertical_scale.html" title="Track Control Panel and Vertical Scale"><b>Track Control Panel and Vertical Scale</b></a>.
+</p>
+<div id="scale"></div>
+<h3><span class="mw-headline" id="Vertical_Scale">Vertical Scale</span></h3>
+<dl><dd><table>
+
+<tr>
+<td valign="top"><span title="Vertical Scale (default linear)"><img alt="Vertical Scale ruler.png" src="../m/images/0/0a/vertical_scale_ruler.png" width="40" height="192" /></span>
+</td>
+<td valign="top" style="padding-left:10px">
+<ul><li>The <b>Vertical Scale</b> displays <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> when showing the  <i><b><a href="glossary.html#waveform" title="Glossary">waveform</a></b></i>, or <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> when showing the <i><b><a href="glossary.html#spectrum" title="Glossary">spectrum</a></b></i>  or <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i>.  </li></ul>
+<ul><li>The amplitude scale shown to left is the default <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> scale
+<ul><li> 1.0 being the maximum value of positive signals and -1.0 the maximum of negative signals. </li>
+<li> Alternatively you can select a dB scale for the linear view from the context menu of the <a href="track_control_panel_and_vertical_scale.html#vscale" title="Track Control Panel and Vertical Scale"><b>Vertical Scale</b></a>.</li></ul></li></ul>
+</td></tr>
+</table></dd></dl>
+<p><br />
+</p>
+<div id="menu"></div>
+<h2><span class="mw-headline" id="Audio_Track_Dropdown_Menu"><a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a></span></h2>
+<p>The <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> is accessed by clicking in the Track Name, by the downward-pointing triangle <span style="position:relative;bottom:-4px"><span title="Track Name"><img alt="TrackDropDown.png" src="../m/images/a/a9/trackdropdown.png" width="80" height="17" /></span></span>  in the <a href="#panel" title="Audio Tracks">Track Control Panel</a>. 
+</p><p>Alternatively, you can access the Track Dropdown Menu on the currently focused audio track by pressing <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span>.
+</p>
+<dl><dd><span title="Audio track dropdown menu"><img alt="Audio track dropdown menu.png" src="../m/images/d/da/audio_track_dropdown_menu.png" width="274" height="403" /></dd></dl>
+<p>You can use the Audio Track dropdown menu to manipulate individual mono or stereo tracks:
+</p>
+<ul><li>Rename a track</li>
+<li>Move a track up or down in the project window</li>
+<li>Set the current type of view for the track</li>
+<li>Select the colorway to be used for a waveform display</li>
+<li>Swap the channels of a stereo track</li>
+<li>Make or split stereo tracks</li>
+<li>Set the current <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> and <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i> for the track.</li></ul>
+<p>There is no need to <a href="audacity_selection.html" title="Audacity Selection">select</a> the track before accessing the dropdown menu.
+</p>
+<div class="note">Note Tracks and Label Tracks also have similar dropdown menus, but their scope is more limited. </div>
+<p><br />
+</p>
 <div id="clips"></div>
 <h2><span class="mw-headline" id="Clips">Clips</span></h2>
 <dl><dd><table>
@@ -101,98 +154,6 @@
 <li>You can right-click the clip <i>(<b>not</b> the clip-handle)</i> to access more options in a context menu. </li>
 <li>More detailed information on clips can be found in the <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips"><b>Audio Tracks and Clips</b></a> page.</li></ul>
 </td></tr></table></dd></dl>
-<p><br />
-</p>
-<div id="panel"></div>
-<h2><span class="mw-headline" id="Track_Control_Panel">Track Control Panel</span></h2>
-<dl><dd><table>
-
-<tr valign="top">
-<td> <span title="Track Control Panel"><img alt="TCP Track with Select button.png" src="../m/images/c/cf/tcp_track_with_select_button.png" width="99" height="181" /></span>
-</td>
-<td>The <b>Track Control Panel</b> at the left of the audio track has controls and status indicators for this track. Left-clicking other than on a control performs track selection and move as follows.
-<ul><li> Clicking the <span class="button">Select</span> button <a href="audacity_selection.html" title="Audacity Selection">selects</a> all this track's audio, <i>deselecting all other tracks</i>. </li>
-<li> Holding <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while clicking the <span class="button">Select</span> button selects all this track's audio, <i>keeping already selected tracks selected</i>.
-<ul><li> <b>keyboard:</b> use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to give the track <a href="#focus">focus</a>, then <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to select it; hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> then use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> to extend selection into another track. Read <a href="audacity_selection.html#keyboard" title="Audacity Selection">keyboard selection</a> for more.    </li></ul></li>
-<li> Click-and-drag moves this track up or down when there are other tracks (<b>keyboard:</b> choose one of the "Move Track" commands in <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>, opened by <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> on the currently focused track ).</li>
-<li> <span class="button" style="background-color: #cdd9f1">Effects</span> Reveals the real-time effects stack. For details see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects"><b>Using Realtime Effects</b></a> on the Audacity Support GitBook.</li></ul>
-</td></tr></table></dd></dl>
-<p><br />
-</p>
-<div id="controls"></div>
-<h3><span class="mw-headline" id="Controls">Controls</span></h3>
-<div id="close"></div>
-<p><span style="font-weight: bold; font-size:118%">Close Button:</span>
-</p>
-<dl><dd> <span title="Track Close Button"><img alt="Track Close button.png" src="../m/images/0/05/track_close_button.png" width="19" height="19" /></span> Clicking this button will close the track, removing it from the project.</dd></dl>
-<div id="track_menu"></div>
-<p><span style="font-weight: bold; font-size:118%">Audio Track Dropdown Menu:</span>
-</p>
-<dl><dd><span title="Track Name"><img alt="Track dropdown.png" src="../m/images/2/2e/track_dropdown.png" width="77" height="18" /></span> Clicking the track name or using <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> on the currently <a href="#focus">focused track</a> opens the <b><a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a></b> giving options that affect this track only.  Newly created tracks are named "Audio Track".  Options in the dropdown menu include changing the name or <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>, how the track is displayed, splitting a stereo track to single left, right or mono tracks, swapping stereo channels and <a href="audacity_tracks_and_clips.html#color" title="Audacity Tracks and Clips">changing track color</a>.</dd></dl>
-<div id="mute"></div>
-<p><span style="font-weight: bold; font-size:118%">Mute Button:</span>
-</p>
-<dl><dd><span title="Track Mute Button"><img alt="Track Mute button.png" src="../m/images/d/d9/track_mute_button.png" width="48" height="18" /></span> Click to silence this track when playing. Click again to unsilence. </dd></dl>
-<div id="solo"></div>
-<p><span style="font-weight: bold; font-size:118%">Solo Button:</span>
-</p>
-<dl><dd><span title="Track Solo Button"><img alt="Track Solo button.png" src="../m/images/a/a3/track_solo_button.png" width="48" height="18" /></span> Click to play just this track.  Click again to release the button.  Whenever playing audio, Solo takes precedence over Mute by default - the Mute buttons have no effect whilst any Solo button is down.  There are two other options for Solo button behavior in the <a href="tracks_behaviors_preferences.html#solo" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a>.  One of these is to remove the Solo button, leaving only a Mute button. The other is more complex suitable for people used to mixing desks, enabling multiple tracks to be "soloed" simultaneously.</dd></dl>
-<div class="note">Please be aware that when using <b>Export</b> or <b>Export Multiple</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="#panel" title="Audio Tracks">Track Control Panels</a>. So what you hear by previewing with playback prior to export is what you will get in the Exported audio file.
-<ul><li>When using <b>Export Selected Audio</b>, however, Audacity will Export the selection from <i><b>all</b></i> selected tracks even if some if those tracks are grayed-out and inaudible on playback.</div></li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
-</td>
-<td align="left" valign="top">Keyboard shortcuts: <span class="kbrd" style="background-color: #e0e0f0">Shift+U</span> toggles muting on the currently focused track which has the yellow border, and <span class="kbrd" style="background-color: #e0e0f0">Shift + S</span> toggles soloing. The solo shortcut works even if you hide the Solo button.
-</td></tr></table>
-</div>
-<div id="gain"></div>
-<p><span style="font-weight: bold; font-size:118%">Gain Slider:</span>
-</p>
-<dl><dd><span title="Track Gain Slider"><img alt="Track Gain slider.png" src="../m/images/f/f9/track_gain_slider.png" width="97" height="24" /></span> Set the gain for this track. Hold down the shift key while dragging to adjust the slider in finer increments. Double-click the slider to bring up a window where you can make precise adjustments or enter a gain value.</dd></dl>
-<div id="pan"></div>
-<p><span style="font-weight: bold; font-size:118%">Pan Slider:</span>
-</p>
-<dl><dd><span title="Track Pan Slider"><img alt="Track Pan slider.png" src="../m/images/6/66/track_pan_slider.png" width="97" height="24" /></span> To make signal stronger on left or right speaker/earphone. Hold down the shift key while dragging to adjust the slider in finer increments. Double-click the slider to bring up a window where you can make precise adjustments or enter a pan value.</dd></dl>
-<div id="collapse"></div>
-<p><span style="font-weight: bold; font-size:118%">Track Collapse and Select Buttons:</span>
-</p>
-<dl><dd><span title="Track Collapse and Select Buttons"><img alt="Collapse-Select-buttons.png" src="../m/images/4/46/collapse_select_buttons.png" width="77" height="20" /></span> Click on the black triangle to make the track 'fold up' into a smaller size.  Click again, or drag the lower edge of the track to restore the size.  
-<dl><dd><dl><dd><dl><dd><dl><dd>Click on the <span class="button">Select</span> button to select the whole track.</dd></dl></dd></dl></dd></dl></dd></dl></dd></dl>
-<h3><span class="mw-headline" id="Status_Indicators">Status Indicators</span></h3>
-<div id="info"></div>
-<ul><li><b>Track Information Area:</b><br /></li></ul>
-<dl><dd> <span title="Track Information Area"><img alt="TrackInfo.png" src="../m/images/c/c5/trackinfo.png" width="97" height="30" /></span> Gives the following information for each track:
-<ul><li> Stereo or Mono</li>
-<li> The <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b> in </i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b><i> </i></li>
-<li> The <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i> or bit depth. An imported file will show the bit depth at which the file was imported (as per your choice in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>), not the actual bit depth of the file.   </li></ul></dd></dl>
-<div id="sync"></div>
-<ul><li><b>Sync-Lock Indicator:</b><br /></li></ul>
-<dl><dd><span title="Track Sync-Lock Indicator"><img alt="TrackSync.png" src="../m/images/8/89/tracksync.png" width="16" height="20" /></span> When present <i>(at bottom-right of the Track Control Panel, adjacent to the Track Collapse button)</i>, indicates that this track is part of a <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Locked Track Group</a>.</dd></dl>
-<p><br />
-</p>
-<div id="scale"></div>
-<h2><span class="mw-headline" id="Vertical_Scale">Vertical Scale</span></h2>
-<dl><dd><table>
-
-<tr>
-<td valign="top"><span title="Vertical Scale (default linear)"><img alt="Vertical Scale ruler.png" src="../m/images/0/0a/vertical_scale_ruler.png" width="40" height="192" /></span>
-</td>
-<td valign="top" style="padding-left:10px">
-<ul><li>The vertical scale displays <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> when showing the  <i><b><a href="glossary.html#waveform" title="Glossary">waveform</a></b></i>, or <i><b><a href="glossary.html#frequency" title="Glossary">frequency</a></b></i> when showing the <i><b><a href="glossary.html#spectrum" title="Glossary">spectrum</a></b></i>  or <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i>.  </li></ul>
-<ul><li>The amplitude scale shown to left is the default <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> scale
-<ul><li> 1.0 being the maximum value of positive signals and -1.0 the maximum of negative signals. </li></ul></li></ul>
-</td></tr>
-</table></dd></dl>
-<h3><span class="mw-headline" id="Vertical_Scale_context_menu">Vertical Scale context menu</span></h3>
-<p>Right-click in the Vertical Scale will bring up a dropdown context menu enabling <a href="vertical_zooming.html" title="Vertical Zooming">Vertical Zooming</a> and facilitating swapping between <a href="audacity_waveform.html" title="Audacity Waveform">Linear Waveform</a> <i>(default)</i> and <a href="audacity_waveform.html#db" title="Audacity Waveform">Waveform dB</a> view.
-</p>
-<dl><dd><span title="Vertical Scale Waveform context menu"><img alt="Vertical Scale Waveform context menu.png" src="../m/images/b/b5/vertical_scale_waveform_context_menu.png" width="191" height="269" /></span></dd></dl>
-<p>If the display is changed to <a href="audio_track_dropdown_menu.html#wavedb" title="Audio Track Dropdown Menu">Waveform dB</a>, the scale shows <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> values for positive signals only 
-</p>
-<div class="note">These dB values range from maximum 0 dB to the minimum dB level set in <a href="interface_preferences.html" title="Interface Preferences">Interface Preferences</a>, or can be varied using the <a href="zooming.html#vscale" title="Zooming">mouse wheel</a>. </div>
 <p><br />
 </p>
 <div id="name"></div>
@@ -288,20 +249,13 @@
 <li> <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Locked Track Groups</a>: keeping a group of tracks synchronized</li>
 <li> <a href="zooming.html" title="Zooming">Zooming</a>: seeing what you need to see</li></ul>
 <p><br />
-</p>
-<div id="rteffects"></div>
-<h2><span class="mw-headline" id="Real-time_effects_stack">Real-time effects stack</span></h2>
-<p>Clicking on the <span class="button">Effects</span> button in an audio track's Track Control Panel will open a real-time stackable effects pane to the left of the audio track.
-</p>
-<dl><dd><img alt="Effects stack.png" src="../m/images/d/de/effects_stack.png" width="744" height="556" /></dd></dl>
-<p>Please see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects">Using realtime effects</a> in the Audacity support GitBook.
 </p><p><br />
 </p>
 <div id="links"></div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="track_control_panel_and_vertical_scale.html" title="Track Control Panel and Vertical Scale"><b>&gt;</b>&#160; Track Control Panel and Vertical Scale</a> <br />
 </p><p><a href="label_tracks.html" title="Label Tracks"><b>&gt;</b>&#160; Label Tracks</a> <br />
-</p><p><a href="note_tracks.html" title="Note Tracks"><b>&gt;</b>&#160; Note Tracks (MIDI)</a> <br />
+</p><p><a href="note_tracks.html" title="Note Tracks"><b>&gt;</b>&#160; Note Tracks (MIDI)</a> <br /></span>
 </p>
 
 
@@ -379,7 +333,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

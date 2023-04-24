@@ -39,30 +39,30 @@
 <li><a href="#mp3">MP3 32 kbps 8,000 Hz</a></li></ul>
 </div>
 <div id="wav"></div>
-<h2><span class="mw-headline" id="44.2C100_Hz_16-bit_PCM_WAV">44,100 Hz 16-bit PCM WAV</span></h2>
-<div class="example"><b>To export to 44,100 Hz 16-bit PCM WAV</b>
+<h2><span class="mw-headline" id="44100_Hz_16-bit_PCM_WAV">44100 Hz 16-bit PCM WAV</span></h2>
+<div class="example"><b>To export to 44100 Hz 16-bit PCM WAV</b>
 <ol><li>If required, <a href="tutorial_making_ringtones_and_ivr_messages.html#mono" title="Tutorial - Making Ringtones and IVR messages">convert the stereo track to mono</a>.</li>
-<li>Look at the Project Rate control on the <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> <i>(by default at bottom left of the Audacity Project window)</i>; if it is already showing "44100" skip to Step 2 below. Otherwise, select the "44100" option from the dropdown menu; if there is not a 44,100 (Hz) option select <b>Other ...</b> and type 44100 in the box that pops up <i>(in Audacity 2.x select and type over the existing value)</i>. </li>
+<li>Look at the Project Rate control in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>. If it is already showing "44100" skip to Step 2 below, otherwise, select the "44100" option from the dropdown menu; if there is not a 44,100 (Hz) option select <b>Other ...</b> and type 44100 in the box that pops up <i>(in Audacity 2.x select and type over the existing value)</i>. </li>
 <li>Select menu item <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span>; in the "Export File" dialog choose <b>WAV (Microsoft) signed 16-bit PCM</b> in the "Save as type" dropdown, then enter a file. Click <span class="button">OK</span> then click <span class="button">Save</span>. If the Metadata Editor pops up at any stage, click <span class="button">OK</span>.  Metadata tags are not needed for WAV files in mobile phones.</div></li></ol>
 <div id="wav8bit"></div>
-<h2><span class="mw-headline" id="8.2C000_Hz_8-bit_WAV">8,000 Hz 8-bit WAV</span></h2>
-<div class="example"><b>WAV (Microsoft) Bit depth: 8-bit; Sample Rate: 8,000 Hz; Channels: 1 (mono)</b>
-<p>This is an example of exporting an <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> but small size WAV file specific to a particular type of phone. The low sample rate of 8,000 Hz means that the file will not contain <i><b><a href="glossary.html#frequency" title="Glossary">frequencies</a></b></i> higher than 4,000 Hz, so this file may not give the best results on other phones that have more capable speakers. 
+<h2><span class="mw-headline" id="8000_Hz_8-bit_WAV">8000 Hz 8-bit WAV</span></h2>
+<div class="example"><b>WAV (Microsoft) Bit depth: 8-bit, Sample Rate: 8000 Hz, Channels: 1 (mono)</b>
+<p>This is an example of exporting an <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> but small size WAV file specific to a particular type of phone. The low sample rate of 8000 Hz means that the file will not contain <i><b><a href="glossary.html#frequency" title="Glossary">frequencies</a></b></i> higher than 4,000 Hz, so this file may not give the best results on other phones that have more capable speakers. 
 </p><p>The following Motorola Sprint Nextel cellphones:
 </p><p>i265, i275, i405, i450, i560, i710, 730, 750, 760, 830, i833, i836 ,850, 860, i870, i930
-</p><p>require ringtones to be 8-bit 8,000 Hz mono WAV files. If your phone has the same requirements as this, the instructions below should work for your phone.
+</p><p>require ringtones to be 8-bit 8000 Hz mono WAV files. If your phone has the same requirements as this, the instructions below should work for your phone.
 </p><p>If the only information you have is that the WAV needs to have a bit rate of 64 kbps, these instructions will also probably work for your phone, because in a WAV file the bit rate is always the (bit depth) multiplied by the (sample rate), multiplied by the (number of channels) so the WAV in our example is (8 * 8 * 1) = 64 kbps. 
 </p><p>If your phone requires WAV files with slightly different characteristics than these you can adjust the instructions below appropriately. It's assumed you have already made the track mono as per <a href="tutorial_making_ringtones_and_ivr_messages.html#mono" title="Tutorial - Making Ringtones and IVR messages">"Convert stereo to mono"</a>.   
 </p>
-<ol><li>Look at the Project Rate control on the Selection Toolbar (by default at bottom left of the Audacity Project window); if it is already showing "8000", skip to Step 2 below; otherwise, select the "8000" option from the dropdown menu. If there is not an 8,000 (Hz) option, select "Other ..." and type 8000 in the box that pops up <i>(in Audacity 2.x select and type over the existing value)</i>.</li>
+<ol><li>Look at the Project Rate control in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>. If it is already showing "8000", skip to Step 2 below, otherwise, select the "8000" option from the dropdown menu. If there is not an 8000 (Hz) option, select "Other ..." and type 8000 in the box that pops up <i>(in Audacity 2.x select and type over the existing value)</i>.</li>
 <li>Select menu item <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> , in the "Export File" dialog choose <b>other uncompressed files</b> from the "Save as type" dropdown, then enter a file name. Click <span class="button">Options</span>, a dialog will open. In the "Header" dropdown, select "WAV (Microsoft)" and in the "Encoding" dropdown choose "Unsigned 8-bit PCM"; click OK then <span class="button">Save</span>. If the Metadata Editor pops up at any stage just click <span class="button">OK</span>; metadata tags are not needed for WAV files in mobile phones.<br /></div></li></ol>
 <div id="mp3"></div>
-<h2><span class="mw-headline" id="MP3_32_kbps_8.2C000_Hz">MP3 32 kbps 8,000 Hz</span></h2>
-<div class="example"><b>MP3 Bit Rate: 32 kbps; Sample Rate: 8,000 Hz; Channels: 1 (mono)</b>
-<p>As an example of a phone requiring an MP3 ringtone, the Motorola i580 requires MP3 files at 32 kbps, 8,000 Hz mono.
+<h2><span class="mw-headline" id="MP3_32_kbps_8000_Hz">MP3 32 kbps 8000 Hz</span></h2>
+<div class="example"><b>MP3 Bit Rate: 32 kbps, Sample Rate: 8000 Hz, Channels: 1 (mono)</b>
+<p>As an example of a phone requiring an MP3 ringtone, the Motorola i580 requires MP3 files at 32 kbps, 8000 Hz mono.
 </p><p>If your phone has these same requirements this should also work for you; if your phone requires MP3 files with slightly different characteristics you can adjust the tutorial instructions below appropriately. It's assumed you have already made the track mono as per <a href="tutorial_making_ringtones_and_ivr_messages.html#mono" title="Tutorial - Making Ringtones and IVR messages">"Convert stereo to mono"</a>.    
 </p>
-<ol><li>Look at the Project Rate control on the Selection Toolbar (by default at bottom left of the Audacity Project window); if it is already showing "8000", skip to Step 3 below; otherwise, select the "8000" option from the dropdown menu. If there is not an 8,000 (Hz) option, select "Other ..." and type 8000 in the box that pops up <i>(in Audacity 2.x, select and type over the existing value)</i>. </li>
+<ol><li>Look at the Project Rate in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>. If it is already showing "8000", skip to Step 3 below; otherwise, select the "8000" option from the dropdown menu. If there is not an 8000 (Hz) option, select "Other ..." and type 8000 in the box that pops up <i>(in Audacity 2.x, select and type over the existing value)</i>. </li>
 <li>Select menu item <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span>, in the "Export Audio File" dialog, choose <b>MP3 Files</b> from the "Save as type" dropdown, then enter file name. Click <b>Options</b>, a dialog will open. Set the Bit Rate Mode to <b>Constant</b>; in the "Quality" dropdown select "32 kbps"; set "Channel Mode" to "Stereo" - a single-channel (mono) file will still be produced if your Audacity track is stereo; click <span class="button">OK</span> then click <span class="button">Save</span>. </li></ol>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -150,7 +150,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Examples:_Exporting_audio_for_ringtones_and_IVR_messages">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Examples:_Exporting_audio_for_ringtones_and_IVR_messages">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

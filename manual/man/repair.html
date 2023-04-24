@@ -35,13 +35,13 @@
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro"><b>Repair</b> removes a very short region of damaged or destroyed audio, replacing it with an estimated region of audio based on what is happening either side of the region. It may be used for example to repair a click on a vinyl record, or a tape dropout. </div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Repair</span></dd></dl>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Noise Removal and Repair &gt; Repair</span></dd></dl>
 <div id="requirements"></div>
 <h2><span class="mw-headline" id="Requirements">Requirements</span></h2>
 <p>The Repair effect can only be used on selection regions <b>up to 128 <i><a href="glossary.html#sample" title="Glossary">samples</a></i> long</b> (for most audio, only a few thousandths of a second). Above this length, it becomes too hard to guess what should be going on in the section under repair. You will get an error message if you select too much audio to try and repair. In general, the shorter the section of audio you select to repair, the better the results will be.
 </p><p>The Repair effect is unusual because it <i><b>requires</b></i> there to be audio <i>outside</i> the selection region on at least one side of the section to be repaired. Examining this audio lets Audacity <i><b><a href="glossary.html#interpolate" title="Glossary">interpolate</a></b></i> (make an informed guess about) the bad section. If the surrounding audio in the track is very short or non-existent there may not be enough information to make the interpolation, and an error message will be shown. For example, it is not possible to select a region up to 128 samples long in one track, paste or duplicate it into a new empty track and then repair it, because there will then be no audio either side of the region to examine.     
 </p>
-<div class="note">When using Repair it is often convenient to set <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> bar to show <b>hh:mm:ss + samples</b>, then click the <b>Length</b> radio button to ensure you are only selecting up to 128 samples. </div>
+<div class="note">When using Repair it is often convenient to set <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> bar to show <b>hh:mm:ss + samples</b>, then click the cogwheel and choose <b>Start and Length</b> to ensure you are only selecting up to 128 samples. </div>
 <div id="usage"></div>
 <h2><span class="mw-headline" id="Usage">Usage</span></h2>
 <ol><li> Select the approximate region of audio. <a href="zooming.html" title="Zooming">Zoom</a> in until you can start to see the individual dots (samples) in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>, and then reselect the shortest possible piece of audio for replacement.</li>
@@ -138,7 +138,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/Repair">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Repair">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

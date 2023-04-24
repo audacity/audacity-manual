@@ -33,43 +33,55 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/AAC_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><b>AAC</b> is a <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>, <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i> audio format. It is the default audio format for Apple Music/iTunes\xc2\xae, iPhone\xc2\xae, iPad\xc2\xae and iPod\xc2\xae
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>AAC</b> is a <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>, <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i> audio format. It is the default audio format for Apple Music/iTunes\xc2\xae, iPhone\xc2\xae, iPad\xc2\xae and iPod\xc2\xae
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">FFmpeg is not shipped with Audacity but you can download it and then export as AAC by following <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">these instructions</a>.
-</td></tr></table></div> </div>
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> then choosing <b>M4A(AAC) Files FFmpeg</b> from the <b>Save as type</b> dropdown menu</dd></dl>
-<dl><dd><span title="AAC Export Options at the bottom of the Export Audio dialog"><img alt="Export AAC dialog 3-0-0.png" src="../m/images/7/74/export_aac_dialog_3_0_0.png" width="715" height="623" /></span></dd></dl>
-<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>M4A(AAC) Files FFmpeg</b>  from the <b>Save as type</b> dropdown menu. <p>In this case the options dialog will appear in the center of the Export Multiple dialog.</p></dd></dl>
-<p><br />
-</p>
-<div id="setup"></div>
-<h2><span class="mw-headline" id="Format_Options">Format Options</span></h2>
-<ul><li><b>Quality:</b> This slider controls the quality (bit rate in kbps) of the output AAC file. The Maximum bit rate (best quality) is 320 kbps (stereo) 160 kbps (mono) and the minimum is 98 kbps (mono). The current quality setting is displayed in the center of the slider scale.<p>The default quality setting of 160 typically produces a similar sized, but slightly higher quality file compared to an <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> at Audacity's default 128 kbps constant <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i>. A stereo file is always produced, but a file exported from a mono track will have about half the bit rate <i>(and hence half the file size)</i> of one exported from a stereo track.</p></li></ul>
+<td align="left" valign="top"><b>FFmpeg</b> is not shipped with Audacity but you can download it and then export as AAC by following <a rel="nofollow" class="external text" href="https://support.audacityteam.org/basics/installing-ffmpeg"><b>these instructions</b></a>.
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">Please be aware that there is a bug in Audacity whereby the bit rate setting that you make in an AAC export is <i><b>not</b></i> always honored by Audacity. See <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/4309"><b>this logged bug</b></a> for more details.
+<ul><li>For stereo <b>all</b> selected bit rates of 196kbps export at 196kbps - this includes the default bit rate setting of 160 kbps</li>
+<li>Settings in the range 200kbps to 224kbps are closely honored on export.</li>
+<li>On Mac higher bit rate settings are honored but not so on Windows where settings of 256kbps and 320kbps produce files of 233kbps and 235kbps.</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">You can use the keyboard left and right arrow-heads to move or fine-tune your slider position.
+<td align="left" valign="top">The workaround is to export as uncompressed WAV or AIFF and use iTunes/Music to make the AAC conversion, see <a href="tutorial_exporting_to_itunes.html#conversion" title="Tutorial - Exporting to iTunes"> this page</a> for information regarding this.
 </td></tr></table>
 </div>
+ 
+</td></tr></table>
+</div> </div>
+<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> then choosing <b>M4A(AAC) Files FFmpeg</b> from the <b>Save as type</b> dropdown menu</dd></dl>
+<dl><dd><span title="AAC Export Options at the bottom of the Export Audio dialog"><img alt="Export AAC dialog 3-3-0.png" src="../m/images/3/3d/export_aac_dialog_3_3_0.png" width="632" height="583" /></span></dd></dl>
+<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>M4A(AAC) Files FFmpeg</b>  from the <b>Save as type</b> dropdown menu. <p>In this case the options dialog will appear in the center of the Export Multiple dialog.</p></dd></dl>
+<p><br />
+</p>
+<div id="setup"></div>
+<h2><span class="mw-headline" id="Format_Options">Format Options</span></h2>
+<ul><li><b>Quality:</b> This box controls the quality (bit rate in kbps) of the output AAC file. The Maximum bit rate (best quality) is 320 kbps (stereo) 160 kbps (mono) and the minimum is 98 kbps (mono).<p>You can use the up/down arrow-heads to change the required value or you can simply type it in. </p> <p>The default quality setting of 160 typically produces a similar sized, but slightly higher quality file compared to an <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> at Audacity's default 128 kbps constant <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i>. A stereo file is always produced, but a file exported from a mono track will have about half the bit rate <i>(and hence half the file size)</i> of one exported from a stereo track.</p></li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">Please be aware that there is a bug in Audacity whereby the bit rate setting that you make in an AAC export is <i><b>not</b></i> honored by Audacity.  See <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/1818"><b>this logged bug</b></a>.<p>The workaround is to export as uncompressed WAV or AIFF and use iTunes to make the AAC conversion, see <a href="tutorial_exporting_to_itunes.html#conversion" title="Tutorial - Exporting to iTunes"> this page</a> for information regarding this. </p>
- 
+<td align="left" valign="top">On Mac please only use the <b>up/down arrows</b> to set your required bit rate as there is a bug whereby if you type a value Audacity will ignore that and use the last previously used value instead.
+
 </td></tr></table></div>
-<div class="note">Like <i><b><a href="glossary.html#ogg" title="Glossary">OGG</a></b></i>, AAC encoding is a form of <i><b><a href="glossary.html#vbr" title="Glossary">VBR</a></b></i> or variable bit rate encoding, as opposed to the <i><b><a href="glossary.html#cbr" title="Glossary">CBR</a></b></i> or constant bit rate encoding used by default when exporting MP3 files. <p>This means that in order to maintain consistent quality throughout a track, a higher bit rate will be used when encoding a complex piece of audio (such as a full orchestral passage) than when encoding a solo voice or instrument.  A recording which has more  complex audio will produce a larger file. Increasing the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>  in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> will increase the bit rate and so the file size (and vice versa). </p></div>
+<div class="note">Like <i><b><a href="glossary.html#ogg" title="Glossary">OGG</a></b></i>, AAC encoding is a form of <i><b><a href="glossary.html#vbr" title="Glossary">VBR</a></b></i> or variable bit rate encoding, as opposed to the <i><b><a href="glossary.html#cbr" title="Glossary">CBR</a></b></i> or constant bit rate encoding used by default when exporting MP3 files. <p>This means that in order to maintain consistent quality throughout a track, a higher bit rate will be used when encoding a complex piece of audio (such as a full orchestral passage) than when encoding a solo voice or instrument.  A recording which has more  complex audio will produce a larger file. Increasing the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>  in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> will increase the bit rate and so the file size (and vice versa). </p></div>
 
 
 
@@ -147,7 +159,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2022-12-27 - <a href="https://alphamanual.audacityteam.org/man/AAC_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/AAC_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
