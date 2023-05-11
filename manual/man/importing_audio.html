@@ -35,6 +35,10 @@
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">This page is about importing audio files into Audacity (like WAV or MP3) that other applications on the computer can play. 
+<div class="note">When importing a file into an empty project window or when using <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a> to "open" an audio file</span>), the <i>Project Rate</i> control in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> changes if necessary to reflect the rate of the file.
+<ul><li>See <a href="#rate_and_depth"><b>below</b></a> for more details. </li></ul>
+
+</div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -150,23 +154,39 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top"><b>Audacity supports multiple tracks with different sample rates.</b>
+<p>The "Project Sample Rate" is the rate that the project is working in. If you have a project with two tracks, one with a sample rate of 8000 Hz and one with a sample rate of 48000 Hz, and the "Project Sample Rate" is set to 44100 Hz <i>(default)</i>, then:
+</p>
+<ul><li>playback will be 44100 Hz,</li>
+<li>any new tracks created by "Tracks menu &gt; Add track" will be 44100 Hz,</li>
+<li>new track created by recording to a new track will be 44100 Hz,</li>
+<li>when the audio is exported, it will be exported as a 44100 Hz file,</li>
+<li>mixing down tracks will mix to 44100 Hz.</li></ul>
+</td></tr></table>
+</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top"><span style="font-weight: bold; font-size:118%">Project Rate may change when importing initial audio file:</span>
-<ul><li>When importing a file into an empty project window or when using <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a> to "open" an audio file</span>), the <i>Project Rate</i> control in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> changes if necessary to reflect the rate of the file. 
-<ul><li>The Project Rate determines the sample rate a file will be <a href="exporting_audio.html" title="Exporting Audio">exported</a> at, so no further adjustment is needed to export that file at its original rate. </li>
+<td align="left" valign="top"><span style="font-weight: bold; font-size:118%">Project Sample Rate may change when importing initial audio file:</span>
+<ul><li>When importing a file into an empty project window or when using <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a> to "open" an audio file</span>), the <i>Project Sample Rate</i> control in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> changes if necessary to reflect the rate of the file. 
+<ul><li>The Project Sample Rate determines the sample rate a file will be <a href="exporting_audio.html" title="Exporting Audio">exported</a> at, so no further adjustment is needed to export that file at its original rate. </li>
 <li>There is <i><b>no</b></i> warning given that this rate change occurs.</li></ul></li>
-<li>However, once there is already an audio track in the project (either an imported file, a <a href="record.html" title="Record">recording</a> or <a href="generate_menu.html" title="Generate Menu">generated audio</a>), importing an audio file will <i><b>not</b></i> change the project rate.</li></ul>
+<li>However, once there is already an audio track in the project (either an imported file, a <a href="record.html" title="Record">recording</a> or <a href="generate_menu.html" title="Generate Menu">generated audio</a>), importing any subsequent audio file will <i><b>not</b></i> change the Project Sample Rate.</li></ul>
 
 
 </td></tr></table></div>
-<p>Generally, Audacity imports files at the <i><b><a href="sample_format_bit_depth.html" title="Sample Format - Bit Depth">sample format</a></b></i> (bit depth) specified at <i>Default Sample Format</i> in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a>. This setting defaults to 32-bit float. Therefore by default an imported file will show in the Track Control Panel as 32-bit float, even if its original bit depth is lower. This is best for high-quality editing. Even if you choose a lower Default Sample Format than 32-bit float, Audacity will never downsample a file that has a higher bit depth, as shown in the following table for WAV and AIFF imports using the standard uncompressed files importer.   
+<p>Generally, Audacity imports files at the <i><b><a href="sample_format_bit_depth.html" title="Sample Format - Bit Depth">sample format</a></b></i> (bit depth) specified at <i>Default Sample Format</i> in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>. This setting defaults to 32-bit float. Therefore by default an imported file will show in the Track Control Panel as 32-bit float, even if its original bit depth is lower. This is best for high-quality editing. Even if you choose a lower Default Sample Format than 32-bit float, Audacity will never downsample a file that has a higher bit depth, as shown in the following table for WAV and AIFF imports using the standard uncompressed files importer.   
 </p>
 <dl><dd><table class="prettytablerows" width="40%" rules="rows">
 <caption> Resolution of imported WAV and AIFF files using standard importer
 </caption>
 <tr style="background: #add8e6">
-<td valign="top"><b><a href="quality_preferences.html" title="Quality Preferences">Default Sample Format</a></b>
+<td valign="top"><b><a href="audio_settings_preferences.html" title="Audio Settings Preferences">Default Sample Format</a></b>
 </td>
 <td valign="top"><b>File bit depth</b>
 </td>
@@ -268,7 +288,7 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 		<h3>Navigation</h3>
 		<div class='pBody'>
 			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
-<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
 <ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
 <li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
 <li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
@@ -321,7 +341,7 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-04-24 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-05-11 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
