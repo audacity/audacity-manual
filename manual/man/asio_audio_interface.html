@@ -53,7 +53,7 @@
 <li> An unmixed ASIO output is "bit identical" to the original source. </li>
 <li> Multiple physical input and output channels of the hardware are accessed over one single device.</li></ul>
 <div class="note">Audacity includes support for Microsoft's Windows <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/DirectSound">DirectSound</a> interface protocol. To use it, select "Windows DirectSound" as host in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. This will give support for multi-channel recording on some sound devices, but not the very low latencies that are possible on ASIO.</div> 
-<p>On Linux, the standard <a rel="nofollow" class="external text" href="http://www.alsa-project.org/">ALSA</a> audio <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Application_programming_interface">API</a> typically provides lower latencies than Windows under MME or Windows DirectSound. However, many Linux distributions now use <a rel="nofollow" class="external text" href="http://www.pulseaudio.org/">PulseAudio</a> by default for audio routing and mixing. PulseAudio sits between the sound source and the Linux kernel and thus has somewhat higher latency than direct use of ALSA. For lowest latencies, you can use the <a rel="nofollow" class="external text" href="http://jackaudio.org/">JACK</a> API that provides both low latency audio communication and audio routing between applications. Current Audacity supports JACK fairly well, but with some <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Linux_Issues#JACK">limitations</a>.
+<p>On Linux, the standard <a rel="nofollow" class="external text" href="http://www.alsa-project.org/">ALSA</a> audio <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Application_programming_interface">API</a> typically provides lower latencies than Windows under MME or Windows DirectSound. However, many Linux distributions now use <a rel="nofollow" class="external text" href="http://www.pulseaudio.org/">PulseAudio</a> by default for audio routing and mixing. PulseAudio sits between the sound source and the Linux kernel and thus has somewhat higher latency than direct use of ALSA. For lowest latencies, you can use the <a rel="nofollow" class="external text" href="http://jackaudio.org/">JACK</a> API that provides both low latency audio communication and audio routing between applications. Current Audacity supports JACK fairly well, but with some limitations.
 </p><p>On Mac, <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Core_Audio">Core Audio</a> is the standard API and is fully supported by Audacity. Core Audio also has lower latencies than Windows under MME and Windows DirectSound but <a rel="nofollow" class="external text" href="http://www.jackosx.com/">Jack OS X</a> can be used for lowest latency.
 </p>
 <h2><span class="mw-headline" id="Audacity_and_ASIO">Audacity and ASIO</span></h2>
@@ -139,8 +139,8 @@
 		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
 		<h3>Useful Links</h3>
 		<div class='pBody'>
-			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
-<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
 <li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
@@ -156,7 +156,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-11 - <a href="https://alphamanual.audacityteam.org/man/ASIO_Audio_Interface">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/ASIO_Audio_Interface">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

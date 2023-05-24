@@ -73,7 +73,7 @@
   ;type analyze
   ;type tool
 </pre>
-<p>These correspond to the four menus that can contain plugins: Generate, Effect, Analyze and Tools. Generate plugins are expected to generate new audio from scratch, Effect plugins (\xe2\x80\x9cprocess\xe2\x80\x9d) modify existing audio in-place, and Analyze plugins process audio but do not modify it (though they are allowed to add labels). Tools are a special type for plugins that do not fall into any of the other three types (more information in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Audacity wiki</a>).
+<p>These correspond to the four menus that can contain plugins: Generate, Effect, Analyze and Tools. Generate plugins are expected to generate new audio from scratch, Effect plugins (\xe2\x80\x9cprocess\xe2\x80\x9d) modify existing audio in-place, and Analyze plugins process audio but do not modify it (though they are allowed to add labels). Tools are a special type for plugins that do not fall into any of the other three types (more information in the <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/nyquist-plugins/effect-plugins/time-pitch-and-tempo">Audacity Support site</a>).
 </p><p>For Effect and Analyze plugins, Audacity sets up the Nyquist environment so that the audio the user has selected is in the variable <b>*track*</b> (in Nyquist before version 4, the variable <b>S</b> was used). All of the expressions in the plugin file are executed in order, and the return value of the last expression is substituted for the selection in Audacity. If the last expression does not return audio, Audacity returns an error.
 </p>
 <h3><span class="mw-headline" id="Parameter_dialogs">Parameter dialogs</span></h3>
@@ -98,8 +98,7 @@
 <p>If Audacity finds at least one correctly formed \xe2\x80\x9ccontrol\xe2\x80\x9d line, it will open a dialog to prompt the user for certain parameters to the plugin. Each control "widget" provides a variable (a symbol) that will store the value entered by the user. Here's what the dialog for the Delay effect shown above looks like (Windows 10):
 </p>
 <dl><dd><a href="https://alphamanual.audacityteam.org/man/File:Delay-demo-plug-in.png" class="image"><img alt="Delay-demo-plug-in.png" src="../m/images/b/b5/delay_demo_plug_in.png" width="533" height="191" /></a></dd></dl>
-<p>Additional information about available widgets may be found in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference#widgets">Audacity wiki</a>.
-</p><p><br />
+<p><br />
 </p>
 <h3><span class="mw-headline" id="Returning_labels">Returning labels</span></h3>
 <p>Instead of returning audio, a Nyquist plugin can instead return a list of labels. A list of labels is simply a list of time/label pairs, for example:
@@ -157,8 +156,8 @@
 </p>
 <h3><span class="mw-headline" id="Where_to_go_from_here">Where to go from here</span></h3>
 <p>Audacity comes with some sample plugins that you can examine or modify as a starting point. The best way to learn Nyquist is to try it. Technical support is provided on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=39"><b>Nyquist board of the Audacity Forum</b></a> (email registration required for posting).
-</p><p>Don't forget to consult the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Documentation">documentation</a> for more details of Lisp and Nyquist.
 </p>
+
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="programming_in_nyquist.html" title="Programming in Nyquist"><b>&lt;</b>&#160; Programming in Nyquist</a> <br />
 </p><p><a href="nyquist.html" title="Nyquist"><b>|&lt;</b> Nyquist</a>
@@ -222,8 +221,8 @@
 		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
 		<h3>Useful Links</h3>
 		<div class='pBody'>
-			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">Forum</a></span></li>
-<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">Wiki</a></span></li>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
 <li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
 		</div>
 		</div>
@@ -239,7 +238,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-11 - <a href="https://alphamanual.audacityteam.org/man/Creating_Nyquist_Plug-ins">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Creating_Nyquist_Plug-ins">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
