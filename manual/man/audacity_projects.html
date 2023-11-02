@@ -39,7 +39,7 @@
 <p>A project can be saved using the <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> command.
 </p><p>A saved Audacity Project can be opened and used <i><b>only by Audacity</b></i>. It is not readable or playable by any other application.
 </p>
-<ul><li> To make an audio file (such as  <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>) for playing on your music player, or for use in other applications, use one of the <a href="file_menu_export.html#exports" title="File Menu: Export">Export Audio</a> commands, available from the <span class="menu">File &gt; <a href="file_menu_export.html" title="File Menu: Export">Export</a></span> menu.  </li></ul>
+<ul><li> To make an audio file (such as  <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>) for playing on your music player, or for use in other applications, use <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span>.  </li></ul>
 <div class="note"><span style="font-weight: bold; font-size:118%">The benefits of saving an Audacity Project are:</span>
 <ul><li> Saving a project lets you save unfinished work and re-open it later in Audacity exactly as it was, with all edits and recorded/imported tracks preserved. Note carefully that the <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo</a> history is not saved with the project and so the project history starts afresh when you re-open the project later.</li>
 <li> Audio data is always preserved in lossless quality. This is useful if you have already exported to a lossy audio format like MP3 but decide to edit the project further. Editing and re-exporting the project saves the additional quality loss of re-editing the previously exported MP3. </li>
@@ -65,6 +65,7 @@
 <li><a href="#delete">Deleting an Audacity project</a></li>
 <li><a href="#recovery">Automatic Crash Recovery</a></li>
 <li><a href="#disk_space">Disk space usage</a></li>
+<li><a href="#trimmed">Permanently delete trimmed audio</a></li>
 <li><a href="#temp">Temporary work files</a></li></ol>
 <p><br />
 </p>
@@ -87,7 +88,7 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <ul><li><b>Ensure the project is fully saved before exiting Audacity or shutting down the computer.</b> </li>
 <li>If there is a progress dialog for saving the project, wait for it to complete before shutting down. </li>
 <li>The <a href="status_bar.html" title="Status Bar">Status Bar</a> at the bottom shows a message when the project has been saved.</div> </li></ul>
-<p>There is no need to <a href="#save">Save</a> a project, unless required, as it is possible to work with temporary project files and then just use <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> to export the required audio files. If the project is not saved, the necessary audio data is stored in the temporary folder specified in the <a href="directories_preferences.html" title="Directories Preferences">Directories</a> section of Preferences until you exit the application. At that point, Audacity offers the choice of saving a project or not.  
+<p>There is no need to <a href="#save">Save</a> a project, unless required, as it is possible to work with temporary project files and then just use <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> to export the required audio files. If the project is not saved, the necessary audio data is stored in the temporary folder specified in the <a href="directories_preferences.html" title="Directories Preferences">Directories</a> section of Preferences until you exit the application. At that point, Audacity offers the choice of saving a project or not.  
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -96,7 +97,7 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">A project in the new AUP3 format <b>cannot be opened in versions of Audacity prior to 3.0.0</b>.
-<ul><li>The workaround is to Export as WAV files, Exporting individual tracks, using <span class="menu"> File &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple</a></span> and then Importing those into older Audacity versions.</li>
+<ul><li>The workaround is to Export as WAV files, Exporting individual tracks, using <span class="menu"> File &gt; <a href="export_multiple.html" title="Export Multiple">Export Audio</a></span> choosing <b>Split in parts</b> based on <b>Tracks</b> and then Importing those into older Audacity versions.</li>
 <li>For details please see <a href="moving_aup3_projects_from_audacity_3.x_to_audacity_2.html" title="Moving AUP3 projects from Audacity 3.x to Audacity 2.x">Moving AUP3 projects from Audacity 3.x to Audacity 2.x</a> </li></ul>
 </td></tr></table></div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -115,11 +116,11 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <div id="copies"></div>
 <h2><span class="mw-headline" id="Saving_copies_of_projects">Saving copies of projects</span></h2>
 <h3><span class="mw-headline" id="Backup_Project"><a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project</a></span></h3>
-<p>Accessed by: <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project...</a></span>
+<p>Accessed by: <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project</a></span>
 </p><p>This saves a copy of the current project as an AUP3 file, but with a new name. It is the safe and recommended way to make a safety backup copy of a project as you work on it. 
 </p>
 <ul><li>This could serve either as a single backup copy of the project, or as one of several incremental copies of the project in the state it had at a particular date and time. </li>
-<li>Unlike "Save Project As..." using this command will leave your current project open enabling you to continue working on it.</li></ul>
+<li>Unlike "Save Project As" using this command will leave your current project open enabling you to continue working on it.</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -130,7 +131,7 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 </td></tr></table>
 </div>
 <h3><span class="mw-headline" id="Save_Project_As"><a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As</a></span></h3>
-<p>Accessed by: <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As...</a></span>
+<p>Accessed by: <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As</a></span>
 </p>
 <ul><li>This is a way to make a copy of a project with a new name or location.  If you "Save Project As" with a new name, the project window then displays the project name you just "saved as". </li>
 <li>The project window displaying the project as previously named is closed in its last saved state, but can be reopened as required. </li></ul>
@@ -174,7 +175,7 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <ol><li> <span class="menu">File &gt; Save Project</span></li>
 <li> <span class="menu">File &gt; Exit</span></li>
 <li> Relaunch Audacity</li>
-<li> <span class="menu">File &gt; Open...</span></li></ol>
+<li> <span class="menu">File &gt; Open</span></li></ol>
 <p>But note carefully that this will remove your <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo History</a> and the contents of your Audacity clipboard.
 </p>
 </td></tr></table>
@@ -205,11 +206,11 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended that you immediately export your audio using <span class="menu">File &gt; Export &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
+<td align="left" valign="top">If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended that you immediately export your audio using <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
 </td></tr></table>
 </div>
 <p>Regular backups should if possible be made to one or two devices other than the device the current project is stored on, as computer hard drives can fail, destroying all data. For example, backups could be made to another internal drive on the computer, or ideally to an external USB drive or uploaded to an online (cloud) storage service.   
-</p><p>Use: <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project...</a></span> to save a backup copy of your project in its current state. This saves a copy of the current project as an AUP3 file, but with a new name. It is the safe and recommended way to make a safety backup copy of a project as you work on it. 
+</p><p>Use: <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project</a></span> to save a backup copy of your project in its current state. This saves a copy of the current project as an AUP3 file, but with a new name. It is the safe and recommended way to make a safety backup copy of a project as you work on it. 
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -226,7 +227,7 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">The wise user also knows that hard drives can crash destroying all data and makes regular backups to external storage.
+<td align="left" valign="top">The wise user knows that hard drives and SSDs <i>(Solid State Disks)</i> can crash destroying all data and makes regular backups to external storage.
 <ul><li>The cautious user makes duplicate backups to at least two different external storage devices.</li>
 <li>The extremely cautious user ensures that at least one of those backups is held off-site. </li></ul>
 </td></tr></table>
@@ -238,7 +239,7 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <p>There is no <b>File &gt; Delete Project</b> command in Audacity.
 </p><p>Therefore to delete a project to free up disk space it is necessary to make the deletion manually.  You just need to delete the AUP3 file.
 </p>
-<div class="note">This will <i><b>not</b></i> remove the listing of your project under <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files...</a></span>. After deleting the project you can choose the AUP3 entry for that project in the Recent Files list in order to remove the entry. </div>
+<div class="note">This will <i><b>not</b></i> remove the listing of your project under <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span>. After deleting the project you can choose the AUP3 entry for that project in the Recent Files list in order to remove the entry. </div>
 <p><br />
 </p>
 <div id="recovery"></div>
@@ -265,6 +266,29 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 <li> 22,050 Hz, 8-bit, mono = 1.25 MB per minute. <i>This would be generally acceptable for speech recordings from lower quality sources</i></div></li></ul>
 <p>For more details see <a href="recording_length.html" title="Recording length">Recording length</a>.
 </p><p><br />
+</p>
+<div id="trimmed"></div>
+<h2><span class="mw-headline" id="Permanently_delete_trimmed_audio">Permanently delete trimmed audio</span></h2>
+
+<p>When you trim audio by <a href="audacity_tracks_and_clips.html#trim" title="Audacity Tracks and Clips"><b>shrinking a clip</b></a> or by using <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#trim_audio" title="Edit Menu: Remove Special">Trim Audio</a></span> this is a non-destructive action and the audio is not actually removed, rather it is retained but hidden thereby enabling you to re-expand it later if and when required.
+</p><p>In a large project with many edits it is possible for this to cause project bloat, that is an excessively over-large project.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">There is <i><b>no</b></i> Audacity command to permanently remove all this hidden data but a good workaround is to:
+<ol><li>Select the whole project</li>
+<li><span class="menu">Edit &gt; <a href="edit_menu.html#copy" title="Edit Menu">Copy</a></span> to place it on the Audacity clipboard</li>
+<li>Open a new project</li>
+<li>In the new project use <span class="menu">Edit &gt; <a href="copy_and_paste_a_section_of_audio.html#project" title="Copy and Paste a section of audio">Paste</a> </span>,  selecting the option to  to paste the <a href="copy_and_paste_a_section_of_audio.html#project" title="Copy and Paste a section of audio"><b>Selected audio only</b></a></li></ol>
+<p>The new project will contain just the visible and audible audio from your original project with all the hidden audio removed. 
+</p>
+</td></tr></table>
+</div>
+<p><br />
 </p>
 <div id="temp"></div>
 <h2><span class="mw-headline" id="Temporary_work_files">Temporary work files</span></h2>
@@ -356,7 +380,7 @@ When saving an Audacity project it is normally easiest to use the <span class="m
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Projects">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Projects">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -33,8 +33,7 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"> Nyquist is a LISP like language integrated into Audacity.  It was originally written to process audio.  
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"> Nyquist is a LISP like language integrated into Audacity.  It was originally written to process audio.  
 <ul><li> Nyquist now also has the ability to control Audacity, similar to how <a href="macros.html" title="Macros">Macros</a> work, but with greater flexibility.</div></li></ul>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
@@ -68,13 +67,13 @@
 <p><b>Pros and Cons:</b>
 </p><p>While Nyquist-Macros have many advantages over ordinary Macros, ordinary Macros also have some advantages:
 </p>
-<ul><li> There is a <a href="manage_macros.html" title="Manage Macros">graphical interface for creating Macros</a>, whereas Nyquist-Macros are written as a <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Nyquist plugin</a>.</li>
+<ul><li> There is a <a href="manage_macros.html" title="Manage Macros">graphical interface for creating Macros</a>, whereas Nyquist-Macros are written as a Nyquist plugin.</li>
 <li> Macros may include any built-in or plugin effects, but Nyquist-Macros cannot use Nyquist effects.</li>
 <li> Macros may include other Macros and Nyquist-Macros, but Nyquist-Macros cannot call other Nyquist-Macros.</li></ul>
 <p>Nyquist can be used independently of Audacity.  When used from within Audacity, it gains an additional command, AUD-DO.
 </p>
 <h2><span class="mw-headline" id="AUD-DO">AUD-DO</span></h2>
-<p>AUD-DO is a function that extends Nyquist's capabailities.
+<p>AUD-DO is a function that extends Nyquist's capabilities.
 </p><p>AUD-DO makes it possible to use all Audacity Macro scripting commands from within Nyquist.  The full list of scripting commands and their parameters is provided at the page <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>.  The scripting commands are passed to AUD-DO as strings.
 </p><p>A very similar approach is used for Audacity <a href="scripting.html" title="Scripting">Python Scripting</a>.  Commands must be created as strings and passed to a function to process.  One advantage of Nyquist-Macros over Python Scripting is that Nyquist is already built in to Audacity.
 </p>
@@ -90,7 +89,8 @@
 <p>The text string after AUD-DO is passed to the scripting engine to process.
 </p><p>A complete example of a Nyquist Script using AUD-DO that you can enter at the Tools Nyquist Prompt is given below:
 </p>
-<pre>;nyquist plug-in
+<pre>
+;nyquist plug-in
 ;version 4
 ;type tool
 ;name "Test Me"
@@ -103,7 +103,7 @@
 ;; test-me.ny by Nemo Nemesis, August 2018
 
 ;; For information about writing and modifying Nyquist plug-ins:
-;; https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference
+;; https://plugins.audacityteam.org/contributing/developing-your-own-plugins-and-scripts/creating-your-own-nyquist-plugins
 
 (AUD-DO "SelectTime: Start=60 End=170")
 (AUD-DO "SelectTracks: Track=1 TrackCount=2") 
@@ -125,7 +125,8 @@
 </p><p>Another use of the ';type' setting is to set which <i>menu</i> in Audacity a script will be placed in.  It can occasionally be useful to place a <b>process</b>, <b>generator</b> or <b>analyze</b> Nyquist script in the tools menu, even though its functionality is one of the other types.  To do that you can use two arguments to the ';type' setting.
 </p><p>You can create Nyquist plugins with for the Tools menu using any of the following:
 </p>
-<pre>;type tool
+<pre>
+;type tool
 ;type tool process
 ;type tool generator
 ;type tool analyze
@@ -137,7 +138,8 @@
 <h3><span class="mw-headline" id="Example_Using_Parameters">Example Using Parameters</span></h3>
 <p>Scripts using AUD-DO can use parameters.  Probably the easiest way to pass them to AUD-DO is using the XLISP format command.
 </p>
-<pre>;nyquist plug-in
+<pre>
+;nyquist plug-in
 ;version 4
 ;type tool
 ;name "Test Me2"
@@ -322,7 +324,7 @@ Where "command" is the scripting command to be sent to Audacity.
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">For more information about Nyquist and Nyquist-Macro commands, please refer to the documentation on the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Audacity wiki</a>
+<td align="left" valign="top">For more information about Nyquist and Nyquist-Macro commands, please refer to the documentation on the <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/contributing/developing-your-own-plugins-and-scripts/creating-your-own-nyquist-plugins">Audacity Support site</a>
 </td></tr></table>
 </div>
 
@@ -402,7 +404,7 @@ Where "command" is the scripting command to be sent to Audacity.
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

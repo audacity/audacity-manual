@@ -101,8 +101,8 @@ This is not a tutorial on making a recording and playing it back, but you need t
 <ul><li> Under <i>Playback</i> set <b>Device</b> to the microphone <span class="button">USB Audio CODEC &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span></li>
 <li> Under <i>Recording</i> set <b>Device</b> to the microphone <span class="button">USB Audio CODEC &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> and set <b>Channels</b> to <span class="button">1 (Mono) &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span>. </li></ul></li></ul>
 <ul><li> in the <b>Recording</b> tab:
-<ul><li> check <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Overdub: Play other tracks while recording new one</span></li>
-<li> uncheck <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Software Playthrough: Listen while recording or monitoring new track</span> </li></ul></li></ul>
+<ul><li> check <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Hear ther tracks while recording new one (overdub)</span></li>
+<li> uncheck <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable audible input monitoring: Listen while recording or monitoring new track</span> </li></ul></li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -137,7 +137,7 @@ Click once anywhere inside the recording meter (the one with the mic icon) to pu
 <dl><dd><span title="earbud pushed up against Samson G-Track microphone"><img alt="GTrackEarBuds.JPG" src="../m/images/8/84/gtrackearbuds.jpg" width="468" height="400" /></span></dd></dl>
 <ul><li>Click "<b>Shift + Record</b>".  Track one's click track is now being recorded -- badly -- on track two through the headphone and microphone -- good fidelity here is irrelevant.</li></ul>
 <ul><li>Do this for five or ten seconds and click "<b>Stop</b>".</li></ul>
-<ul><li>Select the new track and choose <span class="menu">Effect &gt; Amplify...</span>  (accepting the defaults) click "<b>OK</b>".</li></ul>
+<ul><li>Select the new track and choose <span class="menu">Effect &gt; Amplify</span>  (accepting the defaults) click "<b>OK</b>".</li></ul>
 <ul><li>Reduce Volume a bit and put your headphones back on.</li></ul>
 <ul><li>Click "<b>Play</b>", both tracks will probably play out of step.</li></ul>
 <ul><li>Magnify the <a href="timeline.html" title="Timeline">Timeline</a> around one of the pair of clicks <i>(drag-select and <span class="kbrd" style="background-color: #d0d0f8">CTRL+E</span> - or on Mac <span class="kbrd" style="background-color: #d0d0f8">CMD+E</span>)</i>.</li></ul>
@@ -147,7 +147,7 @@ Click once anywhere inside the recording meter (the one with the mic icon) to pu
 <ul><li>At the bottom of the Audacity window in the Selection Toolbar set the middle time control to "<b>Length</b>" (one of the two radio buttons) then change the format using the dropdown menu to:</li></ul>
 <dl><dd><dl><dd>hh:mm:ss: + milliseconds<br /></dd></dl></dd>
 <dd>You are mostly interested in the milliseconds -- the last numbers on the right. The reading in the example above is 209 msec.</dd></dl>
-<ul><li>Audacity <span class="menu">Preferences &gt; Recording...</span> set Latency Correction to  the negative of the number in the Length dispaly - in this case -209 milliseconds - then click "<b>OK</b>".</li></ul>
+<ul><li>Audacity <span class="menu">Preferences &gt; Recording</span> set Latency Correction to  the negative of the number in the Length display - in this case -209 milliseconds - then click "<b>OK</b>".</li></ul>
 <ul><li>Go through the whole process again.</li></ul>
 <dl><dd>This time the two click tracks should look perfectly on (or very close to it) and sound perfectly in time. If not, zoom in, measure the new difference and add that number to the latency value.</dd>
 <dd><span title="Audacity Project with no latency - Mac OS X screen shot"><img alt="NoLatencyMonoMac 206 SnapTo.png" src="../m/images/b/bf/nolatencymonomac_206_snapto.png" width="725" height="434" /></span></dd></dl>
@@ -164,7 +164,7 @@ Click once anywhere inside the recording meter (the one with the mic icon) to pu
 </p><p>Click "<b>Stop</b>", then "<b>Home</b>" and then "<b>Shift + Record</b>" to record track two using your live performance and track playback in your headphone mix as a guide. Repeat for as many tracks as required.
 </p><p>The <span class="button">Mute</span> and <span class="button">Solo</span> buttons to the left of each track are valuable in overdubbing. Solo causes only that track to play and Mute turns that track off. Solo has options that can be set in <a href="preferences.html" title="Preferences">Preferences</a>. The gain control in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> to the left of each waveform controls the playback volume of that track -- it affects the headphone mix.
 </p><p>When you get to a stopping point click the <b>Stop</b> button <img alt="Play button" src="../m/images/f/f9/stop.png" title="Play button" width="16" height="16" /> then choose <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> to save your project. 
-</p><p>As you progress, you should save a new Project periodically with a slightly different file name using <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project...</a></span>. 
+</p><p>As you progress, you should save a new Project periodically with a slightly different file name using <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project</a></span>. 
 </p><p>A good recommendation is to use ISO date and time for the file names or the start of the file names; refrain from using slash marks or other punctuation marks in a file name.
 </p>
 <div class="note"><b>ISO Date and time</b>
@@ -276,7 +276,7 @@ Do not go weeks with one Project and file name, and never cover up or record ove
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Overdubbing_with_a_Samson%C2%AE_G-Track_USB_Microphone">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Overdubbing_with_a_Samson%C2%AE_G-Track_USB_Microphone">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

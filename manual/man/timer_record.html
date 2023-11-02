@@ -37,12 +37,12 @@
 </p>
 
 
-<div class="intro"><i><b>Timer Record</b></i> operates in a manner similar to setting your digital video recorder or cassette recorder to make a scheduled recording.<p>The Timer Record setup dialog enables you to schedule when a recording begins and ends and optionally:
+<div class="intro"><i><b>Timer Record</b></i> operates in a manner similar to setting your digital video recorder or cassette recorder to make a scheduled recording.<p>The Timer Record setup dialog schedules when a recording begins and ends and optionally:
 <ul><li>effect an Automatic Save Project or an automatic Export to any supported audio format, </li>
 <li>specify that Audacity closes or the computer shuts down on completion of the Timer Record.</p> </div></li></ul>
 <div id="setup"></div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Transport &gt; Recording &gt; <a href="transport_menu_recording.html#timer_record" title="Transport Menu: Recording">Timer Record...</a></span></dd>
-<dd><span title="Timer Record dialog"><img alt="Timer Record W10 setup dialog with save and export.png" src="../m/images/8/8a/timer_record_w10_setup_dialog_with_save_and_export.png" width="530" height="373" /></span></dd></dl>
+<dl><dd><b>Accessed by:</b> <span class="menu">Transport &gt; Recording &gt; <a href="transport_menu_recording.html#timer_record" title="Transport Menu: Recording">Timer Record</a></span></dd>
+<dd><span title="Timer Record dialog"><img alt="Timer Record W10 setup dialog with save and export.png" src="../m/images/8/8a/timer_record_w10_setup_dialog_with_save_and_export.png" width="526" height="378" /></span></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -77,12 +77,32 @@
 </p>
 <div id="save"></div>
 <h3><span class="mw-headline" id="Automatic_Save">Automatic Save</span></h3>
-<p>Checking the checkbox <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable Automatic Save</span> enables you to then use the <span class="button">Select</span> button to select a location and file name for an automatic save of the project when the recording finishes.
+<p>Checking the checkbox <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable Automatic Save</span> enables the <span class="button">Select</span> button to select a location and file name for an automatic save of the project when the recording finishes.
 </p><p>If you have already Saved the project then that field will be populated with "<b>Current Project</b>".
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">There  is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/4913"><b>known bug</b></a> whereby the offered diectories are not correct:
+<ul><li>If you have <b>not</b> set a preferred location far Saving in <a href="directories_preferences.html" title="Directories Preferences"><b>Directories Preferences</b></a> Audacity will wrongly offer as default Save location for Timer Record to be the <b>SessionData</b> folder. </li></ul>
+<dl><dd>This is a system location and should <i><b>NOT</b></i> be used as a location for saving your production audio files. 
+<ul><li>On Windows: <b>C:\Users\<i>&lt;username&gt;</i>\AppData\Local\Audacity\SessionData</b> </li>
+<li>On macOS: <b>HD/Users/<i>&lt;username&gt;</i>/Library/Application Support/audacity/SessionData</b></li></ul></dd></dl>
+<ul><li>If you <b>have</b> set a preferred location far Saving in <a href="directories_preferences.html" title="Directories Preferences"><b>Directories Preferences</b></a> Audacity will ignore that and offer instead:</li></ul>
+<dl><dd><ul><li>On Windows <b>C:\Users\<i>&lt;username&gt;</i>\Documents\Audacity</b></li>
+<li>On macOS: <b>HD/Users/<i>&lt;username&gt;</i>/Library/Application Support/audacity/SessionData</b></li></ul></dd></dl>
+<p>In either case choose an appropriate location for the output audio files to be saved to.
+</p>
+
+</td></tr></table></div>
+<p><br />
 </p>
 <div id="export"></div>
 <h3><span class="mw-headline" id="Automatic_Export">Automatic Export</span></h3>
-<p>Checking the checkbox <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable Automatic Export</span> enables you to then use the <span class="button">Select</span> button to select an audio file format for the export and a location and file name for the automatic export of the project when the recording finishes.
+<p>Checking the checkbox <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable Automatic Export</span> enables the <span class="button">Select</span> button to select an audio file format for the export, the sample rate for the export and a location and file name for the automatic export of the project when the recording finishes.  See <a href="file_export_dialog.html" title="File Export Dialog">Audio Export</a> for details.
 </p>
 <div class="note">You can select both an Automatic Save and an Automatic Export if required. </div>
 <div id="options"></div>
@@ -241,7 +261,7 @@ asking you to confirm the cancellation (similar to the <i><b>Stop</b></i> cancel
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Timer_Record">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Timer_Record">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

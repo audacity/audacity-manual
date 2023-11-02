@@ -33,16 +33,46 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/FLAC_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><b>FLAC</b> is a <i><b><a href="glossary.html#compressed_format" title="Glossary">size-compressed</a></b></i> but <i><b><a href="glossary.html#lossless" title="Glossary">lossless</a></b></i> open source audio format. The files it produces are about half as large as the <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> formats, but larger than compressed, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> formats. </div> 
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> then choosing <b>FLAC Files</b> from the <b>Save as type</b> dropdown menu.</dd></dl>
-<dl><dd><span title="FLAC Options at the bottom of the Export Audio dialog"><img alt="Export flac dialog 3-0-0.png" src="../m/images/1/14/export_flac_dialog_3_0_0.png" width="715" height="623" /></span></dd></dl>
-<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>FLAC Files</b> from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>FLAC</b> is a <i><b><a href="glossary.html#compressed_format" title="Glossary">size-compressed</a></b></i> but <i><b><a href="glossary.html#lossless" title="Glossary">lossless</a></b></i> open source audio format. The files it produces are about half as large as the <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> formats, but larger than compressed, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> formats. </div> 
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>FLAC</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="FLAC Export Audio dialog"><img alt="Export FLAC 3-4-0.png" src="../m/images/2/28/export_flac_3_4_0.png" width="497" height="460" /></span></dd></dl>
+<p><br />
+</p>
 <div id="setup"></div>
-<h2><span class="mw-headline" id="FLAC_Export_Setup">FLAC Export Setup</span></h2>
-<ul><li><b>Level:</b> The amount of file size compression used to losslessly pack the audio data, similar to compression levels in ZIP files. The level settings range from 0 to 8. Level 0 is optimized to encode as fast as possible. Level 8 is optimized to pack as efficiently as possible, so produces slightly smaller files than level 0 at the expense of taking longer to encode. Files encoded at level 8 are rarely more than a few percent smaller than those encoded at level 0, but can take three or four times longer to encode. </li>
-<li><b><a href="digital_audio.html#formats" title="Digital Audio">Bit depth</a>:</b> Choose from 16-bit (default) or 24-bit (approximately 50% larger file size).</li></ul>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#FLAC_Export_Setup"><span class="tocnumber">1</span> <span class="toctext">FLAC Export Setup</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Channels"><span class="tocnumber">1.1</span> <span class="toctext">Channels</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Sample_Rate"><span class="tocnumber">1.2</span> <span class="toctext">Sample Rate</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Bit_depth"><span class="tocnumber">1.3</span> <span class="toctext">Bit depth</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Level"><span class="tocnumber">1.4</span> <span class="toctext">Level</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
 
+<h2><span class="mw-headline" id="FLAC_Export_Setup">FLAC Export Setup</span></h2>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 44100 Hz, which is CD quality.
+</p>
+<div id="bitrate"></div>
+<h3><span class="mw-headline" id="Bit_depth"><a href="digital_audio.html#formats" title="Digital Audio">Bit depth</a></span></h3>
+<p>Choose from 16-bit (default) or 24-bit (approximately 50% larger file size).
+</p>
+<div id="level"></div>
+<h3><span class="mw-headline" id="Level">Level</span></h3>
+<p>The amount of file size compression used to losslessly pack the audio data, similar to compression levels in ZIP files. The level settings range from 0 to 8. Level 0 is optimized to encode as fast as possible. Level 8 is optimized to pack as efficiently as possible, so produces slightly smaller files than level 0 at the expense of taking longer to encode. Files encoded at level 8 are rarely more than a few percent smaller than those encoded at level 0, but can take three or four times longer to encode.
+</p>
 
 
 
@@ -119,7 +149,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/FLAC_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/FLAC_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

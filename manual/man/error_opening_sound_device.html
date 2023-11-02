@@ -38,7 +38,7 @@
 </p>
 <ul><li><b>Error opening recording device - Error code -xxxx</b>  this means there is a problem with your Audacity, operating system or sound device recording settings, where xxxx is replaced by a <a href="#codes">numeric code</a>.</li>
 <li><b>Error opening recording device - Error code -xxxx</b>  this means there is a problem with your playback settings, where xxxx is replaced by a <a href="#codes">numeric code</a>.</li>
-<li><b>Error opening sound device ...</b> this is a generic message that is usually associated with a failure to start the audio stream. </li></ul>
+<li><b>Error opening sound device</b> this is a generic message that is usually associated with a failure to start the audio stream. </li></ul>
 <p>These messages can suggest a problem with the drivers of the sound device, or possibly that you are asking the device to do something it cannot do. For example you will see this error if you attempt to <a href="transport_menu.html#record" title="Transport Menu">Record</a> to more channels than your device supports, or if you try to <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdub</a> on a device that can either record or play back but not both.
 </p><p>See the <a href="#codes">Numeric error codes</a> section for details of the particular codes.
 </p>
@@ -83,9 +83,9 @@ The recording device message most commonly occurs on Windows when one of the sou
 <div id="audsettings"></div>
 <h2><span class="mw-headline" id="Check_Audacity_settings">Check Audacity settings</span></h2>
 <div class="note">It may be a good idea to try to play or record after checking or changing each of the following Audacity settings. Sometimes a <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Project Sample Rate</a> change is all that is needed.</div>
-<ul><li> Set the project samplerate in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> to the standard rate of 44100 Hz (or if your audio interface only supports a particular rate such as 48000 Hz, set the project sample rate to that). <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info...</a></span> should show the rates the device claims to support. </li></ul>
-<ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> (this should never be enabled if <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer">recording computer playback</a>). </li></ul>
-<ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a></span> because recording while playing could stress your sound device or computer. </li></ul>
+<ul><li> Set the project samplerate in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> to the standard rate of 44100 Hz (or if your audio interface only supports a particular rate such as 48000 Hz, set the project sample rate to that). <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info</a></span> should show the rates the device claims to support. </li></ul>
+<ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Enable audible input monitoring</a></span> (this should never be enabled if <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer">recording computer playback</a>). </li></ul>
+<ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Hear other tracks during recording</a></span> because recording while playing could stress your sound device or computer. </li></ul>
 <ul><li>Check in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> that the playback and recording devices are correctly and explicitly selected. 
 <ul><li> On Windows, do not choose "Microsoft Sound Mapper" or "Primary Sound Driver" which point to the current Windows default device; choose the required device by name. Try selecting "Windows DirectSound" as the "Host" instead of "MME".</li></ul></li></ul>
 <p><br />
@@ -102,7 +102,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 <ul><li> <b>Mac:</b> In Finder, choose <span class="menu">Go &gt; Utilities &gt; Audio MIDI Setup.app</span>. In "Audio Devices", select in turn the required Recording and Playback devices. Set "Format" to the same <a href="audio_settings_preferences.html" title="Audio Settings Preferences">sample rate</a>, <a href="audio_settings_preferences.html" title="Audio Settings Preferences">bit-depth</a> and number of <a href="device_toolbar.html" title="Device Toolbar">recording channels</a> as in Audacity.</li></ul>
 <div id="linuxsettings"></div>
 <ul><li> <b>Linux:</b> </li></ul>
-<div class="note">While troubleshooting, ensure that <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> is off. Only enable this option if you really need it, after you have established that Audacity is recording correctly.</div>
+<div class="note">While troubleshooting, ensure that <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Enable audible input monitoring</a></span> is off. Only enable this option if you really need it, after you have established that Audacity is recording correctly.</div>
 <ol><li> In the first instance, try refreshing Audacity's list of audio devices at <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> then select the <b>default</b> option in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. If the error still occurs, recheck the <a href="#Check_Audacity_Settings">Audacity settings</a>.</li>
 <li> It is possible that another application may have exclusive access to the audio device. Try logging out and back in again, then re-check the Audacity settings before opening any other application that may use the audio device.
 <ul><li> If <i><b>pulse</b></i> is an option in Device Toolbar, ensure that you have Pulse Audio Volume Control (<i>pavucontrol</i>) installed. If it is not installed, use your system's package manager to install it. Open Pulse Audio Volume Control and check that there is an available output device.</li>
@@ -121,10 +121,10 @@ The recording device message most commonly occurs on Windows when one of the sou
 <p>If you use a high-end PCI sound card or external USB or FireWire interface, you must make the sample rate, bit-depth and number of input channels the same in all possible places. This is especially important if you are recording <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Multi-Track Overdubs</a> where you play and record at the same time. Settings must match in:
 </p>
 <ul><li> the Audacity Project Rate</li>
-<li> the track(s) in Audacity (to resample tracks to the Project Rate, <a href="audacity_selection.html" title="Audacity Selection">select</a> each track in turn then choose <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample...</a></span>). </li>
+<li> the track(s) in Audacity (to resample tracks to the Project Rate, <a href="audacity_selection.html" title="Audacity Selection">select</a> each track in turn then choose <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample</a></span>). </li>
 <li> all inputs and outputs in the operating system sound control panel or application </li>
 <li> all inputs and outputs in any software or hardware control panel the sound device may have.</li></ul>
-<div class="note"><b>Make sure the device is connected properly.</b> "Error opening sound device..." will occur if the device becomes disconnected during an Audacity session and you then try to play or record. Reconnect the device then choose <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> </div>
+<div class="note"><b>Make sure the device is connected properly.</b> "Error opening sound device" will occur if the device becomes disconnected during an Audacity session and you then try to play or record. Reconnect the device then choose <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> </div>
 <p><br />
 </p>
 <div id="wasapi"></div>
@@ -227,7 +227,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

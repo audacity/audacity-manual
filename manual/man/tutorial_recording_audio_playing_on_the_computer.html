@@ -62,7 +62,7 @@
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
 <td align="left" valign="top"><b>Backups:</b>
-<p>If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended that you immediately export your audio using <span class="menu">File &gt; Export &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
+<p>If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended that you immediately export your audio using <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
 </p>
 </td></tr></table>
 </div> 
@@ -74,9 +74,9 @@
 <ul><li><a href="tutorial_recording_computer_playback_on_windows.html" title="Tutorial - Recording Computer Playback on Windows">Recording Computer Playback on Windows</a></li>
 <li><a href="tutorial_recording_computer_playback_on_mac.html" title="Tutorial - Recording Computer Playback on Mac">Recording Computer Playback on Mac</a></li>
 <li><a href="tutorial_recording_computer_playback_on_linux.html" title="Tutorial - Recording Computer Playback on Linux">Recording Computer Playback on Linux</a></li></ul>
-<h2><span class="mw-headline" id="Step_2:_Turn_Software_Playthrough_off">Step 2: Turn Software Playthrough off</span></h2>
-<p>Software Playthrough must usually be turned off when recording computer playback. If playthrough is on, the audio interface will try to play what it is recording then re-record it, creating an increasingly loud series of echoes that may damage your equipment.  
-</p><p>To turn off Software Playthrough, choose <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> to conveniently toggle playthrough off and on as required. 
+<h2><span class="mw-headline" id="Step_2:_Turn_Enable_audible_input_monitoring_off">Step 2: Turn Enable audible input monitoring off</span></h2>
+<p>Enable audible input monitoring must usually be turned off when recording computer playback. If playthrough is on, the audio interface will try to play what it is recording then re-record it, creating an increasingly loud series of echoes that may damage your equipment.  
+</p><p>To turn off Enable audible input monitoring, choose <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Enable audible input monitoring</a></span> to conveniently toggle playthrough off and on as required. 
 </p><p>You can also use the <a href="recording_preferences.html" title="Recording Preferences"> Recording</a> section of Audacity Preferences:
 </p>
 <dl><dd><span title="Recording Preferences"><img alt="Preferences Recording.png" src="../m/images/1/17/preferences_recording.png" width="671" height="482" /></span>  </dd></dl>
@@ -87,7 +87,7 @@
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">
-<p>If you are recording computer playback with <a href="tutorial_recording_computer_playback_on_mac.html" title="Tutorial - Recording Computer Playback on Mac">Soundflower on Mac</a> you <b>must</b> keep Software Playthrough on.
+<p>If you are recording computer playback with <a href="tutorial_recording_computer_playback_on_mac.html" title="Tutorial - Recording Computer Playback on Mac">Soundflower on Mac</a> you <b>must</b> keep Enable audible input monitoring on.
 </p>
 </td></tr></table></div>
 <div id="monitor"></div>
@@ -95,7 +95,7 @@
 <p>Before recording for real, try to set sound levels by playing similar material from your intended source and <a href="meter_toolbar.html#recording" title="Meter Toolbar">monitoring</a> it in Audacity, so that the recording level will be neither too soft nor so loud as to risk <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>. 
 </p><p>To turn monitoring on and off in the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter Toolbar</a>:
 </p>
-<ul><li>Left-click in the microphone icon or right-click in the Recording Meter and select "<b>Start Monitoring</b>" to turn monitoring on. Click again to turn it off.</li></ul>
+<ul><li>Left-click in the microphone icon or right-click in the Recording Meter and select "<b>Enable Silent Monitoring</b>" to turn monitoring on. Click again to turn it off.</li></ul>
 <dl><dd><span title="Recording Meter Toolbar dropdown menu showing Monitoring choice"><img alt="StartMonitoring w7 210.png" src="../m/images/6/68/startmonitoring_w7_210.png" width="199" height="85" /></span></dd></dl>
 <p>The aim is to adjust levels so that the long colored bars in Meter Toolbar do not exceed about -9.0 to \xe2\x80\x936.0 dB <i>(or 0.5 if the meters are set to linear rather than dB)</i>. You can always <a href="effect_menu.html#amplify" title="Effect Menu">amplify</a> the recorded signal later if necessary.
 </p>
@@ -127,17 +127,17 @@
 <dd><span title="A zoomed-in and unclipped waveform"><img alt="Waveform.png" src="../m/images/9/9c/waveform.png" width="577" height="156" /></span></dd></dl>
 <dl><dd><b>A clipped waveform</b></dd>
 <dd><span title="A zoomed-in waveform showing clipping"><img alt="Waveform clipping.png" src="../m/images/4/4d/waveform_clipping.png" width="577" height="156" /></span></dd></dl>
-<p>You can also check for clipping by choosing <span class="menu">View &gt; Show Clipping</span> from the menu. Audacity will display vertical red lines in the waveform wherever it detects any clipped <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i>.<br />
+<p>You can also check for clipping by choosing <span class="menu">View &gt; Show Clipping in Waveform</span> from the menu. Audacity will display vertical red lines in the waveform wherever it detects any clipped <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i>.<br /> 
 </p>
-<dl><dd><span title="Waveform displaying vertical red Show Clipping lines"><img alt="ShowClipping02.png" src="../m/images/7/7d/showclipping02.png" width="515" height="105" /></span></dd></dl>
-<div class="note">Show Clipping may detect clipping when Meter Toolbar does not, because Meter Toolbar detects only runs of four or more clipped samples.<p>Any clipping of three samples or less is unlikely to be audible in most recording circumstances, but it is still a good idea to turn the playback or recording level down if you can.</p>
+<dl><dd><span title="Waveform displaying vertical red Show Clipping in Waveform lines"><img alt="ShowClipping02.png" src="../m/images/7/7d/showclipping02.png" width="515" height="105" /></span></dd></dl>
+<div class="note">Show Clipping in Waveform may detect clipping when Meter Toolbar does not, because Meter Toolbar detects only runs of four or more clipped samples.<p>Any clipping of three samples or less is unlikely to be audible in most recording circumstances, but it is still a good idea to turn the playback or recording level down if you can.</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">On slower machines it is best to turn Show Clipping off when recording for real.
+<td align="left" valign="top">On slower machines it is best to turn Show Clipping in Waveform off when recording for real.
 </td></tr></table>
 </div> </div>
 <p>If clipping occurred, turn the recording or output level down a little and try again. 
@@ -151,7 +151,7 @@
 <div id="backup"></div>
 <h2><span class="mw-headline" id="Step_6:_Backup_the_capture">Step 6: Backup the capture</span></h2>
 <p>It is strongly recommended that you <span class="menu"><a href="file_export_dialog.html" title="File Export Dialog"> Export</a></span> a safety copy of the raw recording in uncompressed <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> format.  This is particularly important if the recording is a one-off and cannot be repeated. The backup can always be returned to should you make a mess of your subsequent editing. For extra safety or convenience you could also copy the backup to an external drive or a CD - either a data CD for playing on the computer or an audio or "music" CD for a CD player. Find out more at <a href="burning_music_files_to_a_cd.html" title="Burning music files to a CD">Burning music files to a CD</a>. 
-</p><p>At this stage you will probably want to use <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> <i>(or <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project...</a></span> for a staged safety copy)</i> before proceeding with any editing. This is useful if you want to come back to editing later on. 
+</p><p>At this stage you will probably want to use <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> <i>(or <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project</a></span> for a staged safety copy)</i> before proceeding with any editing. This is useful if you want to come back to editing later on. 
 </p>
 <div id="edit"></div>
 <h2><span class="mw-headline" id="Step_7:_Editing">Step 7: Editing</span></h2>
@@ -234,7 +234,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_audio_playing_on_the_computer">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_audio_playing_on_the_computer">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

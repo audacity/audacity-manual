@@ -55,15 +55,15 @@ See also <a href="tutorial_exporting_to_itunes.html" title="Tutorial - Exporting
 </p>
 <div id="export"></div>
 <h3><span class="mw-headline" id="Step_1:_Export_the_WAV_files">Step 1: Export the WAV files</span></h3>
-<p>Use <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> or <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> to produce a WAV file or set of WAVs to any convenient location. With Audacity set to a <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Project Sample Rate</a> of 44,100 Hz and 32-bit sample format (these are the default <a href="audio_settings_preferences.html" title="Audio Settings Preferences">quality settings</a>), exporting will by default produce 44.1kHz 16-bit PCM WAV files (or AIFF files on Mac). Audacity will down-sample from its 32-bit internal format to 16-bit, with shaped <a href="dither.html" title="Dither">dither</a> noise applied to cover any clicky noise that may result from the conversion to 16-bit. Advanced users can change the type of dither, or turn it off, in the <a href="quality_preferences.html#conversion" title="Quality Preferences">Quality Preferences</a>. 
-</p><p>16-bit export will ensure the files are compatible with all versions of Apple Music/iTunes, They will also be compatible for conversion to AAC or other formats (or for CD burning) in Apple Music/iTunes. It is possible to export 32-bit PCM files too, by choosing "Other uncompressed files" in either export dialog, then clicking <span class="button">Options...</span>. These files will theoretically be of marginally higher quality but twice the size of 16-bit files. Latest versions of Apple Music/iTunes will play them, but other players may not.
+<p>Use <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> to produce a WAV file or set of WAVs to any convenient location. With Audacity set to a <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Project Sample Rate</a> of 44,100 Hz and 32-bit sample format (these are the default <a href="audio_settings_preferences.html" title="Audio Settings Preferences">quality settings</a>), exporting will by default produce 44.1kHz 16-bit PCM WAV files (or AIFF files on Mac). Audacity will down-sample from its 32-bit internal format to 16-bit, with shaped <a href="dither.html" title="Dither">dither</a> noise applied to cover any clicky noise that may result from the conversion to 16-bit. Advanced users can change the type of dither, or turn it off, in the <a href="quality_preferences.html#conversion" title="Quality Preferences">Quality Preferences</a>. 
+</p><p>16-bit export will ensure the files are compatible with all versions of Apple Music/iTunes, They will also be compatible for conversion to AAC or other formats (or for CD burning) in Apple Music/iTunes. It is possible to export 32-bit PCM files too, by choosing "Other uncompressed files" in either export dialog, then clicking <span class="button">Options</span>. These files will theoretically be of marginally higher quality but twice the size of 16-bit files. Latest versions of Apple Music/iTunes will play them, but other players may not.
 </p>
 <div id="add"></div>
 <h3><span class="mw-headline" id="Step_2:_Add_the_WAV_files_into_Apple_Music.2FiTunes">Step 2: Add the WAV files into Apple Music/iTunes</span></h3>
 <p>Add the WAV files to the Apple Music/iTunes library 
 </p>
-<ul><li> in iTunes use the <span class="menu">File &gt; Add File to Library...</span> (or <span class="menu">File &gt; Add Folder to Library...</span>) command</li>
-<li> in Apple Music use the  <span class="menu">File &gt; Import...</span> command.</li></ul>
+<ul><li> in iTunes use the <span class="menu">File &gt; Add File to Library</span> (or <span class="menu">File &gt; Add Folder to Library</span>) command</li>
+<li> in Apple Music use the  <span class="menu">File &gt; Import</span> command.</li></ul>
 <p>Note that even if Apple Music/iTunes Import Preferences (see <a href="tutorial_exporting_to_itunes.html#conversion" title="Tutorial - Exporting to iTunes">here</a>) are set to Import Using AAC Settings no conversion takes place as this preference only applies to importing from CD or <span class="menu">File &gt; Convert</span> in those applications, files ar <i><b>not</b></i> automatically converted in <b>Import</b> into Apple Music/iTunes.
 </p>
 <div class="note">Be aware that by default Apple Music/iTunes does <b>not</b> copy audio files into its own filespace, rather it makes a link to where you currently have the audio file stored. 
@@ -82,7 +82,7 @@ It is <i><b>strongly</b></i> recommended that you make this setting.</div>
 </p>
 <div id="aac"></div>
 <h3><span class="mw-headline" id="Step_4:_Use_Apple_Music.2FiTunes_to_make_AAC_copies_in_the_library_from_the_WAV_files">Step 4: Use Apple Music/iTunes to make AAC copies in the library from the WAV files</span></h3>
-<p>Provided that you did not already have other WAV files in your Apple Music/iTunes library, the WAV files you need should still be the only selected tunes at this stage, providing that you have done no further clicking.  Make sure that you have your Apple Music/iTunes Import Settings set to AAC at your required bit rate.  Convert them to AAC by using the Apple Music/iTunes command <span class="menu">File &gt; Convert</span> . Note carefully that this makes a \xe2\x80\x9ccopy\xe2\x80\x9d not a straight conversion \xe2\x80\x93 so at this stage your library will contain both the AAC and the WAV copies of the songs.
+<p>Provided that you did not already have other WAV files in your Apple Music/iTunes library, the WAV files you need should still be the only selected tunes at this stage, providing that you have done no further clicking.  Make sure that you have your Apple Music/iTunes Import Settings set to AAC at your required bit rate.  Convert them to AAC by using the Apple Music/iTunes command <span class="menu">File &gt; Convert</span> . Note carefully that this makes a <b>copy</b> not a straight conversion \xe2\x80\x93 so at this stage your library will contain both the AAC and the WAV copies of the songs.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -138,7 +138,7 @@ It is <i><b>strongly</b></i> recommended that you make this setting.</div>
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">You may if you wish export to AAC compressed format (M4A files) from Audacity, to any convenient location, for direct import into Apple Music/iTunes.  AAC export is one of the options available in the Export menus. To export to AAC, download and install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library. The export quality for M4A can be modified using the <span class="button">Options...</span> button. The highest quality Audacity setting is roughly comparable to encoding to AAC in Apple Music/iTunes using VBR encoding at the highest bit rate preset.
+<td align="left" valign="top">You may if you wish export to AAC compressed format (M4A files) from Audacity, to any convenient location, for direct import into Apple Music/iTunes.  AAC export is one of the options available in the Export menus. To export to AAC, download and install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library. The export quality for M4A can be modified using the <span class="button">Options</span> button. The highest quality Audacity setting is roughly comparable to encoding to AAC in Apple Music/iTunes using VBR encoding at the highest bit rate preset.
 </td></tr></table>
 </div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
@@ -221,7 +221,7 @@ It is <i><b>strongly</b></i> recommended that you make this setting.</div>
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_exporting_to_iTunes">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_exporting_to_iTunes">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

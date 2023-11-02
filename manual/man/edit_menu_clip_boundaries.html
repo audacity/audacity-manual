@@ -40,7 +40,7 @@
 </p><p>For more details on the use and management of clips please see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips"><b>Audacity Tracks and Clips</b></a>
 </p>
 </div>
-<dl><dd><span title="The Edit - Audio Clips menu"><img alt="Edit-Audio Clips 3-2-0.png" src="../m/images/8/8f/edit_audio_clips_3_2_0.png" width="450" height="361" /></span></dd></dl>
+<dl><dd><span title="The Edit - Audio Clips menu"><img alt="Edit-Audio Clips 3-4-0.png" src="../m/images/3/32/edit_audio_clips_3_4_0.png" width="565" height="391" /></span></dd></dl>
 <div class="note"><b>Mac users:</b> <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> and <span class="kbrd" style="background-color: #e0e0f0">Alt</span> = <span class="kbrd" style="background-color: #e0e0f0">Option</span>. So, for example, <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Alt + J</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984; + Option + J</span></div>
 <div id="split"></div>
 <h2><span class="mw-headline" id="Split_.C2.A0Ctrl_.2B_I">Split &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + I</span></font></span></h2>
@@ -73,8 +73,56 @@
 </p>
 <dl><dd><span title="Before"><img alt="EditMenuClipBoundaries Detach 01.png" src="../m/images/1/11/editmenuclipboundaries_detach_01.png" width="474" height="134" /></span></dd></dl>
 <dl><dd><span title="After"><img alt="EditMenuClipBoundaries Detach 02.png" src="../m/images/6/69/editmenuclipboundaries_detach_02.png" width="474" height="133" /></span></dd></dl>
-<p>If the selection is entirely silence, it becomes blank space between the audio either side of the selection.  
+<p>If the selection is entirely silence, it becomes blank space between the audio either side of the selection. 
 </p><p><br />
+</p>
+<div id="speed"></div>
+<h2><span class="mw-headline" id="Time-stretching_-_changing_clip_speed">Time-stretching - changing clip speed</span></h2>
+<p>Use this function to change the speed of a selected clip. Note that the whole clip must be selected for this command to be operable, an entire clip can be selected by left-clicking anywhere in its waveform.
+</p><p>Selecting this command will cause the following dialog to be displayed.  You can enter any&#160;% speed change by typing in the <b>Clip Speed</b> box.
+</p>
+<dl><dd><span title="Change Clip Speed dialog"><img alt="Change Clip Speed.png" src="../m/images/1/19/change_clip_speed.png" width="250" height="142" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a time-stretched clip the changed speed of the clip will be automatically <a href="#render"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
+<p><br />
+</p>
+<div id="rename"></div>
+<h2><span class="mw-headline" id="Rename_Clip_.C2.A0Ctrl_.2B_F2">Rename Clip &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + F2</span></font></span></h2>
+<p>Use this function to rename a selected clip. Note that the whole clip must be selected for this command to be operable, an entire clip can be selected by left-clicking anywhere in its waveform. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">This command is also available by right-clicking in a clip and selecting <b>Rename Clip</b> from the drop-down context menu.
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="render"></div>
+<h2><span class="mw-headline" id="Render_Clip_Stretching">Render Clip Stretching</span></h2>
+<p>Use this function to render the speed of a selected clip, that is make the current speed the new 100%, normal, speed. Note that the whole clip must be selected for this command to be operable, an entire clip can be selected by left-clicking anywhere in its waveform.  
+</p><p>The following progress dialog will appear.
+</p>
+<dl><dd><span title="Render Clip Speed dialog"><img alt="Render Clip Speed.png" src="../m/images/a/a5/render_clip_speed.png" width="210" height="188" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="#speed"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically rendered.
+</td></tr></table></div>
+<p><br />
 <a href="edit_menu.html" title="Edit Menu"><b>&lt;</b>&#160; Back to: Edit Menu</a>
 </p>
 
@@ -153,7 +201,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Edit_Menu:_Clip_Boundaries">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Edit_Menu:_Clip_Boundaries">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

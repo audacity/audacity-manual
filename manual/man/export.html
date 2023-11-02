@@ -33,30 +33,51 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Export#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<p><br />
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">
+<p>To be able to hear your work in other media applications or players, you need to <a href="file_export_dialog.html" title="File Export Dialog"><b>Export</b></a> it to an audio file.
 </p>
-<div class="intro">
-<p>To be able to hear your work in other media applications or players, you need to <b>Export</b> it to an audio file.
-</p>
-<div class="note">Alternatively, <a href="saving.html" title="Saving">saving an Audacity project</a> creates a <b><a href="audacity_projects.html" title="Audacity Projects">project file</a></b> containing all your track contents, including labels and <a href="envelope_tool.html" title="Envelope Tool">envelope points</a>, so you can return to your work later exactly as you left it. However, other applications cannot read Audacity projects.</div>
+<ul><li>You can export audio from the whole project or from a selection. Alternatively you can export a set of multiple audio files.</li>
+<li>In contrast, <a href="saving.html" title="Saving">saving an Audacity project</a> creates a <b><a href="audacity_projects.html" title="Audacity Projects">project file</a></b> containing all your track contents, including labels and <a href="envelope_tool.html" title="Envelope Tool">envelope points</a>, so you can return to your work later exactly as you left it. However, other applications cannot read Audacity projects.</li></ul>
+<div class="note">When using <b>Export Audio</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. <p>So what you hear by previewing with playback prior to export is what you will get in the Exported audio file.</p>
+<ul><li>There will be a warning if you export with all audio tracks muted.</div></li></ul>
 </div>
-<p>Audacity as shipped can export to a number of common audio formats including <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>, <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i>. 
-</p><p>You can install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> to  export to many more audio formats including <b>AC3, M4A, MP4 and WMA</b>. 
+<p><br />
+To export, choose <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choose the file format you want to export to in the <b>Format</b> dropdown. To <a href="burncd.html" title="BurnCD"> burn a CD</a> for standalone CD players, choose WAV or AIFF. 
 </p>
-<ul><li> To export, choose <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> then choose the file format you want to export to in the "Save as type" dropdown. To <a href="burncd.html" title="BurnCD"> burn a CD</a> for standalone CD players, choose WAV or AIFF. </li>
-<li> Use <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportselectedaudio" title="File Menu: Export">Export Selected Audio...</a></span> to export only a <a href="audacity_selection.html" title="Audacity Selection">selected</a> area of audio. </li>
-<li> Use <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> to export multiple files at the same time, either one for each audio track, or one for each <a href="label_tracks.html" title="Label Tracks">labeled</a> area in a single track. 
-<ul><li><span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#addlabelatselection" title="Edit Menu: Labels">Add Label at Selection</a></span> lets you <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">split the tracks</a> from an album for multiple export as separate files.</li></ul></li></ul>
-<div class="note">Please be aware that when using <b>Export</b> or <b>Export Multiple</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. So what you hear by previewing with playback prior to export is what you will get in the Exported audio file.
-<ul><li>When using <b>Export Selected Audio</b>, however, Audacity will Export the selection from <i><b>all</b></i> selected tracks even if some if those tracks are grayed-out and inaudible on playback.</li>
-<li>There will be a warning if you export with all audio tracks muted.</div></li></ul>
-<p>See <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a> for more help with exporting. 
+<h2><span class="mw-headline" id="Export_Audio_dialog"><a href="file_export_dialog.html" title="File Export Dialog">Export Audio dialog</a></span></h2>
+<dl><dd><span title="Export Audio dialog"><img alt="Export Audio 3-4-0.png" src="../m/images/0/00/export_audio_3_4_0.png" width="497" height="427" /></span></dd></dl>
+<p>In summary, there are several steps to follow when exporting:
+</p>
+<ul><li>Choose the filename to export to.</li>
+<li>Choose the folder to export to.</li>
+<li>Select the <a href="#options">Format</a> required for your exported file.</li>
+<li>Choose the audio options that you require for your chosen format.  Note that these will vary according to the format you choose.</li>
+<li>Optionally, press <span class="button">Edit Metadata</span> to edit the <a href="metadata_editor.html" title="Metadata Editor">metadata tags</a> for your exported file.</li>
+<li>Choose the export range, whole project, selection or multiple files
+<ul><li>The <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> dialog will then appear. This lets you enter embedded information tags in the file such as artist, year or genre.</li></ul></li>
+<li>Press <span class="button">Export</span>.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top"><a href="faq_opening_and_saving_files.html#extensions" title="FAQ:Opening and Saving Files">Help with choosing the file name</a>:
+<ul><li><b>Avoid periods (dots)</b> in the file name, or you will have to add the <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> such as .wav or .mp3 at the end of the name.</li>
+<li>Some characters cannot be used on all operating systems or for email or Internet use. For maximum compatibility use only:
+<ul><li><b>A to Z or a to z characters</b></li>
+<li>whole numbers (0 to 9) </li>
+<li>underscores ( _ )</li></ul></li></ul>
+</td></tr></table>
+</div>  
+<div class="note">See <a href="file_export_dialog.html" title="File Export Dialog"><b>Export Audio Dialog</b></a> for more detailed information on this dialog. </div>
+<p><br />
+See <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> for more help with exporting. 
 </p>
 <h2><span class="mw-headline" id="Export_Formats">Export Formats</span></h2>
-<p>There are a number of <a href="file_export_dialog.html#type" title="File Export Dialog">audio formats</a> that Audacity, as shipped, can export to; others can be added with additional software.
+<p>There are a number of <a href="file_export_dialog.html#type" title="File Export Dialog">audio formats</a> that Audacity, as-shipped, can export to, others can be added with additional software.
 </p>
-<ul><li>As shipped available exports include <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>, <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>, <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i></li>
+<ul><li>Shipped available exports include <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i>, <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i>, <i><b><a href="glossary.html#ogg" title="Glossary">Ogg Vorbis</a></b></i>, <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i></li>
 <li>You may install the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> to  export to many more audio formats including <b>AC3, M4A(AAC), MP4 and </b><i><a href="glossary.html#wma" title="Glossary">WMA</a></i><b>.</b></li></ul>
 <p><br />
 </p><p><br />
@@ -138,7 +159,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Export">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Export">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

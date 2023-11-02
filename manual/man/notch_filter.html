@@ -34,8 +34,27 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>Notch Filter</b></i> sharply attenuates frequency-specific noise like mains hum or electrical whistle with minimal damage to the remaining audio, by cutting a "notch" out of the frequency <i><b><a href="glossary.html#spectrum" title="Glossary">spectrum</a></b></i> at that point. </div> 
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; EQ and Filters &gt; Notch Filter...</span></dd>
+<div class="intro"><i><b>Notch Filter</b></i> sharply attenuates frequency-specific noise like mains hum or electrical whistle with minimal damage to the remaining audio, by cutting a "notch" out of the frequency <i><b><a href="glossary.html#spectrum" title="Glossary">spectrum</a></b></i> at that point. 
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">If you apply this effect with an <a href="envelope_tool.html" title="Envelope Tool"><b>envelope</b></a> present then there is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/5099"><b>bug</b></a> whereby the envelope is removed and the audio reverts to its full amplitude state prior to the effect being applied.
+</td></tr></table>
+</div>
+</div> 
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; EQ and Filters &gt; Notch Filter</span></dd>
 <dd><span title="Notch Filter dialog"><img alt="Notch Filter 3-2-0.png" src="../m/images/f/f3/notch_filter_3_2_0.png" width="371" height="165" /></span></dd></dl>
 <div id="frequency"></div>
 <h2><span class="mw-headline" id="Frequency">Frequency</span></h2>
@@ -47,7 +66,7 @@
 </p>
 <h2><span class="mw-headline" id="Examples">Examples</span></h2>
 <div class="example"><h3><span class="mw-headline" id="Example_1:_Mains_Hum_Removal">Example 1: Mains Hum Removal</span></h3>
-Choose 60 Hz as "Frequency" for North America, or 50 Hz for the United Kingdom and most other countries. A table of mains frequencies by country is <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/List_of_countries_with_mains_power_plugs,_voltages_and_frequencies#Table_of_mains_voltages_and_frequencies">here</a>. <p>Recorded hum often contains noisy harmonic frequencies above the fundamental frequency of the hum. A good approach is thus to apply Notch Filter to the fundamental hum frequency (for example, 50 Hz or 60 Hz), then use <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum...</a></span> to identify other broad noise spikes (for example, at 180 Hz and 300 Hz). You may want to increase the spectrum <i>Size</i> and use the "Log" <i>Axis</i> to see more clearly. Run Notch Filter again at each of the other noise frequencies, then use <span class="menu">Effect &gt; <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a></span> at mild settings to remove any residual harmonics. </p>
+Choose 60 Hz as "Frequency" for North America, or 50 Hz for the United Kingdom and most other countries. A table of mains frequencies by country is <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/List_of_countries_with_mains_power_plugs,_voltages_and_frequencies#Table_of_mains_voltages_and_frequencies">here</a>. <p>Recorded hum often contains noisy harmonic frequencies above the fundamental frequency of the hum. A good approach is thus to apply Notch Filter to the fundamental hum frequency (for example, 50 Hz or 60 Hz), then use <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span> to identify other broad noise spikes (for example, at 180 Hz and 300 Hz). You may want to increase the spectrum <i>Size</i> and use the "Log" <i>Axis</i> to see more clearly. Run Notch Filter again at each of the other noise frequencies, then use <span class="menu">Effect &gt; <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a></span> at mild settings to remove any residual harmonics. </p>
 <ul><li> It is recommended to increase the Q factor when removing higher harmonics so as to lessen possible audio artifacts. Generally, a Q of between 2 and 10 works well for mains hum removal. Choosing appropriate Frequency and Q factor settings from the noise spikes in Plot Spectrum is an approximation, due to inevitable <i><b><a href="glossary.html#interpolate" title="Glossary">interpolation</a></b></i> errors from whichever "windowing" function is chosen. However a good method for calculating Frequency and Q factor from Plot Spectrum can be found in this <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewtopic.php?f=39&amp;t=40592&amp;start=20#p123749">Audacity Forum topic</a>.</li></ul>
 <p>The below image shows a spectrum plot of some music from which a notch of 60 Hz hum has been cut. Before applying the effect, the hum displayed a prominent spike at this frequency, extending to the top of the graph.
 </p>
@@ -55,7 +74,7 @@ Choose 60 Hz as "Frequency" for North America, or 50 Hz for the United Kingdom a
 Depending on the audio, you might find in this case that the spectrum had been notched too deeply, thus affecting the content, and that a higher Q factor would have been preferred. You might want to notch the visible spikes at about 100 and 350 Hz as well. As always with Audacity, you can <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> and experiment with different notch filter settings.</div>
 <div class="example"><h3><span class="mw-headline" id="Example_2:_High_pitched_whistle">Example 2: High pitched whistle</span></h3>
 <dl><dd><span title="Frequency Analysis spectrum with a 18,996 Hz whistle"><img alt="Spectrum with whistle W10.png" src="../m/images/3/34/spectrum_with_whistle_w10.png" width="590" height="513" /></span></dd></dl>
-In this case the frequency analysis at <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum...</a></span> is fairly smooth except for a tall peak on the right. Place the mouse's cross-hair pointer over that peak. Audacity shows the peak more accurately to be at 18,996 Hz which will be the frequency to enter in Notch Filter.</div>
+In this case the frequency analysis at <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span> is fairly smooth except for a tall peak on the right. Place the mouse's cross-hair pointer over that peak. Audacity shows the peak more accurately to be at 18,996 Hz which will be the frequency to enter in Notch Filter.</div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
@@ -136,7 +155,7 @@ In this case the frequency analysis at <span class="menu">Analyze &gt; <a href="
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Notch_Filter">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Notch_Filter">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

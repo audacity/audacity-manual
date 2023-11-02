@@ -37,8 +37,26 @@
 <p>The <b>Isolate</b> options all return (dual) mono output. The narrowness of the center slice can be adjusted with the "Strength" slider. Center isolation is not possible using the classic subtraction method.
 </p><p>The <b>Analyze</b> option displays the amount of correlation between the stereo channels and the degree of likelihood that center removal or isolation will work effectively. 
 </p>
-<ul><li>See also the tutorial on <a href="tutorial_vocal_removal_and_isolation.html" title="Tutorial - Vocal Removal and Isolation">Vocal Removal and Isolation</a></div> </li></ul>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Special &gt; Vocal Reduction and Isolation...</span></dd>
+<ul><li>See also the tutorial on <a href="tutorial_vocal_removal_and_isolation.html" title="Tutorial - Vocal Removal and Isolation">Vocal Removal and Isolation</a></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">If you apply this effect with an <a href="envelope_tool.html" title="Envelope Tool"><b>envelope</b></a> present then there is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/5099"><b>bug</b></a> whereby the envelope is removed and the audio reverts to its full amplitude state prior to the effect being applied.
+</td></tr></table>
+</div></div> 
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Special &gt; Vocal Reduction and Isolation</span></dd>
 <dd><span title="Vocal Reduction and Isolation dialog"><img alt="Vocal Reduction and Isolation 3-2-0.png" src="../m/images/4/44/vocal_reduction_and_isolation_3_2_0.png" width="439" height="211" /></span></dd></dl>
 <div id="action"></div>
 <h2><span class="mw-headline" id="Action">Action</span></h2>
@@ -151,9 +169,9 @@
 <ul><li>Alternative to "Auto Duck" with podcasts</li></ul>
 <dl><dd><dl><dd><dl><dd>Duplicate the track and choose <b>Isolate Center and Invert</b> on the second track. Record your voice. Silence the second track where you do not speak and the original music should be heard. On the same track, make fades at the boundaries (where the speech starts or stops).</dd></dl></dd></dl></dd></dl>
 <ul><li>Removing excessive stereo reverb from a vocal or instrument track.</li></ul>
-<dl><dd><dl><dd><dl><dd>Use <b>Isolate...</b> to make a single vocal or instrument track "dry" again.</dd></dl></dd></dl></dd></dl>
+<dl><dd><dl><dd><dl><dd>Use <b>Isolate</b> to make a single vocal or instrument track "dry" again.</dd></dl></dd></dl></dd></dl>
 <ul><li>Removing random system noise from a two channel recording of a mono source. </li></ul>
-<dl><dd><dl><dd><dl><dd>use <b>Isolate...</b> to remove random noise produced by the audio interface, the cables or the computer itself.</dd></dl></dd></dl></dd></dl>
+<dl><dd><dl><dd><dl><dd>use <b>Isolate</b> to remove random noise produced by the audio interface, the cables or the computer itself.</dd></dl></dd></dl></dd></dl>
 <ul><li>Removing single words or phrases</li></ul>
 <dl><dd><dl><dd><dl><dd>You can remove offending content from a song or movie dialog by selecting it and choosing <b>Remove Vocals</b>. Mask it with other sounds, if necessary.</dd></dl></dd></dl></dd></dl>
 <ul><li>Amplifying dialogs in a movie.</li></ul>
@@ -252,7 +270,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Vocal_Reduction_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Vocal_Reduction_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

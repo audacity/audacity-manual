@@ -33,8 +33,27 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Crossfade_Tracks#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Use the <i><b>Crossfade Tracks</b></i> effect to make a <a href="creating_a_crossfade.html" title="Creating a Crossfade">crossfade</a> or smooth transition across two tracks. The tracks should be positioned with the track to be faded out above the track to be faded in, and with the start of the lower track positioned before the end of the upper track so as to create an overlap between them. Select the overlapping region in both tracks (see <a href="#example">example</a> below) and apply the effect. <p>To apply a simpler (non-configurable) crossfade between <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">audio clips</a> on the same track, see  <a href="crossfade_clips.html" title="Crossfade Clips">Crossfade Clips</a>.</p></div> 
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Fading &gt; Crossfade Tracks...</span>  </dd>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Use the <i><b>Crossfade Tracks</b></i> effect to make a <a href="creating_a_crossfade.html" title="Creating a Crossfade">crossfade</a> or smooth transition across two tracks. The tracks should be positioned with the track to be faded out above the track to be faded in, and with the start of the lower track positioned before the end of the upper track so as to create an overlap between them. Select the overlapping region in both tracks (see <a href="#example">example</a> below) and apply the effect. <p>To apply a simpler (non-configurable) crossfade between <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">audio clips</a> on the same track, see  <a href="crossfade_clips.html" title="Crossfade Clips">Crossfade Clips</a>.</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">If you apply this effect with an <a href="envelope_tool.html" title="Envelope Tool"><b>envelope</b></a> present then there is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/5099"><b>bug</b></a> whereby the envelope is removed and the audio reverts to its full amplitude state prior to the effect being applied.
+</td></tr></table>
+</div>
+</div> 
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Fading &gt; Crossfade Tracks</span>  </dd>
 <dd><span title="Crossfade Tracks dialog"><img alt="Crossfade Tracks 3-2-0.png" src="../m/images/b/b4/crossfade_tracks_3_2_0.png" width="386" height="178" /></span></dd></dl>
 <h2><span class="mw-headline" id="Fade_Type">Fade Type</span></h2>
 <h3><span class="mw-headline" id="Constant_Gain">Constant Gain</span></h3>
@@ -165,7 +184,7 @@ The two tracks will automatically be mixed to one file on export, but if preferr
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Crossfade_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Crossfade_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

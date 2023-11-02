@@ -34,8 +34,27 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">Use <i><b>Delay</b></i> to create a multiple echo effect with options for variable delay times between successive echoes and the number, amplitude and pitch of successive repeats.</div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Delay and Reverb &gt; Delay...</span></dd>
+<div class="intro">Use <i><b>Delay</b></i> to create a multiple echo effect with options for variable delay times between successive echoes and the number, amplitude and pitch of successive repeats.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">If you apply this effect with an <a href="envelope_tool.html" title="Envelope Tool"><b>envelope</b></a> present then there is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/5099"><b>bug</b></a> whereby the envelope is removed and the audio reverts to its full amplitude state prior to the effect being applied.
+</td></tr></table>
+</div>
+</div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Delay and Reverb &gt; Delay</span></dd>
 <dd><span title="The Delay dialog"><img alt="Delay 3-2-0.png" src="../m/images/c/cc/delay_3_2_0.png" width="494" height="310" /></span></dd></dl>
 <div id="type"></div>
 <h2><span class="mw-headline" id="Delay_type">Delay type</span></h2>
@@ -52,7 +71,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">Because echoes are often <i>added</i> to the original audio, the processed audio will often have a higher peak level than the original. If the output exceeds 0 dB (full track height) and so triggers the red <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> warning lights in <a href="meter_toolbar.html#playback" title="Meter Toolbar">Playback Meter Toolbar</a>, you should open <span class="menu">Effect &gt; <a href="effect_menu.html#amplify" title="Effect Menu">Amplify...</a></span>, ensure "Amplification (dB)" shows a <b>negative dB value</b> (not "0.0 dB") then click <span class="button">OK</span>.
+<td align="left" valign="top">Because echoes are often <i>added</i> to the original audio, the processed audio will often have a higher peak level than the original. If the output exceeds 0 dB (full track height) and so triggers the red <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> warning lights in <a href="meter_toolbar.html#playback" title="Meter Toolbar">Playback Meter Toolbar</a>, you should open <span class="menu">Effect &gt; <a href="effect_menu.html#amplify" title="Effect Menu">Amplify</a></span>, ensure "Amplification (dB)" shows a <b>negative dB value</b> (not "0.0 dB") then click <span class="button">OK</span>.
 <p>If "Amplification (dB)" in Amplify shows "0.0 dB", the track does not contain 32-bit audio and the clipping cannot be repaired. In that case, <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> Delay, use Amplify to reduce the track to a lower amplitude then reapply Delay.</p>
 </td></tr></table></div>
 <div id="time"></div>
@@ -61,7 +80,7 @@
 </p>
 <div id="effect"></div>
 <h2><span class="mw-headline" id="Pitch_change_effect">Pitch change effect</span></h2>
-<ul><li> <b>Pitch/Tempo:</b> Changes the <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i> in the same way that the <a href="change_speed.html" title="Change Speed">Change Speed</a> effect causes a change in pitch. The sound quality of each echo is very good, but an increase in pitch speeds up the delayed audio and a decrease in pitch slows it down. The echoes will be noticeably desynchronized with any comparable echoes in other tracks where "Pitch/Tempo" was not applied. </li>
+<ul><li> <b>Pitch/Tempo:</b> Changes the <i><b><a href="glossary.html#pitch" title="Glossary">pitch</a></b></i> in the same way that the <a href="change_speed.html" title="Change Speed">Change Speed and Pitch</a> effect causes a change in pitch. The sound quality of each echo is very good, but an increase in pitch speeds up the delayed audio and a decrease in pitch slows it down. The echoes will be noticeably desynchronized with any comparable echoes in other tracks where "Pitch/Tempo" was not applied. </li>
 <li> <b>Low-quality Pitch Shift:</b> Changes the pitch while maintaining the same tempo in a similar way to the <a href="change_pitch.html" title="Change Pitch">Change Pitch</a> effect. The sound quality of each echo is of lower quality than the "Pitch/Tempo" effect (including a short additional echo on percussive sounds) and the delay time will often be a little longer than specified. However, interesting "spiraling" effects can be produced. </li>
 <li> <b>High-quality Pitch Shift:</b> is accomplished with a phase vocoder and gives a better result than the <b>Low-quality Pitch Shift</b> but will take much longer.</li></ul>
 <p><br />
@@ -161,7 +180,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Delay">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Delay">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

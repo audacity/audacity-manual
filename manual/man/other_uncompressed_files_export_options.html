@@ -33,17 +33,30 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Other_uncompressed_files_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html" title="File Menu: Export">Export Audio...</a></span> then choosing <b>Other uncompressed files</b> from the <b>Save as type</b> dropdown menu.</dd></dl>
-<dl><dd><span title="Specify Uncompressed Options at the bottom of the Export Audio dialog"><img alt="Export other uncompressed dialog 3-0-0.png" src="../m/images/c/cb/export_other_uncompressed_dialog_3_0_0.png" width="715" height="623" /></span></dd></dl>
-<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>Other uncompressed files</b>  from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><dl><dd>Accessed by: <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>Other uncompressed files</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="Export Other uncompressed files dialog"><img alt="Export Other uncompressed files 3-4-0.png" src="../m/images/a/a1/export_other_uncompressed_files_3_4_0.png" width="497" height="427" /></span></dd></dl>
+<p><br />
+</p>
 <div id="setup"></div>
 <h2><span class="mw-headline" id="Uncompressed_Export_Setup">Uncompressed Export Setup</span></h2>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 44100 Hz, which is CD quality.
+</p>
+<div id="header"></div>
 <h3><span class="mw-headline" id="Header">Header</span></h3>
 <p>Specifies the "type" or <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> of the exported file.
 </p>
 <div class="note"><i><b><a href="glossary.html#raw" title="Glossary">RAW</a></b></i>, <i><b><a href="glossary.html#rf64" title="Glossary">RF64</a></b></i> or <i><b><a href="glossary.html#caf" title="Glossary">CAF</a></b></i> (Apple's Core Audio Format) headers (with PCM encoding in all three cases) may be used if extremely large files similar to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> are required. The RF64  and CAF size limit is about 16 <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Exabytes">exabytes</a> <i>(effectively unlimited, as there are no disks of that size)</i>, making it suitable for very long multi-channel files.</div>
-<dl><dd><span title="Pop-up menu with list of available Header formats for uncompressed audio files"><img alt="Export other uncompressed header dialog 3-0-0.png" src="../m/images/c/c2/export_other_uncompressed_header_dialog_3_0_0.png" width="715" height="623" /></span></dd>
+<dl><dd><span title="Pop-up menu with list of available Header formats for uncompressed audio files"><img alt="Export Other uncompressed files - Header 3-4-0.png" src="../m/images/2/25/export_other_uncompressed_files_header_3_4_0.png" width="497" height="607" /></span></dd>
 <dd><b>Pop-up menu with list of available Header formats for uncompressed audio files</b></dd></dl>
 <h3><span class="mw-headline" id="Encoding">Encoding</span></h3>
 <p>Determines the <i><b><a href="glossary.html#codec" title="Glossary">codec</a></b></i> and where appropriate, the <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i> (for example, 16-<i><b><a href="glossary.html#bit" title="Glossary">bit</a></b></i>) of the audio. The fewer the number of bits, the less accurately the audio waveform will be represented, but the smaller file size that will be required. 
@@ -131,7 +144,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Other_uncompressed_files_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Other_uncompressed_files_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

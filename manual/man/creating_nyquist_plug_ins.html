@@ -55,9 +55,10 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">Do not attempt to use Windows NotePad or wordpad or any word processor for writing or editing Nyquist code. For Windows, <a rel="nofollow" class="external text" href="https://notepad-plus-plus.org/">Notepad++</a> is a good, free, plain text editor.
+<td align="left" valign="top">Do not attempt to use Windows NotePad or WordPad or any word processor for writing or editing Nyquist code. For Windows, <a rel="nofollow" class="external text" href="https://notepad-plus-plus.org/">Notepad++</a> is a good, free, plain text editor.
 </td></tr></table></div>
-<p>Creating a plugin for Audacity using Nyquist is as simple as creating a text file with the extension \xe2\x80\x9c.ny\xe2\x80\x9d with some Nyquist code, adding a few comments to indicate the type of plugin, and placing the file in Audacity's <b>Plug-Ins</b> directory. Here's a very simple plugin as an example:
+<p>Creating a plugin for Audacity using Nyquist is as simple as creating a text file with the extension <b>.ny</b> with some Nyquist code, adding a few comments to indicate the type of plugin, and placing the file in Audacity's <b>Plug-Ins</b> directory. Here's a very simple plugin as an example:
+</p><p><br />
 </p>
 <pre>  ;nyquist plug-in
   ;version 4
@@ -73,7 +74,7 @@
   ;type analyze
   ;type tool
 </pre>
-<p>These correspond to the four menus that can contain plugins: Generate, Effect, Analyze and Tools. Generate plugins are expected to generate new audio from scratch, Effect plugins (\xe2\x80\x9cprocess\xe2\x80\x9d) modify existing audio in-place, and Analyze plugins process audio but do not modify it (though they are allowed to add labels). Tools are a special type for plugins that do not fall into any of the other three types (more information in the <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/nyquist-plugins/effect-plugins/time-pitch-and-tempo">Audacity Support site</a>).
+<p>These correspond to the four menus that can contain plugins: Generate, Effect, Analyze and Tools. Generate plugins are expected to generate new audio from scratch, Effect plugins modify existing audio in-place, and Analyze plugins process audio but do not modify it (though they are allowed to add labels). Tools are a special type for plugins that do not fall into any of the other three types (more information in the <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/nyquist-plugins/effect-plugins/time-pitch-and-tempo">Audacity Support site</a>).
 </p><p>For Effect and Analyze plugins, Audacity sets up the Nyquist environment so that the audio the user has selected is in the variable <b>*track*</b> (in Nyquist before version 4, the variable <b>S</b> was used). All of the expressions in the plugin file are executed in order, and the return value of the last expression is substituted for the selection in Audacity. If the last expression does not return audio, Audacity returns an error.
 </p>
 <h3><span class="mw-headline" id="Parameter_dialogs">Parameter dialogs</span></h3>
@@ -95,11 +96,9 @@
   
   (stretch-abs 1 (delays *track* (- 0 decay) delay count))
 </pre>
-<p>If Audacity finds at least one correctly formed \xe2\x80\x9ccontrol\xe2\x80\x9d line, it will open a dialog to prompt the user for certain parameters to the plugin. Each control "widget" provides a variable (a symbol) that will store the value entered by the user. Here's what the dialog for the Delay effect shown above looks like (Windows 10):
+<p>If Audacity finds at least one correctly formed "control" line, it will open a dialog to prompt the user for certain parameters to the plugin. Each control "widget" provides a variable (a symbol) that will store the value entered by the user. Here is what the dialog for the Delay effect shown above looks like (Windows 10):
 </p>
 <dl><dd><a href="https://alphamanual.audacityteam.org/man/File:Delay-demo-plug-in.png" class="image"><img alt="Delay-demo-plug-in.png" src="../m/images/b/b5/delay_demo_plug_in.png" width="533" height="191" /></a></dd></dl>
-<p><br />
-</p>
 <h3><span class="mw-headline" id="Returning_labels">Returning labels</span></h3>
 <p>Instead of returning audio, a Nyquist plugin can instead return a list of labels. A list of labels is simply a list of time/label pairs, for example:
 </p>
@@ -107,15 +106,14 @@
         (list 30.0 "middle")
         (list 60.0 "end"))
 </pre>
-<p>When a plugin returns a list of exactly this form, Audacity will create a new label track and add the labels at those positions. The time value is in seconds. This style of plugin is usually of type \xe2\x80\x9canalyze\xe2\x80\x9d.
+<p>When a plugin returns a list of exactly this form, Audacity will create a new label track and add the labels at those positions. The time value is in seconds. This style of plugin is usually of type "analyze".
 </p><p>To create <a href="label_tracks.html#type" title="Label Tracks">region labels</a> there needs to be two time values:
 </p>
 <pre>  (list (list 0.0 25.0 "start")
         (list 30.0 45.0 "middle")
         (list 60.0 75.0 "end"))
 </pre>
-<p>Note that labels are allowed to overlap; the end time of one can be after the start time of the next.
-</p><p><br />
+<p>Note that labels are allowed to overlap, the end time of one can be after the start time of the next.
 </p>
 <h3><span class="mw-headline" id="Processing_stereo_tracks">Processing stereo tracks</span></h3>
 <p>Nyquist represents stereo tracks as an array of sounds (not a list). Many Nyquist functions automatically work with these arrays, but not all, so sometimes you may find it necessary to split up a stereo array, or reassemble one. Here are some useful functions:
@@ -155,9 +153,10 @@
 <p>As a convenience, if the input to your Nyquist plugin is stereo, but you only output a single (mono) sound, Audacity will automatically copy it to both the left and right channels.
 </p>
 <h3><span class="mw-headline" id="Where_to_go_from_here">Where to go from here</span></h3>
-<p>Audacity comes with some sample plugins that you can examine or modify as a starting point. The best way to learn Nyquist is to try it. Technical support is provided on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=39"><b>Nyquist board of the Audacity Forum</b></a> (email registration required for posting).
+<p>Audacity comes with some sample plugins that you can examine or modify as a starting point. The best way to learn Nyquist is to try it. 
+</p><p>See: <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/contributing/developing-your-own-plugins-and-scripts/creating-your-own-nyquist-plugins"><b>Creating your own Nyquist Plugins</b></a> in the Audacity Support site.
+</p><p>Technical support is provided on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=39"><b>Nyquist board of the Audacity Forum</b></a> (email registration required for posting).
 </p>
-
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="programming_in_nyquist.html" title="Programming in Nyquist"><b>&lt;</b>&#160; Programming in Nyquist</a> <br />
 </p><p><a href="nyquist.html" title="Nyquist"><b>|&lt;</b> Nyquist</a>
@@ -238,7 +237,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Creating_Nyquist_Plug-ins">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Creating_Nyquist_Plug-ins">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

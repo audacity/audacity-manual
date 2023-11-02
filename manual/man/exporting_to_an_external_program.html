@@ -39,15 +39,26 @@
 <ul><li>With this you can export using the installed <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoder or <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> encoder with additional parameters not supported in the <a href="file_export_dialog.html#options" title="File Export Dialog">options dialogs</a> in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a>.</li>
 <li>This can also be used to export using the very latest versions of <a rel="nofollow" class="external text" href="https://lame.sourceforge.io/"><b>LAME</b></a> or <a rel="nofollow" class="external text" href="http://ffmpeg.org/download.html"><b>FFmpeg</b></a> <i>(you would need to download those independently of Audacity)</i>.</li>
 <li>Or you could use it for exporting using an alternative MP3 encoder or to a specialized encoder in a format not otherwise supported by Audacity. </div></li></ul>
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span>, then choose <b>(external program)</b> from the <b>Save as type</b> dropdown menu.</dd>
-<dd><span title="Export Audio dialog with command-line options"><img alt="Export external program dialog 3-0-0.png" src="../m/images/a/a2/export_external_program_dialog_3_0_0.png" width="715" height="623" /></span></dd>
-<dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>(external program)</b>  from the <b>Save as type</b> dropdown menu.</dd></dl>
-<div id="encoder"></div>
-<h2><span class="mw-headline" id="Specify_Export_location">Specify Export location</span></h2>
-<p>From the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> dialog, choose the destination folder, the file name and suitable <b><i><a href="glossary.html#extension" title="Glossary">extension</a>.</i></b>
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>(external program)</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="Export Audio dialog with command-line options"><img alt="Export external program 3-4-0.png" src="../m/images/4/45/export_external_program_3_4_0.png" width="497" height="494" /></span></dd></dl>
+<p><br />
 </p>
 <div id="setup"></div>
-<h2><span class="mw-headline" id="Format_Options">Format Options</span></h2>
+<h2><span class="mw-headline" id="Audio_Options">Audio Options</span></h2>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 44100 Hz, which is CD quality.
+</p>
+<div id="command"></div>
+<h3><span class="mw-headline" id="Command">Command</span></h3>
 <p>In the <b>Command:</b> box type:
 </p>
 <ol><li> The path to the program</li>
@@ -88,7 +99,7 @@
 <p>Accessing the LAME or FFmpeg command-line program with just the "lame" or "ffmpeg" command <i>(as shipped with Audacity)</i> only works on Windows and Linux, assuming LAME or FFmpeg are installed on the system in the standard location. 
 </p><p>On Windows, this requires that you used the <a href="faq_installation_and_plug_ins.html#lame" title="FAQ:Installation and Plug-Ins">LAME</a> or <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> EXE installer and did not change the installation directory.
 </p><p>For using a downloaded version of <a rel="nofollow" class="external text" href="https://lame.sourceforge.io/">LAME</a> or <a rel="nofollow" class="external text" href="http://ffmpeg.org/download.html">FFmpeg</a>, the full path to the command-line program must be given. The path must be enclosed inside quotes if there are any spaces in the path. 
-</p><p>You can use the <span class="button">Browse...</span> button to find and open the executable application which will add the correct path to the command.
+</p><p>You can use the <span class="button">Browse</span> button to find and open the executable application which will add the correct path to the command.
 </p>
 <div id="mac"></div>
 <h3><span class="mw-headline" id="Mac">Mac</span></h3>
@@ -102,12 +113,12 @@
 </td></tr></table></div>
 <p>Accordingly it is necessary to download a version of <a rel="nofollow" class="external text" href="https://lame.sourceforge.io/">LAME</a> or <a rel="nofollow" class="external text" href="http://ffmpeg.org/download.html">FFmpeg</a>.  
 </p><p>As with Widows and Linux, the full path to the command-line program must be given. The path must be enclosed inside quotes if there are any spaces in the path. 
-</p><p>You can use the <span class="button">Browse...</span> button to find and open the executable application which will add the correct path to the command.   
+</p><p>You can use the <span class="button">Browse</span> button to find and open the executable application which will add the correct path to the command.   
 </p><p><br />
 </p>
 <div id="browse"></div>
 <h2><span class="mw-headline" id="Other_controls">Other controls</span></h2>
-<ul><li><span class="button">Browse...</span> Opens a "Find path to command" window where you can select the command-line program you want to use. Clicking "Open" will then enter the path to that program in the "Command:" box, ready for you to add the commands and "%f" after the path. </li></ul>
+<ul><li><span class="button">Browse</span> Opens a "Find path to command" window where you can select the command-line program you want to use. Clicking "Open" will then enter the path to that program in the "Command:" box, ready for you to add the commands and "%f" after the path. </li></ul>
 <ul><li><span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Show output</span> If checked, a Command Output window in Audacity will display a success or failure message from the external program. If unchecked, the window will only appear in the case of an error message.</li></ul>
 <p><br />
 </p>
@@ -268,7 +279,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Exporting_to_an_External_Program">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Exporting_to_an_External_Program">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

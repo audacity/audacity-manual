@@ -34,10 +34,10 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">This tutorial is designed to help you record multi-track overdubs if your equipment does not have hardware playthrough of the live recording and software playthrough is not an option. Before starting this tutorial you can try the following playthrough possibilities. 
+<div class="intro">This tutorial is designed to help you record multi-track overdubs if your equipment does not have hardware playthrough of the live recording and Audible input monitoring/software playthrough is not an option. Before starting this tutorial you can try the following playthrough possibilities. 
 <ul><li> On Windows or Linux, try un-muting your input in the playback side of the system mixer. This will give you low latency <i>hardware playthrough</i> of what you are recording. </li>
-<li> On all operating systems, try <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> in Audacity instead, but this will always mean you hear yourself late and could cause audio breakup. </li>
-<li>To achieve lower latency software playthrough on Windows you can:
+<li> On all operating systems, try <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Audible input monitoring</a></span> in Audacity instead, but this will always mean you hear yourself late and could cause audio breakup. </li>
+<li>To achieve lower latency Audible input monitoring/software playthrough on Windows you can:
 <ul><li> (Only gives somewhat lower latency): On Windows, right-click over the "Speaker icon" <i>(by the system clock)</i> choose  "Sounds" and then "Recording". Right-click over the input, choose <b>Properties</b> then on the "Listen" tab, enable "Listen to this device". </li>
 <li> (Advanced) Compile Audacity with <a href="asio_audio_interface.html" title="ASIO Audio Interface">ASIO\xc2\xae</a> true low latency support. Ask on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=19">Compiling Audacity</a> board of the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a> if you need help.</div></li></ul></li></ul>
 <h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
@@ -70,8 +70,8 @@ Connect the headphones.
 <ul><li> Under <i>Playback</i> set <b>Device</b> to the on-board sound card </li>
 <li> Under <i>Recording</i> set <b>Device</b> to the on-board sound card and set <b>Channels</b> to <span class="button">1 (Mono) &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> </li></ul></li></ul>
 <ul><li> in the <b>Recording</b> tab:
-<ul><li> check <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Overdub: Play other tracks while recording new one</span></li>
-<li> uncheck <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Software Playthrough: Listen while recording or monitoring new track</span></li></ul></li></ul>
+<ul><li> check <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Play other tracks while recording new one (overdub)</span></li>
+<li> uncheck <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Audible input monitoring: Listen while recording or monitoring new track</span></li></ul></li></ul>
 <div class="note">You may want to make the Audacity project window larger than its default and expand the <b>Meter Toolbar</b>. </div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -94,7 +94,7 @@ Connect the headphones.
 <p>Latency refers to the delay between the time the audio enters the computer and the time Audacity is able to record it to a track. For example, if you are recording a keyboard track, latency is the delay between the time you strike a key and the time that note is recorded. 
 </p><p>For instructions on how to adjust the latency please see the <a href="latency_test.html" title="Latency Test">Latency Test</a> page in this manual.
 </p>
-<div class="note">To achieve lower latency software playthrough on Windows you can:
+<div class="note">To achieve lower latency Audible input monitoring/software playthrough on Windows you can:
 <ul><li> (Only gives somewhat lower latency): On Windows, right-click over the "Speaker icon" by the system clock, choose <b>Recording</b>, right-click over the input device, choose <b>Properties</b> then on the "Listen" tab, enable "Listen to this device". </li>
 <li> (Advanced) Compile Audacity with <a href="asio_audio_interface.html" title="ASIO Audio Interface">ASIO\xc2\xae</a> true low latency support. Ask on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=19">Compiling Audacity</a> board of the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a> if you need help.</div></li></ul>
 <h2><span class="mw-headline" id="Performance">Performance</span></h2>
@@ -103,7 +103,7 @@ Connect the headphones.
 </p><p>Click "<b>Stop</b>", then "<b>Home</b>" and then "<b>Shift + Record</b>" to record track two using your live performance and track playback in your headphone mix as a guide. Repeat for as many tracks as required.
 </p><p>The "<b>Mute</b>" and "<b>Solo</b>" buttons to the left of each track are valuable in overdubbing. Solo causes only that track to play and Mute turns that track off. Solo has options that can be set in <a href="preferences.html" title="Preferences">Preferences</a>. The little volume control to the left of each timeline also controls the playback volume -- it affects the headphone mix.
 </p><p>When you get to a stopping point click the <b>Stop</b> button <img alt="Play button" src="../m/images/f/f9/stop.png" title="Play button" width="16" height="16" /> then choose <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> to save your project. 
-</p><p>As you progress, you should save a new Project periodically with a slightly different file name using <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project...</a></span>. A good recommendation is to use ISO date and time for the file names or the start of the file names; refrain from using slash marks or other punctuation marks in a file name.
+</p><p>As you progress, you should save a new Project periodically with a slightly different file name using <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project</a></span>. A good recommendation is to use ISO date and time for the file names or the start of the file names; refrain from using slash marks or other punctuation marks in a file name.
 </p><p>201110011500.aup3    That's 3PM. 2011 October First, 1500hrs.
 </p><p>Then save a new version of the song about every twenty minutes:<br />
 201110011520.aup3<br />
@@ -116,7 +116,7 @@ Connect the headphones.
 <h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
 <ul><li>How much hard disk space do you have available? If your only experience with computer files is with spreadsheets, email or Photoshop pictures, live audio (and video) production will stun you with the amount of disk space it consumes. With high quality overdubbing and UNDO, project files and folders get big in a hurry; with periodic saving, a project can get very seriously large.</li>
 <li>Communications features on newer Windows machines can cause unwanted changes in recorded volume or make the recording sound tinkly and/or hollow; see this <a href="faq_recording_troubleshooting.html#enhancements" title="FAQ:Recording - Troubleshooting">FAQ</a></li>
-<li>You can try to listen to yourself in the headphones by changing an Audacity setting: <span class="menu">Edit &gt; Preferences &gt; <a href="recording_preferences.html" title="Recording Preferences">Recording</a></span>&#160;:  and check <b>[X] Software Playthrough</b> <i>(select for <b>ON</b>)</i>. </li>
+<li>You can try to listen to yourself in the headphones by changing an Audacity setting: <span class="menu">Edit &gt; Preferences &gt; <a href="recording_preferences.html" title="Recording Preferences">Recording</a></span>&#160;:  and check <b>[X] Audible input monitoring</b> <i>(select for <b>ON</b>)</i>. </li>
 <li>Record a track with that setting. Chances are terrific that your headphone voice and your real voice are not going to match. This is computer or sound channel latency and there's no adjustment for it. You should probably leave that setting deselected.</li></ul>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs"><b>|&lt;</b> Recording Multi-track Overdubs</a><br />
@@ -197,7 +197,7 @@ Connect the headphones.
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Overdubbing_using_your_computer%27s_on-board_sound_card">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Overdubbing_using_your_computer%27s_on-board_sound_card">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

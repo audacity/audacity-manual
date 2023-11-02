@@ -2,7 +2,7 @@
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Mixer Board - Audacity Manual</title>
+<title>Mixer - Audacity Manual</title>
 
 
 
@@ -25,7 +25,7 @@
 				
 				<div class="mw-indicators">
 </div>
-				<h1 id="firstHeading" class="firstHeading" lang="en">Mixer Board</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Mixer</h1>
 				
 				<div id="bodyContent" class="mw-body-content">
 					<div id="siteSub">From Audacity Development Manual</div>
@@ -33,21 +33,22 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Mixer_Board#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>Mixer Board</b> is an alternative view to the audio tracks in the main tracks window, and is analogous to a hardware mixer board. Each audio track is displayed in a Track Strip. Each Track Strip has its own pair of meters, gain slider, pan slider, and mute/solo buttons, echoing that track's controls in its <a href="audio_tracks.html#Track_Control_Panel" title="Audio Tracks">Track Control Panel</a>.<p>The <b>Mixer</b> command is enabled whenever there's an audio track - it can even be brought up during playback.</p> </div>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro"><b>Mixer</b> is an alternative view to the audio tracks in the main tracks window, and is analogous to a hardware mixer board. Each audio track is displayed in a Track Strip. Each Track Strip has its own pair of meters, gain slider, pan slider, and mute/solo buttons, echoing that track's controls in its <a href="audio_tracks.html#Track_Control_Panel" title="Audio Tracks">Track Control Panel</a>.<p>The <b>Mixer</b> command is enabled whenever there's an audio track - it can even be brought up during playback.</p> </div>
 <dl><dd><b>Accessed by:</b> <span class="menu">View &gt; Mixer</span></dd></dl>
 <p>The <b>Mixer</b> command is enabled whenever there is an audio track - it can even be brought up during playback. When there are no audio tracks it is grayed-out and unavailable.
-</p><p>The Mixer Board window will always remain on top of the Audacity Window if they are superimposed.
+</p><p>The Mixer window will always remain on top of the Audacity Window if they are superimposed.
 </p>
-<dl><dd><span title="Mixer Board window with five tracks"><img alt="Mixer Board 3-0-0.png" src="../m/images/2/26/mixer_board_3_0_0.png" width="597" height="462" /></span></dd></dl>
+<dl><dd><span title="Mixer window with five tracks"><img alt="Mixer Board 3-4-0.png" src="../m/images/3/39/mixer_board_3_4_0.png" width="597" height="462" /></span></dd></dl>
 <div id="controls"></div>
-<h2><span class="mw-headline" id="Mixer_Board_controls">Mixer Board controls</span></h2>
-<p>All Mixer Board controls update the controls in their respective Track Control Panels and vice versa. For example, muting a track in the Mixer Board also mutes that track in the main tracks window. 
-</p><p>As in the Track Control Panels, double-click in either Mixer Board slider to enter an exact gain or pan value in a text box.
+<h2><span class="mw-headline" id="Mixer_controls">Mixer controls</span></h2>
+<p>All Mixer controls update the controls in their respective Track Control Panels and vice versa. For example, muting a track in the Mixer also mutes that track in the main tracks window. 
+</p><p>As in the Track Control Panels, double-click in either Mixer slider to enter an exact gain or pan value in a text box.
 </p><p>The meters are <i>post-fade</i>, like the <a href="meter_toolbar.html" title="Meter Toolbar">Meter Toolbars</a>, such that they show the levels as modified by the track's gain/pan sliders and mute/solo buttons. Mono tracks show in both track meters, as in the Meter Toolbar. 
 </p>
 
-<p>You can select a Mixer Board track by clicking its instrument image (or the Audacity logo if no instrument image is available). Selection of a track in Mixer Board is indicated by the blue background. In the example above it is the "Guitar Jimi" track that is selected.  
-</p><p>Deselect all tracks by clicking in the white strip at the bottom of the the Mixer Board, note that the shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift +A</span> to deselect all tracks does <b>not</b> work in Mixer Board.
+<p>You can select a Mixer track by clicking its instrument image (or the Audacity logo if no instrument image is available). Selection of a track in Mixer is indicated by the blue background. In the example above it is the "Guitar Jimi" track that is selected.  
+</p><p>Deselect all tracks by clicking in the white strip at the bottom of the the Mixer, note that the shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift +A</span> to deselect all tracks does <b>not</b> work in Mixer.
 </p>
 <div class="note">Similar to <a href="audacity_selection.html#track_mouse" title="Audacity Selection">Audacity Selection</a> you can also add specific tracks to the selection and remove specific tracks from the selection:
 <ul><li> Holding <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> and clicking in a track's Track Strip <b>toggles the selectedness</b> of that track only. So if a  track is not selected, <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span>-clicking its Track Strip selects it, or deselects it if it is already selected. </li>
@@ -64,7 +65,7 @@
 </p>
 <div id="trackid"></div>
 <h2><span class="mw-headline" id="Track_identification">Track identification</span></h2>
-<p>By default, the image at the top of each Track Strip is the Audacity logo, but if you <a href="audio_track_dropdown_menu.html#Name..." title="Audio Track Dropdown Menu">name</a> the track in the Track Control Panel with an instrument name or abbreviation thereof, Mixer Board automatically shows an appropriate image as listed below. A track name that contains any of the keywords (in bold) will display the image that is associated with those keywords. If the track name contains keywords for more than one instrument, the Mixer Board will display the best match.
+<p>By default, the image at the top of each Track Strip is the Audacity logo, but if you <a href="audio_track_dropdown_menu.html#name" title="Audio Track Dropdown Menu">name</a> the track in the Track Control Panel with an instrument name or abbreviation thereof, Mixer automatically shows an appropriate image as listed below. A track name that contains any of the keywords (in bold) will display the image that is associated with those keywords. If the track name contains keywords for more than one instrument, the Mixer will display the best match.
 </p>
 <table>
 
@@ -99,7 +100,7 @@
 <p><b>Examples:</b>
 </p>
 <ul><li> "electric b" displays an standard electric guitar ("b" is not a keyword), but "electric bs" displays an electric bass guitar ("bs" is a keyword). </li>
-<li> "electric gtr" will display an electric guitar. Although these keywords are also in the bass guitar list, in the absence of the keywords <b>bass</b> or <b>bs</b>, the Mixer Board sees the (standard) electric guitar as a better match.</li>
+<li> "electric gtr" will display an electric guitar. Although these keywords are also in the bass guitar list, in the absence of the keywords <b>bass</b> or <b>bs</b>, the Mixer sees the (standard) electric guitar as a better match.</li>
 <li> "drums" will display a drum kit as it is a keyword. "drum" will also display a drum kit as it contains <b>dr</b> which is a keyword. </li></ul>
 </div>
 
@@ -179,7 +180,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Mixer_Board">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Mixer_Board">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

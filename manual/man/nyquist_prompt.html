@@ -34,18 +34,27 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>Nyquist Prompt</b></i> lets you run and debug code snippets for your own plugins created using the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Nyquist_(programming_language)">Nyquist</a> programming language. See the <b><a href="nyquist.html" title="Nyquist">Manual's Nyquist page</a></b> for more information about writing Nyquist code.  See also the Audacity wiki page on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist">Nyquist</a></div>
+<div class="intro"><i><b>Nyquist Prompt</b></i> lets you run and debug code snippets for your own plugins created using the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Nyquist_(programming_language)">Nyquist</a> programming language. See the <b><a href="nyquist.html" title="Nyquist">Manual's Nyquist page</a></b> for more information about writing Nyquist code.  See also the Audacity wiki page on <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist">Nyquist</a>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you run Nyquist Prompt with a selected  <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> active the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you run Nyquist Prompt with a selection within a time-stretched clip active then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of using Nyquist Prompt</li></ul>
+</td></tr></table></div>
+</div>
 <div class="note">To process audio with Nyquist commands, first <a href="audacity_selection.html" title="Audacity Selection">select</a> some audio.</div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Tools &gt; Nyquist Prompt...</span></dd>
+<dl><dd><b>Accessed by:</b> <span class="menu">Tools &gt; Nyquist Prompt</span></dd>
 <dd><span title="Nyquist Prompt dialog"><img alt="Nyquist Prompt 3-2-0.png" src="../m/images/c/cc/nyquist_prompt_3_2_0.png" width="512" height="334" /></span></dd></dl>
 <p><br />
 </p>
 <div id="command"></div>   
 <h2><span class="mw-headline" id="Enter_Nyquist_Command">Enter Nyquist Command</span></h2>
 <p>Type the command as required. <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on the keyboard moves the cursor to a new line. The last entered code is stored in the pluginsettings.cfg file in Audacity's <a href="preferences.html#stored" title="Preferences">folder for application data</a> so is retained after exiting Audacity. 
-</p>
-
-<p><br />
+</p><p>Plugin GUI can be tested if you include complete Nyquist Plug-in Headers. The Nyquist Prompt interprets header comments to produce a plugin of the defined type on the fly. By  default the plugin is a process type, though other types may be created by including the appropriate header.
+</p><p><br />
 </p>
 <div id="buttons"></div>
 <h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
@@ -141,7 +150,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Nyquist_Prompt">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Nyquist_Prompt">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

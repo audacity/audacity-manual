@@ -33,36 +33,63 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/File_Export_Dialog#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">.
-
-</li></ul>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <p><br />
 </p>
-
 <div class="intro">
-The <i><b>Export Audio</b></i> dialog (for export of a single audio file from the whole project)  is accessed from <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span>. When you use <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportselectedaudio" title="File Menu: Export">Export Selected Audio...</a></span> to export a single audio file from a <a href="audacity_selection.html" title="Audacity Selection">selection</a>, the <i><b>Export Selected Audio</b></i> dialog appears. Both these dialogs are identical <i>(apart from the dialog title)</i> and let you specify folder location, file name, format and encoding options for your exported file.<p>You can use <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> to export multiple audio files (based on <a href="label_tracks.html" title="Label Tracks">labels</a> or multiple <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a>) in one process.</p>
+<p>Exports one or more audio files in any format that Audacity supports from the whole project or the current selection:
+</p>
+<ul><li> It lets you set the folder location, file name, format and encoding options for your exported file</li>
+<li>You can use <b>Export Audio</b> to export multiple tracks as a mono or stereo <a href="mixing.html" title="Mixing">mixdown</a>, or as a multi-channel audio file by enabling <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li>
+<li> You can use <a href="#multiple"><b>Multiple Files</b></a> to export multiple audio files (based on <a href="label_tracks.html" title="Label Tracks">labels</a> or multiple <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a>) in one process.</li></ul>
 <div class="note">What you hear by previewing with playback prior to export is what you will get in the Exported audio file.
 <ul><li>When using <b>Export</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. </li>
 <li>Also note that any hidden parts of audio clips are <i><b>not</b></i> exported, see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>. </div> </div></li></ul>
-<h2><span class="mw-headline" id="Export_Audio_or_Export_Selected_Audio_dialog">Export Audio or Export Selected Audio dialog</span></h2>
-<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; Export &gt; Export Audio...</span> or <span class="menu">File &gt; Export &gt; Export Selected Audio...</span></dd>
-<dd><span title="Export Audio dialog"><img alt="Export Audio dialog 3-0-0.png" src="../m/images/d/d8/export_audio_dialog_3_0_0.png" width="715" height="623" /></span></dd></dl>
-<p>In summary, there are five steps to follow when exporting.  
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; Export Audio</span> &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift + E</span></font></dd>
+<dd><span title="Export Audio dialog"><img alt="Export Audio 3-4-0.png" src="../m/images/0/00/export_audio_3_4_0.png" width="497" height="427" /></span></dd></dl>
+<p><br />
 </p>
-<ul><li>Choose the folder to export to in <b>Save in:</b> then type the file name you want.</li>
-<li>Select the type of audio file to export to. </li>
-<li>Set the <a href="#options">Format Options</a> <i>(if those are available for your selected format)</i> if you want to change the size, quality or other encoding choices for that selected file format.</li>
-<li>Press <span class="button">Save</span>.</li>
-<li>The <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> dialog will then appear (unless you have disabled it for the export step in the <a href="import_export_preferences.html#export" title="Import - Export Preferences">Import/Export Preferences</a>). Edit Metadata lets you enter embedded information in the file such as artist, year or genre. Either leave the metadata blank or complete the fields you require, then press <span class="button">OK</span> (<i><b>not</b></i> "Save...").</li></ul>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#tldr">Summary</a></li>
+<li><a href="#file">Filename, folder location and format</a></li>
+<li><a href="#format">Format options</a></li>
+<li><a href="#options">Audio options</a></li>
+<li><a href="#range">Export Range</a></li>
+<li><a href="#metadata">Metadata</a></li>
+<li><a href="#mixing">Mixing</a></li>
+<li><a href="#cancel">Cancelling the export process</a></li>
+<li><a href="#progress">Export progress dialog</a></li></ol>
+<p><br />
+</p>
+<div id="tldr"></div>
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<p>In summary, there are several steps to follow when exporting:
+</p>
+<ul><li>Choose the <a href="#name">filename</a> to export to.</li>
+<li>Choose the <a href="#folder">folder</a> to export to.</li>
+<li>Select the <a href="#format">Format</a> required for your exported file.</li>
+<li>Select the <a href="#rate">sample rate</a> required for your exported file.</li>
+<li>Choose the <a href="#range">export range</a>: whole project, current selection or multiple files.</li>
+<li>Optionally, press <span class="button">Edit Metadata</span> to edit the <a href="metadata_editor.html" title="Metadata Editor">metadata tags</a> for your exported file.
+<ul><li>The <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> dialog will then appear. This lets you enter embedded information tags in the file such as artist, year or genre.</li></ul></li>
+<li>Press <span class="button">Export</span>.</li></ul>
+<p><br />
+</p>
+<div id="file"></div>
+<h2><span class="mw-headline" id="Filename.2C_folder_location_and_format">Filename, folder location and format</span></h2>
 <div id="name"></div>
 <h3><span class="mw-headline" id="File_name">File name</span></h3>
 Type the required file name. The correct file <i><b><a href="glossary.html#extension" title="Glossary">extension</a></b></i> - preceded by a period (dot) - will be added automatically to the end of the file name, according to the format selected in the "Save as type" list (see below). For example, typing "08 Voodoo Chile" (without quotes) will produce a file "08 Voodoo Chile.wav". For M4A and WMA formats (for which the optional <a href="faq_installation_and_plug_ins.html#installffmpeg" title="FAQ:Installation and Plug-Ins">FFmpeg library</a> is required), you can add alternative extensions as specified in "FFmpeg formats" below.<p>Any other extensions can be added after a file name as required, but Audacity will display a warning that this is not the normal extension for this file type, and that some applications might not play files with non-standard extensions.</p>
-<div id="type"></div>
-<h3><span class="mw-headline" id="Save_as_type">Save as type</span></h3>
+<div id="folder"></div>
+<h3><span class="mw-headline" id="Folder">Folder</span></h3>
+<p>Clicking the <span class="button">Browse</span> button opens a standard File Export Dialog in which you select the location to which the files will be exported.
+</p>
+<div id="format"></div>
+<h3><span class="mw-headline" id="Format">Format</span></h3>
 <p>Clicking in the input box opens a dropdown menu enabling you to chose the file format you wish to export to:
 </p><p><i><b>Hover over each row in "Save as type:" in the image to see the tooltip and click in that row to learn more.</b></i>&#160;<span style="font-size:0.8em"><a href="#skip">Skip the image</a></span>
 </p>
-<dl><dd><div class="noresize"><map name="ImageMap_1_977623472"><area href="#type" shape="rect" coords="105,36,350,55" alt="Dropdown menu for selecting the required file format. Click to learn more." title="Dropdown menu for selecting the required file format. Click to learn more."/><area href="export_formats_supported_by_audacity.html#uncompressed" shape="rect" coords="105,56,350,70" alt="WAV is a lossless format that can both be played on Windows or Mac computers. WAV 16-bit PCM is eminently suitable whenever you want to burn your exported file to an audio CD. There are no options for this format. Click to learn more." title="WAV is a lossless format that can both be played on Windows or Mac computers. WAV 16-bit PCM is eminently suitable whenever you want to burn your exported file to an audio CD. There are no options for this format. Click to learn more."/><area href="other_uncompressed_files_export_options.html" shape="rect" coords="105,71,350,83" alt="Other uncompressed files includes all the uncompressed audio formats that Audacity can export, including 4-bit (A)DPCM, 8-bit U-Law/A-Law, 24-bit, 32-bit and 64-bit options. Also GSM 6.10 WAV (mobile) which produces a mono WAV file encoded with the compressed, lossy GSM 6.10 codec as used in mobile telephones. This menu item defaults to WAV (Microsoft) signed 16-bit PCM on Windows and Linux and to AIFF (Apple/SGI) signed 16-bit PCM on Mac. Click to learn more." title="Other uncompressed files includes all the uncompressed audio formats that Audacity can export, including 4-bit (A)DPCM, 8-bit U-Law/A-Law, 24-bit, 32-bit and 64-bit options. Also GSM 6.10 WAV (mobile) which produces a mono WAV file encoded with the compressed, lossy GSM 6.10 codec as used in mobile telephones. This menu item defaults to WAV (Microsoft) signed 16-bit PCM on Windows and Linux and to AIFF (Apple/SGI) signed 16-bit PCM on Mac. Click to learn more."/><area href="mp3_export_options.html" shape="rect" coords="105,84,350,95" alt="MP3 is a popular compressed, lossy format producing much smaller files than WAV or AIFF, at the expense of some loss of quality. You must download the optional LAME encoder to export to MP3. Click to learn more." title="MP3 is a popular compressed, lossy format producing much smaller files than WAV or AIFF, at the expense of some loss of quality. You must download the optional LAME encoder to export to MP3. Click to learn more."/><area href="ogg_vorbis_export_options.html" shape="rect" coords="105,96,350,108" alt="Ogg Vorbis is the compressed, lossy Vorbis codec in an OGG container. Vorbis offers higher quality than MP3 for the same file size, and is useful for good quality small-sized mono files, but fewer applications can play the OGG format.  Click to learn more." title="Ogg Vorbis is the compressed, lossy Vorbis codec in an OGG container. Vorbis offers higher quality than MP3 for the same file size, and is useful for good quality small-sized mono files, but fewer applications can play the OGG format.  Click to learn more."/><area href="flac_export_options.html" shape="rect" coords="105,109,350,121" alt="FLAC is a compressed but lossless format, giving much larger file sizes than MP3 and OGG but only about half the size of WAV. Click to learn more." title="FLAC is a compressed but lossless format, giving much larger file sizes than MP3 and OGG but only about half the size of WAV. Click to learn more."/><area href="mp2_export_options.html" shape="rect" coords="105,122,350,134" alt="MP2 is a compressed, lossy format similar to MP3, producing slightly larger files than MP3 for the same quality.  Click to learn more." title="MP2 is a compressed, lossy format similar to MP3, producing slightly larger files than MP3 for the same quality.  Click to learn more."/><area href="exporting_to_an_external_program.html" shape="rect" coords="105,135,350,147" alt="(external program) sends audio via the command-line to any executable binary application either for processing or for encoding as a file. This is a method to export using an alternative compressed or uncompressed encoder or to a format not otherwise supported by Audacity. Click to learn more." title="(external program) sends audio via the command-line to any executable binary application either for processing or for encoding as a file. This is a method to export using an alternative compressed or uncompressed encoder or to a format not otherwise supported by Audacity. Click to learn more."/><area href="aac_export_options.html" shape="rect" coords="105,148,350,160" alt="AAC: Advanced Audio Coding is a compressed, lossy format used in Apple applications, generally achieving slightly better quality than MP3 for the same file size. By default, the exported file will be given an &quot;m4a&quot; extension. Optional permitted extensions: .mp4, .m4r (ringtone) and .3gp (mobile).  Click to learn more." title="AAC: Advanced Audio Coding is a compressed, lossy format used in Apple applications, generally achieving slightly better quality than MP3 for the same file size. By default, the exported file will be given an &quot;m4a&quot; extension. Optional permitted extensions: .mp4, .m4r (ringtone) and .3gp (mobile).  Click to learn more."/><area href="ac3_export_options.html" shape="rect" coords="105,161,350,173" alt="AC3 is the common name used for the compressed, lossy format used in Dolby Digital. Click to learn more." title="AC3 is the common name used for the compressed, lossy format used in Dolby Digital. Click to learn more."/><area href="opus_export_options.html" shape="rect" coords="105,174,350,186" alt="Opus file format (also called &quot;Ogg Opus&quot;) is a lossy audio format developed for Internet streaming. It uses both SILK (used by Skype) and CELT (from Xiph.Org) codecs and supports variable bit rates from 6 kb/s to 510 kb/s.    Click to learn more." title="Opus file format (also called &quot;Ogg Opus&quot;) is a lossy audio format developed for Internet streaming. It uses both SILK (used by Skype) and CELT (from Xiph.Org) codecs and supports variable bit rates from 6 kb/s to 510 kb/s.    Click to learn more."/><area href="wma_export_options.html" shape="rect" coords="105,187,350,199" alt="WMA: Windows Media Audio v2 is a compressed, lossy format developed by Microsoft. Optional permitted extensions: .asf or .wmv.  Click to learn more." title="WMA: Windows Media Audio v2 is a compressed, lossy format developed by Microsoft. Optional permitted extensions: .asf or .wmv.  Click to learn more."/><area href="custom_ffmpeg_export_options.html" shape="rect" coords="105,200,350,212" alt="Custom FFmpeg Export allows interface-based export of some additional compressed or uncompressed formats not listed above, and options for exporting formats containing alternative codecs (for example, WAV format containing MP3 or OGG format containing FLAC). Note: not all formats and codecs are compatible, and some exports might result in zero-byte or invalid files if FFmpeg does not support the combination chosen. Click to learn more." title="Custom FFmpeg Export allows interface-based export of some additional compressed or uncompressed formats not listed above, and options for exporting formats containing alternative codecs (for example, WAV format containing MP3 or OGG format containing FLAC). Note: not all formats and codecs are compatible, and some exports might result in zero-byte or invalid files if FFmpeg does not support the combination chosen. Click to learn more."/><area href="wavpack_export_options.html" shape="rect" coords="105,213,350,225" alt="WavPack Export ..." title="WavPack Export ..."/></map><img alt="File types for Export WAV focused 3-3-0.png" src="../m/images/b/be/file_types_for_export_wav_focused_3_3_0.png" width="430" height="226" usemap="#ImageMap_1_977623472"/></div></dd></dl>
+<dl><dd><div class="noresize"><map name="ImageMap_1_900440197"><area href="#type" shape="rect" coords="75,107,395,127" alt="Dropdown menu for selecting the required file format. Click to learn more." title="Dropdown menu for selecting the required file format. Click to learn more."/><area href="export_formats_supported_by_audacity.html#uncompressed" shape="rect" coords="75,127,395,146" alt="WAV is a lossless format that can both be played on Windows or Mac computers. WAV 16-bit PCM is eminently suitable whenever you want to burn your exported file to an audio CD. There are no options for this format. Click to learn more." title="WAV is a lossless format that can both be played on Windows or Mac computers. WAV 16-bit PCM is eminently suitable whenever you want to burn your exported file to an audio CD. There are no options for this format. Click to learn more."/><area href="other_uncompressed_files_export_options.html" shape="rect" coords="75,147,395,160" alt="Other uncompressed files includes all the uncompressed audio formats that Audacity can export, including 4-bit (A)DPCM, 8-bit U-Law/A-Law, 24-bit, 32-bit and 64-bit options. Also GSM 6.10 WAV (mobile) which produces a mono WAV file encoded with the compressed, lossy GSM 6.10 codec as used in mobile telephones. This menu item defaults to WAV (Microsoft) signed 16-bit PCM on Windows and Linux and to AIFF (Apple/SGI) signed 16-bit PCM on Mac. Click to learn more." title="Other uncompressed files includes all the uncompressed audio formats that Audacity can export, including 4-bit (A)DPCM, 8-bit U-Law/A-Law, 24-bit, 32-bit and 64-bit options. Also GSM 6.10 WAV (mobile) which produces a mono WAV file encoded with the compressed, lossy GSM 6.10 codec as used in mobile telephones. This menu item defaults to WAV (Microsoft) signed 16-bit PCM on Windows and Linux and to AIFF (Apple/SGI) signed 16-bit PCM on Mac. Click to learn more."/><area href="mp3_export_options.html" shape="rect" coords="75,161,395,175" alt="MP3 is a popular compressed, lossy format producing much smaller files than WAV or AIFF, at the expense of some loss of quality. You must download the optional LAME encoder to export to MP3. Click to learn more." title="MP3 is a popular compressed, lossy format producing much smaller files than WAV or AIFF, at the expense of some loss of quality. You must download the optional LAME encoder to export to MP3. Click to learn more."/><area href="ogg_vorbis_export_options.html" shape="rect" coords="75,175,395,190" alt="Ogg Vorbis is the compressed, lossy Vorbis codec in an OGG container. Vorbis offers higher quality than MP3 for the same file size, and is useful for good quality small-sized mono files, but fewer applications can play the OGG format.  Click to learn more." title="Ogg Vorbis is the compressed, lossy Vorbis codec in an OGG container. Vorbis offers higher quality than MP3 for the same file size, and is useful for good quality small-sized mono files, but fewer applications can play the OGG format.  Click to learn more."/><area href="opus_export_options.html" shape="rect" coords="75,190,395,204" alt="Opus file format (also called &quot;Ogg Opus&quot;) is a lossy audio format developed for Internet streaming. It uses both SILK (used by Skype) and CELT (from Xiph.Org) codecs and supports variable bit rates from 6 kbps to 510 kbps.    Click to learn more." title="Opus file format (also called &quot;Ogg Opus&quot;) is a lossy audio format developed for Internet streaming. It uses both SILK (used by Skype) and CELT (from Xiph.Org) codecs and supports variable bit rates from 6 kbps to 510 kbps.    Click to learn more."/><area href="flac_export_options.html" shape="rect" coords="75,205,395,218" alt="FLAC is a compressed but lossless format, giving much larger file sizes than MP3 and OGG but only about half the size of WAV. Click to learn more." title="FLAC is a compressed but lossless format, giving much larger file sizes than MP3 and OGG but only about half the size of WAV. Click to learn more."/><area href="wavpack_export_options.html" shape="rect" coords="75,218,395,233" alt="WavPack is a completely open audio compression format providing lossless, high-quality lossy, and a unique hybrid compression mode." title="WavPack is a completely open audio compression format providing lossless, high-quality lossy, and a unique hybrid compression mode."/><area href="aac_export_options.html" shape="rect" coords="75,234,395,250" alt="AAC: Advanced Audio Coding is a compressed, lossy format used in Apple applications, generally achieving slightly better quality than MP3 for the same file size. By default, the exported file will be given an &quot;m4a&quot; extension. Optional permitted extensions: .mp4, .m4r (ringtone) and .3gp (mobile).  Click to learn more." title="AAC: Advanced Audio Coding is a compressed, lossy format used in Apple applications, generally achieving slightly better quality than MP3 for the same file size. By default, the exported file will be given an &quot;m4a&quot; extension. Optional permitted extensions: .mp4, .m4r (ringtone) and .3gp (mobile).  Click to learn more."/><area href="ac3_export_options.html" shape="rect" coords="75,250,395,264" alt="AC3 is the common name used for the compressed, lossy format used in Dolby Digital. Click to learn more." title="AC3 is the common name used for the compressed, lossy format used in Dolby Digital. Click to learn more."/><area href="wma_export_options.html" shape="rect" coords="75,264,395,280" alt="WMA: Windows Media Audio v2 is a compressed, lossy format developed by Microsoft. Optional permitted extensions: .asf or .wmv.  Click to learn more." title="WMA: Windows Media Audio v2 is a compressed, lossy format developed by Microsoft. Optional permitted extensions: .asf or .wmv.  Click to learn more."/><area href="custom_ffmpeg_export_options.html" shape="rect" coords="75,280,395,294" alt="Custom FFmpeg Export allows interface-based export of some additional compressed or uncompressed formats not listed above, and options for exporting formats containing alternative codecs (for example, WAV format containing MP3 or OGG format containing FLAC). Note: not all formats and codecs are compatible, and some exports might result in zero-byte or invalid files if FFmpeg does not support the combination chosen. Click to learn more." title="Custom FFmpeg Export allows interface-based export of some additional compressed or uncompressed formats not listed above, and options for exporting formats containing alternative codecs (for example, WAV format containing MP3 or OGG format containing FLAC). Note: not all formats and codecs are compatible, and some exports might result in zero-byte or invalid files if FFmpeg does not support the combination chosen. Click to learn more."/><area href="mp2_export_options.html" shape="rect" coords="75,295,395,308" alt="MP2 is a compressed, lossy format similar to MP3, producing slightly larger files than MP3 for the same quality.  Click to learn more." title="MP2 is a compressed, lossy format similar to MP3, producing slightly larger files than MP3 for the same quality.  Click to learn more."/><area href="exporting_to_an_external_program.html" shape="rect" coords="75,309,395,324" alt="(external program) sends audio via the command-line to any executable binary application either for processing or for encoding as a file. This is a method to export using an alternative compressed or uncompressed encoder or to a format not otherwise supported by Audacity. Click to learn more." title="(external program) sends audio via the command-line to any executable binary application either for processing or for encoding as a file. This is a method to export using an alternative compressed or uncompressed encoder or to a format not otherwise supported by Audacity. Click to learn more."/></map><img alt="Export Format selection 3-4-0.png" src="../m/images/3/35/export_format_selection_3_4_0.png" width="402" height="350" usemap="#ImageMap_1_900440197"/></div></dd></dl>
 <div style="position:relative;">
 <div class="note" style="width:150px;position:absolute;left:150px;top:-25px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
 </div>
@@ -82,84 +109,144 @@ Type the required file name. The correct file <i><b><a href="glossary.html#exten
 </td>
 <td align="left" valign="top">WAV files are limited to a maximum size of 4GB - see <a href="export_formats_supported_by_audacity.html#wavtime" title="Export Formats supported by Audacity"><b>this page</b></a> for details of how that relates to maximum times.
 </td></tr></table></div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
-</td>
-<td align="left" valign="top">Please be aware that there is a bug in Audacity whereby the bit rate setting that you make in an AAC export is <i><b>not</b></i> honored by Audacity.  See <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/1818"><b>this logged bug</b></a>.<p>The workaround is to export as uncompressed WAV or AIFF and use iTunes to make the AAC conversion, see <a href="tutorial_exporting_to_itunes.html#conversion" title="Tutorial - Exporting to iTunes"> this page</a> for information regarding this. </p>
- 
-</td></tr></table></div>
-<div id="options"></div>
-<h3><span class="mw-headline" id="Format_Options">Format Options</span></h3>
-<p>Some formats do offer options for making settings like <i>quality</i> or <i>encoding</i>. 
-</p><p><a href="export_options.html" title="Export Options">Export options</a> vary from one audio format to another:
+<p><br />
+</p>
+<div id="format"></div>
+<h2><span class="mw-headline" id="Format_Options">Format Options</span></h2>
+<p>Some formats offer options for making settings like <i>quality</i> or <i>encoding</i>. 
+</p><p>Export options vary from one audio format to another:
 </p>
 <ul><li> <a href="wav_export_options.html" title="WAV Export Options">WAV Export Options</a></li>
 <li> <a href="other_uncompressed_files_export_options.html" title="Other uncompressed files Export Options">Other uncompressed files Export Options</a> </li>
 <li> <a href="mp3_export_options.html" title="MP3 Export Options">MP3 Export Options</a></li>
 <li> <a href="ogg_vorbis_export_options.html" title="Ogg Vorbis Export Options">Ogg Vorbis Export Options</a> </li>
+<li> <a href="opus_export_options.html" title="Opus Export Options">Opus Export Options</a></li>
 <li> <a href="flac_export_options.html" title="FLAC Export Options">FLAC Export Options</a></li>
-<li> <a href="mp2_export_options.html" title="MP2 Export Options">MP2 Export Options</a></li>
-<li> <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">(external program)</a></li>
+<li> <a href="wavpack_export_options.html" title="WavPack Export Options">WavPack Export Options</a></li>
 <li> <a href="aac_export_options.html" title="AAC Export Options">AAC Export Options</a></li>
-<li> <a href="ac3_export_options.html" title="AC3 Export Options">AC3 Export Options</a> </li>
-<li> <a href="opus_export_options.html" title="Opus Export Options">Opus Export Options</a>  </li>
+<li> <a href="ac3_export_options.html" title="AC3 Export Options">AC3 Export Options</a></li>
 <li> <a href="wma_export_options.html" title="WMA Export Options">WMA Export Options</a> </li>
 <li> <a href="custom_ffmpeg_export_options.html" title="Custom FFmpeg Export Options">Custom FFmpeg Export Options</a></li>
-<li> <a href="wavpack_export_options.html" title="WavPack Export Options">WavPack Export Options</a></li></ul>
-<h3><span class="mw-headline" id="Custom_FFmpeg_Export">Custom FFmpeg Export</span></h3>
+<li> <a href="mp2_export_options.html" title="MP2 Export Options">MP2 Export Options</a></li>
+<li> <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">(external program)</a></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top"><span style="font-weight: bold; font-size:118%">Custom FFmpeg Export:</span>
 <p>Using the <a href="custom_ffmpeg_export_options.html" title="Custom FFmpeg Export Options">Custom FFmpeg Export</a> provides access to a much wider range of export formats and codecs.  For more information on this please see <a href="custom_ffmpeg_export_options.html" title="Custom FFmpeg Export Options">Custom FFmpeg Export Options</a>.
 </p><p>Be aware that not all combinations of format and codec that are offered in the dialog will work properly, you will need to experiment.
 </p>
-<h3><span class="mw-headline" id="Automatic_Mixing_on_Export">Automatic Mixing on Export</span></h3>
-<p>By default, multiple stereo tracks are mixed down to a single stereo file on Export.
-</p><p>Also by default, multiple mono tracks are mixed down to a mono file, but if you <a href="audio_tracks.html#pan" title="Audio Tracks">pan</a> any mono tracks to left or right or if there are any stereo tracks among the tracks to be exported, the tracks are mixed to a stereo file.  Note that the mono tracks are mixed to both the left and right channels of the resulting stereo file.
+</td></tr></table>
+</div>
+<p><br />
 </p>
-<h3><span class="mw-headline" id="Advanced_Mixing_Options">Advanced Mixing Options</span></h3>
-<p>The <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog appears if you have chosen "<b>Use custom mix</b>" in the <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export</a> section of <a href="preferences.html" title="Preferences">Preferences</a>. The dialog will appear after pressing the <span class="button">Save</span> button in the Export dialog.  
-</p><p>Use this dialog to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.
+<div id="options"></div>
+<h2><span class="mw-headline" id="Audio_options">Audio options</span></h2>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options:
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 44100 Hz, which is CD quality.
+</p>
+<div id="encoding"></div>
+<h3><span class="mw-headline" id="Encoding">Encoding</span></h3>
+<p>This option is for the default WAV exports, selecting other file formats will cause different options to appear in this position.
+</p><p>It sets the encoding to be used for the exported WAV file.  Default is <b>Signed 16-bit PCM</b>, which is CD quality
 </p><p><br />
 </p>
-<div id="tracks"></div>
-<h2><span class="mw-headline" id="Exporting_multiple_tracks_as_a_single_audio_file">Exporting multiple tracks as a single audio file</span></h2>
-<p>You can use <b>Export Audio</b> or <b>Export Selected Audio</b> to export multiple tracks as a mono or stereo <a href="mixing.html" title="Mixing">mixdown</a>, or as a multi-channel audio file by enabling <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.
+<div id="range"></div>
+<h2><span class="mw-headline" id="Export_Range">Export Range</span></h2>
+<div id="project"></div>
+<h3><span class="mw-headline" id="Entire_Project">Entire Project</span></h3>
+<p>Choosing this will export the entire project less any tracks that are grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks and are inaudible on playback.
 </p>
-<div class="note">Please be aware that when using <b>Export</b> or <b>Export Multiple</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. So what you hear by previewing with playback prior to export is what you will get in the Exported audio file.
-<ul><li>When using <b>Export Selected Audio</b>, however, Audacity will Export the selection from <i><b>all</b></i> selected tracks even if some if those tracks are grayed-out and inaudible on playback.</div></li></ul>
+<div id="multiple"></div>
+<h3><span class="mw-headline" id="Multiple_Files"><a href="export_multiple.html" title="Export Multiple">Multiple Files</a></span></h3>
+<p>This allows you to do multiple audio file exports from Audacity, either based on the multiple tracks in the project, or based on the labels in a single audio track.  As with Export Audio muted tracks are not exported.  
+</p><p>Selecting this will cause the Export dialog to be expanded - see <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> for details.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">A great time-saver for splitting up long recordings into separate CD tracks, or archiving multiple working tracks.
+<p>See the <a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD">Tutorial - Copying tapes, LPs or MiniDiscs to CD</a> for an example of how
+this is used.
+</p>
+</td></tr></table>
+</div>
+<div id="selection"></div>
+<h3><span class="mw-headline" id="Current_Selection">Current Selection</span></h3>
+<p>When choosing this, Audacity will Export the selection from <i><b>all</b></i> selected tracks even if some if those tracks are grayed-out  by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks and are inaudible on playback.
+</p>
+<div id="blank"></div>
+<h3><span class="mw-headline" id="Trim_blank_space_before_first_clip">Trim blank space before first clip</span></h3>
+<p>If this is unchecked <i>(default setting)</i> when exporting audio any leading blank space offset in the tracks or project to be exported is treated as silence and appropriate leading silence will pad the exported audio. 
+</p><p>If you  check this box, leading blank space will be ignored on Export.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">A use case for turning this "on" is track-based multiple export where you have "songs" lined up one after the other on different tracks<p>In this case you probably do not want the offsets exported as long silences at the start of "songs".</p>
+</td></tr></table>
+</div>
 <p><br />
+</p>
+<div id="metadata"></div>
+<h2><span class="mw-headline" id="Metadata"><a href="metadata_editor.html" title="Metadata Editor">Metadata</a></span></h2>
+<p>If you press the  <span class="button">Edit Metadata</span> button then the <a href="metadata_editor.html" title="Metadata Editor"><b>Metadata Editor</b></a> dialog will appear. 
+</p><p>This lets you enter embedded information tags in the file such as artist, year or genre.
+</p>
+<dl><dd><span title="Metadata Editor with completed value fields"><img alt="Metadata Tags editor - with off setting.png" src="../m/images/7/73/metadata_tags_editor_with_off_setting.png" width="535" height="421" /></span></dd></dl>
+<p><br />
+</p>
+<div id="mixing"></div>
+<h2><span class="mw-headline" id="Mixing">Mixing</span></h2>
+<div id="automatic"></div>
+<h3><span class="mw-headline" id="Automatic_Mixing_on_Export">Automatic Mixing on Export</span></h3>
+<p>By default, multiple stereo tracks are mixed down to a single stereo file on Export.
+</p><p>Also by default, multiple mono tracks are mixed down to a mono file, but if you <a href="audio_tracks.html#pan" title="Audio Tracks">pan</a> any mono tracks to left or right or if there are any stereo tracks among the tracks to be exported, the tracks are mixed to a stereo file.  
+</p><p>Note that the mono tracks are mixed to both the left and right channels of the resulting stereo file.
+</p>
+<div id="advanced"></div>
+<h3><span class="mw-headline" id="Advanced_Mixing_Options">Advanced Mixing Options</span></h3>
+<p>The <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog appears when you click on the <span class="button">Configure</span> button in the Export dialog.
+</p><p>Use this dialog to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.  
+</p><p>For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.
+</p><p><br />
 </p>
 <div id="cancel"></div>
 <h2><span class="mw-headline" id="Cancelling_the_export_process">Cancelling the export process</span></h2>
-<p>You may abort the export process without writing the file by pressing <span class="button">Cancel</span> in the Export Audio / Export Selected Audio dialog, or in the Advanced Mixing Options or Metadata Editor dialogs (if those dialogs appear). If you Cancel in any dialog, any changes you made to the "Save in:" directory or file type will not be preserved for next time you export.
+<p>You may abort the export process without writing the file by pressing the <span class="button">Cancel</span> button in the Export Audio dialog. If you Cancel, any changes you made to the "Save in:" directory or file type will <i><b>not</b></i> be preserved for next time you export.
 </p><p><br />
 </p>
 <div id="progress"></div>
 <h2><span class="mw-headline" id="Export_progress_dialog">Export progress dialog</span></h2>
-<p>Once you have clicked the <span class="button">Save</span> button in the export dialog and <span class="button">OK</span> in Edit Metadata, Audacity will display a dialog displaying progress of writing the exported file:
+<p>Once you have clicked the <span class="button">Save</span> button in the export dialog and <span class="button">OK</span> in Edit Metadata, Audacity will display a dialog displaying the progress of writing the exported file:
 </p>
 <dl><dd><span title="Export Audio progress dialog, partially complete"><img alt="Export Audio progress dialog partial completion.png" src="../m/images/2/24/export_audio_progress_dialog_partial_completion.png" width="242" height="193" /></span></dd></dl>
 <p>The colored progress bar is a visual indicator of how much of the file has been written.  The Elapsed Time and Remaining Time are estimates and may change as the export progresses.
 </p>
+<div id="cancel"></div>
 <h3><span class="mw-headline" id="Stop_and_Cancel">Stop and Cancel</span></h3>
 <p>Clicking the:
 </p>
 <ul><li> <span class="button">Stop</span> button will halt the export where it is now, leaving the partially exported file in place,</li>
 <li> <span class="button">Cancel</span> button will abort the export leaving no exported audio file.</li></ul>
-<p><br />
-</p>
-<div id="muted"></div>
-<h2><span class="mw-headline" id="Muted_tracks_are_not_exported">Muted tracks are not exported</span></h2>
-<p>Any <a href="audio_tracks.html#mute" title="Audio Tracks">Muted tracks</a> are not exported - which means that if you play a preview before you export "what you hear is what you get". 
-</p><p><br />
-</p>
-<div id="blank"></div>
-<h2><span class="mw-headline" id="Leading_black_space_in_exported_track.28s.29_or_project">Leading black space in exported track(s) or project</span></h2>
-<p>When exporting audio any leading blank space offset in the tracks or project to be exported is treated as silence and appropriate leading silence will pad the exported audio.  
-</p><p>There is an option in <a href="import_export_preferences.html#export" title="Import - Export Preferences">Import/Export Preferences</a> where you can turn this off and have leading blank space ignored on Export.
-</p>
-<ul><li>A use case for turning this off is track-based multiple export where you have "songs" lined up one after the other on different tracks - and in this case you probably do not want the offsets exported as long silences at the start of "songs".</li></ul>
 
 
 
@@ -237,7 +324,7 @@ Type the required file name. The correct file <i><b><a href="glossary.html#exten
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/File_Export_Dialog">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/File_Export_Dialog">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

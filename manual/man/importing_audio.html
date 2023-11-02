@@ -35,17 +35,13 @@
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro">This page is about importing audio files into Audacity (like WAV or MP3) that other applications on the computer can play. 
-<div class="note">When importing a file into an empty project window or when using <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a> to "open" an audio file</span>), the <i>Project Rate</i> control in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> changes if necessary to reflect the rate of the file.
-<ul><li>See <a href="#rate_and_depth"><b>below</b></a> for more details. </li></ul>
-
-</div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
 </td>
-<td align="left" valign="top">Audacity <a href="audacity_projects.html" title="Audacity Projects">projects</a> <i><b>cannot</b></i> be opened using the <span class="menu">File &gt; Import &gt; Audio...</span> command, you will get an error message.<p>If you have already saved your audio as an Audacity Project, use <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a></span> or <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> to open the <i><b>&lt;my_project_name&gt;.aup3</b></i>.</p>
+<td align="left" valign="top">Audacity <a href="audacity_projects.html" title="Audacity Projects">projects</a> <i><b>cannot</b></i> be opened using the <span class="menu">File &gt; Import &gt; Audio</span> command, you will get an error message.<p>If you have already saved your audio as an Audacity Project, use <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open</a></span> or <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> to open the <i><b>&lt;my_project_name&gt;.aup3</b></i>.</p>
 </td></tr></table>
 </div> </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
@@ -59,7 +55,7 @@
 </p>
 <div id="formats"></div>
 <h2><span class="mw-headline" id="Audio_File_Formats_Supported_by_Audacity">Audio File Formats Supported by Audacity</span></h2>
-<p>The audio formats importable by Audacity with the <span class="menu">File &gt; Import &gt; Audio...</span> command, as shipped are:
+<p>The audio formats importable by Audacity with the <span class="menu">File &gt; Import &gt; Audio</span> command, as shipped are:
 </p>
 <h3><span class="mw-headline" id="Uncompressed_audio_formats">Uncompressed audio formats</span></h3>
 <p>For <a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a> audio: most <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> files including all <i><b><a href="glossary.html#pcm" title="Glossary">PCM</a></b></i> variants can be imported into Audacity
@@ -70,7 +66,7 @@
 <h3><span class="mw-headline" id="FFmpeg_for_other_importable_audio_formats"><a href="faq_installing_the_ffmpeg_import_export_library.html" title="FAQ:Installing the FFmpeg-Import-Export Library">FFmpeg</a> for other importable audio formats</span></h3>
 You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>FFmpeg library</b></a> to import a much larger range of audio formats including <b>AC3, M4A, MP4 and WMA</b> (if the files are not <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Digital_rights_management">DRM-protected</a> to work only in particular software). <p>FFmpeg will also import audio from most video files or DVDs that are not DRM-protected.</p>
 <div class="note">Older uncompressed file types such as WAV with U-Law or IMA ADPCM encoding are generally supported provided they contain correctly formatted header information. 
-<ul><li> If files do not have header information (such as RAW or <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Dialogic_ADPCM">VOX ADPCM</a>) or have non-standard header information, you can normally import them using <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#raw" title="File Menu: Import">Raw Data...</a></span>.</li>
+<ul><li> If files do not have header information (such as RAW or <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Dialogic_ADPCM">VOX ADPCM</a>) or have non-standard header information, you can normally import them using <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#raw" title="File Menu: Import">Raw Data</a></span>.</li>
 <li> WAV files from portable recorders may contain proprietary compressed audio. These should not be imported as Raw Data, but by installing the <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>.   </li>
 <li> <a href="lof_files.html" title="LOF Files">LOF files</a> (lists of files) are also supported if the list is correctly formatted and contains supported files.</div></li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -99,10 +95,10 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 <h2><span class="mw-headline" id="Three_Ways_to_Import_Audio">Three Ways to Import Audio</span></h2>
 <p>No matter which method you use to bring an audio file into Audacity, the file is always <i>imported</i> into a saved or unsaved <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a>. The imported file always appears in a new track in that project.
 </p>
-<h3><span class="mw-headline" id="1._File_.3E_Import_.3E_Audio...">1. <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#audio" title="File Menu: Import">Audio...</a></span></span></h3>
-<p>If you select the <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#audio" title="File Menu: Import">Audio...</a></span> command, then choose one or more audio files, Audacity will import the selected file(s) into the <i>existing project</i>. This is useful to bring the content of one or more audio files into a project that already contains audio (for example, to mix several audio files together).</p>
+<h3><span class="mw-headline" id="1._File_.3E_Import_.3E_Audio">1. <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#audio" title="File Menu: Import">Audio</a></span></span></h3>
+<p>If you select the <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#audio" title="File Menu: Import">Audio</a></span> command, then choose one or more audio files, Audacity will import the selected file(s) into the <i>existing project</i>. This is useful to bring the content of one or more audio files into a project that already contains audio (for example, to mix several audio files together).</p>
 <h3><span class="mw-headline" id="2._File_.3E_Recent_Files_.28Open_Recent_on_Mac.29">2. <span class="menu">File &gt;  <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> (<i>Open Recent</i> on Mac)</span></h3>
-<p>This command imports a single file from a list of the 12 most recently imported files or recently saved projects. The file opens in a new window exactly as <span class="menu">File &gt; Open...</span>.</p>
+<p>This command imports a single file from a list of the 12 most recently imported files or recently saved projects. The file opens in a new window exactly as <span class="menu">File &gt; Open</span>.</p>
 <h3><span class="mw-headline" id="3._Drag_and_drop">3. Drag and drop</span></h3>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -110,14 +106,14 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">Note that you cannot use drag and drop an AUP3 project into an open Audacity Project window. To <i><b>open</b></i> Audacity projects - use <span class="menu">File &gt; Open...</span> to open projects.
+<td align="left" valign="top">Note that you cannot use drag and drop an AUP3 project into an open Audacity Project window. To <i><b>open</b></i> Audacity projects - use <span class="menu">File &gt; Open</span> to open projects.
 </td></tr></table></div>
 <ul><li><span style="font-weight: bold; font-size:118%">On Windows and Mac:</span>
-<ul><li> Drag and drop one or more audio files into an open Audacity project window: this is equivalent to <span class="menu">File &gt; Import &gt; Audio...</span>.</li>
-<li> Drag and drop one or more audio files onto the Audacity icon: this is equivalent to <span class="menu">File &gt; Open...</span>.</li></ul></li></ul>
+<ul><li> Drag and drop one or more audio files into an open Audacity project window: this is equivalent to <span class="menu">File &gt; Import &gt; Audio</span>.</li>
+<li> Drag and drop one or more audio files onto the Audacity icon: this is equivalent to <span class="menu">File &gt; Open</span>.</li></ul></li></ul>
 <ul><li><span style="font-weight: bold; font-size:118%">On Linux:</span>
-<ul><li> Drag and drop files into an open Audacity Project window: this is equivalent to <span class="menu">File &gt; Import &gt; Audio...</span>.</li>
-<li> Drag and drop one or more audio files onto the Audacity icon: only the first file will open. More than one file dragged and dropped onto the icon will do the same as the <span class="menu">File &gt; Open...</span> command for the first file, but the other files will generate an error message saying that Audacity is already running.</li></ul></li></ul>
+<ul><li> Drag and drop files into an open Audacity Project window: this is equivalent to <span class="menu">File &gt; Import &gt; Audio</span>.</li>
+<li> Drag and drop one or more audio files onto the Audacity icon: only the first file will open. More than one file dragged and dropped onto the icon will do the same as the <span class="menu">File &gt; Open</span> command for the first file, but the other files will generate an error message saying that Audacity is already running.</li></ul></li></ul>
 <p><br />
 </p>
 <div id="metadata"></div>
@@ -166,20 +162,6 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 <li>mixing down tracks will mix to 44100 Hz.</li></ul>
 </td></tr></table>
 </div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
-</td>
-<td align="left" valign="top"><span style="font-weight: bold; font-size:118%">Project Sample Rate may change when importing initial audio file:</span>
-<ul><li>When importing a file into an empty project window or when using <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open...</a> to "open" an audio file</span>), the <i>Project Sample Rate</i> control in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> changes if necessary to reflect the rate of the file. 
-<ul><li>The Project Sample Rate determines the sample rate a file will be <a href="exporting_audio.html" title="Exporting Audio">exported</a> at, so no further adjustment is needed to export that file at its original rate. </li>
-<li>There is <i><b>no</b></i> warning given that this rate change occurs.</li></ul></li>
-<li>However, once there is already an audio track in the project (either an imported file, a <a href="record.html" title="Record">recording</a> or <a href="generate_menu.html" title="Generate Menu">generated audio</a>), importing any subsequent audio file will <i><b>not</b></i> change the Project Sample Rate.</li></ul>
-
-
-</td></tr></table></div>
 <p>Generally, Audacity imports files at the <i><b><a href="sample_format_bit_depth.html" title="Sample Format - Bit Depth">sample format</a></b></i> (bit depth) specified at <i>Default Sample Format</i> in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>. This setting defaults to 32-bit float. Therefore by default an imported file will show in the Track Control Panel as 32-bit float, even if its original bit depth is lower. This is best for high-quality editing. Even if you choose a lower Default Sample Format than 32-bit float, Audacity will never downsample a file that has a higher bit depth, as shown in the following table for WAV and AIFF imports using the standard uncompressed files importer.   
 </p>
 <dl><dd><table class="prettytablerows" width="40%" rules="rows">
@@ -341,7 +323,7 @@ You can install the optional <a href="faq_installation_and_plug_ins.html#ffdown"
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Importing_Audio">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

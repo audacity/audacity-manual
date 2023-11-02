@@ -46,18 +46,18 @@
 <div id="vst_presets"></div>
 <h2><span class="mw-headline" id="Saving.2C_Exporting_and_Importing_VST_Effect_Presets">Saving, Exporting and Importing VST Effect Presets</span></h2>
 <div class="note">Not all VST effects support importing and exporting of presets. If an exported preset file is empty, the effect probably does not support presets and Audacity will not be able to import the saved presets.</div>
-<h3><span class="mw-headline" id="Save_Preset...">Save Preset...</span></h3>
-<p>To save the current effect settings as a User Preset, select <span class="menu">Save Preset...</span> from the <span class="button">Presets &amp; settings</span> button in the effect dialog  which brings up the following dialog: 
+<h3><span class="mw-headline" id="Save_Preset">Save Preset</span></h3>
+<p>To save the current effect settings as a User Preset, select <span class="menu">Save Preset</span> from the <span class="button">Presets &amp; settings</span> button in the effect dialog  which brings up the following dialog: 
 </p>
 <dl><dd><span title="Save Audio Unit Preset dialog"><img alt="Save Preset Dialog.png" src="../m/images/4/44/save_preset_dialog.png" width="246" height="98" /></span></dd></dl>
 <p>Type a name for the preset then click <span class="button">OK</span> after which the saved preset will appear in the "User Presets" list in the Manage menu.
 </p>
 <div class="note">If you are using the non-graphical interface for the effect, the use the Manage menu <span title="Manage menu"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> button.</div>
-<h3><span class="mw-headline" id="Export...">Export...</span></h3>
+<h3><span class="mw-headline" id="Export">Export</span></h3>
 <p>Presets for VST effects are exported to a file. A presets file lets you move settings for a particular effect between computers on any operating platform that supports that effect.</p>
-<p>Select <i>Export...</i> from the Manage menu <span title="Manage menu"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> in the effect dialog to bring up the "Save VST Preset As:" dialog</p>
-<p>Be sure to choose a file type in the "Save as type:" dropdown menu ("Format" dropdown menu on Mac)</p>
-<p>Type a name for the file in the "File Name" box ("Save As:" box on Mac) then click <span class="button">OK</span> to export the current effect settings to a separate file.</p>
+<p>Select <span class="menu">Export</span> from the Manage menu <span title="Manage menu"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> in the effect dialog to bring up the "Save VST Preset As:" dialog</p>
+<p>Be sure to choose a file type in the "Format" dropdown menu ("Format" dropdown menu on Mac)</p>
+<p>Type a name for the file in the "File Name" box ("Save As:" box on Mac) then click <span class="button">Export</span> to export the current effect settings to a separate file.</p>
 <p>The following file formats are supported:
 </p>
 <ul><li> <b>XML format:</b> The default choice, which saves an Audacity VST preset file. This is the least flexible choice, mainly useful for the small number of effects that do not support FXP presets. Most other VST host applications do not support XML, so you may only be able to share XML presets between other computers running Audacity.  </li>
@@ -73,14 +73,14 @@
 <ul><li> the XML, FXP or FXB file extension is not automatically added by Audacity - be sure to include it in the file name (for example, "myPreset.fxp")</li>
 <li> make sure the file extension you add is the same as that shown in the "File Format" dropdown menu, otherwise the preset cannot be loaded.</li></ul>
 </td></tr></table></div>
-<h3><span class="mw-headline" id="Import...">Import...</span></h3>
-<p>Select <i>Import...</i> from the Manage menu <span title="Manage menu"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> in the effect dialog to bring up the "Load VST Preset:" dialog</p>
+<h3><span class="mw-headline" id="Import">Import</span></h3>
+<p>Select <span class="menu">Import</span> from the Manage menu <span title="Manage menu"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> in the effect dialog to bring up the "Load VST Preset:" dialog</p>
 <p>Navigate to the place where you exported a VST preset file.</p>
 <p>Click the open button to load the settings.</p>
 <p>Depending on how the particular VST effect handles importing presets, the imported preset may show up in the User Presets submenu, the Factory Presets submenu or may not show up at all.</p>
 <div id="vst_options"></div>
 <h2><span class="mw-headline" id="VST_Effect_Options">VST Effect Options</span></h2>
-<p>In the effect's dialog, click the <i>Manage</i> <span title="Manage menu button"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> button then choose <span class="button">Options... &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> to bring up the dialog illustrated below. When you change the options in this dialog, the changes apply only to the current effect that is open. All other VST effects will remain at the default options shown below until you change their options. 
+<p>In the effect's dialog, click the <i>Manage</i> <span title="Manage menu button"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> button then choose <span class="button">Options &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> to bring up the dialog illustrated below. When you change the options in this dialog, the changes apply only to the current effect that is open. All other VST effects will remain at the default options shown below until you change their options. 
 </p>
 <dl><dd><span title="VST Effect Settings dialog"><img alt="VST effect settings.png" src="../m/images/9/9d/vst_effect_settings.png" width="680" height="411" /></span></dd></dl>
 <ul><li> <b>Buffer Size:</b> Controls the number of samples sent to the effect in each round of processing. The default buffer size of 8192 should be safe for all VST effects. You can set a higher value which will allow faster processing but some effects may not work at higher values. Changing the buffer size is effective immediately. </li>
@@ -165,7 +165,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Effect_Menu:_VST">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Effect_Menu:_VST">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

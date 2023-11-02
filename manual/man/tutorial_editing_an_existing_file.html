@@ -2,7 +2,7 @@
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Tutorial - Editing an Existing Audio File - Audacity Manual</title>
+<title>Tutorial - Editing an existing audio file - Audacity Manual</title>
 
 
 
@@ -25,7 +25,7 @@
 				
 				<div class="mw-indicators">
 </div>
-				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial - Editing an Existing Audio File</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial - Editing an existing audio file</h1>
 				
 				<div id="bodyContent" class="mw-body-content">
 					<div id="siteSub">From Audacity Development Manual</div>
@@ -34,7 +34,6 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-
 <p><br />
 </p>
 <div class="intro">The easiest way to use Audacity is to import an existing audio file and make small changes.  If you have never used Audacity before, this is a great place to start.</div>
@@ -44,7 +43,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended that you immediately export your audio using <span class="menu">File &gt; Export &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
+<td align="left" valign="top">If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended that you immediately export your audio using <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
 </td></tr></table>
 </div> 
 <div id="objective"></div> 
@@ -100,7 +99,7 @@
 <ul><li>On Windows and Mac you can also drag to Audacity's icon in a file manager application.</li>
 <li>On Mac and Linux you can drag the file to the Audacity icon in the Dock or Taskbar respectively to import the file into Audacity.
 <ul><li> On Windows, dragging the file to the Audacity icon in the Taskbar will either switch the window to Audacity if it is running (from where you can drag the file in), or if Audacity is closed, give the option to launch Audacity with the file imported.</li></ul></li></ul>
-<div class="note"><b>Command-line file importing:</b> On all three platforms you can also import files by launching Audacity at the command-line and passing the files you wish to import as arguments. For example, on Linux Ubuntu:<p><span style="font-family:monospace; font-size:1.2em">&#160;<a href="https://alphamanual.audacityteam.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b363e1b2e392e352f2e">[email&#160;protected]</a>:~$ audacity Desktop/song.mp3 Desktop/speech.wav</span></p>imports the "song.mp3" and "speech.wav" files located on the Desktop in separate Audacity windows.</div>
+<div class="note"><b>Command-line file importing:</b> On all three platforms you can also import files by launching Audacity at the command-line and passing the files you wish to import as arguments. For example, on Linux Ubuntu:<p><span style="font-family:monospace; font-size:1.2em">&#160;me@ubuntu:~$ audacity Desktop/song.mp3 Desktop/speech.wav</span></p>imports the "song.mp3" and "speech.wav" files located on the Desktop in separate Audacity windows.</div>
 <p><br />
 </p>
 <div id="waveform"></div>
@@ -224,22 +223,21 @@ The amount the cursor moves in this situation is called the "seek time". The <i>
 <div id="export"></div>
 <h2><span class="mw-headline" id="Step_7:_Export_the_resulting_file">Step 7: Export the resulting file</span></h2>
 <p>When you save an Audacity project with <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> you are doing just that - saving an <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a>. Audacity projects can be opened only by Audacity. If you want other applications (such as Apple Music/iTunes or Windows Media Player) to be able to open this file you need to <b>export</b> it.
-</p><p>Before we export this 10 second clip to a separate file we are going to simplify things a bit. Go to the <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>, and under <i>When exporting tracks to an audio file</i> uncheck "<b>Show Metadata Editor prior to export step</b>". <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> adds extra information about the speech or music into the file - see <a href="#more">For More Information</a> below to learn more. You can go back to the Import / Export Preferences at any time to re-enable Metadata Editor. 
 </p>
 <div id="exportWAV"></div> 
 <h3><span class="mw-headline" id="Exporting_a_WAV_file">Exporting a WAV file</span></h3>
-<ul><li>Click on <span class="menu">File &gt; Export &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> - the standard "Save" dialog for your operating system appears. </li>
+<ul><li>Click on <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio...</a></span> - the standard "Save" dialog for your operating system appears. </li>
 <li>Give the file a different name. Audacity always suggests a name for the file that is the same as the name of your Audacity project. It is always best to alter this so you do not confuse your exported file with your Audacity project.</li>
 <li>Choose a location to save the file in the usual manner.</li>
-<li>At the bottom of the Save dialog is a dropdown menu labeled "<b>Format</b>". From this menu choose "WAV (Microsoft) signed 16-bit PCM".</li>
-<li>There are no options for the WAV file format, so there is no need to click the <span class="button">Options</span> button.</li>
-<li>Click the <span class="button">Save</span> button to complete the export of your project to a WAV file.</li></ul>
+<li>In the Save dialog, from the "<b>Format</b>" menu, choose "WAV (Microsoft) signed 16-bit PCM".</li>
+<li>Click the <span class="button">Export</span> button to complete the export of your project to a WAV file.</li></ul>
 <div id="exportMP3"></div>
 <h3><span class="mw-headline" id="Exporting_an_MP3_file">Exporting an MP3 file</span></h3>
 <p>The steps for exporting a file in MP3 format are the same as for a WAV file, <i>except</i>:
 </p>
 <ul><li>In the Save dialog, from the "<b>Format</b>" menu, choose "MP3 files"</li>
-<li>Then click the <span class="button">Options</span> button to set the  <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> and other options for the MP3 file.</li></ul>
+<li>Then set the  <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> and other options for the MP3 file.</li>
+<li>Click the <span class="button">Export</span> button to complete the export of your project to an MP3 file.</li></ul>
 <p><br />
 </p>
 <div id="test"></div>
@@ -248,7 +246,8 @@ The amount the cursor moves in this situation is called the "seek time". The <i>
 </p>
 <ul><li>Click on  <span class="menu">File &gt; <a href="file_menu.html#close" title="File Menu">Close</a></span>, saving changes if asked.</li>
 <li>Find the AUP file on your computer and attempt to open it with the audio player of your choice (for example iTunes, Windows Media Player). You cannot.</li>
-<li>Find the exported WAV file on your computer and attempt to open it with the audio player of your choice. Success!</li></ul>
+<li>Find the exported WAV file on your computer and attempt to open it with the audio player of your choice. </li>
+<li>Success.</li></ul>
 <p>You cannot open an Audacity project in a media player. Only by exporting your project can you listen to it in a media player.
 </p><p>Once you have exported your project you may want to keep the original project file (AUP3) around in case you want to make some changes to it in the future.
 </p><p><br />
@@ -267,7 +266,7 @@ The amount the cursor moves in this situation is called the "seek time". The <i>
 <li>Editing a track: <a href="edit_menu.html" title="Edit Menu">Edit Menu</a>, <a href="zooming.html" title="Zooming">Zooming</a></li>
 <li>Effects: <a href="effect_menu.html" title="Effect Menu">Effect Menu</a></li>
 <li>Saving: <a href="audacity_projects.html" title="Audacity Projects">Audacity Projects</a></li>
-<li>Exporting: <a href="file_menu.html#export" title="File Menu">File Menu &gt; Export...</a></li>
+<li>Exporting: <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></li>
 <li>Metadata Editor: <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a></li>
 <li>MP3 Export Options: <a href="mp3_export_options.html" title="MP3 Export Options">MP3 Export Options</a></li></ul>
 
@@ -347,7 +346,7 @@ The amount the cursor moves in this situation is called the "seek time". The <i>
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Editing_an_Existing_File">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Editing_an_Existing_File">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

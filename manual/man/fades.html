@@ -37,6 +37,15 @@
 <div class="intro">Audacity ships with several types of fade effects: a pair of simple <a href="#linearfade">linear fades</a>, a pair of fades to help you make a <a href="#crossfade">crossfade</a>, a more <a href="#studio_fadeout">musically pleasing</a> fade out <i>(similar to that used in many recording and mastering studios)</i> and a powerful <a href="#adjustable">customizable</a> fade.
 <p>For more detail on fading please see <a href="fade_and_crossfade.html" title="Fade and Crossfade">Fade and Crossfade</a>
 </p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
 </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#linearfade">Linear Fades (In and Out)</a></li>
@@ -63,6 +72,15 @@
 </p>
 <div id="studio_fadeout"></div>
 <h2><span class="mw-headline" id="Studio_Fade_Out">Studio Fade Out</span></h2>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">If you apply this effect with an <a href="envelope_tool.html" title="Envelope Tool"><b>envelope</b></a> present then there is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/5099"><b>bug</b></a> whereby the envelope is removed and the audio reverts to its full amplitude state prior to the effect being applied.
+</td></tr></table>
+</div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Fading &gt; Studio Fade Out</span>  </dd></dl>
 <p>Produces a smooth and "musical" sounding fade out from original volume to silence by applying a doubly-curved (S-shape) fade and fading out the higher frequencies a little quicker than the lower frequencies. It gives a "going off into the distance" type of sound rather than sounding like a "mechanical" fade out. This technique has found favor in recording studios for CD and LP tracks.
 </p>
@@ -72,7 +90,7 @@
 <h2><span class="mw-headline" id="Adjustable_Fade"><a href="adjustable_fade.html" title="Adjustable Fade">Adjustable Fade</a></span></h2>
 <p>This has a dialog box where you can choose the shape of the fade in or fade out to be applied. You can also create "partial" fades to and from other than silence and original volume. An example of this might be a fade in from 20% of the original volume to 80% of the original volume. The "Handy Presets" at the bottom offer a choice of six pairs of fade in or fade out shapes, fading between silence and original volume.
 </p>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Fading &gt; Adjustable Fade...</span></dd>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Fading &gt; Adjustable Fade</span></dd>
 <dd><span title="Dialog box for Adjustable Fade"><img alt="Adjustable Fade 3-2-0.png" src="../m/images/2/2e/adjustable_fade_3_2_0.png" width="486" height="277" /></span></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -176,7 +194,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Fades">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Fades">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

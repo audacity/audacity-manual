@@ -59,7 +59,7 @@ In the image below we have added several additional Macros beyond the ones that 
 <li> Click "<b>Apply Macro to:</b>" <span class="button">Files</span> to select the files on which to run the Macro.
 <li> Click <span class="button">OK</span> to close the "Manage Macros" window
 <div style="margin-left:-28px;margin-top:6px"> <span title="Manage Macros dialog showing an example of a Macro for batch processing to compress and normalize then export as MP3"><img alt="Macro example - Loud MP3.png" src="../m/images/1/11/macro_example_loud_mp3.png" width="800" height="277" /></span> </div>
-<li> Alternatively you can choose <span class="menu">Tools &gt; <a href="apply_macro.html" title="Apply Macro">Apply Macro...</a></span>, select the "<b>Loud MP3</b>" Macro then click "<b>Apply Macro to:</b>" <span class="button"><b>Files</b></span> where you can select the files on which to run the Macro.</ol></div>
+<li> Alternatively you can choose <span class="menu">Tools &gt; <a href="apply_macro.html" title="Apply Macro">Apply Macro</a></span>, select the "<b>Loud MP3</b>" Macro then click "<b>Apply Macro to:</b>" <span class="button"><b>Files</b></span> where you can select the files on which to run the Macro.</ol></div>
 <p><br />
 </p>
 <div class="example"><h3><span class="mw-headline" id="Example_2:_NR.26EQ">Example 2: NR&amp;EQ</span></h3>
@@ -74,7 +74,7 @@ In the image below we have added several additional Macros beyond the ones that 
 <li> Insert another Normalize at different settings (without offset removal, setting a final amplitude of -1 dB)
 <li> Click <span class="button">OK</span> to close the "Manage Macros" window
 <div style="margin-left:-28px;margin-top:5px"><span title="Edit Chains dialog showing an example of a Macro for noise reduction and equalization"><img alt="Macro example - NR&amp;EQ.png" src="../m/images/f/f3/macro_example_nr_eq.png" width="800" height="368" /></span> </div>
-<li> When later needed in your workflow, choose <span class="menu">Tools &gt; <a href="apply_macro.html" title="Apply Macro">Apply Macro...</a></span>, select the "<b>NR&amp;EQ</b>" Macro then click "<b>Apply Macro to:</b>" <span class="button"><b>Project</b></span> to apply the Macro to the selected track(s) in the current project window.</ol>
+<li> When later needed in your workflow, choose <span class="menu">Tools &gt; <a href="apply_macro.html" title="Apply Macro">Apply Macro</a></span>, select the "<b>NR&amp;EQ</b>" Macro then click "<b>Apply Macro to:</b>" <span class="button"><b>Project</b></span> to apply the Macro to the selected track(s) in the current project window.</ol>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -144,7 +144,8 @@ In the image below we have added several additional Macros beyond the ones that 
 </p>
 <ul><li> Note the use of a TrackCount of 0.5 to select just one of two channels in a stereo track.</li>
 <li> The TrackCount of 0 is used to unselect all tracks.</li></ul>
-<pre>SelectAll:
+<pre>
+SelectAll:
 Duplicate:
 Select:"Mode=Set"
 SetTrack:Pan="-1"
@@ -162,7 +163,8 @@ Select:"Mode=Set" TrackCount="0"
 <h3><span class="mw-headline" id="Reparations_Magicke_Spell">Reparations Magicke Spell</span></h3>
 <p>With normal project sample rate of 44100Hz, this selects about 126 samples centered on the cursor, and applies the 'Repair' effect to it.  'Repair' can only handle up to 128 samples.
 </p>
-<pre>SelectTime:End="0.00143" RelativeTo="Selection Start" Start="-0.00143"
+<pre>
+SelectTime:End="0.00143" RelativeTo="Selection Start" Start="-0.00143"
 Repair:Use_Preset="&lt;Factory Defaults&gt;"
 
 </pre>
@@ -247,7 +249,7 @@ Repair:Use_Preset="&lt;Factory Defaults&gt;"
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Macros_Examples">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Macros_Examples">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

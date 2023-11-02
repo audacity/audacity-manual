@@ -34,14 +34,23 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">A <i><b>Time Track</b></i> is used in conjunction with one or more <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a> to progressively increase or decrease playback speed (and pitch) over the length of the audio. Speed changes are controlled by manipulating the blue "time warp" line with the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> used for making gradual volume changes. If the blue line is dragged above the horizontal, the audio plays faster; if dragged below, it plays slower.</div>
+<div class="intro">A <i><b>Time Track</b></i> is used in conjunction with one or more <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a> to progressively increase or decrease playback speed (and pitch) over the length of the audio. Speed changes are controlled by manipulating the blue "time warp" line with the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> used for making gradual volume changes. If the blue line is dragged above the horizontal, the audio plays faster; if dragged below, it plays slower.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top"> Time Track is always active (and therefore modifies audio speed when playing or exporting) whenever it is visible in the project. This applies even after rendering the audio. Therefore after render (or as soon as you want to work with audio that you do not want to speed-change), use the <span class="button"><b>[X]</b></span> "Close" button to left of the Time Track to remove it.
+</td></tr></table></div>
+</div>
 <dl><dd><span title="Time Track showing the vertical scale, warp line and control points"><img alt="Time Track example.png" src="../m/images/7/7f/time_track_example.png" width="794" height="106" /></span></dd></dl>
 <p><b>General method of use:</b> 
 </p>
 <ul><li> Hover your cursor over the warp line until the <b>envelope cursor</b> &#160;<span title="Envelope cursor"><img alt="EnvelopePointer.png" src="../m/images/1/1b/envelopepointer.png" width="7" height="18" /></span>&#160; appears, then click (and optionally, drag up or down) to create a <b>control point</b>. </li>
 <li> To remove a control point, drag it outside the track, or use <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> to undo envelope changes in sequence.</li>
 <li> By default you can warp playback speed by a maximum increase of 10% (110 on the vertical scale to left of the warp line) or a maximum decrease of 10% (90 on the vertical scale).</li>
-<li> To warp the speed by greater amounts, click in the name of the Time Track (in the panel that contains the downward pointing arrow) and choose "<b>Range...</b>". Here you can specify the lower and upper speed limit of the vertical scale:</li></ul>
+<li> To warp the speed by greater amounts, click in the name of the Time Track (in the panel that contains the downward pointing arrow) and choose "<b>Range</b>". Here you can specify the lower and upper speed limit of the vertical scale:</li></ul>
 <dl><dd><dl><dd><div style="min-width:580px"><span title="Lower speed dialog, showing default value of 90"><img alt="Time Track Range dialog lower limit W10.png" src="../m/images/6/6f/time_track_range_dialog_lower_limit_w10.png" width="280" height="153" /></span><span style="margin-left:20px"> <span title="Upper speed dialog, showing default value of 110"><img alt="Time Track Range dialog upper limit W10.png" src="../m/images/a/a0/time_track_range_dialog_upper_limit_w10.png" width="280" height="155" /></span></span></div><div style="clear:both"></div> </dd></dl></dd></dl>
 <p>Changing the range rescales the Time Track to the new limits, preserving the warp value of any envelope points that were there before. Having changed the range, you can now move the warp line up or down anywhere within the new upper or lower limit of the range.     
 </p>
@@ -53,14 +62,14 @@
 <dl><dd><span title="Time Track Dropdown menu"><img alt="Time Track dropdown menu.png" src="../m/images/9/9f/time_track_dropdown_menu.png" width="314" height="276" /></span></dd></dl>
 <p>Clicking in the panel containing the downward-pointing triangle (to the left of the track) opens the Time Track Dropdown Menu containing display choices for the track:
 </p>
-<ul><li> <b>Name...:</b> Displays the "Track Name" dialog where you can give the track a new name. </li>
+<ul><li> <b>Name:</b> Displays the "Track Name" dialog where you can give the track a new name. </li>
 <li> <b>Move Track Up:</b> Moves the track up.</li>
 <li> <b>Move Track Down:</b> Moves the track down.</li>
 <li> <b>Move Track to Top</b>: Moves track to become the topmost track in the project.</li>
 <li> <b>Move Track to Bottom</b>: Moves track to become the bottom track in the project.</li>
 <li> <b>Linear scale:</b> Sets the vertical scale of Time Track to a <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> display; this is the default.</li>
 <li> <b>Logarithmic scale:</b> Sets the vertical ruler to a <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> display.</li>
-<li> <b>Range...:</b> Opens dialogs where you can first set the minimum and then the maximum speed change value to be displayed on the vertical scale. Values are expressed in percentages relative to the "no change" value of 100%. Only integer values (whole numbers) can be set. The lowest speed change value that can be set is 10% and the highest speed change value that can be set is 1000% . </li>
+<li> <b>Range:</b> Opens dialogs where you can first set the minimum and then the maximum speed change value to be displayed on the vertical scale. Values are expressed in percentages relative to the "no change" value of 100%. Only integer values (whole numbers) can be set. The lowest speed change value that can be set is 10% and the highest speed change value that can be set is 1000% . </li>
 <li> <b>Logarithmic Interpolation:</b> The curve between control points is by default calculated using <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> <i><b><a href="glossary.html#interpolate" title="Glossary">interpolation</a></b></i>. Uncheck this option to use <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> interpolation between control points, so drawing an exactly straight line between points (assuming the vertical scale is set to "Linear").</li></ul>
 <p>Label tracks can also be moved up or down by clicking between the controls in the track's Track Control Panel then dragging upwards or downwards.   
 </p>
@@ -69,9 +78,8 @@
 </p>
 <dl><dd><span title="Time Track Vertical Scale Dropdown menu"><img alt="Time Track Vertical Scale context menu.png" src="../m/images/8/81/time_track_vertical_scale_context_menu.png" width="354" height="163" /></span></dd></dl>
 <p><br />
-</p><p><br />
 </p>
-<div class="example"><div id="warp"></div>
+<div id="warp"></div>
 <h2><span class="mw-headline" id="A_Tutorial_on_Time_Warping">A Tutorial on Time Warping</span></h2>
 <dl><dd><span title="Time Track with Audio Track below"><img alt="TimeTrackExample.png" src="../m/images/1/12/timetrackexample.png" width="765" height="311" /></span></dd></dl>
 <p><b>Key points about the image above:</b>
@@ -88,25 +96,17 @@
 </p>
 <ol><li> You must first have at least one audio track to manipulate.
 <li> Choose <span class="menu">Tracks &gt; Add New &gt; New Time Track</span>.
-<li> If you want to warp the speed by more than plus or minus 10%, open the Time Track Dropdown Menu and choose <b>Set Range...</b>. The dialog will appear twice, the first time to choose the lower limit of the range and the second time to choose the upper limit of the range.
+<li> If you want to warp the speed by more than plus or minus 10%, open the Time Track Dropdown Menu and choose <b>Set Range</b>. The dialog will appear twice, the first time to choose the lower limit of the range and the second time to choose the upper limit of the range.
 <dl><dd></dd></dl>
 <div class="note">
-<ul><li>For example if you set a Lower Speed Limit of 50%, you can make the audio play up to twice as slowly (an envelope point at the bottom of the Time Track would make the playback twice as slow, just like a <a href="change_speed.html" title="Change Speed">Change Speed</a> effect of -50%). </li>
-<li> If you set an Upper Speed Limit of 200%, you can make the audio play up to twice as fast (an envelope point at the top of the Time Track would double the playback speed, like a Change Speed effect of 100%).</div></li></ul>
-<li> When you hover your cursor over the warp line, the cursor changes to the <b>envelope cursor</b> &#160;<span title="Envelope cursor"><img alt="EnvelopePointer.png" src="../m/images/1/1b/envelopepointer.png" width="7" height="18" /></span>&#160;, which lets you shape the time warp line.  Creating one envelope point only changes the speed of the whole track by the same amount, just like the Change Speed effect. To make a speed change that varies over time you must create at least one more point. Thereafter when you drag a point the line on each side of that point moves to reflect your change. 
+<ul><li>For example if you set a Lower Speed Limit of 50%, you can make the audio play up to twice as slowly (an envelope point at the bottom of the Time Track would make the playback twice as slow, just like a <a href="change_speed.html" title="Change Speed">Change Speed and Pitch</a> effect of -50%). </li>
+<li> If you set an Upper Speed Limit of 200%, you can make the audio play up to twice as fast (an envelope point at the top of the Time Track would double the playback speed, like a Change Speed and Pitch effect of 100%).</div></li></ul>
+<li> When you hover your cursor over the warp line, the cursor changes to the <b>envelope cursor</b> &#160;<span title="Envelope cursor"><img alt="EnvelopePointer.png" src="../m/images/1/1b/envelopepointer.png" width="7" height="18" /></span>&#160;, which lets you shape the time warp line.  Creating one envelope point only changes the speed of the whole track by the same amount, just like the Change Speed and Pitch effect. To make a speed change that varies over time you must create at least one more point. Thereafter when you drag a point the line on each side of that point moves to reflect your change. 
 <li>You can press <span class="kbrd" style="background-color: #e0e0f0">Space</span> at any time to listen to how the warping sounds and change the points on the warp line further. 
 <li>If you wish to continue editing after completing your warp points, it is often advisable to click in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> of the audio track to <a href="audacity_selection.html" title="Audacity Selection">select</a> it <i>(hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and click to select multiple tracks)</i> then <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span>. This writes the <i><b><a href="glossary.html#resampling" title="Glossary">resampled</a></b></i> audio data directly to the project rather than resampling the speed-changed audio back to the current <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> in real-time. This may therefore make project playback more responsive.  
 <ul><li>The quality setting of the resampling library used for playing or rendering Time Tracks is chosen automatically by Audacity. Therefore changing the converter quality settings in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a> will not affect Time Tracks.</ul>
-<li>To use the speed-changed audio in other applications, choose <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span>, which opens the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio Dialog</a>.   
-</ol>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
-</td>
-<td align="left" valign="top"> Time Track is always active (and therefore modifies audio speed when playing or exporting) whenever it is visible in the project. This applies even after rendering the audio. Therefore after render (or as soon as you want to work with audio that you do not want to speed-change), use the <b>[X]</b> "Close" button to left of the Time Track to remove it.
-</td></tr></table></div>
+<li>To use the speed-changed audio in other applications, choose <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a>.
+&lt;/ol&gt;
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -115,7 +115,15 @@
 </td>
 <td align="left" valign="top">Older computers may be incapable of playing audio in real-time that makes use of a Time Track. However you can always export the file as a <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> and then play the WAV file later.
 </td></tr></table>
-</div></div>
+</div>
+</span></li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</ol>
 
 
 
@@ -193,7 +201,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Time_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Time_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

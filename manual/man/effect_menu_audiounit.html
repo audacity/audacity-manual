@@ -54,36 +54,36 @@
 </p>
 </td></tr></table></div>
 <h2><span class="mw-headline" id="Saving.2C_Exporting_and_Importing_Audio_Unit_Effect_Presets">Saving, Exporting and Importing Audio Unit Effect Presets</span></h2>
-<h3><span class="mw-headline" id="Save_Preset...">Save Preset...</span></h3>
-<p>To save the current effect settings as a User Preset, select <span class="menu">Save Preset...</span> from the Manage menu <span title="Manage menu"> <img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> in the effect dialog which brings up the following dialog:
+<h3><span class="mw-headline" id="Save_Preset">Save Preset</span></h3>
+<p>To save the current effect settings as a User Preset, select <span class="menu">Save Preset</span> from the Manage menu <span title="Manage menu"> <img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> in the effect dialog which brings up the following dialog:
 </p>
 <dl><dd><span title="Mac Save Audio Unit Preset dialog"><img alt="SavePresetMacDialog.png" src="../m/images/d/d5/savepresetmacdialog.png" width="249" height="100" /></span></dd></dl>
 <p>Type a name for the preset then click <span class="button">OK</span> after which the saved preset will appear in the "User Presets" list in the Manage menu.
 </p>
 <div id="export"></div>
-<h3><span class="mw-headline" id="Export...">Export...</span></h3>
+<h3><span class="mw-headline" id="Export">Export</span></h3>
 <div class="note">Before you can export a preset you must already have saved it as a User Preset. </div>
 <p>Each preset for Audio Unit effects is exported to a separate "<i>.aupreset&#160;</i>" file at <span class="path">/Users/&lt;yourUserName&gt;/Library/Audio/Presets/Apple/&lt;effectName&gt;/</span>. A presets file lets you move settings for a particular effect between computers.
-</p><p>To export a saved User Preset, select  <span class="menu">Export...</span> from the Manage menu 
+</p><p>To export a saved User Preset, select  <span class="menu">Export</span> from the Manage menu 
 <span title="Manage menu"><img alt="ManageEffectMenu.png" src="../m/images/9/92/manageeffectmenu.png" width="28" height="28" /></span>&#160; in the effect dialog which brings up the following dialog:
 </p>
 <dl><dd><span title="Export Audio Unit Presets dialog"><img alt="ExportAudioUnitPresetsDialog.png" src="../m/images/1/16/exportaudiounitpresetsdialog.png" width="250" height="204" /></span></dd></dl>
 <p>Select the user preset(s) you want to export then click <span class="button">OK</span> to export each selected preset to a file. If there is only one preset in the list you must still select it, or nothing will be exported.
 </p>
-<h3><span class="mw-headline" id="Import...">Import...</span></h3>
-<p>Select <span class="menu">Import...</span> from the Manage menu <span title="Manage menu"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> in the effect dialog which brings up the following dialog:
+<h3><span class="mw-headline" id="Import">Import</span></h3>
+<p>Select <span class="menu">Import</span> from the Manage menu <span title="Manage menu"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> in the effect dialog which brings up the following dialog:
 </p>
 <dl><dd><span title="Import Audio Unit Presets dialog"><img alt="ImportAudioUnitPresetsDialog.png" src="../m/images/2/22/importaudiounitpresetsdialog.png" width="456" height="184" /></span></dd></dl>
 <p>Select the preset(s) you want to import then click <span class="button">OK</span> to import each preset file as a User Preset. 
 </p>
 <div class="note">
-<p>Importing one or more presets does not load new settings into the effect. You must select one of the imported presets from <span class="menu">User Presets...</span> in the Manage menu 
+<p>Importing one or more presets does not load new settings into the effect. You must select one of the imported presets from <span class="menu">User Presets</span> in the Manage menu 
 <span title="Manage menu"><img alt="ManageEffectMenu.png" src="../m/images/9/92/manageeffectmenu.png" width="28" height="28" /></span>&#160; to load its settings into the effect.
 </p>
 </div> 
 <div id="au_options"></div>
 <h2><span class="mw-headline" id="Audio_Unit_Effect_Options">Audio Unit Effect Options</span></h2>
-<p>In the effect's dialog, click the <i>Manage</i> <span title="Manage menu button"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> button then choose <span class="button">Options... &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> to bring up the dialog illustrated below. When you change the options in this dialog, the changes apply only to the current effect that is open. All other Audio Unit effects will remain at the default options shown below until you change their options. 
+<p>In the effect's dialog, click the <i>Manage</i> <span title="Manage menu button"><img alt="Manage button icon W10.png" src="../m/images/3/38/manage_button_icon_w10.png" width="28" height="28" /></span> button then choose <span class="button">Options &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> to bring up the dialog illustrated below. When you change the options in this dialog, the changes apply only to the current effect that is open. All other Audio Unit effects will remain at the default options shown below until you change their options. 
 </p>
 <dl><dd><span title="Audio Unit Effect Settings dialog"><img alt="AudioUnitEffectSettings.png" src="../m/images/1/1e/audiouniteffectsettings.png" width="692" height="345" /></span></dd></dl>
 <ul><li> <b>Latency Compensation:</b> This setting (enabled by default) compensates for waveform delay caused by Audio Unit effects which preload audio data to a buffer. Compensation may not work in all cases, and for it to work, any compensation or latency reporting settings in the effect itself must be enabled. If compensation fails or if this Audacity setting is unchecked, effects that buffer audio will insert silence at the start of the processed selection and remove a corresponding amount of audio from the end of the selection. Enabling or disabling compensation is effective immediately. </li>
@@ -167,7 +167,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Effect_Menu:_AudioUnit">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Effect_Menu:_AudioUnit">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

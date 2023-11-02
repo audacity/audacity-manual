@@ -34,15 +34,24 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>Auto Duck</b></i> reduces (<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Ducking">ducks</a>) the volume of one or more selected tracks whenever the volume of a single unselected "control track" placed underneath reaches a particular threshold level. <p>The effect can be used to create voice-overs for podcasts or DJ sets, for automatic "ramping" of background music in radio productions and for turning down a voice in original language as soon as its translation kicks in.</p></div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt;  Volume and Compression &gt; Auto Duck...</span></dd>
+<div class="intro"><i><b>Auto Duck</b></i> reduces (<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Ducking">ducks</a>) the volume of one or more selected tracks whenever the volume of a single unselected "control track" placed underneath reaches a particular threshold level. <p>The effect can be used to create voice-overs for podcasts or DJ sets, for automatic "ramping" of background music in radio productions and for turning down a voice in original language as soon as its translation kicks in.</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div> </div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt;  Volume and Compression &gt; Auto Duck</span></dd>
 <dd><span title="Auto Duck dialog"><img alt="Auto Duck 3-2-0.png" src="../m/images/d/da/auto_duck_3_2_0.png" width="612" height="517" /></span></dd></dl>
 <div id="prep"></div>
 <h2><span class="mw-headline" id="Preparation">Preparation</span></h2>
 <ol><li> <a href="audacity_selection.html" title="Audacity Selection">Select</a> the track(s) or region(s) whose volume you want to modify (for example, a background music track). </li>
 <li> Deselect the track that is to act as the control track (for example, a spoken commentary). Note that the first unselected track underneath the selected track(s) acts as the control track. </li>
 <li> Place the tracks so that at least one of the selected tracks to be modified is above the unselected control track. Any other tracks below the unselected control track will also be modified if they are selected. You can use the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a> to move tracks up or down if needed. 
-<ul><li> The control track should be properly synchronized with the tracks to be "ducked" - you can use <a href="tools_toolbar.html#Time_Shift_F5" title="Tools Toolbar">Time Shift Tool</a> to align the tracks with each other as required. </li></ul></li>
+<ul><li> The control track should be properly synchronized with the tracks to be "ducked" </li></ul></li>
 <li> Choose "Auto Duck" from the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a>. </li></ol>
 <p>Auto Duck analyzes the control track first of all, then applies the effect to the selected track(s). This second stage takes longer to complete than the first, so the estimated time remaining in the progress bar may be an underestimate until the later stages of processing. 
 </p>
@@ -138,7 +147,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Auto_Duck">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Auto_Duck">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

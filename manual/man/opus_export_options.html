@@ -33,29 +33,43 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Opus_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><b><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Opus_(audio_format)">Opus</a></b> file format (also called "Ogg Opus") is an Open Source <i><b><a href="glossary.html#compressed_format" title="Glossary">size-compressed</a></b></i> and  <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> audio format developed for Internet streaming. It uses both SILK (used by Skype) and CELT (from Xiph.Org) codecs and in Audacity supports variable bit rates from 6 kb/s to 256 kb/s.<p>For further details on OPUS see <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Opus_(audio_format)">this Wikpedia page</a>. </p> </div> 
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> then choosing <b>Opus (OggOpus) Files (FFmpeg)</b> from the <b>Save as type</b> dropdown menu.</dd></dl>
-<dl><dd><span title="FLAC Options at the bottom of the Export Audio dialog"><img alt="Export opus dialog 3-0-0.png" src="../m/images/7/70/export_opus_dialog_3_0_0.png" width="715" height="623" /></span></dd></dl>
-<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>Opus (OggOpus) Files (FFmpeg)</b> from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Opus_(audio_format)">Opus</a></b> file format (also called "Ogg Opus") is an Open Source <i><b><a href="glossary.html#compressed_format" title="Glossary">size-compressed</a></b></i> and  <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> audio format developed for Internet streaming. It uses both SILK (used by Skype) and CELT (from Xiph.Org) codecs and in Audacity supports variable bit rates from 6 kbps to 256 kbps.<p>For further details on OPUS see <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Opus_(audio_format)">this Wikpedia page</a>. </p> </div> 
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>Opus (OggOpus) Files (FFmpeg)</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="Opus Export Audio dialog"><img alt="Export Opus 3-4-0.png" src="../m/images/f/fc/export_opus_3_4_0.png" width="497" height="614" /></span></dd></dl>
 <p><br />
 </p>
 <div id="setup"></div>
-<h2><span class="mw-headline" id="Opus_Export_Setup">Opus Export Setup</span></h2>
-<p>The <b>Format options</b> offer different ways to control the trade-off between the size and quality of the exported files. 
+<h2><span class="mw-headline" id="Audio_Options">Audio Options</span></h2>
+<p>These offer different ways to control the trade-off between the size and quality of the exported files. 
 </p>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 48000 Hz, which is DVD quality.
+</p>
+<div id="bitrate"></div>
 <h3><span class="mw-headline" id="Bit_Rate">Bit Rate</span></h3>
 <p>Opus Export in Audacity offers several different bit rate options for the export ranging from 6 kbps up to 256 kbps.  The default is 128 kbps, Opus at 128 kbps (VBR) is pretty much <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Transparency_(data_compression)">transparent</a>.  
 </p><p>Opus at 64-96 kbps shows slightly superior quality compared to AAC and significantly better quality compared to Vorbis and MP3 at the same bit rate.
 </p>
-<h3><span class="mw-headline" id="Compression">Compression</span></h3>
+<div id="compression"></div>
+<h3><span class="mw-headline" id="Quality">Quality</span></h3>
 <p>This controls the degree of compression used ranging from 1 to 10 <i>(default)</i>.
 </p>
 
+<div id="duration"></div>
 <h3><span class="mw-headline" id="Frame_Duration">Frame Duration</span></h3>
 <p>The Frame Duration ranges from 2.5 ms to 60 ms. The default is 20 ms.
 </p><p>Opus uses a 20 ms frame size by default, as it gives a decent mix of low latency and good quality, the default 20 ms frames are a good choice for most applications.
 </p>
+<div id="vbr"></div>
 <h3><span class="mw-headline" id="VBR_Mode">VBR Mode</span></h3>
 <p>This is the mode used for Variable Bit Rate.  This can be:
 </p>
@@ -71,12 +85,14 @@
 <td align="left" valign="top">Opus at 128 kbps VBR <i>(default settings)</i> is pretty much <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Transparency_(data_compression)">transparent</a>.
 </td></tr></table>
 </div>
-<h3><span class="mw-headline" id="Application">Application</span></h3>
+<div id="application"></div>
+<h3><span class="mw-headline" id="Optimize_for">Optimize for</span></h3>
 <p>This defines what use you will be making of the exported file
 </p>
 <ul><li><b>VOIP:</b>  <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Voice_over_IP">Voice over IP</a> optimized for voice</li>
 <li><b>Audio:</b> <i>(default)</i>: optimized for audio</li>
 <li><b>Low Delay:</b> useful for communication purposes (like voice calls, video conferencing or making music via the Internet), for which not only high compression ratios are necessary, but low latency is critical too.</li></ul>
+<div id="cutoff"></div>
 <h3><span class="mw-headline" id="Cutoff">Cutoff</span></h3>
 <p>This can range from <b>Disabled</b> <i>(default)</i> to <b>Fullband</b>.
 </p><p>The cutoff option sets the bandwidth of the encoder \xe2\x80\x93 bandwidth meaning the highest frequency that will be encoded.
@@ -94,21 +110,7 @@
 <p><br />
 </p>
 <div id="rates"></div>
-<h2><span class="mw-headline" id="Opus_Export_rates">Opus Export rates</span></h2>
-<p>Opus export will only operate with a limited range of <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Project Sample Rates</a> ranging from 48000 Hz down to 8000 Hz.
-If your Project Sample Rate is not set to one of: 8000, 12000. 16000, 24000 or 48000 you will see the following error message
-</p>
-<dl><dd><span title="Opus invalid sample rate dialog"><img alt="OPUS Invalid Sample Rate.png" src="../m/images/c/c6/opus_invalid_sample_rate.png" width="521" height="211" /></span></dd></dl>
-<p>This allows you to choose a temporary rate for project resampling for the Export to continue.
-</p>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
-</td>
-<td align="left" valign="top">The default project sample rate in Audacity is <b>44,100 Hz</b> which is <i><b>not</b></i> one of the sample rates that Opus export will work at.
-</td></tr></table></div>
 
 
 
@@ -186,7 +188,7 @@ If your Project Sample Rate is not set to one of: 8000, 12000. 16000, 24000 or 4
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Opus_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Opus_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

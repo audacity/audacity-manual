@@ -81,7 +81,7 @@
 </p>
 <pre>  (setf mylist (1 2 3 4 5))  &lt;--  error!
 </pre>
-<p>The reason this doesn't work is that whenever Nyquist sees an S-expression, it tries to evaluate it as a function unless you tell it otherwise. Since there's no function named \xe2\x80\x9c1\xe2\x80\x9d that takes arguments <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(2 3 4 5)</span>, this will generate an error. To tell Lisp that you want to treat an S-expression literally, and not to evaluate it as a function, you <i>quote</i> it. In Nyquist, you can quote a list by putting a single quotation mark before it, like this:
+<p>The reason this doesn't work is that whenever Nyquist sees an S-expression, it tries to evaluate it as a function unless you tell it otherwise. Since there's no function named "1" that takes arguments <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">(2 3 4 5)</span>, this will generate an error. To tell Lisp that you want to treat an S-expression literally, and not to evaluate it as a function, you <i>quote</i> it. In Nyquist, you can quote a list by putting a single quotation mark before it, like this:
 </p>
 <pre>  (setf mylist '(1 2 3 4 5))
 </pre>
@@ -481,7 +481,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Introduction_to_Nyquist_and_Lisp_Programming">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Introduction_to_Nyquist_and_Lisp_Programming">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

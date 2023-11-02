@@ -58,7 +58,7 @@
 </p>
 <h3><span class="mw-headline" id="Recording_Meter_Toolbar_inactive">Recording Meter Toolbar inactive</span></h3>
 <dl><dd><a href="toolbars_overview.html#upper_tooldock" title="Recording Meter Toolbar inactive - click on the image to see this toolbar displayed in the default context of the upper tooldock layout"><img alt="Recording Meter Toolbar inactive - click on the image to see this toolbar displayed in the default context of the upper tooldock layout" src="../m/images/e/ea/recording_meter_quiescent.png" width="445" height="29" /></a></dd></dl>
-<p>Audacity always launches with input monitoring off. Right-click in the recording meter and select <b>Start Monitoring</b> to start monitoring, or when you press the <img alt="The Record button" src="../m/images/e/e8/record.png" title="The Record button" width="16" height="16" /> Record button the meter will activate.
+<p>Audacity always launches with input monitoring off. Right-click in the recording meter and select <b>Enable Silent Monitoring</b> to start monitoring, or when you press the <img alt="The Record button" src="../m/images/e/e8/record.png" title="The Record button" width="16" height="16" /> Record button the meter will activate.
 </p>
 <h3><span class="mw-headline" id="Recording_Meter_Toolbar_in_use">Recording Meter Toolbar in use</span></h3>
 <dl><dd><a href="toolbars_overview.html#upper_tooldock" title="Recording Meter Toolbar in use, default size - click on the image to see this toolbar displayed in the default context of the upper tooldock layout"><img alt="Recording Meter Toolbar in use, default size - click on the image to see this toolbar displayed in the default context of the upper tooldock layout" src="../m/images/7/7a/recording_toolbar_in_use.png" width="432" height="30" /></a></dd></dl>
@@ -72,7 +72,7 @@
 <h3><span class="mw-headline" id="Playback_Meter_Toolbar_in_use">Playback Meter Toolbar in use</span></h3>
 </li></ol>
 <dl><dd><a href="toolbars_overview.html#upper_tooldock" title="Playback Meter Toolbar in use, default size - click on the image to see this toolbar displayed in the default context of the upper tooldock layout"><img alt="Playback Meter Toolbar in use, default size - click on the image to see this toolbar displayed in the default context of the upper tooldock layout" src="../m/images/7/7c/playback_toolbar_in_use_clipped_signal.png" width="434" height="30" /></a></dd></dl>
-<p>The Playback Meter will activate when you start playback, or if you start Recording with <b>Software Playthrough</b> turned on in the <a href="transport_menu.html#playthrough" title="Transport Menu">Transport</a> menu.
+<p>The Playback Meter will activate when you start playback, or if you start Recording with <b>Enable audible input monitoring</b> turned on in the <a href="transport_menu.html#playthrough" title="Transport Menu">Transport</a> menu.
 </p><p>The orange color displayed here warns that the signal was too "hot" or becoming too "hot" (approaching 0 dB).  The red bar at the right of both channels indicates that <a href="glossary.html#clipping" title="Glossary">clipping</a> has occurred at some stage while playing.  
 </p><p>Moving the slider will control the volume delivered to your speakers but will not affect the amplitude of the audio.
 </p><p><br />
@@ -82,13 +82,13 @@
 <p>Clicking on the microphone or speaker icons in the Meter toolbars will open a dropdown menu with the Meter Options dialog specific to that meter. Another way to access the menu is by right-clicking anywhere in the meter. 
 </p><p>The dropdown menu on the Recording Meter additionally lets you enable or disable monitoring of the recording level without the need to record a track. 
 </p>
-<dl><dd><span title="Recording Meter dropdown menu"><img alt="Recording meter dropdown menu.png" src="../m/images/5/5f/recording_meter_dropdown_menu.png" width="228" height="89" /></span></dd></dl>
+<dl><dd><span title="Recording Meter dropdown menu"><img alt="Recording meter dropdown menu.png" src="../m/images/5/5f/recording_meter_dropdown_menu.png" width="294" height="76" /></span></dd></dl>
 <h3><span class="mw-headline" id="Monitoring">Monitoring</span></h3>
-<ul><li> <b>Start Monitoring/Stop Monitoring</b> (Recording Meter only): Starts/stops visual monitoring of the recording level without recording a track. </li>
-<li>If you want to also hear the input without recording it, turn on <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough</a></span>.</li></ul>
+<ul><li> <b>Enable Silent Monitoring</b> (Recording Meter only): Starts/stops visual monitoring of the recording level without recording a track. </li>
+<li>If you want to also hear the input without recording it, turn on <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Enable audible input monitoring</a></span>.</li></ul>
 <div id="options"></div>
 <h3><span class="mw-headline" id="Options">Options</span></h3>
-<p>Selecting <b>Options...</b> from the menu opens the Meter Options dialog which lets you change that meter's style, visual orientation, the scale format and more:
+<p>Selecting <b>Options</b> from the menu opens the Meter Options dialog which lets you change that meter's style, visual orientation, the scale format and more:
 </p>
 <dl><dd><span title="Meter Options for Recording Meter"><img alt="Meter Options dialog.png" src="../m/images/c/c3/meter_options_dialog.png" width="331" height="304" /></span></dd></dl>
 <ul><li><b>Refresh Rate:</b> Use this to set the refresh rate for this meter. A higher rate makes the meter show more frequent changes. Too high a rate can cause audio breakup on slower machines.</li>
@@ -110,7 +110,7 @@
 <li> <b>RP: Recent Peak Level.</b> This colored bar indicates the highest peak level attained in the last few seconds in that channel. The actual color shown depends on the Current Peak level coloring at that time. These bars disappear after playback, recording or monitoring is stopped. You can also left-click inside the meter bars while they are active to manually reset the Recent Peak bars for that meter. </li>
 <li> <b>MP: Maximum Peak Level.</b> The blue bar indicates the maximum peak level attained in that channel during the current playback or recording session. These bars remain visible after playback, recording or monitoring is stopped, and are reset when a new playback, recording or monitoring session is started. You can also left-click inside the meter bars while they are active to manually reset the Maximum Peak bars for that meter.</li>
 <li> <b>Clip: <i><a href="glossary.html#clipping" title="Glossary">Clipping</a></i> indicator.</b> The red bar to right of the maximum value of the scale appears as soon as there are four or more consecutive <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i> in that channel of audio exceeding that maximum. Once they have appeared, the clipping bars remain visible throughout that playback or recording/monitoring session. They are thus not an indication of current clipping, but an absolute indication that clipping occurred somewhere in the track. The clipping bars remain visible after playback, recording or monitoring is stopped, and are reset when a new playback, recording or monitoring session is started. You can also left-click inside the meter bars while they are active to manually reset the Clipping bars for that meter.</li></ul>
-<div class="note">To find the exact points where clipping exists in a track, enable <span class="menu">View &gt; <a href="view_menu.html#showclippingonoff" title="View Menu">Show Clipping</a></span> or run <span class="menu">Analyze &gt; <a href="analyze_menu.html#Find_Clipping..." title="Analyze Menu">Find Clipping...</a></span>.</div>
+<div class="note">To find the exact points where clipping exists in a track, enable <span class="menu">View &gt; <a href="view_menu.html#showclippingonoff" title="View Menu">Show Clipping in Waveform</a></span> or run <span class="menu">Analyze &gt; <a href="analyze_menu.html" title="Analyze Menu">Find Clipping</a></span>.</div>
 <p><br />
 </p>
 <div id="channels"></div>
@@ -129,16 +129,16 @@
 <p>It is good practice to <a href="tutorial_making_a_test_recording.html" title="Tutorial - Making a Test Recording">test the correct recording level</a> before recording for real. <i>Monitoring</i> lets you do this without actually having to record and then delete a test track. It also verifies that you are recording the input source you expect. 
 </p><p>To turn monitoring on and off:
 </p>
-<ul><li>Left-click on the microphone icon or right-click on the recording meter and select <b>Start Monitoring</b> to turn monitoring on. </li>
-<li>Click again and select <b>Stop Monitoring</b> to turn it off.</li></ul>
-<dl><dd><span title="Recording Meter dropdown menu"><img alt="Recording meter dropdown menu.png" src="../m/images/5/5f/recording_meter_dropdown_menu.png" width="228" height="89" /></span></dd></dl>
+<ul><li>Left-click on the microphone icon or right-click on the recording meter and select <b>Enable Silent Monitoring</b> to turn monitoring on. </li>
+<li>Click again and select again <b>Enable Silent Monitoring</b> to turn it off.</li></ul>
+<dl><dd><span title="Recording Meter dropdown menu"><img alt="Recording meter dropdown menu.png" src="../m/images/5/5f/recording_meter_dropdown_menu.png" width="294" height="76" /></span></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">You will probably want to hear the monitored audio as well as see it. To do this, enable "<b>Software Playthrough</b>" in the <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> menu.
+<td align="left" valign="top">You will probably want to hear the monitored audio as well as see it. To do this, enable "<b>Enable audible input monitoring</b>" in the <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> menu.
 </td></tr></table>
 </div> 
 <p><br />
@@ -147,7 +147,7 @@
 <h2><span class="mw-headline" id="Adjusting_playback_level">Adjusting playback level</span></h2>
 <p>The playback level displayed in Meter Toolbar reflects the combined amplitude of all the <a href="audio_tracks.html" title="Audio Tracks">tracks</a> in your project, in other words, the level of the <a href="mixing.html" title="Mixing">mix</a> as determined by the <a href="audio_tracks.html#gain" title="Audio Tracks">gain sliders</a> on each track. 
 </p><p>The playback volume slider on The Playback Meter toolbar affects only the volume delivered to your speaker, it does <i><b>not</b></i> affect the amplitude of the project's audio. 
-</p><p>The levels shown on the meter indicate what the loudness of the project audio would be were you to <a href="file_menu.html#Export..." title="File Menu">export</a> it as an audio file.
+</p><p>The levels shown on the meter indicate what the loudness of the project audio would be were you to <a href="file_menu.html#export" title="File Menu">Export</a> it as an audio file.
 </p><p><br />
 </p>
 <div id="resizing"></div>
@@ -262,7 +262,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Meter_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Meter_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -33,9 +33,30 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Custom_FFmpeg_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The custom FFmpeg exporter is available if you have installed the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>. The dialog lets you export a specific codec in a specific format container.<p>The <b>Custom FFmpeg format options</b> dialog appears in response to the <span class="button">Open custom FFmpeg format options</span> button in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> or <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> dialog's Options pane when you have chosen <b>Custom FFmpeg Export</b> in the <b>Save as type</b> dropdown.</p></div>
-<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; Export &gt; Export Audio...</span> -&gt; Save as type: <b>Custom FFmpeg Export</b> -&gt; <span class="button">Open custom FFmpeg export options</span></dd>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The custom FFmpeg exporter is available if you have installed the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg library</a>. The dialog lets you export a specific codec in a specific format container.<p>The <b>Custom FFmpeg format options</b> dialog appears in response to the <span class="button">Open custom FFmpeg format options</span> button in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> when you have chosen <b>Custom FFmpeg Export</b> in the <b>Save as type</b> dropdown.</p></div>
+<p><br />
+</p>
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>Custom FFmpeg Export</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="Custom FFmpeg Export dialog"><img alt="Export Custom FFmpeg 3-4-0.png" src="../m/images/c/c9/export_custom_ffmpeg_3_4_0.png" width="497" height="493" /></span></dd></dl>
+<div id="options"></div>
+<h2><span class="mw-headline" id="Audio_Options">Audio Options</span></h2>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 44100 Hz, which is CD quality.
+</p>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Custom_FFmpeg_format_option">Custom FFmpeg format option</span></h3>
+<dl><dd>Clicking the <span class="button">Open Custom FFmpeg format option</span> button opens the following dialog:</dd>
 <dd><span title="Custom FFmpeg format options"><img alt="Custom FFmpeg format options W10.png" src="../m/images/9/90/custom_ffmpeg_format_options_w10.png" width="676" height="533" /></span></dd></dl>
+<div id="presets"></div>
 <h2><span class="mw-headline" id="Presets">Presets</span></h2>
 <p>You can save and load presets for custom FFmpeg export choices. You can also export already saved presets to an external XML file and import presets from this file, thus allowing you to share presets with other users.
 </p><p>Select both a format and a codec from the respective lists. Then click on the black triangle at the right of the text box to open the <b>Preset:</b> dropdown menu and select the saved preset required. You will also then need to use the <span class="button">Load Preset</span> button for the selected preset to become active. 
@@ -48,10 +69,10 @@
 <ul><li> <span class="button">Delete Preset</span>: Removes the selected preset in the Preset: dropdown from Audacity's internal storage. </li>
 <li> <span class="button">Import Presets</span>: Imports an existing set of one or more presets from an external XML file. Imported presets will be added to your existing list of presets. If an imported preset has the same name as an existing preset, Audacity will ask if you want to overwrite that existing preset with the settings of the imported preset. </li>
 <li> <span class="button">Export Presets</span>: Exports all the currently saved presets as an external XML file to a file name and folder of your choice. To export a new or modified preset you must first use <span class="button">Save Preset</span> to save it.</li></ul>
-<h2><span class="mw-headline" id="Format_and_Codec_pair_selected_for_export">Format and Codec pair selected for export</span></h2>
-<p>The line below the Presets controls always shows the "Format:" and "Codec:" that will be used for the export, exactly as selected in the Formats and Codecs lists underneath. If you load a preset, this line will change to the format and codec that were saved by that preset.   
+<h2><span class="mw-headline" id="Current_Format_and_Codec_pair_selected_for_export">Current Format and Codec pair selected for export</span></h2>
+<p>The line below the Presets controls always shows the <b>Current Format</b> and <b>Current Codec</b> that will be used for the export, exactly as selected in the Formats and Codecs lists underneath. If you load a preset, this line will change to the format and codec that were saved by that preset.   
 </p><p>In the image at the top of this page, the format/codec line is empty because no format or codec selection has yet been made. 
-</p><p>The actual formats and codecs available in the lists depend entirely on the options with which your copy of FFmpeg has been compiled.   
+</p><p>The actual formats and codecs available in the lists depend entirely on the options with which your copy of FFmpeg has been compiled.
 </p>
 <h2><span class="mw-headline" id="List_of_Formats">List of Formats</span></h2>
 <p>In the Formats list box on the left of the dialog, click to select the format you want to use. Note that selecting any particular format may reduce the adjacent list of codecs, because not all codecs work with all formats.
@@ -168,7 +189,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Custom_FFmpeg_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Custom_FFmpeg_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

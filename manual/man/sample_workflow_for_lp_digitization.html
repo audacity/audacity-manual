@@ -89,7 +89,7 @@
 </p>
 <div id="levels"></div>
 <h3><span class="mw-headline" id="4._Recording_levels">4. Recording levels</span></h3>
-<p>Read this page about making a <a href="tutorial_making_a_test_recording.html" title="Tutorial - Making a Test Recording">test recording</a> then make a test recording of portions of the LP (or even a whole side) so as to check the levels. It is important to avoid any <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> during the recording!  Try to aim for a maximum peak of around \xe2\x80\x936 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> (or 0.5 if you have your meter set to linear rather than dB).
+<p>Read this page about making a <a href="tutorial_making_a_test_recording.html" title="Tutorial - Making a Test Recording">test recording</a> then make a test recording of portions of the LP (or even a whole side) so as to check the levels. It is important to avoid any <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> during the recording.  Try to aim for a maximum peak of around \xe2\x80\x936 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> (or 0.5 if you have your meter set to linear rather than dB).
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -118,7 +118,7 @@
 <div id="lf"></div>
 <h3><span class="mw-headline" id="8._Reduce_subsonic_rumble_and_low_frequency_noise">8. Reduce subsonic rumble and low frequency noise</span></h3>
 <div class="note">This step can probably be omitted given a flat record and high quality turntable, arm and cartridge.</div>
-<p>Use <span class="menu">Effect &gt; <a href="high_pass_filter.html" title="High-Pass Filter">High Pass Filter...</a></span> with a setting of 24 dB per octave <a href="glossary.html#roll-off" title="Glossary">roll-off</a>, and a cutoff frequency of 20 - 30 Hz to reduce unwanted subsonic frequencies which can cause clicks when editing. If your record is warped, this will definitely generate unwanted subsonics, in which case consider a lower cutoff frequency.
+<p>Use <span class="menu">Effect &gt; <a href="high_pass_filter.html" title="High-Pass Filter">High Pass Filter</a></span> with a setting of 24 dB per octave <a href="glossary.html#roll-off" title="Glossary">roll-off</a>, and a cutoff frequency of 20 - 30 Hz to reduce unwanted subsonic frequencies which can cause clicks when editing. If your record is warped, this will definitely generate unwanted subsonics, in which case consider a lower cutoff frequency.
 </p>
 <div id="clicks"></div>
 <h3><span class="mw-headline" id="9._Remove_clicks_and_pops">9. Remove clicks and pops</span></h3>
@@ -210,12 +210,12 @@
 </p>
 <div id="wavs"></div>
 <h3><span class="mw-headline" id="18._Export_a_set_of_WAVs">18. Export a set of WAVs</span></h3>
-<p>Use <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> to produce a set of WAVs for each track on the LP at 44,100 Hz 16-bit PCM stereo. Audacity will down-sample on export from 32-bit to 16-bit. Shaped <a href="dither.html" title="Dither">dither</a> noise will be applied by default to cover any defects (clicky noise) that may result from the conversion from 32-bit to 16-bit. Advanced users can change the type of [[Dither|dither], or turn it off, in <a href="quality_preferences.html#conversion" title="Quality Preferences">Quality Preferences</a>.
+<p>Use <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> and choose <a href="export_multiple.html" title="Export Multiple">Multiple Files</a> to produce a set of WAVs for each track on the LP at 44,100 Hz 16-bit PCM stereo. Audacity will down-sample on export from 32-bit to 16-bit. Shaped <a href="dither.html" title="Dither">dither</a> noise will be applied by default to cover any defects (clicky noise) that may result from the conversion from 32-bit to 16-bit. Advanced users can change the type of [[Dither|dither], or turn it off, in <a href="quality_preferences.html#conversion" title="Quality Preferences">Quality Preferences</a>.
 </p><p>In order to facilitate later retrieval and use, place all the files for a particular album in a specifically named folder for that album.
 </p>
 <div id="labex"></div>
 <h3><span class="mw-headline" id="19._Export_Labels">19. Export Labels</span></h3>
-<p>Some users advise a final step of exporting a file containing the labels.  Use <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportlabels" title="File Menu: Export">Export Labels...</a></span> This produces a text file that you can later re-import using <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#labels" title="File Menu: Import">Labels...</a></span> should you wish to re-edit from the raw capture file that you backed up earlier in the workflow.
+<p>Some users advise a final step of exporting a file containing the labels.  Use <span class="menu">File &gt; Export Other &gt; <a href="file_menu_export_other.html" title="File Menu: Export Other">Export Labels</a></span> This produces a text file that you can later re-import using <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#labels" title="File Menu: Import">Labels</a></span> should you wish to re-edit from the raw capture file that you backed up earlier in the workflow.
 </p>
 <div id="backup"></div>
 <h3><span class="mw-headline" id="20._Backup">20. Backup</span></h3>
@@ -322,7 +322,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_LP_digitization">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Sample_workflow_for_LP_digitization">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

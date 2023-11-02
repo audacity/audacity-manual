@@ -37,8 +37,27 @@
 <div class="intro"><b>Filter Curve EQ</b> is an equalization tool, it is an <a href="glossary.html#fft" title="Glossary">FFT</a> (Fast Fourier Transform) filter.   Equalization, is a way of manipulating sounds by <i><b><a href="glossary.html#frequency" title="Glossary">Frequency</a></b></i>.  It allows you to increase the volume of some frequencies and reduce others. This is a more advanced form of the <i>EQ</i> and <i>Tone</i> controls on many audio systems. 
 <p>As an example of equalization, the curve shown below changes the balance of high and low frequencies in the audio to make it sound like an AM radio broadcast.  High frequencies (above 6000 Hz) and low frequencies (below 100 Hz) are reduced in volume by 20 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>.
 </p>
-<div class="note">Equalization is also available in a "<b>Slider</b>" mode, accessed via <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ...</a></span> </div> </div> 
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; EQ and Filters &gt; Filter Curve EQ...</span></dd>
+<div class="note">Equalization is also available in a "<b>Slider</b>" mode, accessed via <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span> </div> 
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">If you apply this effect with an <a href="envelope_tool.html" title="Envelope Tool"><b>envelope</b></a> present then there is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/5099"><b>bug</b></a> whereby the envelope is removed and the audio reverts to its full amplitude state prior to the effect being applied.
+</td></tr></table>
+</div>
+</div> 
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; EQ and Filters &gt; Filter Curve EQ</span></dd>
 <dd><span title="The Filter Curve dialog"><img alt="Filter Curve EQ 3-2-0.png" src="../m/images/7/73/filter_curve_eq_3_2_0.png" width="889" height="480" /></span></dd></dl>
 <p><br />
 </p>
@@ -64,7 +83,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">No account is taken of whether your equalization curve will result in the selection being amplified beyond the <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> (distortion) level.<p> If your curve amplifies any frequencies, especially the lower frequencies which are normally the loudest, <span class="menu">Effect&#160;&gt;&#160;<a href="effect_menu.html#Normalize..." title="Effect Menu">Normalize</a></span> the track(s) first to -3 dB or lower.</p><p> If necessary you can always <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> the Equalization, Normalize again to a lower level, then re-apply Equalization.</p>
+<td align="left" valign="top">No account is taken of whether your equalization curve will result in the selection being amplified beyond the <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> (distortion) level.<p> If your curve amplifies any frequencies, especially the lower frequencies which are normally the loudest, <span class="menu">Effect&#160;&gt;&#160;<a href="effect_menu.html#normalize" title="Effect Menu">Normalize</a></span> the track(s) first to -3 dB or lower.</p><p> If necessary you can always <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> the Equalization, Normalize again to a lower level, then re-apply Equalization.</p>
 </td></tr></table></div>
 <p><br />
 </p>
@@ -95,10 +114,10 @@
 </p>
 <div id="limitations"></div>
 <h2><span class="mw-headline" id="Limitations">Limitations</span></h2>
-<ul><li> To process Equalization, all tracks in the project must have the same sample rate. To change the sample rate of a track without affecting speed or pitch, use <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample...</a></span>.</li>
+<ul><li> To process Equalization, all tracks in the project must have the same sample rate. To change the sample rate of a track without affecting speed or pitch, use <span class="menu">Tracks &gt; <a href="tracks_menu.html#resample" title="Tracks Menu">Resample</a></span>.</li>
 <li> Filter Curve EQ supports a maximum of 200 control points.</li></ul>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
-<p><a href="graphic_eq.html" title="Graphic EQ"><b>&gt;</b>&#160; Graphic EQ...</a> <br />
+<p><a href="graphic_eq.html" title="Graphic EQ"><b>&gt;</b>&#160; Graphic EQ</a> <br />
 </p><p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
 </p>
@@ -178,7 +197,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Filter_Curve_EQ">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Filter_Curve_EQ">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

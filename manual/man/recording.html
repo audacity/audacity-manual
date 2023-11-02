@@ -78,7 +78,7 @@
 <p>To listen to what you are recording you have two options.
 </p>
 <ul><li>If you computer's sound control panel supports sending the audio input to the computer's audio output then make this setting there.</li>
-<li>If that is not possible, click on <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Software Playthrough (on/off)</a></span> so that it is checked.</li></ul>
+<li>If that is not possible, click on <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Enable audible input monitoring</a></span> so that it is checked.</li></ul>
 <p>Alternatively, if you are using an external audio interface or mixer you may be able to monitor the signal directly from that device.
 </p><p>For further information on setting up see: <a href="audacity_setup_and_configuration.html" title="Audacity Setup and Configuration">Audacity Setup and Configuration</a>.  
 </p><p>Detailed step-by-step instructions for setting up for recording are provided in the <a href="tutorial_your_first_recording.html" title="Tutorial - Your First Recording">Your First Recording</a> and the <a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD">Copying tapes, LPs or MiniDiscs</a> tutorials.
@@ -89,7 +89,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">As soon as you have made a recording it is strongly recommended to <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> it immediately to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
+<td align="left" valign="top">As soon as you have made a recording it is strongly recommended to use <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> to export it immediately to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.
 </td></tr></table>
 </div>
 <p><br />
@@ -102,8 +102,8 @@
 <div class="note">This requires that the number of recording channels (mono or stereo) matches the selected track. In other cases, it appends the first track (or adjacent tracks) that support the number of channels being recorded. </div>
 <p>When recording like this, at the end of an existing recording, Audacity will place a <b><a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Clip</a></b> line at the junction between the two recordings <i>(as in the image below)</i> to aid you in separating them later if required.  You can remove the clip line, if not required, simply by clicking on it <a href="audacity_tracks_and_clips.html#join" title="Audacity Tracks and Clips">joining</a> the two clips.
 </p>
-<dl><dd><span title="Appended stereo recording showing a Split line at the end of the previous recording"><img alt="Appended recording with Split line red pinned indicator.png" src="../m/images/2/22/appended_recording_with_split_line_red_pinned_indicator.png" width="762" height="231" /></span></dd>
-<dd><b>Stereo track with appended recording showing a Split line at the end of the previous recording, here shown at 51.5 seconds</b></dd></dl>
+<dl><dd><span title="Appended stereo recording showing a Split line at the end of the previous recording"><img alt="Appended recording with Split line red pinned indicator.png" src="../m/images/2/22/appended_recording_with_split_line_red_pinned_indicator.png" width="755" height="243" /></span></dd>
+<dd><b>Stereo track with appended recording showing a Split line at the end of the previous recording, here shown at 51.9 seconds</b></dd></dl>
 <p>If you have your cursor positioned beyond the end of the existing track and then press Record, Audacity will start the recording from that cursor position and back-fill to the end of the existing audio with silence.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -115,6 +115,10 @@
 <td align="left" valign="top">Alternatively, instead of stopping the recording, you can click the <b>Pause</b> button <img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> to pause recording, or use the <span class="kbrd" style="background-color: #e0e0f0">P</span> shortcut. <p>To continue recording click <img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> which releases the Pause button, or press <span class="kbrd" style="background-color: #e0e0f0">P</span>. </p>
 </td></tr></table>
 </div> 
+<h3><span class="mw-headline" id="Beats_and_Measures">Beats and Measures</span></h3>
+<p>If you have changed your <a href="timeline.html" title="Timeline">Timeline</a> to be in Beats and Measures rather than time then the empty track background will add musical gridlines to aid your recording. 
+</p>
+<dl><dd><a href="https://alphamanual.audacityteam.org/man/File:Appended_recording_in_Beats_and_Bars_mode.png" class="image"><img alt="Appended recording in Beats and Bars mode.png" src="../m/images/e/ef/appended_recording_in_beats_and_bars_mode.png" width="757" height="242" /></a></dd></dl>
 <h3><span class="mw-headline" id="Recording_stereo_into_mono.2C_or_mono_into_stereo">Recording stereo into mono, or mono into stereo</span></h3>
 <p>You cannot append record a mono recording to a stereo track. If you try to do this Audacity will create a new mono track for you and the recording will be a pseudo appended recording, with the new mono audio start time being the end of the stereo audio (or the cursor position if that is set beyond the end of the stereo audio).  
 </p><p>Similarly you cannot append record a stereo track into a mono track.  Audacity will similarly create a new stereo track for the recording.  However, if you have two mono tracks and try to append record in stereo, Audacity will place one stereo channel in each mono channel.  If you have many mono tracks, you can select two of them and record the left channel in the first and the right channel into the second.
@@ -124,7 +128,7 @@
 <h2><span class="mw-headline" id="Recording_a_new_track">Recording a new track</span></h2>
 <p>If you hold the <span class="button">Shift</span> button down the Record button in <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> will temporarily change to <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" />. Then clicking on this modified Record button, or using the shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span> will cause Audacity to create a new track and begin recording on that track from the current cursor position (or from the left edge of a region on the <a href="timeline.html" title="Timeline">Timeline</a>). 
 </p>
-<dl><dd><span title="Mono recording on a new track below"><img alt="Recording on a new track.png" src="../m/images/5/5f/recording_on_a_new_track.png" width="759" height="324" /></span></dd>
+<dl><dd><span title="Mono recording on a new track below"><img alt="Recording on a new track.png" src="../m/images/5/5f/recording_on_a_new_track.png" width="755" height="315" /></span></dd>
 <dd><b>Mono track with new track being recording on a new tack below starting at the end of the previous recording (as that is where the cursor was left)</b></dd></dl>
 <p>There is no need to create a new track before starting to record. If you want recording to start from the beginning of the project, click the "Skip to Start" button <img alt="The Skip to Start button" src="../m/images/0/01/rewind.png" title="The Skip to Start button" width="16" height="16" /> on Transport Toolbar or press the <span class="kbrd" style="background-color: #e0e0f0">Home</span> shortcut.  Press the Stop button <img alt="The Stop button" src="../m/images/f/f9/stop.png" title="The Stop button" width="16" height="16" />  (or use its shortcut <span class="kbrd" style="background-color: #d0d0f8">Space</span>) to Stop the recording.
 </p>
@@ -142,9 +146,9 @@
 <h2><span class="mw-headline" id="Recording_for_a_specific_length_of_time">Recording for a specific length of time</span></h2>
 <ol><li> Drag-select a region in an existing audio track - or choose the time range to be recorded in <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>.</li>
 <li> Then hold down <span class="kbrd" style="background-color: #e0e0f0">Shift</span> press the  <span class="button">Record New Track</span> button <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" /> (or use the shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span> ) to record in a new track for the duration of the selection you made.</li></ol>
-<dl><dd><span title="Mono recording on a new track below for a specific length of time"><img alt="Recording for a specific length of time.png" src="../m/images/b/bd/recording_for_a_specific_length_of_time.png" width="740" height="306" /></span></dd>
+<dl><dd><span title="Mono recording on a new track below for a specific length of time"><img alt="Recording for a specific length of time 3-4-0.png" src="../m/images/5/5b/recording_for_a_specific_length_of_time_3_4_0.png" width="761" height="313" /></span></dd>
 <dd><b>Mono recording on a new track below for a specific length of time</b></dd></dl>
-<dl><dd><span title="Mono recording on a new track below for a specific length of time completed"><img alt="Recording for a specific length of time completed.png" src="../m/images/b/b8/recording_for_a_specific_length_of_time_completed.png" width="741" height="305" /></span></dd>
+<dl><dd><span title="Mono recording on a new track below for a specific length of time completed"><img alt="Recording for a specific length of time completed 3-4-0.png" src="../m/images/f/fc/recording_for_a_specific_length_of_time_completed_3_4_0.png" width="758" height="314" /></span></dd>
 <dd><b>Recording for a specific length of time completed</b></dd></dl>
 <p>If there is a selection that is entirely beyond the end of all selected tracks, then the recording will start at the beginning of the selection and stop at the end of the selection.
 </p>
@@ -295,7 +299,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Recording">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Recording">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

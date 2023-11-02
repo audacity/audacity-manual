@@ -33,7 +33,7 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/WAV_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">.<div class="intro"><i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> is an <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> and <i><b><a href="glossary.html#lossless" title="Glossary">lossless</a></b></i> audio format <i><b><a href="#pcm">PCM</a></b></i> audio. The format is in Microsoft's <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Endianness#Little-endian">Little-Endian</a> byte order. 
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> is an <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> and <i><b><a href="glossary.html#lossless" title="Glossary">lossless</a></b></i> audio format <i><b><a href="#pcm">PCM</a></b></i> audio. The format is in Microsoft's <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Endianness#Little-endian">Little-Endian</a> byte order. 
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -45,15 +45,27 @@
 <div class="note">What you hear by previewing with playback prior to export is what you will get in the Exported audio file.
 <ul><li>When using <b>Export</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. </li>
 <li>Also note that any hidden parts of audio clips are <i><b>not</b></i> exported, see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>. </div> </div></li></ul>
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>WAV</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="Export Audio dialog"><img alt="Export WAV 3-4-0.png" src="../m/images/4/49/export_wav_3_4_0.png" width="497" height="427" /></span></dd></dl>
 <p><br />
 </p>
-<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; Export &gt; Export as WAV</span> </dd>
-<dd><span title="Export Audio dialog"><img alt="Export Audio dialog 3-0-0.png" src="../m/images/d/d8/export_audio_dialog_3_0_0.png" width="715" height="623" /></span></dd></dl>
 <div id="options"></div>
-<h2><span class="mw-headline" id="Format_Options">Format Options</span></h2>
-<p>The only option with WAV export is the Encoding option.
-</p><p>The default Encoding is <b>16-bit PCM</b> which you can change from the Encoding dropdown menu.
-</p><p>If you do change it Audacity will remember and re-use your previous setting on next use.
+<h2><span class="mw-headline" id="Audio_options">Audio options</span></h2>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 44100 Hz, which is CD quality.
+</p>
+<div id="encoding"></div>
+<h3><span class="mw-headline" id="Encoding">Encoding</span></h3>
+<p>Selects the encoding to be used for the WAV file.  Default is <b>Signed 16-bit PCM</b>, which is CD quality
 </p>
 
 
@@ -131,7 +143,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/WAV_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/WAV_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

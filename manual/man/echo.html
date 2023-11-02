@@ -34,13 +34,23 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">This effect repeats the audio you have selected again and again, normally softer each time. The delay time between each repeat is fixed, with no pause in between each repeat.</div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Delay and Reverb &gt; Echo...</span></dd>
+<div class="intro">This effect repeats the audio you have selected again and again, normally softer each time. The delay time between each repeat is fixed, with no pause in between each repeat.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
+</div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Delay and Reverb &gt; Echo</span></dd>
 <dd><span title="The Echo dialog"><img alt="Echo 3-2-0.png" src="../m/images/e/ea/echo_3_2_0.png" width="290" height="165" /></span></dd></dl>
 <div class="note">Unless your requested echo length (delay time) is <i>less</i> than the length of the selection, no echoes will be created. Also Echo does not generate additional audio beyond that selected. So if necessary you must <b>add sufficient silence</b> to the end of your track(s) to accommodate your echo settings. 
 <dl><dd>To add silence:</dd></dl>
 <ol><li> Click in the selection and press <span class="kbrd" style="background-color: #e0e0f0">End</span> on your keyboard, or choose <span class="menu">Transport &gt; Cursor To &gt; <a href="transport_menu_cursor_to.html#track_end" title="Transport Menu: Cursor to">Track End</a></span>  </li>
-<li> Choose <span class="menu">Generate &gt; <a href="generate_menu.html#Silence..." title="Generate Menu">Silence...</a></span></li>
+<li> Choose <span class="menu">Generate &gt; <a href="generate_menu.html#Silence" title="Generate Menu">Silence</a></span></li>
 <li> Choose the duration of the silence you want to add to the selected audio, and click OK. </li></ol>
 This leaves the generated silence selected. Before running the Echo effect itself, click in the <a href="audio_tracks.html#Track_Control_Panel" title="Audio Tracks">Track Control Panel</a> to select both the original audio and the inserted silence (or hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and press <span class="kbrd" style="background-color: #e0e0f0">Home</span>).</div>
 <div id="time"></div>
@@ -60,10 +70,8 @@ This leaves the generated silence selected. Before running the Echo effect itsel
 <td align="left" valign="top">Because echoes are often <i>added</i> to the original audio, the processed audio will often have a higher peak level than the original. If <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> results, you can <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> the Echo effect, <span class="menu">Effect &gt; <a href="effect_menu.html#amplify" title="Effect Menu">Amplify</a></span> to a lower level, then apply Echo again.
 </td></tr></table></div>
 <div class="note"><b>Using Echo for loops:</b> Echo can be used to create a simple loop with volume changes without any problem about gaps between each segment of the loop. 
-<ul><li> If you want a loop with no volume changes, use <span class="menu">Effect &gt; <a href="effect_menu.html#Repeat..." title="Effect Menu">Repeat...</a></span> instead.</li>
-<li> You can also create echoes with <span class="menu">Effect &gt; <a href="delay.html" title="Delay">Delay...</a></span> which generates the additional audio needed for your chosen delay time and number of echoes.</div></li></ul>
-<p><br />
-</p>
+<ul><li> If you want a loop with no volume changes, use <span class="menu">Effect &gt; <a href="effect_menu.html#repeat_last_effect" title="Effect Menu">Repeat</a></span> instead.</li>
+<li> You can also create echoes with <span class="menu">Effect &gt; <a href="delay.html" title="Delay">Delay</a></span> which generates the additional audio needed for your chosen delay time and number of echoes.</div></li></ul>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
@@ -144,7 +152,7 @@ This leaves the generated silence selected. Before running the Echo effect itsel
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Echo">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Echo">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

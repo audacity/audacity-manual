@@ -38,28 +38,21 @@
 <p>The following effects, when applied to a region in a selected track (or tracks) in a Sync-Locked group, will cause the length of non-selected tracks in the group to be adjusted to match the change in length of the selected track, either by truncating the non-selected tracks from the right or by adding silence. Audio before and after the selection will remain synchronized. Audio within the selection may or may not remain synchronized, as the time stretching effect is not applied to the Sync-Locked tracks.
 </p><p>Any Label track that forms part of the Sync-Locked Track Group will be stretched positively or negatively, the same as the selected track(s) - or in the case of Repeat will have that section of the Label track repeated.
 </p>
-<ul><li><span style="font-weight: bold; font-size:118%"><a href="change_speed.html" title="Change Speed">Change Speed</a>:</span> Sync-Locked tracks will be adjusted by having the selected region(s) shortened from the right (if the change in speed is positive), or have silence inserted after the selected region (if the change in speed is negative).</li>
+<ul><li><span style="font-weight: bold; font-size:118%"><a href="change_speed.html" title="Change Speed">Change Speed and Pitch</a>:</span> Sync-Locked tracks will be adjusted by having the selected region(s) shortened from the right (if the change in speed is positive), or have silence inserted after the selected region (if the change in speed is negative).</li>
 <li><span style="font-weight: bold; font-size:118%"><a href="change_tempo.html" title="Change Tempo">Change Tempo</a>:</span> Sync-Locked tracks will be adjusted by having the selected region(s) shortened from the right (if the change in tempo is positive - faster), or have silence inserted after the selected region (if the change in tempo is negative - slower).</li>
 <li><span style="font-weight: bold; font-size:118%"><a href="repeat.html" title="Repeat">Repeat</a>:</span> If applied to a selection that does not end on the end of a track, silence is inserted in the Sync-Locked tracks where the repeats are placed in the selected track(s)</li>
 <li><span style="font-weight: bold; font-size:118%"><a href="sliding_stretch.html" title="Sliding Stretch">Sliding Stretch</a>:</span> If the time-scale changes shorten the selection then the Sync-Locked tracks will be shortened from the right to maintain time synchronization among the tracks; if the time-scale changes lengthen the selection then the Sync-Locked tracks will have silence inserted to maintain time synchronization among the tracks.</li>
 <li><span style="font-weight: bold; font-size:118%"><a href="truncate_silence.html" title="Truncate Silence">Truncate Silence</a>:</span> Removes audio from Sync-Locked tracks to maintain time synchronization with remaining sections of the selected track.</li>
 <li><span style="font-weight: bold; font-size:118%"><a href="delay.html" title="Delay">Delay</a>:</span> If applied to a selection that does not end on the end of a track, silence is inserted in the Sync-Locked tracks where the delays are placed in the selected track(s) to maintain time synchronization among the tracks.</li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
-</td>
-<td align="left" valign="top"><b><a href="paulstretch.html" title="Paulstretch">Paulstretch</a></b> also changes the selection length of any selected tracks in the Sync-Locked Track Group, but currently does <i><b>not</b></i> observe the sync-locking and does not cause changes to any un-selected Sync-Locked tracks. Label tracks are not affected by Paulstretch whether selected or not.
-
-</td></tr></table></div>
-<h2><span class="mw-headline" id="Example-1:_Change_Speed">Example-1: <a href="change_speed.html" title="Change Speed">Change Speed</a></span></h2>
-<div class="example"><b>Before <span class="menu">&gt;Effect &gt; <a href="change_speed.html" title="Change Speed">Change Speed</a></span></b>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Example-1:_Change_Speed_and_Pitch">Example-1: <a href="change_speed.html" title="Change Speed">Change Speed and Pitch</a></span></h2>
+<div class="example"><b>Before <span class="menu">&gt;Effect &gt; <a href="change_speed.html" title="Change Speed">Change Speed and Pitch</a></span></b>
 <dl><dd><span title="before Change Speed"><img alt="SLTG Stretching 1.png" src="../m/images/e/e6/sltg_stretching_1.png" width="613" height="237" /></span></dd></dl>
-<dl><dd><b>After Effect &gt; Change Speed</b></dd>
+<dl><dd><b>After Effect &gt; Change Speed and Pitch</b></dd>
 <dd>with a setting of 50%, which makes the selection faster and shorter</dd>
 <dd><span title="after a speed change of fifty percent"><img alt="SLTG Stretching 2.png" src="../m/images/7/75/sltg_stretching_2.png" width="612" height="238" /></span></dd></dl>
-<dl><dd><b>Result:</b> Audio has been removed from the lower audio track. Note that in this case audio within the selection does not remain in synchronization since the Change Speed effect is not applied to the Sync-Locked track. Audio before and after the selection remains synchronized.</dd></dl>
+<dl><dd><b>Result:</b> Audio has been removed from the lower audio track. Note that in this case audio within the selection does not remain in synchronization since the Change Speed and Pitch effect is not applied to the Sync-Locked track. Audio before and after the selection remains synchronized.</dd></dl>
 <dl><dd>But note too that the Label track has been stretched, shrunk, appropriately (and not truncated) to maintain synchronicity the the select track, the top track.</div></dd></dl>
 <h2><span class="mw-headline" id="Example-2:_Repeat">Example-2: <a href="repeat.html" title="Repeat">Repeat</a></span></h2>
 <div class="example"><b>Before <span class="menu">Effect &gt; <a href="effect_menu.html#repeat" title="Effect Menu">Repeat</a></span></b>
@@ -148,7 +141,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Sync-Locked_Track_Groups_-_Time_Stretching">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Sync-Locked_Track_Groups_-_Time_Stretching">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -2,7 +2,7 @@
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Macro Manager - Audacity Manual</title>
+<title>Macros - Audacity Manual</title>
 
 
 
@@ -25,7 +25,7 @@
 				
 				<div class="mw-indicators">
 </div>
-				<h1 id="firstHeading" class="firstHeading" lang="en">Macro Manager</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Macros</h1>
 				
 				<div id="bodyContent" class="mw-body-content">
 					<div id="siteSub">From Audacity Development Manual</div>
@@ -34,7 +34,6 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-
 </li></ul>
 <p><br />
 </p>
@@ -42,10 +41,20 @@
 <p><i><b>Macros</b></i> follow a fixed sequence of instructions.  If you want more flexibility than that, you may want to look at <i><b><a href="scripting.html" title="Scripting">Python Scripting</a></b></i> which uses the same commands and the Python language.
 </p>
 <div class="note">For further details on <a href="manage_macros.html#select" title="Manage Macros"><b>creating</b></a> and <a href="manage_macros.html#editsteps" title="Manage Macros"><b>editing</b></a> Macros please see the <b><a href="manage_macros.html" title="Manage Macros">Manage Macros</a></b> page. </div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">When applying a macro to files it is recommended not to process more than <b>500</b> files at a time.
+</td></tr></table>
+</div>
 </div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#uses">What are the uses for Macros</a></li>
 <li><a href="#howto">How to access Macros</a></li>
+<li><a href="#output">Macro output</a></li>
 <li><a href="#manage">Manage Macros</a></li>
 <li><a href="#shrink">Macros Palette dialog</a></li>
 <li><a href="#parameters">Macro Command Parameters</a></li>
@@ -58,9 +67,18 @@
 <h2><span class="mw-headline" id="What_are_the_uses_for_Macros">What are the uses for Macros</span></h2>
 <p>The three main uses of Macros are: 
 </p>
-<ul><li><span style="font-weight: bold; font-size:118%">Batch processing:</span> where many audio files are processed unattended with one or more effects then exported to a new file. <p>To use this use the <b>Apply Macro to:</b> <span class="button">Files...</span> button in the  <a href="apply_macro.html" title="Apply Macro">Macros Palette</a> or the <a href="manage_macros.html" title="Manage Macros">Manage Macros</a> dialog.</p><p>For more detail on batch processing please see <a href="apply_macro.html#files" title="Apply Macro"><b>this page</b></a>.</p></li>
-<li><span style="font-weight: bold; font-size:118%">Effects automation:</span> where the <a href="audacity_selection.html" title="Audacity Selection">selected audio</a> in the <a href="audio_tracks.html" title="Audio Tracks"> track</a> or tracks in the current project is subjected to the same prescribed sequence of effects, and optionally, a file exported from the entire audio. <p> Note that Macros can contain Select commands to make their own selections as the Macro runs.</p></li>
-<li><span style="font-weight: bold; font-size:118%">Effect presets:</span> where selected, commonly used, effects are stored with your preferred settings for quick re-use.</li></ul>
+<ul><li><span style="font-weight: bold; font-size:118%">Batch processing:</span> where many audio files are processed unattended with one or more effects then exported to a new file. <p>To use this use the <b>Apply Macro to:</b> <span class="button">Files</span> button in the  <a href="apply_macro.html" title="Apply Macro">Macros Palette</a> or the <a href="manage_macros.html" title="Manage Macros">Manage Macros</a> dialog.</p><p>For more detail on batch processing please see <a href="apply_macro.html#files" title="Apply Macro"><b>this page</b></a>.</p></li>
+<li><span style="font-weight: bold; font-size:118%">Effects automation:</span> where the <a href="audacity_selection.html" title="Audacity Selection"><b>selected audio</b></a> in the <a href="audio_tracks.html" title="Audio Tracks"> track</a> or tracks in the current project is subjected to the same prescribed sequence of effects and, <i>optionally</i>, a file exported from the entire audio. </li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Note that Macros can contain <b>Select commands to make their own selections as the Macro runs.</b>
+</td></tr></table>
+</div>
+<ul><li><span style="font-weight: bold; font-size:118%">Effect presets:</span> where selected, commonly used, effects are stored with your preferred settings for quick re-use.</li></ul>
 <div class="note">A special use for Macros is for QA performance testing using the <b>Macro Trace</b> timer logging facilty.<p>Please see <a href="performance_testing_using_macro_trace.html" title="Performance testing using Macro Trace"><b>Performance testing using Macro Trace</b></a> for details.</p></div>
 <p><br />
 </p>
@@ -68,16 +86,30 @@
 <h2><span class="mw-headline" id="How_to_access_Macros">How to access Macros</span></h2>
 <p>Macros are available from the <a href="tools_menu.html" title="Tools Menu">Tools Menu</a>:
 </p>
-<ul><li> <span class="menu">Tools &gt; Macros...</span> to manage Macros, <a href="manage_macros.html" title="Manage Macros">to create, edit and test</a> them</li>
-<li> <span class="menu">Tools &gt; Apply Macro &gt; Palette...</span>  for a <a href="apply_macro.html" title="Apply Macro">toolbox of Macros</a></li>
+<ul><li> <span class="menu">Tools &gt; <a href="manage_macros.html" title="Manage Macros">Macro Manager</a></span> to manage Macros, <a href="manage_macros.html" title="Manage Macros">to create, edit and test</a> them</li>
+<li> <span class="menu">Tools &gt; Apply Macro &gt; <a href="apply_macro.html" title="Apply Macro">Palette</a></span>  for a <a href="apply_macro.html" title="Apply Macro">toolbox of Macros</a></li>
 <li> <span class="menu">Tools &gt; Apply Macro &gt; <i>named Macro</i></span> to <a href="tools_menu_apply_macro.html" title="Tools Menu: Apply Macro">apply one named Macro</a></li></ul>
 <p>There are some <a href="macros_examples.html" title="Macros Examples"><b>examples of Macros</b></a> and tips on using them.
 </p><p><br />
 </p>
+<div id="output"></div>
+<h2><span class="mw-headline" id="Macro_output">Macro output</span></h2>
+<p>If your Macro has an Export command the location for any exported audio files is specified in <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a>.
+</p><p>If you set a default folder for <b>Macro output</b> Audacity will create a folder called "<b>macro-output</b>" in that folder and that will be used for exports from Macros. 
+</p><p>If you leave the entry for <b>Macro output</b> blank (default setting) Audacity will default to creating a folder called "<b>macro-output</b>" in: 
+</p>
+<ul><li> <b>Windows:</b>  <span class="path">C:\Users\&lt;your username&gt;\Documents\Audacity </span></li>
+<li> <b>Mac:</b> <span class="path">/Users/&lt;your username&gt;/Documents </span></li>
+<li> <b>Linux:</b> <span class="path">/home/&lt;your username&gt;/Documents </span></li></ul>
+<div class="note">When running a Macro on a <b>project</b>, If the project has not been saved and is un-named, the normal <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> dialog will appear enabling you to choose the name and location of the exported file. 
+
+</div>
+<p><br />
+</p>
 <div id="edit_chains"></div>
 <div id="manage"></div>
 <h2><span class="mw-headline" id="Manage_Macros"><a href="manage_macros.html" title="Manage Macros">Manage Macros</a></span></h2>
-<p>Use <span class="menu">Tools &gt; Macros...</span> if you need to create a new Macro or to edit an existing Macro. 
+<p>Use <span class="menu">Tools &gt; <a href="manage_macros.html" title="Manage Macros">Macro Manager</a></span> if you need to create a new Macro or to edit an existing Macro. 
 </p>
 <dl><dd><span title="Manage Macros dialog showing Macro list (left) and command list for selected Macro (right)"><img alt="Manage Macros 3-0-1.png" src="../m/images/7/73/manage_macros_3_0_1.png" width="831" height="344" /></span></dd></dl>
 <p><br />
@@ -85,7 +117,7 @@
 <div id="shrink"></div>
 <h2><span class="mw-headline" id="Macros_Palette_dialog"><a href="apply_macro.html" title="Apply Macro">Macros Palette</a> dialog</span></h2>
 <p>Use the <span class="button">Shrink</span> button to show a reduced <a href="apply_macro.html" title="Apply Macro">Macros Palette</a> dialog with a simple list of the existing Macros. 
-</p><p>This dialog is also available directly via <span class="menu">Tools &gt; Apply Macro &gt; Palette...</span>
+</p><p>This dialog is also available directly via <span class="menu">Tools &gt; Apply Macro &gt; <a href="apply_macro.html" title="Apply Macro">|Palette</a></span>
 </p>
 <dl><dd><span title="Macros Palette dialog showing Macro list"><img alt="MacrosPalette.png" src="../m/images/2/20/macrospalette.png" width="293" height="393" /></span></dd></dl>
 <p>Using the <span class="button">Expand</span> button on this reduced dialog will return you to the full <a href="#manage">Manage Macros</a> dialog.
@@ -96,7 +128,7 @@
 <p>Both the Macros dialog and the Macro Palette dialog have "Apply Macro to" Buttons:
 </p>
 <ul><li><span class="button">Project</span> applies the selected Macro to the current project. </li>
-<li><span class="button">Files...</span> applies the selected Macro to selected external audio files that are in a single directory.</li></ul>
+<li><span class="button">Files</span> applies the selected Macro to selected external audio files that are in a single directory.</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -249,7 +281,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Macros">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Macros">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

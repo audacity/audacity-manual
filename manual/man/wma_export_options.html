@@ -33,11 +33,9 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/WMA_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><b>WMA</b> is a <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i>, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> audio format developed by Microsoft. It is the default audio format for Windows Media Player. </div>
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> then choosing <b>WMA (version2) Files (FFmpeg)</b> from the <b>Save as type</b> dropdown menu.</dd></dl>
-<dl><dd><span title="WMA Export Options at the bottom of the Export Audio dialog"><img alt="Export WMA dialog 3-0-0.png" src="../m/images/a/a9/export_wma_dialog_3_0_0.png" width="715" height="623" /></span></dd></dl>
-<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span> then choosing <b>WMA (version2) Files (FFmpeg)</b> from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>WMA</b> is a <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i>, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> audio format developed by Microsoft. It is the default audio format for Windows Media Player. </div>
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>WMA (version2) Files (FFmpeg)</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="WMA Export Audio dialog"><img alt="Export WMA 3-4-0.png" src="../m/images/4/46/export_wma_3_4_0.png" width="497" height="427" /></span></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -47,8 +45,23 @@
 <td align="left" valign="top">FFmpeg is not shipped with Audacity but you can download it and then export as WMA (version 2) by following <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">these instructions</a>.
 </td></tr></table></div>
 <div id="setup"></div>
-<h2><span class="mw-headline" id="WMA_Export_Setup">WMA Export Setup</span></h2>
-<ul><li><b>Bit Rate:</b> Choose a <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> from 24 kbps to 576 kbps. The default is 180 kbps. This produces a larger file of higher quality than default 128 kbps <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding, the general consensus being that WMA v2 and MP3 produce comparable quality for the same file size. Increasing the WMA bit rate will increase the quality further but produce larger files. </li></ul>
+<h2><span class="mw-headline" id="Audio_Options">Audio Options</span></h2>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 44100 Hz, which is CD quality.
+</p>
+<div id="bitrate"></div>
+<h3><span class="mw-headline" id="Bit_Rate">Bit Rate</span></h3>
+<p>Choose a <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> from 24 kbps to 576 kbps. The default is 180 kbps. This produces a larger file of higher quality than default 128 kbps <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding, the general consensus being that WMA v2 and MP3 produce comparable quality for the same file size. Increasing the WMA bit rate will increase the quality further but produce larger files. 
+</p>
 <div class="note">WMA version 2 only supports <i><b><a href="glossary.html#cbr" title="Glossary">CBR</a></b></i> (constant bit rate) encoding. This means that increasing the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>  in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> will not produce larger files. </div>
 
 
@@ -127,7 +140,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/WMA_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/WMA_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -33,16 +33,15 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Splitting_a_recording_into_separate_tracks#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">
-This tutorial shows how to divide a long recording in one Audacity <a href="audio_tracks.html" title="Audio Tracks">track</a> into separate songs for export as one audio file per song. You can then burn these files to an <a href="glossary.html#audio_cd" title="Glossary">audio CD</a> (enabling you to skip from track to track on the CD) or play the files directly on a portable music player. <p>We describe the basic concepts of removing unwanted audio, identifying and labeling boundaries between songs, maximizing volume then using <a href="export_multiple.html" title="Export Multiple">Export Multiple</a>.</p><p>If you already have each song in Audacity tracks one above the other, you can still follow this tutorial. Instead of labeling as described here, name each song using that track's <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">dropdown menu</a>. At the <a href="#export">Export Multiple</a> step, split files based on <b>Tracks</b> instead of <b>Labels</b>. </p> </div>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">
+This tutorial shows how to divide a long recording in one Audacity <a href="audio_tracks.html" title="Audio Tracks">track</a> into separate songs for export as one audio file per song. You can then burn these files to an <a href="glossary.html#audio_cd" title="Glossary">audio CD</a> (enabling you to skip from track to track on the CD) or play the files directly on a portable music player. <p>It describes the basic concepts of removing unwanted audio, identifying and labeling boundaries between songs, maximizing volume then exporting multiple audio files using <b>Split in parts</b> in <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a>.</p><p>If you already have each song in Audacity tracks one above the other, you can still follow this tutorial. Instead of labeling as described here, name each song using that track's <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">dropdown menu</a>. At the <a href="#export">Export Multiple</a> step, split files based on <b>Tracks</b> instead of <b>Labels</b>. </p> </div>
 <div class="note"><b>Live recordings versus studio recordings</b>
 <ul><li> Sometimes songs on live recordings flow together. If you want to split a live recording into songs without any audible break between the songs on the CD you must use burning software that can set the "gap" or "pause" between tracks to 0 seconds and can burn in "disk-at-once" (DAO) mode. See <a href="burning_music_files_to_a_cd.html#gapless" title="Burning music files to a CD">Gapless burning.</a></div> </li></ul>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#remove">Remove unwanted audio from the recording</a></li>
 <li><a href="#label">Label the songs</a></li>
 <li><a href="#amplitude">Maximize the volume of the recording</a></li>
-<li><a href="#export">Export Multiple</a></li>
+<li><a href="#export">Export multiple audio files</a></li>
 <li><a href="#backup">Backup</a></li>
 <li><a href="#refine">Refinements</a></li></ol>
 <div id="remove"></div>
@@ -53,7 +52,7 @@ This tutorial shows how to divide a long recording in one Audacity <a href="audi
 <li>Click and drag from the start of the music to the start of the track</li>
 <li>Click on <span class="menu">Edit &gt; <a href="edit_menu.html#delete" title="Edit Menu">Delete</a></span></li></ol>
 <p>Similarly, remove unwanted audio from the end of the recording and from the middle (between sides 1 and 2 of the LP or cassette). Note that later in this tutorial we will be using the Analyse &gt; Find Silences command to identify spaces between the songs, so when you are editing the transition between side 1 and side 2 be sure to leave 2 or 3 seconds of silence, similar to what you would find between songs.
-</p><p><b>Save your work!</b> Click on <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span>.
+</p><p><b>Save your work.</b> Click on <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span>.
 </p>
 <div id="label"></div>
 <h2><span class="mw-headline" id="Step_2_-_Label_the_songs">Step 2 - Label the songs</span></h2>
@@ -97,38 +96,38 @@ This tutorial shows how to divide a long recording in one Audacity <a href="audi
 <p>If you did the original recording properly and avoided clipping, the recording is probably not at the maximum possible volume. In order for the CD to be burned at maximum volume and thus match other CDs in your collection we need to fix this.
 </p>
 <ol><li>Click on <span class="menu">Select &gt; <a href="select_menu.html#all" title="Select Menu">All</a></span>,  or use shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + A</span></li>
-<li>Click on <span class="menu">Effect &gt; <a href="normalize.html" title="Normalize">Normalize...</a></span></li></ol>
+<li>Click on <span class="menu">Effect &gt; <a href="normalize.html" title="Normalize">Normalize</a></span></li></ol>
 <p>The default choice in this dialog is to amplify to a maximum of -1.0 dB. The maximum setting is 0 dB, but the default setting of -1.0 dB provides a little headroom as some players can have playback problems with audio at 0 dB.  
 </p>
 Some consumer-level turntables, tape decks and/or amplifiers may well record stereo channels with a stronger signal in one channel than the other, which you will probably want to correct. In that case, check the box that says "Normalize stereo channels independently".<p> One problem when copying records is that a loud click in one channel can cause Normalize to create an unwanted change in the stereo balance. In that case you should consider removing the click before the Normalize step, using <a href="click_removal.html" title="Click Removal">Click Removal</a>.
 
 <div id="export"></div>
-<h2><span class="mw-headline" id="Step_4_-_Export_Multiple">Step 4 - Export Multiple</span></h2>
+<h2><span class="mw-headline" id="Step_4_-_Export_multiple_audio_files">Step 4 - Export multiple audio files</span></h2>
 <p>Congratulations, you are now ready to export the tracks.
 </p>
-<ol><li>Click on <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span>.</li>
-<li>Choose the <b>Export Format</b> from the pop-up menu: 
+<ol><li>Click on <span class="menu">File &gt;  <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span>.</li>
+<li>Choose <a href="export_multiple.html" title="Export Multiple"><b>Multiple Files</b></a> in the <b>Export Range</b> section.  <i>The dialog will expand with more options.</i></li>
+<li>Choose the <b>Folder</b> location.</li>
+<li>Choose the export <b>Format</b> from the pop-up menu: 
 <ul><li>for CD burning choose 16-bit <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> if using Windows or Linux<i><b> or <a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> if you are using a Mac</li>
 <li>for loading into an MP3 player, choose <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> </li>
 <li>for loading into Apple Music/iTunes/iPhone/iPod you can export as WAV and use Apple Music/iTunes to convert the WAVs to <i><b><a href="glossary.html#aac" title="Glossary">AAC</a></b></i> or MP3.</li></ul></li>
-<li>Click the <span class="button">Choose...</span> button and pick the place where your exported tracks will be saved.</li>
-<li>Under <i>Split Files Based On</i>: 
+<li>Under <b>Split Files Based On</b>: 
 <ul><li><span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;Labels</span> should be checked</li>
 <li><span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Include audio before first label</span> should be unchecked, as there is no audio before the first label</li></ul></li>
 <li>Under <i>Name Files</i>: 
 <ul><li><span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;Using Label/Track Name</span> should be checked.</li></ul></li>
 <li>Click the <span class="button">Export</span> button. </li>
 <li><a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> will appear for the first song. The Track Title and Track Number will be pre-filled from the labels, but you can enter any additional information for that song that you wish (for example, Artist Name and Album Title).</li>
-<li>Click the <span class="button">OK</span> button in the Metatdata Editor (<b>not</b> the <span class="button">Save</span> button).</li>
-<li>Metadata Editor will appear for the next and the subsequent songs; as before, enter any additional information and click "OK" for each window. When you click "OK" on the window for the last song, all the files will export.  </li></ol>
+<li>Click the <span class="button">OK</span> button in the Metatdata Editor.</li>
+<li>Metadata Editor will appear for the next and the subsequent songs. As before, enter any additional information and click "OK" for each window. When you click "OK" on the window for the last song, all the files will export.  </li></ol>
 <div class="note"><i><b><a href="glossary.html#metadata" title="Glossary">Metadata</a></b></i> in this context refers to information "tags" stored in the audio file such as Artist, Album and Song Title. 
-<ul><li> Often you may have an album where most tags (such as Artist Name) are common to all tracks. If you choose <span class="menu">Edit&#160;&gt;&#160;<a href="metadata_editor.html" title="Metadata Editor">Metatdata...</a></span> before exporting and add the common tags there, Audacity will pre-fill these when the metadata window for each song appears. </li>
+<ul><li> Often you may have an album where most tags (such as Artist Name) are common to all tracks. If you choose <span class="menu">Edit&#160;&gt;&#160;<a href="metadata_editor.html" title="Metadata Editor">Metatdata</a></span> before exporting and add the common tags there, Audacity will pre-fill these when the metadata window for each song appears. </li>
 <li> If all your tags are common to each song (except of course for each song's Track Title and Track Number), you can enter the common tags before export as above but export silently without the metadata window appearing. To do this, choose  <a href="preferences.html" title="Preferences">Preferences</a>, then the <a href="import_export_preferences.html" title="Import - Export Preferences">Import&#160;/&#160;Export</a> tab, and uncheck <b>Show Metadata Editor prior to export step</b>. </li>
 <li> Hiding Metadata Editor at the export step can also be useful if you mainly export WAV files for which many audio players do not recognize tag information. Use AIFF (in Apple Music/iTunes or VLC) or <i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i> if you want full metadata in lossless files.  </li></ul>
 </div>
 <p>A progress dialog might appear if the process takes more than a second or two. When the process is finished a confirmation dialog will appear listing the files that were created.
 </p><p>The tracks are now ready to import into the CD burning software of your choice.
-</p><p><br />
 </p>
 <div class="note">If you burn a CD with a gap of zero seconds between tracks (if your burning software supports this), you will end up with an exact replica of the LP or cassette. If, when burning the CD, you add the standard 2-second gap between each track you will be adding an additional 2 seconds to the existing silence between tracks, and the vinyl surface noise or cassette hiss will suddenly disappear which some listeners may find annoying. See <b>Refinements</b>, below, for ways of dealing with this.</div>
 <div id="backup"></div>
@@ -248,7 +247,7 @@ Some consumer-level turntables, tape decks and/or amplifiers may well record ste
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Splitting_a_recording_into_separate_tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Splitting_a_recording_into_separate_tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

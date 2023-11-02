@@ -42,7 +42,7 @@ You may not need to change any of these settings as <b>Audacity's default settin
 </p>
 <dl><dd> Go to <span class="menu">Edit &gt; Preferences</span> (or <span class="menu">Audacity &gt; Preferences</span> on Mac) then select the <b><a href="recording_preferences.html" title="Recording Preferences">Recording</a></b> section, and make the following settings in the <i>Playthrough</i> section</dd></dl>
 <ul><li> <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Play other tracks while recording (overdub)</span></li>
-<li> <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Software playthrough of input</span></li></ul>
+<li> <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable audible input monitoring</span></li></ul>
 <p>To record in the most standard way:
 </p>
 <dl><dd> In the <b><a href="recording_preferences.html" title="Recording Preferences">Recording</a></b> section of Preferences make the following settings:
@@ -77,15 +77,15 @@ On a Mac you are probably best off with a USB microphone, as a typical PC microp
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">If your home directory is mounted from a remote server, you definitely do not want Audacity's temporary directory to be there!
+<td align="left" valign="top">If your home directory is mounted from a remote server, you definitely do not want Audacity's temporary directory to be there.
 </td></tr></table></div>
 <p><br />
 </p>
-<h2><span class="mw-headline" id="Software_Playthrough">Software Playthrough</span></h2>
-<p>Now click on <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> and, if you are recording from a microphone, make sure that <b>Software Playthrough</b> is <i><b>not</b></i> checked - Software Playthrough will cause undesirable feedback from the computer speakers to the microphone. 
-</p><p>If you are recording a guitar or keyboard and want to hear the instrument through the computer speakers, make sure that <b>Software Playthrough</b> <i><b>is</b></i> checked.
+<h2><span class="mw-headline" id="Enable_audible_input_monitoring">Enable audible input monitoring</span></h2>
+<p>Now click on <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> and, if you are recording from a microphone, make sure that <b>Enable audible input monitoring</b> is <i><b>not</b></i> checked - Enable audible input monitoring will cause undesirable feedback from the computer speakers to the microphone. 
+</p><p>If you are recording a guitar or keyboard and want to hear the instrument through the computer speakers, make sure that <b>Enable audible input monitoring</b> <i><b>is</b></i> checked.
 </p>
-<div class="note">Using Software Playthrough will cause a slight delay between time you play a note and the time you hear it. The amount of delay will vary between computers and operating systems. There is no way to avoid this delay. If you find it bothersome, the best solution is to play the guitar or keyboard through a mixer and plug headphones into the mixer.</div>
+<div class="note">Using Enable audible input monitoring will cause a slight delay between time you play a note and the time you hear it. The amount of delay will vary between computers and operating systems. There is no way to avoid this delay. If you find it bothersome, the best solution is to play the guitar or keyboard through a mixer and plug headphones into the mixer.</div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -107,11 +107,11 @@ On a Mac you are probably best off with a USB microphone, as a typical PC microp
 </td></tr></table>
 </div>
 <h2><span class="mw-headline" id="Overdub_off">Overdub off</span></h2>
-<p>Now click on <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> again and make sure that "<b>Overdub (on/off)</b>" is <i><b>not</b></i> checked. When this option is enabled Audacity will play other existing tracks while recording a new one. You can decide which tracks will play according to their mute/solo buttons on the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>.  
+<p>Now click on <span class="menu">Transport &gt; <a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport Options</a></span> again and make sure that "<b>Hear other tracks during recording</b>" is <i><b>not</b></i> checked. When this option is enabled Audacity will play other existing tracks while recording a new one. You can decide which tracks will play according to their mute/solo buttons on the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>.  
 </p><p>It is unlikely you will need overdub for your first recording.  If you do want to overdub by (for example) singing over a recorded instrumental track, you should be aware of the <a href="audio_settings_preferences.html#latency" title="Audio Settings Preferences">Latency correction</a> preference.
 </p>
 <h3><span class="mw-headline" id="Latency_correction">Latency correction</span></h3>
-<p>On most computer systems there will be a delay known as <i><b><a href="glossary.html#latency" title="Glossary">latency</a></b></i> between singing or hitting your note and it being laid down in the recording. When <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Overdub (on/off)</a></span> is set to "on" and you record with another track already present, Audacity will push the recorded track backwards by 130 milliseconds to compensate for the delay. If your latency is constant, you can adjust the Latency correction value so that your recorded tracks should end up properly synchronized with the other tracks after correction. To set a custom latency value for your system, see the <a href="latency_test.html" title="Latency Test">Latency Test</a> page.
+<p>On most computer systems there will be a delay known as <i><b><a href="glossary.html#latency" title="Glossary">latency</a></b></i> between singing or hitting your note and it being laid down in the recording. When <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Hear other tracks during recording</a></span> is set to "on" and you record with another track already present, Audacity will push the recorded track backwards by 130 milliseconds to compensate for the delay. If your latency is constant, you can adjust the Latency correction value so that your recorded tracks should end up properly synchronized with the other tracks after correction. To set a custom latency value for your system, see the <a href="latency_test.html" title="Latency Test">Latency Test</a> page.
 </p><p><br />
 </p>
 <h2><span class="mw-headline" id="Sound_Activated_Recording">Sound Activated Recording</span></h2>
@@ -120,7 +120,7 @@ On a Mac you are probably best off with a USB microphone, as a typical PC microp
 </p><p><br />
 </p>
 <h2><span class="mw-headline" id="Audacity_Preferences">Audacity Preferences</span></h2>
-<p>If you prefer, you can make the above settings in your Audacity <a href="preferences.html" title="Preferences">Preferences</a>.  To access this, use <span class="menu">Edit &gt; <a href="preferences.html" title="Preferences">Preferences...</a></span> (or <span class="menu">Audacity &gt; <a href="preferences.html" title="Preferences">Preferences...</a></span> on Mac).
+<p>If you prefer, you can make the above settings in your Audacity <a href="preferences.html" title="Preferences">Preferences</a>.  To access this, use <span class="menu">Edit &gt; <a href="preferences.html" title="Preferences">Preferences</a></span> (or <span class="menu">Audacity &gt; <a href="preferences.html" title="Preferences">Preferences</a></span> on Mac).
 </p><p>The image below shows the <a href="recording_preferences.html" title="Recording Preferences">Recording</a> section of Preferences: 
 </p>
 <dl><dd><span title="The Recording section of Preferences"><a href="https://alphamanual.audacityteam.org/man/File:Preferences_Recording.png" class="image"><img alt="Preferences Recording.png" src="../m/images/1/17/preferences_recording.png" width="671" height="482" /></a></span></dd></dl>
@@ -209,7 +209,7 @@ On a Mac you are probably best off with a USB microphone, as a typical PC microp
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Audacity_Settings_for_Recording">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Audacity_Settings_for_Recording">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

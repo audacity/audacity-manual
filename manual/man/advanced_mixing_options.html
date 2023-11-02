@@ -33,13 +33,30 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Advanced_Mixing_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">The <i><b>Advanced Mixing Options</b></i> dialog appears if you have chosen "<b>Use custom mix</b>" in the <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export</a> section of <a href="preferences.html" title="Preferences">Preferences</a>. Use this dialog to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file. </div>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The <i><b>Advanced Mixing Options</b></i> dialog appears when you click on the <span class="button">Configure</span> button in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> dialog. <p>Use this dialog to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.</p> </div>
 <dl><dd><span title="Advanced mixing options with each track mapped to a separate channel"><img alt="Custom Mix 5 channels.png" src="../m/images/c/c0/custom_mix_5_channels.png" width="626" height="473" /></span>  </dd></dl>
-<div class="note">
-<ul><li> When you click <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportaudio" title="File Menu: Export">Export Audio...</a></span> and have chosen the name and format of your exported file, this dialog appears which presents you with the number of tracks you have in your project and allows you to map these as desired to each of up to 32 output channels (<i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> or <i><b><a href="glossary.html#ogg" title="Glossary">OGG</a></b></i>) or 8 output channels (<i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i>). <i><b><a href="glossary.html#aac" title="Glossary">AAC</a></b></i> multi-channel export is subject to the <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> encoder used, as described in our <a href="export_formats_supported_by_audacity.html#compare" title="Export Formats supported by Audacity">file formats comparison table</a>. </li>
-<li> To include only specific tracks in the exported file, <a href="faq_editing.html#selcopy" title="FAQ:Editing">select those tracks</a> then use <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportselectedaudio" title="File Menu: Export">Export Selected Audio...</a></span>, or <a href="audio_tracks.html#mute" title="Audio Tracks">mute</a> the tracks you do not want to export. </li>
-<li>Currently there is no support for exporting multi-channel files when using <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span>.</div></li></ul>
+<p><br />
+When you click on the <span class="button">Configure</span> button in the <a href="file_export_dialog.html" title="File Export Dialog"><b>Export Audio</b></a> dialog, this dialog appears which presents you with the number of tracks you have in your project and allows you to map these as desired to each of up to 
+</p>
+<ul><li>32 output channels (<i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> or <i><b><a href="glossary.html#ogg" title="Glossary">OGG</a></b></i>) </li>
+<li>8 output channels (<i><b><a href="glossary.html#flac" title="Glossary">FLAC</a></b></i>). <i><b><a href="glossary.html#aac" title="Glossary">AAC</a></b></i> multi-channel export is subject to the <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> encoder used, as described in our <a href="export_formats_supported_by_audacity.html#compare" title="Export Formats supported by Audacity">file formats comparison table</a>. </li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">To include only specific tracks in the exported file, <a href="faq_editing.html#selcopy" title="FAQ:Editing">select those tracks</a> then use the <b>Current selection</b> option in the <b>Export Range</b> section of the <a href="file_export_dialog.html" title="File Export Dialog"><b>Export Audio</b></a> dialog, or <a href="audio_tracks.html#mute" title="Audio Tracks">mute</a> the tracks you do not want to export.
+</td></tr></table>
+</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Currently there is no support for exporting multi-channel files when using <b>Split in parts</b> <i>(to export multiple audio files)</i> from the <a href="file_export_dialog.html" title="File Export Dialog"><b>Export Audio</b></a> dialog.
+</td></tr></table></div>
 <p>The tracks from your project shown on the left will be mixed down into the output channels shown on the right:
 </p>
 <ul><li>The tracks in your project are shown in blue boxes.</li>
@@ -48,7 +65,7 @@
 <li>Click to select or deselect any box. A selected box is outlined in red.</li>
 <li>Clicking to select a box when another is already selected will link the boxes if they are not linked, or remove the link if they are linked. </li>
 <li>Clicking on any link will remove that link.</li></ul>
-<p>Connect the tracks to the channels in the way that you want, then click "<b>OK</b>" to export to the multi-channel file.
+<p>Connect the tracks to the channels in the way that you want, then click "<b>OK</b>" to return to the <a href="file_export_dialog.html" title="File Export Dialog"><b>Export Audio</b></a> dialog to effect the export.
 </p>
 <div class="note">
 <ul><li> There is no support at the moment for multi-channel playback of audio in Audacity - playback of a multi-channel file in Audacity will always be mixed down to stereo. Similarly, the <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span> and <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render_to_new_track" title="Tracks Menu: Mix">Mix and Render to New Track</a></span> commands only mix down to mono or stereo.</li>
@@ -139,7 +156,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Advanced_Mixing_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Advanced_Mixing_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

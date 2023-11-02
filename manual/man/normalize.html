@@ -40,8 +40,17 @@
 <li>equalize the balance of left and right channels of stereo tracks.</li>
 <li>remove any <b><a href="dc_offset.html" title="DC offset">DC offset</a></b> from the tracks.</li></ul>
 <div class="note"><b>All</b> selected tracks (or selections) are amplified to the same level, they are <i><b>not</b></i> amplified by the same amount as is the case with <a href="amplify.html" title="Amplify"><b>Amplify</b></a>.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
 </div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Volume and Compression &gt; Normalize...</span></dd>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Volume and Compression &gt; Normalize</span></dd>
 <dd><span title="Normalize dialog"><img alt="Normalize 3-2-0.png" src="../m/images/2/27/normalize_3_2_0.png" width="290" height="165" /></span></dd></dl>
 <p><br />
 </p>
@@ -72,7 +81,7 @@
 <h2><span class="mw-headline" id="Normalize_Maximum_Amplitude_to">Normalize Maximum Amplitude to</span></h2>
 <p>Enter the value for the maximum amplitude you would like the processed selection to have. The initial default setting is -1 dB, but you can change this.  Your choice of settings will be remembered for next use of Normalize any time you change it. 
 </p><p>A level of -1 dB is just below the maximum amplitude (0 dB) possible without <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>, but gives a little headroom for effects and distortion-free playback on all equipment. Enter a more negative value (for example, -3 dB) to normalize to lower amplitudes.
-</p><p>Entering a positive value is disallowed and causes the "Apply" and "Preview" buttons to be disabled. Use <span class="menu">Effect &gt; <a href="amplify.html" title="Amplify">Amplify...</a></span> if you need to increase amplitude above the 0 dB clipping level.
+</p><p>Entering a positive value is disallowed and causes the "Apply" and "Preview" buttons to be disabled. Use <span class="menu">Effect &gt; <a href="amplify.html" title="Amplify">Amplify</a></span> if you need to increase amplitude above the 0 dB clipping level.
 </p><p><br />
 </p>
 <div id="indep"></div>
@@ -97,7 +106,7 @@
 <p>If you select multiple tracks and apply the Normalize effect, then <b>all audio tracks will be independently normalized to the same peak level</b>.
 </p><p>For example, if you set "Normalize Maximum Amplitude to:" 0.0 dB, every selected audio track will be normalized to 0.0 dB, irrespective of its original level. Whatever peak volume differences there were between the tracks will be removed.
 </p>
-<h4><span class="mw-headline" id="Difference_from_the_Amplify..._effect">Difference from the <a href="amplify.html" title="Amplify">Amplify...</a> effect</span></h4>
+<h4><span class="mw-headline" id="Difference_from_the_Amplify_effect">Difference from the <a href="amplify.html" title="Amplify">Amplify</a> effect</span></h4>
 <p>With Amplify, if you select multiple tracks and apply the effect, then all audio tracks will be <b>amplified by the same amount</b> thus preserving the balance between the tracks. 
 </p><p>Normalize offers the option to remove DC offset, Amplify does not offer that option. Normalize does not allow clipping above 0 dB, but Amplify does.   
 </p><p>For a more thorough discussion of differences, see <a href="amplify_and_normalize.html" title="Amplify and Normalize">Amplify and Normalize</a>. 
@@ -184,7 +193,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Normalize">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Normalize">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

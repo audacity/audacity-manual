@@ -33,15 +33,26 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/MP2_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><b>MP2</b> is a <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i>, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>  audio format. It is mainly used in broadcasting and sometimes as the format for DVD soundtracks. </div>
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html" title="File Menu: Export">Export Audio...</a></span> then choosing <b>MP2 Files</b> from the <b>Save as type</b> dropdown menu.</dd></dl>
-<dl><dd><span title="MP2 Options at the bottom of the Export Audio dialog"><img alt="Export mp2 dialog 3-0-0.png" src="../m/images/3/3b/export_mp2_dialog_3_0_0.png" width="715" height="623" /></span></dd></dl>
-<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>MP2 Files</b> from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
-<div id="setup"></div>
-<h2><span class="mw-headline" id="Format_Options">Format Options</span></h2>
-<ul><li><b>Bit Rate:</b> Choose a <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> from 16 kbps to 384 kbps. The default of 160 kbps gives about the same quality as the default 128 kbps <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding, but a larger file. Increasing the bit rate will further increase the quality and the file size. At its highest bit rates, MP2 is usually considered to have slightly higher quality and greater error resilience than MP3, but again at the cost of a larger file size.</li></ul>
-
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>MP2</b> is a <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i>, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>  audio format. It is mainly used in broadcasting and sometimes as the format for DVD soundtracks. </div>
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>MP2</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="MP2 Export Audio dialog"><img alt="Export MP2 3-4-0.png" src="../m/images/6/60/export_mp2_3_4_0.png" width="497" height="460" /></span></dd></dl>
+<h2><span class="mw-headline" id="MP2_export_options">MP2 export options</span></h2>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 44100 Hz, which is CD quality.
+</p>
+<div id="bitrate"></div>
+<h3><span class="mw-headline" id="Bit_Rate">Bit Rate</span></h3>
+<p>Choose a <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> from 16 kbps to 384 kbps. The default of 160 kbps gives about the same quality as the default 128 kbps <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding, but a larger file. Increasing the bit rate will further increase the quality and the file size. At its highest bit rates, MP2 is usually considered to have slightly higher quality and greater error resilience than MP3, but again at the cost of a larger file size.
+</p>
 
 
 
@@ -118,7 +129,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/MP2_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/MP2_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

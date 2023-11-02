@@ -33,17 +33,31 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Ogg_Vorbis_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">.
-<div class="intro">The <b>Ogg Vorbis</b> export option uses the open-source <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i>, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> Vorbis <i><b><a href="glossary.html#codec" title="Glossary">codec</a></b></i> inside an Ogg format container. Ogg format can be played in Windows Media Player and Apple Music/iTunes, but requires additional codecs to be downloaded. Ogg is a popular format for streaming applications.<p> Audacity does not yet support use of the Speex low <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> voice codec within Ogg.</p>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The <b>Ogg Vorbis</b> export option uses the open-source <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed</a></b></i>, <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i> Vorbis <i><b><a href="glossary.html#codec" title="Glossary">codec</a></b></i> inside an Ogg format container. Ogg format can be played in Windows Media Player and Apple Music/iTunes, but requires additional codecs to be downloaded. Ogg is a popular format for streaming applications.<p> Audacity does not yet support use of the Speex low <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i> voice codec within Ogg.</p>
 <div class="note">What you hear by previewing with playback prior to export is what you will get in the Exported audio file.
 <ul><li>When using <b>Export</b> Audacity will only export tracks that are not grayed-out by use of the <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Mute</a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks">Solo</a></span> buttons in the tracks' <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panels</a>. </li>
 <li>Also note that any hidden parts of audio clips are <i><b>not</b></i> exported, see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>. </div> </div> </li></ul>
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html" title="File Menu: Export">Export as OGG</a></span></dd></dl>
-<dl><dd><span title="Ogg Vorbis Options at the bottom of the Export Audio dialog"><img alt="Export ogg dialog 3-0-0.png" src="../m/images/3/3b/export_ogg_dialog_3_0_0.png" width="715" height="623" /></span></dd></dl>
-<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>Ogg Vorbis Files</b> from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>Ogg Vorbis</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="Ogg Vorbis export dialog"><img alt="Export Ogg 3-4-0.png" src="../m/images/9/90/export_ogg_3_4_0.png" width="497" height="449" /></span></dd></dl>
+<dl><dd>Also accessed by: <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> and selecting <a href="export_multiple.html" title="Export Multiple">Multiple Files</a> then choosing <b>Ogg Vorbis Files</b> from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
 <div id="setup"></div>
 <h2><span class="mw-headline" id="Ogg_Vorbis_Export_Setup">Ogg Vorbis Export Setup</span></h2>
-<ul><li><b>Quality:</b> Choose a quality setting from 0 (lowest) to 10 (best). The current quality setting is displayed in the center of the slider. The default level of 5 typically produces a file of about the same size as Audacity's default 128 kbps <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding, but of higher quality. Higher OGG quality settings mean a larger file size, because a higher overall bit rate will be used. </li></ul>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="rate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sets the sample rate for the exported file.  Default setting is 44100 Hz, which is CD quality.
+</p>
+<div id="quality.22"></div>
+<h3><span class="mw-headline" id="Quality">Quality</span></h3>
+<p>Choose a quality setting from 0 (lowest) to 10 (best). The current quality setting is displayed in the center of the slider. The default level of 5 typically produces a file of about the same size as Audacity's default 128 kbps <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> encoding, but of higher quality. Higher OGG quality settings mean a larger file size, because a higher overall bit rate will be used. 
+</p>
 <div class="note"><i><b><a href="glossary.html#ogg" title="Glossary">OGG</a></b></i> encoding is technically a form of <i><b><a href="glossary.html#vbr" title="Glossary">VBR</a></b></i> or variable bit rate encoding, as opposed to the <i><b><a href="glossary.html#cbr" title="Glossary">CBR</a></b></i> or constant bit rate encoding used by default when exporting <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> files. <p> This means that in order to maintain consistent quality throughout a track, a higher bit rate will be used when encoding a complex piece of audio (such as a full orchestral passage) than when encoding a solo voice or instrument.  A recording which has more  complex audio will produce a larger file. Increasing the <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>  in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> will increase the bit rate and so the file size (and vice versa).</p> </div>
 
 
@@ -122,7 +136,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Ogg_Vorbis_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Ogg_Vorbis_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

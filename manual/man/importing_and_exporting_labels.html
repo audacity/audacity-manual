@@ -49,7 +49,8 @@
 <p>The standard structure to display a label denoting its <a href="timeline.html" title="Timeline">Timeline</a> position and any text it contains is as below.
 </p>
 <div class="example">
-<pre>2.150000&#160;&#160;&#8594;&#160;&#160;2.150000&#160;&#160;&#8594;&#160;&#160;point label at 2.15 seconds
+<pre>
+2.150000&#160;&#160;&#8594;&#160;&#160;2.150000&#160;&#160;&#8594;&#160;&#160;point label at 2.15 seconds
 3.400000&#160;&#160;&#8594;&#160;&#160;6.100000&#160;&#160;&#8594;&#160;&#160;region label from 3.4 to 6.1 seconds
 </pre></div>
 <p>In the example above, the first column has the start time in seconds, the second column has the end time, and the third column if present shows the text of the label. Start time and end time are identical for a point label. Values are separated by tab characters (which will often appear as an arrow in text editors, as shown above).
@@ -61,7 +62,8 @@
 </p><p>If a label is created from a point or region in a <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">Spectrogram</a> track where <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a> is enabled (or if a label is otherwise created when a low frequency and high frequency value are already stored in the project), the labels file also contains the frequency range for that label.     
 </p>
 <div class="example">
-<pre>1.000000&#160;&#160;&#8594;&#160;&#160;1.000000&#160;&#160;&#8594;&#160;&#160;This point was clicked at 6928.456055 Hz
+<pre>
+1.000000&#160;&#160;&#8594;&#160;&#160;1.000000&#160;&#160;&#8594;&#160;&#160;This point was clicked at 6928.456055 Hz
 \&#160;&#160;&#8594;&#160;&#160;6928.456055&#160;&#160;&#8594;&#160;&#160;6928.456055
 2.000000&#160;&#160;&#8594;&#160;&#160;2.500000&#160;&#160;&#8594;&#160;&#160;Low frequency undefined, High frequency 6334.588867 Hz
 \&#160;&#160;&#8594;&#160;&#160;-1.000000&#160;&#160;&#8594;&#160;&#160;6334.588867
@@ -72,14 +74,14 @@
 </pre></div>
 <p>In the example above, there is a point label at 1 second, then three region labels each starting one second further along. After the time position and text content information in the first line, a second line for each label records the low frequency followed by the high frequency. 
 </p>
-<div class="note">To view the low and high frequency values for a label, either select the label then look in <a href="spectral_selection_toolbar.html" title="Spectral Selection Toolbar">Spectral Selection Toolbar</a>, or right-click the label and choose "Edit" to open the <a href="labels_editor.html" title="Labels Editor">Edit Labels</a> window.</div> 
+<div class="note">To view the low and high frequency values for a label, either select the label then look in <a href="spectral_selection_toolbar.html" title="Spectral Selection Toolbar">Spectral Selection Toolbar</a>, or right-click the label and choose "Edit" to open the <a href="labels_editor.html" title="Labels Editor">Label Editor</a> window.</div> 
 <p><br />
 </p>
 <div id="usage"></div>
 <h2><span class="mw-headline" id="Usage_of_label_files">Usage of label files</span></h2>
 <p>Sometimes it may be useful to use these labels in another application (for example if somebody wanted to know the time where each piece of an interview starts or stops), or to import a labels file that someone has shared with you.   
-</p><p>You can export labels using the Edit Labels window mentioned above, or by choosing <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportlabels" title="File Menu: Export">Export Labels...</a></span>. By default the exported file has the same name as the current name of the label track. If there are multiple label tracks, the labels of all those tracks are combined into a single label track in the exported file, which by default has the same name as the current name of the last label track.  
-</p><p>Labels can be imported using the Edit Labels window, or by choosing <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#labels" title="File Menu: Import">Labels...</a></span>. Imported label tracks are added to the bottom of all existing track types in the project, just as when you <a href="importing_audio.html" title="Importing Audio">import an audio track</a>. 
+</p><p>You can export labels using the Label Editor window mentioned above, or by choosing <span class="menu">File &gt; Export Other &gt; <a href="file_menu_export_other.html" title="File Menu: Export Other">Export Labels</a></span>. By default the exported file has the same name as the current name of the label track. If there are multiple label tracks, the labels of all those tracks are combined into a single label track in the exported file, which by default has the same name as the current name of the last label track.  
+</p><p>Labels can be imported using the Label Editor window, or by choosing <span class="menu">File &gt; Import &gt; <a href="file_menu_import.html#labels" title="File Menu: Import">Labels</a></span>. Imported label tracks are added to the bottom of all existing track types in the project, just as when you <a href="importing_audio.html" title="Importing Audio">import an audio track</a>. 
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -181,7 +183,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Importing_and_Exporting_Labels">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Importing_and_Exporting_Labels">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

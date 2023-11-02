@@ -39,7 +39,7 @@
 </p>
 <div id="consolidated"></div>
 <h2><span class="mw-headline" id="Consolidated_Project">Consolidated Project</span></h2>
-<p>If the project can be sent as a single rendered consolidated audio file then Export the whole project as single WAV file with <span class="menu"> File &gt;Export &gt;<a href="wav_export_options.html" title="WAV Export Options">Export as WAV</a></span> and Import that WAV file into Audacity 2.x.x
+<p>If the project can be sent as a single rendered consolidated audio file then Export the whole project as single WAV file with <span class="menu"> File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> and Import that WAV file into Audacity 2.x.x
 </p><p>When exporting the WAV select the <b>Encoding</b> to be <b>32-bit float</b> to retain full audio quality for the transfer <i>(note that this is not the default setting for WAV export)</i>.
 </p><p><br />
 </p>
@@ -49,10 +49,11 @@
 </p>
 <div id="audio"></div>
 <h3><span class="mw-headline" id="Audio_Tracks">Audio Tracks</span></h3>
-<ol><li>Go to <a href="import_export_preferences.html" title="Import - Export Preferences"><b>Import/Export</b></a> preferences and ensure that <b>Ignore blank space at the beginning</b> is <i><b>not</b></i> turned "on" <i>(default setting is off)</i>.  This is to ensure that tracks with leading blank space have that space rendered to silence on Export thereby retaining the proper time position of the audio.</li>
-<li>Export each individual audio track as a WAV file using <span class="menu"> File &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple</a></span>.  
-<ul><li> If you have label tracks present in the project be sure to select <b>Split files based on Tracks</b>.</li>
-<li> In the Export Multiple dialog ensure the <b>Encoding</b> for the WAV files is set to <b>32-bit float</b> to retain full audio quality for the transfer <i>(note that this is not the default setting for WAV export)</i>.</li></ul></li>
+<ol><li>Export each individual audio track as a WAV file using <span class="menu"> File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> and choosing <b>Split in parts</b>.  
+<ul><li>Ensure <b>Trim blank space before first clip</b> is turned "off". </li></ul></li></ol>
+<dl><dd><dl><dd><dl><dd>This is to ensure that tracks with leading blank space have that space rendered to silence on Export thereby retaining the proper time position of the audio.</dd></dl></dd></dl></dd></dl>
+<ol><li><ul><li> If you have label tracks present in the project be sure to select <b>Split files based on Tracks</b>.</li>
+<li> Ensure the <b>Encoding</b> for the WAV files is set to <b>32-bit float</b> to retain full audio quality for the transfer <i>(note that this is <b>not</b> the default setting for WAV export)</i>.</li></ul></li>
 <li>Then you can Import those WAV files into older Audacity versions.</li></ol>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -73,8 +74,8 @@
 </div>
 <div id="labels"></div>
 <h3><span class="mw-headline" id="Label_Tracks">Label Tracks</span></h3>
-<p>Any Label Tracks that you may have will not be Exported with the Export Multiple of the audio.
-</p><p>You can Export these separately with <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#export_labels" title="File Menu: Export">Labels</a></span>.
+<p>Any Label Tracks that you may have will not be Exported with the multiple export using <b>Split in parts</b> from Export Audio.
+</p><p>You can Export these separately with <span class="menu">File &gt; Export Other &gt; <a href="file_menu_export_other.html" title="File Menu: Export Other">Labels</a></span>.
 </p><p>These can then be Imported into the Audacity 2.x.x project and you can reposition them as required.
 </p>
 <div id="time"></div>
@@ -157,7 +158,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Moving_AUP3_projects_from_Audacity_3.x_to_Audacity_2.x">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Moving_AUP3_projects_from_Audacity_3.x_to_Audacity_2.x">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -130,7 +130,8 @@
 <h3><span class="mw-headline" id="Using_Scripting">Using Scripting</span></h3>
 <p>After checking that the "pipe_test.py" script works, you could try adding other commands to the end of the pipe_test.py script. Each command name ends with a colon, and may be followed by parameters.  For example:
 </p>
-<pre>do_command("Help:")
+<pre>
+do_command("Help:")
 </pre>
 <p>For practical scripting, the script "pipeclient.py" provides a useful starting point:
 </p>
@@ -161,7 +162,7 @@
 <tr>
 <td><b>SetLabel:</b>
 </td>
-<td><a href="extra_menu_scriptables_i.html#set_label" title="Extra Menu: Scriptables I">Set Label...</a>
+<td><a href="extra_menu_scriptables_i.html#set_label" title="Extra Menu: Scriptables I">Set Label</a>
 </td>
 <td><i>int</i> <b>Label</b>, (default:0)<br />
 <p><i>string</i> <b>Text</b>, (default:unchanged)<br />
@@ -176,11 +177,13 @@
 The string <b>"SetLabel: Text='Foo'"</b> sent from Python would set the first label in a project to the word 'Foo'.
 </p><p>Using "pipe_test.py", the command could be sent with:
 </p>
-<pre>do_command("SetLabel: Text='Foo'")
+<pre>
+do_command("SetLabel: Text='Foo'")
 </pre>
 <p>Using "pipeclient.py" as a command-line script, simply type the command at the prompt:
 </p>
-<pre>Enter command or 'Q' to quit: SetLabel: Text='Foo'
+<pre>
+Enter command or 'Q' to quit: SetLabel: Text='Foo'
 </pre>
 <p><br />
 </p>
@@ -280,7 +283,7 @@ The string <b>"SetLabel: Text='Foo'"</b> sent from Python would set the first la
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Scripting">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Scripting">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

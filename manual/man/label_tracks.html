@@ -38,7 +38,7 @@
 <div class="intro">A <i><b>Label Track</b></i> is an additional track that can be created in your project. The labels in the label track can be used to reference points or regions in the project's audio tracks but the label track itself does not contain audio.</div>
 <p><br />
 </p>
-<dl><dd><div class="noresize"><map name="ImageMap_1_1339712043"><area href="track_control_panel_and_vertical_scale.html" shape="rect" coords="6,73,104,109" alt="Track Control Panel controls this track" title="Track Control Panel controls this track"/><area href="track_control_panel_and_vertical_scale.html" shape="rect" coords="3,3,185,33" alt="For controlling this track" title="For controlling this track"/><area href="#point" shape="rect" coords="189,74,302,108" alt="Point Label labels just one moment" title="Point Label labels just one moment"/><area href="#point" shape="rect" coords="3,150,120,180" alt="For labelling just one moment" title="For labelling just one moment"/><area href="#region" shape="rect" coords="325,74,829,108" alt="Region Label for labelling a time range with a start and end" title="Region Label for labelling a time range with a start and end"/><area href="#region" shape="rect" coords="185,3,315,33" alt="For labelling a time range with a start and end" title="For labelling a time range with a start and end"/></map><img alt="LabelTrackAnnotated.png" src="../m/images/5/55/labeltrackannotated.png" width="845" height="185" usemap="#ImageMap_1_1339712043"/></div></dd></dl>
+<dl><dd><div class="noresize"><map name="ImageMap_1_1524332988"><area href="track_control_panel_and_vertical_scale.html" shape="rect" coords="6,73,104,109" alt="Track Control Panel controls this track" title="Track Control Panel controls this track"/><area href="track_control_panel_and_vertical_scale.html" shape="rect" coords="3,3,185,33" alt="For controlling this track" title="For controlling this track"/><area href="#point" shape="rect" coords="189,74,302,108" alt="Point Label labels just one moment" title="Point Label labels just one moment"/><area href="#point" shape="rect" coords="3,150,120,180" alt="For labelling just one moment" title="For labelling just one moment"/><area href="#region" shape="rect" coords="325,74,829,108" alt="Region Label for labelling a time range with a start and end" title="Region Label for labelling a time range with a start and end"/><area href="#region" shape="rect" coords="185,3,315,33" alt="For labelling a time range with a start and end" title="For labelling a time range with a start and end"/></map><img alt="LabelTrackAnnotated.png" src="../m/images/5/55/labeltrackannotated.png" width="845" height="185" usemap="#ImageMap_1_1524332988"/></div></dd></dl>
 <div style="position:relative;">
 <div class="note" style="width:150px;position:absolute;left:693px;top:-55px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
 </div>
@@ -48,13 +48,13 @@
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ul><li><a href="#features">Features of a Label Track</a></li>
 <li><a href="#type">Point labels and region labels</a></li>
-<li><a href="#context">Using the context menu</a></li>
+<li><a href="#context">Using the Label's context menu</a></li>
 <li><a href="#create">Creating and selecting Labels</a></li>
 <li><a href="#navigating">Navigating Labels</a></li>
 <li><a href="#editing">Editing, resizing and moving Labels</a></li>
 <li><a href="#remove">Removing Labels only</a></li>
 <li><a href="#audio">Removing Labels together with their associated audio</a></li>
-<li><a href="#editor">Labels Editor</a></li>
+<li><a href="#editor">Label Editor</a></li>
 <li><a href="#menu">Editing or moving the Label Track using the Label Track Dropdown Menu</a></li>
 <li><a href="#collapse">Collapsing the Label Track</a></li>
 <li><a href="#select">Selecting the Label track</a></li>
@@ -66,7 +66,7 @@
 <h2><span class="mw-headline" id="Features_of_a_Label_Track">Features of a Label Track</span></h2>
 <ul><li> Labels can be used to mark then restore chosen points or regions of audio for <a href="playing_and_recording.html" title="Playing and Recording">playback</a> or <a href="edit_menu.html" title="Edit Menu">editing</a>.</li>
 <li> Labels can contain text for purposes of annotation or <a href="faq_about_audacity.html#transcribe" title="FAQ:About Audacity">transcription</a>.  </li>
-<li> Labels and their text provide a convenient way to name different songs in a recorded <a href="audio_tracks.html" title="Audio Tracks">track</a> then export all songs at once to separate audio files using <span class="menu">File &gt; Export &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple...</a></span>.</li>
+<li> Labels and their text provide a convenient way to name different songs in a recorded <a href="audio_tracks.html" title="Audio Tracks">track</a> then export all songs at once to separate audio files using the <a href="export_multiple.html" title="Export Multiple">Multiple Files</a> option in <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a>.</li>
 <li> Many of the tools in the <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a> use labels to mark detected regions (such as regions of  silence, sound or <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>). Point labels can mark detected beats.  </li>
 <li> The label text can be edited and you can resize region labels or move region or point labels.  </li>
 <li> The Label Track's <a href="#menu">Dropdown Menu</a> can be used to name the track, move it up or down or set the font of all label text.</li>
@@ -78,7 +78,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">Standard <a href="edit_menu.html" title="Edit Menu">Edit Menu</a> commands can be applied to the audio of multiple labeled regions (excluding audio outside those regions). To do this, drag a selection in the Label Track that fully includes (or extends beyond) the labels whose audio is to be affected, then choose <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#editlabels" title="Edit Menu: Labels">Edit Labels...</a></span> and your required command.
+<td align="left" valign="top">Standard <a href="edit_menu.html" title="Edit Menu">Edit Menu</a> commands can be applied to the audio of multiple labeled regions (excluding audio outside those regions). To do this, drag a selection in the Label Track that fully includes (or extends beyond) the labels whose audio is to be affected, then choose <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#editlabels" title="Edit Menu: Labels">Label Editor</a></span> and your required command.
 </td></tr></table>
 </div>
 <div id="limitations"></div>
@@ -109,13 +109,13 @@
 <ul><li> Cut or Copy any text selected in the label to the system clipboard</li>
 <li> Paste any text that is currently on the system clipboard  </li>
 <li> Delete the label</li>
-<li> Open <a href="labels_editor.html" title="Labels Editor">Labels Editor</a> to edit only that label's Start Time and End Time (and also its Low Frequency and High Frequency for use in <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a>). </li></ul>
+<li> Open <a href="labels_editor.html" title="Labels Editor">Label Editor</a> to edit only that label's Start Time and End Time (and also its Low Frequency and High Frequency for use in <a href="spectral_selection.html" title="Spectral Selection">Spectral Selection</a>). </li></ul>
 <p><br />
 </p>
 <div id="create"></div>
 <h2><span class="mw-headline" id="Creating_and_selecting_Labels"><a href="creating_and_selecting_labels.html" title="Creating and Selecting Labels">Creating and selecting Labels</a></span></h2>
 <p>Labels can be created by <a href="audacity_selection.html" title="Audacity Selection">selecting</a> a region or clicking at a point of interest then choosing <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#addlabelatselection" title="Edit Menu: Labels">Add Label at Selection</a></span> (or use its keyboard shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span>). An empty label appears then you can type to add text to the label. Press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on the keyboard to confirm the text and close the label.  
-</p><p>If you turn on <b>Type to create a label</b> in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors</a> preferences <i>(it is "off" by default)</i>, then when a label track has the yellow <a href="audacity_selection.html#keyboard" title="Audacity Selection">focus border</a> as in the image above  you can create a label at the cursor position or selection just by typing the label text.
+</p><p>If you turn on <b>Typing Creates New Labels</b> in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors</a> preferences <i>(it is "off" by default)</i>, then when a label track has the yellow <a href="audacity_selection.html#keyboard" title="Audacity Selection">focus border</a> as in the image above  you can create a label at the cursor position or selection just by typing the label text.
 </p><p>You can also create labels while playing or recording.
 </p>
 <ul><li> To create a point label at the current position of the green playback cursor or red recording cursor, choose <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#addlabelatplaybackposition" title="Edit Menu: Labels">Add Label at Playback Position</a></span> or its keyboard shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + M</span> (<i><span class="kbrd" style="background-color: #d0d0f8">&#8984; + .</span> on Mac</i>).</li>
@@ -210,14 +210,14 @@
 </p><p><br />
 </p>
 <div id="editor"></div>
-<h2><span class="mw-headline" id="Labels_Editor"><a href="labels_editor.html" title="Labels Editor">Labels Editor</a></span></h2>
-<p><span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#editlabels" title="Edit Menu: Labels">Edit Labels...</a></span> launches a keyboard-accessible Labels Editor where you can perform all remove, text edit, resize and move operations on labels. All the labels and label tracks in the project are displayed in a tabular view, similar to a spreadsheet. Each row represents a single individual label.
-</p><p>See <a href="labels_editor.html" title="Labels Editor">this page</a> for more details on the editor.
+<h2><span class="mw-headline" id="Label_Editor"><a href="labels_editor.html" title="Labels Editor">Label Editor</a></span></h2>
+<p><span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#editlabels" title="Edit Menu: Labels">Label Editor</a></span> launches a keyboard-accessible Label Editor where you can perform all remove, text edit, resize and move operations on labels. All the labels and label tracks in the project are displayed in a tabular view, similar to a spreadsheet. Each row represents a single individual label.
+</p><p>See <a href="labels_editor.html" title="Labels Editor">Label Editor</a> for more details on the editor.
 </p><p><br />
 </p>
 <div id="menu"></div>
 <h2><span class="mw-headline" id="Editing_or_moving_the_label_track_using_the_Label_Track_Dropdown_Menu">Editing or moving the label track using the Label Track Dropdown Menu</span></h2>
-<p>Clicking the label track's name by the downward-pointing triangle (or using shortcut <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> or the keyboard Menu key when the label track has focus) opens the Label Track Dropdown Menu:
+<p>Clicking the label track's name by the downward-pointing triangle or right-clicking in the label track's Track Control Panel (or using shortcut <span class="kbrd" style="background-color: #e0e0f0">Shift + M</span> or the keyboard Menu key when the label track has focus) opens the Label Track Dropdown Menu:
 </p>
 <dl><dd><span title="Label Track Dropdown menu"><img alt="TrackDropdownMenu.png" src="../m/images/9/9c/trackdropdownmenu.png" width="240" height="190" /></span></dd></dl>
 <ul><li><b>Name</b></li></ul>
@@ -365,7 +365,7 @@ Click on this to select the whole label track.</div>
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Label_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Label_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

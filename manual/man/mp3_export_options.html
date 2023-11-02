@@ -33,8 +33,7 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/MP3_Export_Options#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">.
-
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 <div class="intro"><i><b>MP3 Export Options</b></i> let you choose the quality of files exported to the popular <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> format. You can choose between variable, average or constant <i><b><a href="glossary.html#bit_rate" title="Glossary">bit rate</a></b></i>, or from one of four common presets. Encoding speed can be specified, and Joint Stereo encoding chosen as an option.<p> As with all <i><b><a href="glossary.html#lossy" title="Glossary">lossy</a></b></i>, <i><b><a href="glossary.html#compressed_format" title="Glossary">compressed formats</a></b></i>, there is a trade-off between the size of the file and the quality of the encoded file, higher quality requiring larger files.</p>
 <p>Note that MP3 files have a short silence at the beginning due to encoder delay. This is a <a rel="nofollow" class="external text" href="http://lame.sourceforge.net/tech-FAQ.txt">limitation of the MP3 format</a>. Audacity uses <a rel="nofollow" class="external text" href="http://gabriel.mp3-tech.org/mp3infotag.html">LAME Mp3 info tag</a> to store the exact length of added silence. Applications that support this tag, (including Audacity), are then able to automatically strip off the added silence. Many apps still do not support this feature, and will therefore show a small amount of added silence at the beginning of the file. If you need to synchronize files or are making <a href="tutorial_looping.html" title="Tutorial - Looping">Audio Loops</a>, it is highly recommended to use a format that does not have this limitation, such as WAV, FLAC or Ogg Vorbis.</p>
 <p>Audacity uses <b><a rel="nofollow" class="external text" href="http://lame.sourceforge.net/">LAME</a></b> for encoding MP3s, which is generally considered to be the best MP3 encoding library, and is the only MP3 encoding library that is still being actively developed.</p>  
@@ -43,9 +42,8 @@
 <li>Also note that any hidden parts of audio clips are <i><b>not</b></i> exported, see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>. </div> </div></li></ul>
 <p><br />
 </p>
-<dl><dd>Accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html" title="File Menu: Export">Export as MP3</a></span> </dd></dl>
-<dl><dd><span title="Specify MP3 Options at the bottom of the Export Audio dialog"><img alt="Export MP3 dialog 3-0-0.png" src="../m/images/0/07/export_mp3_dialog_3_0_0.png" width="715" height="623" /></span> </dd></dl>
-<dl><dd>Also accessed by: <span class="menu">File &gt; Export &gt; <a href="file_menu_export.html#exportmultiple" title="File Menu: Export">Export Multiple...</a></span> then choosing <b>MP3 Files</b> from the <b>Save as type</b> dropdown menu.  In this case the options dialog will appear in the center of the Export Multiple dialog.</dd></dl>
+<dl><dd><b>Accessed by:</b> <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> then choosing <b>MP3</b> from the <b>Format</b> dropdown menu.</dd>
+<dd><span title="Export MP3 dialog"><img alt="Export MP3 3-4-0.png" src="../m/images/f/fb/export_mp3_3_4_0.png" width="497" height="460" /></span> </dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -59,6 +57,21 @@
 </p>
 <div id="setup"></div>
 <h2><span class="mw-headline" id="MP3_Export_Setup">MP3 Export Setup</span></h2>
+<div id="channels"></div>
+<h3><span class="mw-headline" id="Channels">Channels</span></h3>
+<p>Sets the number of channels for the exported audio file.  There are three options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Mono:</span> single channel</li>
+<li><span style="font-weight: bold; font-size:118%">Stereo:</span> stereo pair with left and right channels - <i>this is the default setting even if you only have mono tracks for exporting</i></li>
+<li><span style="font-weight: bold; font-size:118%">Custom mapping:</span> use this to export multi-channel (surround sound) files or to make customized assignments between Audacity tracks and the channels in the exported file.
+<ul><li>Selecting this and clicking on the <span class="button">Configure</span> button causes the <b><a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a></b> dialog to appear.  For details please see <a href="advanced_mixing_options.html" title="Advanced Mixing Options">Advanced Mixing Options</a>.</li></ul></li></ul>
+<div id="samplerate"></div>
+<h3><span class="mw-headline" id="Sample_Rate">Sample Rate</span></h3>
+<p>Sample rate can be chosen from:
+</p>
+<ul><li>32000 Hz</li>
+<li>44100 Hz - <i>default setting</i></li>
+<li>48000 Hz</li></ul>
 <div id="bitrate"></div>
 <h3><span class="mw-headline" id="Bit_Rate_Mode">Bit Rate Mode</span></h3>
 <p>These offer four different ways to control the trade-off between the size and quality of the exported files. 
@@ -74,31 +87,17 @@
 <div id="cbr"></div>
 <ul><li><b>Constant:</b> This sets a constant bit rate for the encoding, regardless of its complexity. Of the four bit rate modes, this usually gives the worst, least consistent quality for a given file size, but that size itself is completely predictable (note that if you choose a high bit rate, the LAME encoder may use a lower constant bit rate if you choose 11,025 Hz or lower project sample rate). Use constant bit rate if you are streaming the file over the Internet, as it ensures the audio cannot stutter due to sudden peaks in the bit rate. The available bit rates are the same as for average bit rate - the default rate (128 kbps) gives you a known file size of about 1 MB per minute of mono or stereo audio.</li></ul>
 <div class="note">If you are exporting a constant bit rate spoken word MP3 such as an audiobook and have a stereo track in Audacity where both <a href="audacity_waveform.html" title="Audacity Waveform">channels</a> are identical, it is preferable to use <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_stereo_down_to_mono" title="Tracks Menu: Mix">Mix Stereo down to Mono</a></span> to convert to a single mono track before export. This will still sound the same on stereo equipment, but have higher quality because the fixed number of bits have less audio to process.</div>
+<div id="quality"></div>
 <h3><span class="mw-headline" id="Quality">Quality</span></h3>
 <p>This list lets you select the bit rate in kbps (kilobits per second) for encoding your file. A higher bit rate always gives better quality but at the expense of a larger file size and vice versa. The bit rates are absolute for average and constant bit rate modes, but expressed as a range for the variable and preset modes (except for the Insane preset).
+</p><p><br />
 </p>
-<h3><span class="mw-headline" id="Channel_Mode">Channel Mode</span></h3>
-<p>These controls determine how the two channels of a stereo MP3 are encoded or if the exported MP3 should always be mono.
-</p>
-<ul><li> <b>Joint Stereo:</b> Enabled by default, this button lets the encoder switch from frame to frame between "Stereo" (which just encodes the left and right channels independently) and Mid/Side stereo. Mid/Side stereo converts the Left and Right channels into two different signals: a "Mid" or "Sum" channel (Left plus Right, mono) and a "Side" or "Difference" channel (the difference between the two channels, Left minus Right). This allows recordings with relatively little stereo separation to be encoded more efficiently - more <i><b><a href="glossary.html#bit" title="Glossary">bits</a></b></i> can be allocated to the Sum channel because there is relatively little difference information to encode.<p> As a result, files encoded as Joint Stereo with variable or average bit rate will be slightly smaller than comparable files encoded as Stereo, but the file size difference will be less noticeable at higher bit rates. For all bit rate modes (variable, average or constant) there will also be less audible difference between Joint Stereo and Stereo at higher bit rates.</p> </li>
-<li> <b>Stereo:</b> If this button is enabled, the left and right signals are encoded independently of each other. </li>
-<li> <b>Force export to mono:</b> This is set "<b>off</b>" by default. Enabling this checkbox always produces a mono (single channel) MP3 file, <a href="mixing.html" title="Mixing">mixing</a> down to mono if the Audacity content is stereo or would otherwise produce a stereo file. 
-<ul><li> If you are only exporting one mono Audacity track and providing that track is <a href="audio_tracks.html#pan" title="Audio Tracks">panned</a> to center, Audacity will automatically export as mono without enabling this checkbox. In that case the Joint Stereo and Stereo buttons have no effect. </li>
-<li> If you do enable this checkbox, the Joint Stereo and Stereo radio buttons are disabled. </li></ul></li></ul>
-<ul style="list-style-image: none; list-style-type: none">When forcing export to mono and you choose variable or average bit rate or a Preset other than "Insane", the bit rate and the exported file size will be reduced compared to a stereo export. This can be done without affecting the quality of the export because less bits are needed for mono encoding than stereo.</ul>
-<div id="tags"></div>
-<h2><span class="mw-headline" id="ID3_Metadata_Tags">ID3 Metadata Tags</span></h2>
-<p>MP3 files contain <a href="glossary.html#metadata" title="Glossary">metadata</a> at the start of the file as <a href="glossary.html#id3" title="Glossary">ID3 tags</a>. These tags typically contain information such as Track Title, Artist Name, Year and Genre. Some of this information may be visible in the playing window of software and hardware players. The tags can be edited with Audacity's <a href="metadata_editor.html" title="Metadata Editor">Metadata Tags Editor</a>. 
-</p><p>By default, the <a href="metadata_editor.html" title="Metadata Editor">Metadata Tags Editor</a> will always appear at export time. Enter any metadata you require in the editor, then click the <span class="button">OK</span> button (<i><b>not</b></i> <span class="button">Save</span>).
-</p>
-<div class="note">To prevent Metadata Editor appearing at export time, click <span class="menu">Edit &gt; Preferences</span>, then the <span class="menu">Import / Export</span> tab, and in the "When exporting tracks..." section, uncheck "<b>Show Metadata Editor prior to export step</b>". The tags can still be viewed or edited at any time prior to export at <span class="menu">Edit &gt; <a href="metadata_editor.html" title="Metadata Editor">Edit Metadata...</a></span>, and the tags in the editor at export time will still be exported. </div> 
-<h3><span class="mw-headline" id="Metadata_tags_with_Export_Multiple">Metadata tags with Export Multiple</span></h3>
-<p>When using <a href="export_multiple.html" title="Export Multiple">Export Multiple</a>, Metadata Editor pops up as many times as there are files to export. This gives flexibility to adjust the tags separately for tracks which form compilations with different artists or genres. 
-</p><p>If all the tracks to be exported have common information except for Track Title and Track Number, you may prefer to set Preferences as above so that Metadata Editor does not appear prior to export. Then make any necessary edits to the common tags at <span class="menu">Edit &gt; <a href="metadata_editor.html" title="Metadata Editor">Metadata...</a></span> prior to export, and the multiple export will proceed silently with the Track Title and Track Number tags added automatically. The Track Title tag will be the same as the file name chosen in the <a href="label_tracks.html" title="Label Tracks">label</a> or <a href="audio_track_dropdown_menu.html#name" title="Audio Track Dropdown Menu">track name</a>, and the Track Number tag will be generated according to the order of the labels or tracks.
-</p>
+<div id="settings"></div>
 <h2><span class="mw-headline" id="Recommended_settings">Recommended settings</span></h2>
 <p>The default MP3 encoding options in Audacity are <b>170 - 210 kbps VBR</b> (preset "Standard"). While this is a good choice for stereo music, it is not generally recommended for Podcasts.
+</p><p>For better than "very good" for music, you should really be using 256 kbps VBR. Good for home use but not for streaming.
 </p>
+<div id="podcast"></div>
 <h3><span class="mw-headline" id="Podcast_settings">Podcast settings</span></h3>
 <p>For podcasts, "CBR" (constant bit rate) is recommended, and not "VBR" (variable bit rate).
 </p><p>The choice of mono/stereo depends on the type of podcast. For voice only podcasts, mono is usually preferred as you can achieve better sound quality with less data. If the podcast contains a lot of music you may prefer to use stereo, but higher bit rates will probably be required (bigger file size).
@@ -108,15 +107,8 @@
 <li><b>128 kbps CBR stereo</b> can give reasonable quality where stereo is required.</li>
 <li><b>192 kbps CBR stereo</b> can give very good quality where stereo is required.</li>
 <li><b>256 kbps VBR stereo</b> can give excellent quality stereo music, though not recommended for streaming.</li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
-</td>
-<td align="left" valign="top">See <b><a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></b> for how to set the MP3 export options.
-</td></tr></table>
-</div>
+<p><br />
+</p>
 
 
 
@@ -195,7 +187,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/MP3_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/MP3_Export_Options">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

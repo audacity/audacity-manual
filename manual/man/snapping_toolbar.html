@@ -33,9 +33,9 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Snapping_Toolbar#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><b>Snapping Toolbar</b> enables you to snap the cursor or selection to the nearest whole second <i>(or other whole time formats)</i> which can be useful for <a href="exporting_audio.html" title="Exporting Audio">exporting</a> a selection that needs to be a whole number of seconds <i>(or other time unit)</i>, without entering values in the Selection Toolbar boxes (which would be another way of ensuring accuracy). Snapping is "off" by default.<p>Various types of video file frame can be snapped to, including NTSC and PAL. Snapping to video frames can be useful to maintain video and audio synchronization when editing <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">audio from video files</a>.</p>
-<div class="note">If <b>Snap</b> is enabled, a track or clip willl be time-shifted using its <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bar</a> to the selected snapping format.</div>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><b>Snapping Toolbar</b> enables snapping of the <b>cursor</b>, <b>selection</b> or <b>clip</b> to the nearest whole second <i>(or other whole time formats)</i> which can be useful for <a href="exporting_audio.html" title="Exporting Audio">exporting</a> a selection that needs to be a whole number of seconds <i>(or other time unit)</i>, without entering values in the Selection Toolbar boxes (which would be another way of ensuring accuracy). Snapping is "off" by default.
+<ul><li>Various types of video file frame can be snapped to, including NTSC and PAL. </li>
+<li>Snapping to video frames can be useful to maintain video and audio synchronization when editing <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">audio from video files</a>.</li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -57,13 +57,33 @@
 <p><br />
 </p>
 <div id="snapping"></div>
-<h2><span class="mw-headline" id="Snapping">Snapping</span></h2>
+<h2><span class="mw-headline" id="Snapping_the_cursor">Snapping the cursor</span></h2>
 <p>With <b>Snap</b> set "on" (not default) and the format set seconds (default), clicking in-between 6 seconds and 7 seconds as displayed on the  <a href="timeline.html" title="Timeline">Timeline</a> snaps the cursor to the nearest second unit 6 or 7, unless the cursor is already exactly at the nearest second unit relative to the click point. 
+</p><p>Assuming the cursor is currently at other than exactly 6.0 whole seconds, clicking at 6.4 seconds will now snap the cursor to 6.0 seconds, while clicking at 6.8 seconds will snap the cursor to 7.0 seconds.
+</p><p><br />
 </p>
-<ul><li> Assuming the cursor is currently at other than exactly 6.0 whole seconds, clicking at 6.4 seconds will now snap the cursor to 6.0 seconds, while clicking at 6.8 seconds will snap the cursor to 7.0 seconds.</li>
-<li> Dragging a selection always snaps both selection edges to the nearest whole second. For example, when dragging rightwards on the right edge of a selection from 6.3 seconds to 6.6 seconds, the left edge of the selection will jump back at once to 6.0 seconds and the right edge of the selection will jump forwards at once to 7.0 seconds.</li>
-<li> If you continue to drag the mouse pointer, the right edge of the selection will not extend at once, but will snap to 8.0 seconds once the mouse pointer is dragged beyond 7.5 seconds. Similarly, if you then drag leftwards on the left edge of the selection it will extend to start from 5.0 seconds when the pointer is dragged before 5.5 seconds.</li></ul>
-<div class="note">Snapping to whole seconds can be useful for <a href="exporting_audio.html" title="Exporting Audio">exporting</a> a selection that needs to be a whole number of seconds, without entering values in the Selection Toolbar boxes (which would be another way of ensuring accuracy).<p>Various types of file frame can be snapped to, including NTSC and PAL. Snapping to video frames can be useful to maintain video and audio synchronization when editing <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">audio from video files</a>.</p></div>
+<div id="selection"></div>
+<h2><span class="mw-headline" id="Snapping_a_selection">Snapping a selection</span></h2>
+<p>Dragging a selection always snaps both selection edges to the nearest whole second. For example, when dragging rightwards on the right edge of a selection from 6.3 seconds to 6.6 seconds, the left edge of the selection will jump back at once to 6.0 seconds and the right edge of the selection will jump forwards at once to 7.0 seconds.
+</p><p>If you continue to drag the mouse pointer, the right edge of the selection will not extend at once, but will snap to 8.0 seconds once the mouse pointer is dragged beyond 7.5 seconds. Similarly, if you then drag leftwards on the left edge of the selection it will extend to start from 5.0 seconds when the pointer is dragged before 5.5 seconds.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Snapping a selection to whole seconds can be useful for <a href="exporting_audio.html" title="Exporting Audio">exporting</a> a selection that needs to be a whole number of seconds, without entering values in the Selection Toolbar boxes (which would be another way of ensuring accuracy).
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="clip"></div>
+<h2><span class="mw-headline" id="Snapping_a_moved_clip">Snapping a moved clip</span></h2>
+<p><a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Dragging a clip</a> will also snap to the chosen snap format. 
+</p>
+<ul><li>The left edge of the clip snaps if your hand-cursor for the click and drag to move the clip is in the the half of the clip-handle drag-bar.</li>
+<li>If the hand-cursor is in the right half of the drag-bar the right edge of the clip will snap.</li></ul>
 
 
 
@@ -141,7 +161,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Snapping_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Snapping_Toolbar">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -36,10 +36,9 @@
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
 
 
-
 <div class="intro">This page is an index to the Effects, Generators, Analyzers and Tools shipped with Audacity. You may also <a href="customization.html#Plugins" title="Customization">add new plugins</a> in various popular formats.
 <ul><li><span class="menu"><a href="#effects">Effects</a></span> change the audio in some way.
-<ul><li>Note that some effects can  make the peak levels of waveforms substantially higher.</li></ul></li>
+<ul><li>Some effects can  make the peak levels of waveforms substantially higher.</li></ul></li>
 <li><span class="menu"><a href="#generators">Generators</a></span> create new audio, either in an existing track or in a new track.</li>
 <li><span class="menu"><a href="#analyzers">Analyzers</a></span> perform analysis on a selection of audio - they do not change the audio and do not create new audio.</li>
 <li><span class="menu"><a href="#tools">Tools</a></span> provide miscellaneous commands that act on the project, but do not fit into the categories Effects, Generators or Analyzers.</li></ul>
@@ -55,6 +54,16 @@
 <td align="left" valign="top"><b>Realtime effects:</b> some external plugin effects can now be manipulated in real-time on any track using the <b>effects stack</b>.  Please see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects"><b>Using realtime effects</b></a> on the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/"><b>Audacity Support</b></a> site.
 </td></tr></table>
 </div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an Effect or Generator to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an Effect or Generator to a selection within a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips">time-stretched clip</a> then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li>
+<li>Analyzers are <i><b>not</b></i> affected by this.</li></ul>
+</td></tr></table></div>
 </div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -86,7 +95,7 @@
 <td width="20%"><a href="amplify.html" title="Amplify"><span title="&quot;Use">Amplify</span></a></td>
 <td width="20%"><a href="crossfade_tracks.html" title="Crossfade Tracks"><span title="Use Crossfade Tracks to make a smooth transition between two overlapping tracks one above the other. Place the track to be faded out above the track to be faded in then select the overlapping region in both tracks and apply the effect.">Crossfade Tracks</span></a></td>
 <td width="20%"><a href="limiter.html" title="Limiter"><span title="Limiter passes signals below a specified input level unaffected or gently reduced, while preventing the peaks of stronger signals from exceeding this threshold. Mastering engineers often use this type of dynamic range compression combined with make-up gain to increase the perceived loudness of an audio recording during the audio mastering process.">Limiter</span></a></td>
-<td width="20%"><a href="pluck.html" title="Pluck"><span title="Pluck generates a synthesized pluck tone with abrupt or gradual fade-out, and selectable pitch corresponding to a MIDI note. If you generate a short pluck and use Effect &gt; Repeat... on it, it can be used as an alternative to Rhythm Track.">Pluck</span></a></td>
+<td width="20%"><a href="pluck.html" title="Pluck"><span title="Pluck generates a synthesized pluck tone with abrupt or gradual fade-out, and selectable pitch corresponding to a MIDI note. If you generate a short pluck and use Effect &gt; Repeat on it, it can be used as an alternative to Rhythm Track.">Pluck</span></a></td>
 <td width="20%"><a href="spectral_edit_multi_tool.html" title="Spectral edit multi tool"><span title="When the selected track is in spectrogram or spectrogram log(f) view, applies a notch filter, high-pass filter or low-pass filter according to the spectral selection made">Spectral edit multi tool</span></a></td>
 </tr>
 <tr style="background-color:#ddeeff" valign="top">
@@ -118,7 +127,7 @@
 <td width="20%"><a href="tremolo.html" title="Tremolo"><span title="Tremolo modulates the volume of the selection at the depth and speed selected in the dialog. This is the same as the tremolo effect familiar to guitar and keyboard players.">Tremolo</span></a></td>
 </tr>
 <tr style="background-color:#ddeeff" valign="top">
-<td width="20%"><a href="change_speed.html" title="Change Speed"><span title="Use Change Speed to change the speed of a track, affecting its tempo, pitch and frequency content. When you slow a track down, all its frequencies become lower, and when you speed it up, they all become higher.">Change Speed</span></a></td>
+<td width="20%"><a href="change_speed.html" title="Change Speed"><span title="Use Change Speed and Pitch to change the speed of a track, affecting its tempo, pitch and frequency content. When you slow a track down, all its frequencies become lower, and when you speed it up, they all become higher.">Change Speed and Pitch</span></a></td>
 <td width="20%"><a href="fades.html#linearfade" title="Fades"><span title="&quot;A">Fade In</span></a></td>
 <td width="20%"><a href="noise_reduction.html" title="Noise Reduction"><span title="Noise Reduction can reduce constant background sounds such as hum, whistle, whine or buzz, and moderate amounts of hiss. It is not suitable for individual clicks and pops, or irregular background noise such as from traffic or an audience.">Noise Reduction</span></a></td>
 <td width="20%"><a href="reverse.html" title="Reverse"><span title="Reverses the selected audio, so that the end of the audio will be heard first and the beginning last. Some people reverse small portions of audio to make inappropriate language unintelligible, while others believe you can hear subliminal messages if you listen to speech backwards. You can also create interesting sound effects by recording natural events and reversing the audio.">Reverse</span></a></td>
@@ -129,7 +138,7 @@
 <td width="20%"><a href="fades.html#linearfade" title="Fades"><span title="Applies a fade to the selected audio such that the amplitude of the selection goes from the original amplitude to absolute silence. A fade out is often applied to a longer selection than a fade in, typically to a selection up to about ten seconds long.">Fade Out</span></a></td>
 <td width="20%"><a href="noise.html" title="Noise"><span title="Generates one of three different types of noise. White noise is that which has the greatest ability to mask other sounds, as it has similar energy at all frequency levels. Pink noise and Brownian noise both have more energy at lower frequencies, especially Brownian, which has the most muffled, low pitched sound of the three types.">Noise</span></a></td>
 <td width="20%"><a href="rhythm_track.html" title="Rhythm Track"><span title="Rhythm Track generates a sequence of regular pulses at the selected tempo, beats per measure and either number of measures or track duration, using a selectable click sound. It can thus be used like a metronome for setting a steady beat against which an overdub recording can be made.">Rhythm Track</span></a></td>
-<td width="20%"><a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"><span title="Vocal Reduction and Isolation... attempts to remove center-panned audio from a stereo track. Vocals are sometimes (but not always) recorded in this way. Most Remove options in this effect preserve the stereo image.">Vocal Reduction and Isolation</span></a></td>
+<td width="20%"><a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"><span title="Vocal Reduction and Isolation attempts to remove center-panned audio from a stereo track. Vocals are sometimes (but not always) recorded in this way. Most Remove options in this effect preserve the stereo image.">Vocal Reduction and Isolation</span></a></td>
 </tr>
 <tr style="background-color:#ddeeff" valign="top">
 <td width="20%"><a href="chirp.html" title="Chirp"><span title="Chirp produces four different types of tones like the Tone Generator but additionally allows setting of the start and end amplitude and frequency. Short tones can be made to sound very much like a bird call.">Chirp</span></a></td>
@@ -139,8 +148,8 @@
 <td width="20%"><a href="vocoder.html" title="Vocoder"><span title="Vocoder synthesizes a modulator (usually a voice) in the left channel of a stereo track with a carrier wave in the right channel to produce a modified version of the left channel. Vocoding a normal voice with white noise as provided in the effect will produce a robot-like voice for special effects.">Vocoder</span></a></td>
 </tr>
 <tr valign="top">
-<td width="20%"><a href="classic_filters.html" title="Classic Filters"><span title="Classic Filters offers three different types of filter which together emulate the vast majority of analog filters, providing a useful graphical tool for analysis and measurement. This effect is not not enabled by default. To enable it, use Effect &gt; Add / Remove Plug-ins... .">Classic Filters</span></a></td>
-<td width="20%"><a href="find_clipping.html" title="Find Clipping"><span title="Displays runs of clipped samples in a Label Track, as a screen-reader accessible alternative to the View &gt; Show Clipping command. A run must include at least one clipped sample, but may include unclipped samples too.">Find Clipping</span></a></td>
+<td width="20%"><a href="classic_filters.html" title="Classic Filters"><span title="Classic Filters offers three different types of filter which together emulate the vast majority of analog filters, providing a useful graphical tool for analysis and measurement. This effect is not not enabled by default. To enable it, use Effect &gt; Add / Remove Plug-ins .">Classic Filters</span></a></td>
+<td width="20%"><a href="find_clipping.html" title="Find Clipping"><span title="Displays runs of clipped samples in a Label Track, as a screen-reader accessible alternative to the View &gt; Show Clipping in Waveform command. A run must include at least one clipped sample, but may include unclipped samples too.">Find Clipping</span></a></td>
 <td width="20%"><a href="notch_filter.html" title="Notch Filter"><span title="Notch Filter sharply attenuates frequency-specific noise like mains hum or electrical whistle with minimal damage to the remaining audio, by cutting a notch out of the frequency spectrum at that point.">Notch Filter</span></a></td>
 <td width="20%"><a href="sample_data_export.html" title="Sample Data Export"><span title="Sample Data Export reads the values of successive samples from the selected audio and prints this data to a plain text, CSV or HTML file. Further information may be added as a header at the top of the file.">Sample Data Export</span></a></td>
 <td width="20%"><a href="wahwah.html" title="Wahwah"><span title="Rapid tone quality variations, like that guitar sound so popular in the 1970&#39;s. The effect&#39;s output may have higher amplitude than the original audio, leading to clipping. Clipping can be removed using Amplify in 32-bit projects, otherwise undo Wahwah, de-amplify the audio, then apply Wahwah again.">Wahwah</span></a></td>
@@ -256,7 +265,7 @@
 <ul><li> <b><a href="bass_and_treble.html" title="Bass and Treble">Bass and Treble</a>:</b> Increases or decreases the lower  <i><b><a href="glossary.html#frequency" title="Glossary">frequencies</a></b></i>  and higher frequencies of your audio independently; behaves just like the bass and treble controls on a stereo system.</li>
 <li> <b><a href="classic_filters.html" title="Classic Filters">Classic Filters</a>:</b> Offers three different types of <i><b><a href="glossary.html#filter" title="Glossary">filter</a></b></i> which together emulate the vast majority of analog filters, providing a useful graphical tool for analysis and measurement. <p>The Classic Filters effect is not enabled by default. To enable it, use <span class="menu">Effect &gt; <a href="effect_menu.html#add_remove_plugins" title="Effect Menu">Plugin Manager</a></span> to open the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a> dialog.</p></li>
 <li> <b><a href="distortion.html" title="Distortion">Distortion</a>:</b> Use the Distortion effect to make the audio sound distorted. By distorting the waveform the frequency content is changed, which will often make the sound "crunchy" or "abrasive".  Technically this effect is a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Waveshaper">waveshaper</a>. The result of waveshaping is equivalent to applying non-linear amplification to the audio waveform. Preset shaping functions are provided, each of which produces a different type of distortion. </li>
-<li> <b><a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ...</a>:</b> Adjusts the volume levels of particular frequencies, using drawn curves</li>
+<li> <b><a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a>:</b> Adjusts the volume levels of particular frequencies, using drawn curves</li>
 <li> <b><a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a>:</b> Adjusts the volume levels of particular frequencies, using sliders.</li>
 <li> <b><a href="high_pass_filter.html" title="High-Pass Filter">High-Pass Filter</a>:</b> Passes frequencies above its cutoff frequency and attenuates frequencies below its cutoff frequency.</li>
 <li> <b><a href="low_pass_filter1.html" class="mw-redirect" title="Low Pass Filter">Low Pass Filter</a>:</b> Passes frequencies below its cutoff frequency and attenuates frequencies above its cutoff frequency.</li>
@@ -279,7 +288,7 @@
 <li> <b><a href="spectral_edit_multi_tool.html" title="Spectral edit multi tool">Spectral Edit Multi Tool</a>:</b> When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view, applies a  <i><b><a href="glossary.html#notch" title="Glossary">notch filter</a></b></i>, <i><b><a href="glossary.html#hp" title="Glossary">high- pass filter</a></b></i> or <i><b><a href="glossary.html#lp" title="Glossary">low pass filter</a></b></i> according to the spectral selection made. This effect can also be used to change the audio quality as an alternative to using <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a> or <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a>.</li></ul>
 <h3><span class="mw-headline" id="Make_the_sound_faster.2C_slower.2C_lower_pitched_or_higher_pitched">Make the sound faster, slower, lower pitched or higher pitched</span></h3>
 <ul><li> <b><a href="change_pitch.html" title="Change Pitch">Change Pitch</a>:</b> Change the pitch of a selection without changing its tempo.</li>
-<li> <b><a href="change_speed.html" title="Change Speed">Change Speed</a>:</b> Change the speed of a selection, also changing its pitch.</li>
+<li> <b><a href="change_speed.html" title="Change Speed">Change Speed and Pitch</a>:</b> Change the speed of a selection, also changing its pitch.</li>
 <li> <b><a href="change_tempo.html" title="Change Tempo">Change Tempo</a>:</b> Change the tempo and length (duration) of a selection without changing its pitch.</li>
 <li> <b><a href="sliding_stretch.html" title="Sliding Stretch">Sliding Stretch</a>:</b> This effect allows you to make a continuous change to the tempo and/or pitch of a selection by choosing initial and/or final change values.</li>
 <li> <b><a href="paulstretch.html" title="Paulstretch">Paulstretch</a>:</b> Use Paulstretch only for an extreme time-stretch or "stasis" effect, This may be useful for synthesizer pad sounds, identifying performance glitches or just creating interesting aural textures. Use Change Tempo or Sliding Stretch rather than Paulstretch for tasks like slowing down a song to a "practice" tempo. </li>
@@ -339,12 +348,12 @@
 <h2><span class="mw-headline" id="Tools_by_Function">Tools by Function</span></h2>
 <h3><span class="mw-headline" id="Nyquist">Nyquist</span></h3>
 <ul><li><b><a href="nyquist_prompt.html" title="Nyquist Prompt">Nyquist Prompt</a></b>: Brings up a dialog where you can enter Nyquist commands. Nyquist is a programming language for generating, processing and analyzing audio. For more information see <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plugins_Reference">Nyquist Plug-ins Reference</a>.</li>
-<li><b><a href="nyquist_plug_in_installer.html" title="Nyquist Plug-in Installer">Nyquist Plug-in Installer...</a></b> The <span class="npi">Nyquist Plug-in Installer</span> is itself a Nyquist plugin that simplifies the installation of other Nyquist plugins.</li></ul>
+<li><b><a href="nyquist_plug_in_installer.html" title="Nyquist Plug-in Installer">Nyquist Plug-in Installer</a></b> The <span class="npi">Nyquist Plug-in Installer</span> is itself a Nyquist plugin that simplifies the installation of other Nyquist plugins.</li></ul>
 <h3><span class="mw-headline" id="Divide_Up_audio_using_Labels">Divide Up audio using Labels</span></h3>
 <ul><li><b><a href="regular_interval_labels.html" title="Regular Interval Labels">Regular Interval Labels</a>:</b> Places <a href="label_tracks.html" title="Label Tracks">labels</a> in a long track so as to divide it into smaller, equally sized  segments.</li></ul>
 <h3><span class="mw-headline" id="Data_export_and_import">Data export and import</span></h3>
-<ul><li><b><a href="sample_data_export.html" title="Sample Data Export">Sample Data Export...</a></b> Reads the values of successive samples from the selected audio and prints this data to a plain text, CSV or HTML file. Further information may be added as a "header" at the top of the file.</li>
-<li><b><a href="sample_data_import.html" title="Sample Data Import">Sample Data Import...</a></b> Reads numeric values from a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Plain_text">plain ASCII text</a> file and creates a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">PCM</a> sample for each numeric value read.</li></ul>
+<ul><li><b><a href="sample_data_export.html" title="Sample Data Export">Sample Data Export</a></b> Reads the values of successive samples from the selected audio and prints this data to a plain text, CSV or HTML file. Further information may be added as a "header" at the top of the file.</li>
+<li><b><a href="sample_data_import.html" title="Sample Data Import">Sample Data Import</a></b> Reads numeric values from a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Plain_text">plain ASCII text</a> file and creates a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">PCM</a> sample for each numeric value read.</li></ul>
 
 
 
@@ -422,7 +431,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Index_of_Effects,_Generators_and_Analyzers">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Index_of_Effects,_Generators_and_Analyzers">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -37,16 +37,34 @@
 <div class="intro">Noise Reduction can reduce constant background sounds such as hum, whistle, whine, buzz, and "hiss", such as tape hiss, fan noise or FM/webcast carrier noise. It is not suitable for individual clicks and pops, or irregular background noise such as from traffic or an audience.
 <p>To use Noise Reduction, you need a region in the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> that contains only the noise you want to reduce. 
 </p><p>Be aware that it may be impossible to get a satisfactory removal when the noise is very loud, when the noise is variable, when the music or speech is not much louder than the noise or when the noise frequencies are very similar to those of the music or speech. 
+</p><p>If your problem is mains hum or a high-pitched whistle, the use of a <a href="notch_filter.html" title="Notch Filter">Notch Filter</a> may help, which should be carried out <b>before</b> applying Noise Reduction.
 </p>
-If your problem is mains hum or a high-pitched whistle, the use of a <a href="notch_filter.html" title="Notch Filter">Notch Filter</a> may help, which should be carried out <b>before</b> applying Noise Reduction.</div>
-<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Noise Removal and Repair &gt; Noise Reduction...</span></dd>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
+<ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">If you apply this effect with an <a href="envelope_tool.html" title="Envelope Tool"><b>envelope</b></a> present then there is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/5099"><b>bug</b></a> whereby the envelope is removed and the audio reverts to its full amplitude state prior to the effect being applied.
+</td></tr></table>
+</div></div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Noise Removal and Repair &gt; Noise Reduction</span></dd>
 <dd><span title="Noise Reduction dialog"><img alt="Noise Reduction 3-3-0.png" src="../m/images/0/04/noise_reduction_3_3_0.png" width="474" height="397" /></span></dd></dl>
 <div id="profile"></div>
 <h2><span class="mw-headline" id="Step_1_-_Get_Noise_Profile">Step 1 - Get Noise Profile</span></h2>
 <p>This first step teaches Audacity about the noise you want to remove by identifying the <i><b><a href="glossary.html#noise_floor" title="Glossary">noise floor</a></b></i> of the different <i><b><a href="glossary.html#frequency" title="Glossary">frequencies</a></b></i> that make up the noise.  
 </p>
 <ol><li>Select a region of the <i><a href="audacity_waveform.html" title="Audacity Waveform">waveform</a></i> which <b>contains only noise</b>. A minimum of 2048 samples (0.05 sec. at 44,100 Hz <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>) is needed, below which an error will be shown. A longer Noise Profile is better. If there are very different types of noise in different places in the track, they are best dealt with by identifying the Noise Profile for the first type, reducing the noise for it, then identifing the Noise Profile of the next type of noise and reducing that. </li>
-<li>Click <span class="menu">Effect &gt; Noise Reduction...</span>.</li>
+<li>Click <span class="menu">Effect &gt; Noise Reduction</span>.</li>
 <li>Click <b>Get Noise Profile</b>.</li></ol>
 <div class="note">Duplicating a very short sample of noise in order to get a long enough sample for the Noise Profile will not help. Noise Reduction calculates the statistics of the noise. Examining repeated blocks of the same noise will not change the statistics. </div> 
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
@@ -61,7 +79,7 @@ If your problem is mains hum or a high-pitched whistle, the use of a <a href="no
 <div id="remove"></div>
 <h2><span class="mw-headline" id="Step_2_-_Reduce_the_Noise">Step 2 - Reduce the Noise</span></h2>
 <ol><li> <a href="audacity_selection.html" title="Audacity Selection">Select</a> the entire region of <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> <b>from which you want to reduce the noise</b>, then set the Noise Reduction parameters. This is often best done by trial and error, adjusting the sliders and using the Preview button to listen to a few seconds of audio after noise reduction. Listening to the <i>Residue</i> (the sound that will be filtered out when you apply "Reduce") can also be useful in determining how much damage is being done to the desired (non-noise) sound.</li>
-<li>Click <span class="menu">Effect &gt; Noise Reduction...</span>.
+<li>Click <span class="menu">Effect &gt; Noise Reduction</span>.
 <ul><li><b>Noise Reduction (dB):</b> Controls the amount of volume reduction to be applied to the identified noise. Use the lowest value that reduces the noise to an acceptable level. Higher values than necessary may make the noise even quieter, but will result in damage to the audio that remains.  <p>The default setting is setting is 6.</p></li>
 <li><b>Sensitivity:</b> Controls how much of the audio will be considered as noise, on a scale of 0 (off) to 24 (maximum). Greater sensitivity means that more noise will be removed, possibly at the expense of removing some of the desired signal as well. Lower values may result in the appearance of <a href="#artifacts">artifacts</a> in the noise-reduced audio. Set this control to the lowest value that achieves effective noise removal without the introduction of artifacts. <p>The default setting is setting is 6.00.</p></li>
 <li><b>Frequency Smoothing (bands):</b> At values of 1 or higher, this control spreads the noise reduction into the specified number of neighboring bands. This modifies the signal you were intending to keep, but if <a href="#artifacts">artifacts</a> remain in the noise-reduced audio the smoothing can make those artifacts sound more acceptable. There is a chance that smoothing will make the desired audio less clear, so where your desired signal is strong and of wide frequency range and the noise is light, try leaving this control at 0 (off).<p> If you hear <a href="#artifacts">artifacts</a> in the noise-reduced audio after setting Sensitivity as high as possible without eliminating desired audio, try setting Frequency Smoothing to a value between 1 and 6 bands. The width (in Hertz) of a frequency band is dependent on the sampling frequency of the track. Width&#160;=&#160;sampling&#160;frequency&#160;/&#160;2048&#160;=&#160;21.53&#160;Hz at 44,100 Hz sampling rate.</p><p><i>Time smoothing</i> is always applied by Noise Reduction (attack of 20 milliseconds and release of 100 milliseconds) but the settings are not configurable. Any frequency smoothing you request is applied after time smoothing.</p> <p>The default setting is setting is 6, settings lower than this tend to favor music and higher settings tend to favor spoken word.</p></li>
@@ -210,7 +228,7 @@ If your problem is mains hum or a high-pitched whistle, the use of a <a href="no
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Noise_Reduction">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Noise_Reduction">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

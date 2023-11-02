@@ -37,20 +37,15 @@
 </p>
 
 
-<div class="intro"><i><b>Metadata Tags Editor</b></i> is used to enter or confirm text description <i><b><a href="glossary.html#metadata" title="Glossary">metadata tag</a></b></i> information, such as artist, year or genre) that will be embedded in the Audacity project and passed through into <a href="file_export_dialog.html" title="File Export Dialog">exported</a> audio files. Metadata that is embedded in audio files displays in software applications like Apple Music/iTunes\xc2\xae or Windows Media Player, or portable players like iPhone\xc2\xae and iPod\xc2\xae. <p>Most export formats support at least the seven default tags in Metadata Editor, but support in player applications varies from almost universal for the <i><b><a href="glossary.html#id3" title="Glossary">ID3</a></b></i> tags used by <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> to very limited for <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>. See this <a href="faq_opening_and_saving_files.html#meta" title="FAQ:Opening and Saving Files">Frequently Asked Question</a> for details.</p><p> For both MP3 and MP2, only ID3v2.3 tags are exported. ID3v1 can be exported using <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">Cmd-line export</a>.</p> 
-<div class="note">
-<ul><li> <b>By default, Metadata Tags Editor appears for each exported file</b> after choosing the file format in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a> or <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> dialogs. </li>
-<li> <b>Metadata Tags Editor shows data for the most recently imported track</b> in the project, not the selected track. If you need the editor to show separate data for each track, import the files into separate projects.   </li>
-<li> <b>Use the <span class="button">OK</span> button in Metadata Tags editor to complete the Export.</b> The <span class="button">Save...</span> button only saves an optional template of tag names and values.</li></ul>
-</div></div>
-<dl><dd><b>Accessed by:'</b> <span class="menu">Edit  &gt; Metadata...</span></dd>
+<div class="intro"><i><b>Metadata Tags Editor</b></i> is used to enter or confirm text description <i><b><a href="glossary.html#metadata" title="Glossary">metadata tag</a></b></i> information, such as artist, year or genre) that will be embedded in the Audacity project and passed through into <a href="file_export_dialog.html" title="File Export Dialog">exported</a> audio files. Metadata that is embedded in audio files displays in software applications like Apple Music/iTunes\xc2\xae or Windows Media Player, or portable players like iPhone\xc2\xae and iPod\xc2\xae. <p>Most export formats support at least the seven default tags in Metadata Editor, but support in player applications varies from almost universal for the <i><b><a href="glossary.html#id3" title="Glossary">ID3</a></b></i> tags used by <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> and <i><b><a href="glossary.html#mp2" title="Glossary">MP2</a></b></i> to very limited for <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>. See this <a href="faq_opening_and_saving_files.html#meta" title="FAQ:Opening and Saving Files">Frequently Asked Question</a> for details.</p><p> For both MP3 and MP2, only ID3v2.3 tags are exported. ID3v1 can be exported using <a href="exporting_to_an_external_program.html" title="Exporting to an External Program">Cmd-line export</a>.</p></div>
+<dl><dd><b>Accessed by:'</b> the <span class="button">Edit Metadata</span> button in the <a href="file_export_dialog.html" title="File Export Dialog">File Export Dialog</a> or <span class="menu">Edit  &gt; Metadata</span></dd>
 <dd><span title="Metadata Editor with completed value fields"><img alt="Metadata Tags editor - with off setting.png" src="../m/images/7/73/metadata_tags_editor_with_off_setting.png" width="535" height="421" /></span></dd></dl>
 <p><br />
 </p>
 <div id="tag"></div>
 <h2><span class="mw-headline" id="Tag_and_Value_fields">Tag and Value fields</span></h2>
 <ul><li><b>Tag Name:</b> The first seven Tag names are permanent and cannot be edited. You can add more tag rows and give them a customized name and value using the "<b>Add</b>" button (see below).
-<ul><li> <b>WAV files:</b> Some applications such as Apple Music/iTunes will not see tags in WAV files. Some applications such as those made by Microsoft can only read INFO tags in WAV files, in which case the only customised tags they will see will be "Copyright" and "Software".</li></ul></li>
+<ul><li> <b>WAV files:</b> Some applications such as Apple Music/iTunes will not see tags in WAV files. Some applications such as those made by Microsoft can only read INFO tags in WAV files, in which case the only customized tags they will see will be "Copyright" and "Software".</li></ul></li>
 <li><b>Tag Value:</b> Type in the data you want for each tag, or accept the data already present from an imported file. You do not have to fill in every value. When exporting multiple files, the "Track Title" and "Track Number" tags are pre-filled automatically from the names and ordering of the tracks or labels.
 <ul><li>Once a value field has been replaced or edited, press the <span class="kbrd" style="background-color: #e0e0f0">Return</span> key to select the next value field, or click in any other one to select it.</li></ul></li></ul>
 <div class="note">The <i><b>Genre</b></i> field behaves slightly differently because it contains a dropdown list of genre names. To use this field, double-click it, or use <span class="kbrd" style="background-color: #e0e0f0">F2</span> after selecting it. You may then type a custom genre name. To select from the list, click the downward-pointing arrow to right of the dropdown, or use keyboard <span class="kbrd" style="background-color: #e0e0f0">Up Arrow</span> or <span class="kbrd" style="background-color: #e0e0f0">Down Arrow</span> keys. A custom genre typed into the dropdown is not added to the list permanently - use the <span class="button">Edit</span> button (see below) to edit the list directly. </div>
@@ -79,7 +74,8 @@
 </p>
 <div class="note">With this option checked:
 <ul><li> Metadata will still be written if imported files already contain metadata</li>
-<li> Export Multiple will still write metadata for Track Title and Track Number.</div></li></ul>
+<li> <a href="export_multiple.html" title="Export Multiple">Exporting multiple audio files</a> will still write metadata for Track Title and Track Number.</li></ul>
+</div>
 <p><br />
 </p>
 <div id="links"></div>
@@ -165,7 +161,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-05-24 - <a href="https://alphamanual.audacityteam.org/man/Metadata_Editor">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-02 - <a href="https://alphamanual.audacityteam.org/man/Metadata_Editor">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
