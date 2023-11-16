@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Select Menu: Region - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Select_Menu_Region rootpage-Select_Menu_Region skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Select Menu: Region</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Select_Menu:_Region#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This set of commands let you define <a href="audacity_selection.html" title="Audacity Selection">selection regions</a> and store and retrieve the position of the editing cursor or selection region. </div>
+<dl><dd><span title="Select Region Menu image"><img alt="Select-Region Menu 3-2-3.png" src="../m/images/e/e3/select_region_menu_3_2_3.png" width="605" height="253" /></span></dd></dl>
+<div id="left_at_playback_position"></div>
+<h2><span class="mw-headline" id="Left_at_Playback_Position_.C2.A0.5B">Left at Playback Position &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">[</span></font></span></h2>
+<p><b>When playing or recording:</b> Sets the left boundary of a potential selection by moving the cursor to the current position of the green playback cursor (or red recording cursor). The selection can then be drawn by using "Right at Playback Position" (below).  
+</p><p><b>When there is no audio playing or recording:</b> Opens the "Set Left Selection Boundary" dialog. This is useful for keyboard users or for time-exact manipulation of the selection instead of using <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a>. Move the selection boundary dialog's time digits backwards to create a selection leftwards from the cursor position or to extend the current selection leftwards. Move the time digits forwards to move the cursor forwards to an exact point or to contract the current selection from the left. See "<a href="audacity_selection.html#kbrd_exact" title="Audacity Selection">Creating selections at an exact time</a>" for more details. 
+</p>
+<div id="right_at_playback_position"></div>
+<h2><span class="mw-headline" id="Right_at_Playback_Position_.C2.A0.5D">Right at Playback Position &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">]</span></font></span></h2>
+<p><b>When playing or recording:</b> Sets the right boundary of the selection, thus drawing the selection from the cursor position to the current position of the green playback cursor (or red recording cursor). This is a quick way to mark a selection for future editing while playing or recording. Selections can be <a href="label_tracks.html" title="Label Tracks">labeled</a> while playing or recording using <span class="menu">Edit&#160;&gt;&#160;Labels&#160;&gt;&#160;<a href="edit_menu_labels.html#addlabelatselection" title="Edit Menu: Labels">Add&#160;Label&#160;at&#160;Selection</a></span> or shortcut <span class="kbrd" style="background-color: #e0e0f0">Ctrl + B</span>.     
+</p>
+<div class="note">It will usually be more convenient while playing or recording to use the equivalent <a href="keyboard_shortcut_reference.html#at_playback" title="Keyboard Shortcut Reference">keyboard shortcuts</a> ( by default, <span class="kbrd" style="background-color: #e0e0f0">&#160;[&#160;</span> and <span class="kbrd" style="background-color: #e0e0f0">&#160;]&#160;</span> &#160;) to set the left and right boundary respectively. </div> 
+<p><b>When there is no audio playing or recording:</b> Opens the "Set Right Selection Boundary" dialog. Move the dialog's time digits forwards to create a selection rightwards from the cursor position or to extend the current selection rightwards. Move the time digits backwards to move the cursor backwards to an exact point or to contract the current selection from the right.
+</p>
+<div id="track_start_to_cursor"></div>
+<h2><span class="mw-headline" id="Track_Start_to_Cursor_.C2.A0Shift_.2B_J">Track Start to Cursor &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Shift + J</span></font></span></h2>
+<p>Selects a region in the selected track(s) from the start of the track to the cursor position (or extends the current selection so that it starts from the start of the track). 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note carefully that if part of your track is in negative time then using this command will cause the selection to extend beyond T=0 to also include all the audio in the track that is in negative time.
+</td></tr></table></div>
+<div id="cursor_to_track_end"></div>
+<h2><span class="mw-headline" id="Cursor_to_Track_End_.C2.A0Shift_.2B_K">Cursor to Track End &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Shift + K</span></font></span></h2>
+<p>Selects a region in the selected track(s) from the cursor position to the end of the track (or extends the current selection so that it ends at the end of the track). 
+</p>
+<div id="store_selection"></div>
+<h2><span class="mw-headline" id="Store_Selection_.C2.A0">Store Selection &#160;<font size="-1"></font></span></h2>
+<p>Stores the current position of the selection region or cursor, as observed on the <a href="timeline.html" title="Timeline">Timeline</a>. The position of this region or cursor can then be recalled by using Retrieve Selection (see below). Using this command again will overwrite the previously stored position information.
+</p><p>The position is saved in memory for each project. Therefore using Retrieve Region will not have any effect in another project unless you have already used Store Region in that project. When you close a project, its stored region is discarded.
+</p><p>The Store Region command is grayed-out if there are no <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a>.
+</p>
+<div id="retrieve_selection"></div>
+<h2><span class="mw-headline" id="Retrieve_Selection_.C2.A0">Retrieve Selection &#160;<font size="-1"></font></span></h2>
+<p>Moves the selection region or cursor to the position stored by the last Store Selection command (see above). 
+</p><p>If a region is retrieved, this is only explicitly placed inside those tracks which are currently <a href="audacity_selection.html" title="Audacity Selection">selected</a>.    
+</p><p><br />
+<a href="select_menu.html" title="Select Menu"><b>&lt;</b>&#160; Back to: Select Menu</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Select_Menu:_Region">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

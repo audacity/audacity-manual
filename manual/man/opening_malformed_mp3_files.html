@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Opening malformed MP3 files - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Opening_malformed_MP3_files rootpage-Opening_malformed_MP3_files skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Opening malformed MP3 files</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Opening_malformed_MP3_files#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<p><br />
+</p>
+<div class="intro">In old versions of Audacity, error checking was disabled in Audacity's MP3 importer. However, it was found that some malformed MP3s could cause serious problems, so error checking was enabled.
+<p>Unfortunately we subsequently discovered that malformed MP3s are rather common, and received numerous reports of MP3s failing to import. 
+</p><p>In recent versions of Audacity the error checking has been toned down so that most MP3s will still import even if they contain small errors.  Unfortunately a small number of malformed MP3s are sufficiently damaged that they still get caught by the error checking.
+</p><p>Turning off error checking entirely would be dangerous.
+</p>
+</div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#malformed">Malformed MP3 error message</a></li>
+<li><a href="#workaround1">Workaround-1 - using the libmad audio decoder</a></li>
+<li><a href="#workaround2">Workaround-2 - using the FFmpeg audio decoder</a></li></ol>
+<p><br />
+</p>
+<div id="malformed"></div>
+<h2><span class="mw-headline" id="Malformed_MP3_error_message">Malformed MP3 error message</span></h2>
+<p>Sometimes when trying to import an MP3 file you may see the following message:
+</p>
+<dl><dd><span title="Malformed MP3 error message"><img alt="Malformed MP3 error message.png" src="../m/images/5/54/malformed_mp3_error_message.png" width="333" height="194" /></span></dd></dl>
+<p>This indicates that Audacity's default MP3 importer ("<a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/MPEG_Audio_Decoder">libmad</a>") detected an error in the file.
+</p>
+<div class="note">There are millions of "faulty" MP3 files downloaded from the Internet every day that will play correctly in other software, but not in Audacity. </div>
+<p>So the question is: How does one import a "slightly faulty" MP3 that plays in other applications, but is rejected by Audacity's default MP3 importer?
+</p><p>The answer is: Import it with FFmpeg instead of importing with libmad.
+</p><p><br />
+</p><p><br />
+</p>
+<div id="workaround1"></div>
+<h2><span class="mw-headline" id="Workaround-1_-_using_the_file_type_filter">Workaround-1 - using the file type filter</span></h2>
+<p>In the <span class="menu">File &gt; Import &gt; <a href="importing_audio.html" title="Importing Audio">Audio</a></span> dialog, select "FFmpeg compatible files" as the  file type choice filter. See: <a href="importing_audio.html#filetypes" title="Importing Audio">importable file-types</a>.
+</p>
+<dl><dd><span title="Import settings for importing malformed MP3 files"><img alt="Import settings for importing malformed MP3 files.png" src="../m/images/8/86/import_settings_for_importing_malformed_mp3_files.png" width="557" height="417" /></span></dd></dl>
+<p>Because "FFmpeg compatible files" has been selected, only files that are supported by FFmpeg appear in the file browser, and on selecting a file and clicking the <span class="button">Open</span> button, Audacity will attempt to open the file using FFmpeg.
+</p><p><br />
+The benefit of doing it this way is that you will still be able to import properly formed MP3s using <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/MPEG_Audio_Decoder">libmad</a>, by setting  the file type choice filter to "<b>All files</b>", "<b>All supported files</b>" or "<b>MP3 files</b>". This has the benefit that ID3 <a href="metadata_editor.html" title="Metadata Editor">metadata</a> tags are better supported than when using FFmpeg.
+</p><p><br />
+</p>
+<div id="workaround2"></div>
+<h2><span class="mw-headline" id="Workaround-2_-_using_Extended_Import_rules">Workaround-2 - using Extended Import rules</span></h2>
+<p>This is probably the more convenient method for most users, because you can set  it and forget it.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">If you use Metadata tags, see "<a href="#Limitations">Limitations</a>" below.
+</td></tr></table></div>
+<ol><li> Ensure that the <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins"><b>FFmpeg library</b></a> is installed.</li>
+<li> <span class="menu">Edit &gt; Preferences &gt; <a href="extended_import_preferences.html" title="Extended Import Preferences">Extended Import</a></span></li>
+<li> Click the <span class="button">Add New Rule</span> button</li>
+<li> Type: <b>*.mp3</b>  in the "<b>File Extensions</b>" column.</li>
+<li> Drag "<b>FFmpeg compatible files</b>" to the top of the "<b>Importer order</b>" column, <br />or click on "<b>FFmpeg compatible files</b>" and then use the <span class="button">Move filter up</span> button repeatedly to move it to the top.</li>
+<li> De-select (un-check) "<b>Attempt to use filter in OpenFile dialog first</b>"</li>
+<li> Click the <span class="button">OK</span> button</li></ol>
+<dl><dd><span title="Preferences settings for importing malformed MP3 files"><img alt="Prefs settings for importing malformed MP3 files.png" src="../m/images/0/0c/prefs_settings_for_importing_malformed_mp3_files.png" width="670" height="273" /></span></dd></dl>
+<div class="note"><span style="font-weight: bold; font-size:118%">Note regarding the setting for "Attempt to use filter in OpenFile dialog first":</span>
+<ul><li>When enabled, if you select "MP3 files" as the file type filter in the Import (or "open") file browser, then Audacity will attempt to use libmad to import the selected file, and if the selected file is one of these "faulty" MP3 files, then you will see the malformed MP3 error message.</li></ul>
+<ul><li>When disabled <i>not selected)</i>, then the custom "Extended Import" rules apply regardless of the file browser file type filter setting. FFmpeg will always be used for MP3 files.</div></li></ul>
+<h3><span class="mw-headline" id="Limitations">Limitations</span></h3>
+<ol><li><i><b>All</b></i> MP3 files will always be imported in future with FFmpeg, so "Artist" and "Year" tags will not be imported.</li>
+<li>FFmpeg does not support Metadata as well as libmad. It misses out the "Artist" and "Year" tags, while libmad supports all of Audacity's <a href="metadata_editor.html" title="Metadata Editor">metadata</a> fields.</li></ol>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Opening_malformed_MP3_files">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

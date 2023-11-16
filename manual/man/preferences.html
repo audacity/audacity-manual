@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Preferences - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Preferences rootpage-Preferences skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Preferences</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Preferences#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">Preferences let you change most of the default behaviors of Audacity.  The Preferences dialog can be accessed using the <span class="menu"><a href="edit_menu.html" title="Edit Menu">Edit Menu</a></span> (or by using the <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference">shortcut</a> <span class="kbrd" style="background-color: #e0e0f0">Ctrl + P</span>). On a <b>Mac</b>, Preferences is under the <span class="menu"><a href="audacity_menu.html" title="Audacity Menu">Audacity Menu</a></span> <span class="kbrd" style="background-color: #e0e0f0">&#8984; + ,</span>. </div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ul><li> <a href="#dialog">The Preferences dialog</a></li>
+<li> <a href="#stored">Where the Preferences are stored</a></li>
+<li> <a href="#upgrade">Upgrading from previous versions or re-installing</a></li>
+<li> <a href="#reset">Resetting Preferences</a></li>
+<li> <a href="#portable">Portable Settings</a></li></ul>
+<div id="dialog"></div>
+<h2><span class="mw-headline" id="The_Preferences_dialog">The Preferences dialog</span></h2>
+<p><b>The Preferences dialog is split into sections and sub-sections.</b> The description page for each section (accessed by the links below) shows an image of the default preferences settings for that section.
+</p>
+<dl><dd><table class="prettytablerows" rules="rows" border="2">
+<tr>
+<th>Section</th>
+<th>What it controls
+</th></tr>
+<tr>
+<td style="padding-left:10px;width:17%"><a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings</a>
+</td>
+<td style="padding-left:10px">Choose audio host, playback and recording devices and recording channels. Choose <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i>,  <i><b><a href="glossary.html#sample_format" title="Glossary">sample format</a></b></i> also <i><b><a href="glossary.html#latency" title="Glossary">latency</a></b></i>.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="playback_preferences.html" title="Playback Preferences">Playback</a>
+</td>
+<td style="padding-left:10px">Length of previews for cuts and effects; playback seek times.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="recording_preferences.html" title="Recording Preferences">Recording</a>
+</td>
+<td style="padding-left:10px">Settings for playthrough, Sound Activated Recording and naming newly recorded tracks.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="midi_devices_preferences.html" title="MIDI Devices Preferences">MIDI Devices</a>
+</td>
+<td style="padding-left:10px">Settings for MIDI playback on your system.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="quality_preferences.html" title="Quality Preferences">Quality</a>
+</td>
+<td style="padding-left:10px">Options for converting sample rates or formats for playback and export format conversion.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="interface_preferences.html" title="Interface Preferences">Interface</a>
+</td>
+<td style="padding-left:10px">Interface behaviors, dB display range, choose language and location of Manual, show initial "Help" dialog.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="tracks_preferences.html" title="Tracks Preferences">Tracks</a>
+</td>
+<td style="padding-left:10px">Tracks display management.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><span style="position:relative; bottom:3px;">&#8970;&#160;</span><a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors</a>
+</td>
+<td style="padding-left:10px">Settings to control the behaviors of Tracks.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><span style="position:relative; bottom:3px;">&#8970;&#160;</span><a href="spectrograms_preferences.html" title="Spectrograms Preferences">Spectrograms</a>
+</td>
+<td style="padding-left:10px">Settings for presentation of spectrograms in the audio track.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export</a>
+</td>
+<td style="padding-left:10px">Importing: if uncompressed audio is copied into projects or read directly, if tracks are normalized. Exporting: how audio is mixed, if Metadata Editor appears, content of Allegro exports.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><span style="position:relative; bottom:3px;">&#8970;&#160;</span><a href="extended_import_preferences.html" title="Extended Import Preferences">Extended Import</a>
+</td>
+<td style="padding-left:10px">Specify different importers to open specific audio file <i><b><a href="glossary.html#extension" title="Glossary">extensions</a></b></i>.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="libraries_preferences.html" title="Libraries Preferences">Libraries</a>
+</td>
+<td style="padding-left:10px">Download and locate the optional <a href="faq_installation_and_plug_ins.html#ffdown" title="FAQ:Installation and Plug-Ins">FFmpeg</a> library.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="directories_preferences.html" title="Directories Preferences">Directories</a>
+</td>
+<td style="padding-left:10px">Sets the location of the temporary files directory and displays how much space is available on that drive.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="warnings_preferences.html" title="Warnings Preferences">Warnings</a>
+</td>
+<td style="padding-left:10px">Warn or not when disk space is low on startup, when saving projects, mixing down or importing uncompressed audio files.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="effects_preferences.html" title="Effects Preferences">Effects</a>
+</td>
+<td style="padding-left:10px">Enable or disable effects by type: LADSPA, LV2, Nyquist, VAMP, VST, Audio Units. Sort or group effects. Check for updated plugins or rescan all plugins.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="keyboard_preferences.html" title="Keyboard Preferences">Shortcuts</a>
+</td>
+<td style="padding-left:10px">List, search for and set keyboard shortcuts for commands.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="mouse_preferences.html" title="Mouse Preferences">Mouse</a>
+</td>
+<td style="padding-left:10px">Mouse shortcuts for commands.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="modules_preferences.html" title="Modules Preferences">Modules</a>
+</td>
+<td style="padding-left:10px">Loadable Modules for Audacity.
+</td></tr>
+<tr>
+<td style="padding-left:10px"><a href="application_preferences.html" title="Application Preferences">Application</a>
+</td>
+<td style="padding-left:10px">Controls settings for the application.
+</td></tr></table></dd></dl>
+<p><br />
+</p>
+<div class="note"><b>Note:</b> Choice of export format (<i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i>, <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> and others) is made at time of export in the <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a>  dialog by selecting the required export format then clicking the <span class="button">Options</span> button. </div>
+<p><br />
+</p>
+<div id="stored"></div>
+<h2><span class="mw-headline" id="Where_the_Preferences_are_stored">Where the Preferences are stored</span></h2>
+<p>Audacity Preferences are stored in a configuration file called <i><b>audacity.cfg</b></i>. It is a text file which saves all your settings when you exit Audacity normally. The audacity.cfg file can be edited with any text editor and changes to it can be saved if Audacity is already closed. You can find audacity.cfg inside Audacity's folder for application data as follows:
+</p>
+<ul><li> <b>Windows:</b> Users\&lt;username&gt;\AppData\Roaming\audacity\</li>
+<li> <b>Mac:</b> ~/Library/Application Support/audacity/</li>
+<li> <b>Linux:</b> ~/.audacity-data/</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">In order to see audacity.cfg on Windows, macOS or GNU/Linux, you must show hidden files and folders or type the folder location into your file manager's address bar.<p>
+<ul><li> <b>Windows:</b> In the tree on the left of Explorer, double-click "Users" then double-click your username, then on the right, double-click the AppData or Application Data folder and navigate through that. If necessary, show hidden files and folders on <a rel="nofollow" class="external text" href="http://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">Windows</a> or type <b>%appdata%\audacity</b> or <b>shell:appdata\audacity</b> into the Explorer address bar then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> on your keyboard.</p><p></li>
+<li> <b>macOS:</b> Open Finder, use the <span class="menu">Go</span> menu, choose <span class="menu">Go to Folder</span> and type <b>~/Library/Application Support/audacity/</b>, or set Finder to <a rel="nofollow" class="external text" href="http://osxdaily.com/2011/07/22/access-user-library-folder-in-os-x-lion/">show your User Library folder</a>.</p></li></ul>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="upgrade"></div>
+<h2><span class="mw-headline" id="Upgrading_from_previous_versions_or_re-installing">Upgrading from previous versions or re-installing</span></h2>
+<p>By default, Audacity settings are not changed when you upgrade from a previous release of Audacity or explicitly uninstall or reinstall Audacity. This allows you to upgrade from a previous Audacity version <i>(legacy 1.3.2 and later)</i> and retain your previous preferences wherever current Audacity still has an equivalent setting. 
+</p><p><br />
+</p>
+<div id="reset"></div>
+<h2><span class="mw-headline" id="Resetting_Preferences">Resetting Preferences</span></h2>
+<p>Resetting Preferences can sometimes fix freezes, crashes or unexplained Audacity behavior. 
+</p><p>You can reset Preferences to factory defaults by using <span class="menu">Tools &gt; <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a></span>.
+</p>
+<div id="win_reset"></div>
+<p><br />
+</p>
+<div id="portable"></div>
+<h2><span class="mw-headline" id="Portable_Settings">Portable Settings</span></h2>
+<p>You can create a folder called <b>Portable Settings</b> in a special location relative to the directory you installed or extracted Audacity to, so that <b>audacity.cfg</b> and Audacity's other settings will be stored in that "Portable Settings" folder instead.  The permitted locations are:
+</p>
+<ul><li> <b>Windows:</b> in the folder Audacity is launched from (for example, in <b>Program Files\Audacity</b> on Windows 64-bit)</li>
+<li> <b>macOS:</b> in the "Contents" folder inside Audacity.app (for example in <b>/Applications/Audacity.app/Contents/</b> (to access the "Contents" folder, right-click or Ctrl-click over Audacity.app and choose "Show Package Contents")</li>
+<li> <b>GNU/Linux:</b> in the folder where the "audacity" binary is (for example, for Audacity installed by the package manager for your distribution, in <b>usr/bin/</b>).</li></ul>
+<p>The "Portable Settings" folder becomes active after restarting Audacity. 
+</p>
+<ul><li> You can then use the "Portable Settings" folder to store a different group of settings for a specific purpose, then delete or rename the folder and restart Audacity when you want to use the previous settings as stored in Audacity's <a href="#stored">folder for application data</a>. </li>
+<li> If you copy the "Portable Settings" folder to a USB stick or CD this lets you take your current Audacity settings with you if you use Audacity on another computer.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">The Portable Settings folder must be given full permissions for everyone who wants to use it.
+<ul><li> On <b>Windows</b>, sufficient permission is normally granted if the administrator creates the folder. 
+<li> On <b>Mac or GNU/Linux</b>, use the <i>chmod</i> command if necessary to give the folder 777 (rwxrwxrwx) permissions.
+<ul><li>On <b>Mac</b> you can also right-click or Ctrl-click over Portable Settings, choose "Get Info", give the administrator name and password, then change all the "Names" required to "Read&amp;Write". </ul></ul>
+</td></tr></table></div>
+<p><br />
+</p>
+<div id="links"></div>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="audacity_setup_and_configuration.html" title="Audacity Setup and Configuration"><b>|&lt;</b> Audacity Setup and Configuration</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="#" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Preferences">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

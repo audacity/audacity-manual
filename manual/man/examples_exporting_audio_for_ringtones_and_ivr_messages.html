@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Examples: Exporting audio for ringtones and IVR messages - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Examples_Exporting_audio_for_ringtones_and_IVR_messages rootpage-Examples_Exporting_audio_for_ringtones_and_IVR_messages skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Examples: Exporting audio for ringtones and IVR messages</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Examples:_Exporting_audio_for_ringtones_and_IVR_messages#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+<div class="intro">This page contains examples of how to export audio in various formats usable for ringtones and <a href="glossary.html#ivr" title="Glossary">IVR</a> (Interactive Voice Response) messages:
+<ul><li><a href="#wav">44,100 Hz 16-bit PCM WAV</a></li>
+<li><a href="#wav8bit">8,000 Hz 8-bit WAV</a></li>
+<li><a href="#mp3">MP3 32 kbps 8,000 Hz</a></li></ul>
+</div>
+<div id="wav"></div>
+<h2><span class="mw-headline" id="44100_Hz_16-bit_PCM_WAV">44100 Hz 16-bit PCM WAV</span></h2>
+<div class="example"><b>To export to 44100 Hz 16-bit PCM WAV</b> 
+<ol><li>If required, <a href="tutorial_making_ringtones_and_ivr_messages.html#mono" title="Tutorial - Making Ringtones and IVR messages">convert the stereo track to mono</a>.</li>
+<li>Select menu item <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span>.</li>
+<li>In the "Export Audio" dialog choose <b>WAV (Microsoft) signed 16-bit PCM</b> in the <b>Format</b> dropdown (default setting).</li>
+<li>Make sure the <b>Sample Rate</b> is set to 44100 Hz.</li>
+<li>Click <span class="button">Export</span>.</div></li></ol>
+<div id="wav8bit"></div>
+<h2><span class="mw-headline" id="8000_Hz_8-bit_WAV">8000 Hz 8-bit WAV</span></h2>
+<div class="example"><b>WAV (Microsoft) Bit depth: 8-bit, Sample Rate: 8000 Hz, Channels: 1 (mono)</b>
+<p>This is an example of exporting an <i><b><a href="glossary.html#uncompressed_format" title="Glossary">uncompressed</a></b></i> but small size WAV file specific to a particular type of phone. The low sample rate of 8000 Hz means that the file will not contain <i><b><a href="glossary.html#frequency" title="Glossary">frequencies</a></b></i> higher than 4,000 Hz, so this file may not give the best results on other phones that have more capable speakers. 
+</p><p>The following Motorola Sprint Nextel cellphones:
+</p><p>i265, i275, i405, i450, i560, i710, 730, 750, 760, 830, i833, i836 ,850, 860, i870, i930
+</p><p>require ringtones to be 8-bit 8000 Hz mono WAV files. If your phone has the same requirements as this, the instructions below should work for your phone.
+</p><p>If the only information you have is that the WAV needs to have a bit rate of 64 kbps, these instructions will also probably work for your phone, because in a WAV file the bit rate is always the (bit depth) multiplied by the (sample rate), multiplied by the (number of channels) so the WAV in our example is (8 * 8 * 1) = 64 kbps. 
+</p><p>If your phone requires WAV files with slightly different characteristics than these you can adjust the instructions below appropriately. It's assumed you have already made the track mono as per <a href="tutorial_making_ringtones_and_ivr_messages.html#mono" title="Tutorial - Making Ringtones and IVR messages">"Convert stereo to mono"</a>.   
+</p>
+<ol><li>Select menu item <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span>.</li>
+<li>Enter a file name and folder location.</li>
+<li>In the "Export Audio" dialog choose <b>other uncompressed files</b> from the <b>Format</b> dropdown.</li>
+<li>Change the <b>Sample Rate" to 8000 Hz.</b></li>
+<li>In the "Header" dropdown, select "WAV (Microsoft)" and in the "Encoding" dropdown choose "Unsigned 8-bit PCM".</li>
+<li>Click <span class="button">Export</span>.</div></li></ol>
+<div id="mp3"></div>
+<h2><span class="mw-headline" id="MP3_32_kbps_8000_Hz">MP3 32 kbps 8000 Hz</span></h2>
+<div class="example"><b>MP3 Bit Rate: 32 kbps, Sample Rate: 8000 Hz, Channels: 1 (mono)</b> 
+<p>As an example of a phone requiring an MP3 ringtone, the Motorola i580 requires MP3 files at 32 kbps, 8000 Hz mono.
+</p><p>If your phone has these same requirements this should also work for you; if your phone requires MP3 files with slightly different characteristics you can adjust the tutorial instructions below appropriately. It's assumed you have already made the track mono as per <a href="tutorial_making_ringtones_and_ivr_messages.html#mono" title="Tutorial - Making Ringtones and IVR messages">"Convert stereo to mono"</a>.    
+</p>
+<ol><li>Select menu item <span class="menu">File &gt; Export &gt; [File Export Dialog</span>.</li>
+<li>Enter a file name and folder location.</li>
+<li>In the "Export Audio" dialog, choose <b>MP3 Files</b> from the "Format" dropdown.</li>
+<li>In the <b>Bit Rate Mode</b> to be <b>Constant</b></li>
+<li>Set the <b>Quality</b> to be <b>32 kbps.</b></li>
+<li>Set the <b>Channel Mode</b> to be <b>Stereo</b> - a single-channel (mono) file will still be produced if your Audacity track is stereo.</li>
+<li>Click <span class="button">Export</span>. </li></ol>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You may want to add <a href="glossary.html#id3" title="Glossary">ID3</a> <a href="glossary.html#metadata" title="Glossary">metadata tags</a> to your MP3. Click on the <span class="button">Edit Metadata</span> button to use <a href="metadata_editor.html" title="Metadata Editor">Audacity's Metadata Editor</a>. Enter any tags you require (or none) and click <span class="button">OK</span>.
+</td></tr></table>
+</div></div>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Examples:_Exporting_audio_for_ringtones_and_IVR_messages">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

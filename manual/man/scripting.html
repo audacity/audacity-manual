@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Scripting - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Scripting rootpage-Scripting skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Scripting</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Scripting#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">The scripting module is a plugin for advanced users that allows Audacity to be driven from an external <a rel="nofollow" class="external text" href="https://www.python.org/">Python</a> or <a rel="nofollow" class="external text" href="https://www.perl.org/">Perl</a> script.  Commands are sent to Audacity over a 'named pipe'.<p>Any scripting language that supports named pipes can be used.</p> </div>
+<div class="note">The plugin <b>mod-script-pipe</b> is now shipped with Audacity (Windows and macOS) and just needs to be enabled using Modules preferences.</div>
+<div class="note">Scripting is most often used from Python.
+<ul><li> The full set of Scripting Commands is listed at <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>.</li>
+<li> Many of the commands in the <a href="extra_menu_scriptables_i.html" title="Extra Menu: Scriptables I">Scriptables I</a> and <a href="extra_menu_scriptables_ii.html" title="Extra Menu: Scriptables II">Scriptables II</a> menus were created because they are useful in scripting.</li>
+<li> Alternatives to Python scripting that use the same set of commands are:
+<ul><li> <a href="macros.html" title="Macros">Macros</a> which follow a fixed set of steps, for example to convert many files from one format to another.</li>
+<li> <a href="nyquist_prompt.html" title="Nyquist Prompt">Nyquist</a>, using the ';type tool' option.  Nyquist is a built in LISP based language in Audacity.</div></li></ul></li></ul>
+<p><b>What Scripting can do</b>
+</p><p>Commands that Scripting uses are the same as in the <a href="macros.html" title="Macros">Audacity macros</a> feature.  You can for example:
+</p>
+<ul><li> Select audio</li>
+<li> Apply effects</li>
+<li> Rearrange clips</li>
+<li> Export the results.</li></ul>
+<p>Scripting goes beyond the simpler tasks and presets of macros.  Using Python scripting can for example do calculations about regions to select, or can make decisions on the basis of number and types of tracks in a project.  It is also possible to build additional user interface in Python, for example an extra toolbar, and have it send commands to Audacity over the pipe.
+</p><p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Caveats_and_Warnings"><span class="tocnumber">1</span> <span class="toctext">Caveats and Warnings</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Getting_Started"><span class="tocnumber">2</span> <span class="toctext">Getting Started</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Enable_mod-script-pipe"><span class="tocnumber">2.1</span> <span class="toctext">Enable mod-script-pipe</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Check_mod-script-pipe_works"><span class="tocnumber">2.2</span> <span class="toctext">Check mod-script-pipe works</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Using_Scripting"><span class="tocnumber">2.3</span> <span class="toctext">Using Scripting</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Examples"><span class="tocnumber">2.4</span> <span class="toctext">Examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Commands"><span class="tocnumber">3</span> <span class="toctext">Commands</span></a></li>
+<li class="toclevel-1"><a href="#Automatic_Naming"><span class="tocnumber">4</span> <span class="toctext">Automatic Naming</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Known_Issues_.26_Missing_Features"><span class="tocnumber">5</span> <span class="toctext">Known Issues &amp; Missing Features</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Caveats_and_Warnings">Caveats and Warnings</span></h2>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Scripting drives Audacity from outside the Audacity user interface.
+<ul><li> If you use <i>mod-script-pipe</i> to enable scripting, this weakens computer security, as malicious software that already has a foothold on your computer could potentially use this feature to gain more control.</li></ul>
+<p>See the advice below about <i>not</i> using scripting on a web server.
+</p>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Scripting support is mainly intended for use by developers.
+<ul><li> When things "do not work" you will rarely get a message from Audacity saying why.</li>
+<li> Details of the available scripting commands may well change between versions of Audacity.  </li></ul>
+<p>There is a fuller list of limitations at the foot of this page.
+</p>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top"><b>Scripting is NOT SUITABLE for providing a service on a web server</b>.
+<ul><li> The reason is that Audacity does not police or sanitize the instructions that arrive on the pipe.  It just attempts to obey the instructions.</li>
+<li> If someone can write to the pipe they can get Audacity to read and write files and to execute code on the machine running Audacity.</li></ul>
+<p>Enabling mod-script-pipe allows Audacity to be controlled from outside the Audacity User Interface.  In some environments, such as a web server, that is too big a security risk.
+</p>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="scripting"></div>
+<div id="test"></div>
+<h2><span class="mw-headline" id="Getting_Started">Getting Started</span></h2>
+<h3><span class="mw-headline" id="Enable_mod-script-pipe">Enable mod-script-pipe</span></h3>
+<p>The plugin module "<b>mod-script-pipe</b>" is not enabled by default in Audacity, so must be enabled in <a href="modules_preferences.html" title="Modules Preferences">Audacity preferences</a>.  
+</p><p>After enabling it for the first time, you will need to restart Audacity.  You can then check that it is enabled and was started by revisiting the preferences page.
+</p>
+<ul><li> Run Audacity</li>
+<li> Go into <span class="menu">Edit &gt; Preferences &gt; <a href="modules_preferences.html" title="Modules Preferences">Modules</a></span>
+<ul><li> Choose <b>mod-script-pipe</b> (which should show <b>New</b>) and change that to <b>Enabled</b>.  </li></ul></li>
+<li> Restart Audacity </li>
+<li> Check that it now does show <b>Enabled</b>.</li></ul>
+<p>This establishes that Audacity is finding mod-script pipe, and that the version is compatible.
+</p>
+<h3><span class="mw-headline" id="Check_mod-script-pipe_works">Check mod-script-pipe works</span></h3>
+<p>You will also need the scripting language Python (version 3.6 or later recommended) to try out the examples.
+</p><p>A simple Python test script is provided to check that the pipe is working:
+</p>
+<ul><li> <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/blob/master/scripts/piped-work/pipe_test.py">pipe_test.py on GitHub</a>.</li></ul>
+<h3><span class="mw-headline" id="Using_Scripting">Using Scripting</span></h3>
+<p>After checking that the "pipe_test.py" script works, you could try adding other commands to the end of the pipe_test.py script. Each command name ends with a colon, and may be followed by parameters.  For example:
+</p>
+<pre>
+do_command("Help:")
+</pre>
+<p>For practical scripting, the script "pipeclient.py" provides a useful starting point:
+</p>
+<ul><li> <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/blob/master/scripts/piped-work/pipeclient.py">pipeclient.py on GitHub</a>.</li></ul>
+<h3><span class="mw-headline" id="Examples">Examples</span></h3>
+<p>More sample scripts are available here:
+</p>
+<ul><li> <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/tree/master/scripts/piped-work">'pipe work' in GitHub</a> - Sample scripts for exercising the pipe.</li>
+<li> The same collection of test scripts is also available as a download from <a rel="nofollow" class="external text" href="https://www.fosshub.com/Audacity-devel.html">FossHub Audacity-Devel (Scripting Tests)</a>.  This includes the sample audio that is used in the tests.</li></ul>
+<p><br />
+</p>
+<div id="commands"></div>
+<h2><span class="mw-headline" id="Commands">Commands</span></h2>
+<p>A table showing all the available scripting commands is at <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>.  
+</p><p>Most commands in Audacity that are in the Audacity menus can be accessed via Scripting.  Here is one example from that table:
+</p><p><br />
+</p>
+<table class="prettytablerows" rules="rows" border="2" width="100%">
+<tr>
+<th width="15%">Scripting Id
+</th>
+<th width="15%">Action
+</th>
+<th width="30%">Parameters
+</th>
+<th width="55%">Description
+</th></tr>
+<tr>
+<td><b>SetLabel:</b>
+</td>
+<td><a href="extra_menu_scriptables_i.html#set_label" title="Extra Menu: Scriptables I">Set Label</a>
+</td>
+<td><i>int</i> <b>Label</b>, (default:0)<br />
+<p><i>string</i> <b>Text</b>, (default:unchanged)<br />
+<i>double</i> <b>Start</b>, (default:unchanged)<br />
+<i>double</i> <b>End</b>, (default:unchanged)<br />
+<i>bool</i> <b>Selected</b>, (default:unchanged)<br />
+</p>
+</td>
+<td>Modifies an existing label.
+</td></tr></table>
+<p><br />
+The string <b>"SetLabel: Text='Foo'"</b> sent from Python would set the first label in a project to the word 'Foo'.
+</p><p>Using "pipe_test.py", the command could be sent with:
+</p>
+<pre>
+do_command("SetLabel: Text='Foo'")
+</pre>
+<p>Using "pipeclient.py" as a command-line script, simply type the command at the prompt:
+</p>
+<pre>
+Enter command or 'Q' to quit: SetLabel: Text='Foo'
+</pre>
+<p><br />
+</p>
+<hr />
+
+<div id="issues"></div>
+<h2><span class="mw-headline" id="Known_Issues_.26_Missing_Features">Known Issues &amp; Missing Features</span></h2>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Some current issues:
+<ul><li> Scripting only works with one project at a time. </li>
+<li> For some menu commands, the project window must have focus for the command to succeed.</li>
+<li> It's not straightforward to get 'output' responses from commands like GetInfo.  You will need to parse the results in Python.</li>
+<li> The commands could have stricter parameter validation and could give better error messages when they do not work.</li>
+<li> There's no consistent way to abort or interrupt commands.</li>
+<li> The scripting module is not unloaded when Audacity quits. This means the script pipes are not properly deleted.</li>
+<li> There may be security problems relating to the use of pipes. You're advised not to use mod-script-pipe on a system with multiple simultaneous users.</li></ul>
+</td></tr></table></div>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Scripting">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

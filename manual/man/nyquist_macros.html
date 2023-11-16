@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Nyquist-Macros - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Nyquist-Macros rootpage-Nyquist-Macros skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Nyquist-Macros</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"> Nyquist is a LISP like language integrated into Audacity.  It was originally written to process audio.  
+<ul><li> Nyquist now also has the ability to control Audacity, similar to how <a href="macros.html" title="Macros">Macros</a> work, but with greater flexibility.</div></li></ul>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Comparison_of_Macros_to_Nyquist-Macros"><span class="tocnumber">1</span> <span class="toctext">Comparison of Macros to Nyquist-Macros</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#AUD-DO"><span class="tocnumber">2</span> <span class="toctext">AUD-DO</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Using_AUD-DO"><span class="tocnumber">3</span> <span class="toctext">Using AUD-DO</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Differences_to_Scripting_in_Nyquist"><span class="tocnumber">3.1</span> <span class="toctext">Differences to Scripting in Nyquist</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Examples"><span class="tocnumber">4</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Example_Using_Parameters"><span class="tocnumber">4.1</span> <span class="toctext">Example Using Parameters</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Click_Removal_Example"><span class="tocnumber">4.2</span> <span class="toctext">Click Removal Example</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#GetInfo_Example"><span class="tocnumber">4.3</span> <span class="toctext">GetInfo Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#AUD-GET-INFO"><span class="tocnumber">5</span> <span class="toctext">AUD-GET-INFO</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#AUD-DO-COMMAND"><span class="tocnumber">6</span> <span class="toctext">AUD-DO-COMMAND</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Comparison_of_Macros_to_Nyquist-Macros">Comparison of <a href="macros.html" title="Macros">Macros</a> to Nyquist-Macros</span></h2>
+<p>Ordinary <a href="macros.html" title="Macros">Macros</a> execute a fixed sequence of commands in a fixed order.  
+</p><p>By contrast, the <a href="nyquist.html" title="Nyquist">Nyquist language</a> is a full language from the LISP family. That makes it more powerful and also more complex to use. 
+</p>
+<ul><li> Nyquist has commands for logic, loops and conditionally executing code.</li>
+<li> Nyquist supports streams and string formatting functions.</li>
+<li> Nyquist supports data structures, and is especially strong in handling lists.</li>
+<li> Nyquist, in Audacity, can prompt for parameters and then use those parameters in its code.</li></ul>
+<p><b>Pros and Cons:</b>
+</p><p>While Nyquist-Macros have many advantages over ordinary Macros, ordinary Macros also have some advantages:
+</p>
+<ul><li> There is a <a href="manage_macros.html" title="Manage Macros">graphical interface for creating Macros</a>, whereas Nyquist-Macros are written as a Nyquist plugin.</li>
+<li> Macros may include any built-in or plugin effects, but Nyquist-Macros cannot use Nyquist effects.</li>
+<li> Macros may include other Macros and Nyquist-Macros, but Nyquist-Macros cannot call other Nyquist-Macros.</li></ul>
+<p>Nyquist can be used independently of Audacity.  When used from within Audacity, it gains an additional command, AUD-DO.
+</p>
+<h2><span class="mw-headline" id="AUD-DO">AUD-DO</span></h2>
+<p>AUD-DO is a function that extends Nyquist's capabilities.
+</p><p>AUD-DO makes it possible to use all Audacity Macro scripting commands from within Nyquist.  The full list of scripting commands and their parameters is provided at the page <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>.  The scripting commands are passed to AUD-DO as strings.
+</p><p>A very similar approach is used for Audacity <a href="scripting.html" title="Scripting">Python Scripting</a>.  Commands must be created as strings and passed to a function to process.  One advantage of Nyquist-Macros over Python Scripting is that Nyquist is already built in to Audacity.
+</p>
+<h2><span class="mw-headline" id="Using_AUD-DO">Using AUD-DO</span></h2>
+<p>Nyquist-Macros will usually be "type tool".
+</p>
+<pre>;type tool
+</pre>
+<p>The following command in a Nyquist script would set the first label in a project to 'foo'
+</p>
+<pre>(AUD-DO "SetLabel: Text=\"Foo\"")
+</pre>
+<p>The text string after AUD-DO is passed to the scripting engine to process.
+</p><p>A complete example of a Nyquist Script using AUD-DO that you can enter at the Tools Nyquist Prompt is given below:
+</p>
+<pre>
+;nyquist plug-in
+;version 4
+;type tool
+;name "Test Me"
+;debugbutton false
+;action "Applying TestMe..."
+;author "Nemo Nemesis"
+;release 2.3.0
+;copyright "Public Domain"
+
+;; test-me.ny by Nemo Nemesis, August 2018
+
+;; For information about writing and modifying Nyquist plug-ins:
+;; https://plugins.audacityteam.org/contributing/developing-your-own-plugins-and-scripts/creating-your-own-nyquist-plugins
+
+(AUD-DO "SelectTime: Start=60 End=170")
+(AUD-DO "SelectTracks: Track=1 TrackCount=2") 
+
+</pre>
+<p>Possibly the easiest way to find the correct strings to use is to use the <a href="manage_macros.html#insert" title="Manage Macros">Macros</a> command to add commands to a macro and examine the strings added.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">The full list of commands available via AUD-DO is given in the <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>
+</td></tr></table>
+</div>
+<h3><span class="mw-headline" id="Differences_to_Scripting_in_Nyquist">Differences to Scripting in Nyquist</span></h3>
+<p>The ';type' setting in Nyquist sets what <i>capabilities</i> Nyquist will have for that Nyquist script.  For example, <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">;type process</span> and <span style="line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;padding:3px;font-family:monospace;font-size:1.1em;border:1px dashed black">;type analyze</span> scripts are given the *TRACK* variable.  Process scripts, when applied, will be called repeatedly, once for each channel to process.
+</p><p>Another use of the ';type' setting is to set which <i>menu</i> in Audacity a script will be placed in.  It can occasionally be useful to place a <b>process</b>, <b>generator</b> or <b>analyze</b> Nyquist script in the tools menu, even though its functionality is one of the other types.  To do that you can use two arguments to the ';type' setting.
+</p><p>You can create Nyquist plugins with for the Tools menu using any of the following:
+</p>
+<pre>
+;type tool
+;type tool process
+;type tool generator
+;type tool analyze
+
+</pre>
+<p>The first argument to 'type' determines which Audacity menu the plugin ends up in.  All four examples are for the Tools menu.  The qualifier process / generator / analyze determines how the plugin actually behaves.  ';type tool' should usually be used with AUD-DO.
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<h3><span class="mw-headline" id="Example_Using_Parameters">Example Using Parameters</span></h3>
+<p>Scripts using AUD-DO can use parameters.  Probably the easiest way to pass them to AUD-DO is using the XLISP format command.
+</p>
+<pre>
+;nyquist plug-in
+;version 4
+;type tool
+;name "Test Me2"
+;author "A Person"
+;release 2.3.3
+;copyright "Public Domain"
+
+;control start "Start time" float-text "" 5 0 nil
+;control end "End time" float-text "" 15 0 nil
+
+(AUD-DO (format nil "SelectTime: Start=~S End=~S" start end))
+(setf reply (AUD-DO (format nil "Message: Text=\"Start was set to ~S End to ~S\"" start end)))
+
+;; "reply" is a list in the form ("quoted message" . T)
+(first reply) ;returns the message
+
+
+</pre>
+<h3><span class="mw-headline" id="Click_Removal_Example">Click Removal Example</span></h3>
+<p>On the <a href="scripting_reference.html" title="Scripting Reference">scripting page</a>, for example, the parameters for the click removal command are documented:
+</p><p><i>int <b>Threshold</b>, (default:200)</i><br />
+<i>int <b>Width</b>, (default:20)</i><br />
+</p><p>To invoke the same command in Nyquist, you need to pass a string to AUD-DO.  For example:
+</p>
+<pre>(AUD-DO "ClickRemoval: Threshold=200 Width=25")
+</pre>
+<p>Default values do not need to be specified, so a shorter version of the same command would be:
+</p>
+<pre>(AUD-DO "ClickRemoval: Width=25")
+</pre>
+<h3><span class="mw-headline" id="GetInfo_Example">GetInfo Example</span></h3>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">See also <a href="#AUD-GET-INFO">AUD-GET-INFO</a>.
+</td></tr></table></div>
+<p>The AUD-DO "GetInfo" Scripting commands provide results as strings, and offers three different result formats.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top"> It is usually easiest, in Nyquist, to ask for the results of GetInfo commands as strings in LISP format
+</td></tr></table>
+</div>
+<p>The parameters of GetInfo are:
+</p><p><i>enum <b>Type</b>, (default:0)<br /></i>
+</p>
+<ul><li> Commands</li>
+<li> Menus</li>
+<li> Preferences</li>
+<li> Tracks</li>
+<li> Clips</li>
+<li> Envelopes</li>
+<li> Labels</li>
+<li> Boxes</li></ul>
+<p><i>enum <b>Format</b>, (default:0)<br /></i>
+</p>
+<ul><li> JSON</li>
+<li> LISP</li>
+<li> Brief</li></ul>
+<p>You'd use a command like the following to get a list of labels (as a string).
+</p>
+<pre>(AUD-DO "GetInfo: Type=Labels Format=LISP")
+</pre>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="AUD-GET-INFO">AUD-GET-INFO</span></h2>
+<p>This function, as with other functions that are prefixed "aud-", is unique to Nyquist in Audacity. It is similar to the AUD-DO "GetInfo" command, but differs in that it returns a Lisp <b>list</b> rather than a string.
+</p><p><b>Syntax:</b>
+</p>
+<pre>  (aud-get-info <i>string</i>)
+</pre>
+<p>Valid string parameters are (case insensitive):
+</p>
+<ul><li> "Commands"</li>
+<li> "Menus"</li>
+<li> "Preferences"</li>
+<li> "Tracks"</li>
+<li> "Clips"</li>
+<li> "Envelopes"</li>
+<li> "Labels"</li>
+<li> "Boxes"</li></ul>
+<p><b>Example:</b>
+</p>
+<pre>  (aud-get-info "tracks")
+</pre>
+<p>If the project contains two mono audio tracks, the return value will be similar to:
+</p>
+<pre>  (((NAME "Audio Track") (FOCUSED 1) (SELECTED 1) (KIND "wave") (START 0) (END 30) (PAN 0) (GAIN 1) (CHANNELS 1) (SOLO 0) (MUTE 0) (VZOOMMIN -1) (VZOOMMAX 1))
+   ((NAME "Audio Track") (FOCUSED 0) (SELECTED 0) (KIND "wave") (START 0) (END 30) (PAN 0) (GAIN 1) (CHANNELS 1) (SOLO 0) (MUTE 0) (VZOOMMIN -1) (VZOOMMAX 1)))
+</pre>
+<p>Information about a specific track can be extracted by looking at the 'nth' list item. For example, information about the first track:
+</p>
+<pre>  (nth 0 (aud-get-info "tracks"))
+</pre>
+<p>or
+</p>
+<pre>  (first (aud-get-info "tracks"))
+</pre>
+<p>Because the returned data is a valid list, we can manipulate the data easily with standard Lisp functions. For example, to print the names of all tracks:
+</p>
+<pre>  (let ((tracks (aud-get-info "tracks")))
+    (dotimes (j (length tracks))
+      (setf track (nth j tracks))
+      (print (second (assoc 'name track)))))
+</pre>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="AUD-DO-COMMAND">AUD-DO-COMMAND</span></h2>
+<div class="intro">"AUD-DO-COMMAND" provides a higher level alternative to "AU-DO".<br /><i>The first time that AUD-DO-COMMAND runs it may be observed that there is a delay.This is caused by Nyquist building a cache of AUD-DO commands and parameters for fast look-up. Once the cache has been built, AUD-DO-COMMAND commands will be almost as fast as AUD-DO commands.</i></div>
+<p><b>Usage:</b>
+</p><p><i>(aud-do-command "command" [[:keyword&#160;:argument] ...])</i>
+Where "command" is the scripting command to be sent to Audacity.
+</p><p>Unlike AUD-DO the commands are not case sensitive <b>except for enum arguments</b>.
+</p><p><b>Example:</b>
+</p>
+<pre> (aud-do "Chirp: StartFreq=100 EndFreq=400 StartAmp=1.0 EndAmp=0.5 Waveform=Sawtooth") &#160;;AUD-DO syntax
+ (aud-do-command "chirp"&#160;:startfreq 100&#160;:endfreq 400&#160;:startamp 1.0&#160;:endamp 0.5&#160;:waveform "Sawtooth") &#160;;AUD-DO-COMMAND syntax
+</pre>
+<p>Note that in the AUD-DO-COMMAND version, "Sawtooth" is an <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Enumerated_type">enum</a> and so is case sensitive.
+</p><p><b>Advantages to using AUD-DO-COMMAND:</b>
+</p><p>The main advantage is that the syntax is more LISP-like, and this simplifies usage when passing parameters. For example, if we want to generate a <a href="chirp.html" title="Chirp">Chirp</a> and we want to pass variables for the parameter values:
+</p>
+<pre> (setq start-hz 100)
+ (setq end-hz 400)
+ (setq start-amp 1.0)
+ (setq end-amp 0.5)
+ 
+&#160;;; Using AUD-DO
+ (let (command)
+   (setf command
+       (format nil "Chirp: StartFreq=~s EndFreq=~s StartAmp=~s EndAmp=~s Waveform=~s"
+               start-hz
+               end-hz
+               start-amp
+               end-amp
+               "Sawtooth"))
+   (aud-do command))
+</pre>
+<p><br />
+</p>
+<pre> (setq start-hz 100)
+ (setq end-hz 400)
+ (setq start-amp 1.0)
+ (setq end-amp 0.5)
+ 
+&#160;;; Using AUD-DO-COMMAND
+ (aud-do-command "chirp"&#160;:startfreq start-hz&#160;:endfreq end-hz&#160;:startamp start-amp&#160;:endamp end-amp&#160;:waveform "Sawtooth")
+</pre>
+<p>Another benefit for Nyquist developers is that debug messages are much improved for all commands that are supported by <a href="#GetInfo_Example_GetInfo:">#GetInfo_Example GetInfo:</a>. 
+</p><p><b>Example:</b>
+</p><p>This (invalid) AUD-DO example ignores the invalid "start" parameter, making it difficult to find the error:
+</p>
+<pre> (aud-do "Chirp: start=100")
+</pre>
+<p>This (invalid) AUD-DO-COMMAND example returns helpful debug information:
+</p>
+<pre> (aud-do-command "Chirp"&#160;:start 100)
+</pre>
+<pre>&#160;;;Debug output:
+ Invalid key in "Chirp"&#160;:START
+ Valid keys for Chirp are:
+    StartFreq (double) 
+    EndFreq (double) 
+    StartAmp (double) 
+    EndAmp (double) 
+    Waveform [Sine Square Sawtooth Square, no alias]
+    Interpolation [Linear Logarithmic]
+ Too many arguments: "Chirp"&#160;:START
+</pre>
+<p><br />
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">For more information about Nyquist and Nyquist-Macro commands, please refer to the documentation on the <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/contributing/developing-your-own-plugins-and-scripts/creating-your-own-nyquist-plugins">Audacity Support site</a>
+</td></tr></table>
+</div>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Nyquist-Macros">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Perceived Loudness (EBU R 128) - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Perceived_Loudness_EBU_R_128 rootpage-Perceived_Loudness_EBU_R_128 skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Perceived Loudness (EBU R 128)</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Perceived_Loudness_(EBU_R_128)#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">
+<p>The specification EBU R 128 / ITU-R Bs.1770-4 describes an algorithm for calculation of the perceived loudness of real world audio signals, for example no pure sine tones.
+</p>
+<div class="note">For details of the recommendations please see <a rel="nofollow" class="external text" href="https://tech.ebu.ch/docs/r/r128.pdf">EBU R128 Loudness normalisation and permitted maximum level of audio signals</a>.</div></div>
+<h2><span class="mw-headline" id="LUFS">LUFS</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://alphamanual.audacityteam.org/man/File:K-weighting.svg.png" class="image"><img alt="" src="../m/images/4/4d/k_weighting.svg.png" width="300" height="250" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://alphamanual.audacityteam.org/man/File:K-weighting.svg.png" class="internal" title="Enlarge"></a></div>k frequency weighting function</div></div></div>
+<p>EBU R 128 loudness is measured in LUFS (Loudness Units Full Scale, or equivalently LKFS, Loudness k-weighted Full Scale) for absolute values or LU (Loudness Units) for relative values whereat 0 LUFS are equivalent to full scale. The loudness is defined as the k-weighted (see <b><a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></b> or <b><a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></b>) sum of the squared values of all channels in which the k-weighting approximates the characteristics of the human ear. Thus, LU are somewhat related to the mean square without root. Usually, the perceived loudness is calculated in blocks of 400 milliseconds every 100 milliseconds (so called momentary loudness).
+</p>
+<div id="multichannel"></div>
+<h2><span class="mw-headline" id="Multi-channel_audio">Multi-channel audio</span></h2>
+<p>In multi-channel audio, the individual channels are weighted before adding them to the total loudness. In Audacity's case which supports only mono and stereo tracks at the time of writing, all channels have equal contribution.
+LU's are defined from a physical point of view that multiple audio sources add up within air and thus the loudness increases by adding another audio source. A consequence of the LU definition is that the amplitude of multi-channel audio decreases if another channels is added while the loudness is kept constant.
+While this point of view is completely valid it causes problems together with all known PC audio drivers. Those drivers simply double mono signals that are played on stereo speakers without attenuating their value which results in the double playback loudness. To compensate this, Audacity's <b><a href="loudness_normalization.html" title="Loudness Normalization">Loudness Normalization</a></b> effect has an option to take this loudness doubling into account.
+</p>
+<div id="intLoudness"></div>
+<h2><span class="mw-headline" id="Integrative_loudness_and_loudness_gating">Integrative loudness and loudness gating</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://alphamanual.audacityteam.org/man/File:Loudness-gating.svg.png" class="image"><img alt="" src="../m/images/2/29/loudness_gating.svg.png" width="300" height="246" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://alphamanual.audacityteam.org/man/File:Loudness-gating.svg.png" class="internal" title="Enlarge"></a></div>Loudness gating example</div></div></div>
+<p>Since the perceived loudness is mostly determined by the louder parts of a track, an accurate loudness measurement has to ignore quier or even silent parts. This is realized by loudness gating.
+First, loudness gating as defined by EBU R 128 discards all measurement blocks that are below an absolute threshold of -70 LUFS (grey in the example histogram, the large peak in the lowest bin is caused by silence at the start and end of the track). In the next step, a relative threshold is calculated 10 LU below the average of the blocks above -70 LUFS (red in the example histogram). All blocks below that relative threshold are discarded as well. Finally, the perceived loudness is calculated as the average of the remaining blocks (blue in the example histogram).
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Perceived_Loudness_(EBU_R_128)">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

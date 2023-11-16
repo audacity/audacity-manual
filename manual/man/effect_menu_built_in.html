@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Effect Menu:Audacity - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Effect_Menu_Built-in rootpage-Effect_Menu_Built-in skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Effect Menu:Audacity</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Effect_Menu:_Built-in#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">Audacity's built-in effects (those that appear in the application irrespective of the contents of your Audacity and other "Plug-Ins" folders) are above the divider in the Effect menu.<p>Built-in effects support saving of user presets but do not yet support import/export of presets from/to other machines.</p> 
+</div>
+<dl><dd><img alt="Effect-AudacityMenu 3-2-0.png" src="../m/images/7/7d/effect_audacitymenu_3_2_0.png" width="510" height="729" /></dd></dl>
+<div id="built-in"></div>
+<h2><span class="mw-headline" id="Audacity.27s_built-in_effects">Audacity's built-in effects</span></h2>
+<p>Audacity's built-in effects (those that appear in the application irrespective of the contents of your Audacity and other "Plug-Ins" folders) are above the divider in the Effect menu.
+</p>
+<div class="note">Most of the built-in effects (and most <a href="effect_menu_nyquist.html" title="Effect Menu: Nyquist">Nyquist effect plugins</a> shipped with Audacity) have a <span class="button">Preview</span> button. This allows you to listen to how the first six seconds <i>(by default)</i> of the selected audio would sound if you pressed <span class="button">OK</span> to apply the effect. The preview length can be changed on the <a href="playback_preferences.html" title="Playback Preferences">Playback</a> tab of <a href="preferences.html" title="Preferences">Preferences</a>.<p> All <i>selected</i> tracks are previewed irrespective of whether the tracks are <a href="audio_tracks.html#mute" title="Audio Tracks">muted</a> or <a href="audio_tracks.html#solo" title="Audio Tracks">soloed</a>. This is because the effect is applied to the selected audio. If Preview does not sound quite as you want, adjust the controls of the effect and Preview again.</p>
+<p>Built-in effects support saving of user presets but do not yet support import/export of presets from/to other machines.</p></div>
+<div id="amplify"></div>
+<h3><span class="mw-headline" id="Amplify"><a href="amplify.html" title="Amplify">Amplify</a></span></h3>
+<p>Increases or decreases the volume of the audio you have selected.  When you open the dialog, Audacity automatically calculates the maximum amount you could amplify the selected audio without causing <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i> (distortion caused by trying to make the audio too loud).
+</p>
+<div id="auto_duck"></div>
+<div id="duck"></div>
+<h3><span class="mw-headline" id="Auto_Duck"><a href="auto_duck.html" title="Auto Duck">Auto Duck</a></span></h3>
+<p>Reduces (ducks) the volume of one or more tracks whenever the volume of a specified "control" track reaches a particular level. Typically used to make a music track softer whenever speech in a commentary track is heard.
+</p>
+<div id="bass_and_treble"></div>
+<div id="bass"></div>
+<h3><span class="mw-headline" id="Bass_and_Treble"><a href="bass_and_treble.html" title="Bass and Treble">Bass and Treble</a></span></h3>
+<p>Increases or decreases the lower <i><b><a href="glossary.html#frequency" title="Glossary">frequencies</a></b></i> and higher frequencies of your audio independently.  It behaves just like the bass and treble controls on a domestic stereo system.
+</p>
+<div id="change_pitch"></div>
+<div id="pitch"></div>
+<h3><span class="mw-headline" id="Change_Pitch"><a href="change_pitch.html" title="Change Pitch">Change Pitch</a></span></h3>
+<p>Change the pitch of a selection without changing its tempo.
+</p>
+<div id="change_speed"></div>
+<div id="speed"></div>
+<h3><span class="mw-headline" id="Change_Speed_and_Pitch"><a href="change_speed.html" title="Change Speed">Change Speed and Pitch</a></span></h3>
+<p>Change the speed of a selection, also changing its pitch.
+</p>
+<div id="change_tempo"></div>
+<div id="tempo"></div>
+<h3><span class="mw-headline" id="Change_Tempo"><a href="change_tempo.html" title="Change Tempo">Change Tempo</a></span></h3>
+<p>Change the tempo and length (duration) of a selection without changing its pitch.
+</p>
+<div id="classic"></div>
+<h3><span class="mw-headline" id="Classic_Filters"><a href="classic_filters.html" title="Classic Filters">Classic Filters</a></span></h3>
+<p>Provides three different types of filters which together emulate the vast majority of analog filters, and provides useful tools for analysis and measurement.
+</p>
+<div class="note"><b>Classic Filters</b> is not loaded into the Effect Menu by default but you can use <a href="edit_menu.html#add_remove_plugins" title="Edit Menu">Plugin Manager</a> from the Effect Menu to load it if required. </div>
+<div id="click_removal"></div>
+<div id="click"></div>
+<h3><span class="mw-headline" id="Click_Removal"><a href="click_removal.html" title="Click Removal">Click Removal</a></span></h3>
+<p>Click Removal is designed to remove clicks on audio tracks and is especially suited to declicking recordings made from vinyl records. It will usually work best on very short clicks. For broader individual pops in selections up to 128 <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i> wide (about three&#160;milliseconds at 44,100 <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i> project sample rate), you could try the <a href="#repair">Repair</a> effect. 
+</p>
+<div id="compressor"></div>
+<h3><span class="mw-headline" id="Compressor"><a href="compressor.html" title="Compressor">Compressor</a></span></h3>
+<p>Compresses the <i><b><a href="glossary.html#dynamic_range" title="Glossary">dynamic range</a></b></i> by two alternative methods. The default "<i><b><a href="glossary.html#rms" title="Glossary">RMS</a></b></i>" method makes the louder parts softer, but leaves the quieter audio alone. The alternative "peaks" method makes the entire audio louder, but amplifies the louder parts less than the quieter parts. Make-up <i><b><a href="glossary.html#gain" title="Glossary">gain</a></b></i> can be applied to either method, making the result as loud as possible without <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>, but not changing the dynamic range further.      
+</p>
+<div id="distortion"></div>
+<h3><span class="mw-headline" id="Distortion"><a href="distortion.html" title="Distortion">Distortion</a></span></h3>
+<p>Use the Distortion effect to make the audio sound distorted. By distorting the waveform the frequency content is changed, which will often make the sound "crunchy" or "abrasive".  
+</p><p>Technically this effect is a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Waveshaper">waveshaper</a>. The result of waveshaping is equivalent to applying non-linear amplification to the audio waveform. Preset shaping functions are provided, each of which produces a different type of distortion. 
+</p>
+<div id="echo"></div>
+<div id="shorecho"></div>
+<h3><span class="mw-headline" id="Echo"><a href="echo.html" title="Echo">Echo</a></span></h3>
+<p>Repeats the selected audio again and again, normally softer each time. The delay time between each repeat is fixed, with no pause in between each repeat. 
+</p>
+<div id="fade_in"></div>
+<div id="linearfade"></div>
+<h3><span class="mw-headline" id="Fade_In"><a href="fades.html#linearfade" title="Fades">Fade In</a></span></h3>
+<p>Applies a fade-in to the selected audio, so that the <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> changes gradually from silence at the start of the selection to the original amplitude at the end of the selection. The shape of the fade is <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i>. The rapidity of the fade-in depends entirely on the length of the selection it is applied to.
+</p>
+<div id="fade_out"></div>
+<h3><span class="mw-headline" id="Fade_Out"><a href="fades.html#linearfade" title="Fades">Fade Out</a></span></h3>
+<p>Applies a fade-out to the selected audio, so that the <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> changes gradually from the original amplitude at the start of the selection down to silence at the end of the selection. The shape of the fade is <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i>. The rapidity of the fade-out depends entirely on the length of the selection it is applied to.  
+</p>
+<div id="filter_curve_eq"></div>
+<div id="filter_curve"></div>
+<h3><span class="mw-headline" id="Filter_Curve_EQ"><a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></span></h3>
+<p>Adjusts the volume levels of particular frequencies, using drawn curves.
+</p>
+<div id="graphic_eq"></div>
+<h3><span class="mw-headline" id="Graphic_EQ"><a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span></h3>
+<p>Adjusts the volume levels of particular frequencies, using sliders.
+</p>
+<div id="invert"></div>
+<h3><span class="mw-headline" id="Invert"><a href="invert.html" title="Invert">Invert</a></span></h3>
+<p>Flips the audio samples upside-down. This normally does not affect the sound of the audio at all. It is occasionally useful for vocal removal.
+</p>
+<div id="loudness"></div>
+<div id="loudness_normalization"></div>
+<h3><span class="mw-headline" id="Loudness_Normalization"><a href="loudness_normalization.html" title="Loudness Normalization">Loudness Normalization</a></span></h3>
+<p>Normalizes for loudness and RMS, changes the level of the audio <i>(normally reduce it to recommended limits)</i>.  
+</p><p>It is based on <a href="perceived_loudness_ebu_r_128.html" title="Perceived Loudness (EBU R 128)">EBU R 128</a> recommendations on limiting the loudness of audio signals. See <a href="perceived_loudness_ebu_r_128.html" title="Perceived Loudness (EBU R 128)">Perceived Loudness</a> for the technical details about it.
+</p>
+<div id="noise_reduction"></div>
+<div id="noise"></div>
+<h3><span class="mw-headline" id="Noise_Reduction"><a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a></span></h3>
+<p>Reduces constant background noise such as fans, tape noise, or hums.  It will not work for removing talking or music in the background.
+</p>
+<div id="normalize"></div>
+<h3><span class="mw-headline" id="Normalize"><a href="normalize.html" title="Normalize">Normalize</a></span></h3>
+<p>Use the Normalize effect to set the maximum amplitude of a track, equalize the amplitudes of the left and right channels of a stereo track and optionally remove any <i><b><a href="glossary.html#dc_offset" title="Glossary">DC Offset</a></b></i> from the track.
+</p>
+<div id="paulstretch"></div>
+<h3><span class="mw-headline" id="Paulstretch"><a href="paulstretch.html" title="Paulstretch">Paulstretch</a></span></h3>
+<p>Use Paulstretch only for an extreme time-stretch or "stasis" effect. This may be useful for synthesizer pad sounds, identifying performance glitches or just creating interesting aural textures. Use <a href="#tempo">Change Tempo</a> or <a href="#slide">Sliding Stretch</a> rather than Paulstretch for tasks like slowing down a song to a "practice" tempo. 
+</p>
+<div id="phaser"></div>
+<h3><span class="mw-headline" id="Phaser"><a href="phaser.html" title="Phaser">Phaser</a></span></h3>
+<p>The name "Phaser" comes from "Phase Shifter", because it works by combining phase-shifted signals with the original signal.  The movement of the phase-shifted signals is controlled using a Low <i><b><a href="glossary.html#frequency" title="Glossary">Frequency</a></b></i> Oscillator (LFO).
+</p>
+<div id="repair"></div>
+<h3><span class="mw-headline" id="Repair"><a href="repair.html" title="Repair">Repair</a></span></h3>
+<p>Fix one particular short click, pop or other glitch no more than 128 samples long.
+</p>
+<div id="repeat"></div>
+<h3><span class="mw-headline" id="Repeat"><a href="repeat.html" title="Repeat">Repeat</a></span></h3>
+<p>Repeats the selection the specified number of times.
+</p>
+<div id="reverb"></div>
+<h3><span class="mw-headline" id="Reverb"><a href="reverb.html" title="Reverb">Reverb</a></span></h3>
+<p>Adds ambience or a "hall effect".
+</p>
+<div id="reverse"></div>
+<h3><span class="mw-headline" id="Reverse"><a href="reverse.html" title="Reverse">Reverse</a></span></h3>
+<p>Reverses the selected audio, so that it will sound as if it is playing from the end to the start.
+</p>
+<div id="sliding_time_scalepitch_shift"></div>
+<div id="sliding_stretch"></div>
+<div id="slide"></div>
+<h3><span class="mw-headline" id="Sliding_Stretch"><a href="sliding_stretch.html" title="Sliding Stretch">Sliding Stretch</a></span></h3>
+<p>Allows you to make a continuous change to the tempo and/or pitch of a selection by choosing initial and/or final change values. 
+</p><p><a href="time_tracks.html" title="Time Tracks">Time Tracks</a> can be used to bend tempo more flexibly (also affecting pitch) using <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a>. 
+</p>
+<div id="truncate_silence"></div>
+<div id="truncate"></div>
+<h3><span class="mw-headline" id="Truncate_Silence"><a href="truncate_silence.html" title="Truncate Silence">Truncate Silence</a></span></h3>
+<p>Automatically try to find and eliminate audible silences. Do not use this with faded audio.
+</p>
+<div id="wahwah"></div>
+<h3><span class="mw-headline" id="Wahwah"><a href="wahwah.html" title="Wahwah">Wahwah</a></span></h3>
+<p>Rapid tone quality variations, like that guitar sound so popular in the 1970's.
+</p><p>Wahwah uses a moving band-pass filter to create its sound.  A low frequency oscillator (LFO) is used to control the movement of the filter throughout the frequency <i><b><a href="glossary.html#spectrum" title="Glossary">spectrum</a></b></i>.
+</p><p>The phase of the left and right channels is automatically adjusted when given a stereo track, so that the effect seems to travel across the speakers.
+</p><p><br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>&lt;</b>&#160; Back to: Effect Menu</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Effect_Menu:_Built-in">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

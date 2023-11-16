@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Transport Menu: Transport Options - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Transport_Menu_Transport_Options rootpage-Transport_Menu_Transport_Options skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Transport Menu: Transport Options</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Transport_Menu:_Transport_Options#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This submenu lets you manage and set various options for transport (playing and recording) in Audacity.</div>
+<dl><dd><span title="DTransport Options menu"><img alt="Transport Options menu 3.4.0.png" src="../m/images/6/60/transport_options_menu_3.4.0.png" width="511" height="291" /></span></dd></dl>
+<div id="sound_activation_level"></div>
+<h2><span class="mw-headline" id="Set_sound_activation_level_.C2.A0">Set sound activation level &#160;<font size="-1"></font></span></h2>
+<dl><dd><span title="Dialog for setting Sound Activation Level"><img alt="Sound Activation Level W10 3-0-0.png" src="../m/images/f/fd/sound_activation_level_w10_3_0_0.png" width="431" height="132" /></span></dd></dl>
+<p>Sets the activation level above which <a href="playing_and_recording.html#sar" title="Playing and Recording">Sound Activated Recording</a> will record.
+</p><p><br />
+</p>
+<div id="sound_activated_recording_onoff"></div>
+<h2><span class="mw-headline" id="Enable_sound_activated_recording_.C2.A0">Enable sound activated recording &#160;<font size="-1"></font></span></h2>
+<p>Toggles on and off the <i>Sound Activated Recording</i> option in <a href="recording_preferences.html#sar" title="Recording Preferences">Recording Preferences</a>. This option can be useful to save disk space when recording an intermittent input, such as a call recording system. 
+</p><p>When turned on (indicated by the check mark in the menu item), press the Record button in <a href="transport_toolbar.html" title="Transport Toolbar">Transport Toolbar</a> to start the Sound Activated Recording session. Recording will now occur whenever the received input is above the Sound Activation Level you specify (see the menu item <a href="#sound_activation_level">above</a>). Recording will pause whenever the received input falls below that level. Press the Stop button to stop the recording session. 
+</p>
+<div class="note">
+<p>Sound Activated Recording can be combined with <a href="timer_record.html" title="Timer Record">Timer Record</a> to set the start and end time of a Sound Activated recording.
+</p>
+</div>  
+<p><br />
+</p>
+<div id="pinned_play_record_head_onoff"></div>
+<div id="pinned_playrecord_head_onoff"></div>
+<h2><span class="mw-headline" id="Enable_pinned_play_head_.C2.A0">Enable pinned play head &#160;<font size="-1"></font></span></h2>
+<p>You can change Audacity to play and record with a fixed head pinned to a position in the Timeline. In this mode the head remains static and the waveforms will move as the audio is played or recorded.
+</p><p>Clicking on this command cause the triangle button at the left of the Timeline to change to a drawing-pin. This indicates that the play or record head is now pinned to the center of the Timeline and when playing or recording takes place the waveform will move continuously under the fixed head. Clicking on this command againg will revert to unpinned play and record head and the drawingpin changes back to the triangle.
+</p><p>See <a href="timeline.html#pinned" title="Timeline">this section</a> on the <a href="timeline.html" title="Timeline">Timeline</a> page for more details.
+</p><p><br />
+</p>
+<div id="overdub_onoff"></div>
+<h2><span class="mw-headline" id="Hear_other_tracks_during_recording_.C2.A0">Hear other tracks during recording &#160;<font size="-1"></font></span></h2>
+<p>This is "overdubbing" and toggles on and off the <b>Hear other tracks during recording (overdub)</b> option in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>. 
+</p><p>When turned on (indicated by the check mark in the menu item), any existing audio tracks will play when you start recording, according to the state of their <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks"><b>Mute</b></a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks"><b>Solo</b></a></span> buttons.  
+</p><p>Hear other tracks during recording (overdub) is "on" by default in Audacity.
+</p><p><br />
+</p>
+<div id="software_playthrough_onoff"></div>
+<h2><span class="mw-headline" id="Enable_audible_input_monitoring_.C2.A0">Enable audible input monitoring &#160;<font size="-1"></font></span></h2>
+<p>Toggles on and off the <b>Audible inut monitoring</b> option in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a>. <i>(This used to be knowns as <b>Software Playthrough</b> in earlier versions of Audacity)</i>.
+</p><p>When turned on (indicated by the check mark in the menu item), input being recorded will play, but there will be a noticeable delay (latency) before the input is heard. For some examples of setting up equipment to record without playthrough latency, see this Tutorial about <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Recording overdubs</a>.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Audible input monitoring must be <b>unchecked</b> when recording <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer">computer playback</a> because it will create feedback echoes.
+</td></tr></table></div>
+<p><br />
+</p><p><a href="transport_menu.html" title="Transport Menu"><b>&lt;</b>&#160; Back to: Transport Menu</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Transport_Menu:_Transport_Options">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

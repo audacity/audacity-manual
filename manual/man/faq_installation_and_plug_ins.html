@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>FAQ:Installation, Startup and Plugins - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-FAQ_Installation_and_Plug-Ins rootpage-FAQ_Installation_and_Plug-Ins skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">FAQ:Installation, Startup and Plugins</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/FAQ:Installation_and_Plug-Ins#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+
+<p><a href="faq_recording_troubleshooting.html" title="FAQ:Recording - Troubleshooting"><b>&gt;</b>&#160; Forward To: FAQ:Recording - Troubleshooting</a> <br />
+</p><p><a href="faq_about_audacity.html" title="FAQ:About Audacity"><b>&lt;</b>&#160; Back to: FAQ:About Audacity</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#How_do_I_install_and_update_Audacity.3F"><span class="tocnumber">1</span> <span class="toctext">How do I install and update Audacity?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#How_do_I_uninstall_Audacity.3F"><span class="tocnumber">2</span> <span class="toctext">How do I uninstall Audacity?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Windows"><span class="tocnumber">2.1</span> <span class="toctext">Windows</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Mac"><span class="tocnumber">2.2</span> <span class="toctext">Mac</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#What_should_I_do_if_I_have_problems_downloading_or_installing_Audacity.3F"><span class="tocnumber">3</span> <span class="toctext">What should I do if I have problems downloading or installing Audacity?</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#How_do_I_download_and_install_the_LAME_MP3_encoder.3F"><span class="tocnumber">4</span> <span class="toctext">How do I download and install the LAME MP3 encoder?</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#How_do_I_download_and_install_the_FFmpeg_Import.2FExport_Library.3F"><span class="tocnumber">5</span> <span class="toctext">How do I download and install the FFmpeg Import/Export Library?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Installing_FFmpeg"><span class="tocnumber">5.1</span> <span class="toctext">Installing FFmpeg</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#What_Effect.2C_Generator_and_Analyzer_plugins_does_Audacity_support_and_how_do_I_install_them.3F"><span class="tocnumber">6</span> <span class="toctext">What Effect, Generator and Analyzer plugins does Audacity support and how do I install them?</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#How_can_I_solve_Audacity_not_appearing_or_crashing_on_launch.2C_or_crashing_after_I_add_a_plugin.3F"><span class="tocnumber">7</span> <span class="toctext">How can I solve Audacity not appearing or crashing on launch, or crashing after I add a plugin?</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#What_can_I_do_if_the_Audacity_interface_is_slow_to_respond_on_Mac.3F"><span class="tocnumber">8</span> <span class="toctext">What can I do if the Audacity interface is slow to respond on Mac?</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#What_should_I_do_if_I_get_errors_building_Audacity.3F"><span class="tocnumber">9</span> <span class="toctext">What should I do if I get errors building Audacity?</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Windows:_How_can_I_make_Audacity_launch_when_I_double-click_a_WAV_or_other_audio_file.3F"><span class="tocnumber">10</span> <span class="toctext">Windows: How can I make Audacity launch when I double-click a WAV or other audio file?</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Mac:_Why_do_I_see_.22Verifying.22_or_.22Damaged.22_messages_when_I_launch_Audacity.3F"><span class="tocnumber">11</span> <span class="toctext">Mac: Why do I see "Verifying" or "Damaged" messages when I launch Audacity?</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#How_do_I_reset_my_Audacity_configuration_settings.3F"><span class="tocnumber">12</span> <span class="toctext">How do I reset my Audacity configuration settings?</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Why_does_the_computer_reboot_or_show_a_blue_screen_message_when_I_launch_Audacity_or_play_or_record.3F"><span class="tocnumber">13</span> <span class="toctext">Why does the computer reboot or show a blue screen message when I launch Audacity or play or record?</span></a></li>
+</ul>
+</div>
+
+<div id="install"></div>
+<h2><span class="mw-headline" id="How_do_I_install_and_update_Audacity.3F">How do I install and update Audacity?</span></h2>
+<p>See <a rel="nofollow" class="external text" href="https://support.audacityteam.org/basics/downloading-and-installing-audacity"><b>Downloading &amp; installing Audacity</b></a> on the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/"><b>Audacity Support</b></a> site for Audacity installation details for all three platforms.
+</p><p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="win_uninstall"></div>
+<h2><span class="mw-headline" id="How_do_I_uninstall_Audacity.3F">How do I uninstall Audacity?</span></h2>
+<div class="note">Note that there is no need to uninstall your previous Audacity version before updating to current Audacity. </div>
+<h3><span class="mw-headline" id="Windows">Windows</span></h3>
+<p>Audacity can be uninstalled by choosing "<b>Add/Remove Programs</b>" or "<b>Uninstall a application</b>" in the Windows Control Panel. Select "Audacity" from the list and follow the instructions which will launch the Audacity uninstall application. Make sure you quit Audacity before uninstalling, or you will receive errors that some files could not be removed.    
+</p><p>If the Control Panel cannot uninstall Audacity, open the folder in which you installed Audacity and double-click "unins000.exe" (this file might have other numbers in the name). This requires "unins000.dat" (or similar) to be present in the installation folder. 
+</p><p>If you still cannot uninstall Audacity, <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/windows">download</a> the installer again. Install Audacity to the same location you installed it to before (which happens by default). This will replace the uninstall files with good copies, then you can run the uninstaller again. 
+</p><p>Uninstallation retains your Audacity settings in case you want to install Audacity again at some time in the future. If you want to remove your settings as well, delete Audacity's folder for application data whose location is given <a href="preferences.html#stored" title="Preferences">here</a>.
+</p>
+<h3><span class="mw-headline" id="Mac">Mac</span></h3>
+<p>Quit Audacity then drag Audacity.app to Trash. If you are uninstalling older Audacity versions prior to 2.1.3, drag the entire folder containing Audacity to Trash.  
+</p><p>Uninstallation retains your Audacity settings in case you want to install Audacity again at some time in the future. If you want to remove your settings as well, delete Audacity's folder for application data ( <b>~/Library/Application Support/audacity/</b>). 
+</p>
+<div class="note">See also: <a href="#reset">How do I reset my Audacity configuration settings?</a> </div>
+<p><br />
+</p>
+<div id="probs"></div>
+<h2><span class="mw-headline" id="What_should_I_do_if_I_have_problems_downloading_or_installing_Audacity.3F">What should I do if I have problems downloading or installing Audacity?</span></h2>
+<p>If you cannot download Audacity from our official download page <a rel="nofollow" class="external free" href="https://audacityteam.org/download/">https://audacityteam.org/download/</a> please check at <a rel="nofollow" class="external free" href="http://downforeveryoneorjustme.com/">http://downforeveryoneorjustme.com/</a> to see if the problem is with your connection. If the downloaded setup file is corrupt, it is a very good idea to clear the download list or cache in your browser or download manager then try downloading again. 
+</p><p>If problems persist, please let us know at our <a rel="nofollow" class="external text" href="https://audacityteam.org/contact/#feedback">feedback address</a>.   
+</p><p><a href="#top">back to top</a>
+</p>
+<div id="lame"></div>
+<h2><span class="mw-headline" id="How_do_I_download_and_install_the_LAME_MP3_encoder.3F"><a href="faq_installing_the_lame_mp3_encoder.html" title="FAQ:Installing the LAME MP3 Encoder">How do I download and install the LAME MP3 encoder?</a></span></h2>
+
+<div class="note">The software patent on <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> encoding library has expired, so now the <b>LAME</b> library for <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> export is built-in with Audacity for Windows and Mac.  Linux users will still need to download and install the free and recommended LAME third-party encoder to export MP3 files from Audacity.<p>Linux users should use the following instructions to download and install the free and recommended <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> third-party encoder to export MP3 files with Audacity.</p> </div> 
+<div id="winlame"></div>
+<ul><li><b>Windows:</b> <b>LAME</b> is now built-in with Audacity for Windows.</li></ul>
+<div id="maclame"></div>
+<ul><li><b>Mac:</b> <b>LAME</b> is now built-in with Audacity for Mac.</li></ul>
+<div id="linlame"></div>
+<ul><li><b>Linux/Unix:</b> See the <a href="installing_and_updating_audacity_on_linux.html#linlame" title="Installing and updating Audacity on Linux"><b>LAME installation section</b></a> on <a href="installing_and_updating_audacity_on_linux.html" title="Installing and updating Audacity on Linux">Installing and updating Audacity on Linux</a>.</li></ul>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="ffdown"></div>
+<h2><span class="mw-headline" id="How_do_I_download_and_install_the_FFmpeg_Import.2FExport_Library.3F"><a href="faq_installing_the_ffmpeg_import_export_library.html" title="FAQ:Installing the FFmpeg-Import-Export Library">How do I download and install the FFmpeg Import/Export Library?</a></span></h2>
+
+<div class="note">The optional <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg library</a> allows Audacity to import and export a much larger range of audio formats including <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3 and <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> and also to import audio from most video files.<p>Because of software patents, Audacity cannot include the FFmpeg software or distribute it from its own websites. Instead, following the links below to instructions to download and install the free and recommended FFmpeg third-party library.</p> </div>
+<div id="winff"></div>
+<h3><span class="mw-headline" id="Installing_FFmpeg">Installing FFmpeg</span></h3>
+<p>Please see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/basics/downloading-and-installing-audacity/installing-ffmpeg"><b>Installing FFmpeg</b></a> on the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/"><b>Audacity Support</b></a> site for FFmpeg installation details.
+</p><p><br />
+<a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="plug-ins"></div>
+<div id="plugins"></div>
+<h2><span class="mw-headline" id="What_Effect.2C_Generator_and_Analyzer_plugins_does_Audacity_support_and_how_do_I_install_them.3F">What Effect, Generator and Analyzer plugins does Audacity support and how do I install them?</span></h2>
+<p>You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capabilities. 
+</p>
+<div class="note">[Nyquist plugins provide most of the optional effects underneath the divider in the <a href="effect_menu.html" title="Effect Menu">Effect menu</a>. They are also used to provide some of Audacity's built-in audio <a href="generate_menu.html" title="Generate Menu">generators</a> and <a href="analyze_menu.html" title="Analyze Menu">analysis tools</a>. A wide range of additional Nyquist effect, generation and analysis plugins can be obtained from <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/nyquist-plugins/effect-plugins/time-pitch-and-tempo">Nyquist Plugins</a> on our Audacity Support site.
+<p><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Virtual_Studio_Technology">VST</a> <i>(Virtual Studio Technology)</i>: Audacity supports almost all VST effect plugins on Windows, Mac and Linux including "shell" VST's that host multiple VST effects.
+</p>
+<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/LV2">LV2</a> is a more advanced evolution of the LADSPA plugin architecture which was originally developed on Linux. <a rel="nofollow" class="external text" href="http://www.vamp-plugins.org/">Vamp</a> plugins are usually for analyzing audio so will appear under Audacity's <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>. </div>
+<p>To add new plugins please see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/basics/installing-plugins"><b>Installing plugins</b></a> on the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/"><b>Audacity Support</b></a> site for plugin installation details for all three platforms.
+</p><p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="launch"></div>
+<h2><span class="mw-headline" id="How_can_I_solve_Audacity_not_appearing_or_crashing_on_launch.2C_or_crashing_after_I_add_a_plugin.3F">How can I solve Audacity not appearing or crashing on launch, or crashing after I add a plugin?</span></h2>
+<div id="already"></div>
+<p><b>Mac: "Audacity is already running" - error message</b>
+</p><p>If you get the following error message when trying to launch Audacity it is likely that an old Audacity "lock file" is still present.
+</p>
+<dl><dd><i><b>Audacity is already running. The system has detected that another copy of Audacity is running. Running two copies of Audacity simultaneously may cause data loss or may cause your system to crash. Use the New or Open commands in the currently running Audacity process to open multiple projects simultaneously. </b></i></dd></dl>
+<p>The lock file is in:
+</p>
+<ul><li><b>~/Library/Application Support/audacity/SessionData</b></li></ul>
+<p>Look in the SessionData folder and delete any files and folders you find there.
+</p><p><br />
+<b>Incompatible audio device or audio drivers </b>
+</p><p>If the Audacity hang or crash occurs after you added or enabled a new audio device, try removing or disabling that device (or updating its drivers) then restart Audacity. If the problem occurred after a driver update, try rolling back to the previous set of drivers.
+</p><p>If the entire computer crashes, reboots or displays a blue screen message when you launch Audacity, this is almost always due to a bad or mismatched audio driver (or due to a system driver conflicting with your sound device). See how to <a href="faq_errors.html#reboot" title="FAQ:Errors">inspect the computer's memory dump or test its memory</a> to diagnose crashes. 
+</p><p><b>LADSPA, LV2, VST or Audio Unit plugins</b>
+</p><p>A hang or crash could occur after you use the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager: Effects, Generators and Analyzers</a> dialog to add new <a href="effect_menu_ladspa.html" title="Effect Menu: LADSPA">LADSPA</a>, <a href="effect_menu_lv2.html" title="Effect Menu: LV2">LV2</a>, <a href="effect_menu_vst.html" title="Effect Menu: VST">VST</a> or <a href="effect_menu_audiounit.html" title="Effect Menu: AudioUnit">Audio Unit</a> (Mac) effects. The crash or hang could occur immediately after pressing OK in the dialog, when using an effect, when exiting Audacity or when restarting it next time.    
+</p><p>If Audacity crashes immediately after you enable one or more effects in the Plugin Manager dialog, the effect(s) that crashed should be disabled next time you launch Audacity. They will be relisted in Plugin Manager as "New" rather than "Disabled". If Audacity crashes when an effect is launched from the Effect Menu or applied to the audio, you can restart Audacity then try disabling the effect in the Plugin Manager. This effect will then not be available in Effect Menu.
+</p><p>Sometimes it may not be obvious which effects to disable to solve a hang or crash. You might be able to identify offending effects from <b>Audacity.zip</b> if there is an Audacity <a href="help_menu.html#data" title="Help Menu">Debug report</a>. You can also try Windows Event Viewer (or more easily on Windows, type "Reliability" without quotes in the Search box to open Reliability Monitor). To view Mac reports, open /Applications/Utilities/Console.app then look at the System Diagnostic Reports.  
+</p><p>Should it remain unclear which effects are responsible, it may be useful to reset Audacity to load only the enabled effects that it had on first installation. To do this, go to Audacity's folder for application data as follows:
+</p>
+<ul><li> <b>Windows:</b> <span class="path">Users\&lt;username&gt;\AppData\Roaming\Audacity\</span> (or type <b>%appdata%</b> in Explorer)</li>
+<li> <b>macOS:</b> <span class="path">~/Library/Application Support/audacity/</span> (use Go &gt; Go to Folder in Finder)</li>
+<li> <b>Linux:</b> <span class="path">~/.audacity-data/</span> .</li></ul>
+<p>In that folder, delete the <b>pluginregistry.cfg</b> and <b>pluginsettings.cfg</b> files and restart Audacity.  Then you can use the Plugin Manager dialog to selectively enable effects to find the possible culprit.     
+</p>
+<div class="note">
+If you discover a specific plugin that misbehaves in Audacity, please email our <a rel="nofollow" class="external text" href="https://web.audacityteam.org/contact/#feedback">feedback address</a>. Please include any available <a href="help_menu.html#data" title="Help Menu">Debug report</a> that Audacity generates.</div> 
+<p><b>Resetting Audacity Preferences</b>
+</p><p>The Audacity window could also fail to appear due to some Audacity configuration problem. To solve this, try <a href="#reset">resetting the Audacity Preferences</a>. 
+</p><p><b>Viruses and anti-virus scanning</b>  
+</p><p>Conflicts with other applications such as security or anti-virus applications can occasionally cause Audacity not to launch. Try turning off some of the more advanced behavior detection settings in the security application, or add an exception to its settings to make Audacity a trusted application. Conversely if you have not run a virus scan for a while, update your security application to the latest virus definitions and perform a thorough scan in case a newly acquired virus is the problem.
+</p><p><a href="#top">back to top</a> 
+</p>
+<div id="lag"></div>
+<h2><span class="mw-headline" id="What_can_I_do_if_the_Audacity_interface_is_slow_to_respond_on_Mac.3F">What can I do if the Audacity interface is slow to respond on Mac?</span></h2>
+<p>This issue refers to situations where the cursor lags behind the playback or recording point, or where the interface is slow to respond to actions such as dragging a selection.
+</p><p>This occurs on Macs that have a "30-bit" display. Note that not all Retina displays are 30-bit. To find out if your Mac has a 30 bit display:
+</p>
+<ul><li> from the Apple menu, choose "About this Mac"</li>
+<li> in the About window, click the "System Report" button</li>
+<li> if necessary, open the "Hardware" list in the left panel</li>
+<li> click on "Graphics/Displays"</li></ul>
+<p>If the "Framebuffer Depth:" says "30-Bit Color (ARGB2101010)", you have a 30-bit display.
+</p><p>Quit Audacity if it is running. Right-click on the Audacity application icon and choose "Get Info". In the Get Info window, check "Open in Low Resolution". The next time Audacity starts it will open in low resolution. Some parts of the interface may appear soft. In some cases this is just the window title, in other cases the entire interface may appear soft.
+</p><p><a href="#top">back to top</a> 
+</p>
+<div id="build"></div>
+<h2><span class="mw-headline" id="What_should_I_do_if_I_get_errors_building_Audacity.3F">What should I do if I get errors building Audacity?</span></h2>
+<p>Audacity provides ready-built installer applications for Windows and Mac, but Audacity can also be built from <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/source">source code</a> on any platform. With a little knowledge, building is a great way to customize Audacity.  
+</p><p>If you still cannot build Audacity, please ask on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewforum.php?f=19">Compiling Audacity</a> board on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a>.  
+</p>
+<ul><li> Please tell us whether you are building from a release tarball or Audacity HEAD. </li>
+<li> On Windows, please give all the instances of "ERROR" in the Visual Studio output window (including Linker errors).</li>
+<li> For Mac and Linux, please provide the last lines of the configure or make output that fail. 
+<ul><li> For Linux, also tell us which distribution and release you are using (for example, Ubuntu 11.10 or Fedora 16). </li></ul></li></ul>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="win_associate"></div>
+
+<h2><span class="mw-headline" id="Windows:_How_can_I_make_Audacity_launch_when_I_double-click_a_WAV_or_other_audio_file.3F">Windows: How can I make Audacity launch when I double-click a WAV or other audio file?</span></h2>
+<p>For <b>Windows</b>, click the Windows Start button, then Control Panel, then "Programs". Under "Default Programs", click "Make a file type always open in a specific application".  Choose ".wav", ".mp3" or your chosen extension, then click "Change application" and browse for Audacity to associate it with that file type. 
+</p><p>Another method is to use the Windows Start button, type "Run" (without quotes), press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, then type <b>%windir%\system32\control.exe /name Microsoft.DefaultPrograms /page pageFileAssoc</b> and press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>. 
+</p><p>On Windows you can instead set the default association of a file type with Audacity by right-clicking over any file of that type, choosing "Open with" then "Choose default application".      
+</p>
+<div class="note">If you have two different versions of Audacity, and you want to be able to choose which one, then you will need to rename one to give them different names, such as audacity.exe and audacity_old.exe.</div>
+<p><br />
+<a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="mac_launch"></div>
+<h2><span class="mw-headline" id="Mac:_Why_do_I_see_.22Verifying.22_or_.22Damaged.22_messages_when_I_launch_Audacity.3F">Mac: Why do I see "Verifying" or "Damaged" messages when I launch Audacity?</span></h2>
+<p>On macOS the Apple <a rel="nofollow" class="external text" href="http://support.apple.com/kb/HT5290">Gatekeeper</a> feature by default verifies authorship of applications downloaded from the Internet and controls whether they can be launched.  Audacity is now codesigned with an Apple Developer ID to make it easier to launch Audacity securely. The first time you launch Audacity after download, Gatekeeper will verify Audacity, perhaps showing a progress dialog, but once complete you will see a standard warning saying that Audacity came from the Internet and asking if you want to open it. You can safely do so. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">If after verification, Gatekeeper says that Audacity is "from an unidentified developer" or "not downloaded from the Mac App Store", this means you have an old version of Audacity that was not codesigned. If necessary you can right-click or control-click over the Audacity application in Finder, choose "Open", then in the dialog box that appears, choose "Open", but we recommend you download the <a rel="nofollow" class="external text" href="http://www.audacityteam.org/download/mac/">current version of Audacity</a> instead.
+</td></tr></table></div>
+<p>Occasionally, you may see an error message that "Audacity is damaged and cannot be opened, possibly with "You should move it to the Trash." If this message persists even if you right-click or control-click over Audacity to open it,  try downloading Audacity again from <a rel="nofollow" class="external free" href="http://www.audacityteam.org/download/mac">http://www.audacityteam.org/download/mac</a>. 
+</p><p>If necessary, you can  open <span class="menu">Apple menu &gt; System Preferences &gt; Security &amp; Privacy: General tab</span>. Under the header "Allow apps downloaded from:", choose "Anywhere". On macOS Sierra 10.12, the "Anywhere" choice is unavailable by default, but you can make the "Anywhere" choice appear and set Gatekeeper to this choice by opening a Terminal and entering 
+</p>
+<table style="margin-left:10px;line-height:1.1em;letter-spacing:-0.04em;background-color:#FDEEF4;font-family:monospace;font-size:1.1em;border:1px dashed black" cellpadding="5px">
+<tr>
+<td>sudo spctl --master-disable
+</td></tr></table>
+<p>then entering your password when prompted. 
+</p><p>Audacity should now launch, assuming it is not a corrupted download. It would then be advisable to change the "Anywhere" preference in Gatekeeper back to a more restrictive setting. On macOS Sierra, doing so will remove the "Anywhere" choice once more. 
+</p><p><a href="#top">back to top</a> 
+</p><p><br />
+</p>
+<div id="reset"></div>
+<h2><span class="mw-headline" id="How_do_I_reset_my_Audacity_configuration_settings.3F">How do I reset my Audacity configuration settings?</span></h2>
+<p><b>Uninstalling Audacity does not automatically repair or reset your configuration settings in Audacity <a href="preferences.html" title="Preferences">Preferences</a>.</b> If you are trying to fix a problem with Audacity, take one of the following actions.
+</p>
+<ul><li> In Audacity use <span class="menu">Tools &gt; <a href="reset_configuration.html" title="Reset Configuration">Reset Configuration</a></span> to reset your Audacity configuration: preferences, export settings and toolbars to default settings. <i>(Macros, plugins and saved user settings in Effects, Generators and analyzers are not affected)</i>.</li></ul>
+<p><br />
+<b>If you cannot launch Audacity:</b>
+</p>
+<ul><li> <a href="preferences.html#stored" title="Preferences">Reset Preferences</a> by deleting the <i><b>audacity.cfg</b></i> settings file. There is then no need to uninstall and re-install. </li>
+<li> Alternatively, Windows users may run the installer and in the "Select Additional Tasks" screen, put a check in the "Reset Preferences" box. Complete the installation. On launching Audacity, a dialog will appear where you can confirm if you want to reset preferences just this once, or not. </li></ul>
+<p>For details of how to reset your Audacity settings on the three platforms please see:
+</p>
+<ul><li><a href="installing_and_updating_audacity_on_windows.html#purge" title="Installing and updating Audacity on Windows">Windows</a></li>
+<li><a href="installing_and_updating_audacity_on_mac_os_x.html#purge" title="Installing and updating Audacity on Mac OS X">Mac</a></li>
+<li><a href="installing_and_updating_audacity_on_linux.html#purge" title="Installing and updating Audacity on Linux">Linux</a></li></ul>
+<p><br />
+See also: 
+</p>
+<ul><li> <a href="#win_uninstall">Windows: How do I uninstall Audacity?</a></li>
+<li> <a href="#launch">How can I solve Audacity not appearing or crashing on launch, or crashing after I add a plugin?</a> </li></ul>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="reboot"></div>
+<h2><span class="mw-headline" id="Why_does_the_computer_reboot_or_show_a_blue_screen_message_when_I_launch_Audacity_or_play_or_record.3F">Why does the computer reboot or show a blue screen message when I launch Audacity or play or record?</span></h2>
+<p>This mostly affects Windows computers. It happens when your computer sound device has a bad or mismatched driver or there is a problem with a system driver that interacts with that sound device. Even if the problem occurs after updating to the latest Audacity version, it still is not Audacity's direct fault because Audacity does not have kernel privileges to make the computer restart.  Inappropriate drivers can also cause Audacity to crash during playback or recording, without necessarily crashing the computer. 
+</p><p>The best practice is to make sure the computer's built-in sound device has the latest drivers for your operating system, supplied by the motherboard or computer manufacturer. For a PCI or external sound card, obtain the latest drivers and firmware supplied by the manufacturer of the device. If playback or recording worked previously, but the sound device drivers are appropriate or cannot be changed to a version that prevents the problem, try Windows System Restore to revert the computer to a state before the problem occurred.   
+</p><p>If necessary the exact driver or module causing a computer crash can be pinpointed on Windows by examining the memory dump made when the crash occurred. You can find the dump by right-clicking over <span class="menu">My Computer</span> or <span class="menu">Computer &gt; Properties</span>, then click the "Advanced" link or tab, and under "Startup and Recovery", choose "Settings". Faulty memory can sometimes cause computer freezes or crashes.
+</p><p>If your best available sound card drivers prove to be incompatible with current Audacity, we may not be able to take any direct action, but do <a rel="nofollow" class="external text" href="https://web.audacityteam.org/contact/#feedback">let us know</a>:
+</p>
+<ul><li> the exact make and model number of the sound device</li>
+<li> the exact driver and firmware model numbers</li>
+<li> the exact operating system you are using, including the Service Pack if you are on Windows.</li></ul>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p><p><br />
+</p><p><a href="faq_recording_troubleshooting.html" title="FAQ:Recording - Troubleshooting"><b>&gt;</b>&#160; Forward To: FAQ:Recording - Troubleshooting</a> <br />
+</p><p><a href="faq_about_audacity.html" title="FAQ:About Audacity"><b>&lt;</b>&#160; Back to: FAQ:About Audacity</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Installation_and_Plug-Ins">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

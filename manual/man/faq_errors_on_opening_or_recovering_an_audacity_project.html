@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>FAQ:Errors on opening or recovering an Audacity project - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-FAQ_Errors_on_opening_or_recovering_an_Audacity_project rootpage-FAQ_Errors_on_opening_or_recovering_an_Audacity_project skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">FAQ:Errors on opening or recovering an Audacity project</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/FAQ:Errors_on_opening_or_recovering_an_Audacity_project#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<div class="intro">This page deals with errors that you may encounter when <a href="file_menu.html#open" title="File Menu">opening</a> or <a href="recovery.html" title="Recovery">recovering</a> an <a href="audacity_projects.html" title="Audacity Projects">Audacity project</a>. </div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#import-error">Error opening an AUP3 file in an older version of Audacity</a></li>
+<li><a href="#older-error">Error Importing: Aup is an Audacity Project file. Use the File &gt; Open command</a></li>
+<li><a href="#empty">Errors opening a new empty project</a></li>
+<li><a href="#cryptic-error">Cryptic system/database error</a></li></ol>
+<p><br />
+</p>
+<div id="older-error"></div>
+<h2><span class="mw-headline" id="Error_opening_an_AUP3_file_in_an_older_version_of_Audacity">Error opening an AUP3 file in an older version of Audacity</span></h2>
+<p>This error will occur if you try to open an AUP3 project file that was created in a later version of Audacity.
+</p><p>You will need to upgrade to the latest version of Audacity in order to open this project file.
+</p>
+<h3><span class="mw-headline" id="Download_latest_version_of_Audacity">Download latest version of Audacity</span></h3>
+<p>Visit the <a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/"><b>Audacity Download</b></a> webpage to download the latest version of Audacity.
+</p><p><br />
+</p><p><br />
+</p>
+<div id="import-error"></div>
+<h2><span class="mw-headline" id="Error_Importing:_aup_is_an_Audacity_Project_file._Use_the_File_.3E_Open_command">Error Importing: aup is an Audacity Project file. Use the File &gt; Open command</span></h2>
+<p>This error usually occurs because you have attempted to open an Audacity project by using the <a href="file_menu.html#import" title="File Menu">Import</a> command <i>(which is reserved for audio files)</i>.
+</p><p>Instead, you should always use <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open</a></span> to open an AUP (<a href="audacity_projects.html" title="Audacity Projects">Audacity Project</a>) file. 
+</p><p>If you see "Error Importing" even when using <span class="menu">File &gt; Open</span>, this usually means the AUP file is seriously damaged, has been encoded other than as <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a> without <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a>, or only contains NULL (zero) data. 
+</p>
+<div class="note"><span style="font-weight: bold; font-size:118%">NULL contents:</span>
+<p>The contents are NULL and unusable if you open the AUP file in a text editor like Notepad or TextEdit (on Mac) and see empty contents despite the file being a non-zero size. The AUP file is saved last, so a NULL AUP file can occur if you shut down the computer or close the lid on a laptop before the project is completely saved. Be sure to wait until the Audacity <a href="status_bar.html" title="Status Bar">Status Bar</a> says the project is saved, or until all project save progress dialogs have closed, before shutting down the machine. 
+</p><p>If the AUP file appears empty, try to use any <a href="faq_opening_and_saving_files.html#backup" title="FAQ:Opening and Saving Files">backup</a> you created, such a different AUP file for an earlier stage of the project, or an exported <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> file. 
+<b>File not saved as UTF-8 without BOM</b>
+</p>
+Using Notepad on Windows to save an AUP file containing Unicode characters as UTF-8 will create this problem because Notepad adds a BOM. To solve it, open the file in <a rel="nofollow" class="external text" href="https://notepad-plus-plus.org/">Notepad++</a>, choose <span class="menu">Encoding &gt; Convert to UTF-8</span> then save the file. Old versions of Notepad ++ may refer to the required command as <b>Convert to UTF-8 without BOM</b>. If the problem occurred after editing the AUP file in TextEdit on Mac, resave the file as text in <a rel="nofollow" class="external text" href="http://brackets.io/">Brackets</a> or <a rel="nofollow" class="external text" href="http://www.barebones.com/products/bbedit/">BBEdit</a>.</div>       
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="empty"></div>
+<h2><span class="mw-headline" id="Errors_opening_a_new_empty_project">Errors opening a new empty project</span></h2>
+<p>We don't know exactly what causes this message to happen.  It can happen at start up of Audacity, or when creating a new project window. 
+</p>
+<dl><dd><span title="Error opening a new empty project"><img alt="ErrEmptyProject.png" src="../m/images/3/3d/erremptyproject.png" width="302" height="195" /></span></dd></dl>
+<p>See <b><a href="faq_errors_opening_a_new_empty_project.html" title="FAQ:Errors opening a new empty project">FAQ:Errors opening a new empty project</a></b> for more details.
+</p><p><br />
+<a href="#top">back to top</a>
+</p><p><br />
+</p>
+<div id="cryptic-error"></div>
+<h2><span class="mw-headline" id="Cryptic_system.2Fdatabase_error">Cryptic system/database error</span></h2>
+<p>In rare situations you may get what looks like a cryptic database error message like the one below.
+</p><p>These messages contain valuable data for the developers to help the resolve the issue.  
+</p>
+<dl><dd><span title="Error dialog Failed to open database file"><img alt="Failed to open database file.png" src="../m/images/6/68/failed_to_open_database_file.png" width="463" height="207" /></span></dd></dl>
+<dl><dd>Clicking on the <b>Show Log</b> chevron will expand the message to show something like this:</dd>
+<dd><span title="Log dialog: Failed to open database file)"><img alt="Failed to open database file - log.png" src="../m/images/d/d7/failed_to_open_database_file_log.png" width="726" height="473" /></span></dd>
+<dd>This is unlikely to mean anything to you as a user, but can be very valuable to our developers, giving them information to aid analyzing the issue.</dd>
+<dd>So please take a screenshot of the log and send it to us at the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php"><b>Audacity Forum</b></a>.</dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">This can normally be resolved by simply exiting Audacity, relaunching and then making the required import of an audio file.
+</td></tr></table>
+</div>
+<h3><span class="mw-headline" id="Errors_that_you_might_see">Errors that you might see</span></h3>
+<ul><li>Project is read only <i>&lt;project name&gt;</i> (Unable to work with the blockfiles)</li>
+<li>Project is locked <i>&lt;project name&gt;</i> (Unable to work with the blockfiles)</li>
+<li>Project is busy <i>&lt;project name&gt;</i> (Unable to work with the blockfiles)</li>
+<li>Project is corrupt <i>&lt;project name&gt;</i> (Unable to work with the blockfiles)</li>
+<li>Some permissions issue <i>&lt;project name&gt;</i> (Unable to work with the blockfiles)</li>
+<li>A disk I/O error <i>&lt;project name&gt;</i> (Unable to work with the blockfiles)</li>
+<li>Not authorized <i>&lt;project name&gt;</i> (Unable to work with the blockfiles)</li>
+<li>Unable to work with the blockfiles</li></ul>
+<div class="note">If you ever encounter one of these please report this on the <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php"><b>Audacity Forum</b></a> in full details, preferably accompanied by a screenshot of the message.<p>
+The message may have a <span class="button">Show Log</span> button.  If it does please press that and send us a screenshot of the full error message with that log, as that will give us valuable data for analysis of the issue.</p> </div>
+<p><a href="#top">back to top</a>
+</p><p><br />
+</p><p><a href="faq_errors.html" title="FAQ:Errors"><b>&lt;</b>&#160; Back to: FAQ:Errors</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Errors_on_opening_or_recovering_an_Audacity_project">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

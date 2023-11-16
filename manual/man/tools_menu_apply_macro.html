@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Tools Menu: Apply Macro - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tools_Menu_Apply_Macro rootpage-Tools_Menu_Apply_Macro skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tools Menu: Apply Macro</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tools_Menu:_Apply_Macro#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro"><i><b>Tools Menu</b></i> provides miscellaneous commands that:
+<ul><li> Act on the project.</li>
+<li> Do not fit into the categories Effects, Generators or Analyzers.</li></ul>
+</div>
+<dl><dd><div class="noresize"><map name="ImageMap_1_1086657469"><area href="tools_menu.html" shape="rect" coords="25,5,66,27" alt="The Tools Menu contains customisable tools" title="The Tools Menu contains customisable tools"/><area href="extra_menu.html" shape="rect" coords="66,5,107,27" alt="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus" title="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus"/><area href="help_menu.html" shape="rect" coords="107,5,144,27" alt="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools." title="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools."/><area href="tools_menu.html#add_remove_plugins" shape="rect" coords="25,27,230,49" alt="Enable or disable particular Effects, Generators and Analyzers" title="Enable or disable particular Effects, Generators and Analyzers"/><area href="tools_menu.html#macros" shape="rect" coords="25,49,230,71" alt="Creates a new Macro or edits an existing Macro" title="Creates a new Macro or edits an existing Macro"/><area href="#" shape="rect" coords="25,71,230,93" alt="Displays a menu with list of all your Macros" title="Displays a menu with list of all your Macros"/><area href="tools_menu.html#reset_configuration" shape="rect" coords="25,100,230,122" alt="Reset most settings back to the default values" title="Reset most settings back to the default values"/><area href="tools_menu.html#screenshot" shape="rect" coords="25,122,230,144" alt="A tool, mainly used in documentation, to capture screenshots of Audacity" title="A tool, mainly used in documentation, to capture screenshots of Audacity"/><area href="tools_menu.html#run_benchmark" shape="rect" coords="25,144,230,166" alt="A tool for measuring the performance of one part of Audacity" title="A tool for measuring the performance of one part of Audacity"/><area href="tools_menu.html#nyquist_prompt" shape="rect" coords="25,173,230,195" alt="Brings up a dialog where you can enter Nyquist commands" title="Brings up a dialog where you can enter Nyquist commands"/><area href="tools_menu.html#nyquist_plugin_installer" shape="rect" coords="25,202,230,224" alt="A  Nyquist plug-in that simplifies the installation of other Nyquist plug-ins" title="A  Nyquist plug-in that simplifies the installation of other Nyquist plug-ins"/><area href="tools_menu.html#regular_interval_labels" shape="rect" coords="25,224,230,246" alt="Places labels in a long track so as to divide it into smaller, equally sized  segments" title="Places labels in a long track so as to divide it into smaller, equally sized  segments"/><area href="tools_menu.html#sample_data_export" shape="rect" coords="25,246,230,268" alt="Reads the values of successive samples from the selected audio and prints this data to a plain text, CSV or HTML file" title="Reads the values of successive samples from the selected audio and prints this data to a plain text, CSV or HTML file"/><area href="tools_menu.html#sample_data_import" shape="rect" coords="25,268,230,290" alt="Reads numeric values from a plain ASCII text file and creates a PCM sample for each numeric value read" title="Reads numeric values from a plain ASCII text file and creates a PCM sample for each numeric value read"/><area href="#palette" shape="rect" coords="230,71,388,93" alt="Displays a menu with list of all your Macros which can be applied to the current project or to audio files." title="Displays a menu with list of all your Macros which can be applied to the current project or to audio files."/><area href="#fade_ends" shape="rect" coords="230,100,388,122" alt="Fades in the first second and fades out the last second of a track" title="Fades in the first second and fades out the last second of a track"/><area href="#mp3_conversion" shape="rect" coords="230,122,388,144" alt="Converts MP3" title="Converts MP3"/><area href="menu_reference.html" shape="rect" coords="0,0,1000,1000" alt="The Menus" title="The Menus"/></map><img alt="Tools-Apply MacroMenu.png" src="../m/images/a/a2/tools_apply_macromenu.png" width="391" height="300" usemap="#ImageMap_1_1086657469"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:338px;top:-15px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+</div>
+<p><br />
+&#160;
+</p><p><br />
+</p>
+<div id="palette"></div>
+<h2><span class="mw-headline" id="Palette"><a href="apply_macro.html" title="Apply Macro">Palette</a></span></h2>
+<p>Clicking on this will show the  <a href="apply_macro.html" title="Apply Macro">Macro Palette</a>, a dialog with a list of all your Macros.
+</p><p>You can select any of the listed Macros and apply them either to the current project or to audio files.
+</p><p>The list of names may vary from what is shown here, depending on what macros you have defined.
+</p>
+<dl><dd><span title="Macros Palette dialog showing Macro list"><img alt="MacrosPalette.png" src="../m/images/2/20/macrospalette.png" width="293" height="393" /></span></dd></dl>
+<p><br />
+</p>
+<h2><span class="mw-headline" id=".3CMacro_Name.3E">&lt;Macro Name&gt;</span></h2>
+<p>If you have created your own custom Macros these Macros and those pre-shipped with Audacity will be listed in the dropdown menu.
+</p><p>Selecting any of these Macros by clicking on it will cause that Macro to be applied to the current project.
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Tools_Menu:_Apply_Macro">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

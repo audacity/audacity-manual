@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Overdubbing with a Shure\xc2\xae X2U Microphone Amplifier-USB Adapter - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Overdubbing_with_a_Shure\xc2\xae_X2U_Microphone_Amplifier-USB_Adapter rootpage-Overdubbing_with_a_Shure\xc2\xae_X2U_Microphone_Amplifier-USB_Adapter skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Overdubbing with a Shure\xc2\xae X2U Microphone Amplifier-USB Adapter</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Overdubbing_with_a_Shure%C2%AE_X2U_Microphone_Amplifier-USB_Adapter#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">This tutorial describes a known working method of creating a multiple sound track overdubbing session from scratch in Audacity. That is, you record one track and then play it back and add a second track against it: drums, guitar, voice -- repeat as needed.
+<p>This process uses a USB microphone amplifier that has headphones plugged into its side (required) and a plain <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/XLR_connector">XLR</a> microphone. In this tutorial you will 
+</p>
+be able to hear a mix of your live recording and the previous tracks simultaneously in your headphones (also required). Live monitoring is often unavailable (or you hear yourself too late) without purpose-built hardware.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">The procedure is similar for any USB microphone pre-amp providing that it has a headphone output and some way to mix the microphone signal with the USB playback signal.
+<p>If your USB microphone amplifier does not have a headphone output, then you should follow the advice in <a href="overdubbing_using_your_computer_s_on_board_sound_card.html" title="Overdubbing using your computer's on-board sound card">Overdubbing using your computer's on-board sound card</a>, but using your USB microphone rather than your computer's built-in microphone.
+</p>
+</td></tr></table>
+</div>
+<h2><span class="mw-headline" id="Hardware">Hardware</span></h2>
+<p>The <b>Shure\xc2\xae X2U</b> is an <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/XLR_connector">XLR</a> microphone amplifier (pre-amp) with USB interface and headphone management. The X2U Volume and Monitor controls are used to provide a headphone mix of computer playback and live performance sound. This is the mix you need to sing or play to yourself with no latency, echoes or other impairment.  The Shure X2U can supply 48v phantom power to any microphone that needs it.
+</p>
+<dl><dd><span title="Shure X2U XLR to USB adapter"><img alt="ShureX2U.png" src="../m/images/a/a2/shurex2u.png" width="444" height="113" /></span></dd></dl>
+<p>The microphone used in this tutorial is an ordinary <b>Shure SM-58</b> "rock band" microphone. Any <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/XLR_connector">XLR</a> microphone will work. Almost any Linux\xc2\xae, Windows\xc2\xae or Mac\xc2\xae machine with fast enough USB and good storage can be used.
+</p><p>Our example here uses Mac earbuds for listening, but nearly any good headphones or earbuds are OK.
+</p>
+<dl><dd><span title="Mac earbuds"><img alt="MAC earBuds.jpg" src="../m/images/6/6d/mac_earbuds.jpg" width="332" height="174" /></span></dd></dl>
+<p>If you require cranium-crushing headphone volume, you may need a headphone amplifier. You must get the headphone sound from the Shure X2U, not the computer soundcard.
+</p><p>Headphone monitoring is good; live microphones and speakers in the same room is a recipe for feedback.
+</p>
+<h3><span class="mw-headline" id="The_Shure_X2U_has_three_jobs:">The Shure X2U has three jobs:</span></h3>
+<ol><li>It amplifies the tiny microphone signal, digitizes it and sends it down the USB cable for recording.</li>
+<li>It converts the USB digital audio from the computer back to analog.</li>
+<li>It has an internal headphone mixer. The X2U performs a mix of your existing track playback and your new, live performance so you can listen to both.</li></ol>
+<p>The one "magic" feature of this  device is the ability to mix your live voice with the computer's rhythm track so you can hear the mixed musical performance and that can only happen if the rhythm track is available. Making the USB device the playback device makes this functionality available.
+</p>
+<h2><span class="mw-headline" id="First_Recording">First Recording</span></h2>
+<p>First we will make a simple recording, with no overdubbing or other fancy tricks. The system has to work correctly for simple recording and playback before we go further.
+</p><p>Connect the mic, USB and headphones: 
+</p>
+<dl><dd><span title="Shure Overdub used to connect a microphone to a computer"><img alt="X2uShureOverdub phones &amp; mic.JPG" src="../m/images/3/39/x2ushureoverdub_phones_mic.jpg" width="600" height="220" /></span></dd></dl>
+<p>USB audio will not go through a hub or long USB cables so the X2U must have a direct USB connection to the computer.
+</p><p>There is no requirement to have a microphone cable between the microphone and the X2U, so for the test we did not use one. Good quality XLR microphone cables can be as long as 100 feet /30 Meters. One of the advantages of this system is the separation of the microphone and the computer.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">
+<ul><li>The X2U should be connected with its light on <b>before</b> you start Audacity.</li>
+<li> If the USB device does not appear in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>, check that the USB device is connected correctly and try applying <span class="menu">Transport &gt; Rescan Audio Devices</span>. </li></ul>
+</td></tr></table></div>
+<p>This is not a tutorial on making a recording and playing it back, but you need to be able to do that before you do anything else. There are multiple tutorials and wikis on Recording.
+</p>
+<ul><li><a href="../quick_help.html" title="Quick Help">Getting Started</a></li>
+<li><a href="tutorials_for_audacity.html" title="Tutorials for Audacity">Tutorials for Audacity</a></li></ul>
+<p><br />
+Set the computer control panels, preferences and Audacity dropdowns to recognize the X2U USB device <b>for both recording and playback</b>. The X2U's USB name is <b>SHURE DIGITAL-USB</b>.
+</p>
+<h3><span class="mw-headline" id="Set_Audacity_Preferences:">Set Audacity Preferences:</span></h3>
+<p>Click on <span class="menu">Edit &gt; Preferences</span> <i>(on a Mac this is <span class="menu">Audacity &gt; Preferences</span>)</i>
+</p>
+<ul><li> in the <b>Quality</b> tab:
+<ul><li> set <b>Default Sample Rate</b> to <span class="button">44100 Hz &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span></li>
+<li> set <b>Default Sample Format</b> to <span class="button">32-bit float &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span></li></ul></li>
+<li> in the <b>Devices</b> tab:
+<ul><li> Under <i>Playback</i> set <b>Device</b> to  <span class="button">SHURE DIGITAL-USB &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span></li>
+<li> Under <i>Recording</i> set <b>Device</b> to the microphone <span class="button">SHURE DIGITAL-USB &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> and set <b>Channels</b> to <span class="button">1 (Mono) &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> </li></ul></li></ul>
+<ul><li> in the <b>Recording</b> tab:
+<ul><li> check <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Play other tracks while recording new one (overdub)</span></li>
+<li> uncheck <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;Enable audible input monitoring: Listen while recording or monitoring new track</span></li></ul></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">In Audacity by default using the Record button <img alt="image of Record button" src="../m/images/e/e8/record.png" title="image of Record button" width="16" height="16" /> will append record onto your existing track, see the <a href="recording.html" title="Recording">Recording</a> page.
+<ul><li>In order to record on a new track, for multi-track overdubbing, you will need to use <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and the <b>Record new track</b> button <img alt="The Record New Track button" src="../m/images/7/72/record_new_track.png" title="The Record New Track button" width="16" height="16" />, <i>or use its shortcut <span class="kbrd" style="background-color: #d0d0f8">Shift + R</span></i>.</li>
+<li>You can change this in <a href="recording_preferences.html" title="Recording Preferences">Recording Preferences</a> by checking "<b>on</b>" the "<b>Record on a new track</b>", doing this will make Audacity record on a new track with just the Record button and <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and <img alt="The Record on same Track button" src="../m/images/d/d9/recordbeside.png" title="The Record on same Track button" width="16" height="16" /> will append record onto your existing track.  </li></ul>
+</td></tr></table>
+</div>
+<div class="note">You may want to make the Audacity project window larger than its default and expand the <a href="meter_toolbar.html" title="Meter Toolbar">Meter Toolbar</a>.</div>
+<p><br />
+Click once anywhere inside the recording meter (the one with the mic icon) to put the meters into Monitor Mode. They will display the microphone's sound level without starting Audacity recording and wasting drive space. This may fail on certain Linux machines using Jack.
+</p><p>Adjust the X2U <b>Mic Gain</b> for good level. Do not peak much over -10 to -6. You can fix low levels later, but you cannot fix overloading, smashing, and clipping (meters too far to the right). You should be able to hear your performance in the headphones; adjust the <b>Volume</b> control as needed for comfortable listening and <b>Monitor</b> in the middle of its range.
+</p><p>Click "<b>Record</b>"; Audacity will take a second to configure itself and start recording. The blue waves will start to crawl left to right as you perform. Play or sing a simple song that you can use for rhythm and timing later.
+</p><p>Click "<b>Stop</b>", then "<b>Home</b>" and then click "<b>Play</b>" to hear the track you have just made. You should hear the track in your headphones. While listening, if you tap or scratch the microphone, you can hear the scratching/tapping too--they're both live.
+</p><p>This is an example of what you will hear during the overdub sessions. Any combination of existing tracks will play in your headphones, in addition to your live voice, allowing you to set a good mix and timing.
+</p>
+<h2><span class="mw-headline" id="Setting_the_Recording_Latency">Setting the Recording Latency</span></h2>
+<p>Click "<b>Home</b>" then click "<b>Record</b>" and you will get a new recording underneath the first one. Sing or perform in time to the first track; when finished click on "<b>Stop</b>" then "<b>Home</b>".
+</p><p>The audio will have two tracks, one from each performance, but it may be seriously out of time or rhythm -- even though you were in perfect time when you recorded it. This is <b>recording latency</b> and you can adjust it to zero using Audacity's latency tools; done properly, both the live recording session and the later playback will be in perfect time.
+</p>
+<ul><li>Choose <span class="menu">File &gt; Close</span> click "<b>Don't Save</b>".</li>
+<li>Choose <span class="menu">File &gt; New</span>.</li>
+<li>Choose <span class="menu">Generate &gt; Rhythm Track</span> click "<b>OK</b>" - <i>to generate a click track</i></li>
+<li>Audacity <span class="menu">Preferences &gt; Recording</span> set "<b>Latency Correction</b>" to [ 0 ] milliseconds, click  "<b>OK</b>".</li>
+<li>Play the new track and set <b>VOLUME</b> control on the X2U for loud but not painful. Take off your earphones.</li>
+<li>Turn the <b>Mic Gain</b> all the way up. The gain on the X2U is a little wimpy, so that control usually lives up there.</li>
+<li>Roll the <b>Monitor</b> control on the X2U toward the microphone. This causes only the click track to play into the headphones.</li>
+<li>Hold the headphones against the microphone:</li></ul>
+<dl><dd><span title="Earbud by microphone"><img alt="Earbud by mic.JPG" src="../m/images/e/e3/earbud_by_mic.jpg" width="357" height="266" /></span></dd></dl>
+<ul><li>Click "<b>Shift + Record</b>".  Track one's click track is now being recorded -- badly -- onto track two through the headphone and microphone. Good fidelity is irrelevant here.</li>
+<li>Do that for five or ten seconds and click "<b>Stop</b>".</li>
+<li>Select the new track and choose <span class="menu">Effect &gt; Amplify</span>  (accepting the defaults) click "<b>OK</b>".</li>
+<li>Reduce the volume a bit and put your headphones back on.</li>
+<li>Click "<b>Play</b>", both tracks will probably play out of step.</li>
+<li>Magnify the <a href="timeline.html" title="Timeline">Timeline</a> around one of the pair of clicks <i>(drag-select and <span class="kbrd" style="background-color: #d0d0f8">CTRL+E</span> (or on a Mac <span class="kbrd" style="background-color: #d0d0f8">CMD+E</span>)</i>.</li>
+<li>Drag-Select the distance between the start of the click on the top track and the start of the same click on the bottom track. <br /></li></ul>
+<dl><dd><span title="Audacity Project with latency - Mac OS X screen shot"><img alt="LatencyMonoMac 206 SnapTo.png" src="../m/images/8/84/latencymonomac_206_snapto.png" width="725" height="432" /></span></dd></dl>
+<dl><dd>That is how much the rhythm misses and that is the latency. Keep magnifying until you can get a good shot at accuracy. Use <span class="kbrd" style="background-color: #d0d0f8">CTRL+3</span> (or on Mac <span class="kbrd" style="background-color: #d0d0f8">CMD+3</span>) to back out slightly if you magnify too much by accident.</dd></dl>
+<ul><li>At the bottom of the Audacity window in the Selection Toolbar set the middle time control to "<b>Length</b>" (one of the two radio buttons) then change the format using the dropdown menu to:</li></ul>
+<dl><dd><dl><dd>hh:mm:ss: + milliseconds.</dd></dl></dd>
+<dd>You are mostly interested in the milliseconds -- the last numbers on the right. The reading in the example above is 209 msec.</dd></dl>
+<ul><li>Audacity <span class="menu">Preferences &gt; Recording</span> set Latency Correction to  the negative of the number in the Length display - in this case -209 milliseconds - then click "<b>OK</b>".</li></ul>
+<ul><li>Go through the whole process again.</li></ul>
+<p>This time the two click tracks should look perfectly on (or very close to it) and sound perfectly in time. If not, zoom in, measure the new difference and add that number to the latency value.
+</p>
+<dl><dd><span title="Audacity Project with no latency - Mac OS X screen shot"><img alt="NoLatencyMonoMac 206 SnapTo.png" src="../m/images/b/bf/nolatencymonomac_206_snapto.png" width="725" height="434" /></span></dd></dl>
+<dl><dd>In this example, the tracks align to within 23 <i>samples</i>, which is about 0.5 milliseconds - less than the smallest correction you can make in the Latency Correction. This is as good as it gets.</dd></dl>
+<div class="note">Before you get too obsessive about this, an orchestral musician once said that the chances of any two instruments in the orchestra starting the same note at the same time is zero, so you do not need to adjust things down to the digital sample level. The latency values on home computers can wander in normal use.</div>
+<h2><span class="mw-headline" id="Performance">Performance</span></h2>
+<p><span class="menu">File &gt; Close</span> (you do not need to save any of your tests). You are ready for the first recording session. The first recording can be whatever you are planning to use as a base, guide or rhythm track. It can be anything including Generate &gt; Rhythm Track which can be adjusted for rhythm and composition. It can be the music from a rhythm and chord machine playing to the microphone.
+</p><p>You should record a lead-in. That is, a non-musical rhythmical clue before the music starts so as to warn you of the imminent start. In a live band, this would be the drummer or lead guitar count-in. Use the keyboard rhythm stops or perform several rim shots into the microphone to establish the rhythm before the first note; tapping on the table with a pencil also works.  You can sheer it off later in post production so nobody else will hear it. Tick, tick, tick, tick, music; adjust as appropriate for music type and rhythm.
+</p><p>Click "<b>Stop</b>", then "<b>Home</b>" and then "<b>Shift + Record</b>" to record track two using your live performance and track playback in your headphone mix as a guide. Repeat for as many tracks as required. Repeat until bedtime. Lay in supplies. Once working, this is seriously addictive.
+</p><p>The <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks"><b>Mute</b></a></span> or <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks"><b>Solo</b></a></span> buttons to the left of each track are valuable in overdubbing. Solo causes only that track to play and Mute turns that track off. Solo has options that can be set in <b><a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a></b>. The little volume control to the left of each timeline also controls the playback volume -- it affects the headphone mix.
+</p><p>When you get to a stopping point click the <b>Stop</b> button <img alt="Play button" src="../m/images/f/f9/stop.png" title="Play button" width="16" height="16" /> then choose <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project" title="File Menu: Save Project">Save Project</a></span> to save your project. 
+</p><p>As you progress, you should save a new Project periodically with a slightly different file name using <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#backup_project" title="File Menu: Save Project">Backup Project</a></span>. 
+</p><p>A good recommendation is to use ISO date and time for the file names or the start of the file names; refrain from using slash marks or other punctuation marks in a file name.
+</p>
+<div class="note"><b>ISO Date and time</b>
+<p>201110011500.aup3    That is 3PM. 2011 October First, 1500hrs.
+</p><p>Then save a new version of the song about every twenty minutes:<br />
+201110011520.aup3<br />
+201110011545.aup3<br />
+</p>
+201110011602.aup3</div>
+<p><br />
+Do not go weeks with one Project and file name, and never cover up or record over existing work. If anything happened to that one Project, your project would be ruined and could nullify weeks of work. Think of what would happen if the lights went out right now, the computer ground to a halt and you were forced to use the last known good version of the project.
+</p><p>For extra safety it is good practice to periodically back up your project versions to a DVD-R or external hard drive for archive purposes. In the unlikely event that the Audacity project is corrupted or your hard drive crashes you will be able to recover your work. 
+</p><p>Note that Audacity projects cannot be played in computer media players nor burned to audio CDs. Export your project as 16-bit WAV or AIF for burning to a CD, or to MP3 for email or Internet delivery. See <a href="mixing.html" title="Mixing">Mixing Audio Tracks</a>, in the Audacity Manual, for advice on doing the final mix of your project.
+</p>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">
+<ul><li><b>The headphones must be plugged into the Shure X2U</b> for overdubbing, and not the computer. The computer soundcard audio will most likely be late (off rhythm) and you cannot easily change it.</li></ul>
+<ul><li><b>If the USB device does not appear in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a></b>, check that the USB device is connected correctly and try applying <span class="menu">Transport &gt; Rescan Audio Devices</span>.</li></ul>
+</td></tr></table></div>
+<ul><li>How much hard disk space do you have available? If your only experience with computer files is with spreadsheets, email or Photoshop pictures, live audio (and video) production will stun you with the amount of disk space it consumes. With high quality overdubbing and UNDO, project files and folders get big in a hurry; with periodic saving, a project can get very seriously large.</li></ul>
+<ul><li>Communications features on newer Windows machines can cause unwanted changes in recorded volume or make the recording sound tinkly and/or hollow.  See this <a href="faq_recording_troubleshooting.html#enhancements" title="FAQ:Recording - Troubleshooting">FAQ</a>.</li></ul>
+<ul><li>Always ensure that you are directly connected to a USB port  on your computer.  You cannot send audio through a self-powered USB hub or share any hub, ever.</li></ul>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Overdubbing_with_a_Shure%C2%AE_X2U_Microphone_Amplifier-USB_Adapter">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

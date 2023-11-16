@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Generate Menu - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Generate_Menu rootpage-Generate_Menu skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Generate Menu</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Generate_Menu#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+
+<div class="intro"><i><b>Generate Menu</b></i> lets you create audio containing tones, noise or silence. Generated audio can be inserted at the cursor position so as to extend the track, or can replace an existing <a href="audacity_selection.html" title="Audacity Selection">selection</a> with the newly generated audio.  
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">For generators that you use often you can use <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyboard Preferences</a> to set up keyboard shortcuts for those Generators.  You can also set up a custom shortcut for <b>Repeat Last Generator.</b>
+</td></tr></table>
+</div> </div> 
+<dl><dd><span title="The Generate menu"><img alt="Generate Menu 3-2-0.png" src="../m/images/3/30/generate_menu_3_2_0.png" width="192" height="231" /></span></dd></dl>
+<p><br />
+</p>
+<div id="add_remove_plugins"></div>
+<div id="manage"></div>
+<h2><span class="mw-headline" id="Plugin_Manager"><a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a></span></h2>
+<p>Selecting this option from the Generate Menu (or the <a href="effect_menu.html" title="Effect Menu">Effect Menu</a> or <a href="analyze_menu.html" title="Analyze Menu">Analyze Menu</a>) takes you to a dialog which enables you to load and unload Generators (and Effects and Analyzers) from Audacity.  This enables you to customize your Generate Menu making it shorter or longer as required.  For details see <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a>.
+</p>
+<div class="note">Additional plugins can also be loaded into Audacity.  For details see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/basics/installing-plugins"><b>Installing plugins</b></a> on the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/"><b>Audacity Support</b></a> site for plugin installation details for all three platforms.
+<p>See also this <a rel="nofollow" class="external free" href="https://plugins.audacityteam.org/nyquist-plugins/generator-plugins">https://plugins.audacityteam.org/nyquist-plugins/generator-plugins</a> set of available Nyquist generator plugins] on the Audacity Support site, that you can easily download and add to Audacity.
+</p>
+</div>
+<p><br />
+</p>
+<div id="settings"></div>
+<h2><span class="mw-headline" id="Backing_up_or_transferring_settings">Backing up or transferring settings</span></h2>
+<p>To see how to backup your settings, last used and any user presets you have saved using the <span class="button">Manage</span> button in each generator's dialog, see <a href="index_of_effects_generators_and_analyzers.html#settings" title="Index of Effects, Generators and Analyzers"><b>this page</b></a>.
+</p><p><br />
+</p>
+</b>
+<p><br />
+</p>
+<div id="usage"></div>
+<h2><span class="mw-headline" id="Using_Audacity.27s_Generators">Using Audacity's Generators</span></h2>
+<ul><li> <b>Generate audio into a new track:</b> If there are no existing tracks, choose the required generator. If there are existing tracks, click outside the tracks (in the gray background) to deselect them, then Generate. </li>
+<li> <b>Insert generated audio at the cursor position:</b> Place the cursor in the track then Generate.  The specified duration of audio will be inserted into the selected track(s) at the cursor position. The total length of the selected track(s) will therefore be increased.  </li>
+<li> <b>Replace an existing selection with generated audio:</b> Select the region then Generate. The selected region(s) will be replaced with the generated audio. The total length of the selected track(s) will remain the same, unless you change the length in the generator to replace the selection with a longer or shorter one.</li></ul>
+<div class="note">Having placed the cursor or selected the region, there are several ways to select extra tracks so as to generate into those at the same time. The simplest method is to hold down <span class="kbrd" style="background-color: #e0e0f0">Shift</span> then use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> arrow on the keyboard. See <a href="faq_editing.html#selcopy" title="FAQ:Editing">How do I extend or move the selected region into other tracks?</a> . </div>
+<h3><span class="mw-headline" id="Amplitude">Amplitude</span></h3>
+<p>All built-in generators (except of course Silence) let you type an <i><b><a href="glossary.html#amplitude" title="Glossary">amplitude</a></b></i> value for the loudness of the generated audio. Permitted values are between 0 (silence) and 1 (the maximum possible volume without <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>), with a default of 0.8.
+</p>
+<h3><span class="mw-headline" id="Duration">Duration</span></h3>
+<p>Type (or use the keyboard arrows) to enter the required Duration. If the first digit you want is highlighted, just type the whole number. If the required first digit is not highlighted, use <span class="kbrd" style="background-color: #e0e0f0">Left</span> or <span class="kbrd" style="background-color: #e0e0f0">Right</span> arrow on your keyboard to move to the first digit, then type. You can also increment a highlighted digit with keyboard <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> arrow instead of typing.
+</p>
+<div class="note">
+<ul><li> <b>When generating at the cursor</b>, Duration initializes to 30.000 seconds (except for the DTMF generator which defaults to 1.000 second). However, your last entered Duration is always remembered.</li>
+<li> <b>When replacing a selection region</b>, Duration always displays the exact duration of that selection to the nearest audio <i><b><a href="glossary.html#sample" title="Glossary">sample</a></b></i>.</li>
+<li> <b>When using a generator in a macro</b>, the macro must first create the selection to generate into. Any changes you make to the Duration when <a href="manage_macros.html#editsteps" title="Manage Macros">editing the macro step parameters</a> will be ignored. </li></ul>
+</div> 
+<h4><span class="mw-headline" id="Selection_Format_for_Duration">Selection Format for Duration</span></h4>
+<p>Whether generating in a selection or not, you can change the <a href="audacity_selection.html#selection_formats" title="Audacity Selection">Selection Format</a> to another unit of Duration so that the generation will be in those units. To do this, open the context menu by clicking the triangle to right of the digits. You can also open the menu by hovering over or selecting in the Duration digits, then right-clicking or using a keyboard equivalent.
+</p>
+<div class="example"><span style="font-weight: bold; font-size:118%">Examples of Generator Usage:</span> see <a href="examples_of_generator_usage.html" title="Examples of Generator Usage">Examples of Generator Usage</a> for some examples of using the Audacity generators.
+</div>
+<p><br />
+</p>
+<div id="generators"></div>
+<h2><span class="mw-headline" id="Built-in_Generators">Built-in Generators</span></h2>
+<div id="chirp"></div>
+<h3><span class="mw-headline" id="Chirp"><a href="chirp.html" title="Chirp">Chirp</a></span></h3>
+<p>Chirp produces four different types of tones like the <a href="#tone">Tone Generator</a> but additionally allows setting of the start and end amplitude and frequency. Short tones can be made to sound very much like a bird-call. As with Tone, frequencies can be specified anywhere between 1 <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i> and <i>half</i> the current Project Sample Rate as shown in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>.
+</p>
+<div id="dtmf_tones"></div>
+<div id="dtmf"></div>
+<h3><span class="mw-headline" id="DTMF_Tones"><a href="dtmf_tones.html" title="DTMF Tones">DTMF Tones</a></span></h3>
+<p>Generates dual-tone multi-frequency (DTMF) tones like those produced by the keypad on telephones. For each tone you wish to generate, enter numbers from 0 to 9, lower case letters from a to z, and the * and # characters. You can also enter the four "priority" tones used by the US Military (upper case A, B, C and D).          
+</p>
+<div id="noise"></div>
+<h3><span class="mw-headline" id="Noise"><a href="noise.html" title="Noise">Noise</a></span></h3>
+<p>Generates one of three different types of noise. White noise is that which has the greatest ability to mask other sounds, as it has similar energy at all frequency levels. Pink noise and Brownian noise both have more energy at lower frequencies, especially Brownian, which has the most muffled, low pitched sound of the three types. By their nature, pink and Brownian noise may have a few peaks not exactly at the requested amplitude if the tracks are only a few seconds long.   
+</p>
+<div id="silence"></div>
+<h3><span class="mw-headline" id="Silence"><a href="silence.html" title="Silence">Silence</a></span></h3>
+<p>Generates audio of zero amplitude, the only configurable setting being duration. When applied to an audio selection, the result is identical to <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#silence_audio" title="Edit Menu: Remove Special">Silence Audio</a></span>.
+</p>
+<div id="tone"></div>
+<h3><span class="mw-headline" id="Tone"><a href="tone.html" title="Tone">Tone</a></span></h3>
+<p>Generates one of five different tone <i><b><a href="glossary.html#waveform" title="Glossary">waveforms</a></b></i>: 
+</p>
+<ul><li>Sine, </li>
+<li>Square, </li>
+<li>Sawtooth and </li>
+<li>Square (no alias)</li>
+<li>Triangle  </li></ul>
+<p>The name of each tone roughly describes its appearance when <a href="zooming.html" title="Zooming">zoomed in</a> sufficiently to see each <i><b><a href="glossary.html#cycle" title="Glossary">cycle</a></b></i> of the waveform. 
+</p><p><br />
+</p>
+<div id="plugin"></div>
+<h2><span class="mw-headline" id="Nyquist_Generators">Nyquist Generators</span></h2>
+<p>Audacity includes the following Nyquist generators. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top"><b>Nyquist generators do not usually take the length of selected audio as the length of the audio to be generated.</b> Instead, specify the length required in the appropriate input field(s) of the plugin. Any selected audio will be replaced by the length of audio specified in the plugin, thus the total length of the track(s) will change unless the selected and specified lengths are identical.
+</td></tr></table></div>
+<div id="pluck"></div>
+<h3><span class="mw-headline" id="Pluck"><a href="pluck.html" title="Pluck">Pluck</a></span></h3>
+<p>A synthesized pluck tone with abrupt or gradual fade-out, and selectable pitch corresponding to a <i><b><a href="glossary.html#midi" title="Glossary">MIDI</a></b></i> note.  
+</p>
+<div id="rhythm_track"></div>
+<div id="click"></div>
+<h3><span class="mw-headline" id="Rhythm_Track"><a href="rhythm_track.html" title="Rhythm Track">Rhythm Track</a></span></h3>
+<p>Generates a track with regularly spaced sounds at a specified tempo and number of beats per measure (bar). It can be used like a metronome for setting a steady beat against which an <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdub</a> recording can be made.
+</p>
+<div id="risset_drum"></div>
+<h3><span class="mw-headline" id="Risset_Drum"><a href="risset_drum.html" title="Risset Drum">Risset Drum</a></span></h3>
+<p>Produces a realistic drum sound consisting of a sine wave ring-modulated by narrow band noise, an <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Enharmonic">enharmonic</a> tone and a relatively strong sine wave at the fundamental.
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Generate_Menu">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

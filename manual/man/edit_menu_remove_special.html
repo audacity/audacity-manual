@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Edit Menu: Remove Special - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Edit_Menu_Remove_Special rootpage-Edit_Menu_Remove_Special skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Edit Menu: Remove Special</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Edit_Menu:_Remove_Special#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">Items in the <i><b>Remove Special</b></i> &#160;cascading <a href="edit_menu.html" title="Edit Menu">Edit</a> menu remove audio or <a href="label_tracks.html" title="Label Tracks">labels</a> (or audio <i>with</i> labels if both are <a href="audacity_selection.html" title="Audacity Selection">selected</a>) by Split Cut and Split Delete. These removal methods do not affect the audio or labels to right of the selection. <p> You can also silence or trim audio only, not affecting labels.</p>
+<p>Note that when you split (or trim) a clip each of the new sub-clips contains all of the audio that the parent clip had but with hidden audio data that you can expand out if required.
+</p>
+For more details on the use and management of clips please see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips"><b>Audacity Tracks and Clips</b></a></div>
+<dl><dd><span title="The Edit - Remove Special menu"><img alt="Edit-Remove Special 3-4-0.png" src="../m/images/1/11/edit_remove_special_3_4_0.png" width="537" height="341" /></span></dd></dl>
+<div class="note"><b>Mac users:</b> <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> and <span class="kbrd" style="background-color: #e0e0f0">Alt</span> = <span class="kbrd" style="background-color: #e0e0f0">Option</span>. So, for example, <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Alt + K</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984; + Option + K</span></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You may hear a click at the edit points when you remove audio. This can be caused by <a href="glossary.html#dc_offset" title="Glossary">DC offset</a> in the waveform or by poor selection of the edit points. See this <a href="faq_editing.html#clicks" title="FAQ:Editing">Editing Frequently Asked Question</a> for how to deal with this.
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="split_cut"></div>
+<h2><span class="mw-headline" id="Split_Cut_.C2.A0Ctrl_.2B_Alt_.2B_X">Split Cut &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + Alt + X</span></font></span></h2>
+<p>Same as <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span>, but none of the audio data or labels to right of the selection are shifted. 
+A gap is thus left behind in the audio track which splits the existing audio <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> into two clips that can be moved independently using the <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bars</a>.
+</p>
+<dl><dd><b>Split Cut with audio selected:</b></dd>
+<dd><span title="Before Split Cut"><img alt="Split Cut audio - before the split.png" src="../m/images/2/21/split_cut_audio_before_the_split.png" width="630" height="149" /></span></dd>
+<dd><b>After the Split Cut:</b></dd>
+<dd><span title="After Split Cut"><img alt="Split Cut audio - after.png" src="../m/images/4/4e/split_cut_audio_after.png" width="627" height="147" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Note that this operation is non-destructive. The resulting clips can be expanded to recover the audio that was cut.  See <a href="audacity_tracks_and_clips.html#trim" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>.
+</td></tr></table>
+</div>
+<p>This is also a useful command to remove one label of a group of labels without affecting the other labels (be sure to select only in the label track unless you want to cut the audio as well as the label). The labels following the deleted section do not move to the left. The labels still correspond to the same audio regions. This is a quick way to delete a label without affecting any other labels on the Label Track.
+</p>
+<dl><dd><b>Split Cut with label selected:</b></dd>
+<dd><span title="Before Split Delete"><img alt="Split Cut label - before.png" src="../m/images/4/4b/split_cut_label_before.png" width="628" height="219" /></span></dd>
+<dd><b>After the Split Cut:</b></dd>
+<dd><span title="After Split Delete"><img alt="Split Cut label - after.png" src="../m/images/c/c8/split_cut_label_after.png" width="630" height="215" /></span></dd></dl>
+<p><br />
+</p>
+<div id="split_delete"></div>
+<h2><span class="mw-headline" id="Split_Delete_.C2.A0Ctrl_.2B_Alt_.2B_K">Split Delete &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + Alt + K</span></font></span></h2>
+<p>Same as <span class="menu">Edit &gt; Split Cut</span> but the audio and/or labels are not put on the clipboard.
+</p><p><br />
+</p>
+<div id="silence_audio"></div>
+<h2><span class="mw-headline" id="Silence_Audio_.C2.A0Ctrl_.2B_L"><img alt="Tool edit silence.png" src="../m/images/1/16/tool_edit_silence.png" width="20" height="19" /> Silence Audio &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + L</span></font></span></h2>
+<p>Replaces the selected audio with silence. 
+</p>
+<dl><dd><span title="Before Silence Audio"><img alt="Silence Audio - before.png" src="../m/images/1/13/silence_audio_before.png" width="629" height="149" /></span></dd>
+<dd><b>After the Silence Audio:</b></dd>
+<dd><span title="After Silence Audio"><img alt="Silence Audio - after.png" src="../m/images/5/5e/silence_audio_after.png" width="629" height="149" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">Note that this operation is <i>destructive</i>. The audio is permanently removed from the project.
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="trim_audio"></div>
+<h2><span class="mw-headline" id="Trim_Audio_.C2.A0Ctrl_.2B_T"><img alt="Trim.png" src="../m/images/c/c9/trim.png" width="26" height="24" /> Trim Audio &#160;<font size="-1"><span class="kbrd" style="background-color: #d0d0f8">Ctrl + T</span></font></span></h2>
+<p>Removes all audio from the current <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">clip</a> except the selected part, creating its own clip from the remaining audio. If there are other separate clips in the same track these are not removed or shifted.
+</p>
+<div class="note">This command affects the audio in the selection but does not affect any labels that may be in the selection.</div>
+<dl><dd><span title="Before Trim Audio"><img alt="Trim Audio - before.png" src="../m/images/5/5d/trim_audio_before.png" width="632" height="149" /></span></dd>
+<dd><b>After the Trim Audio:</b></dd>
+<dd><span title="After Trim Audio"><img alt="Trim Audio - after.png" src="../m/images/a/aa/trim_audio_after.png" width="629" height="150" /></span></dd>
+<dd>Result: the audio in the clip to the right is unaffected.</dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Note that this operation is <b>non-destructive</b>. The resulting clips can be expanded to recover the audio that was cut.  See <a href="audacity_tracks_and_clips.html#trim" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>.
+</td></tr></table>
+</div>
+ <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">If a selection is made in a clip that touches or overlaps the left <i>(or right)</i> boundary of the clip then <b>erroneously all clips to the left <i>(or right)</i> in the track are removed by the Trim Audio command</b>.
+<ul><li>In particular, if an entire clip (or clips) is selected then all other clips on the track will be deleted.</li></ul>
+</li></ul>
+</td></tr></table>
+</div>
+<p><a href="edit_menu.html" title="Edit Menu"><b>&lt;</b>&#160; Back to: Edit Menu</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Edit_Menu:_Remove_Special">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

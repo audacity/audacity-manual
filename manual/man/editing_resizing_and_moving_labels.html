@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Editing, resizing and moving Labels - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Editing_resizing_and_moving_Labels rootpage-Editing_resizing_and_moving_Labels skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Editing, resizing and moving Labels</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Editing,_resizing_and_moving_Labels#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+
+<div class="intro">Methods for changing labels: moving them, resizing them, changing their text content.</div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#mouse">Changing the length and position of labels with the mouse</a></li>
+<li><a href="#move_point">Moving a point label</a></li>
+<li><a href="#expand_point">Expanding a point label</a></li>
+<li><a href="#move_region">Resizing and moving a region label</a></li>
+<li><a href="#junction">Adjusting the junction point where two labels meet</a></li>
+<li><a href="#selected">Moving a label when there is a selection</a></li>
+<li><a href="#cutcopypaste">Using cut, copy and paste</a></li>
+<li><a href="#context">Using the Context Menu</a></li>
+<li><a href="#editor">Using the Label Editor</a></li></ol>
+<p><br />
+</p>
+<div id="mouse"></div>
+<h2><span class="mw-headline" id="Changing_the_length_and_position_of_labels_with_the_mouse">Changing the length and position of labels with the mouse</span></h2>
+<h3><span class="mw-headline" id="Point_label">Point label</span></h3>
+<ul><li>You can <b>move a point label</b> by clicking and dragging its circle handle. </li>
+<li>You can <b>turn a point label into a region label</b> by clicking and dragging either of its chevron handles.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You can also <b>move a point label</b> by holding the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key down while clicking and dragging the circle or either of its chevron handles.<p>Using this shift-modified click&amp;drag with a point label avoids any risk of <a href="#accidental_region"><b>accidentally creating a region label</b></a>.</p>
+</td></tr></table>
+</div>
+<h3><span class="mw-headline" id="Region_label">Region label</span></h3>
+<ul><li>You can <b>change the length of a region label</b> by clicking and dragging its circle or either of its chevron handles.</li>
+<li>You can <b>move a region label</b> by dragging the central line of it, or by holding the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key while clicking and dragging its circle or either of its chevron handles. </li>
+<li>In the case where two region labels meet you can <b>adjust the junction point</b> where they meet by clicking and dragging their shared circle handle.</li></ul>
+<p><br />
+</p>
+<div id="move_point"></div>
+<h2><span class="mw-headline" id="Moving_a_point_label">Moving a point label</span></h2>
+<p>You can move a point label by clicking and dragging its circle handle:
+</p>
+<dl><dd><table>
+
+<tr>
+<td><span title="Before moving a point label"><img alt="PointMoveBefore W10.png" src="../m/images/9/9a/pointmovebefore_w10.png" width="419" height="194" /></span>
+</td>
+<td><span title="After moving a point label"><img alt="PointMoveAfter W10.png" src="../m/images/3/36/pointmoveafter_w10.png" width="419" height="192" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>Before</b>
+</td>
+<td align="center"><b>After</b>
+</td></tr></table></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You can also move a point label by holding the <span class="kbrd" style="background-color: #e0e0f0">Shift</span> key down while clicking and dragging the circle or either of its chevron handles. This avoids any risk of accidentally creating a region label.
+</td></tr></table>
+</div>
+<div id="accidental_region"></div>
+<h3><span class="mw-headline" id="Take_care_when_moving_point_labels">Take care when moving point labels</span></h3>
+<p>Be <i><b>very</b></i> careful when moving a point label not to accidentally click on a chevron and thereby expand the point label to a <a href="#expand_point">very short region label</a>, as this can cause unwanted consequences when using <a href="export_multiple.html#split" title="Export Multiple">Export Multiple</a>, exporting a short audio file based on the short region label.
+</p><p>There is a slight visual cue to distinguish between a point label and a region label too short to display at the current zoom level. 
+</p><p>The region in the label track never collapses down to a single line, rather there is always a line for each edge of the region resulting in a double line, slightly visibly thicker:
+</p>
+<dl><dd><span title="point label and short region label"><img alt="Point Label and very short Region Label visual difference with selection.png" src="../m/images/1/1b/point_label_and_very_short_region_label_visual_difference_with_selection.png" width="779" height="325" /></span></dd>
+<dd><b>Region label of 512 samples selected - <i>note thin white selection line visible in the waveform</i> </b></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">With a compacted region label like this if you click on the circle the label will collapse to a point label.
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="expand_point"></div>
+<h2><span class="mw-headline" id="Expanding_a_point_label">Expanding a point label</span></h2>
+<p>You can expand a point label into a region label by clicking and dragging either of its chevron handles:
+</p>
+<dl><dd><table>
+
+<tr>
+<td><span title="Before expanding a point label"><img alt="PointExpandBefore W10.png" src="../m/images/9/95/pointexpandbefore_w10.png" width="418" height="192" /></span>
+</td>
+<td><span title="After expanding a point label"><img alt="PointExpandAfter W10.png" src="../m/images/0/09/pointexpandafter_w10.png" width="417" height="194" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>Before</b>
+</td>
+<td align="center"><b>After</b>
+</td></tr></table></dd></dl>
+<p><br />
+</p>
+<div id="move_region"></div>
+<h2><span class="mw-headline" id="Resizing_and_moving_a_region_label">Resizing and moving  a region label</span></h2>
+<h3><span class="mw-headline" id="Resizing">Resizing</span></h3>
+<p>You can change the length of a region label by clicking and dragging its circle or either of its chevron handles:
+</p>
+<dl><dd><table>
+
+<tr>
+<td><span title="Before resizing a region label"><img alt="RegionAdjustBefore W10.png" src="../m/images/4/4e/regionadjustbefore_w10.png" width="417" height="193" /></span>
+</td>
+<td><span title="After resizing a region label"><img alt="RegionAdjustAfter W10.png" src="../m/images/9/9e/regionadjustafter_w10.png" width="416" height="192" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>Before</b>
+</td>
+<td align="center"><b>After</b>
+</td></tr></table></dd></dl>
+<h3><span class="mw-headline" id="Moving">Moving</span></h3>
+<p>You can move a region label by clicking and dragging its central bar:
+</p>
+<dl><dd><table>
+
+<tr>
+<td><span title="Before moving a region label"><img alt="RegionMoveBefore W10.png" src="../m/images/a/a2/regionmovebefore_w10.png" width="463" height="207" /></span>
+</td>
+<td><span title="After moving a region label"><img alt="RegionMoveAfter W10.png" src="../m/images/4/44/regionmoveafter_w10.png" width="496" height="204" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>Before</b>
+</td>
+<td align="center"><b>After</b>
+</td></tr></table></dd></dl>
+<p><br />
+</p>
+<div id="junction"></div>
+<h2><span class="mw-headline" id="Adjusting_the_junction_point_where_two_labels_meet">Adjusting the junction point where two labels meet</span></h2>
+<p>You can adjust the junction point where two labels meet by clicking and dragging their shared circle handle:
+</p>
+<dl><dd><table>
+
+<tr>
+<td><span title="Before adjusting the junction point where two labels meet"><img alt="LinkedRegionMoveBefore W10.png" src="../m/images/c/c9/linkedregionmovebefore_w10.png" width="417" height="194" /></span>
+</td>
+<td><span title="After adjusting the junction point where two labels meet"><img alt="LinkedRegionMoveAfter W10.png" src="../m/images/e/eb/linkedregionmoveafter_w10.png" width="418" height="193" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>Before</b>
+</td>
+<td align="center"><b>After</b>
+</td></tr></table></dd></dl>
+<p><br />
+</p>
+<div id="selected"></div>
+<h2><span class="mw-headline" id="Moving_a_label_when_there_is_a_selection">Moving a label when there is a selection</span></h2>
+<p>The illustration below shows what happens if you click in a label to select it, press <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, then move the label.
+</p>
+<dl><dd><table>
+
+<tr>
+<td><span title="Before moving a label when there is a selection but the label is selected"><img alt="LabelRegionMove1Before - W10.png" src="../m/images/7/71/labelregionmove1before_w10.png" width="419" height="194" /></span>
+</td>
+<td><span title="After moving a label when there is a selection but the label is selected"><img alt="LabelRegionMove1After W10.png" src="../m/images/c/cc/labelregionmove1after_w10.png" width="418" height="194" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>Before moving a label with a selection</b>
+</td>
+<td align="center"><b>After moving a label with a selection</b>
+</td></tr></table></dd></dl>
+<p>Contrast this to what happens if you click in a label to select it, then move the label.
+</p>
+<dl><dd><table>
+
+<tr>
+<td><span title="Before moving a label when the label is selected"><img alt="LabelRegionMove2Before W10.png" src="../m/images/8/8f/labelregionmove2before_w10.png" width="418" height="193" /></span>
+</td>
+<td><span title="After moving a label when the label is selected"><img alt="LabelRegionMove2After W10.png" src="../m/images/0/04/labelregionmove2after_w10.png" width="418" height="192" /></span>
+</td></tr>
+<tr>
+<td align="center"><b>Before moving a label when the label is selected</b>
+</td>
+<td align="center"><b>After moving a label when the label is selected</b>
+</td></tr></table></dd></dl>
+<p><br />
+</p>
+<div id="cutcopypaste"></div>
+<h2><span class="mw-headline" id="Using_cut.2C_copy_and_paste">Using cut, copy and paste</span></h2>
+<div class="note">The following examples of cutting labels with <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span> will move back any labels that follow to right of the removed label(s).  To cut the label without moving following labels, use  <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#split_cut" title="Edit Menu: Remove Special">Split Cut</a></span>.</div>
+<h3><span class="mw-headline" id="Cutting_and_Pasting_Region_Labels">Cutting and Pasting Region Labels</span></h3>
+<p>You can cut and paste region labels using <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span> and <span class="menu">Edit &gt; <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">Paste</a></span>, but you have to make sure you do not select any audio, or you will end up cutting and pasting audio where you probably did not intend.
+</p>
+In the image below, the label was selected by clicking in it, then the audio track was unselected by <span class="kbrd" style="background-color: #e0e0f0">Ctrl-clicking</span> in the Track Control Panel's <span class="button">Select</span> button of the audio track (this can also be done with the keyboard by <span class="kbrd" style="background-color: #e0e0f0">Enter</span>, <span class="kbrd" style="background-color: #e0e0f0">Up</span> then <span class="kbrd" style="background-color: #e0e0f0">Enter</span>). <p>The label was then cut to the clipboard with <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span>:</p>
+<dl><dd><span title="image of label in label track ready for Edit Cut"><img alt="LabelTrackPrepareToCopy W10.png" src="../m/images/0/0b/labeltrackpreparetocopy_w10.png" width="418" height="194" /></span></dd></dl>
+<p>To paste the label at a different point in the audio track, either 
+</p>
+<ul><li>click in the label track at the point where you would like the label to begin, or</li>
+<li>click in the audio track at the point where you would like the label to begin then <span class="kbrd" style="background-color: #e0e0f0">Shift + Down-arrow</span> to extend the selection to the label track.</li></ul>
+<p>The label can then be pasted to that spot using <span class="menu">Edit &gt; <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">Paste</a></span>.
+</p>
+<dl><dd><span title="image of label track after with label moved after Edit Paste"><img alt="LabelTrackAfterPaste W10.png" src="../m/images/7/73/labeltrackafterpaste_w10.png" width="416" height="193" /></span></dd></dl>
+<h3><span class="mw-headline" id="Cutting_and_Pasting_Point_Labels">Cutting and Pasting Point Labels</span></h3>
+<p>To cut and paste a point label to a different location, first select the <i>text</i> of the label as shown below. Note the difference in appearance of selected label text (the text is highlighted separately from the box) versus a selected label (where the entire label box is highlighted).
+</p>
+<dl><dd><span title="image of label track with point label text selected"><img alt="PointLabelTextSelected W10.png" src="../m/images/f/f9/pointlabeltextselected_w10.png" width="418" height="193" /></span></dd></dl>
+<ol><li>Do <span class="menu">Edit &gt; <a href="edit_menu.html#cut" title="Edit Menu">Cut</a></span> <i>(shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + X</span>)</i> - the <i>text</i> of the label is cut to the clipboard, leaving a label with no text. </li>
+<li>Press <span class="kbrd" style="background-color: #e0e0f0">Delete</span> to delete the label, or right-click in the label and choose <span class="menu">Delete Label</span> from the <a href="#context">context menu</a>.</li>
+<li>Click in the new location for the label and do <span class="menu">Edit &gt; Labels &gt; <a href="edit_menu_labels.html#paste_text" title="Edit Menu: Labels">Paste Text to New Label</a></span>.</li></ol>
+<dl><dd><span title="image of label track after Paste Text to New Label"><img alt="PasteTextToNewLabel W10.png" src="../m/images/a/ac/pastetexttonewlabel_w10.png" width="416" height="193" /></span></dd></dl>
+<p><br />
+</p>
+<div id="context"></div>
+<h2><span class="mw-headline" id="Using_the_Context_Menu">Using the Context Menu</span></h2>
+<p>If you right-click on a label, the label's context menu will appear:
+</p>
+<dl><dd><span title="image of contextual menu in a label with Copy selected, Windows Basic style"><img alt="Label context menu.png" src="../m/images/5/53/label_context_menu.png" width="418" height="291" /></span></dd></dl>
+<p>The context menu offers the following options
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Cut:</span> - cuts any selected text in the label and place it on the clipboard</li>
+<li><span style="font-weight: bold; font-size:118%">Copy:</span> - copies any selected text in the label and place it on the clipboard</li>
+<li><span style="font-weight: bold; font-size:118%">Paste:</span> - pastes the contents of the clipboard to the label</li>
+<li><span style="font-weight: bold; font-size:118%">Delete Label:</span> - deletes the entire label </li>
+<li><span style="font-weight: bold; font-size:118%">Edit:</span> - opens the <a href="labels_editor.html" title="Labels Editor">Label Editor</a> with just the current label</li></ul>
+<p><br />
+</p>
+<div id="editor"></div>
+<h2><span class="mw-headline" id="Using_the_Label_Editor">Using the <a href="labels_editor.html" title="Labels Editor">Label Editor</a></span></h2>
+<p>The <a href="labels_editor.html" title="Labels Editor">Label Editor</a> lets you add or remove Label Tracks and edit their labels entirely using the keyboard, so is particularly useful for visually impaired users. 
+</p><p><span class="menu">Edit &gt; Labels &gt; Label Editor</span> launches a keyboard-accessible Label Editor. This shows all the labels at once in a tabular view, similar to a spreadsheet. Each row represents a single individual label:
+</p>
+<dl><dd><span title="Label Editor dialog box with tabular view of labels"><img alt="EditLabelDialog - vertical buttons.png" src="../m/images/b/bd/editlabeldialog_vertical_buttons.png" width="703" height="355" /></span></dd></dl>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="label_tracks.html#editing" title="Label Tracks"><b>|&lt;</b> Label Tracks</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Editing,_resizing_and_moving_Labels">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

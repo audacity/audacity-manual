@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Updating from Audacity 2.x to Audacity 3.x - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Updating_from_Audacity_2_x_to_Audacity_3_x rootpage-Updating_from_Audacity_2_x_to_Audacity_3_x skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Updating from Audacity 2.x to Audacity 3.x</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Updating_from_Audacity_2.x_to_Audacity_3.x#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><center><a href="http://audacityteam.org/" title="size=50%" rel="nofollow"><img alt="size=50%" src="../m/images/8/88/audacity_logo_signika_512_transparent.png" width="512" height="138" /></a></center>
+<div class="intro"><span style="font-size:120%"><b>The release of Audacity 3.0.0 introduced a new unified AUP3 project structure for Audacity with each entire project held in a single unified database file. </b></span></div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#aup3"><b>Unitary Project</b></a></li>
+<li><a href="#size"><b>Project Size</b></a></li>
+<li><a href="#performance"><b>Performance</b></a></li>
+<li><a href="#recovery"><b>Automatic Recovery</b></a></li>
+<li><a href="#temp"><b>Temporary work files</b></a></li>
+<li><a href="#backup"><b>Backing up your project</b></a></li></ol>
+<p><br />
+</p>
+<div id="aup3"></div>
+<h2><span class="mw-headline" id="Unitary_Project">Unitary Project</span></h2>
+<p>Audacity 3.0.0 introduced the new AUP3 project format. Project files saved with this version will have an <b>aup3</b> extension, for example <b>My-Project.aup3</b>.  We believe that this new project format will make life easier for Audacity users, as it replaces the previous project storage format - which used an AUP file and its associated _data folder full of little audio clips - with a single project file that integrates those two parts.
+</p><p>The old structure caused too many users to lose or damage their projects by moving or deleting the project components.  The new single project file structure precludes that happening.
+</p>
+<div class="note">AUP projects from 2.x versions of Audacity can be opened or imported in Audacity 3.x <i>(Audacity converts them to the new unified file format)</i>.
+<ul><li>Note that saving as AUP3 will leave behind the old <b>AUP</b> file and its associated <b>_data</b> folder which you will probably want to delete to recover disk space.</li>
+<li>See <a href="audacity_2.html" title="Audacity 2.x AUP Projects">Audacity 2.x AUP Projects</a> for more details</div></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Once you have saved any project in the new AUP3 format, it can then <b>no longer be opened in Audacity versions prior to 3.0.0</b>.
+<ul><li>The workaround is to Export as WAV files, exporting individual tracks using <span class="menu"> File &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple</a>) and then Importing those into older Audacity versions. </li>
+<li>For details please see <a href="moving_aup3_projects_from_audacity_3.x_to_audacity_2.html" title="Moving AUP3 projects from Audacity 3.x to Audacity 2.x">Moving AUP3 projects from Audacity 3.x to Audacity 2.x</a> </span></li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Active 3.x projects <i><b>cannot</b></i> be saved to a FAT/FAT32 formatted drive as FAT is subject to a maximum file size of 4GB which can easily be temporarily exceeded when editing.
+</td></tr></table></div>
+<p>For more details please see <a href="audacity_projects.html" title="Audacity Projects">Managing Audacity Projects</a>
+</p><p><br />
+</p>
+<div id="size"></div>
+<h2><span class="mw-headline" id="Project_size">Project size</span></h2>
+<p>Saved Projects with the new unified file structure should not be larger than similar projects with the old multiple files structure.
+</p><p>As you work on a project, Audacity will consume additional temporary disk space. This is normally released on closing the project.  <i>This is not new with Unitary Project File, previous versions of Audacity also used to do this.</i>
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You can, if you wish, compress your project removing the temporary storage with:
+<ol><li> <span class="menu">File &gt; Save Project</span></li>
+<li> <span class="menu">File &gt; Exit</span></li>
+<li> Relaunch Audacity</li>
+<li> <span class="menu">File &gt; Open</span></li></ol>
+<p>But note carefully that this will remove your <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo History</a> and the contents of your Audacity clipboard. 
+</p>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="performance"></div>
+<h2><span class="mw-headline" id="Performance">Performance</span></h2>
+<p>Extensive speed testing has shown that for most work in Audacity the new project file can be a little faster than the old project structure.
+</p><p>This is especially true of using the Effects and Generators which run faster with the new project file.
+</p>
+<div class="note">Closing a project can now take a little longer as Audacity clears up the unused temporary disk space in the file.<p>You will get a progress dialog informing you about the Compaction progress.</p> </div>
+<p><br />
+</p>
+<div id="recovery"></div>
+<h2><span class="mw-headline" id="Automatic_Recovery"><a href="recovery.html" title="Recovery">Automatic Recovery</a></span></h2>
+<p>Automatic Recovery (following a crash) is different in Audacity 3.0.0. <i>It is simpler with no orphan block-files or missing block-files to worry about</i>
+</p>
+<ul><li>When Audacity is launched following a crash it will offer to recover the crashed projects.  </li>
+<li>You can choose to either accept the recovery or to discard the projects.</li>
+<li>You can select projects for either action by clicking on their checkbox, or you can select all by clicking on <b>Select</b>.  </li>
+<li>You can discard just some and then the recovery dialog will remain open enabling you to select others for recovery. </li></ul>
+<p>For more details please see <a href="recovery.html" title="Recovery">Automatic Crash Recovery</a>
+</p><p><br />
+</p>
+<div id="temp"></div>
+<h2><span class="mw-headline" id="Temporary_work_files">Temporary work files</span></h2>
+<p>In addition to the single database project file the database also creates two temporary work files <b>WAL</b> &amp; <b>SHM</b> files.  For example <b>My-Project.aup3-wal</b> and <b>My-Project.aup3-shm</b>.  On Mac there is only the <b>WAL</b> file.
+</p><p>These are deleted on closure of the project or on exit from Audacity.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Do <i><b>not</b></i> delete them or move these temporary files while the project is open as this will destroy the project.<p>Windows blocks you from doing this but macOS and Linux do not.</p>
+</td></tr></table></div>
+<p><br />
+</p>
+<div id="backup"></div>
+<h2><span class="mw-headline" id="Backing_up_your_project"><a href="audacity_projects.html#copies" title="Audacity Projects">Backing up your project</a></span></h2>
+<p>There is a new backup command for projects: <span class="menu">File &gt; Save Project &gt; <a href="audacity_projects.html#copies" title="Audacity Projects">Backup Project</a></span>.
+</p><p>This saves a copy of the current project as an AUP3 file, but with a new name. It is the safe and recommended way to make a safety backup copy of a project as you work on it. 
+</p>
+<ul><li>This could serve either as a single backup copy of the project, or as one of several incremental copies of the project in the state it had at a particular date and time. </li>
+<li>Unlike "Save Project As" using this command will leave your current project open enabling you to continue working on it.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You are <b>strongly</b> advised to make backup versions of your project at key stages in your project so you can return to that stage if you mess up.
+</td></tr></table>
+</div>
+<div class="note">This new command replaces the two previous commands:
+<ul><li><span class="menu">File &gt; Save Project &gt; Save Lossless Copy of Project</span></li>
+<li><span class="menu">File &gt; Save Project &gt; Save Compressed Copy of Project</span></li></ul>
+<p>You can losslessly compress an AUP3 project with standard utilities such as ZIP, WinZip or 7-Zip.
+</p>
+</div>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Updating_from_Audacity_2.x_to_Audacity_3.x">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

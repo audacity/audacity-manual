@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Amplify and Normalize - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Amplify_and_Normalize rootpage-Amplify_and_Normalize skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Amplify and Normalize</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Amplify_and_Normalize#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro"><a href="amplify.html" title="Amplify"><b>Amplify</b></a> and <a href="normalize.html" title="Normalize"><b>Normalize</b></a> are very similar effects, but have some subtle differences:
+<ul><li>the two effects behave differently if used on multiple tracks or channels</li>
+<li>Normalize has its own option for correcting <a href="dc_offset.html" title="DC offset">DC offset</a></li>
+<li>Amplify has its own option to enter the volume change to be applied and to allow "clipping" by amplifying to above 0.0 dB</li>
+<li>By default: Amplify amplifies to 0db <i>(maximum volume)</i>, Normalize raises volume to -1dB <i>(to provide a little headroom)</i></li></ul>
+</div>  
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#levels">Applying level changes</a></li>
+<li><a href="#multiple">Differences between Amplify and Normalize on multiple tracks or channels</a></li>
+<li><a href="#which">Advantages/Disadvantages and which to use</a></li>
+<li><a href="#dcoffset">Using Normalize with DC offset correction</a></li></ol>
+<p><br />
+</p>
+<div id="levels"></div>
+<h2><span class="mw-headline" id="Applying_level_changes">Applying level changes</span></h2>
+<p>The Normalize effect normalizes maximum amplitude <b>to a chosen level</b>.
+</p><p>The Amplify effect amplifies <b>by a certain amount</b>. It offers two interdependent options (meaning that changing one changes the other):  "Amplification (dB)", and "New Peak Amplitude (dB)". The slider can also be used to choose the amplification level without entering any text input. 
+</p>
+<div class="note">For a single mono track, these are essentially different ways of saying the same thing. If we have a track whose peak amplitude is -6 dB (+0.5 to -0.5 on the vertical scale), there are three ways to bring the peak up to 0 dB (+1.0 to -1.0 on the vertical scale).
+<ol><li> "Normalize the maximum amplitude" to -0.0 dB </li>
+<li> Set "Amplification (dB)" to 6 dB </li>
+<li> Set "New Peak Amplitude (dB)" to -0.0 dB</li></ol>
+If the DC offset correction in Normalize is not applied, each of these methods will do exactly the same thing and the resulting audio will be identical. </div>
+<p><br />
+</p>
+<div id="multiple"></div>
+<h2><span class="mw-headline" id="Differences_between_Amplify_and_Normalize_on_multiple_tracks_or_channels">Differences between Amplify and Normalize on multiple tracks or channels</span></h2>
+<div id="multiamp"></div>
+<h3><span class="mw-headline" id="Amplify_multiple_audio_tracks">Amplify multiple audio tracks</span></h3>
+<p>If you select multiple tracks and apply the Amplify effect, then <b>all audio tracks will be amplified by the same amount</b>. 
+</p><p>For example, if you enter 3 dB in "Amplification (dB)", all audio tracks will be amplified by 3 dB, irrespective of their original level. Whatever peak volume differences there were between the tracks (or channels within a track) will be preserved.  In particular Amplify will always preserve the left-right balance of a stereo pair within a track.
+</p>
+<div id="multinorm"></div>
+<h3><span class="mw-headline" id="Normalize_multiple_audio_tracks_or_channels">Normalize multiple audio tracks or channels</span></h3>
+<p>The Normalize effect can optionally operate evenly on the channels of a stereo pair <i>(as Amplify does)</i> thus retaining the Left-Right balance all stereo channel pairs within the selected tracks.  There is a checkbox  "Normalize stereo channels independently" which is set by default to "off", of this checkbox is unchecked then <b>all selected audio tracks will be normalized to the same peak level.</b>  If this checkbox is checked then all audio channels within the selected tracks will be independently normalized to the same peak level.
+</p>
+<div id="example"></div>
+<h3><span class="mw-headline" id="Visual_comparison">Visual comparison</span></h3>
+<p>Let us see this comparison on a stereo track. 
+</p><p>In Figure 3 below there are two stereo tracks - they each have two audio channels, Left and Right. Note that the peak amplitude of the Left (upper) channel of each stereo pair is quite a bit greater than the peak amplitude of the Right (lower) channel.
+</p>
+<dl><dd><span title="Stereo tracks showing lower Right channel amplitude"><img alt="Stereo tracks.png" src="../m/images/5/56/stereo_tracks.png" width="498" height="300" /></span></dd>
+<dd><b>Figure 3</b></dd></dl>
+<p>In Figure 4 below we can see the clear difference between the processed tracks after <b>Amplifying the upper track</b> to 0.0 dB, and <b>Normalizing the lower track</b> to 0.0 dB (with stereo channels normalized independently) you can choose to "Normalize stereo channels independently" or not.  
+</p>
+<dl><dd><span title="Contrast between amplifying and normalizing stereo tracks having lower Right channel amplitude"><img alt="Amplify-vs-Normalize.png" src="../m/images/e/ea/amplify_vs_normalize.png" width="544" height="398" /></span></dd>
+<dd><b>Figure 4</b></dd></dl>
+<p>Note that in the upper stereo track, both Left and Right channels have been amplified by the same amount (about 1.0 dB). Only the Left channel has a resultant peak value of 0.0 dB, because the Right channel was of lower amplitude. In the lower track, Normalize has processed each channel independently to give <i>both</i> channels a resultant peak value of 0.0 dB.
+</p><p><br />
+</p>
+<div id="which"></div>
+<h2><span class="mw-headline" id="Advantages.2FDisadvantages_and_which_to_use">Advantages/Disadvantages and which to use</span></h2>
+<h3><span class="mw-headline" id="Advantages_of_Amplify">Advantages of Amplify</span></h3>
+<ul><li> <b>Change the level of one or more tracks or channels by the same amount</b>, preserving the balance between them </li>
+<li> <b>Slider for quick amplification adjustment</b> </li>
+<li> <b>Automatically calculates the amplification required</b> to set the loudest track or channel to maximum volume without clipping</li>
+<li> <b>Can also be set to allow clipping</b></li></ul>
+<p>For example, to increase the level of several tracks by 2 dB, use the Amplify effect and enter "2" (without quotes) in the "Amplification (dB)" box. 
+</p>
+<h3><span class="mw-headline" id="Advantages_of_Normalize">Advantages of Normalize</span></h3>
+<ul><li> <b>Correct DC offset</b></li>
+<li> <b>Adjust multiple audio tracks or channels to the same peak level, removing any level disparity between them</b>
+<ul><li> <b>There is an option to normalize stereo channels as a pair</b> (retaining the balance between the channels) instead of independently.</li></ul></li>
+<li> <b>Normalization above the clipping level of 0 dB is disallowed</b></li></ul>
+<p>For example, if you have accidentally recorded one channel quieter than the other in a stereo recording (a common scenario with LP or tape recordings), normalizing the channels independently will go a long way toward restoring a correct balance. Note because normalization is based on "peak" rather the "average" level, it does not necessarily result in processed tracks actually <i>sounding</i> equally loud.  
+</p>
+<h3><span class="mw-headline" id="When_not_to_use_Amplify">When not to use Amplify</span></h3>
+<p>If your audio has DC offset present, you should use Normalize to correct that offset.
+</p><p>If you are applying a <a href="macros.html" title="Macros">Macro</a> and want to bring a track or files to a specific level, use Normalize instead. Amplify in a Macro will not make the track or file as loud as possible if "New Peak Amplitude (dB)" is set to 0 dB and will not set the amplitude to any other chosen amount in that box. Because Amplify is being applied automatically it can only apply the "Amplification (dB)" amount as saved in the "Ratio" parameter.
+</p>
+<h3><span class="mw-headline" id="When_not_to_use_Normalize">When not to use Normalize</span></h3>
+<p>If multiple tracks contain <b>intentional</b> differences in peak levels, you should never normalize any of them. The <b>only</b> way to preserve the relative balance between them is to select them all as a group and amplify them, so they are all scaled up by the same amount. 
+</p><p>You <i><b>can</b></i> normalize stereo tracks without changing their channel balance, but only if a) the stereo track is not split into Left and Right and b) "Normalize stereo channels independently" is <b>unchecked</b>.      
+</p><p>If tracks with intentional peak differences have DC offset that needs correction, then you can and should use Normalize, but with "Normalize maximum amplitude to" <b>unchecked</b>.
+</p><p><br />
+</p>
+<div id="dcoffset"></div>
+<h2><span class="mw-headline" id="Using_Normalize_with_DC_offset_correction">Using Normalize with DC offset correction</span></h2>
+<p>If DC offset is present, you should always use <a href="dc_offset.html" title="DC offset">DC offset correction</a>. A minimal amount of offset is very common, but large amounts (such as in Figure 1 below) should not normally happen. 
+</p>
+<dl><dd><span title="DC offset in the upper of two tracks"><img alt="DC-offset.png" src="../m/images/d/df/dc_offset.png" width="373" height="200" /></span></dd>
+<dd><b>Figure 1</b></dd></dl>
+<p>In Figure 1 you can see that the upper track is not centered on the horizontal line, but above it. It is "off-set". 
+</p><p>We can correct this fault by using the Normalize effect with "Remove any DC offset" selected. Using Normalize with this selected (but with "Normalize maximum amplitude to" <b>not</b> selected) will correct this offset without making any other changes to the amplitude - the result will look like the lower track.
+</p>
+<h3><span class="mw-headline" id="In_contrast_using_Amplify">In contrast using Amplify</span></h3>
+<dl><dd><span title="Amplified track with DC offset before and after correction"><img alt="Amplify-normalize with DC offset.png" src="../m/images/1/1b/amplify_normalize_with_dc_offset.png" width="393" height="200" /></span></dd>
+<dd><b>Figure 2</b></dd></dl>
+<p>In the upper track in Figure 2 we show the offset upper track from Figure 1 after applying Amplify. In the lower track we see that amplified waveform after applying Normalize with DC offset correction.
+</p><p>In both cases the maximum peak amplitude was set to 0.0 dB, but note that in the upper (amplified) track, the resulting waveform is noticeably smaller than in the lower (normalized) track. Note also that the DC offset has become worse after amplifying than it was in Figure 1 - the offset has also been amplified.
+</p><p>The reason that the Amplified waveform is smaller is that the positive peaks above the horizontal line have been shifted up vertically by the DC offset, so although the positive peak is at 0.0 dB (+1.0 on the vertical scale), the negative peak below the horizontal is far away from -1.0.
+</p>
+<div class="note">If your recordings regularly produce noticeable <a href="dc_offset.html" title="DC offset">DC offset</a>, this indicates a fault in your system, usually with either the audio interface or its drivers. Connecting faulty sound sources can also cause this problem. These issues should be corrected as necessary by updating the drivers or fixing the hardware.
+<ul><li> Newer Windows PCs may have a DC offset cancellation feature when recording from the built-in sound inputs; see the <a href="dc_offset.html" title="DC offset">DC offset</a> page.</div></li></ul>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Amplify_and_Normalize">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

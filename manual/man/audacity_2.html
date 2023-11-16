@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Audacity 2.x AUP Projects - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Audacity_2_x_AUP_Projects rootpage-Audacity_2_x_AUP_Projects skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Audacity 2.x AUP Projects</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Audacity_2.x_AUP_Projects#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Audacity 2.x AUP projects can be successfully opened in Audacity 3.x, where they will be imported and converted to <a href="audacity_projects.html" title="Audacity Projects">Audacity 3.x AUP3 project format</a>.
+<ul><li>It is important to note that a 2.x Audacity project is not a single audio file but a complex set of files managed by Audacity.</li>
+<li> Audacity 2.x projects have a top-level <i><b><a href="glossary.html#audacity_project_format" title="Glossary">AUP</a></b></i> file and a related folder containing the sound files <i>(the audio data)</i>. </li>
+<li>The <i><b><a href="glossary.html#audacity_project_format" title="Glossary">AUP</a></b></i> is <b>not</b> a sound file, it is merely a list of instructions that tell Audacity how to construct the project from the sound files in the folder.</div></li></ul>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#openaup">Opening an Audacity 2.x Project in Audacity 3.0 or later</a>
+<ul><li><a href="#compressed">Compressed and Lossless copies of 2.x projects</a></li>
+<li><a href="#aliased">Aliased audio files</a></li>
+<li><a href="#older">Older AUP project files</a></li></ul></li>
+<li><a href="#aup">Structure of an Audacity 2.x Project</a></li>
+<li><a href="#delete">Deleting an Audacity 2.x project</a></li>
+<li><a href="#move">Moving or sending an Audacity 2.x project</a></li></ol>
+<p><br />
+</p>
+<div id="openaup"></div>
+<h2><span class="mw-headline" id="Opening_an_Audacity_2.x_Project_in_Audacity_3.0_or_later">Opening an Audacity 2.x Project in Audacity 3.0 or later</span></h2>
+<p>With the transition from Audacity 2.4.2 to Audacity 3.0.0 that Project file structure changed radically to having the entire project contained in a single unified file, see <a href="audacity_projects.html" title="Audacity Projects">Managing Audacity Projects</a>.
+</p><p>The good news is that Audacity can open AUP files created in older 2.x versions of Audacity , but saving the project will prevent it opening again in an earlier Audacity version.
+</p>
+<ul><li>Note that this will leave behind the old <b>AUP</b> file and its associated <b>_data</b> folder which you will probably want to delete to recover disk space.</li>
+<li>Audacity version 3.x cannot open projects from Audacity 1.x,  The workaround is to open the 1.x project in Audacity 2.x, save it as a 2.x project and then open the 2.x version of the project in Audacity 3.x.</li></ul>
+<p>When opening an AUP Audacity project in Audacity 3.x always use <span class="menu">File &gt; <a href="file_menu.html#open" title="File Menu">Open</a></span> or <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span> to open the <b>"my-project.aup"</b>.  Do <i><b>not</b></i> attempt to open, import or manipulate any individual <b>AU</b> block files. 
+</p>
+<div id="compressed"></div>
+<h3><span class="mw-headline" id="Compressed_and_Lossless_copies_of_2.x_projects">Compressed and Lossless copies of 2.x projects</span></h3>
+<p>Early 2.x versions of Audacity enabled you to save a compressed copy of a project to save space.  Later versions of 2.x additionally allowed you to save an uncompressed copy of a project as a backup.  Audacity 3.x can successfully open both of those project formats.
+</p>
+<div id="aliased"></div>
+<h3><span class="mw-headline" id="Aliased_audio_files">Aliased audio files</span></h3>
+<p>Older versions of Audacity 2.x enabled you to work with external audio files attached to your project which were not actually copied into the project, these were known as "aliased files". <i>This was done for speed reasons when computers were slower and to reduce disk space usage when disk space was smaller and more expensive.</i>
+</p><p>If you have such projects they can still be successfully opened in Audacity 3.x provided you still have the aliased files present and in the locations that the old project expects to find them.  Audacity 3.0.0 will copy these files into the project making the saved 3.x AUP3 project independent of the aliased files.
+</p>
+<div id="older"></div>
+<h3><span class="mw-headline" id="Older_AUP_project_files">Older AUP project files</span></h3>
+<p>Audacity 3.x can even open AUP files from the 1.3 Beta series.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">Audacity version 3.x should be able to open projects from Audacity 1.1 onwards but not from 1.0
+<p>If it fails the workaround is to open the 1.x project in Audacity 2.x, save it as a 2.x project and then open the 2.x version of the project in Audacity 3.x. 
+</p>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="aup"></div>
+<h2><span class="mw-headline" id="Structure_of_an_Audacity_2.x_Project">Structure of an Audacity 2.x Project</span></h2>
+<p>Just to remind you, the structure of a 2.x Audacity project is:
+</p>
+<ul><li>An <i><b><a href="glossary.html#audacity_project_format" title="Glossary">AUP</a></b></i> project file - the name of the project followed by ".aup", for example  <b>"my-project.aup"</b></li>
+<li>A <b>_data</b> folder with the same project name and in the same folder as the .aup file, for example <b>"my-project_data"</b></li>
+<li>Within that <b>_data</b> folder, a sub-folder structure with lots of little <i><b><a href="glossary.html#au" title="Glossary">AU</a></b></i> block files which are individual segments of the audio data. </li>
+<li>The <b>AUP</b> project file describes how Audacity links these <b>AU</b> block files together to make up the clips and tracks in the project. </li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top"><i>Note that default behavior on Windows and Mac is to hide certain file <a href="glossary.html#extension" title="Glossary">extensions</a>. If this applies, the .aup file will only appear as <b>"my-project"</b> in the computer.</i>
+<ul><li>On Windows, the .aup extension will be hidden if Audacity was installed from the .exe installer and "Hide file extensions for known file types" remains checked in Windows Explorer.</li>
+<li>You can unhide extensions on Windows by following <a rel="nofollow" class="external text" href="http://www.bleepingcomputer.com/tutorials/how-to-see-hidden-files-in-windows/">these instructions</a>. </li></ul>
+</td></tr></table>
+</div>
+<div id="rules"></div>
+<div class="note"><b>The three rules for keeping a 2.x Audacity Project happy:</b>
+<ol><li><b>Never</b> move, delete or rename any of the block files or folders inside the <b>_data</b> folder.</li>
+<li><b>Never</b> rename the AUP file or the _data folder by hand.
+<dl><dd>If you want to rename your project (for example, to save a snapshot at a particular point), use one of the <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_lossless_copy_of_project" title="File Menu: Save Project">Save Lossless Copy of Project</a></span> or <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As</a></span> commands.</dd></dl></li>
+<li><b>Always</b> keep the AUP file and the _data folder together in the same directory (folder).</div>    </li></ol>
+<p><br />
+</p>
+<div id="delete"></div>
+<h2><span class="mw-headline" id="Deleting_an_Audacity_2.x_project">Deleting an Audacity 2.x project</span></h2>
+<p>There is no <b>File &gt; Delete Project</b> command in Audacity; therefore to delete a project to free up disk space it is necessary to make the deletion manually.  You will need to delete both the AUP file and its associated, identically named _data folder.
+'=
+Note that this will <i><b>not</b></i> remove the listing of your project under <span class="menu">File &gt; <a href="file_menu.html#recentfiles" title="File Menu">Recent Files</a></span>. After deleting the project you can choose the AUP entry for that project in the Recent Files list in order to remove the entry. 
+</p><p><br />
+</p>
+<div id="move"></div>
+<h2><span class="mw-headline" id="Moving.2C_renaming_or_sending_an_Audacity_2.x_AUP_project">Moving, renaming or sending an Audacity 2.x AUP project</span></h2>
+<p>Moving or renaming Audacity projects can be tricky due to their complex structure as described above.  Any project can be moved on the same computer, or renamed, by making a copy of the project with the <span class="menu">File &gt; Save Project &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As</a></span> command.
+</p><p>Sending somebody just an <i><b><a href="glossary.html#audacity_project_format" title="Glossary">AUP</a></b></i> file does <b>not</b> send them an Audacity project - to do that you would need to send the <b>_data folder</b> containing the small AU files too. 
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Never rename a 2.x AUP project by hand in any folder. Doing so will corrupt the project.
+</td></tr></table></div>
+<p>See also <a href="sending_your_work_to_others.html" title="Sending your work to others">Sending your work to others</a>.
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Audacity_2.x_AUP_Projects">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

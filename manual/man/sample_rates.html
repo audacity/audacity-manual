@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Sample Rates - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Sample_Rates rootpage-Sample_Rates skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Sample Rates</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Sample_Rates#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Sample Rate is the number of samples of audio carried per second. The default Audacity sample rate can be chosen in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>. This page describes the minimum sample rates appropriate for different audio media. <br /><i>See also <a href="sample_format_bit_depth.html" title="Sample Format - Bit Depth">Sample Format - Bit Depth</a> for help with choosing the appropriate bit depth. </i></div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li> <a href="#bandwidth">Bandwidth</a></li>
+<li> <a href="#defaults">Audacity defaults</a></li>
+<li> <a href="#rate">Which Sample Rate to use</a></li>
+<li> <a href="#reduced">Reduced bandwidth recording</a></li></ol>
+<div id="bandwidth"></div>
+<h2><span class="mw-headline" id="Bandwidth">Bandwidth</span></h2>
+<p>Sample rate is the number of samples of audio carried per second, measured in Hz or kHz (one kHz being 1,000 Hz). For example, 44100 samples per second can be expressed as either 44,100 Hz, or 44.1 kHz.  
+</p><p>Bandwidth is the difference between the highest and lowest frequencies carried in an audio stream. The sample rate determines the maximum audio frequency that can be reproduced. Theoretically the maximum frequency that can be represented is half the sample rate (known as the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Nyquist_frequency">Nyquist frequency</a>). In practice, the limit is a little lower, so the practical upper frequency limit for a sample rate of 44,100 Hz, is a little over 20,000 Hz, but less than 22,050 Hz.
+</p><p>The term bandwidth may be applied to the frequency content of an audio signal stream, or the frequency ability of audio hardware or software. Although an audio interface may support a very high sample rate, for example 192,000 Hz (192 kHz), which could practically support frequencies above 80 kHz, there is no guarantee that the audio interface does support such high frequencies. It is not uncommon for high quality audio interfaces to deliberately filter out extreme high frequencies so as to improve rejection of electromagnetic interference.
+</p>
+<div id="defaults"></div>
+<h2><span class="mw-headline" id="Audacity_defaults">Audacity defaults</span></h2>
+<p>44,100 Hz is the Audacity default setting.  It is highly recommended that you use this setting unless you have good reasons to deviate from it.
+</p>
+<div id="rate"></div>
+<h2><span class="mw-headline" id="Which_Sample_Rate_to_use">Which Sample Rate to use</span></h2>
+<h3><span class="mw-headline" id="44.2C100_Hz">44,100 Hz</span></h3>
+<p>44,100 Hz (44.1 kHz)  is the sampling rate of audio CDs giving a 20 kHz maximum frequency. 20 kHz is the highest frequency generally audible by humans, so making 44,100 Hz the logical choice for most audio material. High quality tape decks using metal tape, and medium quality LP equipment can reproduce 20 kHz (higher for top quality LP equipment, though some of this is harmonic distortion inherent in the medium). Note that the upper limit of human hearing falls rapidly with age. While people in their teens can hear 20,000 Hz, many older people cannot hear above 14,500 Hz.
+</p>
+<h3><span class="mw-headline" id="48.2C000_Hz">48,000 Hz</span></h3>
+<p>48,000 Hz (48 kHz) is the sample rate used for DVDs so if you are creating DVD audio discs from your Audacity projects you may prefer to work with this setting.
+</p>
+<div id="reduced"></div>
+<h2><span class="mw-headline" id="Reduced_bandwidth_recording">Reduced bandwidth recording</span></h2>
+<p>Audio may be recorded at below 20kHz bandwidth for a few reasons:
+</p>
+<ul><li> To reduce file size</li>
+<li> To reduce CPU usage</li>
+<li> Because the source material itself is of less than 20kHz bandwidth.</li></ul>
+<p>A lower sampling rate can also be used to remove the highest frequency hiss present in a noisy signal. While in theory there is no loss of quality as long as the bandwidth of the sample rate stays above the audio signal bandwidth, in practice one often does not know exactly what the signal bandwidth is. So for most purposes, a better option is to use noise gating for hiss reduction, which has much more effect and is less likely to compromise the recorded signal. The <a href="noise_reduction.html" title="Noise Reduction">'Noise Reduction' filter</a> is a multi-channel noise gate.
+</p>
+<h3><span class="mw-headline" id="32.2C000_Hz">32,000 Hz</span></h3>
+<p>The Nyquist frequency of 16,000 Hz is above the frequency limit of many medium quality sources, such as ferric cassette tape. On good tape decks, chrome tape can reproduce 18,000 Hz. 
+</p><p>FM radio bandwidth is around 15 kHz, so FM radio could be recorded with little quality loss.
+</p><p>32,000 Hz sample rate is thus adequate for:
+</p>
+<ul><li> cassette recordings from ferric stock </li>
+<li> Speech</li>
+<li> All other audio where smaller files than 44.1 kHz are desired with only slight compromise on sound quality.</li></ul>
+<h3><span class="mw-headline" id="22050Hz">22050Hz</span></h3>
+<p>22050 kHz (often lazily called "22 kHz") has been a reasonably popular sample rate for low bit rate MP3s such as 64 kbps in years past. Audio quality is significantly affected, with higher frequency content missing. With the general rise in the availability of large file storage space and faster data links, 22 kHz is now of more limited use.
+</p>
+<ul><li> For speech recording where perceived quality is unimportant, but clarity must be maintained.</li>
+<li> AM radio</li>
+<li> Formerly used to squeeze much mp3 music onto floppy disk &amp; very small mp3 players.</li></ul>
+<h3><span class="mw-headline" id="11.2C025_Hz">11,025 Hz</span></h3>
+<p>11,025 kHz (often lazily called "11 kHz") gives very poor sound quality.
+</p>
+<h3><span class="mw-headline" id="8.2C000_Hz">8,000 Hz</span></h3>
+<p>8,000 Hz sample rate has less bandwidth than modern telephone systems. 8 kHz sample rate is thus not suitable for any serious recording task, though may be adequate for some sound effects or recording <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Infrasound">infrasound</a>.
+</p>
+<h3><span class="mw-headline" id="Ultrasonic_Recording">Ultrasonic Recording</span></h3>
+<p>Recording and playing with a bandwidth higher than 20kHz gives no audible benefit (assuming replay is not speed altered). It can be used:
+</p>
+<ul><li> to maintain full bandwidth when the recording will be slowed down afterwards</li>
+<li> for analysis of signals above 20,000 Hz</li>
+<li> for some oscilloscope waveform recording</li>
+<li> to record sig gen waveforms up to 40,000 Hz</li>
+<li> for recording some wildlife</li>
+<li> and other ultrasonic applications.</li></ul>
+<p>When recording ultrasonic input it should be borne in mind that not all audio sources can output signals above 20 kHz. To capture ultrasound, all items in the chain of audio must support the full frequency range to be recorded.
+</p><p>Some audio interfaces and sound cards support sampling at up to 96,000 Hz, some do not.
+</p>
+<h3><span class="mw-headline" id="Custom_Rates">Custom Rates</span></h3>
+<p>When recording a signal of known limited bandwidth, you can minimize file size by using a recording sample rate of 2.2x signal bandwidth. This is seldom necessary.
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Sample_Rates">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

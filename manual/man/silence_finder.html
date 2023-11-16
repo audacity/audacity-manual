@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Silence Finder - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Silence_Finder rootpage-Silence_Finder skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Silence Finder</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Silence_Finder#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="note">Silence Finder and Sound Finder have been superseded by <a href="label_sounds.html" title="Label Sounds">Label Sounds</a>. This page has been retained for the benefit of users that may still have Silence Finder and Sound Finder from earlier versions of Audacity.</div>
+
+<p><br />
+</p>
+
+<p><br />
+</p>
+<div class="intro"><i><b>Silence Finder</b></i> and the related <a href="label_sounds.html" title="Label Sounds">Label Sounds</a> are tools which can useful to label the different songs or sections in a long recording, such as the tracks from an LP or cassette.<p><a href="silence_finder_setting_parameters.html" title="Silence Finder - Setting Parameters">Silence Finder - Setting Parameters</a> has more help on adjusting the Silence Finder slider settings.</p> <p>After typing the name of the track or section in each label, <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> and selecting <a href="export_multiple.html" title="Export Multiple"><b>Multiple Files</b></a> will export audio files in one process corresponding to each label's audio. See <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">Splitting a recording into separate tracks</a>.</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">If you already have a label track and that is included in the selection that you make for the analysis then these labels will be added to your selected label track - possibly causing confusion with your existing labels.
+<ul><li><b>Workaround:</b> Ensure you just select audio track(s) and include no label track in the selection for the analysis.  Audacity will then create a new label track for the analysis output named "Label Track" - you may wish to rename that so that you remember what the labels in the analysis track refer to.</li></ul>
+</td></tr></table>
+</div></div> 
+<div id="silence"></div>
+<dl><dd><b>Accessed by:</b> <span class="menu">Analyze &gt; Silence Finder</span> </dd>
+<dd><span title="Silence Finder effect dialog"><img alt="Silence Finder.png" src="../m/images/3/3c/silence_finder.png" width="514" height="198" /></span></dd></dl>
+<p><br />
+Silence Finder divides up a selection by placing point <a href="label_tracks.html" title="Label Tracks">labels</a> inside areas of silence. 
+Use this if you just want to split the recording into tracks at a specific point without removing the silences between them. 
+</p><p>If labels are produced in the middle of album tracks, increase the silence level and duration. If some album tracks do not have a label between them, reduce the silence level and duration. See <a href="silence_finder_setting_parameters.html" title="Silence Finder - Setting Parameters">Setting Parameters</a> for more help choosing values to place the labels correctly.   
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">If the selection ends with silence, the final label is not placed according to the "Label placement (seconds before silence ends)" setting but is placed after the start of the final silence according to the "Minimum duration of silence (seconds)" setting.
+</td></tr></table></div>
+<h2><span class="mw-headline" id="Treat_audio_below_this_level_as_silence_.28dB.29">Treat audio below this level as silence (dB)</span></h2>
+<p>Sets the threshold level below which the audio is considered to be "silent". 
+</p>
+<div class="note">The dB level is measured relative to "0.0 dB = full scale". As all normal signals are less than the full track height, the threshold will always be a negative number. Thus -40 dB is quieter than -30 dB, and -20 dB is higher (louder) than -30 dB.</div>
+<p>If this threshold level is set too low, then the effect will not detect any silences. If the threshold is set too high, then the effect will treat quiet sounds as if they are silences.
+</p>
+<h2><span class="mw-headline" id="Minimum_duration_of_silence_.28seconds.29">Minimum duration of silence (seconds)</span></h2>
+<p>Very small gaps in the audio are ignored. This is important because the level of normal audio frequently drops to very low levels momentarily.
+This setting tells the effect to ignore periods of "silence" (low level audio) that are shorter duration than the specified size (measured in seconds). This should be set a little smaller than the minimum duration silence that you wish to mark. 
+</p><p><b>Example:</b> If the gaps that you want to label are around 1.0 seconds duration, set this to 0.8 seconds. Silences shorter than 0.8 seconds will then be ignored, and silences longer than 0.8 seconds will be labelled.
+</p>
+<h2><span class="mw-headline" id="Label_placement_.28seconds_before_silence_ends.29">Label placement (seconds before silence ends)</span></h2>
+<p>When set greater than 0 seconds, each label is offset from the end of the detected silence by the specified amount. 
+</p><p><b>Example:</b> If a track starts with silence and the first sound above the threshold level occurs at time=5.0 seconds, then the end of the silence is at time=5.0 seconds. If the "Label Placement" is set to 0.5 seconds, then the label for this audio gap will be placed at time=4.5 seconds (0.5 seconds before the end of the silence).
+</p>
+<div class="note">This effect measures silences to within about 0.01 seconds. If "Label placement" is set to zero, then the label may be placed up to 0.01 seconds before the end of the detected silences.</div>
+<p><br />
+</p>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">Buttons</span></h2>
+<p>Clicking on the command buttons give the following results:
+</p>
+<ul><li><span class="button">Presets &amp; Settings</span> gives a dropdown menu enabling you to manage presets for the tool and to see some detail about the tool. For details see <a href="manage_presets.html" title="Manage presets">Manage presets</a></li>
+<li><span class="button">OK</span> applies the effect to the selected audio with the current effect settings and closes the dialog</li>
+<li><span class="button">Cancel</span> aborts the effect and leaves the audio unchanged, closing the dialog</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<div class="example"><p>Here is a stereo track with six songs.  The entire project is selected prior to using the Analyze functions.</p>
+<dl><dd><span title="a stereo track with six songs"><img alt="Silence-Sound Finder six songs.png" src="../m/images/d/d9/silence_sound_finder_six_songs.png" width="512" height="180" /></span></dd></dl>
+After running <span class="menu">Analyze &gt; <strong class="selflink">Silence Finder</strong></span> we can see that Audacity has identified the six songs, <p>placing an "<b>S</b>" label just before the beginning of each song plus a seventh label at the end (as the</p> <p>final track ends in silence).</p>
+<dl><dd><span title="a stereo track with six songs labeled with &#39;S&#39;"><img alt="Silence Finder six songs shown.png" src="../m/images/b/ba/silence_finder_six_songs_shown.png" width="511" height="253" /></span></div></dd></dl>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html#analyzers" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a>
+</p><p><a href="analyze_menu.html" title="Analyze Menu"><b>|&lt;</b> Analyze Menu</a>
+</p><p><a href="label_sounds.html" title="Label Sounds"><b>&gt;</b> Label Sounds</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Silence_Finder">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

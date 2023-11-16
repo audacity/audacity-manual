@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial - Using Multi-track - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tutorial_-_Using_Multi-track rootpage-Tutorial_-_Using_Multi-track skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial - Using Multi-track</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Using_Multi-track#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Audacity is a multi-track editor which will allow you to create and manage many different sounds or performances and have them play at the same time.
+<dl><dd>For example, you can add music to your audiobook presentation after you finish reading, and you can sing all the harmony parts of a song by yourself one after the other. You can create a good-quality mixed podcast from performers in several different time zones without Internet distortion. </div></dd></dl>
+<div id="multi"></div>
+<h2><span class="mw-headline" id="Multiple_Tracks">Multiple Tracks</span></h2>
+<p>Different parts of the audio mix are on different 'tracks'.  You can add and remove tracks and adjust the tracks individually or together.
+</p>
+<dl><dd><span title="Image of three mono tracks vocals, guitar and drums.png"><img alt="Three mono tracks vocals-guitar-drums.png" src="../m/images/2/21/three_mono_tracks_vocals_guitar_drums.png" width="788" height="334" /></span></dd></dl>
+<p><br />
+</p>
+<div id="create"></div>
+<h2><span class="mw-headline" id="Creating_Multiple_Tracks">Creating Multiple Tracks</span></h2>
+<p>You can add new empty tracks using the edit menu:
+</p>
+<dl><dd><div class="noresize"><map name="ImageMap_1_1938004594"><area href="tracks_menu.html" shape="rect" coords="25,5,73,27" alt="Tracks Menu provides commands for creating and removing tracks, applying operations to selected tracks such as mixing, resampling or converting from stereo to mono, and lets you add or edit labels" title="Tracks Menu provides commands for creating and removing tracks, applying operations to selected tracks such as mixing, resampling or converting from stereo to mono, and lets you add or edit labels"/><area href="generate_menu.html" shape="rect" coords="73,5,136,27" alt="Generate Menu lets you create audio containing tones, noise or silence" title="Generate Menu lets you create audio containing tones, noise or silence"/><area href="effect_menu.html" shape="rect" coords="136,5,179,27" alt="Audacity includes many built-in effects and also lets you use a wide range of plug-in effects" title="Audacity includes many built-in effects and also lets you use a wide range of plug-in effects"/><area href="analyze_menu.html" shape="rect" coords="179,5,234,27" alt="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature" title="The Analyze Menu contains tools for finding out about the characteristics of your audio, or labeling key feature"/><area href="tools_menu.html" shape="rect" coords="234,5,275,27" alt="The Tools Menu contains customisable tools" title="The Tools Menu contains customisable tools"/><area href="extra_menu.html" shape="rect" coords="275,5,316,27" alt="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus" title="The Extra menu provides access to additional Commands that are not available in the normal default Audacity menus"/><area href="help_menu.html" shape="rect" coords="316,5,353,27" alt="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools." title="The Help Menu lets you find out more about the Audacity application and how to use it.  It also includes some diagnostic tools."/><area href="tracks_menu_add_new.html" shape="rect" coords="25,27,231,49" alt="Adds a new track" title="Adds a new track"/><area href="tracks_menu_mix.html" shape="rect" coords="25,56,231,78" alt="Mixes down selected tracks to mono or stereo tracks" title="Mixes down selected tracks to mono or stereo tracks"/><area href="tracks_menu.html#resample" shape="rect" coords="25,78,231,100" alt="Allows you to resample the selected track(s) to a new sample rate for use in the project" title="Allows you to resample the selected track(s) to a new sample rate for use in the project"/><area href="tracks_menu.html#remove_tracks" shape="rect" coords="25,107,231,129" alt="Removes the selected track(s) from the project" title="Removes the selected track(s) from the project"/><area href="tracks_menu_mute_unmute.html" shape="rect" coords="25,136,231,158" alt="Mutes or unmutes audio tracks in the project" title="Mutes or unmutes audio tracks in the project"/><area href="tracks_menu_pan.html" shape="rect" coords="25,158,231,180" alt="Pans left right or center audio tracks in the project" title="Pans left right or center audio tracks in the project"/><area href="tracks_menu_align_tracks.html" shape="rect" coords="25,187,231,209" alt="Commands that provide an automatic way of aligning selected tracks with the cursor, the selection, or with the start of the project" title="Commands that provide an automatic way of aligning selected tracks with the cursor, the selection, or with the start of the project"/><area href="tracks_menu_sort_tracks.html" shape="rect" coords="25,209,231,231" alt="Sorts all tracks in the project from top to bottom in the project window, by Start Time or by Name" title="Sorts all tracks in the project from top to bottom in the project window, by Start Time or by Name"/><area href="tracks_menu.html#synclock_tracks_onoff" shape="rect" coords="25,238,231,260" alt="Ensures that length changes occurring anywhere in a defined group of tracks also take place in all audio or label tracks in that group" title="Ensures that length changes occurring anywhere in a defined group of tracks also take place in all audio or label tracks in that group"/><area href="tracks_menu_add_new.html#mono_track" shape="rect" coords="231,27,434,49" alt="Creates a new empty mono audio track" title="Creates a new empty mono audio track"/><area href="tracks_menu_add_new.html#stereo_track" shape="rect" coords="231,49,434,71" alt="Adds an empty stero track to the project" title="Adds an empty stero track to the project"/><area href="tracks_menu_add_new.html#label_track" shape="rect" coords="231,71,434,93" alt="Adds an empty label track to the project" title="Adds an empty label track to the project"/><area href="tracks_menu_add_new.html#time_track" shape="rect" coords="231,93,434,115" alt="Adds an empty time track to the project" title="Adds an empty time track to the project"/><area href="menu_reference.html" shape="rect" coords="0,0,1000,1000" alt="The Menus" title="The Menus"/></map><img alt="Tracks-Add NewMenu.png" src="../m/images/b/bd/tracks_add_newmenu.png" width="484" height="273" usemap="#ImageMap_1_1938004594"/></div></dd></dl>
+<div style="position:relative;">
+<div class="note" style="width:150px;position:absolute;left:384px;top:-15px;"><div class="floatleft"><a href="click_tip.html" title="Click for details"><img alt="Click for details" src="../m/images/6/63/bigpointercursor.png" width="20" height="33" /></a></div><b>Click on the image to learn more</b><br /></div>
+</div>
+<p><br />
+&#160;
+</p><p><br />
+</p><p><br />
+These new tracks 'stack up' one above the other.  You can record into these tracks <a href="https://alphamanual.audacityteam.org/man/File:Record.png" class="image" title="Record tool"><img alt="Record tool" src="../m/images/e/e8/record.png" width="16" height="16" /></a>, or generate sound into them using the <span class="menu">Generate</span> menu.  When you click <a href="https://alphamanual.audacityteam.org/man/File:Play.png" class="image" title="Play tool"><img alt="Play tool" src="../m/images/9/90/play.png" width="16" height="16" /></a> you hear the tracks mixed together, that is, all the tracks at the same time.
+</p><p>You can also record directly to a new track using record to new track <a href="https://alphamanual.audacityteam.org/man/File:Record_New_Track.png" class="image" title="Record New Track tool"><img alt="Record New Track tool" src="../m/images/7/72/record_new_track.png" width="16" height="16" /></a> which is obtained by holding shift down before clicking the record button.
+</p><p><br />
+</p>
+<div class="note">On Mac and Linux it is possible to record more than two tracks at the same time with Audacity <a href="multi_channel_recording.html" title="Multi-channel Recording">Multi-channel Recording</a>.  Not so on Windows, usually.  Instead on windows you will typically build up a mutli track recording by overdubing.</div>
+<p><br />
+</p>
+<div id="move"></div>
+<h2><span class="mw-headline" id="Moving_Audio_between_Tracks">Moving Audio between Tracks</span></h2>
+<p>You can move clips in one track, and between tracks, by clicking and dragging in the Clip-Handle drag-bar.
+</p>
+<dl><dd><span title="Dragging clip down to another track"><img alt="Dragging a clip.png" src="../m/images/5/5e/dragging_a_clip.png" width="663" height="272" /></span></dd></dl>
+<p>For more details see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audacity_Tracks_and_Clips</a>
+</p><p><br />
+</p>
+<div id="listen"></div>
+<h2><span class="mw-headline" id="Listening_to_the_Mix">Listening to the Mix</span></h2>
+<dl><dd><table>
+
+<tr valign="top">
+<td> <span title="Track Control Panel"><img alt="TCP Track with Select button.png" src="../m/images/c/cf/tcp_track_with_select_button.png" width="99" height="181" /></span>
+</td>
+<td>
+<div class="note">
+<ul><li> <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks"><b>Mute</b></a></span> button to temporarily silence just this one track.</li>
+<li> <span class="button"><a href="audio_tracks.html#panel" title="Audio Tracks"><b>Solo</b></a></span> button to temporarily play only this one track on its own.  
+<ul><li>Solo button behavior can be changed in <b><a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a></b>.</li></ul></li>
+<li> <b>Gain slider</b> (with + and -) for adjusting the volume of this track   </li>
+<li> <b>Pan slider</b> (with L and R) to position the audio of this track 'Left' or 'Right' in the stereo sound stage.</div></li></ul>
+</td></tr></table></dd></dl>
+<p><br />
+</p>
+<div id="sync"></div>
+<h2><span class="mw-headline" id="Keeping_Tracks_Synchronized">Keeping Tracks Synchronized</span></h2>
+<p>When you select audio, you can select in multiple tracks, and then a cut will remove the selected audio in all tracks and keep the audio synchronized.
+</p><p>You can also lock the various tracks together so that that they stay synchronized, using <span class="menu">Edit-&gt;Sync-Lock Tracks</span>.  Cutting and pasting audio will now affect all tracks together.  This is shown by the clock icon in the selections, which indicates that Sync-Lock has selected additional tracks.
+</p>
+<dl><dd><span title="A pair of Sync-Locked mono tracks, selection extending to second track"><img alt="A pair of sync-locked tracks 3-3-0.png" src="../m/images/6/6a/a_pair_of_sync_locked_tracks_3_3_0.png" width="492" height="272" /></span></dd>
+<dd><b>A pair of Sync-Locked mono tracks: selection extends automatically to the second track</b></dd></dl>
+<p>For more details see <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Locked_Track_Groups</a>
+</p><p><br />
+</p>
+<div id="duck"></div>
+<h2><span class="mw-headline" id="Auto_Duck"><a href="auto_duck.html" title="Auto Duck">Auto Duck</a></span></h2>
+<i><b>Auto Duck</b></i> reduces (<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Ducking">ducks</a>) the volume of one or more selected tracks whenever the volume of a single unselected "control track" placed underneath reaches a particular threshold level. <p>The effect can be used to create voice-overs for podcasts or DJ sets, for automatic "ramping" of background music in radio productions and for turning down a voice in original language as soon as its translation kicks in.</p>
+<p>For more details see <a href="auto_duck.html" title="Auto Duck">Auto Duck</a>
+</p><p><br />
+</p>
+<div id="more"></div>
+<h2><span class="mw-headline" id="To_Learn_More">To Learn More</span></h2>
+<ul><li> <a href="tutorial_mixing_a_narration_with_background_music.html" title="Tutorial - Mixing a Narration With Background Music"><span title="Record a simple narration, add some background music, cut the narration to fit the music, lower the volume of the music during the narration, and finally mix and export the final product">Mixing Voice with Background Music</span></a> </li></ul>
+<dl><dd><dl><dd> How to edit a narration to fit the pace of the background music, and fade down the music so your listeners can hear your narration, useful in particular for podcasts.</dd></dl></dd></dl>
+<ul><li> <a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs"><span title="Known good, working methods of creating a multiple track overdubbing session in Audacity. Record a track then play it while recording a new track underneath it, listening to a live mix of the previous track and the new recording.">Recording Multi-track Overdubs</span></a> </li></ul>
+<dl><dd><dl><dd> A set of tutorials on making multi-track recordings, using three different specialist audio interfaces or using your computer's on-board sound card.</dd></dl></dd></dl>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Using_Multi-track">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

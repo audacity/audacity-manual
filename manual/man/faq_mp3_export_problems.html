@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>FAQ:MP3 export problems - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-FAQ_MP3_export_problems rootpage-FAQ_MP3_export_problems skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">FAQ:MP3 export problems</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/FAQ:MP3_export_problems#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><br />
+<a href="faq_editing.html" title="FAQ:Editing"><b>&gt;</b>&#160; Forward To: FAQ:Editing</a> <br />
+</p><p><a href="faq_opening_and_saving_files.html" title="FAQ:Opening and Saving Files"><b>&lt;</b>&#160; Back To: FAQ:Opening and Saving Files</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p><p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Why_does_Audacity_crash_or_use_excessive_processing_time_on_MP3_export.3F"><span class="tocnumber">1</span> <span class="toctext">Why does Audacity crash or use excessive processing time on MP3 export?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Why_is_my_exported_MP3_invalid_.2F_will_not_play.3F"><span class="tocnumber">2</span> <span class="toctext">Why is my exported MP3 invalid / will not play?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Why_does_my_exported_MP3_play_too_fast.3F"><span class="tocnumber">3</span> <span class="toctext">Why does my exported MP3 play too fast?</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Why_does_my_exported_MP3_have_low_volume_or_no_sound.3F"><span class="tocnumber">4</span> <span class="toctext">Why does my exported MP3 have low volume or no sound?</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Why_is_my_exported_MP3_larger_than_the_imported_one.3F"><span class="tocnumber">5</span> <span class="toctext">Why is my exported MP3 larger than the imported one?</span></a></li>
+</ul>
+</div>
+
+<div id="hang"></div>
+<h2><span class="mw-headline" id="Why_does_Audacity_crash_or_use_excessive_processing_time_on_MP3_export.3F">Why does Audacity crash or use excessive processing time on MP3 export?</span></h2>
+<p>If Audacity crashes or hangs when exporting MP3s, or the export takes a long time to process, the usual reason is that your chosen Project Rate in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> is very different from the sample rate of the audio track on the screen (as shown in Hz on the Track Control Panel above the mute/solo buttons). As a result, resampling has to be done while exporting, which can create problems on long tracks. Try resampling the track to your chosen Project Rate before exporting as MP3. To do this, select all the track by clicking in the Track Control Panel, then <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span>. If there is any silence added to the end of the track as a result of the resampling, you can select and delete it. Now when you export the MP3, the process should go smoothly and quickly. If it does not, there could be a number of reasons, for example if you have a virus scanner set to scan all created files, this will slow the process of writing the exported file considerably. The higher the bit rate you export at, the larger the file will be, so giving a greater time penalty if you enable virus scanning.
+</p><p><br />
+</p>
+<div id="invalid"></div>
+<h2><span class="mw-headline" id="Why_is_my_exported_MP3_invalid_.2F_will_not_play.3F">Why is my exported MP3 invalid / will not play?</span></h2>
+<p>Sometimes the exported MP3 may be invalid and only a few bytes in size; as a result, it will not play and give an error. 
+</p><p>The safest solution is to <b>always set your Project Rate to 44100 Hz</b>. Make a rule to check this before you export, because importing a file of some other sample rate may change the Project Rate to that rate.
+</p><p>Do this from <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> using the <b>Project Sample Rate</b> setting. 
+</p><p>LAME will automatically downsample from 44100 Hz to a lower sample rate at 56 kbps or lower, because low bit rates may give poor quality with higher sample rates. If especially desired, any valid sample rate/bit rate combination can be enforced by using the command line exporter in the current version of Audacity (choose "external program" in "Save as type" in the Export File dialog). Or export as WAV from Audacity, then use LAME.exe at the command line to convert to MP3.       
+</p><p><br />
+</p>
+<div id="fast"></div>
+<h2><span class="mw-headline" id="Why_does_my_exported_MP3_play_too_fast.3F">Why does my exported MP3 play too fast?</span></h2>
+<p>If the MP3 plays at the wrong speed (usually too fast), then the sample rate you exported it at is unsuitable for your player application. Once again, the safe solution is to <b>always set your Project Rate to 44100 Hz.</b> 
+</p><p>Do this from <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>  using the <b>Project Sample Rate</b> setting.
+</p><p>This was a known problem with Adobe Flash Player until some way into version 9: for the file to play properly, the sample rate had to be 1,025 Hz or a multiple thereof, such as 22050 Hz or 44100 Hz. This is fixed in the current <a rel="nofollow" class="external text" href="http://www.adobe.com/products/flashplayer/">Adobe Flash Player</a>. 
+</p><p><br />
+</p>
+<div id="volume"></div>
+<h2><span class="mw-headline" id="Why_does_my_exported_MP3_have_low_volume_or_no_sound.3F">Why does my exported MP3 have low volume or no sound?</span></h2>
+<p>If you can see your exported MP3 is playing because the timer on the media player is moving, but it has no sound, make sure the sound device is not muted (in the player or in the system control panel), and make sure the correct playback device is being used (in the player preferences or in the system control panel). If this is not the problem, go back to Audacity and make sure the -....+ gain slider on the Track Control Panel (where the mute/solo buttons are) is set centrally at "Gain: 0 db". If this slider is over to left, it will reduce or kill the volume in the exported MP3.       
+</p><p><br />
+</p>
+<div id="large"></div>
+<h2><span class="mw-headline" id="Why_is_my_exported_MP3_larger_than_the_imported_one.3F">Why is my exported MP3 larger than the imported one?</span></h2>
+<p>If you import an MP3 file into Audacity, then after export you find it is much larger than before, this is because the <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Bit_rate">bit rate</a> you exported it at is higher than the bit rate of the original file. 
+</p><p>Audacity defaults to 128 kbps bit rate then remembers the last used bit rate if you change it.
+</p><p>If you need the exported MP3 to be the same size as before:
+</p>
+<ol><li>Find out the bit rate of the imported file by opening it in Windows Media Player and clicking <span class="menu">File &gt; Properties</span>, or in Apple Music/iTunes, right-click or control-click over the file and click <span class="menu">Song Info</span>/<span class="menu">Get Info</span>. You can also use standalone programs like <a rel="nofollow" class="external text" href="http://mediainfo.sourceforge.net/en">MediaInfo</a>. </li>
+<li>Click <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> and select <b>MP3</b> in the "Format" field.  </li></ol>
+<p>If you export a low bit rate MP3 at the same bit rate as the original you will be degrading its quality much more than if you exported it at a higher bit rate. The penalty of the higher bit rate is that the new file would be larger and that file merge tools might no longer be able to join the new MP3 to others that had the original bit rate. If you export a high bit rate MP3 at the same bit rate you are helping to minimize quality loss (but are not saving anything in file size).        
+</p><p><br />
+</p><p><br />
+<a href="faq_editing.html" title="FAQ:Editing"><b>&gt;</b>&#160; Forward To: FAQ:Editing</a> <br />
+</p><p><a href="faq_opening_and_saving_files.html" title="FAQ:Opening and Saving Files"><b>&lt;</b>&#160; FAQ:Opening and Saving Files</a> <br />
+</p><p><a href="faq.html" title="FAQ"><b>|&lt;</b> Index of Frequently Asked Questions</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/FAQ:MP3_export_problems">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

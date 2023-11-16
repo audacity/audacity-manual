@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Customizing Toolbar Layout - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Customizing_Toolbar_Layout rootpage-Customizing_Toolbar_Layout skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Customizing Toolbar Layout</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Customizing_Toolbar_Layout#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">Audacity's toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.
+<ul><li> One reason to resize a toolbar is to lengthen it to get more precise results from a slider or audio level meter.</li>
+<li> If you do not use the device toolbar much, you may want to resize it down to its minimum size, or <a href="#hide">hide it completely</a>.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top"> The command <span class="menu">View &gt; Toolbars &gt; Reset Toolbars</span> can be used to reset all toolbars to their default position and size.
+</td></tr></table>
+</div>
+</div>
+<h2><span class="mw-headline" id="Repositioning_and_Resizing_Toolbars">Repositioning and Resizing Toolbars</span></h2>
+<p>Toolbars can be re-positioned using the <i><b>grabber</b></i> and resized using the <i><b>resizer</b></i>.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">If you change your mind part way through a drag or a resize of a toolbar, you can use the Escape key <span class="kbrd" style="background-color: #e0e0f0">Esc</span> to abort the action.
+</td></tr></table>
+</div>
+<div id="grabber"></div>
+<h3><span class="mw-headline" id="The_Grabber">The Grabber</span></h3>
+<p>The <i><b>grabber</b></i>, the serrated edge at the left of most <a href="toolbars_overview.html" title="Toolbars Overview">toolbars</a>, allows repositioning of the toolbar.
+</p>
+<dl><dd><img alt="Grabber.png" src="../m/images/e/ee/grabber.png" width="14" height="30" /></dd></dl>
+<p>Most <a href="toolbars_overview.html" title="Toolbars Overview">toolbars</a> have a grabber on their left hand edge.  Click and drag on the grabber to move the toolbar.  Any toolbar can be: 
+</p>
+<ul><li> Moved within a tooldock</li>
+<li> <a href="#docking">Docked</a> in one of the Audacity <a href="toolbars_overview.html#tooldock" title="Toolbars Overview">tool docks</a></li>
+<li> Free floating above the Audacity window</li></ul>
+<p>Toolbars can be docked or floated by dragging on their grabber to move the toolbar, and then releasing.
+</p>
+<div id="resizer"></div>
+<h3><span class="mw-headline" id="The_Resizer">The Resizer</span></h3>
+<p>The <i><b>resizer</b></i>, the two vertical lines at the right edge of some <a href="toolbars_overview.html" title="Toolbars Overview">toolbars</a>, allows resizing of the toolbar.
+</p>
+<dl><dd><img alt="Resizer.png" src="../m/images/2/26/resizer.png" width="12" height="31" /></dd></dl>
+<p>Some <a href="toolbars_overview.html" title="Toolbars Overview">toolbars</a> have a resizer at their right edge (the <b>Meters</b>, <b>Device</b>, <b>Time</b> and <b>Play-at-Speed</b> toolbars).  Click and drag on the resizer to resize the toolbar.  
+</p>
+<ul><li> When undocked, the meter toolbars can be resized vertically as well as horizontally.</li>
+<li> A double height meter can be made by undocking, resizing, and then docking again.</li></ul>
+<p><br />
+</p>
+<div id="docking"></div>
+<h2><span class="mw-headline" id="Docking_In_the_Docks">Docking In the Docks</span></h2>
+<p>Toolbars can be docked in either of the two tooldock areas of the Audacity Project window, providing there is space available: either above the <a href="timeline.html" title="Timeline">Timeline</a>, or above the <a href="status_bar.html" title="Status Bar">Status Bar</a> at the bottom of the window (Selection Toolbar is in this location by default). Toolbars can also be dragged to move them to new position in the tooldock. The toolbar positions on exiting Audacity are always remembered when restarting Audacity next time.
+</p><p>When docking a toolbar into a tooldock area, a black triangle will appear, indicating an available docking position. The default toolbar docked positions can be restored at any time by clicking <span class="menu">View &gt; Toolbars &gt; <a href="view_menu_toolbars.html#reset_toolbars" title="View Menu: Toolbars">Reset Toolbars</a></span>.  
+</p>
+<dl><dd><b>Timer Toolbar being docked in the upper tooldock:</b></dd>
+<dd><span title="The black triangle indicates an available docking position for Timer Toolbar at the left of the upper tooldock"><img alt="Timer Toolbar relocation to top tooldock.png" src="../m/images/c/ce/timer_toolbar_relocation_to_top_tooldock.png" width="800" height="65" /></span></dd></dl>
+<p><br />
+</p>
+<dl><dd><b>Timer Toolbar now docked in the upper tooldock, note that this causes the existing toolbars to be moved to accommodate this change:</b></dd>
+<dd><span title="Image of Timer Toolbar now docked in the upper tooldock"><img alt="Timer Toolbar in the upper tooldock.png" src="../m/images/3/38/timer_toolbar_in_the_upper_tooldock.png" width="800" height="64" /></span></dd></dl>
+<p><br />
+</p>
+<dl><dd><b>The lower tooldock with the Timer Toolbar moved:</b></dd>
+<dd><span title="The lower tooldock with Time Toolbar moved/removed"><img alt="Lower Tooldock with Timer toolbar removed.png" src="../m/images/d/d8/lower_tooldock_with_timer_toolbar_removed.png" width="612" height="59" /></span></dd></dl>
+<p><br />
+</p>
+<div id="undocking"></div>
+<h2><span class="mw-headline" id=".27Floating.27_outside_the_Dock">'Floating' outside the Dock</span></h2>
+<p>Toolbars may also be floated anywhere else in or outside the project window, including on a secondary monitor. 
+</p>
+<dl><dd><b>The image below shows the Timer and Recording Meter toolbars floated effectively outside the Project window, <p>with the Playback Meter dragged wider and taller:</p></b></dd>
+<dd><span title="Audacity Project Window with some toolbars floated outside the window"><img alt="Floated Toolbars 3-3-0.png" src="../m/images/5/5a/floated_toolbars_3_3_0.png" width="800" height="466" /></span></dd></dl>
+<p><br />
+</p>
+<div id="show">
+<div id="hide">
+<h2><span class="mw-headline" id="Showing.2FHiding_Toolbars">Showing/Hiding Toolbars</span></h2>
+<p>You can select which toolbars to show using the <span class="menu">View &gt; <a href="view_menu_toolbars.html" title="View Menu: Toolbars"> Toolbars</a></span> command.
+</p><p><br />
+</p>
+<div id="rezize">
+<h2><span class="mw-headline" id="Resizable_toolbars">Resizable toolbars</span></h2>
+<h3><span class="mw-headline" id="Play-at-Speed_Toolbar"><a href="play_at_speed_toolbar.html" title="Play-at-Speed Toolbar">Play-at-Speed Toolbar</a></span></h3>
+<p>The <a href="play_at_speed_toolbar.html" title="Play-at-Speed Toolbar">Play-at-Speed toolbar</a> can also be resized horizontally to give greater accuracy for the slider setting.  You can resize it by clicking and dragging the resizer at the toolbar's right edge.
+</p>
+<h3><span class="mw-headline" id="Meter_Toolbars"><a href="meter_toolbar.html" title="Meter Toolbar">Meter Toolbars</a></span></h3>
+<p>Both <a href="meter_toolbar.html" title="Meter Toolbar">Meter toolbars</a> can be resized. Resizing gives longer scales for the meters and hence a more accurate view of the volume levels.  
+</p>
+<ul><li> If a meter is docked, you can resize it horizontally by clicking and dragging the resizer at the toolbar's right edge.</li>
+<li> To undock a meter, click the <b>Grabber</b> on the left edge and drag. You can drag outside the Audacity project window, too. </li>
+<li> To resize when undocked, click on the triangular resize handle that appears at the bottom right of the toolbar and drag horizontally or vertically. The meters display in vertical orientation when their toolbar height exceeds their width.</li></ul>
+<h3><span class="mw-headline" id="Time_Toolbar"><a href="time_toolbar.html" title="Time Toolbar">Time Toolbar</a></span></h3>
+The <a href="time_toolbar.html" title="Time Toolbar">Time Toolbar</a> can be resized larger and smaller within the tooldock - and enlarged further when floated outside the tooldocks.</div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="#" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Customizing_Toolbar_Layout">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

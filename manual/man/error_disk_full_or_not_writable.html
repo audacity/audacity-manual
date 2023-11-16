@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Error: Disk full or not writable - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Error_Disk_full_or_not_writable rootpage-Error_Disk_full_or_not_writable skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Error: Disk full or not writable</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Error:_Disk_full_or_not_writable#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+</li></ul>
+<div class="intro">This error message is telling you that the disk you are using is full, or that the disk or file that you are trying to write to is write-protected. </div>
+<div id="contents"></div>
+<h2><span class="mw-headline" id="Contents">Contents</span></h2>
+<ol><li><a href="#full">Disk is full</a></li>
+<li><a href="#salvage">Salvaging your project</a>
+<ul><li><a href="#space">Free up sufficient space on the disk</a></li>
+<li><a href="#bigger">Save the project to a different disk</a></li>
+<li><a href="#copy">If Audacity is already closed, manually copy or move the project to another disk</a></li></ul></li>
+<li><a href="#protected">Write-protected files or disks</a></li>
+<li><a href="#size">Size occupancy</a></li>
+<li><a href="#low">Low disk space on startup</a></li></ol>
+</li></ol>
+<p><br />
+</p>
+<div id="full"></div>
+<h2><span class="mw-headline" id="Disk_is_full">Disk is full</span></h2>
+<p>You get the following error message when you are trying to write to a disk that is full or if the disk or file is <a href="#protected">write-protected</a> (or you do not have sufficient privileges to access it).
+</p>
+<dl><dd><span title="Disk full or not writable error message"><img alt="File Error - disk full.png" src="../m/images/b/bd/file_error_disk_full.png" width="378" height="164" /></span></dd></dl>
+<p>This can happen when you are:
+</p>
+<ul><li>Recording</li>
+<li>Saving a project</li>
+<li>Exporting from a project</li>
+<li>Importing into a project</li>
+<li>Applying effects</li>
+<li>Editing</li></ul>
+<h3><span class="mw-headline" id="Disk_full_when_editing">Disk full when editing</span></h3>
+<p>If your disk is filling up while editing you will see this warning message:
+</p>
+<dl><dd><span title="Disk full warning"><img alt="Warning - disk is full - Yellow-Zone.png" src="../m/images/c/c2/warning_disk_is_full_yellow_zone.png" width="378" height="179" /></span></dd></dl>
+<h3><span class="mw-headline" id="Disk_full_when_Saving_a_project">Disk full when Saving a project</span></h3>
+<p>If your disk does not have sufficient space to save a project you will see this error message:
+</p>
+<dl><dd><span title="Disk full warning on saving project"><img alt="Error Saving Project - disk full.png" src="../m/images/a/a6/error_saving_project_disk_full.png" width="378" height="164" /></span></dd></dl>
+<p><br />
+</p>
+<div id="salvage"></div>
+<h2><span class="mw-headline" id="Salvaging_your_project">Salvaging your project</span></h2>
+<p>To avoid losing the project there are three options:
+</p>
+<ul><li> <a href="#space">Free up sufficient space on the disk</a></li>
+<li> <a href="#bigger">Save the project to a different disk</a></li>
+<li> <a href="#copy">If Audacity is already closed, manually copy or move the project to another disk</a></li></ul>
+<p><br />
+</p>
+<div id="space"></div>
+<h3><span class="mw-headline" id="1.29_Free_up_space_on_the_disk">1) Free up space on the disk</span></h3>
+<p>Free up some space on the disk you are working on.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
+</td>
+<td align="left" valign="top">Do <i><b>not</b></i> delete the AUP3, WAL or <i>(Windows only)</i> SHM files for your project as part of this freeing up of space.
+</td></tr></table>
+</div>
+<p>If your project is on your main internal drive, it may be possible to make a significant amount of space simply by emptying the recycle bin (<i>Bin/Trash</i> on Mac).
+</p><p>Further:
+</p>
+<ul><li><span style="font-weight: bold; font-size:118%">Windows:</span> Just delete unwanted files and or folders with <span class="menu">Shift + Delete</span> </li>
+<li><span style="font-weight: bold; font-size:118%">Mac:</span> Move files and/or folders to the Bin/Trash then empty the Bin/Trash (<span class="menu">Finder &gt; Empty Bin/Trash</span>). <i>(If you do not empty the BinTrash the space will not actually be freed up.)</i> </li>
+<li><span style="font-weight: bold; font-size:118%">Linux:</span> Use Delete to remove unwanted files and or folders.  If your desktop uses "Move to Recycle bin / Wastebasket" this will not actually remove the files from the disk until you empty the recycle bin / wastebasket.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Do not try to reduce space usage by deleting part of the project in Audacity, this will only try to take up more temporary space on the disk.
+</td></tr></table></div>
+<div id="bigger"></div>
+<h3><span class="mw-headline" id="2.29_Save_to_a_different.2C_bigger.2C_disk">2) Save to a different, bigger, disk</span></h3>
+<p><span class="menu">File &gt; <a href="file_menu_save_project.html#save_project_as" title="File Menu: Save Project">Save Project As</a></span> or <span class="menu">File &gt; <a href="file_menu.html#Export" title="File Menu">Export</a></span> to a different disk with sufficient space.
+</p><p>You may still need to free up some space on the original disk for this to work, but not as much as for the <a href="#space">above</a> option.
+</p>
+<div id="copy"></div>
+<h3><span class="mw-headline" id="3.29_Copy.2FMove_the_project_files_to_a_bigger_disk">3) Copy/Move the project files to a bigger disk</span></h3>
+<ul><li>If the project was previously saved, you may use your operating system's file manager to copy or move the project files: AUP3, WAL (and SHM on Windows) to another disk with sufficient space. Then open the AUP3 project file from there with Audacity and close it to make it complete.</li>
+<li>If the project was not previously saved, you may use your operating system's file manager to copy or move the project temporary files to another disk with sufficient space.</li></ul>
+<div class="note">If Audacity is closed before the project has been saved, the temporary project files will be automatically and permanently deleted.
+<dl><dd>If Audacity has crashed, the project temporary files may (or may not) still be present and usable.</div></dd>
+<dd>The default location of an unsaved project's temporary files are:
+<ul><li> <b>Windows:</b> <span class="path">C:\Users\&lt;your username&gt;\AppData\Local\Audacity\SessionData</span></li>
+<li> <b>macOS</b> <span class="path">/Users/&lt;your username&gt;/Library/Application Support/SessionData</span></li>
+<li> <b>GNU/Linux:</b> <span class="path">/var/tmp/audacity-&lt;your username&gt;</span></li></ul></dd>
+<dd>Copy the entire "SessionData" ("audacity-&lt;your username&gt;" on Linux) folder to a new disk.</dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">Before restarting Audacity, ensure that there is a reasonable amount of disk space on the drive that has Audacity's temporary folder. To recover the project requires significantly more space than the folder that you have just copied.
+</td></tr></table></div>
+<p>To open the project, launch or restart Audacity, then from <span class="menu">File &gt; Open</span> search for the file with the extension ".aup3unsaved" in the copied folder. After recovery you will need to save the project or export your work.
+</p>
+<div id="protected"></div>
+<h2><span class="mw-headline" id="Write-protected_files_or_disks">Write-protected files or disks</span></h2>
+<p>It is also possible the the disk or file you are trying to write to is write-protected or you have insufficient privileges to write there.
+</p><p>You will need to change the write-protection to enable the file to be written but that assumes that you have sufficient privileges to do that.
+</p><p><br />
+</p>
+<div id="size"></div>
+<h2><span class="mw-headline" id="Size_occupancy">Size occupancy</span></h2>
+<p>As a guideline, one hour of stereo recording at default settings (44.1kHz, 32-bit) occupies approximately 1.2 GB of disk space
+</p><p><br />
+</p>
+<div id="low"></div>
+<h2><span class="mw-headline" id="Low_disk_space_on_startup">Low disk space on startup</span></h2>
+<p>Audacity will warn on start up or when using <span class="menu">File &gt; New</span> to create a new project if you have 100 MB or less space in the <a href="directories_preferences.html" title="Directories Preferences">temporary folder</a> for recording or editing.
+</p><p>100MB is approximately 5 minutes of stereo audio or 10 minutes of mono audio at default settings. 
+</p>
+<dl><dd><span title="Low Disk Space Warning"><img alt="Low disk space on startup.png" src="../m/images/4/4f/low_disk_space_on_startup.png" width="393" height="164" /></span></dd></dl>
+<p>This means that you are very low on disk space on the volume that holds your temporary Audacity work files (by default that is the system disk).  
+</p><p>You either need to free up space on that volume or reset your temporary file storage be on a different volume with <a href="directories_preferences.html" title="Directories Preferences">Directories Preferences</a>.
+</p><p><br />
+</p>
+
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Error:_Disk_full_or_not_writable">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>
