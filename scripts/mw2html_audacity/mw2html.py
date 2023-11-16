@@ -21,6 +21,7 @@ Moved to Python3 by Jack Thomson, May 2020
 
 __version__ = '0.1.0.3'
 
+import base64
 import re
 import sys
 import getopt
@@ -269,7 +270,7 @@ def pre_html_transform(doc, url):
         doc = fix_move_href_tags(doc)
     if config.remove_history:
         doc = html_remove_image_history(doc)
-        
+
     doc = html_remove_translation_links(doc)
 
     return doc
@@ -449,7 +450,7 @@ def monobook_hack_skin_css(doc, url):
                           '\n/* end edit by mw2html */\n')
 
     doc = doc.replace('h3 { font-size: 90%; }', 'h3 { font-size: 130%; }')
-    
+
     # Remove external link icons.
     if config.remove_png:
         doc = re.sub(r'#bodyContent a\[href \^="https://"\][\s\S]+?\}', r'', doc)
@@ -681,14 +682,14 @@ def url_to_filename(url):
         if L[4].startswith('title=') and L[2].endswith('index.php'):
             L[4] = L[4][len('title='):]
             L[2] = L[2][:-len('index.php')]
-            
+
     if lpath[-1]=='man':
         L[2] = INDEX_HTML
     if lpath[-1].lower().startswith( 'quick_help'):
         L[2] = QHELP_HTML
         L[3] = ''
-        
-       
+
+
 
     L[2] = L[2].strip('/')
 
@@ -881,7 +882,7 @@ def should_follow(url):
         # JKC: we do allow css from 'strange' places.
         if '.css' in L[-1]:
             return True
-        
+
         forbidden_parents = ['.php', '.html', '.htm']
         for fp in forbidden_parents:
             if fp in L[-1]:
@@ -915,7 +916,7 @@ def parse_html(doc, url, filename):
 
     # in this code we change each absolute url in L
     # into a relative one.
-    # we also kick-off zillions of subthreads to collect 
+    # we also kick-off zillions of subthreads to collect
     # more pages.
     for item in L:
         u = item.url
@@ -1059,14 +1060,14 @@ def run(out=sys.stdout):
         if config.debug:
             out.write(url + '\n => ' + filename + '\n\n')
         n += 1
-        
+
         # Enqueue URLs that we haven't yet spidered.
         for u in new_urls:
             if normalize_url(u) not in complete:
                 # Strip off any #section link.
                 if '#' in u:
                     u = u[:u.index('#')]
-                pending.add(u)        
+                pending.add(u)
 
     conn.close()
     print("connection to", domain, "closed.")
@@ -1202,6 +1203,10 @@ def main():
         if opt in ['-i', '--index']:
             config.index = arg
 
+    user = os.environ.get('MW2HTML_USER', '')
+    passw = os.environ.get('MW2HTML_PASSWORD', '')
+    if user != '' and passw != '':
+        headers["Authorization"] = "Basic {}".format(base64.b64encode(bytes(f"{user}:{passw}", "utf-8")).decode("ascii"))
     # Run program
     run()
 

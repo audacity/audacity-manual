@@ -3,6 +3,10 @@ name: Update Audacity Manual
 on:
    workflow_dispatch:
 
+env:
+  MW2HTML_USER: ${{ secrets.MW2HTML_USER }}
+  MW2HTML_PASSWORD: ${{ secrets.MW2HTML_PASSWORD }}
+
 jobs:
    update:
       runs-on: ubuntu-latest
