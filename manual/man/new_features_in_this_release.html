@@ -34,14 +34,58 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><center><a href="http://audacityteam.org/" title="size=50%" rel="nofollow"><img alt="size=50%" src="../m/images/8/88/audacity_logo_signika_512_transparent.png" width="512" height="138" /></a></center>
-<div class="intro"><p style="font-size:120%"><b>This page is an overview of prominent new functionality that has been introduced in Audacity 3.0.5</b></p>
+<div class="intro"><span style="font-size:120%"><b>This page is an overview of prominent new functionality that has been introduced in Audacity 3.1</b>
 <p><br />
 </p>
-<p style="font-size:120%"><b>Version 3.0.5 is a hotfix release for macOS.</b></p></div>
+<b>Version 3.1 is a release focused on clips and usability.</b></span></div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<p>Fixed a bug on macOS which caused data loss when opening a project with cmd+o while another project already was open and the decimal separators weren't a dot. (<a href="https://github.com/audacity/audacity/issues/1571">#1571</a>)
+<p>There is an overview video for 3.1 available on YouTube: 
 </p>
-
+<dl><dd> <a href="https://audacityteam.org/3.1.0-video" title="Watch the overview video" rel="nofollow"><img alt="Watch the overview video" src="../m/images/1/1e/audacity_3.1_video.png" width="640" height="360" /></a></dd></dl>
+<p><br />
+</p>
+<ol><li><a href="#handles"><b>Clip-handles</b></a></li>
+<li><a href="#smart"><b>Smart Clips</b></a></li>
+<li><a href="#looping"><b>Playback Looping</b></a></li>
+<li><a href="#rightclick"><b>Context Menus</b></a></li>
+<li><a href="#defaults"><b>New defaults</b></a></li>
+<li><a href="#bugs"><b>Bug fixes</b></a></li>
+<li><a href="#aup"><b>Updating from Audacity 2.x to 3.x</b></a></li></ol>
+<p><br />
+</p>
+<div id="handles"></div>
+<h2><span class="mw-headline" id="Clip-handles">Clip-handles</span></h2>
+<p><img alt="A clip handle" src="../m/images/b/b8/clip_handle_detail.png" title="A clip handle" width="168" height="97" />
+</p><p>The old <b>Time Shift Tool</b> <img alt="Time Shift Tool button" src="../m/images/a/ad/timeshift.png" title="Time Shift Tool button" width="27" height="27" /> has been replaced by <b>Clip handles</b>. Clip handles are the rounded corners above the clip which feature the clip title. You can move clips around by simply clicking and dragging the clip handle, and you can rename clips by double-clicking the clip handle. 
+</p><p>Label tracks don't feature clip handles, but they can be moved around just the same: Simply click on the label (the bar for region labels, the circle for point labels) and drag them to their new place. 
+</p>
+<div id="smart"></div>
+<h2><span class="mw-headline" id="Smart_clips">Smart clips</span></h2>
+<p><img alt="Drag at the upper edge of the clip handle to move it" src="../m/images/f/f1/smart_clip.png" title="Drag at the upper edge of the clip handle to move it" width="553" height="160" />
+</p><p>Audacity now can trim clips non-destructively by dragging the upper edge of a clip. This means that you can make clips shorter, then do some edits and then decide it should be longer anyway - the data will still be there. Copy-pasting the trimmed clip also will have that info available!
+</p><p><br />
+</p>
+<div id="looping"></div>
+<h2><span class="mw-headline" id="Playback_Looping">Playback Looping</span></h2>
+<p>Audacity now features a new playback looping button. Enabling it will mark the current selection as a looping region, in which the playback will loop. You then can edit and select independently of the looping region. This feature replaces the previous Shift+Play behavior. 
+</p><p>When looping is enabled, you can press Shift+Play to only play the looping region once. 
+</p>
+<div id="rightclick"></div>
+<h2><span class="mw-headline" id="Context_Menus">Context Menus</span></h2>
+<p>Since it's conception in 2000, Audacity had cross-platform support of both Windows, macOS and Linux as it's goal. But macOS at the time didn't have a right-click, so to not hide features from mac users, Audacity didn't have any right-click context menus. The situation has changed since then, and there no longer is anything hindering right-click context menus, so they now have been added to a few places, such as in the waveform of clips and the empty (dark grey) space outside of tracks, providing relevant options right there. 
+</p>
+<div id="defaults"></div>
+<h2><span class="mw-headline" id="New_defaults">New defaults</span></h2>
+<ul><li> In the preferences, <span class="menu">Tracks &gt; Track behaviors &gt; Editing a clip can move other clips</span> is now disabled by default. This makes multi-track editing easier (even if you're not using <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync Lock</a>). You may now see an error saying that there isn't enough space when pasting clips in-between other clips though, so if that happens to you too frequently, you may want to turn it back on. </li>
+<li> The spectrogram defaults have been changed: scale type to Mel (was Linear), top of scale to 20000 Hz (was 8000 Hz), window size to 2048 (was 1024), and zero padding to 2 (was 1).</li></ul>
+<p><br />
+</p>
+<div id="bugs"></div>
+<h2><span class="mw-headline" id="Bug_fixes">Bug fixes</span></h2>
+<p>Since Audacity 3.0.3, there have been two hot-fix releases (3.0.4 and 3.0.5), both fixing a bug each which could lead to data corruption. Thanks to the automatic updates introduced in 3.0.3, we actually could make these hotfixes and be reasonably certain that they'd actually reach users and potentially avert data loss. 
+</p><p>In addition, we fixed a number of bugs, from the very small (the play button had 1-2px cut off at the bottom) to some larger ones (especially crashes/bouncing balls of death). Some more details can be found in the <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.1">release notes</a>. 
+</p>
+<div id="aup"></div>
 <h2><span class="mw-headline" id="Updating_from_Audacity_2.x_to_Audacity_3.x"><a href="updating_from_audacity_2.x_to_audacity_3.html" title="Updating from Audacity 2.x to Audacity 3.x">Updating from Audacity 2.x to Audacity 3.x</a></span></h2>
 <p>With the release of Audacity 3.0.0 the project file structure of Audacity was changed significantly with the entire project contained in a single unified database file.
 </p><p>If you have already updated to any 3.x version you should already be aware of this.
@@ -52,7 +96,9 @@
 </p>
 <ul><li>Note that this will leave behind the old <b>AUP</b> file and its associated <b>_data</b> folder which you will probably want to delete to recover disk space.</li>
 <li>Audacity version 3.x should be able to open projects from Audacity 1.1 onwards - but not from 1.0</div></li></ul>
-
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.1"><b>&gt;</b> Audacity Release Notes 3.1</a> <i>- detailed release notes for this release of Audacity</i>
+</p>
 
 
 
@@ -129,7 +175,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-08-24 - <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

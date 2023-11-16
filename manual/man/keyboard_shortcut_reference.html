@@ -40,9 +40,7 @@
 <li> Shortcuts that are only in the <b>Full</b> set are shown like so: <span class="kbrd" style="background-color: #eaeafa">Ctrl + # </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i>.</li>
 <li> Shortcuts that have not been assigned, that you can assign using keyboard preferences, are shown like so <i>(unassigned)</i>.</li></ul>
 <p>Some less commonly used commands are not in the default menus but they can be accessed by menu by enabling <b>Show extra menus</b> in <a href="interface_preferences.html" title="Interface Preferences">Interface Preferences</a>.
-</p>
-<div class="note">For menu commands that are enabled <i>(not grayed-out)</i> if you <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and click on the submenu item, instead of executing the command the <b>Keyboard Preferences</b> opens at the chosen command.  </div>
-<p>These same commands are also listed on the page <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>, but in a slightly different format that shows information relevant to people using the commands via <a href="scripting.html" title="Scripting">Scripting</a>.
+</p><p>These same commands are also listed on the page <a href="scripting_reference.html" title="Scripting Reference">Scripting Reference</a>, but in a slightly different format that shows information relevant to people using the commands via <a href="scripting.html" title="Scripting">Scripting</a>.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -65,7 +63,7 @@
 </tr>
 <tr valign="top">
 <td width="25%"><b><a href="#edit_menu">Edit Menu:</a></b><br /><a href="#edit_remove_special_submenu">Remove Special</a>, <a href="#edit_clip_boundaries_submenu">Clip Boundaries</a>, <a href="#edit_labels_submenu">Labels</a>, <a href="#edit_labeled_audio_submenu">Labeled Audio</a>, </td>
-<td width="25%"><b><a href="#transport_menu">Transport Menu:</a></b><br /><a href="#transport_play_submenu">Play</a>, <a href="#transport_record_submenu">Record</a>, <a href="#transport_scrubbing_submenu">Scrubbing</a>, <a href="#transport_cursor_to_submenu">Cursor to</a>, <a href="#transport_play_region_submenu">Play Region</a>, <a href="#transport_transport_options_submenu">Transport Options</a>, </td>
+<td width="25%"><b><a href="#transport_menu">Transport Menu:</a></b><br /><a href="#transport_play_submenu">Play</a>, <a href="#transport_record_submenu">Record</a>, <a href="#transport_scrubbing_submenu">Scrubbing</a>, <a href="#transport_cursor_to_submenu">Cursor to</a>, <a href="#transport_play_region_submenu">Looping</a>, <a href="#transport_transport_options_submenu">Transport Options</a>, </td>
 <td width="25%"><b><a href="#effect_menu">Effect Menu:</a></b><br /><a href="#effect_built-in_submenu">Built-in</a>, <a href="#effect_ladspa_submenu">LADSPA</a>, <a href="#effect_nyquist_submenu">Nyquist</a>, </td>
 <td width="25%"><b><a href="#extra_menu">Extra Menu:</a></b><br /><a href="#extra_transport_submenu">Transport</a>, <a href="#extra_tools_submenu">Tools</a>, <a href="#extra_mixer_submenu">Mixer</a>, <a href="#extra_edit_submenu">Edit</a>, <a href="#extra_play-at-speed_submenu">Play-at-Speed</a>, <a href="#extra_seek_submenu">Seek</a>, <a href="#extra_device_submenu">Device</a>, <a href="#extra_selection_submenu">Selection</a>, <a href="#extra_focus_submenu">Focus</a>, <a href="#extra_cursor_submenu">Cursor</a>, <a href="#extra_track_submenu">Track</a>, <a href="#extra_scriptables_i_submenu">Scriptables I</a>, <a href="#extra_scriptables_ii_submenu">Scriptables II</a>, </td>
 </tr>
@@ -1185,11 +1183,11 @@
 <td>These commands let you move the cursor to the start or end of the selection, track or any adjacent Clip that you may have
 </td></tr>
 <tr>
-<td><a href="transport_menu.html#play_region" title="Transport Menu">Play Region</a>
+<td><a href="#transport_play_region_submenu">Looping</a>
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>These commands enable you to lock a play region and unlock it
+<td>These commands enable you to control looping playback
 </td></tr>
 <tr>
 <td><a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a>
@@ -1231,11 +1229,11 @@
 <td>Starts playback like "Play/Stop", but stopping playback sets the restart position to the stop point. When stopped, this command is the same as "Play/Stop". When playing, this command stops playback and moves the cursor (or the start of the selection) to the position where playback stopped.
 </td></tr>
 <tr>
-<td><a href="transport_menu_playing.html#loop_play" title="Transport Menu: Playing">Loop Play</a>
+<td><a href="transport_menu_playing.html#play_once" title="Transport Menu: Playing">Play Once/Stop</a>
 </td>
 <td><span class="kbrd" style="background-color: #d0d0f8">Shift+Space</span>
 </td>
-<td>Plays the selection over and over again.
+<td>Plays the loop region only once when looping is enabled.
 </td></tr>
 <tr>
 <td><a href="transport_menu_playing.html#pause" title="Transport Menu: Playing">Pause</a>
@@ -1390,8 +1388,7 @@
 <td>Moves the cursor to the end of the project.
 </td></tr></table>
 <div id="transport_play_region_submenu"></div>
-<h3><span class="mw-headline" id="Transport:_Play_Region"><a href="transport_menu_play_region.html" title="Transport Menu: Play Region">Transport: Play Region</a></span></h3>
-<div class="note">These commands enable you to lock a play region and unlock it </div>
+<h3><span class="mw-headline" id="Transport:_Looping">Transport: Looping</span></h3>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Action
@@ -1401,18 +1398,39 @@
 <th width="75%">Description
 </th></tr>
 <tr>
-<td><a href="transport_menu_play_region.html#lock" title="Transport Menu: Play Region">Lock</a>
+<td>Loop on/off
 </td>
-<td><i>(unassigned)</i>
+<td><span class="kbrd" style="background-color: #e0e0f0">L</span>
 </td>
-<td>Locks standard playback to the current position of the playback region, or to the current position of the Quick-Play region).
+<td>Toggles playback looping on/off.
 </td></tr>
 <tr>
-<td><a href="transport_menu_play_region.html#unlock" title="Transport Menu: Play Region">Unlock</a>
+<td>Clear Loop
 </td>
 <td><i>(unassigned)</i>
 </td>
-<td>Removes the Play Region Lock.
+<td>Clears the looping region.
+</td></tr>
+<tr>
+<td>Set Loop to Selection
+</td>
+<td><i>(unassigned)</i>
+</td>
+<td>Sets the current selection range as the new looping region.
+</td></tr>
+<tr>
+<td>Set Loop In
+</td>
+<td><i>(unassigned)</i>
+</td>
+<td>Sets the start of the looping region to the current selection.
+</td></tr>
+<tr>
+<td>Set Loop Out
+</td>
+<td><i>(unassigned)</i>
+</td>
+<td>Sets the end of the looping region to the current selection.
 </td></tr></table>
 <div id="transport_transport_options_submenu"></div>
 <h3><span class="mw-headline" id="Transport:_Transport_Options"><a href="transport_menu_transport_options.html" title="Transport Menu: Transport Options">Transport: Transport Options</a></span></h3>
@@ -2663,13 +2681,6 @@
 <td>Chooses Zoom tool.
 </td></tr>
 <tr>
-<td><a href="extra_menu_tools.html#time_shift_tool" title="Extra Menu: Tools">Time Shift Tool</a>
-</td>
-<td><span class="kbrd" style="background-color: #d0d0f8">F5</span>
-</td>
-<td>Chooses Time Shift tool.
-</td></tr>
-<tr>
 <td><a href="extra_menu_tools.html#multi_tool" title="Extra Menu: Tools">Multi Tool</a>
 </td>
 <td><span class="kbrd" style="background-color: #d0d0f8">F6</span>
@@ -3644,7 +3655,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-08-24 - <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

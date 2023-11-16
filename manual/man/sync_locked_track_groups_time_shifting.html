@@ -39,14 +39,13 @@
 <h3><span class="mw-headline" id="Align_Tracks"><a href="tracks_menu_align_tracks.html" title="Tracks Menu: Align Tracks">Align Tracks</a></span></h3>
 <p><b><span class="menu">Tracks &gt; <a href="tracks_menu_align_tracks.html" title="Tracks Menu: Align Tracks">Align Tracks</a></span>:</b> All of the "Align Tracks" commands (with the exception of the "Align Together" command) will move all tracks in a group by the same amount, even if this means pushing the start(s) of some track(s) before zero on the timeline. By its nature the <b>Align Tracks Together</b> command cannot respect sync-lock since its job is to align the selected tracks so they all start at the same point on the timeline.
 </p>
-<h3><span class="mw-headline" id="Time_Shift_Tool"><a href="time_shift_tool.html" title="Time Shift Tool">Time Shift Tool</a></span></h3>
-
-<p>When moving an <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">audio clip</a> left or right with the <a href="time_shift_tool.html" title="Time Shift Tool">Time Shift Tool</a>:
+<h3><span class="mw-headline" id="Moving_clips">Moving clips</span></h3>
+<p>When moving an <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">audio clip</a> left or right:
 </p>
 <ul><li> The audio clip under the mouse pointer is moved,</li>
 <li> Any audio clips within the track group that overlap time-wise with the clip being moved, are also moved,</li>
 <li> All labels within the track group are moved.</li></ul>
-<p>In addition, if there is a time selection, and the Time Shift Tool is used within the selection, then:
+<p>In addition, if there is a time selection, and the Clip-handle drag-bar is used within the selection, then:
 </p>
 <ul><li> All selected audio clips are also moved.</li></ul>
 <div class="note">Note that:
@@ -59,9 +58,8 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">Using the Time Shift Tool you <i><b>must</b></i> click on an audio track and <i><b>not</b></i> on a label track.  <p>If you click on a label track and drag with the Time Shift tool the entire label track will move keeping its labels synchronized with each other but <i><b>no</b></i> audio will move.</p>
-
-</li></ul>
+<td align="left" valign="top">When dragging clips, you <i><b>must</b></i> click on an audio track and <i><b>not</b></i> on a label track.  <p>If you click on a label track and drag with the drag-bar the entire label track will move keeping its labels synchronized with each other but <i><b>no</b></i> audio will move.</p>
+ 
 </td></tr></table></div>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -81,14 +79,9 @@
 <dd><span title="align with cursor"><img alt="SLTG Time Shift 2.png" src="../m/images/0/0a/sltg_time_shift_2.png" width="617" height="229" /></span></dd></dl>
 <dl><dd><b>Result:</b> The selected track is moved so the start of the track aligns with the cursor. </dd>
 <dd>The Sync-Locked track moves by the same amount.</div></dd></dl>
-<h2><span class="mw-headline" id="Example-2:_Time_Shifting">Example-2: <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shifting</a></span></h2>
-<div class="example"><b> Before time shifting the tracks with the <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift</a> tool <img alt="Time Shift Tool button" src="../m/images/3/3c/timeshifttool.png" title="Time Shift Tool button" width="20" height="20" /></b>
-<dl><dd><span title="Before time shifting the tracks with the Time Shift tool"><img alt="SLTG Time Shift 3-2.png" src="../m/images/f/fc/sltg_time_shift_3_2.png" width="617" height="185" /></span></dd></dl>
-<p><br />
-</p>
-<dl><dd><b>After time shifting the tracks</b></dd>
-<dd><span title="after time shifting the tracks"><img alt="SLTG Time Shift 4.png" src="../m/images/c/cf/sltg_time_shift_4.png" width="616" height="184" /></span></dd></dl>
-<dl><dd><b>Result:</b> All the tracks move together.</div></dd></dl>
+<h2><span class="mw-headline" id="Example-2:_Moving_a_clip">Example-2: Moving a clip</span></h2>
+<div class="example"><b>When clicking and dragging one clip handle, all clips in the group move.</b>
+<dl><dd><img alt="a clip is moved by its clip handle" src="../m/images/4/4a/sltg_clip_handle_move.png" title="a clip is moved by its clip handle" width="862" height="349" /></div></dd></dl>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="sync_locked_track_groups_time_stretching.html" title="Sync-Locked Track Groups - Time Stretching"><b>&gt;</b>&#160; Forward to: Sync-Locked Track Groups - Time Stretching</a> <br />
 </p><p><a href="sync_locked_track_groups_editing.html" title="Sync-Locked Track Groups - Editing"><b>&lt;</b>&#160; Back to: Sync-Locked Track Groups - Editing</a> <br />
@@ -170,7 +163,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-08-24 - <a href="https://alphamanual.audacityteam.org/man/Sync-Locked_Track_Groups_-_Time_Shifting">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Sync-Locked_Track_Groups_-_Time_Shifting">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

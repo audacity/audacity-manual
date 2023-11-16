@@ -40,24 +40,15 @@
 </p>
 <ul><li> Create a <a href="audacity_selection.html" title="Audacity Selection">selection</a> with the mouse</li>
 <li> <a href="audacity_selection.html#changing" title="Audacity Selection">Modify the selection boundaries</a> with the mouse</li>
-<li> <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift</a> a  <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">track or clip</a> by dragging</li></ul>
-<p>then the selection boundary (or the boundary of the Time Shifted track or clip) will snap to the closest of the following physical boundaries:
+<li> Dragging a clip using its <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bar</a>.</li></ul>
+<p>then the selection boundary (or the boundary of the moved clip) will snap to the closest of the following physical boundaries:
 </p>
 <ul><li> The start or end of a track or clip</li>
 <li> The start or end of a region <a href="label_tracks.html" title="Label Tracks">label</a></li>
 <li> The time position represented by a point label </li>
 <li> Time zero (0 on the <a href="timeline.html" title="Timeline">Timeline</a>).</li></ul>
-<p>Additionally, clicking close to one of the above boundaries will automatically snap the click to the exact point of that boundary, moving the cursor position to the boundary. 
+<p>Additionally, clicking close to one of the above boundaries will automatically snap the click to the exact point of that boundary, moving the cursor position to the boundary.
 </p>
-<h2><span class="mw-headline" id="Examples">Examples</span></h2>
-<div class="example">In the image below, a clip in the "Guest" track is being dragged leftwards with the mouse, as shown by the <img alt="Time Shift Tool mouse pointer" src="../m/images/3/3c/timeshifttool.png" title="Time Shift Tool mouse pointer" width="20" height="20" style="vertical-align: bottom" /> <a href="tools_toolbar.html#timeshift" title="Tools Toolbar">Time Shift Tool</a> mouse pointer. When the clip reaches the right-hand boundary of the second clip in the track above, a vertical yellow Snap Guide line appears through all the tracks, showing the position of the snap boundary. Once this Snap Guide is visible we can release the mouse and the dragged clip will be perfectly aligned with the one above:
-<dl><dd><span title="Yellow vertical Snap Guide visible in all tracks when the left-dragged clip aligns with the clip above"><img alt="SnapGuideDrag.png" src="../m/images/3/34/snapguidedrag.png" width="570" height="319" /></span></div></dd></dl>
-<p><br />
-</p>
-<div class="example">Snap Guides let you easily select from one physical boundary to another. In the image below we changed to<img alt="Selection Tool button" src="../m/images/1/1f/ibeam.png" title="Selection Tool button" width="20" height="20" style="vertical-align: bottom" /><a href="tools_toolbar.html#selection" title="Tools Toolbar">Selection Tool</a>. We can now hover the mouse <i>anywhere close</i> to the boundary of any clip, so that clicking at that point snaps the cursor to <i>exactly</i> the boundary of that clip. In the image, we clicked to snap the cursor to the left edge of the third clip in the "Host" track, then dragged the selection until it snapped to exactly the right edge of the third clip in the "Guest" track. We now see two yellow vertical lines corresponding to the boundaries we are snapping to, again extending through all tracks in the project. 
-<dl><dd><span title="A selection snapped to the left edge of a clip in the &#39;Host&#39; track and to the right edge of a different clip in the &#39;Guest&#39; track"><img alt="SnapGuides.png" src="../m/images/4/46/snapguides.png" width="570" height="321" /></span></div></dd></dl>
-<div class="example">The example below shows using Snap Guide to align the cursor with a point label. Using <img alt="Selection Tool button" src="../m/images/1/1f/ibeam.png" title="Selection Tool button" width="20" height="20" style="vertical-align: bottom" /><a href="tools_toolbar.html#selection" title="Tools Toolbar">Selection Tool</a>, we hovered then clicked at a point approximately close to the "02" label. Although we were zoomed a long way out, the click snapped to the label position, moving the cursor to exactly that point as indicated by the yellow Snap Guide line in the audio track above. Similarly, you can click to snap to either boundary of a region label.
-<dl><dd><span title="Snap Guide aligning with a point label in the label track below a stereo audio track"><img alt="Snapping to a point label.png" src="../m/images/6/63/snapping_to_a_point_label.png" width="578" height="226" /></span></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -65,7 +56,20 @@
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
 <td align="left" valign="top">If there are two boundaries very close to one another and Audacity cannot tell which is appropriate, Audacity will not snap to either. To snap to one of them, <a href="zooming.html" title="Zooming">zoom in</a> so you can clearly position the mouse closer to one boundary than the other.
-</td></tr></table></div></div>
+</td></tr></table></div>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<div class="example">In the image below, there are three tracks: A "Host" track (where the host is asking the questions Q1-Q4), a "Guest" track where the guest is giving answers A1-A3, and a track for background music.
+<p>The clip A1 is being dragged with the mouse. When it reaches the boundary, a vertical yellow Snap Guide line appears through all the tracks, showing the position of the snap boundary. Once this Snap Guide is visible we can release the mouse and the dragged clip will be perfectly aligned with the one above:
+</p>
+<dl><dd><span title="Yellow vertical Snap Guide visible in all tracks when the left-dragged clip aligns with the clip above"><img alt="SnapGuideDrag.png" src="../m/images/3/34/snapguidedrag.png" width="930" height="441" /></span></div></dd></dl>
+<p><br />
+</p>
+<div class="example">Snap Guides let you easily select from one physical boundary to another. In the image below we use the  <img alt="Selection Tool button" src="../m/images/1/1f/ibeam.png" title="Selection Tool button" width="20" height="20" style="vertical-align: bottom" /><a href="tools_toolbar.html#selection" title="Tools Toolbar">Selection Tool</a>. We can now hover the mouse <i>anywhere close</i> to the boundary of any clip, so that clicking at that point snaps the cursor to <i>exactly</i> the boundary of that clip. 
+<p>In the image, we selected the a portion of the background music from exactly where Q3 started to exactly where A3 ended. We now see two yellow vertical lines corresponding to the boundaries we are snapping to, again extending through all tracks in the project. 
+</p>
+<dl><dd><span title="A selection snapped to the left edge of a clip in the &#39;Host&#39; track and to the right edge of a different clip in the &#39;Guest&#39; track"><img alt="SnapGuides.png" src="../m/images/4/46/snapguides.png" width="791" height="443" /></span></div></dd></dl>
+<div class="example">The example below shows using Snap Guide to align the cursor with a point label. Using <img alt="Selection Tool button" src="../m/images/1/1f/ibeam.png" title="Selection Tool button" width="20" height="20" style="vertical-align: bottom" /><a href="tools_toolbar.html#selection" title="Tools Toolbar">Selection Tool</a>, we hovered then clicked at a point approximately close to the "02" label. Although we were zoomed a long way out, the click snapped to the label position, moving the cursor to exactly that point as indicated by the yellow Snap Guide line in the audio track above. Similarly, you can click to snap to either boundary of a region label.
+<dl><dd><span title="Snap Guide aligning with a point label in the label track below a stereo audio track"><img alt="Snapping to a point label.png" src="../m/images/6/63/snapping_to_a_point_label.png" width="496" height="239" /></span></div></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -154,7 +158,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2021-08-24 - <a href="https://alphamanual.audacityteam.org/man/Boundary_Snap_Guides">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2021-11-16 - <a href="https://alphamanual.audacityteam.org/man/Boundary_Snap_Guides">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
