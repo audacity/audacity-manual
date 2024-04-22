@@ -59,7 +59,7 @@
 <div id="settings"></div>
 <h2><span class="mw-headline" id="Adjusting_settings_before_you_record">Adjusting settings before you record</span></h2>
 <h3><span class="mw-headline" id="Latency_correction:">Latency correction:</span></h3>
-<p>It is a <i><b>pre-requesite</b></i> that you tune the <a href="latency_test.html" title="Latency Test"><b>latency correction</b></a> setting  for your audio interface so that play-back and recording are synchronized.
+<p>It is a <i><b>pre-requesite</b></i> that you tune the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/troubleshooting/solving-recording-problems/latency-compensation"><b>Latency correction</b></a> setting  for your audio interface so that play-back and recording are synchronized.
 </p><p>Failure to do this may result in unwanted bursts of audio at the splice point, especially if you are not using headphones.
 </p>
 <h3><span class="mw-headline" id="Pre-roll_and_Crossfade">Pre-roll and Crossfade</span></h3>
@@ -129,7 +129,7 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">If your microphone is close to the speaker, if for example you are not using headphones, your microphone will pick up sound from the speaker during your recording.  This is fine if everything is set up correctly, as the speaker is silent during the recording phase of Punch and Roll.  However, there will be a problem if your microphone can pick up sound from the speaker and your <a href="latency_test.html" title="Latency Test">latency correction</a> setting is incorrect.  When that situation happens, record can record part of the pre-roll being played back, and in any case even if not picking up that unwanted sound, the positioning of your 'punched in' recording will be slightly out.  So you <b>do need to have set your <a href="latency_test.html" title="Latency Test">latency correction</a> setting carefully to get good results from Punch and Roll</b>.
+<td align="left" valign="top">If your microphone is close to the speaker, if for example you are not using headphones, your microphone will pick up sound from the speaker during your recording.  This is fine if everything is set up correctly, as the speaker is silent during the recording phase of Punch and Roll.  However, there will be a problem if your microphone can pick up sound from the speaker and your <a rel="nofollow" class="external text" href="https://support.audacityteam.org/troubleshooting/solving-recording-problems/latency-compensation"><b>latency correction</b></a>] setting is incorrect.  When that situation happens, record can record part of the pre-roll being played back, and in any case even if not picking up that unwanted sound, the positioning of your 'punched in' recording will be slightly out.  So you <b>do need to have set your </b><a rel="nofollow" class="external text" href="https://support.audacityteam.org/troubleshooting/solving-recording-problems/latency-compensation">latency correction</a><b>] setting carefully to get good results from Punch and Roll</b>.
 </td></tr></table></div>
 <h3><span class="mw-headline" id="Still_not_satisfied.3F">Still not satisfied?</span></h3>
 <p>If you are not satisfied with your re-take, simply stop recording and use <img alt="The Undo tool" src="../m/images/8/8b/undo.png" title="The Undo tool" width="26" height="24" /> or <span class="menu">Edit &gt; <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo</a></span> or its shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Z</span> <i>(<span class="kbrd" style="background-color: #d0d0f8">&#8984; + Z</span> on Mac)</i>.  The track and selection will be restored as they were just before the Punch and Roll Record command began.
@@ -143,25 +143,6 @@
 <ul><li>You can merge clips by clicking on the boundary.</li>
 <li>Or you can select the entire track and use <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#join" title="Edit Menu: Clip Boundaries">Join</a></span> to remove all clip boundaries at once.</li></ul></li></ul>
 <div class="note">The <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo history</a> will contain one recording item for each error that you corrected, plus one more for the original Record command. </div>
-<p><br />
-</p>
-<div id="example"></div>
-<h2><span class="mw-headline" id="Example">Example</span></h2>
-<div class="example">Here is an example of an author/narrator making a mistake early on in their recording<p>Which they the use Punch and Roll Record to repair straight away.</p><p>And note that the user is using the pinned play head as suggested in the tip above.</p>
-<h3><span class="mw-headline" id="Mistake">Mistake</span></h3>
-<p>While recording the author/narrator makes a mistake just after 25 seconds, so they stop the recording and mark the splice point.
-</p>
-<dl><dd><span title="The author/narrator makes a mistake at 25 seconds and marks the splice point"><img alt="Punch and Roll 01.png" src="../m/images/8/81/punch_and_roll_01.png" width="767" height="206" /></span></dd></dl>
-<p><br />
-</p>
-<h3><span class="mw-headline" id="Pre-roll_playback">Pre-roll playback</span></h3>
-The user presses <span class="kbrd" style="background-color: #d0d0f8">Shift + D</span> and Audacity then starts the default five second pre-roll playback. <p> Note that the audio, the mistake, to the right of splice point at 25 seconds has been deleted.</p><p>Observe that the green play head shows during the pre-roll playback.</p>
-<dl><dd><span title="Audacity plays the pre-roll audio"><img alt="Punch and Roll 02.png" src="../m/images/b/b0/punch_and_roll_02.png" width="766" height="203" /></span></dd></dl>
-<p><br />
-</p>
-<h3><span class="mw-headline" id="Repairing_the_mistake">Repairing the mistake</span></h3>
-Once the pre-roll playback reaches the splice point Audacity switched to record mode.<p>Observe that the red record head shows during the rolling repair recording.</p><p>This enables the user to continue with their recording, repairing the mistake as they go, with minimal interruption to their workflow.</p>
-<dl><dd><span title="The author/narrator continues from just after the mistake"><img alt="Punch and Roll 03.png" src="../m/images/4/4d/punch_and_roll_03.png" width="767" height="207" /></span></div></dd></dl>
 <p><br />
 </p><p><br />
 </p>
@@ -204,14 +185,15 @@ Once the pre-roll playback reaches the splice point Audacity switched to record 
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -248,7 +230,7 @@ Once the pre-roll playback reaches the splice point Audacity switched to record 
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Punch_and_Roll_Record">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Punch_and_Roll_Record">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

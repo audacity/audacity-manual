@@ -53,7 +53,8 @@
 <li><a href="#stereo">Stereo Audio Track</a></li>
 <li><a href="#single">Single Audio Track (Mono, Left or Right)</a></li>
 <li><a href="#panel">Track Control Panel and Vertical Scale</a></li>
-<li><a href="#menu">Audio Track Dropdown Menu</a></li>
+<li><a href="#menu">Audio Track Dropdown Menu</a>
+<ul><li><a href="#context">Context menu from the track's waveform</a></li></ul></li>
 <li><a href="#clips">Clips</a></li>
 <li><a href="#name">Show audio track name as overlay</a></li>
 <li><a href="#split">Splitting and Joining Tracks</a></li>
@@ -82,7 +83,7 @@
 <h2><span class="mw-headline" id="Single_Audio_Track_.28Mono.2C_Left_or_Right.29">Single Audio Track (Mono, Left or Right)</span></h2>
 <p>A single audio track has the same components as a stereo track with a single waveform and one vertical scale rather than two. This can be easily seen if using "Split Stereo Track" in the Track Dropdown Menu to split the stereo track into two single tracks. The same menu can make single tracks mono, left or right. Each single track can be separately <a href="audacity_selection.html" title="Audacity Selection">selected</a> and thus edited independently from other tracks.
 </p>
-<dl><dd><span title="Mono Track"><img alt="Mono track example.png" src="../m/images/f/f9/mono_track_example.png" width="848" height="207" /></span></dd></dl>
+<dl><dd><span title="Mono Track"><img alt="Mono track example.png" src="../m/images/f/f9/mono_track_example.png" width="846" height="204" /></span></dd></dl>
 <p><br />
 </p>
 <div id="panel"></div>
@@ -129,7 +130,7 @@
 <dl><dd><table>
 
 <tr valign="top">
-<td>:<span title="Audio track dropdown menu"><img alt="Audio track dropdown menu.png" src="../m/images/d/da/audio_track_dropdown_menu.png" width="274" height="403" />
+<td>:<span title="Audio track dropdown menu"><img alt="Audio track dropdown menu.png" src="../m/images/d/da/audio_track_dropdown_menu.png" width="286" height="425" />
 </td>
 <td>You can use the Audio Track dropdown menu to manipulate individual mono or stereo tracks:
 <ul><li>Rename a track</li>
@@ -143,6 +144,7 @@
 <p>There is no need to <a href="audacity_selection.html" title="Audacity Selection">select</a> the track before accessing the dropdown menu.
 </p>
 <div class="note">Note Tracks and Label Tracks also have similar dropdown menus, but their scope is more limited. </div>
+<div id="context"></div>
 <h3><span class="mw-headline" id="Context_menu_from_the_track.27s_waveform">Context menu from the track's waveform</span></h3>
 <p>There is a secondary context menu available by right-clicking in the waveform of the track.
 </p>
@@ -226,7 +228,7 @@ For example, here is a project with two mono tracks:
 <p>This indicates that there is audio data in the track before the track start.
 </p>
 <dl><dd><span title="Arrows indicate there is audio before time=0.0"><img alt="Track audio before zero.png" src="../m/images/4/47/track_audio_before_zero.png" width="462" height="159" /></span></dd></dl>
-<p>By default you cannot see such audio that is before zero, but if you turn on <b>Enable scrolling left of zero</b> in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a> you will be able to scroll to make it visible.
+<p>You cannot see such audio that is before zero.
 </p>
 <h3><span class="mw-headline" id="Stem_Plots">Stem Plots</span></h3>
 <p>There is an entry in the <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a> for <b>Display samples</b>.  This setting changes how <a href="audacity_waveform.html" title="Audacity Waveform">Waveform</a> and <a href="audacity_waveform.html#db" title="Audacity Waveform">Waveform dB</a> views are displayed.  It only affects the appearance of the waveform when you are so far zoomed in that you can see the individual sample dots.  At lower zoom levels it makes no difference.  
@@ -317,14 +319,15 @@ For example, here is a project with two mono tracks:
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="#" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -361,7 +364,7 @@ For example, here is a project with two mono tracks:
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Audio_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

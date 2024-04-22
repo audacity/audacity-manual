@@ -54,9 +54,11 @@
 <ol><li><a href="#overview">Channels, Clips and Tracks</a></li>
 <li><a href="#trim">Trimming a Clip</a></li>
 <li><a href="#rename">Renaming Clips</a></li>
-<li><a href="#move">Moving Clips</a></li>
+<li><a href="#move">Moving Clips</a>
+<ul><li><a href="#pref">Preference for "Editing a clip can move other clips"</a></li></ul></li>
 <li><a href="#betweentracks">Moving a Clip Between Tracks</a></li>
 <li><a href="#speed">Time-stretching - changing the speed of clips</a></li>
+<li><a href="#pitch">Changing the pitch of clips</a></li>
 <li><a href="#create">Creating Clips - Splitting Clips</a></li>
 <li><a href="#join">Merging or joining Clips</a></li>
 <li><a href="#navigating">Navigating and selecting Clips</a></li>
@@ -143,6 +145,23 @@
 </p>
 <dl><dd><span title="Arrows indicate there is audio before time=0.0"><img alt="Audio before zero.png" src="../m/images/3/35/audio_before_zero.png" width="320" height="224" /></span></dd></dl>
 Audio before time zero is not <a href="file_export_dialog.html" title="File Export Dialog">exported</a> unless that audio is explicitly <a href="audacity_selection.html" title="Audacity Selection">selected</a>.<p>Or unless <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> is used with "Split files based on Tracks". In this Export Multiple by tracks case, the entire audio of each track is exported, including that behind zero, regardless of any selection.</p>
+<div id="pref"></div>
+<h3><span class="mw-headline" id="Preference_for_.22Editing_a_clip_can_move_other_clips.22">Preference for "Editing a clip can move other clips"</span></h3>
+<p>There is a preference setting in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Tracks Behaviors Preferences</a> that controls whether following clips to the right cab or cannot move when editing to the left of them.
+</p>
+<ul><li>When this is checked "<b>off</b>" (<i>default setting)</i> "Editing a clip can move" pins clips so that they <i><b>cannot</b></i> move in response to an edit in another clip. When removing content, any following clips will <i><b>not</b></i> be allowed to move back. When pasting, an error message will display if there is not enough room to paste without moving the following clips.</li>
+<li>When this is checked "<b>on</b>" <i>(non-default setting)</i> if the track has been <a href="edit_menu_clip_boundaries.html#split" title="Edit Menu: Clip Boundaries">split</a> into more than one <strong class="selflink">clip</strong>, any clips following to right of the edit point <i><b>can</b></i> always move as necessary in response to <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">pasting</a>, <a href="edit_menu.html#cut" title="Edit Menu">cutting</a>, <a href="edit_menu.html#delete" title="Edit Menu">deleting</a> or other change that adds or removes content.</li></ul>
+<p>See <a href="preferences_settings_that_affect_edit_behavior.html#move_clips" title="Preferences settings that affect Edit behavior"><b>Preferences settings that affect Edit behavior</b></a> for details of what this setting does.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top"><b><a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Lock</a> trumps (over-rides) this setting.</b><p> If you have Sync-Lock enabled in the <a href="tracks_menu.html" title="Tracks Menu">Tracks Menu</a>, then clips can move even when this setting is turned "off".</p>
+</td></tr></table>
+</div>
 <p><br />
 </p>
 <div id="betweentracks"></div>
@@ -155,20 +174,59 @@ Audio before time zero is not <a href="file_export_dialog.html" title="File Expo
 <div id="speed"></div>
 <h2><span class="mw-headline" id="Time-stretching_-_changing_the_speed_of_clips">Time-stretching - changing the speed of clips</span></h2>
 <p>You can change the speed of the clip by holding <span class="kbrd" style="background-color: #e0e0f0">Alt</span> and dragging near the upper corner of its left and right edges, note that the cursor changes when you do this. Doing so will also change the pitch of the clip.
-</p><p>Alternatively, you can select the clip and then right-click in it to get the <a href="#context">context menu</a> which has a <span class="menu">Change Speed</span> command which enables you to set a precise changed speed.
-</p><p>Selecting this command will cause the following dialog to be displayed.  You can enter any&#160;% speed change by typing in the <b>Clip Speed</b> box.
 </p>
-<dl><dd><span title="Change Clip Speed dialog"><img alt="Change Clip Speed.png" src="../m/images/1/19/change_clip_speed.png" width="250" height="142" /></span></dd></dl>
+<div class="note"><b>Note carefully:</b>
+<ul><li>when you apply an effect to a <a href="edit_menu_clip_boundaries.html#speed" title="Edit Menu: Clip Boundaries"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>,</li>
+<li>if you apply an effect or generator to a selection within a time-stretched clip then Audacity will <a href="#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the the selection can be rendered as part of applying the effect. </div></li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">Note carefully that when you apply an effect to a <a href="edit_menu_clip_boundaries.html#speed" title="Edit Menu: Clip Boundaries"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
-<ul><li>If you apply an effect or generator to a selection within a clip then Audacity will <a href="#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the the selection can be rendered as part of applying the effect.</li></ul>
+<td align="left" valign="top"><b>Time-stretching may affect stereo image:</b>
+<ul><li>If you time-stretch a stereo clip where the left and right channels have nothing, or little, in common then the algorithm used for the stretching is likely affect your stereo image, losing the stereo separation.</li>
+<li>The audio will still be intact but stereo information/separation may be lost.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You can workaround this by:
+<ol><li>Split the stereo track to mono</li>
+<li>Time-stretch each of the two clips by <i><b>exactly</b></i> the same amount <i>the yellow snap guides will help with this exact alignment</i>.</li>
+<li>Render the clip stretching on each track separately.</li>
+<li>Re-join the two mono tracks to be a stereo pair from the context menu in the Track Control Panel of the upper track. </li></ol>
+</td></tr></table>
+</div>
 </td></tr></table></div>
+<div id="menu"></div>
+<h3><span class="mw-headline" id="Changing_pitch_and.2For_speed">Changing pitch and/or speed</span></h3>
+<p>Alternatively, you can select the clip and then right-click in it to get the <a href="#context">context menu</a> which has a <span class="menu">Pitch and Speed</span> command which enables you to set a precise changed pitch or speed.
+</p><p>Selecting this command will cause the following dialog to be displayed.  You can change the pitch by semitones and cents, and/or enter any&#160;% speed change, by typing in the <b>Pitch and Speed</b> box.
+</p>
+<div class="note">With this context menu commend the speed and pitch of the audio clip can be changed independently. <p>This is unlike the effect <a href="change_speed.html" title="Change Speed"><b>Change Speed and Pitch</b></a> where changing the speed also changes the pitch, and the only control is the speed.</p> </div>
+<dl><dd><span title="Clip change Pitch and Speed dialog"><img alt="Clip Pitch and Speed.png" src="../m/images/e/e4/clip_pitch_and_speed.png" width="286" height="221" /></span></dd></dl>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You can change the pitch dynamically with this dialog while Audacity is playing, but you cannot change the speed during playback.
+</td></tr></table>
+</div>
 <p><br />
+</p>
+<div id="pitch"></div>
+<h2><span class="mw-headline" id="Changing_the_pitch_of_Clips">Changing the pitch of Clips</span></h2>
+<p>You now can non-destructively change the pitch of a fully-selected clip by holding <span class="button">Alt</span> and pressing the <span class="button">Up</span> and <span class="button">Down</span> arrow keys. 
+</p><p>You will see a visual cue at the right hand end of the clip which indicates the pitch change in number of semi-tones.
+</p>
+<dl><dd><span title="Clip pitch change by a factor of 2"><img alt="Clip pitch change.png" src="../m/images/8/89/clip_pitch_change.png" width="445" height="195" /></span></dd></dl>
+<p>This will not change the speed of the clip, only its pitch.
+</p><p><br />
 </p>
 <div id="create"></div>
 <div id="split"></div>
@@ -231,14 +289,14 @@ Navigating between clips
 <dl><dd><table>
 
 <tr valign="top">
-<td>:<span title="Waveform dropdown context menu"><img alt="Waveform context menu 3-4-0.png" src="../m/images/d/d2/waveform_context_menu_3_4_0.png" width="434" height="256" />
+<td>:<span title="Waveform dropdown context menu"><img alt="Waveform context menu 3-5-0.png" src="../m/images/f/f1/waveform_context_menu_3_5_0.png" width="536" height="289" />
 </td>
 <td>You can use this to:
 <ul><li>Cut, Copy or Paste audio selections</li>
 <li>Split or Join Clips (based on the current selection) </li>
 <li>Mute or Unmute the audio track</li>
 <li>Rename the currently selected clip</li>
-<li>Change the speed of the currently selected clip</li>
+<li>Change the pitch and/or speed of the currently selected clip</li>
 <li>Render the changed speed of the currently selected clip</li></ul>
 </td></tr></table></dd></dl>
 <p><br />
@@ -337,14 +395,15 @@ Navigating between clips
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -381,7 +440,7 @@ Navigating between clips
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Tracks_and_Clips">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Audacity_Tracks_and_Clips">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

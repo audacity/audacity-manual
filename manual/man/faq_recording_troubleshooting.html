@@ -73,14 +73,18 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
 </td>
-<td align="left" valign="top">For Audacity 2.2.2 we added dropout detection, which is "<b>on</b>" by default.  Please see the <a href="recording.html#dropouts" title="Recording"><b>Recording</b></a> page for details.
+<td align="left" valign="top">For Audacity 2.2.2 we added <b>Dropout Detection</b>, which is "<b>on</b>" by default in <a href="recording_preferences.html" title="Recording Preferences"><b>Recording Preferences</b></a>.  Please see the <a href="recording.html#dropouts" title="Recording"><b>Recording</b></a> page for details.
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">You may have been experiencing dropouts and not noticing, they are not discernible while recording only on playback. So Audacity could now appear much worse than previous releases, when in actual fact Audacity is just alerting you to a problem that you previously would not have been aware of - or might have put down to a bad microphone or poor recording technique.
+<td align="left" valign="top">You may have been experiencing dropouts and not noticing, they are not discernible while recording only on playback.
+<p>So Audacity could now appear much worse than previous releases, when in actual fact:
+</p>
+<ul><li>Audacity is just alerting you to a problem that you previously would not have been aware of, </li>
+<li>or you might have put down to a bad microphone or poor recording technique. </li></ul>
 </td></tr></table></div>
 </td></tr></table>
 </div>
@@ -97,10 +101,11 @@
 <ul><li> <b>Reduce the amount of audio data being written:</b> Choose 16-bit Sample Format in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> and set recording channels to mono in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> (unless you need stereo). Either of these actions halves the amount of data Audacity otherwise has to write. A single instrument or solo vocal should usually be recorded in mono and can be panned in the stereo field later using <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a>.</li>
 <li> <b>Use a local drive with sufficient space:</b> Set the path to the Audacity <a href="directories_preferences.html" title="Directories Preferences">temporary directory</a> to a local hard drive because these are usually faster than external USB drives. Choose the local drive with the most space. Audacity tells you how much longer you can record for (based on available disk space) in the Status Bar at the bottom of the window.       </li></ul>
 <p><b>Computer and hardware</b> 
-</p><p>There are many possible actions you can take. Some may have no effect on a skipping problem, others may have a cumulative beneficial effect, so try them all. 
+</p><p>There are many possible actions you can take. Some may have no effect on a skipping problem, others may have a cumulative beneficial effect, so try them all
 </p>
-<ul><li> Quit as many other other applications or processes as possible. In particular, stop anti-virus applications scanning the Audacity <a href="directories_preferences.html" title="Directories Preferences">Temporary Directory</a>. Disconnect from the Internet.</li>
-<li> On Windows, regularly defragment your hard disk drive (this should happen automatically on Windows, but do not schedule defragmentation during a recording). Disable Windows Update while recording. Consider creating hardware or software profiles that load only essential hardware and services for a recording session. </li>
+<ul><li> Turn off (or render) all <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects"><b>real-time effects</b></a> on the tracks in your projects.</li>
+<li> Quit as many other other applications or processes as possible. In particular, stop anti-virus applications scanning the Audacity <a href="directories_preferences.html" title="Directories Preferences">Temporary Directory</a>. Disconnect from the Internet.</li>
+<li> On Windows, regularly de-fragment your hard disk drive (this should happen automatically on Windows, but do not schedule defragmentation during a recording). Disable Windows Update while recording. Consider creating hardware or software profiles that load only essential hardware and services for a recording session. </li>
 <li> Set Audacity to a higher priority in the operating system.   </li>
 <li> If you are using a USB recording device. connect directly to a USB port, not a hub.</li>
 <li> Whatever the audio device, ensure it has the latest  drivers as supplied by the motherboard or device manufacturer (as appropriate).   </li>
@@ -240,7 +245,7 @@ see <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: 
 <div id="sync"></div>
 <h2><span class="mw-headline" id="Why_is_my_new_track_out_of_sync_with_the_previous_ones.2C_or_sounds_crackly_or_at_wrong_pitch.3F">Why is my new track out of sync with the previous ones, or sounds crackly or at wrong pitch?</span></h2>
 <p>When you make an <a href="faq_recording_how_to_s.html#overdub" title="FAQ:Recording - How To's">overdub recording</a> (listening to an existing track while recording a new one), computers cannot lay down what you record at the exact instant you sing or play in response to the beat. Therefore without intervention, the recording inevitably gets laid down after the beat. Audacity tries to correct for this "recording latency" automatically by pushing the recorded track backwards after recording stops, but further adjustment may be needed. 
-</p><p>If a new track is not synchronized with the others, you can zoom in and use its <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bar</a>. to drag the track to the correct location. If you are doing a lot of overdubbing, try our <a href="latency_test.html" title="Latency Test">Latency Test</a> to set a custom value for Audacity's latency correction which can then be applied in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>.
+</p><p>If a new track is not synchronized with the others, you can zoom in and use its <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bar</a>. to drag the track to the correct location. If you are doing a lot of overdubbing, try our <a rel="nofollow" class="external text" href="https://support.audacityteam.org/troubleshooting/solving-recording-problems/latency-compensation"><b>Latency Compensation</b></a> to set a custom value for Audacity's latency correction which can then be applied in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>.
 </p>
 <div class="note"><a href="tutorial_recording_multi_track_overdubs.html" title="Tutorial - Recording Multi-track Overdubs">Tutorial - Recording Multi-track Overdubs</a> gives a step-by-step 
 guide for manually correcting for latency. </div>
@@ -431,7 +436,7 @@ DC offset can also cause inaudible low level distortion which becomes audible af
 </p>
 <div id="squawks"></div>
 <h2><span class="mw-headline" id="Why_do_I_get_a_burst_of_sound_at_the_splice_point_when_using_Punch_and_Roll_recording.3F">Why do I get a burst of sound at the splice point when using Punch and Roll recording?</span></h2>
-<p>This usually happens with <a href="punch_and_roll_record.html" title="Punch and Roll Record">Punch and Roll recording</a> if you have not measured that latency of your computer with Audacity and made the <a href="latency_test.html" title="Latency Test"><b>latency correction</b></a>.  See the <a href="latency_test.html" title="Latency Test">Latency Test</a> page for details.
+<p>This usually happens with <a href="punch_and_roll_record.html" title="Punch and Roll Record">Punch and Roll recording</a> if you have not measured that latency of your computer with Audacity and made the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/troubleshooting/solving-recording-problems/latency-compensation"><b>latency correction</b></a>.  See the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/troubleshooting/solving-recording-problems/latency-compensation"><b>Latency Compensation</b></a> page on the Muse Support site for details.
 </p><p>Recording using headphones rather than loudspeakers can also help avoid this.
 </p><p><a href="#top">back to top</a> 
 </p><p><br />
@@ -471,14 +476,15 @@ DC offset can also cause inaudible low level distortion which becomes audible af
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -515,7 +521,7 @@ DC offset can also cause inaudible low level distortion which becomes audible af
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_Troubleshooting">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/FAQ:Recording_-_Troubleshooting">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

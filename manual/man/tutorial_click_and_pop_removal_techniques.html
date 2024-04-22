@@ -33,96 +33,15 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Click_and_pop_removal_techniques#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">There are a number of ways you can use Audacity to remove clicks and pops from your recording. First, without zooming in too far, visually inspect your recording for clicks - they will show up as abnormally tall (sticking up or down), very narrow (one or two pixels wide) vertical lines protruding from the waveform. 
-<p>The primary tool in Audacity for dealing with clicks and pops is the <a href="click_removal.html" title="Click Removal">Click Removal</a> effect.
-</p><p>Clicks which do not get removed with Click Removal can be treated individually with other methods. These methods are only really useful if you have a relatively small number of clicks and pops to deal with; otherwise, these approaches will be too labor-intensive and time-consuming:
-</p>
-<ul><li> Audacity's <a href="repair.html" title="Repair">Repair</a> effect can repair a short length of up to 128 <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i> by <i><b><a href="glossary.html#interpolate" title="Glossary">interpolating</a></b></i> from the neighboring samples. </li>
-<li> For hard to spot clicks you may want to try <a href="click_removal_using_the_spectrogram_view.html" title="Click removal using the Spectrogram view">Click removal using the Spectrogram view</a>.</li>
-<li> For somewhat longer regions of audio, try: 
-<ul><li> <a href="edit_menu_remove_special.html#silence" title="Edit Menu: Remove Special">Silence Audio</a> The silenced sections must be short enough so as to not be audible. </li>
-<li> <a href="tools_toolbar.html#draw" title="Tools Toolbar">Draw Tool</a> The principle is to put samples back into line with their neighbors to smooth out the contours of the samples and so attenuate the click or pop.</li></ul></li></ul>
-</div>
-<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Audacity_Click_Removal"><span class="tocnumber">1</span> <span class="toctext">Audacity Click Removal</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Repair_of_short_sections"><span class="tocnumber">2</span> <span class="toctext">Repair of short sections</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Silencing_and_Draw_Tool"><span class="tocnumber">3</span> <span class="toctext">Silencing and Draw Tool</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Use_Spectrogram_view_to_identify_clicks_more_easily"><span class="tocnumber">4</span> <span class="toctext">Use Spectrogram view to identify clicks more easily</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Other_techniques"><span class="tocnumber">5</span> <span class="toctext">Other techniques</span></a>
-<ul>
-<li class="toclevel-2 tocsection-6"><a href="#Spectrum_analysis"><span class="tocnumber">5.1</span> <span class="toctext">Spectrum analysis</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Subtraction"><span class="tocnumber">5.2</span> <span class="toctext">Subtraction</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#Repair_of_broader_clicks"><span class="tocnumber">5.3</span> <span class="toctext">Repair of broader clicks</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-9"><a href="#Alternative_applications"><span class="tocnumber">6</span> <span class="toctext">Alternative applications</span></a></li>
-</ul>
-</div>
-
-<h2><span class="mw-headline" id="Audacity_Click_Removal">Audacity Click Removal</span></h2>
-<p>To use Audacity's <a href="click_removal.html" title="Click Removal">Click Removal</a> first select the audio from which you want clicks repaired. You can select all of a track by clicking on its <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a>. Alternatively, you can select all the audio in the project by using <span class="menu">Select &gt; All</span> or its shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + A</span> <i>(<span class="kbrd" style="background-color: #d0d0f8">&#8984; + A</span> on a Mac)</i>. If there are a lot of clicks it is possible they may be removed more effectively by selecting individual clicks or groups of clicks rather than the whole track. You can select part of a track by clicking in the track and dragging to left or right with your mouse, or by holding down <span class="kbrd" style="background-color: #d0d0f8">Shift</span> and the left or right arrow keys. Zooming right in and selecting only an individual spike may not work well - extend the selection a little either side of the immediate click or group of clicks to give the algorithm more idea of the undamaged audio it can use.    
-</p><p>Then, choose <span class="menu">Effect &gt; <a href="click_removal.html" title="Click Removal">Click Removal</a></span>. Move the "Threshold" slider to adjust how sensitive the click detection is, and the "Spike Width" slider to adjust the length of spiked audio to be considered as a click. Then click the <span class="button">OK</span> button. Softer clicks may require you to move the threshold slider further to left (but moving it too far to left may create a "broken up" effect with too much audio removed). For broader clicks, move the "Spike Width" slider further to right. 
-</p><p>Preview the effect with these different settings to get the best results. Then, using the settings from your preview testing, use the Click Removal effect on selected regions of audio or on the whole project. 
-</p><p>Very soft and rapid light ticks that sound like static electricity and which are typical of vinyl (even though the pressing is often the cause rather than a static charge) will not be effectively removed with Click Removal. For this type of noise, select an area of vinyl that contains only the noise (no music or speech) and use <span class="menu">Effect &gt; <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a></span>.
-</p>
-<div class="note">Click Removal requires an audio selection of more than 4,096 samples. This is about 93 milliseconds at 44,100 Hz Project Sample Rate as shown in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a>.  </div>
-<h2><span class="mw-headline" id="Repair_of_short_sections">Repair of short sections</span></h2>
-<p>Audacity has a <a href="repair.html" title="Repair">Repair</a> effect which can be used to repair a short length of up to 128 <i><b><a href="glossary.html#sample" title="Glossary">samples</a></b></i> long <i>(for most audio, only a few thousandths of a second)</i> by <i><b><a href="glossary.html#interpolate" title="Glossary">interpolating</a></b></i> from the neighboring samples. You will need to <a href="edit_toolbar.html#zoomin" title="Edit Toolbar">zoom in</a> to see the individual <a href="zooming.html#samples" title="Zooming">samples</a> to use this effect.
-</p><p>Above this length, it becomes too hard to interpolate what should be going on in the section under repair. You will get an error message if you select too much audio to try and repair. In general, the shorter the section of audio you select to repair, the better the results will be.
-</p><p>The Repair effect is unusual because it <i><b>requires</b></i> there to be audio <i>outside</i> the selection region on at least one side of the section to be repaired. If the surrounding audio in the track is very short or non-existent there may not be enough information to make the interpolation, in which case an error message will be shown.  
-</p>
-<div class="note">When using Repair it is often convenient to set <a href="selection_toolbar.html" title="Selection Toolbar">Selection Toolbar</a> bar to show <b>hh:mm:ss + samples</b>, then click the cogwheel and choose <b>Start and Length</b>  to ensure you are only selecting up to 128 samples. </div>
-<h2><span class="mw-headline" id="Silencing_and_Draw_Tool">Silencing and Draw Tool</span></h2>
-<p>Sometimes an even better result can be obtained by <a href="edit_toolbar.html#zoomin" title="Edit Toolbar">zooming in</a> to sample level and either silencing the click using <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#silence" title="Edit Menu: Remove Special">Silence Audio</a></span> (or the <span class="kbrd" style="background-color: #d0d0f8">Ctrl + L</span> shortcut), or using <a href="tools_toolbar.html#draw" title="Tools Toolbar">Draw Tool</a> to smooth out the contours of  the samples and so attenuate the click. Remember, the click will be visible as a "spike" in the waveform. Most discrete clicks up to 10 milliseconds long can actually be simply silenced or deleted without leaving an audible gap in the sound, although many clicks spread wider that that.
-</p><p>If the click is not suitable for silencing or deletion, enable Draw Tool by clicking the pencil icon <img alt="Draw Tool button" src="../m/images/9/92/draw_button.png" title="Draw Tool button" width="27" height="27" /> in the <a href="tools_toolbar.html" title="Tools Toolbar">Tools Toolbar</a>, or press <span class="kbrd" style="background-color: #d0d0f8">F3</span> on your keyboard. The mouse pointer will change to a pencil while over the audio track. You must zoom in until you can see the individual <a href="zooming.html#samples" title="Zooming">sample dots</a> before you can use Draw Tool. 
-</p><p>Click in the track at the point you wish a sample to be redrawn to, and wait for the samples to be rejoined together. Alternatively, click in the area of track where the line of samples is not smooth and hold down <span class="kbrd" style="background-color: #e0e0f0">Alt</span> on your keyboard. The pointer will now change to a brush (or spray can on Linux). 
-</p><p>Some patience may be needed with this tool, but the principle is to put samples back into line with their neighbors so that a smooth contour is presented.
-</p>
-<h2><span class="mw-headline" id="Use_Spectrogram_view_to_identify_clicks_more_easily">Use Spectrogram view to identify clicks more easily</span></h2>
-<p><a href="click_removal_using_the_spectrogram_view.html" title="Click removal using the Spectrogram view">Click removal using the Spectrogram view</a> is a workflow tutorial giving steps to remove hard-to-spot clicks using Audacity's <a href="spectrogram_view.html" title="Spectrogram View">Spectrogram View</a> view. In the default <a href="audacity_waveform.html" title="Audacity Waveform">Waveform View</a>, loud clicks often show up as easily seen spikes, but smaller, lower amplitude clicks can be very hard to find without zooming in to near sample level then scrolling the waveform to identify the exact location of the clicks. Considerable time can be saved by first using Spectrogram view which identifies clicky regions more readily.
-</p>
-<h2><span class="mw-headline" id="Other_techniques">Other techniques</span></h2>
-<p>Silencing highly zoomed areas or redrawing samples can get tedious even over a relatively short stretch of audio. Here are a few other tricks you can try if Click Removal did not help as much as you hoped.  
-</p>
-<h3><span class="mw-headline" id="Spectrum_analysis">Spectrum analysis</span></h3>
-<p>Analyze the area with <span class="menu">Analyze &gt; <a href="plot_spectrum.html" title="Plot Spectrum">Plot Spectrum</a></span> to see if any spikes are concentrated in particular frequencies and then use <span class="menu">Effect &gt; <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></span> or <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span> to reduce the volume of those frequencies. 
-</p><p>You can do this more precisely with the <span class="menu">Effect &gt; <a href="notch_filter.html" title="Notch Filter">Notch Filter</a></span>.
-</p>
-<h3><span class="mw-headline" id="Subtraction">Subtraction</span></h3>
-<p>Where the clicks sound equally loud in both left and right channels of a stereo recording <i>(this often is not the case)</i>, but the music information in the channels is very different at that point, you can try to cancel out the click by making the affected section of track mono and inverting one of the channels:
-</p>
-<ul><li> First, select the area of track that has the click, then click in the track name by the downward-pointing arrow to open the Track Dropdown Menu (right). Choose  choose <span class="menu">Edit &gt; Clip Boundaries &gt; <a href="edit_menu_clip_boundaries.html#split_new" title="Edit Menu: Clip Boundaries">Split New</a></span>. This moves the selected area into a new track underneath your original track.</li>
-<li> Then click in the new track's in track name to open its Track Dropdown Menu and choose <b>Split Stereo to Mono</b>. </li>
-<li> Now select one of the channels by clicking where it says "Mono". In the menus at the top, choose <span class="menu">Effect &gt; <a href="invert.html" title="Invert">Invert</a></span>.</li></ul>
-<p>When you export the result as a stereo track, the area you split out will be effectively mono <i>(in the sense that the previous music signal in the left and right channels will be mixed into both channels)</i>, but the click should be sharply attenuated without harming the music too much.
-</p>
-<h3><span class="mw-headline" id="Repair_of_broader_clicks">Repair of broader clicks</span></h3>
-<p>Click Removal may not work well with broader clicks of 10 milliseconds or longer. Here are two <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Nyquist plugins</a> you can try. Installation instructions for Nyquist plugins are here <a href="nyquist_plug_in_installer.html" title="Nyquist Plug-in Installer">Nyquist Plug-in Installer</a>. 
-</p>
-<ul><li> <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewtopic.php?f=42&amp;t=50671">PopMute</a>: heavily attenuates loud clicks and pops (and even hand claps or small bangs) to make them less obtrusive. </li>
-<li> <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewtopic.php?f=42&amp;t=62384">EZ-Patch</a>: really loud and wide glitches may still sound too bad even if moderated with "Pop Mute". In that case, try "EZ-Patch" which lets you repair the damage by selecting the glitch together with some undamaged audio on one side of the glitch, then smoothly replaces the glitch with the undamaged part of the selection.</li></ul>
-<h2><span class="mw-headline" id="Alternative_applications">Alternative applications</span></h2>
-<p>It is also possible to use other applications than Audacity for click removal, while still using Audacity for the other editing tasks and to produce the final master. Export your audio track from Audacity as a lossless <a href="glossary.html#wav" title="Glossary">WAV</a> or <a href="glossary.html#aiff" title="Glossary">AIFF</a> file, and also export the click-removed audio as a WAV or AIFF for import back into Audacity.
-</p>
-<ul><li><b><a rel="nofollow" class="external text" href="http://www.clickrepair.net">ClickRepair</a></b>:  An excellent tool for removing <i>clicks</i> and <i>pops</i> is Brian Davies' ClickRepair. Once you have understood the settings you want to use, it is effectively an automated tool.  It is not free, but a fourteen day free-trial is available.  Many users report that it saves a lot of time and produces oustandingly good results.  </li></ul>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="note"><div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">You may find the default settings for ClickRepair remove a little too much signal.  An alternative recommendation:
-<ul><li>DeClick = 30 (default is 50)</li>
-<li>Pitch Protection = "on" (default is "off") though leave this "off" for brass recordings</li>
-<li>Reverse = "on" (there is no processing penalty for this and it helps on percussive music)</li>
-<li>Method = Wavelet</li></ul>
-</td></tr></table>
-</div>
-<ul><li><b><a rel="nofollow" class="external text" href="http://www.goldwave.com">GoldWave</a></b>: Though nominally not free it is a good, free-trial click remover as well as an alternative audio editor. Its click removal is an effect, just like in Audacity, and there is a "Smoother" effect for broad unwanted noises and an excellent "Noise Reduction" effect for steady noise. </li></ul>
-<div class="note">The trial version limits you to a hundred or so commands per session, and a total number of several thousand commands before it expires, but if you export from Audacity as 32-bit WAV and just do Click Removal in it, you should be able to declick several hundred records for free. </div>
-<ul><li><b><a rel="nofollow" class="external text" href="http://gwc.sourceforge.net/">Gnome Wave Cleaner</a></b>: Only for Linux users.  Digital restoration of CD-quality audio files. Dehiss, declick and decrackle in a GUI environment. It can also automatically mark song boundaries if required.</li></ul>
+<td align="left" valign="top">This tutorial has been transferred to <a rel="nofollow" class="external text" href="https://support.audacityteam.org/repairing-audio/removing-clicks-pops"><b>Removing clicks &amp; pops</b></a> on the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/"><b>Audacity Support</b> site</a>.
+</td></tr></table></div> </div>
+
 
 
 
@@ -156,14 +75,15 @@
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -200,7 +120,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Click_and_pop_removal_techniques">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Click_and_pop_removal_techniques">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

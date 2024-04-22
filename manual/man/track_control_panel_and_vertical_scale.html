@@ -33,7 +33,8 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Track_Control_Panel_and_Vertical_Scale#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">This page documents the Track Control Panel and Vertical Scale ruler that are present with each type of Audacity track.</div>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">This page documents the Track Control Panel and Vertical Scale ruler that are present with each type of Audacity track.</div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#audio">Audio Track</a></li>
 <li><a href="#label">Label Track</a></li>
@@ -88,23 +89,35 @@
 <ul><li><a href="audacity_waveform.html" title="Audacity Waveform">Linear (amp)</a> - linear display with amplitude values (scaled 0 to 1.0)</li>
 <li><a href="audacity_waveform.html#db" title="Audacity Waveform">Waveform dB</a> - logarithmic display</li>
 <li><a href="audacity_waveform.html" title="Audacity Waveform">Linear (dB)</a> - linear display with dB values </li></ul></li></ul>
-<p><br />
-</p><p>The Vertical Scale can be used to control <a href="vertical_zooming.html" title="Vertical Zooming">Vertical Zooming</a>.
+<p>The Vertical Scale can be used to control <a href="vertical_zooming.html" title="Vertical Zooming">Vertical Zooming</a>.
 </p>
-<ul><li>Right-click in the Vertical Scale will bring up the dropdown context menu.  For details see <a href="vertical_zooming.html#simple" title="Vertical Zooming">Simple mode vertical zooming</a>.</li>
-<li> If <a href="vertical_zooming.html#advanced" title="Vertical Zooming">Advanced mode vertical zooming</a> is enabled in <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">Preferences</a>, when the mouse pointer is over the scale it changes to a magnify icon <img alt="MagnifyPointer.png" src="../m/images/2/2f/magnifypointer.png" width="17" height="17" /> enabling you to zoom vertically using the mouse controls.  </li></ul>
+<ul><li>Right-click in the Vertical Scale will bring up the dropdown context menu.  For details see <a href="vertical_zooming.html#simple" title="Vertical Zooming">Simple mode vertical zooming</a>.</li></ul>
+
 </td></tr>
 </table></dd></dl>
 <p><br />
 </p>
 <div id="context"></div>
 <h3><span class="mw-headline" id="Vertical_Scale_context_menu">Vertical Scale context menu</span></h3>
+
 <p>Right-click in the Vertical Scale to get the context menu:
 </p>
-<dl><dd><span title="Vertical Scale Waveform context menu"><img alt="Vertical Scale Waveform context menu 3-3-0.png" src="../m/images/d/d2/vertical_scale_waveform_context_menu_3_3_0.png" width="262" height="282" /></span></dd></dl>
-<p>If the display is changed to <a href="audio_track_dropdown_menu.html#wavedb" title="Audio Track Dropdown Menu">Waveform dB</a>, the scale shows <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> values for positive signals only 
-</p>
-<div class="note">These dB values range from maximum 0 dB to the minimum dB level set in <a href="interface_preferences.html" title="Interface Preferences">Interface Preferences</a>, or can be varied using the <a href="zooming.html#vscale" title="Zooming">mouse wheel</a>. </div>
+<dl><dd><table>
+
+<tr>
+<td valign="top"><span title="Vertical Scale (default linear) with context menu"><img alt="Vertical Scale Waveform context menu 3-5-0.jpg" src="../m/images/d/d8/vertical_scale_waveform_context_menu_3_5_0.jpg" width="258" height="265" /></span>
+</td>
+<td valign="top" style="padding-left:10px">The <a href="audio_tracks.html#scale" title="Audio Tracks">Vertical Scale</a> (the vertical ruler to the left of the waveform can be used to control the vertical zoom level. Right-click in the Vertical Scale will bring up a dropdown context menu enabling:
+<ul><li><b>Linear (amp)</b> - the waveform is shown in linear view with amplitude values (scaled 0 to 1.0)</li>
+<li><b>Logarithmic (dB)</b> - the waveform is shown in logarithmic view</li>
+<li><b>Linear (dB)</b> - the waveform is shown in linear view with dB values</li>
+<li><b>Zoom In</b> - zooms in vertically, centered on the middle of the waveform.  It can be used repeatedly.</li>
+<li><b>Zoom Out</b> - zooms out vertically, centered on the middle of the waveform.  It can be used repeatedly.</li>
+<li><b>Reset Zoom</b> - resets the waveform to normal zoom level</li>
+<li><b>Half wave</b> - displays the top half of the waveform only, <i>can be useful when working with many tracks</i></li></ul>
+</td></tr>
+</table></dd></dl>
+<div class="note">The Vertical Scale context menu is different in <a href="spectrogram_view.html#context" title="Spectrogram View"><b>Spectrogram View</b></a>. </div>
 <p><br />
 </p>
 <div id="label"></div>
@@ -175,14 +188,15 @@
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -219,7 +233,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Track_Control_Panel_and_Vertical_Scale">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Track_Control_Panel_and_Vertical_Scale">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

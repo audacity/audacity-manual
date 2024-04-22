@@ -115,15 +115,38 @@
 <div id="other"></div>
 <p><br />
 </p>
+<div id="metadata"></div>
+<h2><span class="mw-headline" id="Metadata">Metadata</span></h2>
+<p>The <span class="button">Edit Metadata</span> button enables you to change the metadata for the all the multiple files you are exporting.  Clicking it will invoke the <a href="metadata_editor.html" title="Metadata Editor">Metadata Tags Editor</a>.
+</p><p>If you do not use this button then Audacity will use whatever you have set as the default metadata in the <a href="metadata_editor.html" title="Metadata Editor">Metadata Tags Editor</a>. This will be blank if you have never set default metadata.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top"> There is a bug whereby user supplied metadata applies only to the first exported file - it does not carry through to any further files exported as part of the multiple export, instead Audacity uses the default metadata set for the second and subsequent files exported.  Please see <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/5825"><b>Bug #5825</b></a>.
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">The workaround is either:
+<ul><li>Before the export use <span class="menu"> Edit &gt; <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a></span> to set the default metadata set, or</li>
+<li>Use the <span class="button">Edit Metadata</span> button in the Export Audio dialog and set your required metadata for the export.</li></ul>
+</td></tr></table>
+</div>
+
+</td></tr></table></div>
+<p><br />
+</p>
 <div id="cancel"></div>
 <h2><span class="mw-headline" id="Export_and_Cancel">Export and Cancel</span></h2>
 <p>Clicking the <span class="button">Export</span> button will export the audio to the folder location, with the file name(s) and type you have selected.
 </p><p>Clicking the <span class="button">Cancel</span> button will abort the export dialog without exporting any files.
-{{note|
-</p>
-<ul><li> After pressing <b>"Export"</b>, <a href="metadata_editor.html" title="Metadata Editor">Metadata Editor</a> (for embedded file information such as artist or genre) will appear for each file to be exported, unless you disable it for the export step in the <a href="import_export_preferences.html" title="Import - Export Preferences">Import / Export Preferences</a>.</li>
-<li> If splitting files based on Tracks, any audio behind 0.0 on the <a href="timeline.html" title="Timeline">Timeline</a> (indicated by two left-pointing arrows at left of the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a>) is included in the export. With single <a href="file_export_dialog.html" title="File Export Dialog">exports</a>, audio behind 0.0 is only exported if explicitly selected and then exported using <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a></span> and selecting <strong class="selflink">Multiple Files</strong>.</li></ul>
-<p><br />
+</p><p><br />
 </p>
 <div id="progress"></div>
 <h2><span class="mw-headline" id="Export_progress_dialog">Export progress dialog</span></h2>
@@ -229,14 +252,15 @@ Note that in order to export the pairs and the conclusion excluding the interrup
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -273,7 +297,7 @@ Note that in order to export the pairs and the conclusion excluding the interrup
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Export_Multiple">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Export_Multiple">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

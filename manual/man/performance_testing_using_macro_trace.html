@@ -55,12 +55,29 @@
 <li>Linux: please see <a href="installing_and_updating_audacity_on_linux.html#purge" title="Installing and updating Audacity on Linux"> <b>Audacity settings</b></a></li></ul>
 </td></tr></table>
 </div>
+<div class="note">Instead of editing audacity.cfg  you can place this line at the start of your macro:<p><b>SetPreference:Name="/EnableMacroTracing" Reload="0" Value="1"</b></p></div>
+<p><br />
+</p>
+<div id="logfile"></div>
+<h2><span class="mw-headline" id="Log_file">Log file</span></h2>
+<p>In order to get examinable output from your macro you will need to add a <b>Save Log</b> command to the end of your macro.
+</p><p>By default the <b>Save Log</b> command uses the log.txt file in your Audacity setings folder and note that this become lastlog.txt when you exit/close Audacity.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">You can, if you wish, edit the <b>Save Log</b> command parameters in your macro to save the log file to a custom location and name of your choice.
+</td></tr></table>
+</div>
 <p><br />
 </p>
 <div id="clear"></div>
 <h2><span class="mw-headline" id="Clearing_the_log">Clearing the log</span></h2>
-<p>This is an optional step but it just clears the <b>lastlog.txt</b> file before logging the times for the subsequent Macro commands and thus helps to keep the log brief and more readable, more usable.
-</p><p>To use this add the command <b>Clear Log</b> to your Macro.
+<p>This is an optional step but it just clears the <b>lastlog.txt</b> file in your Audacity settings folder before logging the times for the subsequent Macro commands and thus helps to keep the log brief and more readable, more usable.
+</p><p>To use this add the command <b>Clear Log</b> to your Macro, before the functionality performance testing lines.
 </p><p>Alternatively you can just delete the current <b>lastlog.txt</b> from your Audacity settings folder.
 </p><p><br />
 </p>
@@ -72,13 +89,13 @@
 </p>
 <div id="example"></div>
 <h2><span class="mw-headline" id="A_Simple_Macro_example">A Simple Macro example</span></h2>
-<div class="example"><b>This example shows a simple Macro to measure the performance of Amplify versus Normalize, run on a one hour stereo project:</b>
+<div class="example"><b>This example shows a simple Macro to measure the performance of Amplify versus Normalize, <p>run on a stereo project that is already open:</p></b>
 <h3><span class="mw-headline" id="The_configuration_file">The configuration file</span></h3>
 <dl><dd><img alt="Enable Macro Tracing.png" src="../m/images/b/b8/enable_macro_tracing.png" width="450" height="208" /></dd></dl>
 <h3><span class="mw-headline" id="The_Macro">The Macro</span></h3>
-<dl><dd><a href="https://alphamanual.audacityteam.org/man/File:Amplify_v_Normalize_Macro.png" class="image" title="link-1"><img alt="link-1" src="../m/images/4/4b/amplify_v_normalize_macro.png" width="739" height="367" /></a></dd></dl>
+<dl><dd><img alt="Amplify v Normalize Macro.png" src="../m/images/4/4b/amplify_v_normalize_macro.png" width="941" height="281" /></dd></dl>
 <h3><span class="mw-headline" id="The_resultant_timings_in_the_lastlog.txt_file">The resultant timings in the lastlog.txt file</span></h3>
-<dl><dd><a href="https://alphamanual.audacityteam.org/man/File:Amplify_v_Normalize_timings.png" class="image" title="link-1"><img alt="link-1" src="../m/images/1/16/amplify_v_normalize_timings.png" width="943" height="330" /></a></dd></dl>
+<dl><dd><img alt="Amplify v Normalize timings.png" src="../m/images/1/16/amplify_v_normalize_timings.png" width="943" height="330" /></dd></dl>
 <div class="note">The <b>Poll</b> and <b>Yield</b> figures are primarily intended for use by developers.  <p><i>They show the overhead Audacity has for running the operation in the UI thread, the amount of time Audacity spent processing system events, such as mouse clicks and progress bar updates.</i></p></div></div>
 
 
@@ -113,14 +130,15 @@
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -157,7 +175,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Performance_testing_using_Macro_Trace">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Performance_testing_using_Macro_Trace">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

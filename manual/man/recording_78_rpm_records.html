@@ -99,8 +99,8 @@ The safest way to swap between stylus types (if you are doing this often) is to 
 </div>
 <div id="capture"></div>
 <h3><span class="mw-headline" id="2._Capture">2. Capture</span></h3>
-<p>{{note|Work with Audacity set to a [[Audio Settings Preferences|Project Sample Rate of 44100 Hz and 32-bit sample format (these are the default <a href="audio_settings_preferences.html" title="Audio Settings Preferences">quality settings</a>). Working with 78s you are likely to be doing a lot of processing and you will need the headroom that 32-bit provides.}}
-Record both sides of the 78 into the project prior to doing the processing.  You can either <b>Stop</b> the recording after the first side using the <img alt="The Stop button" src="../m/images/f/f9/stop.png" title="The Stop button" width="16" height="16" /> button or <span class="menu">Transport &gt; <a href="transport_toolbar.html#stop" title="Transport Toolbar">Stop</a></span> and then use <span class="menu">Transport &gt; <a href="transport_toolbar.html#record" title="Transport Toolbar">Record</a></span> (or use the shortcut <span class="kbrd" style="background-color: #d0d0f8">R</span>) to restart recording when you are ready. Alternatively you can pause by pressing the <img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> button (or use <span class="menu">Transport &gt; <a href="transport_toolbar.html#pause" title="Transport Toolbar">Pause</a></span>) at the end of the first side and then press  the <img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> button again once you are ready to record the second side. After recording you may find it helpful to <a href="zooming.html" title="Zooming"> zoom out</a> to display the entire recording in the Audacity window.
+<div class="note">Work with Audacity set to a <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Project Sample Rate of 44100 Hz and 32-bit sample format</a> (these are the default <a href="audio_settings_preferences.html" title="Audio Settings Preferences">quality settings</a>). Working with 78s you are likely to be doing a lot of processing and you will need the headroom that 32-bit provides. </div>
+<p>Record both sides of the 78 into the project prior to doing the processing.  You can either <b>Stop</b> the recording after the first side using the <img alt="The Stop button" src="../m/images/f/f9/stop.png" title="The Stop button" width="16" height="16" /> button or <span class="menu">Transport &gt; <a href="transport_toolbar.html#stop" title="Transport Toolbar">Stop</a></span> and then use <span class="menu">Transport &gt; <a href="transport_toolbar.html#record" title="Transport Toolbar">Record</a></span> (or use the shortcut <span class="kbrd" style="background-color: #d0d0f8">R</span>) to restart recording when you are ready. Alternatively you can pause by pressing the <img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> button (or use <span class="menu">Transport &gt; <a href="transport_toolbar.html#pause" title="Transport Toolbar">Pause</a></span>) at the end of the first side and then press  the <img alt="The Pause button" src="../m/images/4/47/pause.png" title="The Pause button" width="16" height="16" /> button again once you are ready to record the second side. After recording you may find it helpful to <a href="zooming.html" title="Zooming"> zoom out</a> to display the entire recording in the Audacity window.
 </p><p>You may prefer to work with a single side at a time as the noise levels may vary from side to side.
 </p>
 <div id="master"></div>
@@ -132,7 +132,7 @@ Record both sides of the 78 into the project prior to doing the processing.  You
 <li> Divide that time by 10 (for example, if you measured 8 seconds, dividing that by 10 gives you a resultant value of 0.8)</li>
 <li> Divide the resultant value into 60 (in our example, 60/0.8 gives us the answer that the record was playing at 75 rpm)</li></ol>
 </div>
-<p>Record the track into Audacity at your chosen speed then select all the track by clicking in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> and click <span class="menu">Effect &gt; <a href="change_speed.html" title="Change Speed">Change Speed and Pitch</a></span>. In the <b>From</b> box choose the speed you played the record at (for example,  "33 1/3" or "45") and in the <b>To</b> box choose 78 rpm if that is the speed you want to convert the recording to (that is, the speed it should be played at according to the label).
+<p>Record the track into Audacity at your chosen speed then select all the track by clicking in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> and click <span class="menu">Effect &gt; Pitch and Tempo &gt; <a href="change_speed.html" title="Change Speed">Change Speed and Pitch</a></span>. In the <b>From</b> box choose the speed you played the record at (for example,  "33 1/3" or "45") and in the <b>To</b> box choose 78 rpm if that is the speed you want to convert the recording to (that is, the speed it should be played at according to the label).
 </p><p>If some other speed is required, use the <b>Speed Multiplier</b> box to set the speed to be converted to. Divide the actual speed of the record by 33.3333 (or by whatever speed you were playing it at) then enter the result in Speed Multiplier. For example, if you were playing an 80 rpm record at 45 rpm, the calculation is (80/45) = 1.777778. Enter that result rounded to three decimal places (1.778) in Speed Multiplier.       
 </p><p>Note that you should reverse the RIAA equalization to make the transfer "flat"  <b>before</b> changing speed, and then set the appropriate EQ for the record. So the workflow steps for this part of the process are:
 </p>
@@ -207,8 +207,6 @@ As a final step, to increase the perceived loudness and density of the recording
 <p><a href="tutorial_copying_tapes_lps_or_minidiscs_to_cd.html" title="Tutorial - Copying tapes, LPs or minidiscs to CD"><b>|&lt;</b> Tutorial - Copying tapes, LPs or MiniDiscs to CD</a><br />
 </p><p><a href="sample_workflow_for_lp_digitization.html" title="Sample workflow for LP digitization"><b>&gt;</b>&#160; See also tutorial on: Sample workflow for LP digitization</a> <br />
 </p>
-<ul><li> Brian Davies offers a free <a rel="nofollow" class="external text" href="http://www.clickrepair.net/software_info/equalizer.html">Equalizer</a> application that simultaneously applies the proper Inverse RIAA curve, corrected for the different playback speed, and a choice of 78 rpm EQ curve. <br /></li></ul>
-
 
 
 
@@ -241,14 +239,15 @@ As a final step, to increase the perceived loudness and density of the recording
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -285,7 +284,7 @@ As a final step, to increase the perceived loudness and density of the recording
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Recording_78_rpm_records">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Recording_78_rpm_records">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

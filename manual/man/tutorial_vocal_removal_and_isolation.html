@@ -33,79 +33,16 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Vocal_Removal_and_Isolation#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">This page describes techniques which, on <b>some</b> stereo tracks, <b>may</b> allow you to remove or isolate vocals (or other parts of a recording) from the rest. There is no universal, reliable way of doing this without having the original multi-track recordings. Different tracks will require different techniques to achieve maximum possible attenuation or isolation. This will depend on where the vocals are positioned in the stereo field, and on their <a href="glossary.html#frequency" title="Glossary">frequency</a> content compared to the rest of the audio. </div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="note"><div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
 <tr>
-<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top">
-<ul><li>It is <b>strongly</b> recommended that you make a backup copy of your original recording <b>before</b> attempting any of the editing described in this tutorial.</li>
-<li>If you have just made a <a href="record.html" title="Record">recording</a> it is strongly recommended to <a href="file_export_dialog.html" title="File Export Dialog"><b>Export</b></a> it immediately to <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or <i><b><a href="glossary.html#aiff" title="Glossary">AIFF</a></b></i> (ideally to an external drive) as a safety copy before you start editing the project.</li>
-<li>For popular songs, consider downloading vocals-only tracks from the Internet. Many studios release the instrumental tracks for use with things like karaoke and some singles even have them on the B side.</li></ul>
-</td></tr></table>
-</div>
-<p><br />
-</p>
-<h2><span class="mw-headline" id="Contents">Contents</span></h2>
-<ol><li> <a href="#removal">Vocal Removal with vocals in the middle and instruments spread around them</a></li>
-<li> <a href="#split">Vocal Removal with vocals in one channel and everything else in the other</a></li>
-<li> <a href="#isolate">Vocal Isolation</a></li></ol>
-<div id="removal"></div>
-<h2><span class="mw-headline" id="Case_1:_Vocal_Removal_with_vocals_in_the_middle_and_instruments_spread_around_them">Case 1: Vocal Removal with vocals in the middle and instruments spread around them</span></h2>
-<p>If the vocals are panned in the center of a stereo track the so-called "vocal removal" technique can <i>sometimes</i> be effective by removing what is common to both tracks (that is, the vocals), leaving behind what is different (that is, the instrumentals).
-</p><p>The underlying technique in Audacity is to split the stereo track into its left and right channels, make both mono, invert all <i>(or a selected part)</i> of one of them then play back the result.  Note, this removes everything panned in the center, not just vocals, and returns a dual mono result (both channels have the same audio). In some music this could mean removing instrumental parts. Removal of the vocals can often be incomplete leaving artifacts behind; this is especially true where there are backing vocals or where reverb (echo) has been applied as this spreads sound sources and makes them very hard to extract from each other.
-</p>
-<h3><span class="mw-headline" id="Vocal_Reduction_and_Isolation"><a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation">Vocal Reduction and Isolation</a></span></h3>
-<p>Audacity includes a Nyquist plugin effect to automate the steps involved in Case&#160;1, at <span class="menu">Effect &gt; <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"> Vocal Reduction and Isolation</a></span>. If you only wanted to automate Case 1 in the Vocal Reduction and Isolation effect, you would choose the option "Remove Center Classic (Mono)". As in Case 1 above, this removes the whole frequency spectrum of center-panned audio and returns a dual mono track.  
-</p><p>However the default option for Vocal Reduction and Isolation "Remove Vocals" is to be preferred in most cases because this returns stereo output. 
-</p><p>Vocal Reduction and Isolation also lets you specify frequencies above which or below which audio is not removed or isolated. This can help cure the common problem where center-panned bass or Hi-hat is also removed when removing vocals.      
-</p>
-<div id="split"></div>
-<h2><span class="mw-headline" id="Case_2:_Vocal_Removal_with_vocals_in_one_channel_and_everything_else_in_the_other">Case 2: Vocal Removal with vocals in one channel and everything else in the other</span></h2>
-<p>If you have an unusual stereo track where the vocals are mixed hard into one channel and everything else hard into the other channel you can split the stereo track into separate channels then delete the vocal channel. To isolate the vocals, rather than remove them, delete the other channel. 
-</p><p>To split a stereo track, click on the downward pointing arrow at the top of the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> then click on <span class="menu"><a href="splitting_and_joining_stereo_tracks.html" title="Splitting and Joining Stereo Tracks">Split Stereo to Mono</a></span>. To delete the unwanted channel, click the <span class="menu"><a href="audio_tracks.html#panel" title="Audio Tracks">[X]</a></span> to left of the downward pointing arrow. If you accidentally delete the wrong channel, use <span class="menu">Edit &gt; Undo</span> to get it back. 
-</p>
-<div id="isolate"></div>
-<h2><span class="mw-headline" id="Case_3:_Vocal_Isolation">Case 3: Vocal Isolation</span></h2>
-<p>You can use the <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation">Vocal Reduction and Isolation</a> effect to attempt to isolate the vocals by choosing one of the Isolate Vocals in the <a href="vocal_reduction_and_isolation.html#action" title="Vocal Reduction and Isolation">Action</a> dropdown menu in the dialog.  But note that the end result may not be total vocal isolation or even satisfactory isolation of the vocals; it all depends on how the original recording was engineered.
-</p>
-<h3><span class="mw-headline" id="A_technique_using_Audacity_for_vocal_isolation">A technique using Audacity for vocal isolation</span></h3>
-<p>An Audacity user <i>(Marco Diego)</i> suggested the following technique for using Audacity to attempt to isolate vocals. It will not work successfully in all cases.
-</p><p>It is sometimes possible to isolate vocals by using Audacity's <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a> to capture the noise profile of a song that has had vocals removed, then run Noise Reduction with that profile on the original mix before vocals were removed.
-</p>
-<ol><li>Make a copy of your original stereo track
-<ol><li>Select the whole track (click in empty space in its <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> for example where it says "Hz")</li>
-<li>Copy the track with <span class="menu">Edit &gt; <a href="edit_menu_copy_paste_and_duplicate.html#copy" title="Edit Menu: Copy, Paste and Duplicate">Copy</a></span></li>
-<li>Create a new stereo track with <span class="menu">Tracks &gt; Add New &gt; <a href="tracks_menu_add_new.html#stereo_track" title="Tracks Menu: Add New">Stereo Track</a></span></li>
-<li>Use <span class="menu">Edit &gt; <a href="edit_menu_copy_paste_and_duplicate.html#paste" title="Edit Menu: Copy, Paste and Duplicate">Paste</a></span> to make a copy of the original track in the new stereo track</li></ol></li>
-<li>Select the whole of the copied track (click in empty space in its Track Control Panel)</li>
-<li>Remove the vocals in the copy by using <span class="menu">Effect &gt; <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"> Vocal Reduction and Isolation</a></span></li>
-<li>The copied track should remain selected, so use <span class="menu">Effect &gt; <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a></span> and click on the <span class="button">Get Noise Profile</span> button</li>
-<li>Now select the original track (click in empty space in its Track Control Panel)</li>
-<li>Use <span class="menu">Effect &gt; <a href="noise_reduction.html" title="Noise Reduction">Noise Reduction</a></span> and click on the <span class="button">OK</span> button</li>
-<li>Delete the copied track (click in the <span class="menu"><a href="audio_tracks.html#panel" title="Audio Tracks">[X]</a></span> at the top left of its Track Control Panel)</li></ol>
-<div class="note">The following may let you remove drums which are not centered but keep the vocals:
-<ol><li>Use the steps above to create a track with isolated vocals.</li>
-<li>Import the original song into Audacity again. Download the <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/nyquist-plugins/effect-plugins/amplify-mix-and-pan-effects">Bass to Center</a> Nyquist plugin and <a href="effect_menu.html#nyquist_effects" title="Effect Menu">install it</a>. Use this plugin to move the bass frequencies to center.</li>
-<li> Remove the drums (and the vocals) from the center using <span class="menu">Effect &gt; <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"> Vocal Reduction and Isolation</a></span>.</li>
-<li>Finally mix the isolated vocals back in.</li></ol>
-</div>
-<h3><span class="mw-headline" id="Using_an_instrumental_track_to_isolate_the_vocals">Using an instrumental track to isolate the vocals</span></h3>
-<p>In order for this to work you will need to have a studio version of the instrumental track in which the instrumental part is <i><b>identical</b></i> to the full track. Many studios release the instrumental tracks (with and without backup vocals) for use with things like karaoke. There are places online where you can buy these tracks (Karaoke-Version.com for example and some records even have them on the B side). MP3 encoding of one or both versions will create small differences that will make this technique less effective.
-</p><p>As opposed to the final mono track you get from removing vocals, this method will leave you with a full stereo track. As such, it becomes more important to try and match the quality of both tracks and align them before you isolate the vocals.
-</p>
-<ol><li>Open Audacity and <a href="importing_audio.html" title="Importing Audio">Import</a> both the regular and instrumental tracks. </li>
-<li>Select one of the tracks and use the <a href="audacity_tracks_and_clips.html#move" title="Audacity Tracks and Clips">Clip-handle drag-bars</a> to roughly align the two tracks.</li>
-<li><a href="tools_toolbar.html#zoom" title="Tools Toolbar">Zoom</a> in really close and then zoom in more. </li>
-<li><i><b>Exact alignment is critical</b></i>. Pick a peak or trough in the left channel of one track and match it precisely with the left channel of the other track. If the alignment isn't right the process won't work. </li>
-<li>Select the instrumental track, and invert it using <span class="menu">Effect &gt; <a href="invert.html" title="Invert">Invert</a></span>.</li>
-<li>Use <span class="kbrd" style="background-color: #d0d0f8">Ctrl + A</span> to select all of both tracks. </li>
-<li>Use <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span>. </li></ol>
-<p>You should now have one combined track that should have a more diminished amplitude where the vocals were kept and the instrumentation removed.
-</p>
+<td align="left" valign="top">This tutorial has been transferred to <a rel="nofollow" class="external text" href="https://support.audacityteam.org/music/isolating-or-removing-vocals-from-a-song"><b>Isolating or removing vocals from a song</b></a> on the <a rel="nofollow" class="external text" href="https://support.audacityteam.org/"><b>Audacity Support</b> site</a>.
+</td></tr></table></div> </div>
+
+
 
 
 
@@ -138,14 +75,15 @@
 <li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
 <ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
 <li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
-<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
 <li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
 <li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
 <ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
 <li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
 <li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
 <li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
-<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li></ul></li></ul>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
 		</div>
 		</div>
 		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
@@ -182,7 +120,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2023-11-16 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Vocal_Removal_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Vocal_Removal_and_Isolation">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
