@@ -49,11 +49,10 @@
 </p>
 <ol>
 <li> If not already installed, add PulseAudio Volume Control (pavucontrol) to your system. This is usually available in the distribution's repository. 
-<li> If not already visible, reveal the Device Toolbar with <span class="menu">View &gt; Toolbars</span> and ensure <b>Device Toolbar</b> is checked "<b>on</b>".
-<li> Ensure that PulseAudio is running. In Audacity's <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>, set the Host to <b>ALSA</b> and the recording device to <b>pulse</b>. 
+<li> If not already visible, reveal the Audio Setup Toolbar with <span class="menu">View &gt; Toolbars</span> and ensure <b>Audio Setup Toolbar</b> is checked "<b>on</b>".
+<li> Ensure that PulseAudio is running. In Audacity's <a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">Audio Setup Toolbar</a>, set the Host to <b>ALSA</b> and the recording device to <b>pulse</b>. 
 <ul><li> On systems where PulseAudio is the default sound system the recording device may be set to <b>default</b>.
-<li>Audacity's playback device may be set to <b>pulse</b> or to any available audio interface.</ul>
-<dl><dd><span title="Recording device set to pulse in Device Toolbar"><img alt="Pulse-device-toolbar.png" src="../m/images/4/48/pulse_device_toolbar.png" width="624" height="29" /></span></dd></dl>
+<li>Audacity's playback device may be set to <b>pulse</b> or to any available audio interface in <a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">Audio Setup Toolbar</a>.</ul>
 <li>Ensure that "Enable audible input monitoring" is not enabled in the <a href="transport_menu.html" title="Transport Menu">Transport Menu</a> then left-click on the <a href="meter_toolbar.html#recording" title="Meter Toolbar">Recording Meter</a> to turn monitoring on.
 <li>Open PulseAudio Volume Control and choose the "Recording" tab.
 <li>In the "Capture <i>from</i>" dropdown, select the "Monitor" option of the playback device used by the application you want to record from, as shown below:
@@ -67,8 +66,8 @@
 <h2><span class="mw-headline" id="JACK">JACK</span></h2>
 <p>Jack Audio System is commonly used in Linux distributions that specialise in media creation such as <a rel="nofollow" class="external text" href="http://ubuntustudio.org/">Ubuntu Studio</a> and <a rel="nofollow" class="external text" href="http://www.64studio.com/">Studio&#160;64</a>.
 </p><p>To use Audacity with Jack it is useful or in some cases essential to have a few additional packages installed. This documentation assumes that you have Jack Audio System working on your machine. For help with setting up Jack, please consult the documentation for your Linux distribution.
-</p><p>Recording sounds playing from other applications is rather easy with Jack. Jack may be started using QjackCtl or from the command-line. If Audacity is launched after Jack is started then "Jack Audio Connection Kit" will be an available host option in the <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. If Jack is started after Audacity has been launched then it will be necessary to <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> for new audio devices before jack is available to Audacity.
-</p><p>Any Jack-compatible applications that are running before Audacity is launched will have their ports available in Device Toolbar. To make an application available to Audacity that is launched after Audacity it is necessary to use Rescan Audio Devices in the Transport Menu. After rescanning audio devices, input and output ports from other applications will be available in the Recording and Playback boxes in Device Toolbar.
+</p><p>Recording sounds playing from other applications is rather easy with Jack. Jack may be started using QjackCtl or from the command-line. If Audacity is launched after Jack is started then "Jack Audio Connection Kit" will be an available host option in the <a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">Audio Setup Toolbar</a>. If Jack is started after Audacity has been launched then it will be necessary to <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> for new audio devices before jack is available to Audacity.
+</p><p>Any Jack-compatible applications that are running before Audacity is launched will have their ports available in Audio Setup Toolbar. To make an application available to Audacity that is launched after Audacity it is necessary to use Rescan Audio Devices in the Transport Menu. After rescanning audio devices, input and output ports from other applications will be available in the Recording and Playback boxes in Audio Setup Toolbar.
 </p><p>In this image the output of Hydrogen drum machine is being selected as the recording source. This will enable Audacity to record directly from the audio output from Hydrogen. If "System" is selected as the recording source then Audacity will record from the physical audio interface input.
 </p>
 <dl><dd><span title="Selecting the recording source in Device Toolbar"><img alt="Select Jack recording input.png" src="../m/images/9/98/select_jack_recording_input.png" width="600" height="106" /></span></dd></dl>
@@ -168,7 +167,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_Computer_Playback_on_Linux">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_Computer_Playback_on_Linux">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

@@ -33,9 +33,9 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Compressor#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">The Compressor effect reduces the <i><b><a href="glossary.html#dynamic_range" title="Glossary">dynamic range</a></b></i> of audio.
-<p>One of the main purposes of reducing dynamic range is to permit the audio to be amplified further (without <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>) than would be otherwise possible. Therefore by default the Compressor amplifies audio as much as possible after <i><b><a href="glossary.html#compression" title="Glossary">compression</a></b></i>. The resultant increase in average or <i><b><a href="glossary.html#rms" title="Glossary">RMS</a></b></i> level can be useful for audio played in a noisy environment such as in a car, or in speech, to make a distant voice sound as loud as a close one. Because the <i><b><a href="glossary.html#gain" title="Glossary">gain</a></b></i> changes relatively slowly, a compressor does not distort the signal in the way that a Limiter or clipping would do.
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">The Compressor effect reduces the <i><b><a href="glossary.html#dynamic_range" title="Glossary">dynamic range</a></b></i> of audio.
+<p>One of the main purposes of reducing dynamic range is to permit the audio to be amplified further (without <i><b><a href="glossary.html#clipping" title="Glossary">clipping</a></b></i>) than would be otherwise possible.
+</p><p>Compression may also be used for aesthetic purposes, too, such as making lower-volume elements louder, adding punchiness to a bass line (with the use of attack) or adding a pumping effect to a mix with drums (with the use of lookahead and/or release).
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -48,58 +48,88 @@
 </td></tr></table></div>
 </div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt;  Volume and Compression &gt; Compressor</span></dd></dl>
-<dl><dd><span title="The Compressor dialog"><img alt="Compressor 3-5-0.png" src="../m/images/b/bf/compressor_3_5_0.png" width="422" height="530" /></span></dd></dl>
+<dl><dd><span title="The Compressor dialog"><a href="https://alphamanual.audacityteam.org/man/File:Compressor_3-6-0.png" class="image"><img alt="Compressor 3-6-0.png" src="../m/images/9/95/compressor_3_6_0.png" width="538" height="348" /></a></span></dd></dl>
 <div id="graph"></div>
-<h2><span class="mw-headline" id="Graph">Graph</span></h2>
-<p>The graph shows the input level along the bottom (horizontal axis) and the output level scale on the left (vertical axis) to illustrate the dynamic range compression effect. The graph will change as you adjust the Threshold and Ratio sliders, reflecting those settings. The graph does not reflect changes in any of the other controls, although they all affect how the audio sounds after applying the effect.
+<h2><span class="mw-headline" id="Compression_curve_graph">Compression curve graph</span></h2>
+<p>This graph shows the input level along the top (horizontal axis) and the output level scale on the right (vertical axis) to illustrate the dynamic range compression effect. The graph will change as you adjust the Threshold, Ratio, Make-Up Gain and Knee Width sliders, reflecting those settings. The graph does not reflect changes in any of the other controls, although they all affect how the audio sounds after applying the effect.
 </p>
+<div class="example">In the example above, the graph shows a threshold of -10.0 dB and a compression ratio of 10:1. You can read off the graph how signals will be affected: 
+<ul><li> A signal coming in at -36 dB will come out as -36 dB - no compression is applied as it is below the threshold. </li>
+<li> A signal coming in at 0dB will come out as -9dB - the input is 10dB above the threshold, and the compression ratio is of 10:1, so the 10dB excess will become only 1.<br />If you wanted to make up for the lost volume, you could now add make-up gain to push the graph upwards.</div></li></ul>
 <div id="controls"></div>
 <h2><span class="mw-headline" id="Controls">Controls</span></h2>
-<div class="note">The principle of how each control works is described below. In practice the effect works internally in a rather more complex manner in that, as it processes the sound, it looks ahead to determine if there are high peaks coming up. This enables the "attack" stage of the effect to work in advance of increasing level as can be seen in the <a href="#Example">example</a> below. This feature is called <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Dynamic_range_compression#Look-ahead">look-ahead</a> and it is enabled within the effect with no user adjustment. The benefit of look-ahead is  that sudden peaks do not pass through the effect before the gain has had time to change.</div>
-<ul><li> <b>Threshold:</b> The level above which compression is applied to the audio.</li></ul>
-<ul><li> <i><b><a href="glossary.html#noise_floor" title="Glossary">Noise Floor</a>:</b></i> The compressor adjusts the gain on audio below this background level so as to prevent it being unduly amplified in processing. This is mainly useful when compressing speech, to prevent the gain increasing during pauses and so over-amplifying the background noise. </li></ul>
-<ul><li> <b>Ratio:</b> The amount of compression applied to the audio once it passes the threshold level. The higher the Ratio the more the loud parts of the audio will be compressed. The Ratio sets the slope of the blue line on the graph above the threshold.</li></ul>
-<ul><li> <b>Attack Time:</b> How soon the compressor starts to compress the dynamics after the threshold is exceeded. If volume changes are slow, you can push this to a high value. Short attack times will result in a fast response to sudden, loud sounds, but will make the changes in volume much more obvious to listeners.</li></ul>
-<ul><li> <b>Release Time:</b> How soon the compressor starts to release the volume level back to normal after the level drops below the threshold. A long time value will tend to lose quiet sounds that come after loud ones, but will avoid the volume being raised too much during short quiet sections like pauses in speech.</li></ul>
-<ul><li> <b>Make-up gain for 0 dB after compressing:</b> Amplifies the resultant audio in all selected tracks after compression to a peak level of 0 dB. All tracks are amplified by the same amount as in the <a href="amplify.html" title="Amplify">Amplify</a> effect.</li></ul>
-<ul><li> <b>Compress based on Peaks:</b> Base the threshold and gain adjustment on peak values of the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> rather than the average (RMS) value used when in default (unchecked) state. </li></ul>
-<dl><dd><ul><li> When using RMS, the compressor uses "downward" compression, making louder sounds above the threshold quieter while leaving quieter ones below it untouched.</li>
-<li>When using peak values, "upwards" compression is applied which makes the audio louder, but amplifies the louder sounds above the threshold progressively less than those below it. Where the original (input) level is 0 dB there is no amplification.</li></ul></dd></dl>
-<p><br />
+<div id="curve"></div>
+<h3><span class="mw-headline" id="Compression_curve">Compression curve</span></h3>
+<ul><li> <b>Threshold:</b> The level above which compression is applied to the audio.</li>
+<li> <b>Make-up gain:</b> Amplifies the resultant audio in all selected tracks after compression by the specified amount <i>(default is 0dB)</i>. All tracks are amplified by the same amount as in the <a href="amplify.html" title="Amplify">Amplify</a> effect.</li>
+<li> <b>Knee width:</b> How "sharp" the threshold is. At a knee width of 0dB, the compressor immediately engages at full power once the threshold is hit. When the knee width is wider, some compression will get applied before the threshold, making the transition into a fully compressed signal softer.</li>
+<li> <b>Ratio:</b> The amount of compression applied to the audio once it passes the threshold level. The higher the Ratio the more the loud parts of the audio will be compressed. The Ratio sets the slope of the white line on the graph above the threshold.</li></ul>
+<p>More information on the controls can be found in the <a href="compresor_parameters_compression_curve.html" title="Compresor parameters: Compression curve"><b>Compressor curve</b></a> page.
 </p>
-<div id="example"></div>
-<h2><span class="mw-headline" id="Example">Example</span></h2>
-<div class="example"><b>Before Compression:</b>
-<p>A simple sine wave that begins at -12 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i>, jumps up to 0 dB, then drops back down to -12 dB, to demonstrate how the Audacity compressors handle signals.
-</p><p>When <b>Compress based on Peaks</b> is not selected, audio with an <i><b><a href="glossary.html#rms" title="Glossary">RMS</a></b></i> level beyond the threshold range will be reduced. If <b>Make up gain</b> is enabled then the entire selection will be boosted to make up for this gain reduction.
-</p><p>When <b>Compress based on Peaks</b> is selected, audio with a peak level within the threshold range will be boosted.
+<div id="smoothing"></div>
+<h3><span class="mw-headline" id="Smoothing">Smoothing</span></h3>
+<p>Compressing the dynamic range of an audio signal necessarily means modifying its waveshape, which causes distortion. Whether the distortion is perceivable or not depends on many factors. In general, perceivable distortion is to be avoided, except if it is mean for aesthetic purpose. Otherwise, time smoothing is a way of reducing the distortion, by gradually applying the compression before or after the input goes above the threshold, and/or gradually releasing the compression after the input has gone back below the threshold.
 </p>
-<dl><dd><span title="Uncompressed signal"><img alt="Compressor-before.png" src="../m/images/2/25/compressor_before.png" width="483" height="181" /></span></dd></dl>
-<p><b>After Compression:</b>
-</p><p>In this example:
-</p>
-<ul><li> <b>Compressing based on peaks</b> is enabled so audio with a peak level below the threshold is boosted. You can see that the audio before 1.5 seconds on the Timeline has been made louder than it was in the "Before Compression" image. </li>
-<li> <b>Attack</b> is 0.5 seconds, during which period the compressor progressively anticipates the coming peak. </li>
-<li> <b>Release</b> is 1.0 seconds, during which period the boost to the quieter audio is progressively resumed.   </li>
-<li> <b>Ratio</b> is 10:1.  </li></ul>
-<dl><dd><span title="Compressed signal"><img alt="Compressor-after.png" src="../m/images/5/54/compressor_after.png" width="485" height="238" /></span></div></dd></dl>
-<div class="note">
-<h2><span class="mw-headline" id="Further_reading_on_compressors">Further reading on compressors</span></h2>
-<p>There are some good (but not too technical) explanations of compression here:
-</p>
-<ul><li> <a rel="nofollow" class="external text" href="https://www.harmonycentral.com/articles/uncategorized/compressors-demystified-r50/">Compressors demystified</a>  (Harmony Central)</li>
-<li> <a rel="nofollow" class="external text" href="http://www.soundonsound.com/sos/sep09/articles/compressionmadeeasy.htm">Compression Made Easy</a> with <a rel="nofollow" class="external text" href="http://www.soundonsound.com/sos/sep09/articles/compressioneasyaudio.htm">audio files</a> (Sound On Sound)</li></ul>
-<p>More advanced:
-</p>
-<ul><li> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160319123650/http://www.soundonsound.com/sos/dec00/articles/adcompression.htm">Advanced Compression Techniques Part 1</a> and  <a rel="nofollow" class="external text" href="https://web.archive.org/web/20061125043028/http://www.soundonsound.com:80/sos/jan01/articles/advanced.asp">Part 2</a>  (Sound On Sound)</li></ul>
-</div>
-<h2><span class="mw-headline" id="An_alternative_free_compressor">An alternative free compressor</span></h2>
-<p>Please see <a href="chris_s_dynamic_compressor.html" title="Chris's Dynamic Compressor">Chris's Dynamic Compressor</a> for a popular alternative compressor which may be downloaded for free.
+<ul><li> <b>Lookahead:</b> Compression is applied gradually <i>before</i> the input exceeds the threshold. (The necessary latency for this to be possible is compensated by Audacity's effect framework.)</li>
+<li> <b>Attack:</b> Compression is applied gradually <i>after</i> the input has exceeded the threshold. Since the effect is reacting to this transition (rather than anticipating it, as is the case with lookahead), the output signal will temporarily "overshoot", going in the red area of the graph (see above).</li>
+<li> <b>Release</b> Compression is <i>released</i> gradually after the input has gone back below the threshold. Since the effect is reacting to this transition, the output signal with temporarily "undershoot", going in the purple area of the graph (see above).</li></ul>
+<p>More information on the smoothing parameters can be found in the <a href="compressor_parameters_smoothing.html" title="Compressor parameters: Smoothing"><b>Smoothing</b></a> page.
 </p><p><br />
 </p>
+<div id="realtime"></div>
+<h2><span class="mw-headline" id="Realtime_use">Realtime use</span></h2>
+<p>The Compressor can be run non-destructively in realtime on any individual track using the track's effects stack or the master effect stack.  Please see <a rel="nofollow" class="external text" href="https://support.audacityteam.org/audio-editing/using-realtime-effects"><b>Using realtime effects</b></a> on the Muse Support site for details.
+</p><p>In realtime use there is a graph which enables you to see what the Compressor actually is doing and how it is responding to the parameter setting changes that you make in realtime.
+</p>
+<dl><dd><table class="wikitable" style="margin-left: 0; text-align: left; vertical-align: top;">
+<caption> Graph elements
+</caption>
+<tr>
+<td> <b>All elements</b> </td>
+<td> All elements toggled on </td>
+<td> <a href="https://alphamanual.audacityteam.org/man/File:Compressor_RT_with_graph_3-6-0.png" class="image"><img alt="Compressor RT with graph 3-6-0.png" src="../m/images/9/9d/compressor_rt_with_graph_3_6_0.png" width="400" height="264" /></a> |
+</td></tr>
+<tr>
+<td> <b>Input</b> </td>
+<td> the level (short-time peak value) of the input </td>
+<td> <a href="https://alphamanual.audacityteam.org/man/File:Compressor_RT_with_graph_3-6-0_-_input.png" class="image"><img alt="Compressor RT with graph 3-6-0 - input.png" src="../m/images/6/6d/compressor_rt_with_graph_3_6_0_input.png" width="400" height="264" /></a>
+</td></tr>
+<tr>
+<td> <b>Output</b> </td>
+<td> the level (short-time peak value) of the output </td>
+<td> <a href="https://alphamanual.audacityteam.org/man/File:Compressor_RT_with_graph_3-6-0_-_output.png" class="image"><img alt="Compressor RT with graph 3-6-0 - output.png" src="../m/images/b/ba/compressor_rt_with_graph_3_6_0_output.png" width="400" height="264" /></a>
+</td></tr>
+<tr>
+<td> <b>Actual compression</b> </td>
+<td> the compression gain applied to the input<br />(not taking make-up gain into account) </td>
+<td> <a href="https://alphamanual.audacityteam.org/man/File:Compressor_RT_with_graph_3-6-0_-_actual_compression.png" class="image"><img alt="Compressor RT with graph 3-6-0 - actual compression.png" src="../m/images/c/ce/compressor_rt_with_graph_3_6_0_actual_compression.png" width="400" height="264" /></a>
+</td></tr>
+<tr>
+<td> <b>Target compression</b> </td>
+<td> the compression gain that would be applied to the input<br />if it weren't for the smoothing </td>
+<td> <a href="https://alphamanual.audacityteam.org/man/File:Compressor_RT_with_graph_3-6-0_-_target.png" class="image"><img alt="Compressor RT with graph 3-6-0 - target.png" src="../m/images/2/27/compressor_rt_with_graph_3_6_0_target.png" width="400" height="264" /></a>
+</td></tr></table></dd></dl>
+<p>Looking at the graph with both target and actual compression toggled at may be helpful to understand the smoothing:
+</p>
+<dl><dd><span title="Compressor: target versus actual"><img alt="Compressor RT with graph 3-6-0 - target vs actual.png" src="../m/images/e/e5/compressor_rt_with_graph_3_6_0_target_vs_actual.png" width="400" height="264" /></span></dd></dl>
+When the actual compression line is above the target, the target compression gets a red inline. This is to symbolize an "overshoot" situation: the actual compression line is converging towards the target downwards, but in the meantime, the output level is above the mapping specified by the compression curve settings.<p>Conversely, a purple inline symbolizes an "undershoot" situation, during which there is more compression added than necessary for the input level to be mapped as per the compression curve settings. At that moment, the output level can be seen as though it were in lower, the purple area of the compression curve graph.</p>
+<p>This is how it could look like if all smoothing parameters were set to zero:
+</p>
+<dl><dd><span title="Compressor with target vs actual when equal"><img alt="Compressor RT with graph 3-6-0 - target vs actual when equal.png" src="../m/images/6/6f/compressor_rt_with_graph_3_6_0_target_vs_actual_when_equal.png" width="400" height="365" /></span></dd></dl>
+<p>The target compression line is exactly on the actual compression line.
+</p><p><br />
+</p>
+<div id="conclusion"></div>
+<h2><span class="mw-headline" id="Conclusion">Conclusion</span></h2>
+<p>The simple idea of applying a gain whose amount depends on the level of the input can be very aggressive on the audio material and lead to distortion. To alleviate this, several smoothing mechanisms (time smoothing or smoothing of the compression curve) were devised, making a compressor a very delicate effect to manipulate. The effect of a particular setting may depend on the effect of another setting. Some settings might lead to audible distortion on some audio material but not on some other. The effect may be used in a creative way, for example using lookahead or release to create a pumping effect on a rhythm track, or attenuating louder parts of vocals to make breathing and other close-up sounds very audible.
+</p><p><br />
+</p>
+<div id="links"></div>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
 </p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
+</p><p><b>&gt;</b> <a href="compresor_parameters_compression_curve.html" title="Compresor parameters: Compression curve">Compressor curve parameters</a>
+</p><p><b>&gt;</b> <a href="compressor_parameters_smoothing.html" title="Compressor parameters: Smoothing">Smoothing parameters</a>
 </p>
 
 
@@ -178,7 +208,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Compressor">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/Compressor">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

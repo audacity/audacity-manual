@@ -34,7 +34,6 @@
 
 					
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"> Use the <i><b>Limiter</b></i> effect to pass signals below a specified input level unaffected or gently reduced, while preventing the peaks of stronger signals from exceeding this threshold.  Mastering engineers often use limiting combined with make-up gain to increase the perceived loudness of an audio recording during the audio mastering process.
-<p>This limiter effect provides two basic types of effect; "limiting" and "clipping". The "limiting" effect is a special kind of <a href="compressor.html" title="Compressor">dynamic compression</a> that responds very rapidly to peaks in the waveform. The "clipping" effect is a kind of <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Distortion_%28music%29">distortion</a> that changes the shape of the waves by "clipping" off the high and low peaks.</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -44,56 +43,33 @@
 <td align="left" valign="top">Note carefully that when you apply an effect to a <a href="audacity_tracks_and_clips.html#speed" title="Audacity Tracks and Clips"><b>time-stretched clip</b></a> the changed speed of the clip will be automatically <a href="edit_menu_clip_boundaries.html#render" title="Edit Menu: Clip Boundaries"><b>rendered</b></a>.
 <ul><li>If you apply an effect to a selection within a time-stretched clip then Audacity will <a href="audacity_tracks_and_clips.html#split" title="Audacity Tracks and Clips"><b>split the original clip</b></a> so that the selection can be rendered as part of applying the effect.</li></ul>
 </td></tr></table></div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Alert" src="../m/images/6/6c/stopicon.png" title="Alert" width="24" height="24" />
-</td>
-<td align="left" valign="top">If you apply this effect with an <a href="envelope_tool.html" title="Envelope Tool"><b>envelope</b></a> present then there is a <a rel="nofollow" class="external text" href="https://github.com/audacity/audacity/issues/5099"><b>bug</b></a> whereby the envelope is removed and the audio reverts to its full amplitude state prior to the effect being applied.
-</td></tr></table>
-</div>
-</div>
+ </div>
 <dl><dd><b>Accessed by:</b> <span class="menu">Effect &gt; Volume and Compression &gt; Limiter</span></dd>
-<dd><span title="Limiter dialog"><img alt="Limiter 3-5-0.png" src="../m/images/2/27/limiter_3_5_0.png" width="420" height="326" /></span></dd></dl>
-<div id="type"></div>
-<h2><span class="mw-headline" id="Type">Type</span></h2>
-<p><b>Soft Limit</b> (default) progressively reduces the <a href="glossary.html#gain" title="Glossary">gain</a> as the amplitude of the waveform approaches the <a href="#limit_to">"Limit to (dB)"</a> threshold and prevents the waveform from exceeding that level. 
-</p><p><b>Hard Limit</b> makes no change to the audio until the peaks reach the "Limit to (dB)" threshold. Where the input level (after applying optional <a href="#Input_Gain">input gain</a>) exceeds the threshold, an equal amount of negative gain is applied so that the peaks never exceed the threshold.
-</p><p><b>Hard Clipping</b> is the simplest method for reducing peaks. It just chops off the peaks at the "Limit to" threshold. Note that <a href="glossary.html#clipping" title="Glossary">clipping</a> causes distortion. Hard clipping may be useful for purposefully introducing distortion on high peaks, for example to add high harmonics to percussive sounds. Excessive use of hard clipping creates a harsh distortion that is usually unpleasant. For heavier use of distortion the "Soft Clipping" option may be preferable. Hard clipping may also be useful for producing synthetic signals for scientific purposes.
-</p><p><b>Soft Clipping</b> works in much the same way as "Hard Clipping", but is less fierce in that it "squashes" the peaks rather than cutting them
-off flat. Soft clipping starts to reduce the peaks a little below the threshold level and progressively increases its effect as the input level increases such that the threshold is never exceeded. When applied heavily, the effect is similar to a "Fuzz Box" effect.
-</p><p><br />
-</p>
-<div class="note">The difference between "Hard" and "Soft" clipping is that "Hard" clipping cuts off the peaks flat, whereas "Soft" clipping rounds the corners where the waveform has been clipped, resulting in a softer sounding distortion.</div>
-<div id="igain"></div>
-<h2><span class="mw-headline" id="Input_Gain">Input Gain</span></h2>
-<p>Amplifies the audio before applying the limiter.
-</p><p>As the limiter acts on audio peaks that exceed the <a href="#limit_to">Limit to (dB)</a> threshold, it will clearly have little or no effect on audio tracks in which all of the audio is below the threshold level. In such cases, the audio should be amplified before limiting so that the limiter can work properly. Amplification could be applied using Audacity's <a href="amplify.html" title="Amplify">Amplify</a> effect, or more conveniently using the "Input Gain" controls.
-</p><p>For mono tracks, only the "mono/Left" gain control has any affect. For stereo tracks the left and right channel gains may be adjusted independently of each other.
-</p>
-<div id="limit_to"></div>
-<h2><span class="mw-headline" id="Limit_to_.28dB.29">Limit to (dB)</span></h2>
-<p>Limits the amplitude (after optional amplifying) to this level.
-</p><p>Whichever <a href="#type">type</a> is selected, the limiter prevents the waveform from exceeding this level. (Note that <a href="#mugain">makeup gain</a>, if used, is applied to the waveform <i>after</i> it has been limited.)
-</p>
-<div id="hold"></div>
-<h2><span class="mw-headline" id="Hold">Hold</span></h2>
-<div class="note">This applies only to the "Hard Limiter" and "Soft Limiter" settings. It has no effect when using either of the "Clip" settings.</div>
-<p>In order to catch even the most sudden peak, the limiter "looks ahead" to see when the next peak is coming, and begins to reduce the gain just a little in advance of the peak. The gain level is then held at the reduced level for a short while before being released back to the normal level. Looking ahead and holding the gain level allows the gain to adjust more smoothly and reduces the amount of distortion. The shorter the "Hold" duration, the faster the limiter responds to changes in input  level. It is generally desirable for the limiter to respond very rapidly, but responding <i>too</i> rapidly will produce distortion, especial when processing low frequency sounds such as a double bass.
-</p><p>Normally this control can be left at the default (10 ms) setting.
-</p>
-<div id="mugain"></div>
-<h2><span class="mw-headline" id="Apply_makeup_gain">Apply makeup gain</span></h2>
-<p>Amplifies the output (post limiter) close to 0 dB (usually just a little below 0 dB). This is useful when using the limiter to maximize loudness.
-</p><p><br />
-</p>
-<div class="note">Basically, a limiter reduces the gain (negative amplification) when the audio exceeds the "threshold" ("Limit to") level. The "Hold" time is how long (in milliseconds) the gain remains at the reduced level before returning back to normal. Usually you would want the gain to return back to normal pretty quickly after the peak has passed because you normally only want to limit the peaks and then return back to normal as quickly as possible. However, there is a problem if the limiter responds too quickly, and this is most noticeable when processing bass instruments.
-<p>If there is a very low note, say below 100 Hz, then the time from one peak to the next may be longer than the "hold" time. Thus the gain will start to reduce as the peak level rises, then will start to "release" (return to normal gain) between one peak and the next. This rapid "fluttering" of the gain level distorts the waveform, which is usually undesirable. The solution to the problem is simple - just hold the gain at the reduced level for a little while so that the limiter is responding to the overall shape of the note and not the individual waveform peaks.
-</p>
-</div>
+<dd><span title="Limiter dialog"><img alt="Limiter 3-6-0.png" src="../m/images/3/32/limiter_3_6_0.png" width="331" height="332" /></span></dd></dl>
 <p><br />
-</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Affinities_with_the_Compressor">Affinities with the <a href="compressor.html" title="Compressor">Compressor</a></span></h2>
+<p>Audacity's compressor and limiter use the same processing technology. Albeit similar, the two effects are typically used for different mastering purposes. Compressors tend to come at an earlier mastering stage: they are softer and more often used for aesthetic purposes rather than merely for loudness maximization. Limiters are usually the last stage of mastering and useful to gain a last few more decibels of loudness without changing any other aspect of the mix.
+</p><p>This explains why some settings differ between the two. Also, this page may refer to other manual pages that were written with the compressor in mind but which still are very relevant to the limiter.
+</p>
+<div id="controls"></div>
+<h2><span class="mw-headline" id="Controls">Controls</span></h2>
+<div id="curve"></div>
+<h3><span class="mw-headline" id="Compression_curve">Compression curve</span></h3>
+<ul><li> <b>Threshold:</b> The input level above which limiting is applied to the audio. Contrary to the <a href="compressor.html" title="Compressor">Compressor</a>, modifying the threshold does not modify the ceiling (make-up target remains unchanged). One can imagine the effect of changing threshold as moving the compression curve left-right.</li>
+<li> <b>Make-up target:</b> The maximal output level. If all time smoothing settings and knee width are zero, all input samples above the threshold are clipped to this value. One can imagine the effect of changing make-up gain as moving the compression curve up-down.</li>
+<li> <b>Knee width:</b> How "sharp" the threshold is. At a knee width of 0dB, the limiter immediately engages at full power once the threshold is hit. When the knee width is wider, some compression will get applied before the threshold, making the transition into a fully limited signal softer.</li></ul>
+<p>More information on the controls can be found in the <a href="compresor_parameters_compression_curve.html" title="Compresor parameters: Compression curve"><b>Compressor curve</b></a> page.
+</p>
+<div id="smoothing"></div>
+<h3><span class="mw-headline" id="Smoothing">Smoothing</span></h3>
+<ul><li> <b>Lookahead:</b> How much time the effect has to work with. If set to a higher number, the limiter will be able to "see" incoming spikes in volume and start softly transition into them. A higher lookahead increases latency of the effect though.</li>
+<li> <b>Release</b> How soon the limiter starts to release the volume level back to normal after the level drops below the threshold. A long time value will tend to lose quiet sounds that come after loud ones, but will avoid the volume being raised too much during short quiet sections like pauses in speech.</li></ul>
+<p>More information on the smoothing parameters can be found in the <a href="compressor_parameters_smoothing.html" title="Compressor parameters: Smoothing"><b>Smoothing</b></a> page.
+</p>
+<div id="realtime"></div>
+<h2><span class="mw-headline" id="Realtime_use">Realtime use</span></h2>
+<p>Please refer to the corresponding section on the <a href="compressor.html#realtime" title="Compressor">Compressor</a> page.
 </p>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
@@ -176,7 +152,7 @@ off flat. Soft clipping starts to reduce the peaks a little below the threshold 
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Limiter">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/Limiter">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

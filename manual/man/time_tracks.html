@@ -33,8 +33,11 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Time_Tracks#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro">A <i><b>Time Track</b></i> is used in conjunction with one or more <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a> to progressively increase or decrease playback speed (and pitch) over the length of the audio. Speed changes are controlled by manipulating the blue "time warp" line with the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> used for making gradual volume changes. If the blue line is dragged above the horizontal, the audio plays faster; if dragged below, it plays slower.
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">A <i><b>Time Track</b></i> is used in conjunction with one or more <a href="audio_tracks.html" title="Audio Tracks">audio tracks</a> to progressively increase or decrease playback speed (and pitch) over the length of the audio. 
+<ul><li>Speed changes are controlled by manipulating the blue "time warp" line with the <a href="envelope_tool.html" title="Envelope Tool">Envelope Tool</a> used for making gradual volume changes. </li>
+<li>If the blue line is dragged above the horizontal, the audio plays faster; if dragged below, it plays slower.</li></ul>
+<p>To create a Time Track use: <span class="menu">Tracks &gt; Add New &gt; Time Track</span>. Each project may only have a single Time Track.
+</p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -44,25 +47,24 @@
 <td align="left" valign="top"> Time Track is always active (and therefore modifies audio speed when playing or exporting) whenever it is visible in the project. This applies even after rendering the audio. Therefore after render (or as soon as you want to work with audio that you do not want to speed-change), use the <span class="button"><b>[X]</b></span> "Close" button to left of the Time Track to remove it.
 </td></tr></table></div>
 </div>
-<dl><dd><span title="Time Track showing the vertical scale, warp line and control points"><img alt="Time Track example.png" src="../m/images/7/7f/time_track_example.png" width="794" height="106" /></span></dd></dl>
-<p><b>General method of use:</b> 
-</p>
+<h2><span class="mw-headline" id="General_method_of_use">General method of use</span></h2>
+<dl><dd><span title="Time Track showing the vertical scale, warp line and control points"><img alt="Time Track example.png" src="../m/images/7/7f/time_track_example.png" width="791" height="104" /></span></dd></dl>
 <ul><li> Hover your cursor over the warp line until the <b>envelope cursor</b> &#160;<span title="Envelope cursor"><img alt="EnvelopePointer.png" src="../m/images/1/1b/envelopepointer.png" width="7" height="18" /></span>&#160; appears, then click (and optionally, drag up or down) to create a <b>control point</b>. </li>
-<li> To remove a control point, drag it outside the track, or use <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> to undo envelope changes in sequence.</li>
-<li> By default you can warp playback speed by a maximum increase of 10% (110 on the vertical scale to left of the warp line) or a maximum decrease of 10% (90 on the vertical scale).</li>
-<li> To warp the speed by greater amounts, click in the name of the Time Track (in the panel that contains the downward pointing arrow) and choose "<b>Range</b>". Here you can specify the lower and upper speed limit of the vertical scale:</li></ul>
+<li> To remove a control point, drag it outside the track <i>(or use <span class="menu">Edit &gt; <a href="edit_menu.html#undo" title="Edit Menu">Undo</a></span> to undo envelope changes in sequence)</i>.</li>
+<li> By default you can warp playback speed by a maximum increase of 100% (200 on the vertical scale to left of the warp line) or a maximum decrease to almost zero on the vertical scale.</li>
+<li> To change the usable limits for warp speed, right-click in the name of the Time Track and choose <b>Range</b>. Here you can specify the lower and upper speed limit of the vertical scale:</li></ul>
 <dl><dd><dl><dd><div style="min-width:580px"><span title="Lower speed dialog, showing default value of 90"><img alt="Time Track Range dialog lower limit W10.png" src="../m/images/6/6f/time_track_range_dialog_lower_limit_w10.png" width="280" height="153" /></span><span style="margin-left:20px"> <span title="Upper speed dialog, showing default value of 110"><img alt="Time Track Range dialog upper limit W10.png" src="../m/images/a/a0/time_track_range_dialog_upper_limit_w10.png" width="280" height="155" /></span></span></div><div style="clear:both"></div> </dd></dl></dd></dl>
-<p>Changing the range rescales the Time Track to the new limits, preserving the warp value of any envelope points that were there before. Having changed the range, you can now move the warp line up or down anywhere within the new upper or lower limit of the range.     
+<p>Changing the range re-scales the Time Track to the new limits, preserving the warp value of any envelope points that were there before. Having changed the range, you can now move the warp line up or down anywhere within the new upper or lower limit of the range.     
 </p>
 <div class="note">
 <ul><li> Only one Time Track can be used in a project, and it affects all audio tracks on screen.</li>
 <li> Time Track has no effect when audio is speed-adjusted using the Play-at-Speed slider in <a href="play_at_speed_toolbar.html" title="Play-at-Speed Toolbar">Play-at-Speed Toolbar</a>.</div></li></ul>
 <div id="menu"></div>
 <h2><span class="mw-headline" id="Time_Track_Dropdown_Menu">Time Track Dropdown Menu</span></h2>
-<dl><dd><span title="Time Track Dropdown menu"><img alt="Time Track dropdown menu.png" src="../m/images/9/9f/time_track_dropdown_menu.png" width="314" height="276" /></span></dd></dl>
-<p>Clicking in the panel containing the downward-pointing triangle (to the left of the track) opens the Time Track Dropdown Menu containing display choices for the track:
+<dl><dd><span title="Time Track Dropdown menu"><img alt="Time Track dropdown menu.png" src="../m/images/9/9f/time_track_dropdown_menu.png" width="407" height="280" /></span></dd></dl>
+<p>Right-clicking in the track name <i>(or clicking on the ellisis, thethree dots)</i> opens the Time Track Dropdown Menu containing display choices for the track:
 </p>
-<ul><li> <b>Name:</b> Displays the "Track Name" dialog where you can give the track a new name. </li>
+<ul><li> <b>Rename Track:</b> Displays the "Track Name" dialog where you can give the track a new name. </li>
 <li> <b>Move Track Up:</b> Moves the track up.</li>
 <li> <b>Move Track Down:</b> Moves the track down.</li>
 <li> <b>Move Track to Top</b>: Moves track to become the topmost track in the project.</li>
@@ -71,27 +73,33 @@
 <li> <b>Logarithmic scale:</b> Sets the vertical ruler to a <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> display.</li>
 <li> <b>Range:</b> Opens dialogs where you can first set the minimum and then the maximum speed change value to be displayed on the vertical scale. Values are expressed in percentages relative to the "no change" value of 100%. Only integer values (whole numbers) can be set. The lowest speed change value that can be set is 10% and the highest speed change value that can be set is 1000% . </li>
 <li> <b>Logarithmic Interpolation:</b> The curve between control points is by default calculated using <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> <i><b><a href="glossary.html#interpolate" title="Glossary">interpolation</a></b></i>. Uncheck this option to use <i><b><a href="glossary.html#linear" title="Glossary">linear</a></b></i> interpolation between control points, so drawing an exactly straight line between points (assuming the vertical scale is set to "Linear").</li></ul>
-<p>Label tracks can also be moved up or down by clicking between the controls in the track's Track Control Panel then dragging upwards or downwards.   
-</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Tip" src="../m/images/d/d7/bulbicon.png" title="Tip" width="32" height="32" />
+</td>
+<td align="left" valign="top">A Time track can also be moved up or down by clicking between the controls in the track's Track Control Panel then dragging upwards or downwards.
+</td></tr></table>
+</div>
 <h3><span class="mw-headline" id="Vertical_Scale">Vertical Scale</span></h3>
 <p>You can also set the scale of the Time Track by right-clicking in its Vertical Scale which will give you a dropdown context menu:
 </p>
-<dl><dd><span title="Time Track Vertical Scale Dropdown menu"><img alt="Time Track Vertical Scale context menu.png" src="../m/images/8/81/time_track_vertical_scale_context_menu.png" width="354" height="163" /></span></dd></dl>
+<dl><dd><span title="Time Track Vertical Scale Dropdown menu"><img alt="Time Track Vertical Scale context menu.png" src="../m/images/8/81/time_track_vertical_scale_context_menu.png" width="448" height="197" /></span></dd></dl>
 <p><br />
 </p>
 <div id="warp"></div>
 <h2><span class="mw-headline" id="A_Tutorial_on_Time_Warping">A Tutorial on Time Warping</span></h2>
-<dl><dd><span title="Time Track with Audio Track below"><img alt="TimeTrackExample.png" src="../m/images/1/12/timetrackexample.png" width="765" height="311" /></span></dd></dl>
+<dl><dd><span title="Time Track with Audio Track below"><img alt="TimeTrackExample.png" src="../m/images/1/12/timetrackexample.png" width="791" height="256" /></span></dd></dl>
 <p><b>Key points about the image above:</b>
 </p>
 <ul>
 <li>The Time Track curves are drawn with default display types (linear vertical scaling with <i><b><a href="glossary.html#log" title="Glossary">logarithmic</a></b></i> interpolation).
-<li>The range of the vertical scale has been increased to a lower limit of 50 and an upper limit of 200. 
 <li> The horizontal ruler underneath the <a href="timeline.html" title="Timeline">Timeline</a> warps as you change the warp line. It shows when the speed-changed playback will reach each time point in the audio. Thus the green playback cursor moves faster or slower than normal as it moves along Time Track's horizontal ruler. 
 <li> In our example:
-<ul><li> we started playing twice as fast as normal
-<li> we slowed down fairly suddenly to a speed twice as slow as normal
-<li> then increased very gradually to a steady speed a little faster than the normal speed of 100%.</ul><p>After all the changes, the resultant audio ends up with only a few seconds shorter playing time than it had before (about 3 minutes 42 seconds, where the end of the audio lies against the Time Track horizontal ruler). </p></ul>
+<ul><li> Audacity started playing twice as fast as normal
+<li> Audacity slowed down to a speed twice as slow as normal (half-speed)
+<li> then increased to a steady speed a little faster than the normal speed of 100%.</ul><p>After all the changes, the resultant audio ends up with only a few seconds shorter playing time than it had before (about 3 minutes 42 seconds, where the end of the audio lies against the Time Track horizontal ruler). </p></ul>
 <p><b>Important Steps:</b> 
 </p>
 <ol><li> You must first have at least one audio track to manipulate.
@@ -106,7 +114,6 @@
 <li>If you wish to continue editing after completing your warp points, it is often advisable to click in the <a href="audio_tracks.html#panel" title="Audio Tracks">Track Control Panel</a> of the audio track to <a href="audacity_selection.html" title="Audacity Selection">select</a> it <i>(hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> and click to select multiple tracks)</i> then <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span>. This writes the <i><b><a href="glossary.html#resampling" title="Glossary">resampled</a></b></i> audio data directly to the project rather than resampling the speed-changed audio back to the current <i><b><a href="glossary.html#sample_rate" title="Glossary">sample rate</a></b></i> in real-time. This may therefore make project playback more responsive.  
 <ul><li>The quality setting of the resampling library used for playing or rendering Time Tracks is chosen automatically by Audacity. Therefore changing the converter quality settings in <a href="quality_preferences.html" title="Quality Preferences">Quality Preferences</a> will not affect Time Tracks.</ul>
 <li>To use the speed-changed audio in other applications, choose <span class="menu">File &gt; <a href="file_export_dialog.html" title="File Export Dialog">Export Audio</a>.
-&lt;/ol&gt;
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -202,7 +209,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Time_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/Time_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

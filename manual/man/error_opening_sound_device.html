@@ -86,7 +86,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 <ul><li> Set the project samplerate in <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Audio Settings Preferences</a> to the standard rate of 44100 Hz (or if your audio interface only supports a particular rate such as 48000 Hz, set the project sample rate to that). <span class="menu">Help &gt; Diagnostics &gt; <a href="help_menu_diagnostics.html#audio_device_info" title="Help Menu: Diagnostics">Audio Device Info</a></span> should show the rates the device claims to support. </li></ul>
 <ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Enable audible input monitoring</a></span> (this should never be enabled if <a href="tutorial_recording_audio_playing_on_the_computer.html" title="Tutorial - Recording audio playing on the computer">recording computer playback</a>). </li></ul>
 <ul><li> Try turning off <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#overdub_onoff" title="Transport Menu: Transport Options">Hear other tracks during recording</a></span> because recording while playing could stress your sound device or computer. </li></ul>
-<ul><li>Check in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a> that the playback and recording devices are correctly and explicitly selected. 
+<ul><li>Check in <a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">Audio Setup Toolbar</a> that the playback and recording devices are correctly and explicitly selected. 
 <ul><li> On Windows, do not choose "Microsoft Sound Mapper" or "Primary Sound Driver" which point to the current Windows default device; choose the required device by name. Try selecting "Windows DirectSound" as the "Host" instead of "MME".</li></ul></li></ul>
 <p><br />
 </p>
@@ -95,18 +95,18 @@ The recording device message most commonly occurs on Windows when one of the sou
 <h2><span class="mw-headline" id="Check_operating_system_settings">Check operating system settings</span></h2>
 <ul><li> <b>Windows:</b> Follow the instructions for <a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows</a> to access and configure the Windows Sound settings. The key points are:
 <ul><li> <b>Ensure all available inputs are listed and enabled in the Windows Sound dialog.</b> </li>
-<li> <b>Additionally for Windows:</b> Ensure Default Format for the playback and recording devices contains the same <a href="audio_settings_preferences.html" title="Audio Settings Preferences">sample rate</a> and number of <a href="device_toolbar.html" title="Device Toolbar">recording channels</a> as in Audacity. 
+<li> <b>Additionally for Windows:</b> Ensure Default Format for the playback and recording devices contains the same <a href="audio_settings_preferences.html" title="Audio Settings Preferences">sample rate</a> and number of <a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">recording channels</a> as in Audacity. 
 <ul><li> Very rarely, it can help to use 16-bit or 24-bit Default Format then change the Audacity <a href="audio_settings_preferences.html#Sampling" title="Audio Settings Preferences">Audio Settings Preferences</a> to that sample format.</li>
-<li> If necessary, put a checkmark in both Exclusive Mode boxes then set the "Host" in Audacity's Device Toolbar to "Windows DirectSound" and choose a <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Project Sample Rate</a> that your playback and recording devices support. Audacity can then request that rate directly from the sound device. </li></ul></li></ul></li></ul>
+<li> If necessary, put a checkmark in both Exclusive Mode boxes then set the "Host" in Audacity's Audio Setup Toolbar to "Windows DirectSound" and choose a <a href="audio_settings_preferences.html" title="Audio Settings Preferences">Project Sample Rate</a> that your playback and recording devices support. Audacity can then request that rate directly from the sound device. </li></ul></li></ul></li></ul>
 <div id="macsettings"></div>
-<ul><li> <b>Mac:</b> In Finder, choose <span class="menu">Go &gt; Utilities &gt; Audio MIDI Setup.app</span>. In "Audio Devices", select in turn the required Recording and Playback devices. Set "Format" to the same <a href="audio_settings_preferences.html" title="Audio Settings Preferences">sample rate</a>, <a href="audio_settings_preferences.html" title="Audio Settings Preferences">bit-depth</a> and number of <a href="device_toolbar.html" title="Device Toolbar">recording channels</a> as in Audacity.</li></ul>
+<ul><li> <b>Mac:</b> In Finder, choose <span class="menu">Go &gt; Utilities &gt; Audio MIDI Setup.app</span>. In "Audio Devices", select in turn the required Recording and Playback devices. Set "Format" to the same <a href="audio_settings_preferences.html" title="Audio Settings Preferences">sample rate</a>, <a href="audio_settings_preferences.html" title="Audio Settings Preferences">bit-depth</a> and number of <a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">recording channels</a> as in Audacity.</li></ul>
 <div id="linuxsettings"></div>
 <ul><li> <b>Linux:</b> </li></ul>
 <div class="note">While troubleshooting, ensure that <span class="menu">Transport &gt; Transport Options &gt; <a href="transport_menu_transport_options.html#software_playthrough_onoff" title="Transport Menu: Transport Options">Enable audible input monitoring</a></span> is off. Only enable this option if you really need it, after you have established that Audacity is recording correctly.</div>
-<ol><li> In the first instance, try refreshing Audacity's list of audio devices at <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> then select the <b>default</b> option in <a href="device_toolbar.html" title="Device Toolbar">Device Toolbar</a>. If the error still occurs, recheck the <a href="#Check_Audacity_Settings">Audacity settings</a>.</li>
+<ol><li> In the first instance, try refreshing Audacity's list of audio devices at <span class="menu">Transport &gt; <a href="transport_menu.html#rescan_audio_devices" title="Transport Menu">Rescan Audio Devices</a></span> then select the <b>default</b> option in <a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">Audio Setup Toolbar</a>. If the error still occurs, recheck the <a href="#Check_Audacity_Settings">Audacity settings</a>.</li>
 <li> It is possible that another application may have exclusive access to the audio device. Try logging out and back in again, then re-check the Audacity settings before opening any other application that may use the audio device.
-<ul><li> If <i><b>pulse</b></i> is an option in Device Toolbar, ensure that you have Pulse Audio Volume Control (<i>pavucontrol</i>) installed. If it is not installed, use your system's package manager to install it. Open Pulse Audio Volume Control and check that there is an available output device.</li>
-<li> If <i><b>Jack Audio System</b></i> is running on the computer, ensure that it is selected as the <b>Host</b> in Device Toolbar.</li></ul></li>
+<ul><li> If <i><b>pulse</b></i> is an option in Audio Setup Toolbar, ensure that you have Pulse Audio Volume Control (<i>pavucontrol</i>) installed. If it is not installed, use your system's package manager to install it. Open Pulse Audio Volume Control and check that there is an available output device.</li>
+<li> If <i><b>Jack Audio System</b></i> is running on the computer, ensure that it is selected as the <b>Host</b> in Audio Setup Toolbar.</li></ul></li>
 <li> Open the system <b>Sound Preferences</b> and check that a recording device is available. Sound Preferences is often available through a loudspeaker icon on the Desktop, Desktop panel, or in the system Preferences menu.</li>
 <li> Open AlsaMixer (type <b>alsamixer</b> in a terminal window) and check the audio interface and recording device settings. To view the AlsaMixer manual, type <b>man alsamixer</b> in a terminal window.</li></ol>
 <p><br />
@@ -129,7 +129,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 </p>
 <div id="wasapi"></div>
 <h2><span class="mw-headline" id="Windows_WASAPI:_Recording_from_a_USB_device">Windows WASAPI: Recording from a USB device</span></h2>
-<p>You may get this error if you set Audacity to record from a USB device and playback through your onboard soundcard with the <b><a href="device_toolbar.html" title="Device Toolbar">Audio Host</a></b> set to <b><a href="glossary.html#wasapi" title="Glossary">WASAPI</a></b>.
+<p>You may get this error if you set Audacity to record from a USB device and playback through your onboard soundcard with the <b><a href="audio_setup_toolbar.html" title="Audio Setup Toolbar">Audio Host</a></b> set to <b><a href="glossary.html#wasapi" title="Glossary">WASAPI</a></b>.
 </p>
 <div class="note">We believe that this is likely to be a problem with Microsoft's WASAPI not liking working with two devices at once.  There is no fix that we can make in Audacity. </div>
 <h3><span class="mw-headline" id="Workarounds">Workarounds</span></h3>
@@ -228,7 +228,7 @@ The recording device message most commonly occurs on Windows when one of the sou
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/Error_opening_sound_device">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

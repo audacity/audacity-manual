@@ -33,9 +33,8 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/View_Menu#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-<div class="intro"><i><b>View Menu</b></i> has commands that determine the amount of detail you see in all the <a href="tracks.html" title="Tracks">tracks</a> in the project window. It also lets you show or hide <a href="toolbars_overview.html" title="Toolbars Overview">Toolbars</a> and some additional windows such as <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo History</a>.</div>
-<dl><dd><span title="The View menu"><img alt="View Menu 3-5-0.png" src="../m/images/c/c1/view_menu_3_5_0.png" width="299" height="283" /></span></dd></dl>
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro"><i><b>View Menu</b></i> has commands that determine the amount of detail you see in all the <a href="tracks.html" title="Tracks">tracks</a> in the project window. It also lets you show or hide <a href="toolbars_overview.html" title="Toolbars Overview">Toolbars</a> and some additional windows such as <a href="undo_redo_and_history.html" title="Undo, Redo and History">Undo History</a>.</div>
+<dl><dd><span title="The View menu"><img alt="View Menu 3-6-0.png" src="../m/images/5/57/view_menu_3_6_0.png" width="279" height="267" /></span></dd></dl>
 <div class="note"><a href="audio_tracks.html" title="Audio Tracks">Audio tracks</a> support different View Modes such as <a href="audio_track_dropdown_menu.html#wave" title="Audio Track Dropdown Menu">Waveform</a> (the default), <a href="audio_track_dropdown_menu.html#wavedb" title="Audio Track Dropdown Menu">Waveform dB</a> or <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">Spectrogram</a>. 
 <ul><li> These views can be changed individually for each track using the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Audio Track Dropdown Menu</a></li>
 <li> Also you can change the default View Mode for all tracks in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>. </div></li></ul>
@@ -95,21 +94,14 @@
 <p>Shows the <a href="extra_menu.html" title="Extra Menu">Extra</a> menu with many extra less frequently used commands.  This menu appears just before the help menu. 
 </p><p><br />
 </p>
-<div id="track_name_onoff"></div>
-<h2><span class="mw-headline" id="Show_track_name_as_overlay">Show track name as overlay</span></h2>
-<p>When this is enabled the audio track name is displayed superimposed translucently at top left of all audio tracks. Note that the track name is always shown in the Track Control Panel but will be truncated if the name is too long to fit. 
-</p>
-<dl><dd><span title="Tracks with extended track names overlaid on the tracks"><img alt="View Menu Show Track Name.png" src="../m/images/d/d0/view_menu_show_track_name.png" width="624" height="188" /></span></dd></dl>
-<p>This has the same effect as the setting for <b>Show track name as overlay</b> in <a href="tracks_preferences.html" title="Tracks Preferences">Tracks Preferences</a>.
-</p><p><br />
-</p>
 <div id="show_clipping_onoff"></div>
 <div id="show_clipping_.28on_off.29"></div>
 <h2><span class="mw-headline" id="Show_Clipping_in_Waveform">Show Clipping in Waveform</span></h2>
 <p>Click this menu item to turn display of <i><b><a href="glossary.html#clipping" title="Glossary">clipped</a></b></i> samples on and off - a check mark in the item indicates that display is turned on. If turned on <i>(the default is off)</i>, individual or multiple clipped samples display as a red vertical line when in one of the <a href="audacity_waveform.html" title="Audacity Waveform">waveform views</a>. A sample is displayed as clipped if it touches or exceeds 0 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> and so touches or exceeds the volume envelope defined by +1.0 to - 1.0 on the <a href="audio_tracks.html#scale" title="Audio Tracks">vertical scale</a> to left of the waveform. 
 </p><p>A run of four or more consecutive clipped samples will also trigger the red clipping indicator in <a href="meter_toolbar.html#annotated" title="Meter Toolbar">Meter Toolbar</a>. A solid block of red in the waveform will almost certainly indicate multiple or extended runs of lost audio information above 0 dB, resulting in severe distortion. Avoid clipped samples where possible, for example by setting the <a href="meter_toolbar.html#recording" title="Meter Toolbar">recording level</a> correctly. You may turn "Show Clipping in Waveform" off if it behaves sluggishly on slower machines.    
 </p>
-<dl><dd><span title="Clipped positive and negative samples marked in red"><img alt="ShowClipping02.png" src="../m/images/7/7d/showclipping02.png" width="515" height="105" /></span></dd></dl>
+<dl><dd><span title="Clipped positive and negative samples marked in red"><img alt="ShowClipping02.png" src="../m/images/7/7d/showclipping02.png" width="638" height="166" /></span>
+<dl><dd><b>Clipping shown as red lines on the waveform</b></dd></dl></dd></dl>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -119,6 +111,15 @@
 <td align="left" valign="top">By choosing <span class="menu">Analyze &gt; Find Clipping</span>, clipping can also be shown diagrammatically in a <a href="label_tracks.html" title="Label Tracks">Label Track</a> so that screen-readers can access the information.
 </td></tr></table>
 </div>
+<p><br />
+</p>
+<div id="show_rms_onoff"></div>
+<div id="rms"></div>
+<h2><span class="mw-headline" id="Show_RMS_in_Waveform">Show RMS in Waveform</span></h2>
+<p>Click this menu item to turn on (or back off) the display of the RMS in the waveform.  Default setting is "off".
+</p>
+<dl><dd><img alt="RMS in waveform.png" src="../m/images/4/4e/rms_in_waveform.png" width="638" height="189" />
+<dl><dd><b>Waveform with RMS display turned on</b></dd></dl></dd></dl>
 <p><br />
 </p>
 <div id="mac_full_screen"></div>
@@ -212,7 +213,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/View_Menu">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/View_Menu">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

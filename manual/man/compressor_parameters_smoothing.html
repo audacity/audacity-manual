@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Compressor parameters: Smoothing - Audacity Manual</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Compressor_parameters_Smoothing rootpage-Compressor_parameters_Smoothing skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Compressor parameters: Smoothing</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Audacity Development Manual</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Compressor_parameters:_Smoothing#searchInput">search</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="intro">
+<p>Time smoothing can reduce the distortion inherent to compression, ideally to such an extent that this distortion becomes inaudible (except of course if the distortion is sought as an aesthetic effect). To do this successfully, there are a few things to consider, and we'll take a look at some of them. Understanding the content of this page is certainly not sufficient to make you a mastering expert, but necessary.
+</p>
+</div>
+<p><br />
+For the examples here, a 1kHz, -30dB tone of 600ms was used, mixed with:
+</p>
+<ul><li> a click at 100ms</li>
+<li> a 5kHz tone burst at 200ms lasting 100ms</li>
+<li> a 100Hz tone burst at 400ms lasting 100ms</li></ul>
+<p>all peaking at -10dB.
+</p><p>Using Audacity's compressor, starting with all smoothing set to zero, a threshold of -20dB and a ratio close to infinity:
+</p>
+<dl><dd><span title="Compressor parameters with no smoothing"><img alt="Compressor parameters smoothing editor-no smoothing.png" src="../m/images/b/ba/compressor_parameters_smoothing_editor_no_smoothing.png" width="400" height="259" /></span></dd></dl>
+<p>Then tweak only the smoothing parameters, leaving the compression curve parameters unchanged.
+</p><p><br />
+</p>
+<div id="parameters"></div>
+<h2><span class="mw-headline" id="Smoothing_parameters">Smoothing parameters</span></h2>
+<dl><dd><table class="wikitable" style="text-align:left;">
+<caption>
+</caption>
+<tr>
+<th> Configuration name
+</th>
+<th> Lookahead (ms)<br />Attack (ms)<br />Release (ms)
+</th>
+<th> Output (dB scale)
+</th>
+<th> Spectrum
+</th>
+<th> Additional images
+</th>
+<th> Comments
+</th></tr>
+<tr>
+<td> Bypassed
+</td>
+<td> N/A
+</td>
+<td> <img alt="Compressor parameters smoothing waveform.png" src="../m/images/7/78/compressor_parameters_smoothing_waveform.png" width="400" height="215" />
+</td>
+<td> <img alt="Compressor parameters smoothing spectrum.png" src="../m/images/9/92/compressor_parameters_smoothing_spectrum.png" width="400" height="237" />
+</td>
+<td>
+</td>
+<td> Three large peaks for each of the 1kHz, 5kHz and 100Hz tones is visible. (100Hz tone is on the very left.)
+</td></tr>
+<tr>
+<td> No smoothing
+</td>
+<td> 0<br />0<br />0
+</td>
+<td> <img alt="Compressor parameters smoothing waveform-no smoothing.png" src="../m/images/5/50/compressor_parameters_smoothing_waveform_no_smoothing.png" width="400" height="215" />
+</td>
+<td> <img alt="Compressor parameters smoothing spectrum-no smoothing.png" src="../m/images/1/11/compressor_parameters_smoothing_spectrum_no_smoothing.png" width="400" height="237" />
+</td>
+<td>
+</td>
+<td> Hard-clipping at the -20dB threshold. All three tones now exhibit odd harmonics. Note that this also applies to the 1kHz tone, although its amplitude is below the threshold, because it is <i>mixed</i> with the other components: it is the only component whose odd harmonics coincide with the large peaks seen at 9, 11, 13, 17, 19 and 21kHz.<br />
+</td></tr>
+<tr>
+<td> Just a short lookahead
+</td>
+<td> 1<br />0<br />0
+</td>
+<td> <img alt="Compressor parameters smoothing waveform-lookahead.png" src="../m/images/c/ca/compressor_parameters_smoothing_waveform_lookahead.png" width="400" height="215" />
+</td>
+<td> <img alt="Compressor parameters smoothing spectrum-lookahead.png" src="../m/images/a/ad/compressor_parameters_smoothing_spectrum_lookahead.png" width="400" height="237" />
+</td>
+<td> <a href="https://alphamanual.audacityteam.org/man/File:Compressor_parameters_smoothing_waveform-lookahead_-_zooms.png" class="image"><img alt="Compressor parameters smoothing waveform-lookahead - zooms.png" src="../m/images/6/69/compressor_parameters_smoothing_waveform_lookahead_zooms.png" width="400" height="225" /></a>
+</td>
+<td> A 1ms lookahead by itself becomes effective in smoothing audio which doesn't have frequency components below 1kHz. You can see that the 100Hz burst is still very much a square wave, but the 5kHz burst, however, very much looks like a smooth sine wave (hardly visible on the picture). Remember that clipping of one component means clipping of all the rest, so while the 100Hz component gets clipped, so does the 1kHz tone that's mixed with it.
+<p><br /> Consistently in the spectrum, the 100Hz tone still has its odd harmonics, the 1kHz tone has now less of them because clipped less often, and the 5kHz tone has almost none left.
+</p>
+</td></tr>
+<tr>
+<td> A longer lookahead
+</td>
+<td> 10<br />0<br />0
+</td>
+<td> <img alt="Compressor parameters smoothing waveform-lookahead 10ms.png" src="../m/images/4/4b/compressor_parameters_smoothing_waveform_lookahead_10ms.png" width="400" height="215" />
+</td>
+<td> <img alt="Compressor parameters smoothing spectrum-lookahead 10ms.png" src="../m/images/f/f7/compressor_parameters_smoothing_spectrum_lookahead_10ms.png" width="400" height="237" />
+</td>
+<td>
+</td>
+<td> Now even the 100Hz tone becomes more like a sine wave. Its harmonics are reduced, and hence also those of the 1kHz tone.
+</td></tr>
+<tr>
+<td> Just a short attack
+</td>
+<td> 0<br />1<br />0
+</td>
+<td> <img alt="Compressor parameters smoothing waveform-attack 1ms.png" src="../m/images/0/0a/compressor_parameters_smoothing_waveform_attack_1ms.png" width="400" height="215" />
+</td>
+<td> <img alt="Compressor parameters smoothing spectrum-attack 1ms.png" src="../m/images/a/a0/compressor_parameters_smoothing_spectrum_attack_1ms.png" width="400" height="237" />
+</td>
+<td> <img alt="Compressor parameters smoothing waveform-attack 1ms - zoom 100Hz.png" src="../m/images/1/12/compressor_parameters_smoothing_waveform_attack_1ms_zoom_100hz.png" width="400" height="215" />
+</td>
+<td> Looking at the spectrum one might think that only just 1ms of attack time is a great smoother, but if you look at the waveform you'll see that barely any compression has been applied. There only is the side effect that the 100Hz wave shape gets modified, introducing distortion. The thing is that as soon as the level goes back under the threshold, since there is no release time, the attack state is reset instantly. The only kind of waveform such a setting would be efficient on is a wave whose absolute value is always above the threshold, such as a square wave. (Compressing a square wave sounds easy all right...)
+</td></tr>
+<tr>
+<td> Attack and release only
+</td>
+<td> 0<br />1<br />10
+</td>
+<td> <img alt="Compressor parameters smoothing waveform-attack 1ms release 10ms.png" src="../m/images/a/a4/compressor_parameters_smoothing_waveform_attack_1ms_release_10ms.png" width="400" height="215" />
+</td>
+<td> <img alt="Compressor parameters smoothing spectrum-attack 1ms release 10ms.png" src="../m/images/6/6e/compressor_parameters_smoothing_spectrum_attack_1ms_release_10ms.png" width="400" height="237" />
+</td>
+<td>
+</td>
+<td> Now the relatively slow release allows to "maintain the pressure" while the tones alternate between positive and negative values. All waveshapes are better preserved, and harmonic distortion is almost gone. However, the attack time lets the signal overshoot. If the purpose of the compression is to maximize loudness, this overshoot is problematic. Adding some look-ahead can help...
+</td></tr>
+<tr>
+<td> All three parameters
+</td>
+<td> 10<br />1<br />10
+</td>
+<td> <img alt="Compressor parameters smoothing waveform- attack=1 release=10 lookahead=10.png" src="../m/images/3/3e/compressor_parameters_smoothing_waveform_attack_1_release_10_lookahead_10.png" width="400" height="215" />
+</td>
+<td> <img alt="Compressor parameters smoothing spectrum- attack=1 release=10 lookahead=10.png" src="../m/images/4/47/compressor_parameters_smoothing_spectrum_attack_1_release_10_lookahead_10.png" width="400" height="237" />
+</td>
+<td>
+</td>
+<td> The spectrum looks just as clean as the previous one, but now the overshoot was reduced and we can add 5dB of loudness without additional clipping.
+</td></tr>
+<tr>
+<td> Limiter-like settings
+</td>
+<td> 1<br />0<br />25
+</td>
+<td> <img alt="Compressor parameters smoothing waveform- release=25 lookahead=1.png" src="../m/images/3/36/compressor_parameters_smoothing_waveform_release_25_lookahead_1.png" width="400" height="215" />
+</td>
+<td> <img alt="Compressor parameters smoothing spectrum- release=25 lookahead=1.png" src="../m/images/6/6e/compressor_parameters_smoothing_spectrum_release_25_lookahead_1.png" width="400" height="237" />
+</td>
+<td>
+</td>
+<td> A limiter makes it impossible for the output to exceed a certain ceiling, which means attack has to be set to zero. Lookahead and release times can still be used efficiently together, though. With these settings, the spectrum is almost identical to the original, although we can now add 10dB of loudness without clipping. (The tiny odd harmonics are too low to be audible.)
+</td></tr></table></dd></dl>
+<div id="take"></div>
+<h2><span class="mw-headline" id="Take-aways">Take-aways</span></h2>
+<div id="attack"></div>
+<h3><span class="mw-headline" id="Attack">Attack</span></h3>
+<p>Attack leads to overshoot, and hence is more a setting for aesthetics than for loudness maximization. With attack, the envelope of a sudden, steady tone can become similar to that of a piano note. This is why it is said that attack adds punch.
+</p>
+<div id="distortion"></div>
+<h3><span class="mw-headline" id="Distortion_is_contagious">Distortion is contagious</span></h3>
+<p>Distortion of a loud component leads to the distortion of all the signals it is mixed with, even if they are below the threshold!
+</p>
+<div id="lookahead"></div>
+<h3><span class="mw-headline" id="Lower_tones_need_longer_lookahead_and_release">Lower tones need longer lookahead and release</span></h3>
+<p>Lookahead and release become effective when their duration is longer than the period of the <i>lowest-pitched</i> (since distortion is contagious) frequency component of the mix that goes above the threshold. However, slow settings on fast-changing signals has other side effects (masking low-volume tones coming before (lookahead) or after (release) the louder tones), which is why compression of the individual tracks before mixing can help, and if this is not an option, maybe a multi-band compressor can.
+</p><p><br />
+</p>
+<div id="reading"></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<p>The <a rel="nofollow" class="external text" href="https://kokkinizita.linuxaudio.org/linuxaudio/zita-dpl1-doc/quickguide.html">Zita-DPL1 Quick Guide</a>, which served as inspiration for this article.
+</p><p><br />
+</p>
+<div id="links"></div>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<p><a href="compressor.html" title="Compressor"><b>|&lt;</b> Compressor</a>
+</p><p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> Effect Menu</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">Manual Home Page</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">Using Audacity</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">Tour Guide</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">Getting Started</span></a></li>
+<li> <a href="how_to_use_audacity.html" title="How to use Audacity"><span title="A comprehensive guide to using Audacity">How-Tos</span></a></li>
+<li> <a href="tutorials_for_audacity.html" title="Tutorials for Audacity"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">Tutorials</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">Tips</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">Audacity GUI</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">Menu Bar</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">Toolbars</span></a></li>
+<li> <a href="audio_tracks.html" title="Audio Tracks"><span title="A guide to the various types of track">Tracks</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">Effects</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plugins">Customizing</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">Preferences</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">Shortcut keys</span></a></li>
+<li> <a href="customization.html#plugins" title="Customization"><span title="You can download and install plugins to add extra functionality to Audacity. Plugins can give you extra effects, or more audio generation and analysis capability.">Plugins</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">Themes</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">Toolbars</span></a></li>
+<li> <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers"><span title="Manage your list of available built-in Effects, Generators, Analyzers and plugins with the Plugin Manager">Effects</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>Reference</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">Reference</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">Search the Manual</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">Digital Audio</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">Glossary</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">All Commands</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">Errors</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">Index</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">FAQ</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>Useful Links</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/">Forum</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://support.audacityteam.org/">Audacity Support</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">Latest Release</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/Compressor_parameters:_Smoothing">Check current version of this page (development Manual)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

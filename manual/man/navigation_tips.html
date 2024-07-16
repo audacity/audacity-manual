@@ -38,7 +38,18 @@
 
 <div class="intro">This page explains how to navigate the waveform or tracks (including moving the playback position), and how to find and mark edit points, so as to identify the audio you want to edit.
 <ul><li>For tips on how to view and adjust playback volume, and to achieve smooth playback quality, see <a href="playback_tips.html" title="Playback Tips">Playback Tips</a>.</li>
-<li>For tips on how to navigate effects without using a mouse see <a href="navigating_effects_without_using_a_mouse.html" title="Navigating Effects without using a mouse">Navigating Effects without using a mouse</a></div> </li></ul>
+<li>For tips on how to navigate effects without using a mouse see <a href="navigating_effects_without_using_a_mouse.html" title="Navigating Effects without using a mouse">Navigating Effects without using a mouse</a></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
+</td>
+<td align="left" valign="top">The images on this page have <b><a href="glossary.html#rms" title="Glossary">RMS</a></b> display turned <b>on</b>, the light color in the center of the waveform.
+<ul><li>The RMS display is now <b>off</b> by default .</li>
+<li>You can enable it with <span class="menu">View &gt; <a href="view_menu.html" title="View Menu">Show RMS in Waveform</a></span>. See <a href="audacity_waveform.html#rms" title="Audacity Waveform"><b>RMS display</b></a> for more details. </li></ul>
+</td></tr></table></div>
+</div> 
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#navigation">Navigation</a>
 <ul><li><a href="#play_pos">Changing playback position</a></li>
@@ -98,10 +109,10 @@
 <p>If you have multiple tracks on screen you can fit them on screen without the need to scroll up and down by dragging the bottom edge of each track upwards at any point along the waveform. Or you can use the <span class="menu">View &gt; Tracksize &gt; <a href="view_menu_track_size.html#fittoheight" title="View Menu: Track Size">Fit to Height</a></span> command to fit all the tracks in the screen. 
 </p><p>You can move tracks up and down by clicking on the Track Control Panel with the mouse and dragging up or down. Alternatively, click the downward pointing arrow at the top of the <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">Track Dropdown Menu</a> and choose "Move Track Up" or "Move Track Down".
 </p><p>Audacity can manipulate tracks and selected areas entirely with the keyboard. Use the <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> key on the keyboard to give focus to a track, as shown by the colored border around the track. Then press <span class="kbrd" style="background-color: #e0e0f0">Enter</span> to select or deselect the track.
-</p><p>There is an additional "roll-up" button (the upward pointing arrow) at the base of each Track Control Panel:<br />
+</p><p>There is an additional "collapse" button (the upward pointing chevron) at the top of each Track Control Panel.
 </p>
 <dl><dd><span title="Audio track rolled down - Windows 7 Basic theme"><img alt="Rolldown.png" src="../m/images/d/db/rolldown.png" width="552" height="301" /></span>     </dd></dl>
-<p>If you click this, the track will be rolled up so that only the name of the track is visible in the Track Control Panel, so allowing many tracks to be fitted on screen without scrolling:<br />
+<p>If you click this, the track will be rolled up so that only the name of the track is visible in the Track Control Panel, so allowing many tracks to be fitted on screen without scrolling:
 </p>
 <dl><dd><span title="Audio track rolled up - Windows 7 Basic theme"><img alt="Rollup.png" src="../m/images/7/70/rollup.png" width="546" height="39" /></span></dd></dl>
 <p>To roll-down the track again, click the downward pointing arrow. 
@@ -158,7 +169,7 @@ which when audio is not playing, recording or paused, is the position of the edi
 <div id="labnav"></div>
 <h3><span class="mw-headline" id="Navigating_using_Label_Tracks">Navigating using Label Tracks</span></h3>
 <p><b>Tabbing to open the label for editing</b> 
-</p><p>When focus is on a label track as indicated by the yellow focus border: 
+</p><p>When focus is on a label track as indicated by the colored focus border <i>(the actual color depends on the <a href="themes.html" title="Themes">Theme</a> you choose)</i>: 
 </p>
 <ul><li><span class="kbrd" style="background-color: #d0d0f8">Tab</span> opens the next label for editing and places the editing cursor or selection to correspond with that label</li>
 <li><span class="kbrd" style="background-color: #d0d0f8">Shift + Tab</span> opens the previous label for editing and places the editing cursor or selection to correspond with that label.</li></ul>
@@ -166,13 +177,13 @@ which when audio is not playing, recording or paused, is the position of the edi
 </p><p>Audacity cycles through the labels automatically, so when at the last label, moving to next label jumps to the first label. When at the first label, moving to previous label jumps to the last label.
 </p><p>These commands exist only as shortcuts - they have no menu items or buttons. 
 </p><p><b>Shortcuts to move between labels without editing them</b>
-</p><p>There are also two shortcut commands to move between labels without opening them for editing. These shortcuts do not require the yellow focus border to be in a label track:
+</p><p>There are also two shortcut commands to move between labels without opening them for editing. These shortcuts do not require the colored focus border to be in a label track:
 </p>
 <ul><li><span class="kbrd" style="background-color: #d0d0f8">Alt + Right</span> places the editing cursor or selection to correspond with the next label</li>
 <li><span class="kbrd" style="background-color: #d0d0f8">Alt + Left</span> places the editing cursor or selection to correspond with the previous label.</li></ul>
 <p>The view position moves if necessary to show you the label moved to, centered in the view. 
-</p><p>If there is a single label track, you do not need to be aware of which track has the yellow focus border. 
-</p><p>If you have multiple label tracks, use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> arrow to move the yellow focus border into the label track you wish to use. If there is more than one label track and none have focus, then the first label track downwards from the focused audio track is used. 
+</p><p>If there is a single label track, you do not need to be aware of which track has the colored focus border. 
+</p><p>If you have multiple label tracks, use <span class="kbrd" style="background-color: #e0e0f0">Up</span> or <span class="kbrd" style="background-color: #e0e0f0">Down</span> arrow to move the colored focus border into the label track you wish to use. If there is more than one label track and none have focus, then the first label track downwards from the focused audio track is used. 
 </p>
 <div class="note">During <a href="playback.html" title="Playback">playback</a> these "Move to the label" commands restart playback at the position of the label moved to (whether the track is selected or not). This is useful if you have a long recording which you want to <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">split into separate tracks using labels</a>. </div> 
 <p>As with the <span class="kbrd" style="background-color: #d0d0f8">Tab</span> and <span class="kbrd" style="background-color: #d0d0f8">Shift + Tab</span> commands, Audacity cycles through the labels automatically, and there are no corresponding menu items or buttons. 
@@ -268,7 +279,7 @@ For both tabbing so as to open labels and moving between labels, the audio corre
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-04-22 - <a href="https://alphamanual.audacityteam.org/man/Navigation_Tips">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/Navigation_Tips">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
