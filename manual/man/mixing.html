@@ -33,9 +33,11 @@
 										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="https://alphamanual.audacityteam.org/man/Mixing#searchInput">search</a></div>
 
 					
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"></li></ul>
+
 <div class="intro"><i><b>Mixing</b></i> refers to the process of combining multiple <a href="audacity_selection.html" title="Audacity Selection"><b>selected</b></a> Audacity <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">tracks</a> which play simultaneously into a single track.
-<p>Audacity mixes automatically when playing or exporting, but it can also physically mix <a href="audacity_selection.html" title="Audacity Selection">selected</a> multiple tracks together into one within the project. All selected tracks are mixed, regardless of the <a href="#solo"><span class="button"><b>Mute</b></span> or <span class="button"><b>Solo</b></span> buttons</a> on any tracks are set to silence their playback. 
+<p>When mixing with the <a href="tracks_menu_mix.html" title="Tracks Menu: Mix"><b>Mix</b></a> commands <b>all selected</b> tracks are mixed, regardless of the <a href="#solo"><span class="button"><b>Mute</b></span> or <span class="button"><b>Solo</b></span> buttons</a> on any tracks that are set to silence their playback. 
+</p><p>Audacity mixes automatically when playing or exporting, but in this case any muted tracks that form part of the selection or project are <i><b>not</b></i> played or exported.
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -43,13 +45,14 @@
 <tr>
 <td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
 </td>
-<td align="left" valign="top"><b>Note carefully:</b> Whole tracks are mixed even if there is only a partial selection in the tracks.
-</td></tr></table></div></div>
+<td align="left" valign="top"><b>Note carefully:</b> whole tracks are mixed even if there is only a partial selection in the tracks.
+</td></tr></table></div>
+</div>
 <h2><span class="mw-headline" id="Contents">Contents</span></h2>
 <ol><li><a href="#mixing">Mixing</a></li>
 <li><a href="#controls">Controls used for mixing</a></li>
 <li><a href="#solo">Muting and Soloing</a></li>
-<li><a href="#gain">Gain and panning</a></li>
+<li><a href="#gain">Gain/Volume and panning</a></li>
 <li><a href="#mix">Explicit Mixing and Rendering</a></li>
 <li><a href="#mixing">Mixing Levels</a></li></ol>
 <p><br />
@@ -57,12 +60,13 @@
 <div id="mixing"></div>
 <h2><span class="mw-headline" id="Mixing">Mixing</span></h2>
 <p>Mixing can be done for a number of reasons, for example <a href="tutorial_mixing_a_narration_with_background_music.html" title="Tutorial - Mixing a Narration With Background Music">mixing speech with background music</a> to make a podcast, or adding different instruments into the same song.  Concatenating songs (for example, playing three songs one after the other) does not necessarily involve mixing, but if you wanted the songs to fade into each other it would involve mixing. 
-</p><p>Within an Audacity project, you can physically mix selected multiple selected tracks into a single mono or stereo track using either of two <a href="#mix">explicit&#160;mix&#160;commands</a>:
+</p><p>Within an Audacity project, you can physically mix multiple selected tracks into a single mono or stereo track using either of two <a href="#mix">explicit&#160;mix&#160;commands</a>:
 </p>
 <ul><li><span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span> - which replaces the original track(s) with the mixed track</li>
 <li> <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render_to_new_track" title="Tracks Menu: Mix">Mix and Render to New Track</a></span> - which adds the mixed track to the project, preserving the original tracks.</li></ul>
 <p>By default, multiple stereo tracks are mixed down to a single stereo file on Export.
 </p><p>Also by default, multiple mono tracks are mixed down to a mono file, but if you <a href="audio_tracks.html#pan" title="Audio Tracks">pan</a> any mono tracks to left or right or if there are any stereo tracks in the mix, the tracks are mixed to a stereo file.  Note that the mono tracks are mixed to both the left and right channels of the resulting stereo file.
+</p><p>Exporting will automatically ignore any tracks on which the <span class="button">Mute</span> button is pressed.
 </p>
 <div class="note">The Mixed and Rendered track will be placed where the bottom selected track was and given the name "<b>Mix</b>". <p>Unless, that is, a single selected track is rendered in which case it will retain its position, its track name and its properties (display type, waveform color)</p><p>Note that this may be useful in retaining membership of any Sync-Locked Track group to which the track(s) may have formerly belonged.</p> </div>
 <p>In Audacity, <b>mixing is automatic</b>. You could just put audio into two different tracks, <a href="transport_toolbar.html" title="Transport Toolbar">play</a> to listen to the result then <a href="file_export_dialog.html" title="File Export Dialog">export</a> it as an audio file like <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> or <i><b><a href="glossary.html#wav" title="Glossary">WAV</a></b></i> or burn the WAV to <i><b><a href="glossary.html#audio_cd" title="Glossary">Audio CD</a></b></i>.  
@@ -82,9 +86,9 @@
 <td align="left" valign="top">This image has <b><a href="glossary.html#rms" title="Glossary">RMS</a></b> display turned <b>on</b>, the light color in the center of the waveform. The RMS display is now <b>off</b> by default .
 <ul><li>You can enable it with <span class="menu">View &gt; <a href="view_menu.html" title="View Menu">Show RMS in Waveform</a></span>. See <a href="audacity_waveform.html#rms" title="Audacity Waveform"><b>RMS display</b></a> for more details. </li></ul>
 </td></tr></table></div>
-<p>The controls used for mixing are the <a href="#solo"><span class="button"><b>Mute</b></span> or <span class="button"><b>Solo</b></span> buttons</a> and the Gain (-.....+) and Pan (L.....R) sliders.
+<p>The controls used for mixing are the <a href="#solo"><span class="button"><b>Mute</b></span> or <span class="button"><b>Solo</b></span> buttons</a> and the Gain/Volume (-.....+) and Pan (L.....R) sliders.
 </p>
-<dl><dd><span title="Controls box with the Mute/Solo buttons, and the Gain/Pan sliders"><img alt="Tracks for mixing.png" src="../m/images/f/fb/tracks_for_mixing.png" width="849" height="309" /></span></dd></dl>
+<dl><dd><span title="Controls box with the Mute/Solo buttons, and the Gain/Volume and Pan sliders"><img alt="Tracks for mixing.png" src="../m/images/f/fb/tracks_for_mixing.png" width="849" height="309" /></span></dd></dl>
 <p>In the above example, mixing the mono (upper) and stereo (lower) track means that the audio of the mono track will be heard equally in both left and right channels of the resulting stereo mix.  
 </p>
 <div id="channels"></div>
@@ -126,15 +130,17 @@
 </p>
 <div id="gain"></div>
 <h2><span class="mw-headline" id="Gain_and_panning">Gain and panning</span></h2>
-<p>Above the Mute / Solo buttons, each track has a - / + <i><b><a href="glossary.html#gain" title="Glossary">gain</a></b></i> slider which adjusts the track's volume, and an L / R pan slider which adjusts the track's stereo position in the overall mix - whether it comes from the left speaker, right speaker or in-between. To change the value, just click on the slider and drag. For finer control when dragging, hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while dragging or double-click on the slider or slider scale to enter a precise value as text. 
+<p>Above the Mute / Solo buttons, each track has a - / + <i><b><a href="glossary.html#gain" title="Glossary">Gain/Volume</a></b></i> slider which adjusts the track's volume, and an L / R pan slider which adjusts the track's stereo position in the overall mix - whether it comes from the left speaker, right speaker or in-between. To change the value, just click on the slider and drag. For finer control when dragging, hold <span class="kbrd" style="background-color: #e0e0f0">Shift</span> while dragging or double-click on the slider or slider scale to enter a precise value as text. 
 </p><p>The normal range of gain is from -36 <i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> to 36 dB.  If you need more, choose <span class="menu">Effect &gt; <a href="amplify.html" title="Amplify">Amplify</a></span>.  
-</p><p>If you are using the keyboard, use:
+</p>
+<div class="note">The Gain/Volume slider controls amplification of the waveform <i><b>after</b></i> the any realtime effects in the track's effect stack is applied. </div>
+<p>If you are using the keyboard, use:
 </p>
 <ul><li> <span class="kbrd" style="background-color: #e0e0f0">Alt + Shift + Up</span> to increase the gain on the focused track or <span class="kbrd" style="background-color: #e0e0f0">Alt + Shift + Down</span> to reduce it</li>
 <li> Use <span class="kbrd" style="background-color: #e0e0f0">Alt + Shift + Left</span> to pan left on the focused track or <span class="kbrd" style="background-color: #e0e0f0">Alt + Shift + Right</span> to pan right. </li></ul>
 <p>Or press <span class="kbrd" style="background-color: #e0e0f0">Shift + G</span> to adjust the gain in a dialog box or <span class="kbrd" style="background-color: #e0e0f0">Shift + P</span> to adjust the pan.
 </p>
-<div class="note">If you do not see the gain or pan slider for a track, you may need to make it taller.  Position the mouse on the bottom edge of the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> and drag  downwards. You can use the button with the upward pointing arrow (below the pan slider) to collapse the track upwards to a minimal height. </div> 
+<div class="note">If you do not see the Gain/Volume or Pan slider for a track, you may need to make it taller.  Position the mouse on the bottom edge of the <a href="audacity_waveform.html" title="Audacity Waveform">waveform</a> and drag  downwards. You can use the button with the upward pointing arrow (below the Pan slider) to collapse the track upwards to a minimal height. </div> 
 <p><br />
 </p>
 <div id="mix"></div>
@@ -144,7 +150,7 @@
 <ul><li> You can consolidate tracks which you have finished working on, making it easier to see the other tracks without scrolling up and down</li>
 <li> Playback may respond more quickly with fewer tracks </li>
 <li> You can see what the final mix will look like as a waveform so as to check the overall <a href="#levels">level</a> of the final mix before exporting it.</li></ul>
-<p>To mix explicitly, <a href="audacity_selection.html" title="Audacity Selection">select</a> all the tracks you want to mix together then choose either <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span> or  <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render_to_new_track" title="Tracks Menu: Mix">Mix and Render to New Track</a></span> (shortcut <span class="kbrd" style="background-color: #eaeafa">Ctrl + Shift + M </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i>). 
+<p>To mix explicitly, <a href="audacity_selection.html" title="Audacity Selection">select</a> the tracks you want to mix together then choose either <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render" title="Tracks Menu: Mix">Mix and Render</a></span> or  <span class="menu">Tracks &gt; Mix &gt; <a href="tracks_menu_mix.html#mix_and_render_to_new_track" title="Tracks Menu: Mix">Mix and Render to New Track</a></span> (shortcut <span class="kbrd" style="background-color: #eaeafa">Ctrl + Shift + M </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i>). 
 </p>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
@@ -263,7 +269,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/Mixing">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-09-03 - <a href="https://alphamanual.audacityteam.org/man/Mixing">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

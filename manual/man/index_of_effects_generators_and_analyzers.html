@@ -113,7 +113,7 @@ please see <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyb
 <tr valign="top">
 <td width="20%"><a href="bass_and_treble.html" title="Bass and Treble"><span title="Bass and Treble increases or decreases the lower frequencies and higher frequencies of your audio independently. It behaves just like the bass, treble and volume controls on a domestic stereo system.">Bass and Treble</span></a></td>
 <td width="20%"><a href="distortion.html" title="Distortion"><span title="&quot;Use">Distortion</span></a></td>
-<td width="20%"><a href="low_pass_filter1.html" title="Low-Pass Filter"><span title="Low-Pass Filter passes frequencies below its cutoff frequency and attenuates frequencies above its cutoff frequency. This effect can therefore be used to reduce high pitched noise.">Low-Pass Filter</span></a></td>
+<td width="20%"><a href="low_pass_filter.html" title="Low-Pass Filter"><span title="Low-Pass Filter passes frequencies below its cutoff frequency and attenuates frequencies above its cutoff frequency. This effect can therefore be used to reduce high pitched noise.">Low-Pass Filter</span></a></td>
 <td width="20%"><a href="repair.html" title="Repair"><span title="Repair removes a very short region of damaged or destroyed audio, replacing it with an estimated region of audio based on what is happening either side of the region. It may be used for example to repair a click on a vinyl record, or a tape dropout.">Repair</span></a></td>
 <td width="20%"><a href="spectral_edit_shelves.html" title="Spectral edit shelves"><span title="When the selected track is in spectrogram or spectrogram log(f) view, applies either a low- or high-frequency shelving filter or both filters, according to the spectral selection made">Spectral edit shelves</span></a></td>
 </tr>
@@ -174,7 +174,7 @@ please see <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyb
 </tr>
 <tr style="background-color:#ddeeff" valign="top">
 <td width="20%"><a href="compressor.html" title="Compressor"><span title="Compressor reduces the dynamic range of audio. One of the main purposes of reducing dynamic range is to permit the audio to be amplified further (without clipping) than would otherwise be possible.">Compressor</span></a></td>
-<td width="20%"><a href="high_pass_filter1.html" title="High-Pass Filter"><span title="High-Pass Filter passes frequencies above its cutoff frequency and attenuates frequencies below its cutoff frequency. This effect can therefore be used to reduce low frequency noise.">High-Pass Filter </span></a></td>
+<td width="20%"><a href="high_pass_filter.html" title="High-Pass Filter"><span title="High-Pass Filter passes frequencies above its cutoff frequency and attenuates frequencies below its cutoff frequency. This effect can therefore be used to reduce low frequency noise.">High-Pass Filter </span></a></td>
 <td width="20%"><a href="paulstretch.html" title="Paulstretch"><span title="Use Paulstretch to slow down audio by extreme amounts without changing the pitch.">Paulstretch</span></a></td>
 <td width="20%"><a href="silence.html" title="Silence"><span title="Generates audio of zero amplitude, the only configurable setting being duration. When applied to an audio selection, the result is identical to Edit &gt; Remove Special &gt; Silence Audio.">Silence</span></a></td>
 <td width="20%"></td>
@@ -187,11 +187,16 @@ please see <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyb
 <td width="20%"></td>
 </tr>
 </table>
+<div class="note">For Audacity 3.6.2 and onwards the older versions of Compressor and Limiter have been brought back as: 
+<ul><li><a href="legacy_compressor.html" title="Legacy Compressor">Legacy Compressor</a> </li>
+<li><a href="legacy_limiter.html" title="Legacy Limiter">Legacy Limiter</a> </li></ul>
+<p>These are listed in the new Legacy section of the default effects list. 
+</p>
+<ul><li><a href="classic_filters.html" title="Classic Filters">Classic Filters</a> has also been moved to the Legacy section. </div></li></ul>
 <div class="note">From version 3.5.0 of Audacity <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"><b>Vocal Reduction and Isolation</b></a> is no longer shipped with Audacity.
-<ul><li> The new <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/ai-plugins/ai-plugins"><b>OpenVINO AI plugins</b></a> yield a better result.</li>
-<li> <b>Vocal Reduction and Isolation</b> is still available as a downloadable Nyquist plugin from the <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/nyquist-plugins/effect-plugins/filters-and-eq#vocal-reduction-and-isolation">Muse Support site</a>.</li>
-<li> Documentation for it is retained in the Manual <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"><b>here</b></a>.</div></li></ul>
-
+<ul><li> For Windows users the new <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/ai-plugins/ai-plugins"><b>OpenVINO AI plugins</b></a> yield a better result.</li>
+<li> For Mac and Linux users <i>(and Windows users)</i> <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/nyquist-plugins/effect-plugins/filters-and-eq#vocal-reduction-and-isolation"><b>Vocal Reduction and Isolation</b></a> is still available as a downloadable Nyquist plugin from the <a rel="nofollow" class="external text" href="https://plugins.audacityteam.org/nyquist-plugins/effect-plugins/filters-and-eq#vocal-reduction-and-isolation"><b>Muse Support site</b></a>.</li>
+<li> Documentation for it is retained in the Manual <a href="vocal_reduction_and_isolation.html" title="Vocal Reduction and Isolation"><b>here</b></a>. </div></li></ul>
 <p>&#160;</p>
 <p><br />
 </p>
@@ -282,11 +287,10 @@ please see <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyb
 <ul><li> <b><a href="bass_and_treble.html" title="Bass and Treble">Bass and Treble</a>:</b> Increases or decreases the lower  <i><b><a href="glossary.html#frequency" title="Glossary">frequencies</a></b></i>  and higher frequencies of your audio independently; behaves just like the bass and treble controls on a stereo system.</li>
 <li> <b><a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a>:</b> Adjusts the volume levels of particular frequencies, using drawn curves</li>
 <li> <b><a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a>:</b> Adjusts the volume levels of particular frequencies, using sliders.</li>
-<li> <b><a href="high_pass_filter1.html" title="High-Pass Filter">High-Pass Filter</a>:</b> Passes frequencies above its cutoff frequency and attenuates frequencies below its cutoff frequency.</li>
-<li> <b><a href="low_pass_filter.html" class="mw-redirect" title="Low Pass Filter">Low Pass Filter</a>:</b> Passes frequencies below its cutoff frequency and attenuates frequencies above its cutoff frequency.</li>
+<li> <b><a href="high_pass_filter.html" title="High-Pass Filter">High-Pass Filter</a>:</b> Passes frequencies above its cutoff frequency and attenuates frequencies below its cutoff frequency.</li>
+<li> <b><a href="low_pass_filter1.html" class="mw-redirect" title="Low Pass Filter">Low Pass Filter</a>:</b> Passes frequencies below its cutoff frequency and attenuates frequencies above its cutoff frequency.</li>
 <li> <b><a href="notch_filter.html" title="Notch Filter">Notch Filter</a>:</b> Greatly attenuate ("notch out") a narrow frequency band. This is a good way to remove mains hum or a whistle confined to a specific frequency with minimal damage to the remainder of the audio. </li>
-<li> <b><a href="shelf_filter.html" title="Shelf Filter">Shelf Filter</a>:</b> A shelf filter curve is flat at both ends rather than flat only at the frequencies being passed. </li>
-<li> <b><a href="classic_filters.html" title="Classic Filters">Classic Filters</a>:</b> Offers three different types of <i><b><a href="glossary.html#filter" title="Glossary">filter</a></b></i> which together emulate the vast majority of analog filters, providing a useful graphical tool for analysis and measurement. <p>The Classic Filters effect is <i><b>not</b></i> enabled by default. To enable it, use <span class="menu">Effect &gt; <a href="effect_menu.html#add_remove_plugins" title="Effect Menu">Plugin Manager</a></span> to open the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a> dialog.</p></li></ul>
+<li> <b><a href="shelf_filter.html" title="Shelf Filter">Shelf Filter</a>:</b> A shelf filter curve is flat at both ends rather than flat only at the frequencies being passed. </li></ul>
 <div id="repair"></div>
 <h3><span class="mw-headline" id="Noise_Removal_and_Repair">Noise Removal and Repair</span></h3>
 <ul><li> <b><a href="click_removal.html" title="Click Removal">Click Removal</a>:</b> Click Removal is designed to remove clicks on audio tracks and is especially suited to declicking recordings made from vinyl records.</li>
@@ -327,8 +331,12 @@ please see <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyb
 <li> <b><a href="spectral_edit_multi_tool.html" title="Spectral edit multi tool">Spectral Edit Multi Tool</a>:</b> When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view, applies a  <i><b><a href="glossary.html#notch" title="Glossary">notch filter</a></b></i>, <i><b><a href="glossary.html#hp" title="Glossary">high- pass filter</a></b></i> or <i><b><a href="glossary.html#lp" title="Glossary">low pass filter</a></b></i> according to the spectral selection made. This effect can also be used to change the audio quality as an alternative to using <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a> or <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a>. </li>
 <li> <b><a href="spectral_edit_parametric_eq.html" title="Spectral edit parametric EQ">Spectral Edit Parametric EQ</a>:</b> When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view and the spectral selection has a center frequency and an upper and lower boundary, performs the specified <i><b><a href="glossary.html#band_stop" title="Glossary">band cut</a></b></i> or <i><b><a href="glossary.html#band_pass" title="Glossary">band boost</a></b></i>. This can be used as an alternative to <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a> and <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a> or may also be useful to repair damaged audio by reducing frequency spikes or boosting other frequencies to mask spikes.</li>
 <li> <b><a href="spectral_edit_shelves.html" title="Spectral edit shelves">Spectral Edit Shelves</a>:</b> When the selected track is in <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">spectrogram</a> or <a href="audio_track_dropdown_menu.html#spgram_log" title="Audio Track Dropdown Menu">spectrogram log(f)</a> view, applies either a low- or high-frequency shelving filter or both filters, according to the spectral selection made. This can be used as an alternative to <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a> and <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a> or may also be useful to repair damaged audio by reducing frequency spikes or boosting other frequencies to mask spikes.</li></ul>
+<div id="legacy"></div>
+<h3><span class="mw-headline" id="Legacy_Effects">Legacy Effects</span></h3>
+<ul><li> <b><a href="legacy_compressor.html" title="Legacy Compressor">Legacy Compressor</a>:</b> This is the old compressor that was used in Audacity 3.5 and earlier.</li>
+<li> <b><a href="legacy_limiter.html" title="Legacy Limiter">Legacy Limiter</a>:</b> This is the old limiter that was used in Audacity 3.5 and earlier.</li>
+<li> <b><a href="classic_filters.html" title="Classic Filters">Classic Filters</a>:</b> Offers three different types of <i><b><a href="glossary.html#filter" title="Glossary">filter</a></b></i> which together emulate the vast majority of analog filters, providing a useful graphical tool for analysis and measurement. <p>The Classic Filters effect is <i><b>not</b></i> enabled by default. To enable it, use <span class="menu">Effect &gt; <a href="effect_menu.html#add_remove_plugins" title="Effect Menu">Plugin Manager</a></span> to open the <a href="manage_effects_generators_and_analyzers.html" title="Manage Effects, Generators and Analyzers">Plugin Manager</a> dialog.</p></li></ul>
 <p><br />
-</p><p><br />
 </p>
 <div id="generators"></div>
 <h2><span class="mw-headline" id="Generators_by_Function">Generators by Function</span></h2>
@@ -453,7 +461,7 @@ please see <a href="keyboard_preferences.html" title="Keyboard Preferences">Keyb
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-07-16 - <a href="https://alphamanual.audacityteam.org/man/Index_of_Effects,_Generators_and_Analyzers">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-09-03 - <a href="https://alphamanual.audacityteam.org/man/Index_of_Effects,_Generators_and_Analyzers">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
