@@ -76,7 +76,6 @@
 </table>
 <p><br />
 </p>
-</li></ul>
 <div class="note"><b>Other Tips and hints:</b>
 <ul><li> <b>Mac users:</b> <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> and <span class="kbrd" style="background-color: #e0e0f0">Alt</span> = <span class="kbrd" style="background-color: #e0e0f0">Option</span>. So, for example, <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Alt + K</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984; + Option + K</span>.</li>
 <li> See <a href="audacity_selection.html" title="Audacity Selection">Audacity Selection</a> for examples of changing track focus and selection.</li>
@@ -388,7 +387,6 @@
 </td></tr></table>
 <div id="edit_remove_special_submenu"></div>
 <h3><span class="mw-headline" id="Edit:_Remove_Special"><a href="edit_menu_remove_special.html" title="Edit Menu: Remove Special">Edit: Remove Special</a></span></h3>
-<div class="note">For more "advanced" removal of audio </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Action
@@ -398,14 +396,14 @@
 <th width="75%">Description
 </th></tr>
 <tr>
-<td><a href="edit_menu_remove_special.html#split_cut" title="Edit Menu: Remove Special">Split Cut</a>
+<td><a href="edit_menu_remove_special.html#split_cut" title="Edit Menu: Remove Special">Cut and leave gap</a>
 </td>
 <td><span class="kbrd" style="background-color: #d0d0f8">Ctrl+Alt+X</span>
 </td>
 <td>Same as Cut, but none of the audio data or labels to right of the selection are shifted.
 </td></tr>
 <tr>
-<td><a href="edit_menu_remove_special.html#split_delete" title="Edit Menu: Remove Special">Split Delete</a>
+<td><a href="edit_menu_remove_special.html#split_delete" title="Edit Menu: Remove Special">Delete and leave gap</a>
 </td>
 <td><span class="kbrd" style="background-color: #d0d0f8">Ctrl+Alt+K</span>
 </td>
@@ -427,7 +425,6 @@
 </td></tr></table>
 <div id="edit_clip_boundaries_submenu"></div>
 <h3><span class="mw-headline" id="Edit:_Audio_Clips"><a href="edit_menu_clip_boundaries.html" title="Edit Menu: Clip Boundaries">Edit: Audio Clips</a></span></h3>
-<div class="note">Create or remove separate clips in the audio track. A clip inside an audio track is a separate section of that track which has been split so that it can be manipulated somewhat independently of the other clips in the track, see <a href="audacity_tracks_and_clips.html" title="Audacity Tracks and Clips">Audio Tracks and Clips</a>. </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Action
@@ -448,7 +445,7 @@
 </td>
 <td><span class="kbrd" style="background-color: #eaeafa">Ctrl+Alt+I </span> &#160; <i><sup><a href="only_in_full_set.html" title="Only in full set">Extra</a></sup></i>
 </td>
-<td>Does a Split Cut on the current selection in the current track, then creates a new track and pastes the selection into the new track.
+<td>Does a <a href="edit_menu_remove_special.html#split_cut" title="Edit Menu: Remove Special"><b>Cut and leave gap</b></a> on the current selection in the current track, then creates a new track and pastes the selection into the new track.
 </td></tr>
 <tr>
 <td><a href="edit_menu_clip_boundaries.html#join" title="Edit Menu: Clip Boundaries">Join</a>
@@ -512,7 +509,6 @@
 </td></tr></table>
 <div id="edit_labeled_audio_submenu"></div>
 <h3><span class="mw-headline" id="Edit:_Labeled_Audio"><a href="edit_menu_labeled_audio.html" title="Edit Menu: Labeled Audio">Edit: Labeled Audio</a></span></h3>
-<div class="note">Labeled Audio commands apply standard Edit Menu commands to the audio of one or more regions that are labeled.  The labels themselves are not affected. </div>
 <table class="prettytablerows" rules="rows" border="2" width="100%">
 <tr>
 <th width="15%">Action
@@ -536,18 +532,18 @@
 <td>Same as the Delete command, but operates on labeled audio regions.
 </td></tr>
 <tr>
-<td><a href="edit_menu_labeled_audio.html#split_cut" title="Edit Menu: Labeled Audio">Split Cut</a>
+<td><a href="edit_menu_labeled_audio.html#split_cut" title="Edit Menu: Labeled Audio">Cut and leave gap</a>
 </td>
 <td><span class="kbrd" style="background-color: #d0d0f8">Alt+Shift+X</span>
 </td>
-<td>Same as the Split Cut command, but operates on labeled audio regions.
+<td>Same as the Cut and leave gap command, but operates on labeled audio regions.
 </td></tr>
 <tr>
-<td><a href="edit_menu_labeled_audio.html#split_delete" title="Edit Menu: Labeled Audio">Split Delete</a>
+<td><a href="edit_menu_labeled_audio.html#split_delete" title="Edit Menu: Labeled Audio">Delete and leave gap</a>
 </td>
 <td><span class="kbrd" style="background-color: #d0d0f8">Alt+Shift+K</span>
 </td>
-<td>Same as the Split Delete command, but operates on labeled audio regions.
+<td>Same as the Delete and leave gap command, but operates on labeled audio regions.
 </td></tr>
 <tr>
 <td><a href="edit_menu_labeled_audio.html#silence_audio" title="Edit Menu: Labeled Audio">Silence Audio</a>
@@ -3680,7 +3676,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-09-03 - <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-10-30 - <a href="https://alphamanual.audacityteam.org/man/Keyboard_Shortcut_Reference">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

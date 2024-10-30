@@ -66,7 +66,7 @@
 <ul><li><b>Minimum silence duration:</b> (default 1 second)</li></ul>
 <dl><dd> When 'silence'  of this duration (or longer) is found, preceding sound and following sound are considered to be separate sounds, provided that the previous sound is at least the 'Minimum sound duration'. Valid values are between 0.01 seconds to 1 hour. See <a href="#Minimum_Silence_Duration">examples below</a>.</dd></dl>
 <ul><li><b>Minimum label interval:</b> (default 1 second)</li></ul>
-<dl><dd> Allows short sounds to be grouped within a label region. This ensures that labels will be at intervals of no less than this length. In effect this combines short sounds to create a group of sounds that is at least the specified length. Valid values are between 0.01 seconds to 2 hours. See <a href="#Minimum_label_interval">examples below</a>.</dd></dl>
+<dl><dd> This is effectively the minimum length of a sound duration, it allows short sounds to be grouped within a label region. This ensures that labels will be at intervals of no less than this length. In effect this combines short sounds to create a group of sounds that is at least the specified length. Valid values are between 0.01 seconds to 2 hours. See <a href="#Minimum_label_interval">examples below</a>.</dd></dl>
 <ul><li><b>Label type:</b> (default: Region around sounds) Sounds / silences are labelled either with <a href="label_tracks.html#type" title="Label Tracks">point labels</a> or <a href="label_tracks.html#type" title="Label Tracks">region labels</a>.
 <ul><li><b>Point before sound</b> This option places a point label <i>before</i> each detected sound or group of sounds.</li>
 <li><b>Point after sound</b> This option places a point label <i>after</i> each detected sound or group of sounds.</li>
@@ -101,13 +101,16 @@
 <h3><span class="mw-headline" id="Minimum_Silence_Duration">Minimum Silence Duration</span></h3>
 <div class="example">In this example, the first silence is 2 seconds, the second silence 5 seconds, and the final silence 1 second.
 <ul><li><b>Minimum Silence Duration: 4.000 seconds</b></li></ul>
-<p><a href="https://alphamanual.audacityteam.org/man/File:Label-sounds-min-silence.png" class="image"><img alt="Label-sounds-min-silence.png" src="../m/images/e/e0/label_sounds_min_silence.png" width="886" height="270" /></a>
+<p><img alt="Label-sounds-min-silence.png" src="../m/images/e/e0/label_sounds_min_silence.png" width="886" height="270" />
 </p>
 <ul><li>Observe that first and last silences are ignored because they are each less than 4 seconds. The middle silence is 5 seconds duration, so this is recognized as a gap between two sounds.</div></li></ul>
 <h3><span class="mw-headline" id="Minimum_label_interval">Minimum label interval</span></h3>
+<p>For clarity, this is what is meant by the "label interval", what is in effect the sound duration.
+</p>
+<dl><dd><img alt="Label interval.png" src="../m/images/f/f9/label_interval.png" width="690" height="191" /></dd></dl>
 <div class="example">In this example, each sound and each silence are about 1.76 seconds long.
 <ul><li><b>Minimum label interval: 10.000 seconds</b></li></ul>
-<p><a href="https://alphamanual.audacityteam.org/man/File:Label-sounds-min-interval.png" class="image"><img alt="Label-sounds-min-interval.png" src="../m/images/b/b5/label_sounds_min_interval.png" width="886" height="262" /></a>
+<p><img alt="Label-sounds-min-interval.png" src="../m/images/b/b5/label_sounds_min_interval.png" width="886" height="262" />
 </p>
 <ul><li>Observe that the first 4 sounds are grouped together, creating label "Sound 01" which is about 12.4 seconds long.</li>
 <li>The next label, "Sound 02" begins at the start of the next sound, and groups the next 4 sounds, with a label region of about 12.4 seconds.</li>
@@ -118,12 +121,12 @@
 <li>The second label track: <b>Label type: Point after sound</b></li>
 <li>The third label track: <b>Label type: Region around sounds</b></li>
 <li>The fourth label track: <b>Label type: Region between sounds</b></li></ol>
-<a href="https://alphamanual.audacityteam.org/man/File:Label-sounds-types.png" class="image"><img alt="Label-sounds-types.png" src="../m/images/7/71/label_sounds_types.png" width="886" height="479" /></a></div>
+<img alt="Label-sounds-types.png" src="../m/images/7/71/label_sounds_types.png" width="886" height="479" /></div>
 <h3><span class="mw-headline" id="Maximum_leading_.2F_trailing_silence">Maximum leading / trailing silence</span></h3>
 <div class="example">In this example, the gaps are 5 seconds, 2 seconds and 3 seconds.
 <ul><li> <b>Maximum leading silence: 2.5 seconds</b></li>
 <li> <b>Maximum trailing silence: 0 seconds</b></li></ul>
-<p><a href="https://alphamanual.audacityteam.org/man/File:Label-sounds-leading.png" class="image"><img alt="Label-sounds-leading.png" src="../m/images/c/c9/label_sounds_leading.png" width="886" height="258" /></a>
+<p><img alt="Label-sounds-leading.png" src="../m/images/c/c9/label_sounds_leading.png" width="886" height="258" />
 </p>
 <ul><li> Observe that the first label "Sound 01" starts at the beginning of the track. Labels will not be created before time = 0.</li>
 <li> The second label, "Sound 02" begins 2.5 seconds before the start of the second sound.</li>
@@ -134,7 +137,7 @@
 <div class="example">In this example, the gaps are 5 seconds, 2 seconds and 3 seconds.
 <ul><li> <b>Maximum leading silence: 2.5 seconds</b></li>
 <li> <b>Maximum trailing silence: 2.5 seconds</b></li></ul>
-<p><a href="https://alphamanual.audacityteam.org/man/File:Label-sounds-leading-trailing.png" class="image"><img alt="Label-sounds-leading-trailing.png" src="../m/images/d/d9/label_sounds_leading_trailing.png" width="886" height="261" /></a>
+<p><img alt="Label-sounds-leading-trailing.png" src="../m/images/d/d9/label_sounds_leading_trailing.png" width="886" height="261" />
 </p>
 <ul><li>Observe that labels <i>can</i> overlap other labels, but <i>cannot</i> overlap previous or following sounds.</li>
 <li>Notice also that the final label extends 2.5 seconds beyond the end of the final sound, even though it is beyond the end of the track.</div></li></ul>
@@ -145,14 +148,12 @@
 <li> <b>Maximum trailing silence: 1 second</b></li>
 <li> <b>Label type: Region between sounds</b></li>
 <li> <b>Label text: Silence ##1</b></li></ul>
-<p><a href="https://alphamanual.audacityteam.org/man/File:Label-between-sounds-leading-trailing.png" class="image"><img alt="Label-between-sounds-leading-trailing.png" src="../m/images/2/2a/label_between_sounds_leading_trailing.png" width="886" height="264" /></a>
+<p><img alt="Label-between-sounds-leading-trailing.png" src="../m/images/2/2a/label_between_sounds_leading_trailing.png" width="886" height="264" />
 </p>
 <ul><li> Observe that the labels are between sounds</li>
 <li> The start of each label is 1 second after the previous sound</li>
 <li> The end of each label is 1 second before the next sound</li>
 <li> The second label, "Silence 02" is collapsed down to a point label</div></li></ul>
-<p><br />
-</p>
 <h2><span class="mw-headline" id="Links">Links</span></h2>
 <p><a href="index_of_effects_generators_and_analyzers.html#analyzers" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> Index of Effects, Generators and Analyzers</a>
 </p><p><a href="analyze_menu.html" title="Analyze Menu"><b>|&lt;</b> Analyze Menu</a>
@@ -234,7 +235,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-09-03 - <a href="https://alphamanual.audacityteam.org/man/Label_Sounds">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-10-30 - <a href="https://alphamanual.audacityteam.org/man/Label_Sounds">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>

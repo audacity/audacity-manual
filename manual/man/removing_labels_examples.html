@@ -41,14 +41,8 @@
 <li><a href="#usecase2">Removing labels (or regions of label track), moving back any following labels - Delete method</a></li>
 <li><a href="#usecase3">Removing labels together with their associated audio</a></li></ul>
 </div>
-<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
-<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
-
-<tr>
-<td width="30px" valign="top" align="center"><img alt="Advice" src="../m/images/b/ba/warningicon.png" title="Advice" width="24" height="24" />
-</td>
-<td align="left" valign="top"><span class="menu">Edit &gt; <a href="edit_menu.html#delete" title="Edit Menu">Delete</a></span> (shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + K</span>), <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#split_delete" title="Edit Menu: Remove Special">Split Delete</a></span> (shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Alt + K</span>) or their Cut/Split Cut alternatives cannot be used to remove point labels because there is no audio region associated with them.
-</td></tr></table></div>
+<p><br />
+</p>
 <div id="usecase5"></div>
 <h2><span class="mw-headline" id="Delete_Label">Delete Label</span></h2>
 <p>The simplest way to delete a single label is to right-click inside the label's text box, then choose <b>Delete Label</b> from the dropdown menu. Any labels lying to right of the removed labels stay where they are, still associated with their original audio. 
@@ -65,7 +59,7 @@
 <p><br />
 </p>
 <div id="usecase1"></div>
-<h2><span class="mw-headline" id="Removing_labels_without_moving_any_following_labels_.28Split_method.29">Removing labels without moving any following labels (Split method)</span></h2>
+<h2><span class="mw-headline" id="Removing_labels_without_moving_any_following_labels_.28Delete_and_leave_gap_method.29">Removing labels without moving any following labels (Delete and leave gap method)</span></h2>
 <p>You can use this method to remove single or multiple labels, without removing their associated audio, by split deleting a region in the label track. This method keeps the remaining labels synchronized with their audio. 
 </p>
 <div class="example">Suppose you have labeled different song tracks in the Audio track and you have also labeled some clicks after half-way through Track-2. You have <a href="click_removal.html" title="Click Removal">removed</a> the clicks so you need  to delete their labels without moving any other labels.
@@ -73,7 +67,7 @@
 <p>Select in the label track around the two labels to be removed.  Only drag horizontally, so as to avoid extending the selection up into the audio track.
 </p>
 <dl><dd><span title="Removing labels without moving back any following labels - selection"><img alt="Removing labels without moving back any following labels - selection.png" src="../m/images/7/7d/removing_labels_without_moving_back_any_following_labels_selection.png" width="740" height="211" /></span></dd></dl>
-<p>Use <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#split_delete" title="Edit Menu: Remove Special">Split Delete</a></span> or its keyboard shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Alt + K</span>.  The two labels are removed and the labels for Track-3 and Track-4 remain where they were previously.  Note that the selection remains after performing this split delete in the label track.
+<p>Use <span class="menu">Edit &gt; Remove Special &gt; <a href="edit_menu_remove_special.html#split_delete" title="Edit Menu: Remove Special">Delete and leave gap</a></span> or its keyboard shortcut <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Alt + K</span>.  The two labels are removed and the labels for Track-3 and Track-4 remain where they were previously.  Note that the selection remains after performing this split delete in the label track.
 </p>
 <dl><dd><span title="Removing labels without moving back any following labels - after"><img alt="Removing labels without moving back any following labels - after.png" src="../m/images/3/34/removing_labels_without_moving_back_any_following_labels_after.png" width="738" height="210" /></span></dd></dl>
 <i>It's like having stickers on a paper chain, and lifting some stickers off the chain.</i></div>
@@ -95,7 +89,7 @@
 </p>
 <div id="usecase2"></div>
 <h2><span class="mw-headline" id="Removing_labels_.28or_regions_of_label_track.29.2C_moving_back_any_following_labels_.28Delete_method.29">Removing labels (or regions of label track), moving back any following labels (Delete method)</span></h2>
-<p>You can use this method to remove labels or regions between labels, moving back (leftwards) any following labels.  If you only remove the labels without also deleting the same region in the audio track Delete will desynchronize the following labels with their audio.
+<p>You can use this method to remove labels or regions between labels, moving back (leftwards) any following labels.  If you only remove the labels without also deleting the same region in the audio track Delete will de-synchronize the following labels with their audio.
 </p>
 <div class="example">You have a podcast and have placed labels every two minutes where you will change to a different piece of accompanying music (not yet added). Then you decide not to use the second piece of music but to otherwise keep the same order for the following pieces of music. The easiest answer is to delete a region of label track corresponding to the "Vivaldi" piece, which allows the following labels to move back. We will not split delete because that would leave a section with no music label, and this method avoids having to rename any labels.
 <dl><dd><span title="Removing labels moving back any following labels - before2"><img alt="Removing labels moving back any following labels - before2.png" src="../m/images/3/39/removing_labels_moving_back_any_following_labels_before2.png" width="746" height="219" /></span></dd></dl>
@@ -200,7 +194,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-09-03 - <a href="https://alphamanual.audacityteam.org/man/Removing_Labels_-_Examples">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2024-10-30 - <a href="https://alphamanual.audacityteam.org/man/Removing_Labels_-_Examples">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
