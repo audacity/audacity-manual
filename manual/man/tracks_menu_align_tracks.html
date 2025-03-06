@@ -50,10 +50,14 @@
 </div>
 <dl><dd><span title="Image of the Align Tracks submenu"><img alt="Tracks-Align TracksMenu.png" src="../m/images/a/a6/tracks_align_tracksmenu.png" width="605" height="388" /></span></dd></dl>
 <p>These commands provide an automatic way of aligning <a href="audacity_selection.html" title="Audacity Selection">selected tracks</a> with the cursor, the selection, or with the start of the project. 
-</p><p>With the exception of the first two commands ("Align End to End" and "Align Together"), each selected track is moved along <i>equally</i> so they remain synchronized with each other. If a <a href="label_tracks.html" title="Label Tracks">label track</a> is included in the selection, its labels will also move equally so they remain synchronized.
-</p><p>When aligning end to end or aligning together, the tracks are always moved individually to enforce the requested alignment (as described below). Label tracks are not affected by these two commands.
-</p><p>When there is a selection, the commands that align tracks with the cursor/selection will align with the start of the selection, and when there is a cursor, the commands that align tracks with the cursor/selection will align with the cursor. 
 </p>
+<ul><li>When using <b>Align End to End</b> or <b>Align Together</b>, the tracks are always moved individually to enforce the requested alignment (as described below). 
+<ul><li>Label tracks are <i><b>not</b></i> affected by these two commands.</li></ul></li></ul>
+<ul><li>For all the other align commands, each selected track is moved along <i>equally</i> so they remain synchronized with each other. 
+<ul><li>If a <a href="label_tracks.html" title="Label Tracks">label track</a> is included in the selection, its labels will also move equally so they remain synchronized with the selected audio.</li></ul></li></ul>
+<ul><li>When there is a selection, the commands that align tracks with the cursor/selection will align with the start of the selection, and when there is a cursor, the commands that align tracks with the cursor/selection will align with the cursor. </li></ul>
+<ul><li>If a track contains multiple clips and one of the Align commands is applied to that track then <i>all the clips move and maintain their relative positions</i> to each other within the track. 
+<ul><li>The start of the first clip is the "start of the track" and the end of the last clip is the "end of the track". </li></ul></li></ul>
 <div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
 <table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
 
@@ -62,7 +66,8 @@
 </td>
 <td align="left" valign="top">If <a href="sync_locked_track_groups.html" title="Sync-Locked Track Groups">Sync-Lock Tracks</a> is enabled, unselected tracks in a Sync-Locked Track Group will also move so that all the tracks in that group remain synchronized, <b>except for</b> the Align "End to End" and "Together" commands where only the selected tracks will move. Aligning end to end or together overrides Sync-Lock Tracks if necessary, so the selected tracks in that group may become de-synchronized.
 </td></tr></table></div>
-<div class="note">If a track contains multiple clips and one of the Align commands is applied to that track then <i>all the clips move and maintain their relative positions</i> to each other within the track. The start of the first clip is the "start of the track" and the end of the last clip is the "end of the track". </div>
+<p><br />
+</p>
 <div id="align_move"></div>
 <div id="align_end_to_end"></div>
 <h2><span class="mw-headline" id="Align_End_to_End_.C2.A0">Align End to End &#160;<font size="-1"></font></span></h2>
@@ -199,7 +204,7 @@
 									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
 							</div>
 					
-		<div align="center"><ul id="f_list"><li>This version created on 2024-12-11 - <a href="https://alphamanual.audacityteam.org/man/Tracks_Menu:_Align_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
+		<div align="center"><ul id="f_list"><li>This version created on 2025-03-06 - <a href="https://alphamanual.audacityteam.org/man/Tracks_Menu:_Align_Tracks">Check current version of this page (development Manual)</a></li></ul></div>
 </div>
 		</div>
 		</body></html>
