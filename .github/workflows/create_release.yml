@@ -12,7 +12,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
 
       - name: Package
         run: |
@@ -22,7 +22,7 @@ jobs:
          tar czf audacity-manual-${{ github.event.inputs.version }}.tar.gz help
 
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         with:
             body: 'Audacity manual for version ${{ github.event.inputs.version }}'
             tag_name: v${{ github.event.inputs.version }}
